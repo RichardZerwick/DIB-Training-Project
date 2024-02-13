@@ -1,0 +1,346 @@
+System.register(["tslib", "@angular/platform-browser", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@angular/material/autocomplete", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, platform_browser_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, autocomplete_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, _c0, _c1, importsRequired, dibexiFrameEleutheriaComponent, containerModules, fullDateTimeOptions, dibexiFrameEleutheriaModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexiFrameEleutheriaComponent_button_18_Template(rf, ctx) { if (rf & 1) {
+        const _r8 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 20);
+        i0.ɵɵlistener("click", function dibexiFrameEleutheriaComponent_button_18_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); const _r0 = i0.ɵɵreference(16); const _r1 = i0.ɵɵreference(17); ctx_r7.clearDropdown(ctx_r7.model.modelItems.clientId.formControl, $event, ctx_r7.lists.list5789, _r0); return i0.ɵɵresetView(_r1.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexiFrameEleutheriaComponent_mat_progress_bar_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 21);
+    } }
+    function dibexiFrameEleutheriaComponent_mat_option_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 22);
+    } if (rf & 2) {
+        const item_r9 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r9.id == "0"))("value", item_r9)("innerHtml", item_r9.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexiFrameEleutheriaComponent_iframe_26_Template(rf, ctx) { if (rf & 1) {
+        const _r11 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "iframe", 23);
+        i0.ɵɵlistener("show", function dibexiFrameEleutheriaComponent_iframe_26_Template_iframe_show_0_listener() { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(); return i0.ɵɵresetView(!ctx_r10.busy); })("load", function dibexiFrameEleutheriaComponent_iframe_26_Template_iframe_load_0_listener() { i0.ɵɵrestoreView(_r11); const ctx_r12 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r12.completed()); });
+        i0.ɵɵpipe(1, "safe");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r6 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("src", i0.ɵɵpipeBind1(1, 1, ctx_r6.iframeUrl), i0.ɵɵsanitizeResourceUrl);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (platform_browser_1_1) {
+                platform_browser_1 = platform_browser_1_1;
+                i3 = platform_browser_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i8 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i9 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i11 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i7 = autocomplete_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexiFrameEleutheriaComponent = class dibexiFrameEleutheriaComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                sanitizer;
+                view = { container: { id: 233, name: 'dibexiFrameEleutheria', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5786'] }, dropin: 'iframe', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                doNotReloadiFrame = false;
+                clientData;
+                allClientData;
+                model;
+                frameStyle = { "min-height": "200px" };
+                iframeUrl;
+                constructor(injector, httpClient, viewContainerRef, sd, cd, sanitizer) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    this.sanitizer = sanitizer;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5789 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexiFrameEleutheria&containerItemId=5789", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexiFrameEleutheria');
+                    this.containerName = 'dibexiFrameEleutheria'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 5789, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5789 }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.modelItems.clientId.formControl.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.switchMap((value) => this.eventService.on(`clientData_${this.view.container.name}`).pipe(operators_1.take(1), operators_1.map((result) => { return value; })))).subscribe(value => { if (!!value && !!value.id == false)
+                        return; if (value !== '' && value != null) {
+                        this.actionService.handle(this.containerActionReference(), 'clientId', 'changed');
+                    } });
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "clientId", actionType: "changed", responseType: 'actions', submitUrl: "shared.action.reload-container?containerName=self", itemAlias: "clientId", waitForCompletion: false, containerName: "dibexiFrameEleutheria", handlers: [] }, this.clientData, { itemEventId: 'ie311-dib', itemId: '5789', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "pdfButton", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibPdf/Pdf/convertContainer", itemAlias: "pdfButton", waitForCompletion: false, containerName: "dibexiFrameEleutheria", handlers: [] }, this.clientData, { itemEventId: 'ie310-dib', itemId: '5785', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5789 = this.lists.list5789.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5789 = new Date().getTime();
+                    let previousUrlChange5789;
+                    let previousResponse5789;
+                    this.lists.list5789.items = rxjs_1.combineLatest([this.lists.list5789.updatedList$, itemsUpdateSource5789]).pipe(operators_1.tap(() => { this.lists.list5789.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5789 - new Date().getTime()) / 1000;
+                        previousTimeChange5789 = new Date().getTime();
+                        previousUrlChange5789 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5789 = response;
+                            this.lists.list5789.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5789.items.subscribe(records => this.lists.list5789.lastItems = records);
+                    this.lists.list5789.multiSelected = [];
+                    this.lists.list5789.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5789.updatedList$.next([]);
+                        self.lists.list5789.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5789.refresh();
+                    }
+                    else {
+                        self.lists.list5789.searchForm.setValue('');
+                        self.lists.list5789.updatedList$.next(self.lists.list5789.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list5789.multiSelected);
+                    } };
+                    this.lists.list5789.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5789.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5789.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5789.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5789.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5789.multiSelected = self.removeDuplicateIdsFromArray(lists.list5789.multiSelected);
+                    };
+                    lists = this.lists;
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list5789.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); this.reloadContainer(); }
+                completed() { this.busy = false; }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list5789.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexiFrameEleutheria', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexiFrameEleutheria' });
+                    this.reloadSubcontainers();
+                    if (this.iframeUrl != undefined && this.doNotReloadiFrame) {
+                        return;
+                    }
+                    let url = "/dropins/setNgxMaterial/iframe/Template/open/dibexiFrameEleutheria";
+                    url += `?clientData=${encodeURIComponent(JSON.stringify(this.clientData))}`;
+                    url += `&v=${new Date().getTime()}`;
+                    this.iframeUrl = url;
+                }
+                static ɵfac = function dibexiFrameEleutheriaComponent_Factory(t) { return new (t || dibexiFrameEleutheriaComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i3.DomSanitizer)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexiFrameEleutheriaComponent, selectors: [["dibexi-frame-eleutheria"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 28, vars: 16, consts: [[2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "min-height", "20px", 3, "formGroup", "ngClass"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], ["id", "ci5786", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexiFrameEleutheria", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5788", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5790", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci5789", "dibComponent", "autocomplete", "dibListeners", "", "eventList", "  changed ", "actionId", "clientId", "item-alias", "clientId", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", 3, "containerPortId"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto5789trigger", "matAutocompleteTrigger", "input5789", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto5789", "matAutocomplete"], ["mode", "indeterminate", 4, "ngIf"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci5784", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%", 3, "hidden"], ["mat-raised-button", "", "color", "primary", "id", "ci5785", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "pdfButton", "type", "button", 3, "containerPortId"], ["sharedDibIframeTracker", "", "name", "dibexiFrameEleutheria", "frameBorder", "0", "width", "100%", "style", "height:350px; overflow:auto;", 3, "src", "show", "load", 4, "ngIf"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], ["mode", "indeterminate"], [3, "ngClass", "value", "innerHtml"], ["sharedDibIframeTracker", "", "name", "dibexiFrameEleutheria", "frameBorder", "0", "width", "100%", 2, "height", "350px", "overflow", "auto", 3, "src", "show", "load"]], template: function dibexiFrameEleutheriaComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0)(1, "div", 1)(2, "div", 2);
+                        i0.ɵɵelementContainer(3, 3);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(4, "mat-card", 4)(5, "mat-card-content", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "span", 7)(8, "div", 8);
+                        i0.ɵɵtext(9, " Select a Client below. An iframe will be loaded containing custom HTML from a specified file.");
+                        i0.ɵɵelement(10, "br");
+                        i0.ɵɵtext(11, "See the /dropins/dibExamples/templates/dibexiFrameEleutheria.html file for details. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(12, "mat-form-field", 9)(13, "mat-label");
+                        i0.ɵɵtext(14, "Select a Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(15, "input", 10, 11);
+                        i0.ɵɵtemplate(18, dibexiFrameEleutheriaComponent_button_18_Template, 3, 0, "button", 12);
+                        i0.ɵɵelementStart(19, "mat-autocomplete", 13, 14);
+                        i0.ɵɵlistener("opened", function dibexiFrameEleutheriaComponent_Template_mat_autocomplete_opened_19_listener() { return ctx.lists.list5789.refresh(); });
+                        i0.ɵɵtemplate(21, dibexiFrameEleutheriaComponent_mat_progress_bar_21_Template, 1, 0, "mat-progress-bar", 15);
+                        i0.ɵɵtemplate(22, dibexiFrameEleutheriaComponent_mat_option_22_Template, 1, 5, "mat-option", 16);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(23, "div", 17);
+                        i0.ɵɵelementContainerStart(24, 6);
+                        i0.ɵɵelement(25, "button", 18);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(26, dibexiFrameEleutheriaComponent_iframe_26_Template, 2, 3, "iframe", 19);
+                        i0.ɵɵtext(27, "\u00A0 ");
+                        i0.ɵɵelementEnd()();
+                    } if (rf & 2) {
+                        const _r3 = i0.ɵɵreference(20);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(14, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5786");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5788");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matAutocomplete", _r3);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5789.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list5789.lastItems);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "5784");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.iframeUrl);
+                    } }, dependencies: [i4.NgClass, i4.NgForOf, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.FormGroupDirective, i6.FormControlName, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibListenersDirective, i2.DibiFrameTrackerDirective, i2.DibRemoveFocusDirective, i7.MatAutocomplete, i8.MatOption, i7.MatAutocompleteTrigger, i9.MatButton, i9.MatIconButton, i10.MatFormField, i10.MatLabel, i10.MatSuffix, i11.MatIcon, i12.MatInput, i13.MatProgressBar, i14.MatCard, i14.MatCardContent, i2.SafePipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexiFrameEleutheria'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexiFrameEleutheriaComponent.prototype, "reloadContainer", null);
+            exports_1("dibexiFrameEleutheriaComponent", dibexiFrameEleutheriaComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexiFrameEleutheriaComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibexi-frame-eleutheria', template: `
+<form style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch; min-height:20px"   [formGroup]="model.$formGroup" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5786 dibComponent=subcontainer   ><ng-container [dibPort]="'5786'" parentContainerName=dibexiFrameEleutheria  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5788 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5788'" ><span  id=ci5790 dibComponent=comment   style="  " ><div class=dib-comment > Select a Client below. An iframe will be loaded containing custom HTML from a specified file.<br>See the /dropins/dibExamples/templates/dibexiFrameEleutheria.html file for details.  </div></span><mat-form-field  id=ci5789 dibComponent=autocomplete  dibListeners eventList="  changed " [containerPortId]="containerActionReference()" actionId=clientId   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  item-alias=clientId   appearance=standard   ><mat-label>Select a Client</mat-label><input #auto5789trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input5789  [matAutocomplete]="auto5789"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list5789, auto5789trigger); input5789.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto5789=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list5789).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list5789).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5789.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field></ng-container></mat-card-content></mat-card><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5784 dibComponent=div  [hidden]="true" ><ng-container [dibPort]="'5784'" ><button  mat-raised-button color=primary  id=ci5785 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=pdfButton   style="  "  type=button  ></button></ng-container></div><iframe *ngIf=iframeUrl  sharedDibIframeTracker (show)='!busy' (load)="completed()"   name='dibexiFrameEleutheria' [src]="iframeUrl | safe" frameBorder=0  width="100%"  style="height:350px; overflow:auto;"></iframe>&nbsp;   </div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }, { type: i3.DomSanitizer }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, autocomplete_1.MatAutocompleteModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexiFrameEleutheriaModule = class dibexiFrameEleutheriaModule {
+                static entry = dibexiFrameEleutheriaComponent;
+                static ɵfac = function dibexiFrameEleutheriaModule_Factory(t) { return new (t || dibexiFrameEleutheriaModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexiFrameEleutheriaModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexiFrameEleutheriaModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexiFrameEleutheriaModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexiFrameEleutheriaComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexiFrameEleutheriaModule, { declarations: [dibexiFrameEleutheriaComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, autocomplete_1.MatAutocompleteModule] }); })();
+        }
+    };
+});

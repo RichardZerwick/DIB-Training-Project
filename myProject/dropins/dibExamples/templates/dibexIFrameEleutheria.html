@@ -1,0 +1,285 @@
+<html>
+<head>
+
+    <!-- *** NOTE: Security measure: always specify UTF-8 encoding, which corresponds with the UTF-8 header which Eleutheria sends to the client -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>Company Report</title>
+    
+    <script type="text/javascript" src="/files/dropins/setNgxMaterial/dibAdmin/js/template/TemplateActions.js"></script>
+    <style type="text/css">
+        html {
+            width:100%;
+            height:100%;
+            overflow:auto;
+        }
+
+        body {
+            font-size: 13px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+            color: #333;
+            background: #d3d3d3;
+            margin: 0;
+            padding: 10px;
+        }
+
+        h2, h3 {
+            padding-top: 10px !important;
+            padding-bottom: 0px !important;
+            display: block;    
+            color :  rgb(69 76 80)
+        }
+
+        h2 {
+            font-size:18px;
+        }
+
+        h3 {
+            font-size:16px;
+        }
+
+        ul li {
+            list-style: decimal;
+        }
+        a {
+            color: rgb(44, 52, 196);
+        }
+
+        .staffTable {
+            border: solid 1px #555;
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        .staffTable tr  {
+            font-size: 13px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+            color: #333;  
+        }
+
+        .staffTable th {
+            text-align: left; 
+            color: white; 
+            background: rgb(48 116 173);
+            font-weight: bold;
+            font-size: 14px;
+            padding:3px 7px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+        }
+
+        .staffTable td {
+            border: solid 1px #555;
+            padding: 5px 5px;
+            vertical-align: top;
+        }
+        
+		.btn {
+			background-color: #008CBA;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border: none;
+            color: white;
+            padding: 3px 6px;       
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            padding: 5px 8px;
+		}
+	
+        a:hover {
+            color: #000;
+        }
+        
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip text */
+        a .tooltiptext {
+            opacity: 0;
+            transition: opacity 0.7s;
+            width: 200px;
+            background-color: lightyellow;
+            color: #221CA2;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+         
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        a:hover .tooltiptext {
+            opacity: 1;
+        }
+    </style>
+    
+</head>
+
+<body ~if(getval(print)=true, [*onload="window.print()"*])~>
+
+~$// 
+    -- INTRO NOTES --
+
+    Eleutheria is a powerful templating engine that can be used to build any text documents like HTML, Json, etc
+    Dropinbase uses it to build both client and server-side code.
+    It also contains special features to build xlsx and docx files.
+    Here we use it build a simple report.
+
+    -- Integration with DIB --
+    Input variables from Dropinbase forms etc. can be sent to templates for display or use in SQL queries or Eleutheria expressions etc.
+    Dropinbase functions can be executed from within the iframe template, using the TemplateActions.js library included above.
+
+    dibCommon.goTo(containerName, portAlias, changeUrl, urlQueryString)    -- note, use '' for empty values, not null
+    dibCommon.startAction(submitUrl, containerName)   -- note, the containerName parameter indicates the starting place to search for values to include in clientData
+    dibCommon.clearUrlSearch(containerName, portAlias=''); - clears the url query string when a search string is not specified.
+
+    -- Security --
+    Variables sent from PHP to the Eleutheria template must be whitelisted using the pef_container.valid_params field.
+    Their values are sanitized allowing only "a-zA-Z0-9_ " by default. 
+    Eleutheria escapes any HTML found in data fields by default.
+    The [%...%] directives can be used to ignore encoding of safe hard-coded html within Eleutheria expressions.
+    The Eleutheria encode function can also be used to block encoding within a defined scope, but its main purpose is to sanitize eg. urls.
+~ 
+
+~$// BUTTONS ~
+
+~if(getval(print)<>true,[%
+    <a class="btn" href="/dropins/dibPdf/Pdf/convertContainer/dibexIFrame?fileName=test.pdf&filter%]=encode(this, url,{"alias_self_clientId":"^alias_self_clientId^"[*,*]"print":"true"})[%">PDF
+    </a>
+%])~
+
+~if(getval(print)<>true,[%<button class="btn" onclick="document.location.reload();">Refresh Info</button>%])~
+
+~$// Handle case where no client selected yet~
+~if(^alias_self_clientId^='' OR ^alias_self_clientId^<0 OR ^alias_self_clientId^>9999999, 
+    setval(clientId, -999), 
+    setval(clientId, ^alias_self_clientId^)
+)~
+
+~$// Use a container name to indicate the database from where to draw data~
+~setmaindb(dibexGridBasics)~
+
+~$// HEADING ~
+<h2>
+    ~getdb(name, test_client, id=param(getval(clientId)))~
+</h2>
+
+~$// Handle case where no client selected yet~
+~if('getval(clientId)'='-999', 
+    [%<span style="color:red;font-weight:700;font-size:16px;">Please select a Client</span>%], 
+    [%<h3>Staff</h3>%]
+)~
+    
+    ~$// Get a list of staff working on projects at this client~
+
+    |rssql1;SELECT DISTINCT s.id as staff_id, s.first_name, s.last_name, s.staff_code
+    FROM test_project p
+        INNER JOIN test_staff_project sp ON sp.project_id = p.id
+        INNER JOIN test_staff s ON sp.staff_id = s.id
+    WHERE p.client_id = ~param(getval(clientId), 1)~
+    ORDER BY s.first_name, s.last_name
+    LIMIT 5|
+
+    <p>
+        <a href="#" onClick="dibCommon.goTo('dibexStaffForm', '', true, '?primary_id=~staff_id~');return false">
+            <b style="font-size: 16px">~first_name~ ~last_name~ (~staff_code~)</b>
+            <span class="tooltiptext">This will open the <b>dibexStaffForm</b> container on ~first_name~&apos;s record</span>
+        </a>
+    </p>
+
+    ~$// For each person, get a list of their projects at this client~
+    <table class="staffTable">
+        <tr>
+            <th>No</th>
+            <th>Project</th>
+            <th>From Date</th>
+            <th>To Date</th>
+        </tr>
+
+        |rssql2;SELECT p.name, sp.date_from, sp.date_to
+            FROM test_project p
+                LEFT JOIN test_staff_project sp ON sp.project_id = p.id
+            WHERE p.client_id = ~param(getval(clientId),2)~ AND sp.staff_id = ~staff_id~
+            ORDER BY p.name
+            LIMIT 5|
+        <tr>
+            <td>~#~</td>
+            <td>~name~</td>
+            <td>~date_from~</td>
+            <td ~if('fld(date_to)'<'fld($date;Y-m-d)', style="color:crimson")~>~date_to~</td>
+        </tr>
+        |End2|
+    </table>
+
+    <br><br>
+    |End1|
+
+</table>
+
+<h2>Workings of encode() function</h2>
+By default the output of all expressions is HTML encoded.
+<br>To alter encoding, use the encode() function.
+<br>Below we set xxx to "malicious" HTML code that runs the JavaScript alert() function.
+<br>and then demonstrate how encode works:
+<br>
+~setval(xxx, <a onclick="alert('you were hacked')">if this link works then code was injected</a>)~
+
+<p>
+    Malicious code injected successfully (for this function only):
+    <br><b>encode(this, none, getval(xxx))</b>: ~encode(this, none, getval(xxx))~
+</p>
+<p>
+    Here the encoding is returned to the default and blocks the malicious injection
+    <br><b>getval(xxx):</b>: ~getval(xxx)~
+</p>
+
+<p>
+    Malicious code injected successfully (for this expression only):
+    <br><b>encode(expr,none) getval(xxx):</b>: ~encode(expr,none) getval(xxx)~
+</p>
+
+<p>
+    Here the encoding is returned to the default and blocks the malicious injection
+    <br><b>getval(xxx):</b>: ~getval(xxx)~
+</p>
+
+<p>
+    Malicious code injected successfully (for this expression and all following!):
+    <br><b>encode(all,none) getval(xxx):</b>: ~encode(all,none) getval(xxx)~
+</p>
+
+<p>
+    The default encoding WAS CHANGED - the malicious injection is not blocked!
+    <br><b>getval(xxx):</b>: ~getval(xxx)~
+</p>
+
+<p>
+    Reset the encoding to 'html' for this expression and all to follow:
+    <br><b>encode(all,html) getval(xxx):</b>: ~encode(all,html) getval(xxx)~
+</p>
+
+<p>
+    The html encoding blocks the malicious injection
+    <br><b>getval(xxx):</b>: ~getval(xxx)~
+</p>
+
+<p>
+    Note, if an expression contains encode(this, none) even once, then only the parts in the whole expression that is encoded specifically are encoded; the rest are NOT.
+    <br><b>encode(this, none, getval(xxx)) NOT ENCONDED: getval(xxx)  AND ENCODED: encode(this,html, getval(xxx) ):</b>: ~encode(this, none, getval(xxx)) NOT ENCONDED: getval(xxx)  AND ENCODED: encode(this,html, getval(xxx) )~
+</p>
+
+<p>
+    Here the encoding is returned to the default and blocks the malicious injection
+    <br><b>getval(xxx):</b>: ~getval(xxx)~
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,1135 @@
+System.register(["tslib", "@angular/core", "@angular/material/table", "shared", "@angular/forms", "@angular/common/http", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/material/sort", "@angular/material/paginator", "@angular/common", "@ngbracket/ngx-layout/extended", "@angular/material/button", "@angular/material/checkbox", "@angular/material/form-field", "@angular/material/icon", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, table_1, shared_1, forms_1, core_2, shared_2, shared_3, http_1, forms_2, core_3, shared_4, rxjs_1, operators_1, table_2, sort_1, paginator_1, core_4, common_1, shared_5, shared_6, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, _c0, _c1, _c2, _c3, _c4, _c5, importsRequired, adminGrid1Component, containerModules, adminGrid1Module;
+    var __moduleName = context_1 && context_1.id;
+    function adminGrid1Component_mat_icon_6_Template(rf, ctx) { if (rf & 1) {
+        const _r18 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 25);
+        i0.ɵɵlistener("click", function adminGrid1Component_mat_icon_6_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r18); const ctx_r17 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r17.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function adminGrid1Component_mat_icon_7_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 26);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function adminGrid1Component_mat_icon_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 27);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function adminGrid1Component_th_15_Template(rf, ctx) { if (rf & 1) {
+        const _r20 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 28)(1, "mat-checkbox", 29);
+        i0.ɵɵlistener("click", function adminGrid1Component_th_15_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r20); const ctx_r19 = i0.ɵɵnextContext(); $event.preventDefault(); return i0.ɵɵresetView(ctx_r19.masterToggle()); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r4.masterIsChecked)("indeterminate", ctx_r4.masterIsIndeterminate);
+    } }
+    function adminGrid1Component_td_16_Template(rf, ctx) { if (rf & 1) {
+        const _r24 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 30)(1, "mat-checkbox", 31);
+        i0.ɵɵlistener("click", function adminGrid1Component_td_16_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function adminGrid1Component_td_16_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r24); const row_r21 = restoredCtx.$implicit; const ctx_r23 = i0.ɵɵnextContext(); return i0.ɵɵresetView($event ? ctx_r23.selection.toggle(row_r21) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r21 = ctx.$implicit;
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r5.isHighlighted(row_r21));
+    } }
+    function adminGrid1Component_th_18_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 34);
+    } }
+    function adminGrid1Component_th_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 32);
+        i0.ɵɵtemplate(1, adminGrid1Component_th_18_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 33);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r6 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r6.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r6.busy);
+    } }
+    function adminGrid1Component_th_20_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r26 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r26.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function adminGrid1Component_th_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35);
+        i0.ɵɵtemplate(1, adminGrid1Component_th_20_span_1_Template, 2, 1, "span", 22);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r7 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r7.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r7.busy && ctx_r7.tableDataSource.data.length == 0);
+    } }
+    function adminGrid1Component_ng_container_21_tr_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 37);
+    } }
+    function adminGrid1Component_ng_container_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0);
+        i0.ɵɵtemplate(1, adminGrid1Component_ng_container_21_tr_1_Template, 1, 0, "tr", 36);
+        i0.ɵɵpipe(2, "async");
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const column_r27 = ctx.$implicit;
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpipeBind1(2, 1, ctx_r8.columnHeaders.getArray(column_r27).items$));
+    } }
+    function adminGrid1Component_tr_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 38);
+    } if (rf & 2) {
+        const ctx_r9 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r9.busy ? "visible" : "hidden"));
+    } }
+    function adminGrid1Component_tr_23_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 38);
+    } if (rf & 2) {
+        const ctx_r10 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r10.tableDataSource.data.length == 0 ? "visible" : "hidden"));
+    } }
+    function adminGrid1Component_tr_24_Template(rf, ctx) { if (rf & 1) {
+        const _r32 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 39);
+        i0.ɵɵlistener("click", function adminGrid1Component_tr_24_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r32); const row_r29 = restoredCtx.$implicit; const ctx_r31 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r31.rowClick(row_r29, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r29 = ctx.$implicit;
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("formGroup", ctx_r11.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(2, _c1, ctx_r11.isHighlighted(row_r29)));
+    } }
+    function adminGrid1Component_26_ng_template_0_Template(rf, ctx) { }
+    function adminGrid1Component_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, adminGrid1Component_26_ng_template_0_Template, 0, 0, "ng-template", 40);
+    } if (rf & 2) {
+        i0.ɵɵnextContext();
+        const _r15 = i0.ɵɵreference(31);
+        i0.ɵɵproperty("ngTemplateOutlet", _r15);
+    } }
+    function adminGrid1Component_mat_toolbar_29_mat_checkbox_2_Template(rf, ctx) { if (rf & 1) {
+        const _r38 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-checkbox", 46);
+        i0.ɵɵlistener("click", function adminGrid1Component_mat_toolbar_29_mat_checkbox_2_Template_mat_checkbox_click_0_listener($event) { i0.ɵɵrestoreView(_r38); const ctx_r37 = i0.ɵɵnextContext(2); $event.preventDefault(); return i0.ɵɵresetView(ctx_r37.clearAll()); });
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r34 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("checked", true);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" ", ctx_r34.numberOfSelectedItems + " ", "item", ctx_r34.numberOfSelectedItems > 1 ? "s " : " ", "selected ");
+    } }
+    function adminGrid1Component_mat_toolbar_29_button_3_mat_icon_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility");
+        i0.ɵɵelementEnd();
+    } }
+    function adminGrid1Component_mat_toolbar_29_button_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility_off");
+        i0.ɵɵelementEnd();
+    } }
+    function adminGrid1Component_mat_toolbar_29_button_3_Template(rf, ctx) { if (rf & 1) {
+        const _r42 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 47);
+        i0.ɵɵlistener("click", function adminGrid1Component_mat_toolbar_29_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r42); const ctx_r41 = i0.ɵɵnextContext(2); ctx_r41.gridShowClipboardDefault = !ctx_r41.gridShowClipboardDefault; return i0.ɵɵresetView(ctx_r41.gridShowClipboardDefault && ctx_r41.scrollToBottom()); });
+        i0.ɵɵtemplate(1, adminGrid1Component_mat_toolbar_29_button_3_mat_icon_1_Template, 2, 0, "mat-icon", 22);
+        i0.ɵɵtemplate(2, adminGrid1Component_mat_toolbar_29_button_3_mat_icon_2_Template, 2, 0, "mat-icon", 22);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r35 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r35.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r35.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r35.gridShowClipboardDefault ? "hide" : "show", "");
+    } }
+    function adminGrid1Component_mat_toolbar_29_mat_paginator_5_Template(rf, ctx) { if (rf & 1) {
+        const _r45 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-paginator", 48, 49);
+        i0.ɵɵlistener("page", function adminGrid1Component_mat_toolbar_29_mat_paginator_5_Template_mat_paginator_page_0_listener($event) { i0.ɵɵrestoreView(_r45); const ctx_r44 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r44.changePage($event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r36 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("length", ctx_r36.page.totalRecords)("pageSize", ctx_r36.page.pageSize)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c2));
+    } }
+    function adminGrid1Component_mat_toolbar_29_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-toolbar")(1, "mat-toolbar-row", 41);
+        i0.ɵɵtemplate(2, adminGrid1Component_mat_toolbar_29_mat_checkbox_2_Template, 2, 3, "mat-checkbox", 42);
+        i0.ɵɵtemplate(3, adminGrid1Component_mat_toolbar_29_button_3_Template, 4, 3, "button", 43);
+        i0.ɵɵelement(4, "span", 44);
+        i0.ɵɵtemplate(5, adminGrid1Component_mat_toolbar_29_mat_paginator_5_Template, 2, 4, "mat-paginator", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r14 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r14.numberOfSelectedItems);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r14.selectedDataNotInPage().length > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", true);
+    } }
+    function adminGrid1Component_ng_template_30_th_2_Template(rf, ctx) { if (rf & 1) {
+        const _r52 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 28)(1, "mat-checkbox", 54);
+        i0.ɵɵlistener("change", function adminGrid1Component_ng_template_30_th_2_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r52); const ctx_r51 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r51.masterToggle($event) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r46 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r46.masterIsChecked)("indeterminate", ctx_r46.masterIsIndeterminate);
+    } }
+    function adminGrid1Component_ng_template_30_td_3_Template(rf, ctx) { if (rf & 1) {
+        const _r56 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 55)(1, "mat-checkbox", 31);
+        i0.ɵɵlistener("click", function adminGrid1Component_ng_template_30_td_3_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function adminGrid1Component_ng_template_30_td_3_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r56); const row_r53 = restoredCtx.$implicit; const ctx_r55 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r55.selection.toggle(row_r53) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r53 = ctx.$implicit;
+        const ctx_r47 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r47.isHighlighted(row_r53));
+    } }
+    function adminGrid1Component_ng_template_30_th_5_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 34);
+    } }
+    function adminGrid1Component_ng_template_30_th_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 56);
+        i0.ɵɵtemplate(1, adminGrid1Component_ng_template_30_th_5_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 33);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r48 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r48.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r48.busy);
+    } }
+    function adminGrid1Component_ng_template_30_th_7_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r58 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r58.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function adminGrid1Component_ng_template_30_th_7_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35);
+        i0.ɵɵtemplate(1, adminGrid1Component_ng_template_30_th_7_span_1_Template, 2, 1, "span", 22);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r49 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r49.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r49.busy && ctx_r49.tableDataSource.data.length == 0);
+    } }
+    function adminGrid1Component_ng_template_30_tr_8_Template(rf, ctx) { if (rf & 1) {
+        const _r61 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 57);
+        i0.ɵɵlistener("click", function adminGrid1Component_ng_template_30_tr_8_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r61); const row_r59 = restoredCtx.$implicit; const ctx_r60 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r60.rowClick(row_r59, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r59 = ctx.$implicit;
+        const ctx_r50 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r50.isHighlighted(row_r59)));
+    } }
+    function adminGrid1Component_ng_template_30_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 50);
+        i0.ɵɵelementContainerStart(1, 12);
+        i0.ɵɵtemplate(2, adminGrid1Component_ng_template_30_th_2_Template, 2, 2, "th", 13);
+        i0.ɵɵtemplate(3, adminGrid1Component_ng_template_30_td_3_Template, 2, 1, "td", 51);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(4, 15);
+        i0.ɵɵtemplate(5, adminGrid1Component_ng_template_30_th_5_Template, 2, 2, "th", 52);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(6, 17);
+        i0.ɵɵtemplate(7, adminGrid1Component_ng_template_30_th_7_Template, 2, 2, "th", 18);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(8, adminGrid1Component_ng_template_30_tr_8_Template, 1, 3, "tr", 53);
+        i0.ɵɵpipe(9, "async");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r16 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("dataSource", ctx_r16.selectionDataSource);
+        i0.ɵɵadvance(8);
+        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(9, 2, ctx_r16.columnsToDisplay.items$));
+    } }
+    // @todo francois we need to import these files before the view loads
+    async function importFiles() {
+        for (const fileLocation of importsRequired) {
+            await SystemJS.import(fileLocation);
+        }
+    }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_4 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (table_1_1) {
+                table_1 = table_1_1;
+                table_2 = table_1_1;
+                i14 = table_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                shared_6 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                forms_2 = forms_1_1;
+                i3 = forms_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_3_1) {
+                core_3 = core_3_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (sort_1_1) {
+                sort_1 = sort_1_1;
+                i15 = sort_1_1;
+            },
+            function (paginator_1_1) {
+                paginator_1 = paginator_1_1;
+                i16 = paginator_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { visibility: a0 }; };
+            _c1 = function (a0) { return { "dib-grid-selected": a0 }; };
+            _c2 = function () { return [10, 20, 50, 100]; };
+            _c3 = function (a0) { return { "dib-editor": a0 }; };
+            _c4 = function () { return ["_dibBusy"]; };
+            _c5 = function () { return ["_dibNoRecords"]; };
+            importsRequired = [];
+            // Promise.resolve()
+            // .then(async () => {
+            //   await importFiles();
+            // })
+            adminGrid1Component = class adminGrid1Component extends shared_1.GridComponent {
+                httpClient;
+                ref;
+                crudService;
+                sd;
+                cd;
+                formBuilder;
+                view = {
+                    container: {
+                        id: 369,
+                        name: 'adminGrid1',
+                        subContainerItemAliases: [],
+                        allChildContainers: ["adminChart1"],
+                        refreshChildContainers: {
+                            "_": ['adminChart1*8509']
+                        },
+                        dropin: 'grid',
+                        activeFilter: null,
+                        configs: {},
+                        keepInMemory: false
+                    },
+                    items: {},
+                    primaryKeys: ["id"],
+                    recordStatus: 'create',
+                    debug: false,
+                    debugItem: false
+                };
+                gridMultiselect = false; //default: false
+                gridPersistSelection = false; //default: false
+                gridMasterSelectAllFirst = true; //default:true
+                gridShowDuplicatesInClipboard = false; //default:false
+                gridShowClipboardDefault = false; //default:false
+                gridRowClickChangesSelection = true; //default:true
+                gridExcelEditingEnabled = false; //default:false
+                gridExcelEditingAutoSave = false; //default:false
+                gridHighlightLastClickedOnly = false; //default:false
+                gridClickedLastNullable = false; //default:false
+                editFormGroup;
+                selection = new shared_1.SelectionModel(this.gridMultiselect, []);
+                selectionDataSource = new table_1.MatTableDataSource(this.selection.selected);
+                page = {
+                    pageSize: 20,
+                    pageIndex: 1,
+                };
+                //columnsToDisplay
+                columnsToDisplay = new shared_3.DibArray([]);
+                allColumnsToDisplay = new shared_3.DibArray([]);
+                // Columns will always have a first row
+                columnHeaders = new shared_3.DibArrayList({ "1": new shared_3.DibArray([]) });
+                showSearchDefault = false;
+                showSearch = this.showSearchDefault;
+                constructor(injector, httpClient, ref, crudService, viewContainerRef, sd, cd, formBuilder) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.ref = ref;
+                    this.crudService = crudService;
+                    this.sd = sd;
+                    this.cd = cd;
+                    this.formBuilder = formBuilder;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    //Define the lists
+                }
+                ngOnInit() {
+                    this.model = new shared_3.DibContainerModel(this.injector, 'adminGrid1');
+                    this.containerName = 'adminGrid1'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {
+                        price: {
+                            itemId: 8608,
+                            type: 'number',
+                            fieldAlias: 'price',
+                            formControl: new forms_2.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '0',
+                            dataType: 'number',
+                            contentType: 'integer',
+                            changeUrl: false
+                        },
+                    };
+                    this.model.$formGroup.addControl('price', this.model.modelItems.price.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy))
+                        .subscribe(change => {
+                        //--dib-controller-action--modelChange--
+                    });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    //Defining the list item services
+                    lists = this.lists;
+                    //--dib-controller-action--onInit--
+                    this.tableDataSource.data = [];
+                    // Register all the clientData for this container
+                    this.resetPage();
+                    this.gridForm = this.formBuilder.group({
+                        gridRows: this.formBuilder.array([])
+                    });
+                    this.setupSubmit();
+                    this.setupGridSearchAll();
+                    this.selection.changed.pipe().subscribe(c => {
+                        this.updateSelectionClientData(c);
+                        if (this.gridShowDuplicatesInClipboard) {
+                            this.selectionDataSource.data = c.source.selected;
+                        }
+                        else {
+                            this.selectionDataSource.data = this.selectedDataNotInPage(c.source.selected);
+                        }
+                    });
+                }
+                ngAfterViewInit() {
+                    super.ngAfterViewInit();
+                    window.dispatchEvent(new Event('resize'));
+                    //--dib-controller-action--afterViewInit--
+                    this.setupService();
+                    this.setupDelete();
+                    this.reloadContainer();
+                    this.clientData.selected_self = null;
+                    this.updateSearchFromUrl();
+                }
+                toggleExcelEditing() {
+                    this.excelEditing = !this.excelEditing;
+                    this.editorOpen = true;
+                    if (this.excelEditing) {
+                        this.editorOpen = false;
+                        this.gridForm.controls.gridRows.controls.forEach((control) => {
+                            if (this.gridExcelEditingAutoSave && control.get('__new').value !== true) {
+                                control.valueChanges.pipe(operators_1.takeWhile(() => this.excelEditing)).subscribe((row, x) => {
+                                    // Check all dropdowns before submitting the change event
+                                    if (control.pristine == false) {
+                                        this.submit$.next(control);
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    else {
+                        this.gridForm.controls.gridRows.controls.forEach((control) => {
+                            control.get('__edit').setValue(false);
+                        });
+                    }
+                }
+                editRow(row) {
+                    if (this.gridExcelEditingEnabled || row.get('__edit').value == true) {
+                        this.submit$.next(row);
+                        this.editorOpen = false;
+                    }
+                    else {
+                        //Only edit one row at a stage
+                        this.gridForm.controls.gridRows.controls.forEach((control) => {
+                            if (control.get('__edit').value == true) {
+                                this.submit$.next(control);
+                            }
+                        });
+                        this.editorOpen = true;
+                        row.get('__edit').setValue(!row.get('__edit').value);
+                    }
+                }
+                checkIfNewRecord() {
+                    let newRecord = true;
+                    if (!(this.gridData.length == 0 || this.gridData[0].__new !== true)) {
+                        newRecord = false;
+                        this.gridData.shift();
+                    }
+                    return newRecord;
+                }
+                inlineAddNewRow() {
+                    const newRecord = this.checkIfNewRecord();
+                    // If this is not a new record then close the new record
+                    if (!newRecord) {
+                        this.addDataToGrid(false, false);
+                        this.handleSelectionOnPage();
+                        return;
+                    }
+                    // If this is a new record and there is nothing selected we will create a blank record by default
+                    if (this.selection.selected.length == 0) {
+                        this.addDataToGrid(newRecord, false);
+                        this.handleSelectionOnPage();
+                        return;
+                    }
+                    // If this is a new record and there is nothing selected we will create a blank record by default
+                    this.messagingService.confirm({
+                        title: this.translationService.translate('grid.duplicateSelected.title', 'Duplicate selected record'),
+                        message: this.translationService.translate('grid.duplicateSelected.message', `Use the selected records content for your new entry?`),
+                        okText: this.translationService.translate('grid.duplicateSelected.okText', 'Use selected record'),
+                        cancelText: this.translationService.translate('grid.duplicateSelected.cancelText', 'Create blank')
+                    }).then((result) => {
+                        this.addDataToGrid(true, result);
+                    });
+                }
+                setupSubmit() {
+                    this.submit$ = new rxjs_1.Subject();
+                    var self = this;
+                    this.submit$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((formGroup) => {
+                        self.editFormGroup = formGroup;
+                        //--dib-controller-action--beforeSubmit--
+                        this.busy = true;
+                        return formGroup;
+                    }), operators_1.switchMap(() => {
+                        let primaryKeys = {};
+                        this.view.primaryKeys.forEach((key) => {
+                            primaryKeys[key] = self.editFormGroup.get(key).value;
+                        });
+                        return this.crudService.update(this.model.crudUrl, this.view.container.name, {
+                            primaryKeys: self.editFormGroup.value.__new == true ? null : primaryKeys,
+                            clientData: this.clientData,
+                            activeFilter: this.view.container.activeFilter,
+                            model: this.model,
+                            formGroup: self.editFormGroup,
+                        });
+                    }), operators_1.tap(response => {
+                        if (response.message == "No changes were made to existing database values.") {
+                            this.busy = false;
+                            self.editFormGroup.get('__edit').setValue(false);
+                            self.editFormGroup.markAsPristine();
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        if (response.success == false) {
+                            this.busy = false;
+                            this.editorOpen = true;
+                        }
+                        if (response.success) {
+                            this.busy = false;
+                            self.editFormGroup.markAsPristine();
+                            if (self.editFormGroup.value.__new == true) {
+                                self.editFormGroup.controls.__new.setValue(false);
+                                Object.keys(response.records).forEach((key) => {
+                                    if (!!self.editFormGroup.controls[key] == true) {
+                                        self.editFormGroup.controls[key].setValue(response.records[key]);
+                                    }
+                                });
+                                Object.keys(self.editFormGroup.controls).forEach((key) => {
+                                    if (typeof self.editFormGroup.controls[key].value == 'object') {
+                                        if (!!self.editFormGroup.controls[key].value.id == true) {
+                                            this.gridData[0][key] = self.editFormGroup.controls[key].value.id;
+                                            this.gridData[0][`${key}_display_value`] = self.editFormGroup.controls[key].value.id_display_value;
+                                        }
+                                        this.gridData[0][key] = self.editFormGroup.controls[key].value;
+                                    }
+                                    else {
+                                        this.gridData[0][key] = self.editFormGroup.controls[key].value;
+                                    }
+                                });
+                                this.gridData[0].__new = false;
+                                // After the record is saved we need to subscribe to the valueChanges
+                                if (this.gridExcelEditingAutoSave) {
+                                    this.excelEditing = false;
+                                    this.toggleExcelEditing();
+                                }
+                            }
+                            self.editFormGroup.get('__edit').setValue(!self.editFormGroup.get('__edit').value);
+                            if (this.view.recordStatus == 'create') {
+                                //--dib-controller-action--create--
+                            }
+                            else {
+                                //--dib-controller-action--update--
+                            }
+                            this.model.$formGroup.markAsPristine();
+                            //--dib-controller-action--onSubmit--
+                        }
+                        else {
+                            //--dib-controller-action--onSubmitFailed--
+                            if (this.view.recordStatus == 'create') {
+                                //--dib-controller-action--createFailed--
+                            }
+                            else {
+                                //--dib-controller-action--updateFailed--
+                            }
+                        }
+                    }), operators_1.finalize(() => this.busy = false)).subscribe();
+                }
+                rowClick(row, e) {
+                    // Preventing items clicked 
+                    if (!!e.srcElement.firstChild && !!e.srcElement.firstChild.attributes && !!e.srcElement.firstChild.attributes.type && e.srcElement.firstChild.attributes.type.value == 'checkbox') {
+                        return;
+                    }
+                    if (e.srcElement && ["button", "a", "mat-icon", "dib-icon"].includes(e.srcElement.tagName.toLocaleLowerCase())) {
+                        return;
+                    }
+                    if (this.gridRowClickChangesSelection)
+                        this.selection.toggle(row);
+                    if (this.gridClickedLastNullable && !!this.clickedLast && this.compareRows(row, this.clickedLast)) {
+                        this.clickedLast = null;
+                    }
+                    else {
+                        this.clickedLast = row;
+                    }
+                    // this.allClientData.alias.clickedLast = this.clickedLast;
+                    let lastClickedRawValue = this.clickedLast.getRawValue();
+                    // Build up only items vir itemAlias
+                    if (this.clickedLast !== null) {
+                        let lastClickValue = {};
+                        Object.keys(this.model.modelItems).forEach(key => {
+                            if (!!this.model.modelItems[key].itemAlias == true) {
+                                lastClickValue[key] = lastClickedRawValue[key];
+                            }
+                        });
+                        this.clientData.clickedLast_self = lastClickValue;
+                    }
+                    else {
+                        this.clientData.clickedLast_self = null;
+                    }
+                    this.eventService.emit({ name: `clickedLast_adminGrid1`, value: this.clientData.clickedLast_self });
+                    //--dib-controller-action--rowClick--
+                }
+                updateSelectionClientData(selectionChange) {
+                    const { selected } = selectionChange.source || [];
+                    const firstSelection = selected.length != 0 ? selected[0].getRawValue() : {};
+                    //--dib-controller-action--rowsDeselected--
+                    //--dib-controller-action--rowsSelected--
+                    // if none is selected
+                    if (!selected[0]) {
+                        this.clientData.selected_self = null;
+                        //--dib-clientData-options--selected--
+                        this.eventService.emit({ name: `selected_adminGrid1`, value: this.clientData.selected_self });
+                        return;
+                    }
+                    let cdSelected = this.gridMultiselect ? selected.map(s => {
+                        let res = {};
+                        this.view.primaryKeys.forEach((key) => {
+                            if (!!s.getRawValue()[key]) {
+                                res[key] = s.getRawValue()[key];
+                            }
+                        });
+                        return res;
+                    }) : this.view.primaryKeys.reduce((res, key) => ({ ...res, [key]: firstSelection[key] }), {});
+                    // Ensure that we have selected row info when the primary info is not present in the grid
+                    if (Object.keys(cdSelected).length == 0) {
+                        cdSelected = selected;
+                    }
+                    this.clientData.selected_self = cdSelected;
+                    this.eventService.emit({ name: `selected_adminGrid1`, value: cdSelected });
+                }
+                deleteSelected() {
+                    if (this.clientData.selected_self == null) {
+                        this.messagingService.alert({
+                            title: 'No records selected',
+                            message: 'Please select a record and try again.',
+                            okText: 'Okay'
+                        });
+                        return;
+                    }
+                    if (Object.keys(this.clientData.selected_self).length == 0) {
+                        this.messagingService.alert({
+                            title: 'No records selected',
+                            message: 'Please select a record and try again.',
+                            okText: 'Okay'
+                        });
+                        return;
+                    }
+                    this.messagingService.confirm({
+                        title: 'Delete Selected Record',
+                        message: 'Are you sure you want to delete?',
+                        okText: 'Yes',
+                        cancelText: 'Cancel'
+                    }).then(result => {
+                        if (result !== false) {
+                            this.delete$.next(null);
+                        }
+                    });
+                }
+                setupDelete() {
+                    this.delete$ = new rxjs_1.Subject();
+                    this.delete$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => {
+                        //--dib-controller-action--beforeDelete--
+                        this.busy = true;
+                    }), operators_1.switchMap(() => {
+                        let primaryKeys = {};
+                        this.view.primaryKeys.forEach(key => {
+                            if (this.clientData.selected_self[key] !== undefined) {
+                                primaryKeys[key] = this.clientData.selected_self[key];
+                            }
+                        });
+                        return this.crudService.delete(this.model.crudUrl, this.view.container.name, {
+                            primaryKeys: primaryKeys,
+                            clientData: this.clientData,
+                            activeFilter: this.view.container.activeFilter,
+                        })
+                            .pipe(operators_1.finalize(() => this.busy = false));
+                    }), operators_1.tap(response => {
+                        if (response.success) {
+                            this.clearSelection();
+                            this.clearClientDataSelection();
+                            this.reloadContainer();
+                            //--dib-controller-action--delete--
+                        }
+                    })).subscribe();
+                }
+                setupService() {
+                    this.sort.sortChange.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((sort) => {
+                        this.page$.next(this.page);
+                    })).subscribe();
+                    this.page$.pipe(operators_1.tap(page => {
+                        this.page = page;
+                        this.busy = true;
+                    }), operators_1.takeUntil(this.onDestroy), operators_1.tap(page => {
+                        //--dib-controller-action--beforeLoad--
+                        // Clear selected items
+                        this.clearClientDataSelection();
+                        if (this.showSearch) {
+                            this.clientData.gridFilter_self = this.allClientData.gridFilter;
+                            this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: this.clientData.gridFilter_self });
+                        }
+                        else {
+                            delete this.clientData.gridFilter_self;
+                            this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: null });
+                        }
+                    }), operators_1.switchMap((page) => {
+                        const sort = this.sort.direction == '' ? [] : [{ "property": this.sort.active, "direction": this.sort.direction.toUpperCase() }];
+                        return this.crudService.list(this.model.crudUrl, this.view.container.name, {
+                            page: { number: page.pageIndex + 1, limit: page.pageSize },
+                            searchText: null,
+                            sort: sort,
+                            filter: this.filter,
+                            clientData: this.clientData,
+                            activeFilter: this.view.container.activeFilter
+                        }).pipe(operators_1.catchError((err) => {
+                            this.busy = false;
+                            return rxjs_1.of({ success: false, message: `${err}` });
+                        }));
+                    }), operators_1.tap((response) => {
+                        this.busy = false;
+                        window.dispatchEvent(new Event('resize'));
+                        if (response.success) {
+                            this.tableDataSource.data = [];
+                            this.gridData = response.records;
+                            if (!!this.gridData === true) {
+                                this.addDataToGrid(false, false);
+                                this.page.length = Math.ceil(response.filtertotal / this.page.pageSize);
+                                this.page.records = response.filtertotal;
+                                this.page.totalRecords = response.total;
+                                this.page.fromRecord = this.page.pageIndex == 0 ? 1 : (this.page.pageIndex) * this.page.pageSize;
+                                this.page.toRecord = this.page.fromRecord == 1 ? this.page.fromRecord + this.tableDataSource.data.length - 1 : this.page.fromRecord + this.tableDataSource.data.length;
+                                if (this.page.toRecord > this.page.totalRecords) {
+                                    this.page.toRecord = this.page.totalRecords;
+                                    this.page.allRecords = true;
+                                }
+                            }
+                            this.handleSelectionOnPage();
+                            //--dib-controller-action--load--
+                            this.reloadSubcontainers();
+                        }
+                    }), operators_1.finalize(() => this.busy = false)).subscribe();
+                }
+                async addDataToGrid(addRow = false, duplicate = false) {
+                    const formDefaults = {};
+                    let formDefaultsConfigs = {};
+                    // Getting defaults for all columns 
+                    if (addRow) {
+                        this.gridData.reverse();
+                        let newRecord = { "__new": true };
+                        // Crud call to get server defaults 
+                        if (this.canCreate) {
+                            try {
+                                let result = await this.crudService.defaults(this.model.crudUrl, this.view.container.name, {
+                                    primaryKeys: null,
+                                    clientData: this.clientData,
+                                    activeFilter: this.view.container.activeFilter,
+                                    canCreate: this.canCreate
+                                }).pipe(operators_1.catchError((err) => {
+                                    this.busy = false;
+                                    return rxjs_1.of({ success: false, message: `${err}` });
+                                }), operators_1.finalize(() => { })).toPromise();
+                                Object.keys(formDefaultsConfigs).forEach((key) => {
+                                    if (!!result.records[key] && !!formDefaultsConfigs[key]) {
+                                        formDefaultsConfigs[key].defaultValue = result.records[key];
+                                    }
+                                });
+                                await Promise.all(Object.keys(formDefaultsConfigs).map(async (key) => {
+                                    const value = await this.findDefaultValue(formDefaultsConfigs[key]);
+                                    formDefaults[key] = value;
+                                }));
+                            }
+                            catch (error) {
+                                // Handle error
+                            }
+                        }
+                        // Merge server default with client defaults
+                        if (duplicate && this.selection.selected.length > 0) {
+                            const currentSelected = this.selection.selected[0].value;
+                            Object.keys(currentSelected).forEach((key) => {
+                                let dataType = 'string';
+                                if (key.indexOf("__") !== 0) {
+                                    if (!!this.model.modelItems[key]) {
+                                        dataType = this.model.modelItems[key].type;
+                                    }
+                                    //@todo multisect items
+                                    if (dataType == 'select') {
+                                        newRecord[key] = !!currentSelected[key] == true ? currentSelected[key].id : null;
+                                        newRecord[`${key}_display_value`] = !!currentSelected[key] == true ? currentSelected[key].id_display_value : '';
+                                    }
+                                    else if (dataType == 'boolean') {
+                                        newRecord[key] = !!currentSelected[key] == true ? 1 : 0;
+                                    }
+                                    else {
+                                        newRecord[key] = currentSelected[key];
+                                    }
+                                }
+                            });
+                            this.handleSelectionOnPage();
+                            //   this.selection.selected[0].value
+                        }
+                        this.gridData.push(newRecord);
+                        this.editorOpen = true;
+                        this.gridData.reverse();
+                    }
+                    this.excelEditing = false;
+                    this.busy = true;
+                    this.gridForm = this.formBuilder.group({
+                        gridRows: this.formBuilder.array(this.gridData.map((row) => {
+                            const rowFormGroup = this.formBuilder.group({
+                                __edit: (row.__new == true) ? new forms_2.FormControl(true) : new forms_2.FormControl(false),
+                                __new: (row.__new == true) ? new forms_2.FormControl(true) : new forms_2.FormControl(false),
+                            });
+                            return rowFormGroup;
+                        }))
+                    });
+                    const gridFormControls = this.gridForm.get('gridRows').controls;
+                    gridFormControls.forEach((formGroup) => {
+                    });
+                    // Defaults :) 
+                    this.tableDataSource = new table_1.MatTableDataSource(this.gridForm.get('gridRows').controls);
+                    this.busy = false;
+                    this.tableDataSource
+                        .connect().pipe(operators_1.takeWhile(() => !this.busy), operators_1.tap(_ => {
+                        const selected = this.selection.selected;
+                        this.selection._emitChanges = false;
+                        this.selection.deselect(...this.selection.selected.filter(s => !!this.tableDataSource.data.find(d => this.compareRows(s, d))));
+                        this.selection.select(...this.tableDataSource.data.filter(d => !!selected.find(s => this.compareRows(s, d))));
+                        this.selection._emitChanges = true;
+                        // Enabling excel editing if the setting was turned on the grid
+                        if (this.gridExcelEditingEnabled == true) {
+                            this.toggleExcelEditing();
+                        }
+                    }))
+                        .subscribe();
+                    if (this.gridShowDuplicatesInClipboard) {
+                        this.selectionDataSource.data = this.selection.selected;
+                    }
+                    else {
+                        this.selectionDataSource.data = this.selectedDataNotInPage(this.selection.selected);
+                    }
+                }
+                ngOnDestroy() {
+                    //--dib-controller-action--onDestroy--
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() {
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    //--dib-controller-action--reloadContainer--
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        // To accomodate for columnHeaders in grids @todo probably need to execute updateFromDefault from all container instead of a general one
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({
+                        name: 'onReloadadminGrid1',
+                        value: this
+                    });
+                    this.eventService.emit({
+                        name: 'OnReloadContainer',
+                        value: 'adminGrid1'
+                    });
+                    this.resetPage();
+                    this.applySearchFromUrl();
+                    this.page$.next(this.page);
+                }
+                resetPage() {
+                    this.page = {
+                        number: 1,
+                        length: 0,
+                        pageSize: 20,
+                        pageIndex: 0,
+                        lastLoad: 1,
+                        totalRecords: 0,
+                        allRecords: false
+                    };
+                    this.page.allRecords = false;
+                    if (!this.gridPersistSelection) {
+                        this.selection.clear();
+                    }
+                    if (!!this.paginator) {
+                        // reload translations
+                        this.paginator._intl.itemsPerPageLabel = '';
+                        this.paginator.pageSize = this.page.pageSize;
+                        this.paginator.firstPage();
+                    }
+                }
+                static ɵfac = function adminGrid1Component_Factory(t) { return new (t || adminGrid1Component)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i2.CrudService), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i3.FormBuilder)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: adminGrid1Component, selectors: [["admin-grid1"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 32, vars: 22, consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci8608", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "price", "name", "price"], ["class", "dib_form_input_done", "matSuffix", "", 3, "click", 4, "ngIf"], ["class", "dib_form_input_done_all", "matSuffix", "", 4, "ngIf"], ["class", "dib_form_input_priority_high", "matSuffix", "", 4, "ngIf"], ["fill-height", "", "debounceTime", "300", 3, "additionalSpace", "footerElement"], ["gridScroll", ""], ["autocomplete", "off", 3, "formGroup"], ["formArrayName", "gridRows"], ["mat-table", "", "matSort", "", 1, "dib-inline-editing", 3, "dataSource"], ["matColumnDef", "_select"], ["mat-header-cell", "", "style", "width:80px", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "_dibBusy"], ["mat-header-cell", "", "style", "height:4px", 4, "matHeaderCellDef"], ["matColumnDef", "_dibNoRecords"], ["mat-header-cell", "", "class", "dib-no-records-found", 4, "matHeaderCellDef"], [4, "ngFor", "ngForOf"], ["mat-header-row", "", "class", "dib-grid-loader", 3, "ngStyle", 4, "matHeaderRowDef"], ["mat-row", "", 3, "formGroup", "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], [4, "ngIf"], ["footeradminGrid1", ""], ["_selectedTable", ""], ["matSuffix", "", 1, "dib_form_input_done", 3, "click"], ["matSuffix", "", 1, "dib_form_input_done_all"], ["matSuffix", "", 1, "dib_form_input_priority_high"], ["mat-header-cell", "", 2, "width", "80px"], ["color", "primary", 3, "checked", "indeterminate", "click"], ["mat-cell", ""], ["color", "primary", 3, "checked", "click", "change"], ["mat-header-cell", "", 2, "height", "4px"], ["mode", "indeterminate", 4, "ngIf"], ["mode", "indeterminate"], ["mat-header-cell", "", 1, "dib-no-records-found"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-header-row", ""], ["mat-header-row", "", 1, "dib-grid-loader", 3, "ngStyle"], ["mat-row", "", 3, "formGroup", "ngClass", "click"], [3, "ngTemplateOutlet"], [1, "grid-footer"], ["class", "mat-body", "matTooltip", "Clear all", "position", "above", "color", "primary", 3, "checked", "click", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [2, "flex", "1 1 auto"], ["style", "background: none", 3, "length", "pageSize", "pageSizeOptions", "page", 4, "ngIf"], ["matTooltip", "Clear all", "position", "above", "color", "primary", 1, "mat-body", 3, "checked", "click"], ["mat-button", "", 3, "click"], [2, "background", "none", 3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], ["mat-table", "", 1, "", 2, "margin-top", "1rem", 3, "dataSource"], ["mat-cell", "", "style", "width:80px", 4, "matCellDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-row", "", 3, "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], ["color", "primary", 3, "checked", "indeterminate", "change"], ["mat-cell", "", 2, "width", "80px"], ["mat-header-cell", ""], ["mat-row", "", 3, "ngClass", "click"]], template: function adminGrid1Component_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0);
+                        i0.ɵɵlistener("ngSubmit", function adminGrid1Component_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(1, "div", 1)(2, "mat-form-field", 2)(3, "mat-label");
+                        i0.ɵɵtext(4, "Price");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(5, "input", 3);
+                        i0.ɵɵtemplate(6, adminGrid1Component_mat_icon_6_Template, 2, 0, "mat-icon", 4);
+                        i0.ɵɵtemplate(7, adminGrid1Component_mat_icon_7_Template, 2, 0, "mat-icon", 5);
+                        i0.ɵɵtemplate(8, adminGrid1Component_mat_icon_8_Template, 2, 0, "mat-icon", 6);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(9, "div", 7, 8)(11, "form", 9);
+                        i0.ɵɵelementContainerStart(12, 10);
+                        i0.ɵɵelementStart(13, "table", 11);
+                        i0.ɵɵelementContainerStart(14, 12);
+                        i0.ɵɵtemplate(15, adminGrid1Component_th_15_Template, 2, 2, "th", 13);
+                        i0.ɵɵtemplate(16, adminGrid1Component_td_16_Template, 2, 1, "td", 14);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(17, 15);
+                        i0.ɵɵtemplate(18, adminGrid1Component_th_18_Template, 2, 2, "th", 16);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(19, 17);
+                        i0.ɵɵtemplate(20, adminGrid1Component_th_20_Template, 2, 2, "th", 18);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(21, adminGrid1Component_ng_container_21_Template, 3, 3, "ng-container", 19);
+                        i0.ɵɵtemplate(22, adminGrid1Component_tr_22_Template, 1, 3, "tr", 20);
+                        i0.ɵɵtemplate(23, adminGrid1Component_tr_23_Template, 1, 3, "tr", 20);
+                        i0.ɵɵtemplate(24, adminGrid1Component_tr_24_Template, 1, 4, "tr", 21);
+                        i0.ɵɵpipe(25, "async");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(26, adminGrid1Component_26_Template, 1, 1, null, 22);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(27, "div", null, 23);
+                        i0.ɵɵtemplate(29, adminGrid1Component_mat_toolbar_29_Template, 6, 3, "mat-toolbar", 22);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵtemplate(30, adminGrid1Component_ng_template_30_Template, 10, 4, "ng-template", null, 24, i0.ɵɵtemplateRefExtractor);
+                    } if (rf & 2) {
+                        const _r13 = i0.ɵɵreference(28);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(18, _c3, ctx.view.debug));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵattribute("aria-label", "Price");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("price", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("price", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("price", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("additionalSpace", 5)("footerElement", _r13);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("formGroup", ctx.gridForm);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dataSource", ctx.tableDataSource);
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("ngForOf", ctx.columnHeaders.getKeys());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(20, _c4));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(21, _c5));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(25, 16, ctx.columnsToDisplay.items$));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.gridShowClipboardDefault);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.gridMultiselect || true);
+                    } }, dependencies: [i4.NgClass, i4.NgForOf, i4.NgIf, i4.NgTemplateOutlet, i4.NgStyle, i5.DefaultClassDirective, i5.DefaultStyleDirective, i3.ɵNgNoValidate, i3.DefaultValueAccessor, i3.NumberValueAccessor, i3.NgControlStatus, i3.NgControlStatusGroup, i3.FormGroupDirective, i3.FormControlName, i3.FormArrayName, i2.DibFillHeightDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatCheckbox, i8.MatFormField, i8.MatLabel, i8.MatSuffix, i9.MatIcon, i10.MatInput, i11.MatProgressBar, i12.MatToolbar, i12.MatToolbarRow, i13.MatTooltip, i14.MatTable, i14.MatHeaderCellDef, i14.MatHeaderRowDef, i14.MatColumnDef, i14.MatCellDef, i14.MatRowDef, i14.MatHeaderCell, i14.MatCell, i14.MatHeaderRow, i14.MatRow, i15.MatSort, i16.MatPaginator, i4.AsyncPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_2.EventHandler('reloadadminGrid1'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], adminGrid1Component.prototype, "reloadContainer", null);
+            exports_1("adminGrid1Component", adminGrid1Component);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(adminGrid1Component, [{
+                    type: core_2.Component,
+                    args: [{
+                            selector: 'admin-grid1',
+                            template: `
+        <form style="display:flex; flex-direction:column; align-items:stretch"
+ [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }" 
+><div style="display:flex; flex-direction:column; align-items:stretch"><mat-form-field  id=ci8608 dibComponent=inputNumber   style="  "  appearance=standard
+ ><mat-label >Price</mat-label><input 
+ matInput
+ type=number   formControlName=price   name=price
+  [attr.aria-label]="'Price'" ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('price', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('price', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('price', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><!-- <div dib-scroll-pager scrollOffset=50 (nextPage)="nextPage()"> --><div #gridScroll fill-height debounceTime=300  [additionalSpace]=5 [footerElement]="footeradminGrid1" ><form [formGroup]="gridForm" autocomplete=off ><ng-container formArrayName=gridRows ><table mat-table [dataSource]="tableDataSource" matSort class="dib-inline-editing "><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary
+  (click)="$event.preventDefault();masterToggle()"
+ [checked]="masterIsChecked"
+ [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row"><mat-checkbox
+ color=primary
+  (click)="$event.stopPropagation()"
+ (change)="$event ? selection.toggle(row) : null"
+ [checked]="isHighlighted(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length" style="height:4px"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><ng-container *ngFor="let column of columnHeaders.getKeys()"><tr mat-header-row *matHeaderRowDef="(columnHeaders.getArray(column).items$ | async);"></tr></ng-container><tr mat-header-row [ngStyle]="{visibility : busy? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibBusy']"></tr><tr mat-header-row [ngStyle]="{visibility : tableDataSource.data.length == 0? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibNoRecords']"></tr><tr [formGroup]="model.$formGroup" mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async); let rowIndex = index;" (click)="rowClick(row, $event)"></tr></table></ng-container></form><ng-template [ngTemplateOutlet]="_selectedTable" *ngIf=gridShowClipboardDefault ></ng-template></div><div #footeradminGrid1><mat-toolbar *ngIf="gridMultiselect || true"><mat-toolbar-row class = "grid-footer"><mat-checkbox
+ class = "mat-body"
+ matTooltip = "Clear all"
+ position = "above"
+ *ngIf=numberOfSelectedItems  
+ color=primary
+  (click)="$event.preventDefault();clearAll()"
+ [checked]="true"
+ > {{numberOfSelectedItems + " "}}item{{numberOfSelectedItems>1?"s ":" "}}selected
+ </mat-checkbox><button
+ *ngIf="selectedDataNotInPage().length>0"
+ mat-button  (click)="gridShowClipboardDefault = !gridShowClipboardDefault; gridShowClipboardDefault&&scrollToBottom()"
+ ><mat-icon *ngIf="!gridShowClipboardDefault">visibility</mat-icon><mat-icon *ngIf=gridShowClipboardDefault >visibility_off</mat-icon> {{gridShowClipboardDefault?"hide":"show"}}</button><span style ="flex: 1 1 auto"></span><mat-paginator *ngIf=true  #paginator [length]="page.totalRecords" (page)="changePage($event)" style = "background: none"
+ [pageSize]="page.pageSize"
+ [pageSizeOptions]="[10, 20, 50, 100]" ></mat-paginator></mat-toolbar-row></mat-toolbar></div></div></form><ng-template #_selectedTable ><table style ="margin-top:1rem" mat-table [dataSource]="selectionDataSource" class=""><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox
+ color=primary
+  (change)="$event ? masterToggle($event) : null"
+ [checked]="masterIsChecked"
+ [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row" style = "width:80px"><mat-checkbox
+ color=primary
+  (click)="$event.stopPropagation()"
+ (change)="$event ? selection.toggle(row) : null"
+ [checked]="isHighlighted(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table></ng-template>
+  `
+                        }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ChangeDetectorRef }, { type: i2.CrudService }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }, { type: i3.FormBuilder }]; }, { reloadContainer: [] }); })();
+            containerModules = [];
+            adminGrid1Module = class adminGrid1Module {
+                static entry = adminGrid1Component;
+                static ɵfac = function adminGrid1Module_Factory(t) { return new (t || adminGrid1Module)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: adminGrid1Module });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+                        { provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] },
+                        { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }
+                        // { provide: NGX_MAT_DATE_FORMATS, useValue: DATETIMEPICKER_FORMATS },
+                    ], imports: [common_1.CommonModule, shared_5.SharedModule, containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] });
+            };
+            exports_1("default", adminGrid1Module);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(adminGrid1Module, [{
+                    type: core_4.NgModule,
+                    args: [{
+                            imports: [common_1.CommonModule, shared_5.SharedModule, ...containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule],
+                            providers: [
+                                { provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] },
+                                { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }
+                                // { provide: NGX_MAT_DATE_FORMATS, useValue: DATETIMEPICKER_FORMATS },
+                            ],
+                            declarations: [adminGrid1Component],
+                            exports: []
+                        }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(adminGrid1Module, { declarations: [adminGrid1Component], imports: [common_1.CommonModule, shared_5.SharedModule, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] }); })();
+        }
+    };
+});

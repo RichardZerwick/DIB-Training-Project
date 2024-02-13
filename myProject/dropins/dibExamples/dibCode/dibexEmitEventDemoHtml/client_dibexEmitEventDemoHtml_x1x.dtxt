@@ -1,0 +1,182 @@
+System.register(["tslib", "@angular/platform-browser", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@ngbracket/ngx-layout/extended", "@angular/forms"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, platform_browser_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, i0, i1, i2, i3, i4, i5, i6, _c0, importsRequired, dibexEmitEventDemoHtmlComponent, containerModules, fullDateTimeOptions, dibexEmitEventDemoHtmlModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexEmitEventDemoHtmlComponent_iframe_2_Template(rf, ctx) { if (rf & 1) {
+        const _r2 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "iframe", 3);
+        i0.ɵɵlistener("show", function dibexEmitEventDemoHtmlComponent_iframe_2_Template_iframe_show_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(!ctx_r1.busy); })("load", function dibexEmitEventDemoHtmlComponent_iframe_2_Template_iframe_load_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r3 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r3.completed()); });
+        i0.ɵɵpipe(1, "safe");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("src", i0.ɵɵpipeBind1(1, 1, ctx_r0.iframeUrl), i0.ɵɵsanitizeResourceUrl);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (platform_browser_1_1) {
+                platform_browser_1 = platform_browser_1_1;
+                i3 = platform_browser_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexEmitEventDemoHtmlComponent = class dibexEmitEventDemoHtmlComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                sanitizer;
+                view = { container: { id: 304, name: 'dibexEmitEventDemoHtml', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'iframe', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                doNotReloadiFrame = false;
+                clientData;
+                allClientData;
+                model;
+                frameStyle = { "min-height": "200px" };
+                iframeUrl;
+                constructor(injector, httpClient, viewContainerRef, sd, cd, sanitizer) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    this.sanitizer = sanitizer;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexEmitEventDemoHtml');
+                    this.containerName = 'dibexEmitEventDemoHtml'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.reloadContainer(); }
+                completed() { this.busy = false; }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexEmitEventDemoHtml', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexEmitEventDemoHtml' });
+                    this.reloadSubcontainers();
+                    if (this.iframeUrl != undefined && this.doNotReloadiFrame) {
+                        return;
+                    }
+                    let url = "/dropins/setNgxMaterial/iframe/Template/open/dibexEmitEventDemoHtml";
+                    url += `?clientData=${encodeURIComponent(JSON.stringify(this.clientData))}`;
+                    url += `&v=${new Date().getTime()}`;
+                    this.iframeUrl = url;
+                }
+                static ɵfac = function dibexEmitEventDemoHtmlComponent_Factory(t) { return new (t || dibexEmitEventDemoHtmlComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i3.DomSanitizer)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexEmitEventDemoHtmlComponent, selectors: [["dibex-emit-event-demo-html"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 4, vars: 5, consts: [[2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "min-height", "20px", 3, "formGroup", "ngClass"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], ["sharedDibIframeTracker", "", "name", "dibexEmitEventDemoHtml", "frameBorder", "0", "width", "100%", "style", "height:350px; overflow:hidden; ", 3, "src", "show", "load", 4, "ngIf"], ["sharedDibIframeTracker", "", "name", "dibexEmitEventDemoHtml", "frameBorder", "0", "width", "100%", 2, "height", "350px", "overflow", "hidden", 3, "src", "show", "load"]], template: function dibexEmitEventDemoHtmlComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0)(1, "div", 1);
+                        i0.ɵɵtemplate(2, dibexEmitEventDemoHtmlComponent_iframe_2_Template, 2, 3, "iframe", 2);
+                        i0.ɵɵtext(3, "\u00A0 ");
+                        i0.ɵɵelementEnd()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(3, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.iframeUrl);
+                    } }, dependencies: [i4.NgClass, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.NgControlStatusGroup, i6.FormGroupDirective, i2.DibiFrameTrackerDirective, i2.SafePipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexEmitEventDemoHtml'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexEmitEventDemoHtmlComponent.prototype, "reloadContainer", null);
+            exports_1("dibexEmitEventDemoHtmlComponent", dibexEmitEventDemoHtmlComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexEmitEventDemoHtmlComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-emit-event-demo-html', template: `
+<form style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch; min-height:20px"   [formGroup]="model.$formGroup" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch"><iframe *ngIf=iframeUrl  sharedDibIframeTracker (show)='!busy' (load)="completed()"   name='dibexEmitEventDemoHtml' [src]="iframeUrl | safe" frameBorder=0  width="100%"  style="height:350px; overflow:hidden; "></iframe>&nbsp;   </div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }, { type: i3.DomSanitizer }]; }, { reloadContainer: [] }); })();
+            containerModules = [];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexEmitEventDemoHtmlModule = class dibexEmitEventDemoHtmlModule {
+                static entry = dibexEmitEventDemoHtmlComponent;
+                static ɵfac = function dibexEmitEventDemoHtmlModule_Factory(t) { return new (t || dibexEmitEventDemoHtmlModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexEmitEventDemoHtmlModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexEmitEventDemoHtmlModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexEmitEventDemoHtmlModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexEmitEventDemoHtmlComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexEmitEventDemoHtmlModule, { declarations: [dibexEmitEventDemoHtmlComponent], imports: [common_1.CommonModule, shared_4.SharedModule] }); })();
+        }
+    };
+});

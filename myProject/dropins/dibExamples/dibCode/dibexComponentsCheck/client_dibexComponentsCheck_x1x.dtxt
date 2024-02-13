@@ -1,0 +1,243 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/checkbox", "@angular/material/divider", "@angular/material/radio", "@angular/material/slide-toggle", "@ngbracket/ngx-layout/extended", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, checkbox_1, divider_1, radio_1, slide_toggle_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, _c0, importsRequired, dibexComponentsCheckComponent, containerModules, fullDateTimeOptions, dibexComponentsCheckModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsCheckComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 21);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i9 = card_1_1;
+            },
+            function (checkbox_1_1) {
+                checkbox_1 = checkbox_1_1;
+                i6 = checkbox_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i7 = divider_1_1;
+            },
+            function (radio_1_1) {
+                radio_1 = radio_1_1;
+                i10 = radio_1_1;
+            },
+            function (slide_toggle_1_1) {
+                slide_toggle_1 = slide_toggle_1_1;
+                i11 = slide_toggle_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexComponentsCheckComponent = class dibexComponentsCheckComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 259, name: 'dibexComponentsCheck', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6286'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsCheck');
+                    this.containerName = 'dibexComponentsCheck'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { checkbox: { itemId: 6288, type: 'boolean', fieldAlias: 'checkbox', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, radioGroup: { itemId: 6290, type: 'text', fieldAlias: 'radioGroup', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, slideToggle: { itemId: 6294, type: 'boolean', fieldAlias: 'slideToggle', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, checkbox1: { itemId: 7076, type: 'boolean', fieldAlias: 'checkbox1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, };
+                    this.model.$formGroup.addControl('checkbox', this.model.modelItems.checkbox.formControl);
+                    this.model.$formGroup.addControl('radioGroup', this.model.modelItems.radioGroup.formControl);
+                    this.model.$formGroup.addControl('slideToggle', this.model.modelItems.slideToggle.formControl);
+                    this.model.$formGroup.addControl('checkbox1', this.model.modelItems.checkbox1.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('radioGroupCaption', `<b>radioGroup</b>`);
+                    this.setInnerHtml('radioGroupCaption', `<b>radioGroup</b>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsCheck', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsCheck' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsCheckComponent_Factory(t) { return new (t || dibexComponentsCheckComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsCheckComponent, selectors: [["dibex-components-check"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 35, vars: 15, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6286", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsCheck", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6287", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], [3, "dibPort"], ["id", "ci7075", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci6288", "dibComponent", "checkbox", "formControlName", "checkbox"], ["labelPosition", "before", "id", "ci7076", "dibComponent", "checkbox", "formControlName", "checkbox1"], ["id", "ci6294", "dibComponent", "slideToggle", "formControlName", "slideToggle", "name", "slideToggle"], ["id", "ci6289", "dibComponent", "divider", 2, "align-self", "stretch"], ["id", "ci6297", "dibComponent", "comment"], ["id", "ci6295", "dibComponent", "span", 3, "innerHtml"], ["id", "ci6290", "dibComponent", "radioGroup", "name", "radioGroup", "formControlName", "radioGroup", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%"], ["id", "ci6291", "dibComponent", "radioButton", "value", "1", "name", "apple"], ["id", "ci6292", "dibComponent", "radioButton", "value", "2", "name", "pear"], ["id", "ci6293", "dibComponent", "radioButton", "value", "3", "name", "banana"], ["id", "ci6296", "dibComponent", "spanInterpolation"], ["mode", "indeterminate"]], template: function dibexComponentsCheckComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexComponentsCheckComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsCheckComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "span", 8)(9, "div", 9);
+                        i0.ɵɵtext(10, " Note, the References-tab has links to Angular Material documentation that presents all kinds of possible configurations, eg labelPosition etc. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(11, "mat-checkbox", 10);
+                        i0.ɵɵtext(12, " checkbox ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(13, "mat-checkbox", 11);
+                        i0.ɵɵtext(14, " labelPosition='before' ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(15, "mat-slide-toggle", 12);
+                        i0.ɵɵtext(16, " slideToggle");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(17, "mat-divider", 13);
+                        i0.ɵɵelementStart(18, "span", 14)(19, "div", 9);
+                        i0.ɵɵtext(20, " A radioGroup always contains one or more radioButton items.");
+                        i0.ɵɵelement(21, "br");
+                        i0.ɵɵtext(22, "radioButtons must all have values configured in the expression field. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(23, "span", 15);
+                        i0.ɵɵpipe(24, "safeHtml");
+                        i0.ɵɵelementStart(25, "mat-radio-group", 16)(26, "mat-radio-button", 17);
+                        i0.ɵɵtext(27, " Apple");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(28, "mat-radio-button", 18);
+                        i0.ɵɵtext(29, " Pear");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(30, "mat-radio-button", 19);
+                        i0.ɵɵtext(31, " Banana");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(32, "span", 20)(33, "b");
+                        i0.ɵɵtext(34);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(13, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6286");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6287");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵattribute("aria-label", "slideToggle");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(24, 11, ctx.getHtml("radioGroupCaption")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Apple");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Pear");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Banana");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1("Value selected in radioGroup above: ", ctx.getValue("radioGroup"), "");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i6.MatCheckbox, i7.MatDivider, i8.MatProgressBar, i9.MatCard, i9.MatCardContent, i10.MatRadioGroup, i10.MatRadioButton, i11.MatSlideToggle, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsCheck'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsCheckComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsCheckComponent", dibexComponentsCheckComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsCheckComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-check', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6286 dibComponent=subcontainer   ><ng-container [dibPort]="'6286'" parentContainerName=dibexComponentsCheck  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci6287 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'6287'" ><span  id=ci7075 dibComponent=comment   style="  " ><div class=dib-comment > Note, the References-tab has links to Angular Material documentation that presents all kinds of possible configurations, eg labelPosition etc.  </div></span><mat-checkbox  id=ci6288 dibComponent=checkbox   style="  "  formControlName=checkbox   >   checkbox  </mat-checkbox><mat-checkbox labelPosition='before' id=ci7076 dibComponent=checkbox   style="  "  formControlName=checkbox1   >   labelPosition=&apos;before&apos;  </mat-checkbox><mat-slide-toggle  id=ci6294 dibComponent=slideToggle   style="  "  formControlName=slideToggle   name=slideToggle   [attr.aria-label]="'slideToggle'" > slideToggle</mat-slide-toggle><mat-divider  id=ci6289 dibComponent=divider   style="  align-self: stretch;  " ></mat-divider><span  id=ci6297 dibComponent=comment   style="  " ><div class=dib-comment > A radioGroup always contains one or more radioButton items.<br>radioButtons must all have values configured in the expression field.  </div></span><span  id=ci6295 dibComponent=span   style="  "  [innerHtml]="getHtml('radioGroupCaption') | safeHtml" ></span><mat-radio-group  id=ci6290 dibComponent=radioGroup   style="  display:flex; flex-direction: column;  flex: 1 1 0%;  "  name=radioGroup   formControlName=radioGroup  ><mat-radio-button  id=ci6291 dibComponent=radioButton   style="  "  value=1   name=apple   [attr.aria-label]="'Apple'" > Apple</mat-radio-button><mat-radio-button  id=ci6292 dibComponent=radioButton   style="  "  value=2   name=pear   [attr.aria-label]="'Pear'" > Pear</mat-radio-button><mat-radio-button  id=ci6293 dibComponent=radioButton   style="  "  value=3   name=banana   [attr.aria-label]="'Banana'" > Banana</mat-radio-button></mat-radio-group><span  id=ci6296 dibComponent=spanInterpolation   style="  " ><b>Value selected in radioGroup above: {{getValue('radioGroup')}}</b></span></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, checkbox_1.MatCheckboxModule, divider_1.MatDividerModule, radio_1.MatRadioModule, slide_toggle_1.MatSlideToggleModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsCheckModule = class dibexComponentsCheckModule {
+                static entry = dibexComponentsCheckComponent;
+                static ɵfac = function dibexComponentsCheckModule_Factory(t) { return new (t || dibexComponentsCheckModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsCheckModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsCheckModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsCheckModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsCheckComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsCheckModule, { declarations: [dibexComponentsCheckComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, checkbox_1.MatCheckboxModule, divider_1.MatDividerModule, radio_1.MatRadioModule, slide_toggle_1.MatSlideToggleModule] }); })();
+        }
+    };
+});

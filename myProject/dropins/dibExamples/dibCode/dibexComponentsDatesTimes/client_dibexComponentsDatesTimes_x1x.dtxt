@@ -1,0 +1,273 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/datepicker", "@ngbracket/ngx-layout/extended", "@angular-material-components/datetime-picker", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, datepicker_1, core_4, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, _c0, importsRequired, dibexComponentsDatesTimesComponent, containerModules, fullDateTimeOptions, dibexComponentsDatesTimesModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsDatesTimesComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 27);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i11 = card_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i7 = datepicker_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexComponentsDatesTimesComponent = class dibexComponentsDatesTimesComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 261, name: 'dibexComponentsDatesTimes', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6308'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsDatesTimes');
+                    this.containerName = 'dibexComponentsDatesTimes'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { datepicker: { itemId: 6310, type: 'date', fieldAlias: 'datepicker', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputDate: { itemId: 6311, type: 'date', fieldAlias: 'inputDate', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'text', changeUrl: false }, inputDateTimeLocal: { itemId: 6312, type: 'datetime', fieldAlias: 'inputDateTimeLocal', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'datetime', contentType: 'text', changeUrl: false }, inputMonth: { itemId: 6313, type: 'text', fieldAlias: 'inputMonth', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, timeDatePicker: { itemId: 6314, type: 'datetime', fieldAlias: 'timeDatePicker', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'datetime', contentType: 'datetime', changeUrl: false }, inputTime: { itemId: 6851, type: 'time', fieldAlias: 'inputTime', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'time', contentType: 'time', changeUrl: false }, inputWeek: { itemId: 6852, type: 'text', fieldAlias: 'inputWeek', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'integer', changeUrl: false }, };
+                    this.model.$formGroup.addControl('datepicker', this.model.modelItems.datepicker.formControl);
+                    this.model.$formGroup.addControl('inputDate', this.model.modelItems.inputDate.formControl);
+                    this.model.$formGroup.addControl('inputDateTimeLocal', this.model.modelItems.inputDateTimeLocal.formControl);
+                    this.model.$formGroup.addControl('inputMonth', this.model.modelItems.inputMonth.formControl);
+                    this.model.$formGroup.addControl('timeDatePicker', this.model.modelItems.timeDatePicker.formControl);
+                    this.model.$formGroup.addControl('inputTime', this.model.modelItems.inputTime.formControl);
+                    this.model.$formGroup.addControl('inputWeek', this.model.modelItems.inputWeek.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsDatesTimes', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsDatesTimes' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsDatesTimesComponent_Factory(t) { return new (t || dibexComponentsDatesTimesComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsDatesTimesComponent, selectors: [["dibex-components-dates-times"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 51, vars: 20, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6308", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsDatesTimes", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6309", "dibComponent", "card", 2, "width", "300px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column"], [3, "dibPort"], ["id", "ci6310", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker", "name", "datepicker", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker6310", ""], ["id", "ci6314", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "timeDatePicker", "name", "timeDatePicker", 3, "ngxMatDatetimePicker"], ["picker6314", ""], ["id", "ci6850", "dibComponent", "card", 2, "width", "300px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["id", "ci6311", "dibComponent", "inputDate", "appearance", "standard"], ["matInput", "", "type", "date", "formControlName", "inputDate", "name", "inputDate"], ["id", "ci6312", "dibComponent", "inputDateTimeLocal", "appearance", "standard"], ["matInput", "", "type", "datetime-local", "formControlName", "inputDateTimeLocal", "name", "inputDateTimeLocal"], ["id", "ci6313", "dibComponent", "inputMonth", "appearance", "standard"], ["matInput", "", "type", "month", "formControlName", "inputMonth", "name", "inputMonth"], ["id", "ci6852", "dibComponent", "inputWeek", "appearance", "standard"], ["matInput", "", "type", "week", "formControlName", "inputWeek", "name", "inputWeek"], ["id", "ci6851", "dibComponent", "inputTime", "appearance", "standard"], ["matInput", "", "type", "time", "formControlName", "inputTime", "name", "inputTime"], ["mode", "indeterminate"]], template: function dibexComponentsDatesTimesComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r3 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexComponentsDatesTimesComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsDatesTimesComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-header")(7, "mat-card-title");
+                        i0.ɵɵtext(8, "Native Angular Components");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(10, 7);
+                        i0.ɵɵelementStart(11, "mat-form-field", 8)(12, "mat-label");
+                        i0.ɵɵtext(13, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(14, "input", 9);
+                        i0.ɵɵlistener("focus", function dibexComponentsDatesTimesComponent_Template_input_focus_14_listener() { i0.ɵɵrestoreView(_r3); const _r1 = i0.ɵɵreference(17); return i0.ɵɵresetView(_r1.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(15, "mat-datepicker-toggle", 10)(16, "mat-datepicker", null, 11);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(18, "mat-form-field", 12);
+                        i0.ɵɵelement(19, "mat-datepicker-toggle", 10);
+                        i0.ɵɵelementStart(20, "mat-label");
+                        i0.ɵɵtext(21, "timeDatePicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(22, "input", 13)(23, "ngx-mat-datetime-picker", null, 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(25, "mat-card", 15)(26, "mat-card-header")(27, "mat-card-title");
+                        i0.ɵɵtext(28, "HTML Components");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(29, "mat-card-content", 16);
+                        i0.ɵɵelementContainerStart(30, 7);
+                        i0.ɵɵelementStart(31, "mat-form-field", 17)(32, "mat-label");
+                        i0.ɵɵtext(33, "inputDate");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(34, "input", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(35, "mat-form-field", 19)(36, "mat-label");
+                        i0.ɵɵtext(37, "inputDateTimeLocal");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(38, "input", 20);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(39, "mat-form-field", 21)(40, "mat-label");
+                        i0.ɵɵtext(41, "inputMonth");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(42, "input", 22);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(43, "mat-form-field", 23)(44, "mat-label");
+                        i0.ɵɵtext(45, "inputWeek");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(46, "input", 24);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(47, "mat-form-field", 25)(48, "mat-label");
+                        i0.ɵɵtext(49, "inputTime");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(50, "input", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r1 = i0.ɵɵreference(17);
+                        const _r2 = i0.ɵɵreference(24);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(18, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6308");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6309");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r1)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r1);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("for", _r2);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r2);
+                        i0.ɵɵattribute("aria-label", "timeDatePicker");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "6850");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputDate");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputDateTimeLocal");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputMonth");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputWeek");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputTime");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibRemoveFocusDirective, i6.NgxMatDatetimepicker, i6.NgxMatDatepickerInput, i7.MatDatepicker, i7.MatDatepickerInput, i7.MatDatepickerToggle, i8.MatFormField, i8.MatLabel, i8.MatPrefix, i9.MatInput, i10.MatProgressBar, i11.MatCard, i11.MatCardContent, i11.MatCardHeader, i11.MatCardTitle], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsDatesTimes'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsDatesTimesComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsDatesTimesComponent", dibexComponentsDatesTimesComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsDatesTimesComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-dates-times', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6308 dibComponent=subcontainer   ><ng-container [dibPort]="'6308'" parentContainerName=dibexComponentsDatesTimes  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:300px !important;   flex: 1 1 0%;  " id=ci6309 dibComponent=card  ><mat-card-header ><mat-card-title >Native Angular Components</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;"  ><ng-container [dibPort]="'6309'" ><mat-form-field  id=ci6310 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker6310"   [placeholder]="'datepicker'"   formControlName=datepicker   name=datepicker   [attr.aria-label]="'datepicker'"  (focus)="datePicker6310.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker6310" ></mat-datepicker-toggle><mat-datepicker #datePicker6310 ></mat-datepicker></mat-form-field><mat-form-field  id=ci6314 dibComponent=timeDatePicker   style="  "  appearance=standard  ><mat-datepicker-toggle matPrefix [for]="picker6314"></mat-datepicker-toggle><mat-label >timeDatePicker</mat-label><input   matInput   [ngxMatDatetimePicker]="picker6314"   formControlName=timeDatePicker   name=timeDatePicker   [attr.aria-label]="'timeDatePicker'"  ><ngx-mat-datetime-picker #picker6314></ngx-mat-datetime-picker></mat-form-field></ng-container></mat-card-content></mat-card><mat-card   style="  width:300px !important;   flex: 1 1 0%;  " id=ci6850 dibComponent=card  ><mat-card-header ><mat-card-title >HTML Components</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'6850'" ><mat-form-field  id=ci6311 dibComponent=inputDate   style="  "  appearance=standard  ><mat-label >inputDate</mat-label><input   matInput   type=date   formControlName=inputDate   name=inputDate   [attr.aria-label]="'inputDate'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6312 dibComponent=inputDateTimeLocal   style="  "  appearance=standard  ><mat-label >inputDateTimeLocal</mat-label><input   matInput  type=datetime-local   formControlName=inputDateTimeLocal   name=inputDateTimeLocal   [attr.aria-label]="'inputDateTimeLocal'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6313 dibComponent=inputMonth   style="  "  appearance=standard  ><mat-label >inputMonth</mat-label><input   matInput  type=month   formControlName=inputMonth   name=inputMonth   [attr.aria-label]="'inputMonth'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6852 dibComponent=inputWeek   style="  "  appearance=standard  ><mat-label >inputWeek</mat-label><input   matInput  type=week   formControlName=inputWeek   name=inputWeek   [attr.aria-label]="'inputWeek'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6851 dibComponent=inputTime   style="  "  appearance=standard  ><mat-label >inputTime</mat-label><input   matInput  type=time   formControlName=inputTime   name=inputTime   [attr.aria-label]="'inputTime'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsDatesTimesModule = class dibexComponentsDatesTimesModule {
+                static entry = dibexComponentsDatesTimesComponent;
+                static ɵfac = function dibexComponentsDatesTimesModule_Factory(t) { return new (t || dibexComponentsDatesTimesModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsDatesTimesModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsDatesTimesModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsDatesTimesModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsDatesTimesComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsDatesTimesModule, { declarations: [dibexComponentsDatesTimesComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule] }); })();
+        }
+    };
+});

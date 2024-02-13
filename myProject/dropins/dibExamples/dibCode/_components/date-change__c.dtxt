@@ -1,0 +1,147 @@
+System.register(["@angular/core", "shared", "@angular/common/http", "rxjs/operators", "date-fns", "@angular/common", "@ngbracket/ngx-layout/extended", "@angular/material/datepicker", "@angular/material/form-field", "@angular/material/input"], function (exports_1, context_1) {
+    "use strict";
+    var core_1, shared_1, http_1, operators_1, date_fns_1, common_1, i0, i1, i2, i3, i4, i5, i6, i7, DateChangeComponent, DateChangeModule;
+    var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [
+            function (core_1_1) {
+                core_1 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (date_fns_1_1) {
+                date_fns_1 = date_fns_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            DateChangeComponent = class DateChangeComponent extends shared_1.DibItemComponent {
+                httpClient;
+                containerService;
+                componentName = 'date-change';
+                prevValue;
+                setDisabled;
+                componentContainer;
+                styleObject = { 'display': 'flex', 'padding': '0px 10px', 'margin': '-5px 0px -10px', 'flex-direction': 'row', 'flex': '1 1 auto' };
+                constructor(httpClient, containerService) {
+                    super();
+                    this.httpClient = httpClient;
+                    this.containerService = containerService;
+                }
+                css(key, value) { this.styleObject[key] = value; }
+                onDateChange(event) {
+                    let newDate = null;
+                    if (!!event.value) {
+                        newDate = date_fns_1.format(event.value, 'yyyy-MM-dd');
+                    }
+                    if (this.container && this.container.clientData && (!newDate || !this.prevValue || newDate != this.prevValue)) {
+                        this.httpClient.post(`/dropins/dibExamples/General/startDateChange/${this.container.view.container.name}`, { clientData: this.container.clientData, recordData: { "id": this.data['client_id'], "column": this.itemName, "old_date": this.prevValue, "new_date": newDate } }).pipe(operators_1.take(1)).subscribe((result) => { if (result.success == true) {
+                            this.prevValue = newDate;
+                        } });
+                    }
+                }
+                ngAfterViewInit() {
+                    setTimeout(() => {
+                        let colorName = this.itemName + '_color';
+                        if (!!this.data[colorName]) {
+                            this.css('background', this.data[colorName]);
+                            this.css('color', 'white');
+                        }
+                        else {
+                            this.css('background', 'transparent');
+                            this.css('color', 'black');
+                        }
+                        if (!!this.data && !!this.data[this.itemName]) {
+                            const dateFormat = 'yyyy-MM-dd';
+                            this.data[this.itemName] = date_fns_1.parse(this.data[this.itemName], dateFormat, new Date());
+                            this.prevValue = date_fns_1.format(this.data[this.itemName], 'yyyy-MM-dd');
+                        }
+                        else {
+                            this.data[this.itemName] = null;
+                            this.prevValue = null;
+                        }
+                        this.setDisabled = this.container.view.container.name == 'dibexCustomComponentInGrid' && parseInt(this.data['vip']) == 1;
+                    }, 100);
+                }
+                static ɵfac = function DateChangeComponent_Factory(t) { return new (t || DateChangeComponent)(i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i2.ContainerService)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateChangeComponent, selectors: [["date-change"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 7, consts: [[3, "ngStyle", "dibDisabled"], ["appearance", "standard", 2, "flex", "0 0 auto", "width", "140px"], ["matInput", "", "startView", "multi-year", "name", "datepicker", "aria-label", "datepicker", 3, "matDatepicker", "min", "max", "value", "valueChange", "focus", "blur", "dateChange"], ["matSuffix", "", 3, "for"], ["datePicker999", ""]], template: function DateChangeComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r1 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵelementStart(0, "div", 0)(1, "mat-form-field", 1)(2, "input", 2);
+                        i0.ɵɵlistener("valueChange", function DateChangeComponent_Template_input_valueChange_2_listener($event) { return (ctx.data[ctx.itemName] = $event); })("focus", function DateChangeComponent_Template_input_focus_2_listener() { i0.ɵɵrestoreView(_r1); const _r0 = i0.ɵɵreference(5); return i0.ɵɵresetView(_r0.open()); })("blur", function DateChangeComponent_Template_input_blur_2_listener() { i0.ɵɵrestoreView(_r1); const _r0 = i0.ɵɵreference(5); return i0.ɵɵresetView(_r0.close()); })("dateChange", function DateChangeComponent_Template_input_dateChange_2_listener($event) { return ctx.onDateChange($event); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(3, "mat-datepicker-toggle", 3)(4, "mat-datepicker", null, 4);
+                        i0.ɵɵelementEnd()();
+                    } if (rf & 2) {
+                        const _r0 = i0.ɵɵreference(5);
+                        i0.ɵɵproperty("ngStyle", ctx.styleObject)("dibDisabled", ctx.setDisabled == undefined || ctx.setDisabled == false ? false : true);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matDatepicker", _r0)("min", 1970 - 1 - 1)("max", 2100 - 12 - 31)("value", ctx.data[ctx.itemName]);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r0);
+                    } }, dependencies: [i3.NgStyle, i4.DefaultStyleDirective, i2.DibDisabledDirective, i2.DibRemoveFocusDirective, i5.MatDatepicker, i5.MatDatepickerInput, i5.MatDatepickerToggle, i6.MatFormField, i6.MatSuffix, i7.MatInput], encapsulation: 2 });
+            };
+            exports_1("DateChangeComponent", DateChangeComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateChangeComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'date-change', template: `
+<div
+[ngStyle]="styleObject"
+[dibDisabled]  = "((setDisabled == undefined || setDisabled == false) ? false : true)"
+>
+<mat-form-field style="flex: 0 0 auto; width:140px" appearance="standard">
+<input
+matInput
+[matDatepicker]="datePicker999"
+startView="multi-year"
+[min]="1970-01-01" [max]="2100-12-31"
+name="datepicker" aria-label="datepicker"
+[(value)]="data[itemName]"
+(focus)="datePicker999.open()"  (blur)="datePicker999.close()"
+(dateChange)="onDateChange($event)"
+>
+<mat-datepicker-toggle matSuffix [for]="datePicker999"></mat-datepicker-toggle>
+<mat-datepicker #datePicker999></mat-datepicker>
+</mat-form-field>
+</div>
+` }]
+                }], function () { return [{ type: i1.HttpClient }, { type: i2.ContainerService }]; }, null); })();
+            DateChangeModule = class DateChangeModule {
+                static entry = DateChangeComponent;
+                static ɵfac = function DateChangeModule_Factory(t) { return new (t || DateChangeModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: DateChangeModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [common_1.CommonModule, shared_1.SharedModule] });
+            };
+            exports_1("default", DateChangeModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateChangeModule, [{
+                    type: core_1.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_1.SharedModule], declarations: [DateChangeComponent], entryComponents: [DateChangeComponent] }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DateChangeModule, { declarations: [DateChangeComponent], imports: [common_1.CommonModule, shared_1.SharedModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,231 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/divider", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, divider_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, _c0, importsRequired, dibexPhpBasicsComponent, containerModules, fullDateTimeOptions, dibexPhpBasicsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPhpBasicsComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 17);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i11 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i9 = divider_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPhpBasicsComponent = class dibexPhpBasicsComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 221, name: 'dibexPhpBasics', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5594'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPhpBasics');
+                    this.containerName = 'dibexPhpBasics'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { name: { itemId: 5605, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'name', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { this.actionService.handle(this.containerActionReference(), 'dibexPhpBasics', 'modelChange'); });
+                    super.ngOnInit();
+                    this.setInnerHtml('spanContainerEventInfo', `<b>The following span is populated by a Container Event that calls PHP which returns an action that sets the HTML</b>`);
+                    this.setInnerHtml('spanContainerEventInfo', `<b>The following span is populated by a Container Event that calls PHP which returns an action that sets the HTML</b>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "dibexPhpBasics", actionType: "afterViewInit", responseType: 'actions', submitUrl: "/dropins/dibExamples/Basics/setHtml", itemAlias: "", waitForCompletion: false, containerName: "dibexPhpBasics", handlers: [] }, this.clientData, { containerEventId: 'ce16-dib' });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnGreeting", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Basics/greeting", itemAlias: "btnGreeting", waitForCompletion: false, containerName: "dibexPhpBasics", handlers: [] }, this.clientData, { itemEventId: 'ie280-dib', itemId: '5601', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnLoadClasses", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Basics/loadClasses", itemAlias: "btnLoadClasses", waitForCompletion: false, containerName: "dibexPhpBasics", handlers: [] }, this.clientData, { itemEventId: 'ie281-dib', itemId: '5602', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.actionService.handle(this.containerActionReference(), 'dibexPhpBasics', 'onInit');
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.actionService.handle(this.containerActionReference(), 'dibexPhpBasics', 'afterViewInit'); }
+                ngOnDestroy() {
+                    this.actionService.handle(this.containerActionReference(), 'dibexPhpBasics', 'onDestroy');
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    this.actionService.handle(this.containerActionReference(), 'dibexPhpBasics', 'reloadContainer');
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPhpBasics', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPhpBasics' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPhpBasicsComponent_Factory(t) { return new (t || dibexPhpBasicsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPhpBasicsComponent, selectors: [["dibex-php-basics"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 24, vars: 18, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5594", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPhpBasics", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5593", "dibComponent", "card", 2, "width", "500px !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px 10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5605", "dibComponent", "inputText", "item-alias", "name", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "name", "name", "name"], ["mat-raised-button", "", "color", "primary", "id", "ci5601", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnGreeting", "type", "button", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci5606", "dibComponent", "divider", 2, "flex", "1 1 0%", "align-self", "stretch"], ["id", "ci5604", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5603", "dibComponent", "span", 2, "margin", "0px 10px !important", 3, "innerHtml"], ["id", "ci5607", "dibComponent", "divider", 2, "flex", "1 1 0%", "align-self", "stretch"], ["mat-raised-button", "", "color", "primary", "id", "ci5602", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnLoadClasses", "type", "button", 3, "containerPortId"], ["mode", "indeterminate"]], template: function dibexPhpBasicsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPhpBasicsComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPhpBasicsComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "mat-form-field", 8)(9, "mat-label");
+                        i0.ɵɵtext(10, "Please provide your name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(11, "input", 9);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(12, "button", 10)(13, "span", 11);
+                        i0.ɵɵtext(14, "Greeting (Item Event)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(15, "mat-divider", 12)(16, "span", 13);
+                        i0.ɵɵpipe(17, "safeHtml");
+                        i0.ɵɵelement(18, "span", 14);
+                        i0.ɵɵpipe(19, "safeHtml");
+                        i0.ɵɵelement(20, "mat-divider", 15);
+                        i0.ɵɵelementStart(21, "button", 16)(22, "span", 11);
+                        i0.ɵɵtext(23, "Load Classes");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(16, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5594");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5593");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Please provide your name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Greeting (Item Event)");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(17, 12, ctx.getHtml("spanContainerEventInfo")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(19, 14, ctx.getHtml("spanContEvent")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Load Classes");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i8.MatInput, i9.MatDivider, i10.MatProgressBar, i11.MatCard, i11.MatCardContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPhpBasics'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPhpBasicsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPhpBasicsComponent", dibexPhpBasicsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpBasicsComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-php-basics', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5594 dibComponent=subcontainer   ><ng-container [dibPort]="'5594'" parentContainerName=dibexPhpBasics  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:500px !important;   " id=ci5593 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5593'" ><mat-form-field id=ci5605 dibComponent=inputText   style="  "  item-alias=name   appearance=standard  ><mat-label >Please provide your name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Please provide your name'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci5601 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnGreeting   style="  "  [attr.aria-label]="'Greeting (Item Event)'"  type=button  ><span class=dibButtonCaption >Greeting (Item Event)</span></button><mat-divider  id=ci5606 dibComponent=divider   style="  flex: 1 1 0%;  align-self: stretch;  " ></mat-divider><span  id=ci5604 dibComponent=span   style="  "  [innerHtml]="getHtml('spanContainerEventInfo') | safeHtml" ></span><span  id=ci5603 dibComponent=span   style="  margin:0px 10px !important;   "  [innerHtml]="getHtml('spanContEvent') | safeHtml" ></span><mat-divider  id=ci5607 dibComponent=divider   style="  flex: 1 1 0%;  align-self: stretch;  " ></mat-divider><button  mat-raised-button color=primary  id=ci5602 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnLoadClasses   style="  "  [attr.aria-label]="'Load Classes'"  type=button  ><span class=dibButtonCaption >Load Classes</span></button></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, divider_1.MatDividerModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPhpBasicsModule = class dibexPhpBasicsModule {
+                static entry = dibexPhpBasicsComponent;
+                static ɵfac = function dibexPhpBasicsModule_Factory(t) { return new (t || dibexPhpBasicsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPhpBasicsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPhpBasicsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpBasicsModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPhpBasicsComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPhpBasicsModule, { declarations: [dibexPhpBasicsComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, divider_1.MatDividerModule] }); })();
+        }
+    };
+});

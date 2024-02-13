@@ -1,0 +1,32 @@
+|Section text|
+<input type="text" id="~trim(~name~)~" class="inputText"
+~if('getval(placeholder)'<>, placeholder="getval(placeholder)") if('getval(readonly)'=1, readonly)~
+>
+|End text|
+
+|Section textarea|
+<input type="textarea" id="~trim(~name~)~" class="inputTextArea"
+~if('getval(placeholder)'<>, placeholder="getval(placeholder)") if('getval(readonly)'<>, readonly)~
+>
+|End textarea|
+
+|Section date|
+<input type="date" id="~trim(~name~)~" class="inputDate"
+~if('getval(placeholder)'<>, placeholder="getval(placeholder)") if('getval(readonly)'<>, readonly)~
+>
+|End date|
+
+|Section checkbox|
+<input type="checkbox" id="~trim(~name~)~" class="checkbox"
+~if('getval(placeholder)'<>, placeholder="getval(placeholder)") if('getval(readonly)'<>, readonly)~
+>
+|End checkbox|
+
+|Section enum|
+~$// NOTE, list must contain elements prefixed with a colon and separated by |, eg  :aaa|:bbb bb|:ccc|:dd ddd ddd
+~getparams(options, ~list~)~
+***TODO ... 
+<input type="text" id="~trim(~name~)~" class="inputText"
+~if('getval(placeholder)'<>, placeholder="getval(placeholder)") if('getval(readonly)'<>, readonly)~
+>
+|End enum|

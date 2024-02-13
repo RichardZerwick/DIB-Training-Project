@@ -1,0 +1,216 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/cdk/text-field", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, _c0, importsRequired, dibexPhpFilesDpdfComponent, containerModules, fullDateTimeOptions, dibexPhpFilesDpdfModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPhpFilesDpdfComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 13);
+    } }
+    function dibexPhpFilesDpdfComponent_mat_error_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 400 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i11 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPhpFilesDpdfComponent = class dibexPhpFilesDpdfComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 224, name: 'dibexPhpFilesDpdf', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5642'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPhpFilesDpdf');
+                    this.containerName = 'dibexPhpFilesDpdf'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { sendText: { itemId: 5645, type: 'text', fieldAlias: 'sendText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.maxLength(400)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'sendText', default: '', dataType: 'text', contentType: 'multilinetext', changeUrl: false }, };
+                    this.model.$formGroup.addControl('sendText', this.model.modelItems.sendText.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnTextToPdf", actionType: "click", responseType: 'new-tab', submitUrl: "/dropins/dibExamples/Files/textToPdf", itemAlias: "btnTextToPdf", waitForCompletion: false, containerName: "dibexPhpFilesDpdf", handlers: [] }, this.clientData, { itemEventId: 'ie288-dib', itemId: '5644', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPhpFilesDpdf', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPhpFilesDpdf' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPhpFilesDpdfComponent_Factory(t) { return new (t || dibexPhpFilesDpdfComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPhpFilesDpdfComponent, selectors: [["dibex-php-files-dpdf"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 16, vars: 11, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5642", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPhpFilesDpdf", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5643", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5645", "dibComponent", "inputTextArea", "item-alias", "sendText", "appearance", "standard", 2, "width", "400px !important", "flex", "1 1 0%"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "4", "cdkAutosizeMaxRows", "10", "matInput", "", "formControlName", "sendText", "maxlength", "400", "name", "sendText"], [4, "ngIf"], ["mat-raised-button", "", "color", "primary", "id", "ci5644", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnTextToPdf", "type", "button", 3, "containerPortId"], [1, "dibButtonCaption"], ["mode", "indeterminate"]], template: function dibexPhpFilesDpdfComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPhpFilesDpdfComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPhpFilesDpdfComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "mat-form-field", 8)(9, "mat-label");
+                        i0.ɵɵtext(10, "Provide some text...");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(11, "textarea", 9);
+                        i0.ɵɵtemplate(12, dibexPhpFilesDpdfComponent_mat_error_12_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(13, "button", 11)(14, "span", 12);
+                        i0.ɵɵtext(15, "Text to Pdf");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(9, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5642");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5643");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Provide some text...");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("sendText", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Text to Pdf");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.MaxLengthValidator, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i7.MatError, i8.MatInput, i9.CdkTextareaAutosize, i10.MatProgressBar, i11.MatCard, i11.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPhpFilesDpdf'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPhpFilesDpdfComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPhpFilesDpdfComponent", dibexPhpFilesDpdfComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpFilesDpdfComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-php-files-dpdf', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5642 dibComponent=subcontainer   ><ng-container [dibPort]="'5642'" parentContainerName=dibexPhpFilesDpdf  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5643 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5643'" ><mat-form-field  id=ci5645 dibComponent=inputTextArea   style="  width:400px !important;   flex: 1 1 0%;  "  item-alias=sendText   appearance=standard   ><mat-label >Provide some text...</mat-label><textarea cdkTextareaAutosize cdkAutosizeMinRows=4  cdkAutosizeMaxRows=10    matInput  formControlName=sendText   maxlength='400'  name=sendText   [attr.aria-label]="'Provide some text...'" ></textarea><mat-error *ngIf="hasError('sendText','maxlength',model.$formGroup)">Please enter 400 chars or less</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci5644 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnTextToPdf   style="  "  [attr.aria-label]="'Text to Pdf'"  type=button  ><span class=dibButtonCaption >Text to Pdf</span></button></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPhpFilesDpdfModule = class dibexPhpFilesDpdfModule {
+                static entry = dibexPhpFilesDpdfComponent;
+                static ɵfac = function dibexPhpFilesDpdfModule_Factory(t) { return new (t || dibexPhpFilesDpdfModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPhpFilesDpdfModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPhpFilesDpdfModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpFilesDpdfModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPhpFilesDpdfComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPhpFilesDpdfModule, { declarations: [dibexPhpFilesDpdfComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

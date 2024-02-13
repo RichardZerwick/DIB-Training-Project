@@ -1,0 +1,505 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/sidenav", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, sidenav_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, _c0, importsRequired, dibexSideNavComponent, containerModules, fullDateTimeOptions, dibexSideNavModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexSideNavComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 87);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (sidenav_1_1) {
+                sidenav_1 = sidenav_1_1;
+                i9 = sidenav_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexSideNavComponent = class dibexSideNavComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 214, name: 'dibexSideNav', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5289'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexSideNav');
+                    this.containerName = 'dibexSideNav'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('span', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span1', `sidenavContent component.
+<br><b>mode="side"</b>: Sidenav appears side-by-side with the main content, shrinking the main content's width to make space for the sidenav.`);
+                    this.setInnerHtml('span2', `sidenav component
+<br><b>attributes:</b> mode="over" closed position="start"`);
+                    this.setInnerHtml('span3', `sidenavContent component.
+<br><b>mode="over"</b>: Sidenav floats over the primary content, which is covered by a backdrop. <b>closed</b>: Initial status is closed.`);
+                    this.setInnerHtml('span4', `sidenav component
+<br><b>attributes:</b> mode="push" opened position="start"`);
+                    this.setInnerHtml('span5', `sidenavContent component.
+<br><b>mode="push"</b>: Sidenav pushes the primary content out of its way, also covering it with a backdrop.`);
+                    this.setInnerHtml('span6', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="end"`);
+                    this.setInnerHtml('span7', `sidenavContent component.
+<br><b>position="end"</b>:`);
+                    this.setInnerHtml('span8', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span9', `Max of two sidenav components inside the sidenavContainer`);
+                    this.setInnerHtml('span10', `sidenav component
+<br><b>attributes:</b> mode="side" closed position="end"`);
+                    this.setInnerHtml('span11', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span12', `This sidenavContent component has a nested sidenavContainer:`);
+                    this.setInnerHtml('span13', `A sidenav inside the nested sidenavContainer`);
+                    this.setInnerHtml('span14', `A sidenavContent inside the nested sidenavContainer`);
+                    this.setInnerHtml('span15', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span16', `<b>hasBackdrop="true"</b> (set on sideNavContainer). Unlike the demo above, the content is disabled while the sidenav is open.
+<br>If <b>mode="over"</b> or <b>mode="push"</b> (see below),&nbsp; <b>hasBackdrop</b> is true by default but can be overriden.`);
+                    this.setInnerHtml('span17', `drawer component
+<br><b>attributes:</b> mode="side" opened`);
+                    this.setInnerHtml('span18', `drawerContent component.
+<br><b>drawer</b> and <b>sidenav</b> are identical except that <b>fixedInViewport="true"</b> and related attributes can be set for the latter (see docs above for more)`);
+                    this.setInnerHtml('span', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span1', `sidenavContent component.
+<br><b>mode="side"</b>: Sidenav appears side-by-side with the main content, shrinking the main content's width to make space for the sidenav.`);
+                    this.setInnerHtml('span2', `sidenav component
+<br><b>attributes:</b> mode="over" closed position="start"`);
+                    this.setInnerHtml('span3', `sidenavContent component.
+<br><b>mode="over"</b>: Sidenav floats over the primary content, which is covered by a backdrop. <b>closed</b>: Initial status is closed.`);
+                    this.setInnerHtml('span4', `sidenav component
+<br><b>attributes:</b> mode="push" opened position="start"`);
+                    this.setInnerHtml('span5', `sidenavContent component.
+<br><b>mode="push"</b>: Sidenav pushes the primary content out of its way, also covering it with a backdrop.`);
+                    this.setInnerHtml('span6', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="end"`);
+                    this.setInnerHtml('span7', `sidenavContent component.
+<br><b>position="end"</b>:`);
+                    this.setInnerHtml('span8', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span9', `Max of two sidenav components inside the sidenavContainer`);
+                    this.setInnerHtml('span10', `sidenav component
+<br><b>attributes:</b> mode="side" closed position="end"`);
+                    this.setInnerHtml('span11', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span12', `This sidenavContent component has a nested sidenavContainer:`);
+                    this.setInnerHtml('span13', `A sidenav inside the nested sidenavContainer`);
+                    this.setInnerHtml('span14', `A sidenavContent inside the nested sidenavContainer`);
+                    this.setInnerHtml('span15', `sidenav component
+<br><b>attributes:</b> mode="side" opened position="start"`);
+                    this.setInnerHtml('span16', `<b>hasBackdrop="true"</b> (set on sideNavContainer). Unlike the demo above, the content is disabled while the sidenav is open.
+<br>If <b>mode="over"</b> or <b>mode="push"</b> (see below),&nbsp; <b>hasBackdrop</b> is true by default but can be overriden.`);
+                    this.setInnerHtml('span17', `drawer component
+<br><b>attributes:</b> mode="side" opened`);
+                    this.setInnerHtml('span18', `drawerContent component.
+<br><b>drawer</b> and <b>sidenav</b> are identical except that <b>fixedInViewport="true"</b> and related attributes can be set for the latter (see docs above for more)`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "button", actionType: "click", responseType: 'actions', submitUrl: "shared.action.message?messageText=hello&messageTitle=Greeting", itemAlias: "button", waitForCompletion: false, containerName: "dibexSideNav", handlers: [] }, this.clientData, { itemEventId: 'ie256-dib', itemId: '5350', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexSideNav', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexSideNav' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexSideNavComponent_Factory(t) { return new (t || dibexSideNavComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexSideNavComponent, selectors: [["dibex-side-nav"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 141, vars: 83, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5289", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexSideNav", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5290", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch"], [3, "dibPort"], ["id", "ci5291", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5292", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavA", ""], ["id", "ci5294", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5293", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5296", "dibComponent", "button", "type", "button", 3, "click"], ["src", "menu"], ["id", "ci5295", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5343", "dibComponent", "card"], ["hasBackdrop", "true", "id", "ci5344", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5345", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavI", ""], ["id", "ci5346", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5347", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5349", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5348", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5350", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "button", "type", "button", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci5297", "dibComponent", "card"], ["id", "ci5298", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "over", "closed", "", "position", "start", "id", "ci5299", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavB", ""], ["id", "ci5300", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5301", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5303", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5302", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5304", "dibComponent", "card"], ["id", "ci5305", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "push", "opened", "", "position", "start", "id", "ci5306", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavC", ""], ["id", "ci5307", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5308", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5310", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5309", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5311", "dibComponent", "card"], ["id", "ci5312", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "end", "id", "ci5313", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavD", ""], ["id", "ci5314", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5315", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5316", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5317", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5318", "dibComponent", "card"], ["id", "ci5319", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5320", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavE", ""], ["id", "ci5321", "dibComponent", "span", 3, "innerHtml"], ["mode", "side", "closed", "", "position", "end", "id", "ci5325", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavF", ""], ["id", "ci5326", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5322", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5324", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5329", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "center", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5323", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5327", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5328", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5330", "dibComponent", "card"], ["id", "ci5331", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5332", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavG", ""], ["id", "ci5333", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5334", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5335", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5336", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5337", "dibComponent", "sidenavContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5338", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "darkseagreen"], ["sidenavH", ""], ["id", "ci5339", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5340", "dibComponent", "sidenavContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "yellow"], ["id", "ci5342", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5341", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5351", "dibComponent", "card"], ["id", "ci5352", "dibComponent", "drawerContainer", 2, "height", "100% !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "end", "id", "ci5353", "dibComponent", "drawer", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "cornflowerblue"], ["drawerA", ""], ["id", "ci5354", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5355", "dibComponent", "drawerContent", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background-color", "orange"], ["id", "ci5357", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci5356", "dibComponent", "span", 3, "innerHtml"], ["mode", "indeterminate"]], template: function dibexSideNavComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r11 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexSideNavComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexSideNavComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "mat-sidenav-container", 8)(9, "mat-sidenav", 9, 10);
+                        i0.ɵɵelement(11, "span", 11);
+                        i0.ɵɵpipe(12, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(13, "mat-sidenav-content", 12);
+                        i0.ɵɵelementContainerStart(14, 7);
+                        i0.ɵɵelementStart(15, "button", 13);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_15_listener() { i0.ɵɵrestoreView(_r11); const _r1 = i0.ɵɵreference(10); return i0.ɵɵresetView(_r1.toggle()); });
+                        i0.ɵɵelement(16, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(17, "span", 15);
+                        i0.ɵɵpipe(18, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(19, "mat-card", 16)(20, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(21, 7);
+                        i0.ɵɵelementStart(22, "mat-sidenav-container", 17)(23, "mat-sidenav", 18, 19);
+                        i0.ɵɵelement(25, "span", 20);
+                        i0.ɵɵpipe(26, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(27, "mat-sidenav-content", 21);
+                        i0.ɵɵelementContainerStart(28, 7);
+                        i0.ɵɵelementStart(29, "button", 22);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_29_listener() { i0.ɵɵrestoreView(_r11); const _r2 = i0.ɵɵreference(24); return i0.ɵɵresetView(_r2.toggle()); });
+                        i0.ɵɵelement(30, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(31, "span", 23);
+                        i0.ɵɵpipe(32, "safeHtml");
+                        i0.ɵɵelementStart(33, "button", 24)(34, "span", 25);
+                        i0.ɵɵtext(35, "I'll be disabled");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(36, "mat-card", 26)(37, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(38, 7);
+                        i0.ɵɵelementStart(39, "mat-sidenav-container", 27)(40, "mat-sidenav", 28, 29);
+                        i0.ɵɵelement(42, "span", 30);
+                        i0.ɵɵpipe(43, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(44, "mat-sidenav-content", 31);
+                        i0.ɵɵelementContainerStart(45, 7);
+                        i0.ɵɵelementStart(46, "button", 32);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_46_listener() { i0.ɵɵrestoreView(_r11); const _r3 = i0.ɵɵreference(41); return i0.ɵɵresetView(_r3.toggle()); });
+                        i0.ɵɵelement(47, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(48, "span", 33);
+                        i0.ɵɵpipe(49, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(50, "mat-card", 34)(51, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(52, 7);
+                        i0.ɵɵelementStart(53, "mat-sidenav-container", 35)(54, "mat-sidenav", 36, 37);
+                        i0.ɵɵelement(56, "span", 38);
+                        i0.ɵɵpipe(57, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(58, "mat-sidenav-content", 39);
+                        i0.ɵɵelementContainerStart(59, 7);
+                        i0.ɵɵelementStart(60, "button", 40);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_60_listener() { i0.ɵɵrestoreView(_r11); const _r4 = i0.ɵɵreference(55); return i0.ɵɵresetView(_r4.toggle()); });
+                        i0.ɵɵelement(61, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(62, "span", 41);
+                        i0.ɵɵpipe(63, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(64, "mat-card", 42)(65, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(66, 7);
+                        i0.ɵɵelementStart(67, "mat-sidenav-container", 43)(68, "mat-sidenav", 44, 45);
+                        i0.ɵɵelement(70, "span", 46);
+                        i0.ɵɵpipe(71, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(72, "mat-sidenav-content", 47);
+                        i0.ɵɵelementContainerStart(73, 7);
+                        i0.ɵɵelement(74, "span", 48);
+                        i0.ɵɵpipe(75, "safeHtml");
+                        i0.ɵɵelementStart(76, "button", 49);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_76_listener() { i0.ɵɵrestoreView(_r11); const _r5 = i0.ɵɵreference(69); return i0.ɵɵresetView(_r5.toggle()); });
+                        i0.ɵɵelement(77, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(78, "mat-card", 50)(79, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(80, 7);
+                        i0.ɵɵelementStart(81, "mat-sidenav-container", 51)(82, "mat-sidenav", 52, 53);
+                        i0.ɵɵelement(84, "span", 54);
+                        i0.ɵɵpipe(85, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(86, "mat-sidenav", 55, 56);
+                        i0.ɵɵelement(88, "span", 57);
+                        i0.ɵɵpipe(89, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(90, "mat-sidenav-content", 58);
+                        i0.ɵɵelementContainerStart(91, 7);
+                        i0.ɵɵelementStart(92, "button", 59);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_92_listener() { i0.ɵɵrestoreView(_r11); const _r6 = i0.ɵɵreference(83); return i0.ɵɵresetView(_r6.toggle()); });
+                        i0.ɵɵelement(93, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(94, "div", 60);
+                        i0.ɵɵelementContainerStart(95, 7);
+                        i0.ɵɵelement(96, "span", 61);
+                        i0.ɵɵpipe(97, "safeHtml");
+                        i0.ɵɵelementStart(98, "button", 62);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_98_listener() { i0.ɵɵrestoreView(_r11); const _r6 = i0.ɵɵreference(83); const _r7 = i0.ɵɵreference(87); _r6.toggle(); return i0.ɵɵresetView(_r7.toggle()); });
+                        i0.ɵɵelement(99, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(100, "button", 63);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_100_listener() { i0.ɵɵrestoreView(_r11); const _r7 = i0.ɵɵreference(87); return i0.ɵɵresetView(_r7.toggle()); });
+                        i0.ɵɵelement(101, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(102, "mat-card", 64)(103, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(104, 7);
+                        i0.ɵɵelementStart(105, "mat-sidenav-container", 65)(106, "mat-sidenav", 66, 67);
+                        i0.ɵɵelement(108, "span", 68);
+                        i0.ɵɵpipe(109, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(110, "mat-sidenav-content", 69);
+                        i0.ɵɵelementContainerStart(111, 7);
+                        i0.ɵɵelementStart(112, "button", 70);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_112_listener() { i0.ɵɵrestoreView(_r11); const _r8 = i0.ɵɵreference(107); return i0.ɵɵresetView(_r8.toggle()); });
+                        i0.ɵɵelement(113, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(114, "span", 71);
+                        i0.ɵɵpipe(115, "safeHtml");
+                        i0.ɵɵelementStart(116, "mat-sidenav-container", 72)(117, "mat-sidenav", 73, 74);
+                        i0.ɵɵelement(119, "span", 75);
+                        i0.ɵɵpipe(120, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(121, "mat-sidenav-content", 76);
+                        i0.ɵɵelementContainerStart(122, 7);
+                        i0.ɵɵelementStart(123, "button", 77);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_123_listener() { i0.ɵɵrestoreView(_r11); const _r9 = i0.ɵɵreference(118); return i0.ɵɵresetView(_r9.toggle()); });
+                        i0.ɵɵelement(124, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(125, "span", 78);
+                        i0.ɵɵpipe(126, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(127, "mat-card", 79)(128, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(129, 7);
+                        i0.ɵɵelementStart(130, "mat-drawer-container", 80)(131, "mat-drawer", 81, 82);
+                        i0.ɵɵelement(133, "span", 83);
+                        i0.ɵɵpipe(134, "safeHtml");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(135, "mat-drawer-content", 84);
+                        i0.ɵɵelementContainerStart(136, 7);
+                        i0.ɵɵelementStart(137, "button", 85);
+                        i0.ɵɵlistener("click", function dibexSideNavComponent_Template_button_click_137_listener() { i0.ɵɵrestoreView(_r11); const _r10 = i0.ɵɵreference(132); return i0.ɵɵresetView(_r10.toggle()); });
+                        i0.ɵɵelement(138, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(139, "span", 86);
+                        i0.ɵɵpipe(140, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(81, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5289");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5290");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(12, 43, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5293");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(18, 45, ctx.getHtml("span1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5343");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(26, 47, ctx.getHtml("span15")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5347");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(32, 49, ctx.getHtml("span16")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "I'll be disabled");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5297");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(43, 51, ctx.getHtml("span2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5301");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(49, 53, ctx.getHtml("span3")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5304");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(57, 55, ctx.getHtml("span4")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5308");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(63, 57, ctx.getHtml("span5")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5311");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(71, 59, ctx.getHtml("span6")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5315");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(75, 61, ctx.getHtml("span7")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5318");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(85, 63, ctx.getHtml("span8")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(89, 65, ctx.getHtml("span10")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5322");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5329");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(97, 67, ctx.getHtml("span9")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5330");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(109, 69, ctx.getHtml("span11")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5334");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(115, 71, ctx.getHtml("span12")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(120, 73, ctx.getHtml("span13")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5340");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(126, 75, ctx.getHtml("span14")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5351");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(134, 77, ctx.getHtml("span17")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5355");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(140, 79, ctx.getHtml("span18")), i0.ɵɵsanitizeHtml);
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibIconComponent, i2.DibPortDirective, i2.DibListenersDirective, i6.MatButton, i7.MatProgressBar, i8.MatCard, i8.MatCardContent, i9.MatDrawer, i9.MatDrawerContainer, i9.MatDrawerContent, i9.MatSidenav, i9.MatSidenavContainer, i9.MatSidenavContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexSideNav'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexSideNavComponent.prototype, "reloadContainer", null);
+            exports_1("dibexSideNavComponent", dibexSideNavComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSideNavComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-side-nav', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5289 dibComponent=subcontainer   ><ng-container [dibPort]="'5289'" parentContainerName=dibexSideNav  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  " id=ci5290 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5290'" ><mat-sidenav-container  id=ci5291 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5292 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavA  ><span  id=ci5294 dibComponent=span   style="  "  [innerHtml]="getHtml('span') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5293 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5293'"><button  (click)="sidenavA.toggle()" id=ci5296 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5295 dibComponent=span   style="  "  [innerHtml]="getHtml('span1') | safeHtml" ></span></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5343 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5343'" ><mat-sidenav-container   hasBackdrop=true  id=ci5344 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5345 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavI  ><span  id=ci5346 dibComponent=span   style="  "  [innerHtml]="getHtml('span15') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5347 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5347'"><button  (click)="sidenavI.toggle()" id=ci5349 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5348 dibComponent=span   style="  "  [innerHtml]="getHtml('span16') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5350 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=button   style="  "  [attr.aria-label]="'I\\'ll be disabled'"  type=button  ><span class=dibButtonCaption >I\'ll be disabled</span></button></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5297 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5297'" ><mat-sidenav-container  id=ci5298 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=over  closed position=start  id=ci5299 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavB  ><span  id=ci5300 dibComponent=span   style="  "  [innerHtml]="getHtml('span2') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5301 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5301'"><button  (click)="sidenavB.toggle()" id=ci5303 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5302 dibComponent=span   style="  "  [innerHtml]="getHtml('span3') | safeHtml" ></span></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5304 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5304'" ><mat-sidenav-container  id=ci5305 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=push  opened position=start  id=ci5306 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavC  ><span  id=ci5307 dibComponent=span   style="  "  [innerHtml]="getHtml('span4') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5308 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5308'"><button  (click)="sidenavC.toggle()" id=ci5310 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5309 dibComponent=span   style="  "  [innerHtml]="getHtml('span5') | safeHtml" ></span></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5311 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5311'" ><mat-sidenav-container  id=ci5312 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=end  id=ci5313 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavD  ><span  id=ci5314 dibComponent=span   style="  "  [innerHtml]="getHtml('span6') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5315 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5315'"><span  id=ci5316 dibComponent=span   style="  "  [innerHtml]="getHtml('span7') | safeHtml" ></span><button  (click)="sidenavD.toggle()" id=ci5317 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5318 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5318'" ><mat-sidenav-container  id=ci5319 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5320 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavE  ><span  id=ci5321 dibComponent=span   style="  "  [innerHtml]="getHtml('span8') | safeHtml" ></span></mat-sidenav><mat-sidenav   mode=side  closed position=end  id=ci5325 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavF  ><span  id=ci5326 dibComponent=span   style="  "  [innerHtml]="getHtml('span10') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5322 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5322'"><button  (click)="sidenavE.toggle()" id=ci5324 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: center;  flex: 1 1 0%;  overflow:auto !important;" id=ci5329 dibComponent=div  ><ng-container [dibPort]="'5329'" ><span  id=ci5323 dibComponent=span   style="  "  [innerHtml]="getHtml('span9') | safeHtml" ></span><button  (click)="sidenavE.toggle();sidenavF.toggle()" id=ci5327 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button></ng-container></div><button  (click)="sidenavF.toggle()" id=ci5328 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5330 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5330'" ><mat-sidenav-container  id=ci5331 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5332 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavG  ><span  id=ci5333 dibComponent=span   style="  "  [innerHtml]="getHtml('span11') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5334 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5334'"><button  (click)="sidenavG.toggle()" id=ci5335 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5336 dibComponent=span   style="  "  [innerHtml]="getHtml('span12') | safeHtml" ></span><mat-sidenav-container  id=ci5337 dibComponent=sidenavContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5338 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:darkseagreen;"  #sidenavH  ><span  id=ci5339 dibComponent=span   style="  "  [innerHtml]="getHtml('span13') | safeHtml" ></span></mat-sidenav><mat-sidenav-content  id=ci5340 dibComponent=sidenavContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:yellow;" ><ng-container [dibPort]="'5340'"><button  (click)="sidenavH.toggle()" id=ci5342 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5341 dibComponent=span   style="  "  [innerHtml]="getHtml('span14') | safeHtml" ></span></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5351 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5351'" ><mat-drawer-container  id=ci5352 dibComponent=drawerContainer   style="  height:100% !important;   display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-drawer   mode=side  opened position=end  id=ci5353 dibComponent=drawer   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:cornflowerblue;"  #drawerA  ><span  id=ci5354 dibComponent=span   style="  "  [innerHtml]="getHtml('span17') | safeHtml" ></span></mat-drawer><mat-drawer-content  id=ci5355 dibComponent=drawerContent   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background-color:orange;" ><ng-container [dibPort]="'5355'"><button  (click)="drawerA.toggle()" id=ci5357 dibComponent=button   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button><span  id=ci5356 dibComponent=span   style="  "  [innerHtml]="getHtml('span18') | safeHtml" ></span></ng-container></mat-drawer-content></mat-drawer-container></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, sidenav_1.MatSidenavModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexSideNavModule = class dibexSideNavModule {
+                static entry = dibexSideNavComponent;
+                static ɵfac = function dibexSideNavModule_Factory(t) { return new (t || dibexSideNavModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexSideNavModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexSideNavModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSideNavModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexSideNavComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexSideNavModule, { declarations: [dibexSideNavComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, sidenav_1.MatSidenavModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

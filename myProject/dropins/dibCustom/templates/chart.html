@@ -1,0 +1,139 @@
+<html>
+<head>
+
+    <!-- *** NOTE: Security measure: always specify UTF-8 encoding, which corresponds with the UTF-8 header which Eleutheria sends to the client -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>DIB Charts</title> 
+    <meta charset="utf-8" />
+
+    ~$// Load iframe Js tools, and interface with Dropinbase~
+    <script type="text/javascript" src="/files/dropins/setNgxMaterial/dibAdmin/js/template/TemplateActions.js"></script>
+    
+    ~$// Load tools required to do Ajax calls and messages~
+    <script type="text/javascript" src="/files/dropins/dibAdmin/js/dibTools.js"></script>
+
+    ~$// Load chart tools~
+    <script type="text/javascript" src="/files/dropins/dibAdmin/js/dibChartTools.js"></script>
+
+    ~$// Load ChartJs, either from local or CDN~
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <script>
+
+        // where to fetch server data
+        var dataUrl = '/dropins/dibAdmin/DData/getData'; 
+        // Parameters sent to server when doing data request:
+        var serverParams = {
+            'containerName' : '^dib_containerName^', // dib_containerName is always available as parameter (no need to specify in Valid Params)
+            'itemEventId' : 1,
+            'sqlParams': {} // set content as required. Variables received from Eleutheria can be used, eg 'clientId' : ^alias_parent_id^
+        };
+
+        var serverData = {}; // will contain data fetched from server after calling fetchAndRefresh function
+
+        var printDebugInfo = false; // prints data and other info to console for debugging purposes
+
+        // Object returned by ChartJs / Google charts (Plotly does not return an object):
+        var chartRef = {};
+        
+        // Palette of colors used to fill in where not specified:
+        var palette = ['#ff7f0e','#1f77b4','#d62728','#2ca02c','#a8dab5','#feed02','#e70084','#55cafb','#7d8d9a','#53230a','#cf9418','#e1e1e1'];
+        
+        // Copy of dibCharts
+        var dibChartsCopy = null;
+
+        // Main chart object definitions
+        
+        var dibCharts = {
+            
+            // Plotly Chart definitions:
+            // See https://plotly.com/javascript/
+            //     https://www.w3schools.com/js/js_graphics_plotly.asp
+            //     https://plotly.github.io/react-chart-editor/
+            //     https://chart-studio.plotly.com/create/#/   => inspect JSON->Tree to see options....
+
+            // Bar with line
+            chartjs_a : {
+                type : 'chartJs',
+                config: {
+                    type: 'bar',
+                    data: {
+                        labels: 'rptProduct.product_category',
+                        datasets: [
+                            {
+                                label: 'Product quantity',
+                                data: 'rptProduct.sumQuantity',
+                                
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Quantity per Category'
+                            }
+                        }
+                    }
+                }
+            },
+          
+        };
+
+        function loadData() {
+            // First store a replica of the chart definitions in case we want to call loadData again without refreshing the whole template
+            if(!!!dibChartsCopy) 
+                dibChartsCopy = JSON.stringify(dibCharts);
+            else
+                dibCharts = JSON.parse(dibChartsCopy);
+
+            // The fetchAndRefresh function is used to populate the dibCharts object above which contains the chart configurations
+            // It does the following: 
+            // 1. Fetches the data for queries listed in the Designer under valid_params=>dibSqlPerms
+            // 2. Sets values of leaf nodes (eg x: 'dibexPlotlyExample.names') that reference query fields in the objects listed below (eg dibCharts)
+            // 3. Calls the specified function to draw the charts upon the return of the data, refreshCharts() in this case.
+
+            var objects = [dibCharts]; // alternatively something like: [dibCharts.chartjs_a.config.data, dibCharts.plotly_a.data, dibCharts.plotly_b.data]
+            fetchAndRefresh(objects, 'refreshCharts', serverParams);
+        }
+
+        function refreshCharts() {
+            // We can get them from the database, but also let the dibSetMissingColors function fill in colors where missing
+            var countOfColorsNeeded = dibCharts.chartjs_a.config.data.labels.length;
+            var transparency = '8f';
+
+            dibSetMissingColors(countOfColorsNeeded, dibCharts.chartjs_a.config.data.datasets[0], 'backgroundColor', transparency); // eg borderColor could also be set with another call to this function... 
+            dibRefreshChartJs('chartjs_a', true);
+        }
+
+    </script>
+    
+</head>
+
+~$// LOAD CHARTS ~
+<body onload="loadData()">
+
+~$// BUTTONS ~
+<button class="btn" onclick="document.location.reload();">Reload iFrame</button>
+<span ></span>
+
+<span style="margin-left:20px; width:100px; font-size:18px; font-weight:bold; color:#f69d4e">~getdb(name, test_client, id=param(nv(^alias_self_clientId^,-999)))~</span>
+
+    <div id="chartJsCard" class="dibCard" style="display:flex; flex-direction: row;flex-wrap: wrap; height:530px; max-width: 1000px">
+
+        <div style="flex:350px 1 1; display:flex; flex-direction: column;">
+            <canvas id="chartjs_a" style="flex: auto;"></canvas>
+        </div>
+        
+    </div>
+
+</body>
+</html>

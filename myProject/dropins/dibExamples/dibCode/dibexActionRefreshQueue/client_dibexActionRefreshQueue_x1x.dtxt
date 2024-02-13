@@ -1,0 +1,250 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexActionRefreshQueueComponent, containerModules, fullDateTimeOptions, dibexActionRefreshQueueModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexActionRefreshQueueComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 23);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexActionRefreshQueueComponent = class dibexActionRefreshQueueComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 302, name: 'dibexActionRefreshQueue', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6899'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexActionRefreshQueue');
+                    this.containerName = 'dibexActionRefreshQueue'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputTextArea: { itemId: 6902, type: 'text', fieldAlias: 'inputTextArea', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'multilinetext', changeUrl: false }, queueUid: { itemId: 7296, type: 'text', fieldAlias: 'queueUid', formControl: new forms_1.FormControl({ value: '', disabled: true }, { validators: [], updateOn: 'blur' }), create: false, update: false, required: false, itemAlias: 'queueUid', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputTextArea', this.model.modelItems.inputTextArea.formControl);
+                    this.model.$formGroup.addControl('queueUid', this.model.modelItems.queueUid.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientside", actionType: "click", responseType: 'actions', submitUrl: "shared.action.refresh-queue?id=@{value_self_queueUid}&intervalMs=2000", itemAlias: "btnClientside", waitForCompletion: false, containerName: "dibexActionRefreshQueue", handlers: [] }, this.clientData, { itemEventId: 'ie396-dib', itemId: '6904', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnServerside", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/refreshQueue", itemAlias: "btnServerside", waitForCompletion: false, containerName: "dibexActionRefreshQueue", handlers: [] }, this.clientData, { itemEventId: 'ie397-dib', itemId: '6905', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnStartQueue", actionType: "click", responseType: '1200', submitUrl: "/dropins/dibExamples/Queue/startQueueFromClient", itemAlias: "btnStartQueue", waitForCompletion: false, containerName: "dibexActionRefreshQueue", handlers: [] }, this.clientData, { itemEventId: 'ie442-dib', itemId: '7298', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexActionRefreshQueue', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexActionRefreshQueue' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexActionRefreshQueueComponent_Factory(t) { return new (t || dibexActionRefreshQueueComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexActionRefreshQueueComponent, selectors: [["dibex-action-refresh-queue"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 47, vars: 15, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6899", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionRefreshQueue", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6900", "dibComponent", "card", 2, "width", "1035px !important", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "15px"], [3, "dibPort"], ["id", "ci6906", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci7297", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci7298", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnStartQueue", "type", "button", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci7296", "dibComponent", "inputText", "item-alias", "queueUid", "dibDisabled", "true", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "queueUid", "name", "queueUid", "aria-label", "queueUid"], ["id", "ci6903", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci6904", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["mat-raised-button", "", "color", "primary", "id", "ci6905", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnServerside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["id", "ci6901", "dibComponent", "section", 2, "width", "800px !important", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci6902", "dibComponent", "inputTextArea", "appearance", "standard", 2, "flex", "1 1 0%"], ["matInput", "", "formControlName", "inputTextArea", "name", "inputTextArea"], ["mode", "indeterminate"]], template: function dibexActionRefreshQueueComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexActionRefreshQueueComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexActionRefreshQueueComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "span", 8)(9, "div", 9);
+                        i0.ɵɵtext(10, " Click ");
+                        i0.ɵɵelementStart(11, "b");
+                        i0.ɵɵtext(12, "Start Queue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(13, " to start the queue polling at 1200ms.");
+                        i0.ɵɵelement(14, "br");
+                        i0.ɵɵtext(15, "The ");
+                        i0.ɵɵelementStart(16, "b");
+                        i0.ɵɵtext(17, "Client-side");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(18, "-button sets the polling at 2000ms.");
+                        i0.ɵɵelement(19, "br");
+                        i0.ɵɵtext(20, "The ");
+                        i0.ɵɵelementStart(21, "b");
+                        i0.ɵɵtext(22, "Server-side");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(23, "-button sets the polling at 1000ms.");
+                        i0.ɵɵelementStart(24, "i");
+                        i0.ɵɵtext(25, "View network requests in Developer Console (press F12 in Chrome -> Network)");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(26, "mat-card", 10)(27, "mat-card-content", 11)(28, "button", 12)(29, "span", 13);
+                        i0.ɵɵtext(30, "Start Queue with 1200 ms polling");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(31, "mat-form-field", 14);
+                        i0.ɵɵelement(32, "input", 15);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(33, "div", 16);
+                        i0.ɵɵelementContainerStart(34, 7);
+                        i0.ɵɵelementStart(35, "button", 17)(36, "span", 13);
+                        i0.ɵɵtext(37, "Origin: Client-side (2000ms)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(38, "button", 18)(39, "span", 13);
+                        i0.ɵɵtext(40, "Origin: Server-side (1000ms)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(41, "mat-card", 19)(42, "mat-card-content", 20)(43, "mat-form-field", 21)(44, "mat-label");
+                        i0.ɵɵtext(45, "inputTextArea");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(46, "textarea", 22);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(13, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6899");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6900");
+                        i0.ɵɵadvance(21);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Start Queue with 1200 ms polling");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6903");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Client-side (2000ms)");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Server-side (1000ms)");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵattribute("aria-label", "inputTextArea");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibDisabledDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexActionRefreshQueue'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexActionRefreshQueueComponent.prototype, "reloadContainer", null);
+            exports_1("dibexActionRefreshQueueComponent", dibexActionRefreshQueueComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionRefreshQueueComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-action-refresh-queue', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6899 dibComponent=subcontainer   ><ng-container [dibPort]="'6899'" parentContainerName=dibexActionRefreshQueue  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:1035px !important;   overflow:auto !important;" id=ci6900 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 15px;"  ><ng-container [dibPort]="'6900'" ><span  id=ci6906 dibComponent=comment   style="  " ><div class=dib-comment > Click <b>Start Queue</b> to start the queue polling at 1200ms.<br>The <b>Client-side</b>-button sets the polling at 2000ms.<br>The <b>Server-side</b>-button sets the polling at 1000ms.<i>View network requests in Developer Console (press F12 in Chrome -> Network)</i></div></span><mat-card   style="  flex: 1 1 0%;  " id=ci7297 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><button  mat-raised-button color=primary  id=ci7298 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnStartQueue   style="  "  [attr.aria-label]="'Start Queue with 1200 ms polling'"  type=button  ><span class=dibButtonCaption >Start Queue with 1200 ms polling</span></button><mat-form-field id=ci7296 dibComponent=inputText   style="  "  item-alias=queueUid  dibDisabled=true   appearance=standard  ><input   matInput  type=text   formControlName=queueUid   name=queueUid   aria-label=queueUid  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></mat-card-content></mat-card><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci6903 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6903'" ><button  mat-raised-button color=primary  id=ci6904 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Client-side (2000ms)'"  type=button  ><span class=dibButtonCaption >Origin: Client-side (2000ms)</span></button><button  mat-raised-button color=primary  id=ci6905 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnServerside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Server-side (1000ms)'"  type=button  ><span class=dibButtonCaption >Origin: Server-side (1000ms)</span></button></ng-container></div><mat-card   style="  width:800px !important;   overflow:auto !important;" id=ci6901 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><mat-form-field  id=ci6902 dibComponent=inputTextArea   style="  flex: 1 1 0%;  "  appearance=standard   ><mat-label >inputTextArea</mat-label><textarea   matInput  formControlName=inputTextArea   name=inputTextArea   [attr.aria-label]="'inputTextArea'" ></textarea><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></mat-card-content></mat-card></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexActionRefreshQueueModule = class dibexActionRefreshQueueModule {
+                static entry = dibexActionRefreshQueueComponent;
+                static ɵfac = function dibexActionRefreshQueueModule_Factory(t) { return new (t || dibexActionRefreshQueueModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexActionRefreshQueueModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexActionRefreshQueueModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionRefreshQueueModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexActionRefreshQueueComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexActionRefreshQueueModule, { declarations: [dibexActionRefreshQueueComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,535 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/expansion", "@angular/material/button", "@angular/material/icon", "@angular/material/tabs", "@angular/material/stepper", "@angular/material/checkbox", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, expansion_1, button_1, icon_1, tabs_1, stepper_1, checkbox_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, _c0, _c1, _c2, importsRequired, dibexComponentsApplicationLayoutComponent, containerModules, fullDateTimeOptions, dibexComponentsApplicationLayoutModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsApplicationLayoutComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 89);
+    } }
+    function dibexComponentsApplicationLayoutComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 90);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabFirst", "dibexComponentsApplicationLayout.tabFirst", "First"));
+    } }
+    function dibexComponentsApplicationLayoutComponent_ng_template_49_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "dib-icon", 91);
+        i0.ɵɵtext(1, "\u00A0 ");
+        i0.ɵɵelement(2, "app-tab-label", 92);
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("value", ctx_r4.getTabTitle("tabSecond", "dibexComponentsApplicationLayout.tabSecond", "Second (with icon)"));
+    } }
+    function dibexComponentsApplicationLayoutComponent_ng_template_66_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 93);
+    } if (rf & 2) {
+        const ctx_r7 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r7.getTabTitle("tabLoadContainer", "dibexComponentsApplicationLayout.tabLoadContainer", "Load Container"));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i11 = card_1_1;
+            },
+            function (expansion_1_1) {
+                expansion_1 = expansion_1_1;
+                i12 = expansion_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i13 = tabs_1_1;
+            },
+            function (stepper_1_1) {
+                stepper_1 = stepper_1_1;
+                i14 = stepper_1_1;
+            },
+            function (checkbox_1_1) {
+                checkbox_1 = checkbox_1_1;
+                i7 = checkbox_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            _c1 = function (a1) { return { changeUrl: false, originContainer: a1 }; };
+            _c2 = function (a3) { return { containerName: "dibexTestClientGrid", portId: 7049, portAlias: "appLayout", options: a3 }; };
+            importsRequired = [];
+            dibexComponentsApplicationLayoutComponent = class dibexComponentsApplicationLayoutComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 264, name: 'dibexComponentsApplicationLayout', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexTestClientForm", "dibexTestClientGrid"], refreshChildContainers: { "tabFirst": [''], "tabSecond": [''], "tabLoadContainer": ['dibexTestClientGrid*7049'], "_": ['dibDocsExampleHtml*6328', 'dibexTestClientForm*7078'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsApplicationLayout');
+                    this.containerName = 'dibexComponentsApplicationLayout'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputEmail: { itemId: 6343, type: 'text', fieldAlias: 'inputEmail', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, inputText: { itemId: 6344, type: 'text', fieldAlias: 'inputText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputEmail1: { itemId: 6347, type: 'text', fieldAlias: 'inputEmail1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, inputText1: { itemId: 6348, type: 'text', fieldAlias: 'inputText1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputText2: { itemId: 6353, type: 'text', fieldAlias: 'inputText2', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputEmail2: { itemId: 6355, type: 'text', fieldAlias: 'inputEmail2', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, inputText3: { itemId: 7037, type: 'text', fieldAlias: 'inputText3', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputNumber: { itemId: 7038, type: 'number', fieldAlias: 'inputNumber', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, inputText4: { itemId: 7042, type: 'text', fieldAlias: 'inputText4', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, checkbox: { itemId: 7044, type: 'boolean', fieldAlias: 'checkbox', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, inputEmail3: { itemId: 7046, type: 'text', fieldAlias: 'inputEmail3', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, inputText5: { itemId: 7047, type: 'text', fieldAlias: 'inputText5', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputNumber1: { itemId: 7048, type: 'number', fieldAlias: 'inputNumber1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputEmail', this.model.modelItems.inputEmail.formControl);
+                    this.model.$formGroup.addControl('inputText', this.model.modelItems.inputText.formControl);
+                    this.model.$formGroup.addControl('inputEmail1', this.model.modelItems.inputEmail1.formControl);
+                    this.model.$formGroup.addControl('inputText1', this.model.modelItems.inputText1.formControl);
+                    this.model.$formGroup.addControl('inputText2', this.model.modelItems.inputText2.formControl);
+                    this.model.$formGroup.addControl('inputEmail2', this.model.modelItems.inputEmail2.formControl);
+                    this.model.$formGroup.addControl('inputText3', this.model.modelItems.inputText3.formControl);
+                    this.model.$formGroup.addControl('inputNumber', this.model.modelItems.inputNumber.formControl);
+                    this.model.$formGroup.addControl('inputText4', this.model.modelItems.inputText4.formControl);
+                    this.model.$formGroup.addControl('checkbox', this.model.modelItems.checkbox.formControl);
+                    this.model.$formGroup.addControl('inputEmail3', this.model.modelItems.inputEmail3.formControl);
+                    this.model.$formGroup.addControl('inputText5', this.model.modelItems.inputText5.formControl);
+                    this.model.$formGroup.addControl('inputNumber1', this.model.modelItems.inputNumber1.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsApplicationLayout', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsApplicationLayout' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsApplicationLayoutComponent_Factory(t) { return new (t || dibexComponentsApplicationLayoutComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsApplicationLayoutComponent, selectors: [["dibex-components-application-layout"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 196, vars: 54, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6328", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsApplicationLayout", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6339", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], [2, "display", "flex", "flex-direction", "column", "gap", "15px"], [3, "dibPort"], ["id", "ci7085", "dibComponent", "comment"], [1, "dib-comment"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci6340", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexComponentsApplicationLayout", "dibTabGoToParent", "", "dibAutoTabSelection", "6341,6345,7049", "dibAutoTabSelectionAliases", "tabFirst,tabSecond,tabLoadContainer", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["tabReference6341", ""], ["mat-tab-label", ""], ["id", "ci6341", "dibComponent", "div", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci7040", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci7042", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText4", "name", "inputText4"], ["id", "ci6343", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "inputEmail", "name", "inputEmail"], ["id", "ci6344", "dibComponent", "inputText", "appearance", "standard", 2, "width", "100px !important"], ["matInput", "", "type", "text", "formControlName", "inputText", "name", "inputText"], ["id", "ci7041", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci7044", "dibComponent", "checkbox", "formControlName", "checkbox"], ["mat-raised-button", "", "color", "primary", "id", "ci6342", "dibComponent", "button", "type", "button"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci7043", "dibComponent", "button", "type", "button"], [2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["tabReference6345", ""], ["id", "ci6345", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci6346", "dibComponent", "button", "type", "button"], ["id", "ci6347", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "inputEmail1", "name", "inputEmail1"], ["id", "ci6348", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText1", "name", "inputText1"], [2, "display", "flex", "flex-direction", "column", "gap", "10px", 3, "dibTabGoTo"], ["tabReference7049", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci7049", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["id", "ci6329", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], [2, "display", "flex", "flex-direction", "column", "gap", "60px"], ["id", "ci6330", "dibComponent", "accordion", 2, "width", "300px !important", "display", "flex", "flex-direction", "column", "flex", "1 1 0%", "align-self", "stretch"], [2, "display", "flex", "flex-direction", "column", "gap", "10px", "flex", "1 1 0%"], ["id", "ci6331", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "gap", "10px", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci6332", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci6333", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci6334", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci6335", "dibComponent", "button", "type", "button"], [2, "display", "flex", "flex-direction", "column"], ["id", "ci7045", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["id", "ci7047", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText5", "name", "inputText5"], ["id", "ci7046", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "inputEmail3", "name", "inputEmail3"], ["id", "ci7048", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "inputNumber1", "name", "inputNumber1"], ["id", "ci7034", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], ["id", "ci6349", "dibComponent", "tabsStepper"], ["tabId", "6350", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", 3, "label"], ["id", "ci6350", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci6351", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci7036", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci7035", "dibComponent", "button", "type", "button"], ["tabId", "6354", 2, "display", "flex", "flex-direction", "column", 3, "label"], ["id", "ci6354", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["id", "ci7037", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText3", "name", "inputText3"], ["id", "ci6355", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "inputEmail2", "name", "inputEmail2"], ["id", "ci7038", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "inputNumber", "name", "inputNumber"], ["tabId", "6352", 2, "display", "flex", "flex-direction", "column", 3, "label"], ["id", "ci6352", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["id", "ci6353", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText2", "name", "inputText2"], ["mat-raised-button", "", "color", "primary", "id", "ci7039", "dibComponent", "button", "type", "button"], ["id", "ci7083", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], ["id", "ci7084", "dibComponent", "comment"], ["href", "/nav/dibexSplitter"], ["id", "ci7077", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], ["id", "ci7079", "dibComponent", "comment"], ["href", "/nav/dibexPorts"], ["id", "ci7078", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsApplicationLayout", "subContainerName", "dibexTestClientForm", "subContainerId", "174", "dropinName", "form", 3, "dibPort"], ["id", "ci7080", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1300px"], ["id", "ci7081", "dibComponent", "comment"], ["id", "ci7082", "dibComponent", "iframe", "src", "https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road", 2, "min-height", "800px", 3, "click"], ["mode", "indeterminate"], ["tabPortId", "6341", "dibid", "tabFirst__caption.6341", 3, "value"], ["src", "thumb_up"], ["tabPortId", "6345", "dibid", "tabSecond__caption.6345", 3, "value"], ["tabPortId", "7049", "dibid", "tabLoadContainer__caption.7049", 3, "value"]], template: function dibexComponentsApplicationLayoutComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexComponentsApplicationLayoutComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsApplicationLayoutComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-header")(7, "mat-card-title");
+                        i0.ɵɵtext(8, "tabs");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(10, 7);
+                        i0.ɵɵelementStart(11, "span", 8)(12, "div", 9);
+                        i0.ɵɵtext(13, " Note tabs, like other components, have all kinds of configuration possibilities.");
+                        i0.ɵɵelement(14, "br");
+                        i0.ɵɵtext(15, "See the References-tab above for more info. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(16, "div", 10)(17, "mat-tab-group", 11)(18, "mat-tab", 12, 13);
+                        i0.ɵɵtemplate(20, dibexComponentsApplicationLayoutComponent_ng_template_20_Template, 1, 1, "ng-template", 14);
+                        i0.ɵɵelementStart(21, "div", 15);
+                        i0.ɵɵelementContainerStart(22, 7);
+                        i0.ɵɵelementStart(23, "mat-card", 16)(24, "mat-card-content", 17)(25, "mat-form-field", 18)(26, "mat-label");
+                        i0.ɵɵtext(27, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(28, "input", 19);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(29, "mat-form-field", 20)(30, "mat-label");
+                        i0.ɵɵtext(31, "inputEmail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(32, "input", 21);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(33, "mat-form-field", 22)(34, "mat-label");
+                        i0.ɵɵtext(35, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(36, "input", 23);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(37, "mat-card", 24)(38, "mat-card-content", 17)(39, "mat-checkbox", 25);
+                        i0.ɵɵtext(40, " checkbox ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(41, "button", 26)(42, "span", 27);
+                        i0.ɵɵtext(43, "button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(44, "button", 28)(45, "span", 27);
+                        i0.ɵɵtext(46, "button1");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(47, "mat-tab", 29, 30);
+                        i0.ɵɵtemplate(49, dibexComponentsApplicationLayoutComponent_ng_template_49_Template, 3, 1, "ng-template", 14);
+                        i0.ɵɵelementStart(50, "div", 31);
+                        i0.ɵɵelementContainerStart(51, 7);
+                        i0.ɵɵelementStart(52, "button", 32)(53, "span", 27);
+                        i0.ɵɵtext(54, "button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(55, "mat-form-field", 33)(56, "mat-label");
+                        i0.ɵɵtext(57, "input Email");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(58, "input", 34);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(59, "mat-form-field", 35)(60, "mat-label");
+                        i0.ɵɵtext(61, "input Text");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(62, "input", 36);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(63, "mat-tab", 37, 38);
+                        i0.ɵɵtemplate(66, dibexComponentsApplicationLayoutComponent_ng_template_66_Template, 1, 1, "ng-template", 14);
+                        i0.ɵɵelementStart(67, "mat-card", 39)(68, "mat-card-content", 40);
+                        i0.ɵɵelementContainer(69, 7);
+                        i0.ɵɵelementEnd()()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(70, "mat-card", 41)(71, "mat-card-header")(72, "mat-card-title");
+                        i0.ɵɵtext(73, "accordion");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(74, "mat-card-content", 42);
+                        i0.ɵɵelementContainerStart(75, 7);
+                        i0.ɵɵelementStart(76, "mat-accordion", 43)(77, "mat-expansion-panel", 44)(78, "mat-expansion-panel-header")(79, "mat-panel-title");
+                        i0.ɵɵtext(80, " Buttons ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(81, "mat-panel-description");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(82, "div", 45);
+                        i0.ɵɵelementContainerStart(83, 7);
+                        i0.ɵɵelementStart(84, "button", 46)(85, "span", 27);
+                        i0.ɵɵtext(86, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(87, "button", 47)(88, "span", 27);
+                        i0.ɵɵtext(89, "button2");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(90, "button", 48)(91, "span", 27);
+                        i0.ɵɵtext(92, "button3");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(93, "button", 49)(94, "span", 27);
+                        i0.ɵɵtext(95, "button4");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(96, "mat-expansion-panel", 50)(97, "mat-expansion-panel-header")(98, "mat-panel-title");
+                        i0.ɵɵtext(99, " Fields ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(100, "mat-panel-description");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(101, "div", 51);
+                        i0.ɵɵelementContainerStart(102, 7);
+                        i0.ɵɵelementStart(103, "mat-form-field", 52)(104, "mat-label");
+                        i0.ɵɵtext(105, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(106, "input", 53);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(107, "mat-form-field", 54)(108, "mat-label");
+                        i0.ɵɵtext(109, "inputEmail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(110, "input", 55);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(111, "mat-form-field", 56)(112, "mat-label");
+                        i0.ɵɵtext(113, "inputNumber");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(114, "input", 57);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(115, "mat-card", 58)(116, "mat-card-header")(117, "mat-card-title");
+                        i0.ɵɵtext(118, "tabsStepper");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(119, "mat-card-content", 40);
+                        i0.ɵɵelementContainerStart(120, 7);
+                        i0.ɵɵelementStart(121, "mat-horizontal-stepper", 59)(122, "mat-step", 60)(123, "div", 61);
+                        i0.ɵɵelementContainerStart(124, 7);
+                        i0.ɵɵelementStart(125, "button", 62)(126, "span", 27);
+                        i0.ɵɵtext(127, "button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(128, "button", 63)(129, "span", 27);
+                        i0.ɵɵtext(130, "button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(131, "button", 64)(132, "span", 27);
+                        i0.ɵɵtext(133, "button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(134, "mat-step", 65)(135, "div", 66);
+                        i0.ɵɵelementContainerStart(136, 7);
+                        i0.ɵɵelementStart(137, "mat-form-field", 67)(138, "mat-label");
+                        i0.ɵɵtext(139, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(140, "input", 68);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(141, "mat-form-field", 69)(142, "mat-label");
+                        i0.ɵɵtext(143, "inputEmail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(144, "input", 70);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(145, "mat-form-field", 71)(146, "mat-label");
+                        i0.ɵɵtext(147, "inputNumber");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(148, "input", 72);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(149, "mat-step", 73)(150, "div", 74);
+                        i0.ɵɵelementContainerStart(151, 7);
+                        i0.ɵɵelementStart(152, "mat-form-field", 75)(153, "mat-label");
+                        i0.ɵɵtext(154, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(155, "input", 76);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(156, "button", 77)(157, "span", 27);
+                        i0.ɵɵtext(158, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(159, "mat-card", 78)(160, "mat-card-header")(161, "mat-card-title");
+                        i0.ɵɵtext(162, "Splitter Components");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(163, "mat-card-content", 40);
+                        i0.ɵɵelementContainerStart(164, 7);
+                        i0.ɵɵelementStart(165, "span", 79)(166, "div", 9);
+                        i0.ɵɵtext(167, " Please see the ");
+                        i0.ɵɵelementStart(168, "a", 80);
+                        i0.ɵɵtext(169, "Splitter Demo");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(170, "mat-card", 81)(171, "mat-card-header")(172, "mat-card-title");
+                        i0.ɵɵtext(173, "subcontainer");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(174, "mat-card-content", 40);
+                        i0.ɵɵelementContainerStart(175, 7);
+                        i0.ɵɵelementStart(176, "span", 82)(177, "div", 9);
+                        i0.ɵɵtext(178, " Subcontainers are used to load other containers as soon as their parent/hosting containers are loaded.");
+                        i0.ɵɵelement(179, "br");
+                        i0.ɵɵtext(180, "The alternative is loading containers via ");
+                        i0.ɵɵelementStart(181, "a", 83);
+                        i0.ɵɵtext(182, "Ports");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(183, ". ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(184, "div", 84);
+                        i0.ɵɵelementContainer(185, 85);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(186, "mat-card", 86)(187, "mat-card-header")(188, "mat-card-title");
+                        i0.ɵɵtext(189, "iframe");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(190, "mat-card-content", 40);
+                        i0.ɵɵelementContainerStart(191, 7);
+                        i0.ɵɵelementStart(192, "span", 87)(193, "div", 9);
+                        i0.ɵɵtext(194, " Iframes are used to include other sites or static HTML from a local file. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(195, "iframe", 88);
+                        i0.ɵɵlistener("click", function dibexComponentsApplicationLayoutComponent_Template_iframe_click_195_listener() { return ctx.navigationService.openUrl("https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road"); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(48, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6328");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6339");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6341");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputEmail");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵattribute("aria-label", "button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "6345");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "button");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "input Email");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "input Text");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(52, _c2, i0.ɵɵpureFunction1(50, _c1, ctx)));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7049");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6329");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "6331");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button2");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button3");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button4");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "7045");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputEmail");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputNumber");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7034");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("label", "First");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6350");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("label", "Second");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6354");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputEmail");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputNumber");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("label", "Third");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6352");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "7083");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵproperty("dibPort", "7077");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "7078");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7080");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibIconComponent, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatCheckbox, i8.MatFormField, i8.MatLabel, i9.MatInput, i10.MatProgressBar, i11.MatCard, i11.MatCardContent, i11.MatCardHeader, i11.MatCardTitle, i12.MatAccordion, i12.MatExpansionPanel, i12.MatExpansionPanelHeader, i12.MatExpansionPanelTitle, i12.MatExpansionPanelDescription, i13.MatTabLabel, i13.MatTab, i13.MatTabGroup, i14.MatStep, i14.MatStepper], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsApplicationLayout'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsApplicationLayoutComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsApplicationLayoutComponent", dibexComponentsApplicationLayoutComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsApplicationLayoutComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-application-layout', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6328 dibComponent=subcontainer   ><ng-container [dibPort]="'6328'" parentContainerName=dibexComponentsApplicationLayout  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci6339 dibComponent=card  ><mat-card-header ><mat-card-title >tabs</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 15px;"  ><ng-container [dibPort]="'6339'" ><span  id=ci7085 dibComponent=comment   style="  " ><div class=dib-comment > Note tabs, like other components, have all kinds of configuration possibilities.<br>See the References-tab above for more info.  </div></span><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci6340 dibComponent=tabs   style="  "  itemAlias=tabs  [portId]="portId" containerName=dibexComponentsApplicationLayout  dibTabGoToParent   dibAutoTabSelection="6341,6345,7049"  dibAutoTabSelectionAliases="tabFirst,tabSecond,tabLoadContainer"  [container]="this"  ><mat-tab   #tabReference6341  style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabFirst', 'dibexComponentsApplicationLayout.tabFirst', 'First')" tabPortId=6341  dibid="tabFirst__caption.6341"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  " id=ci6341 dibComponent=div  ><ng-container [dibPort]="'6341'" ><mat-card   style="  flex: 1 1 0%;  " id=ci7040 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><mat-form-field id=ci7042 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText4   name=inputText4   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6343 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >inputEmail</mat-label><input   matInput  type=email   formControlName=inputEmail   name=inputEmail   [attr.aria-label]="'inputEmail'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci6344 dibComponent=inputText   style="  width:100px !important;   "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText   name=inputText   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7041 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><mat-checkbox  id=ci7044 dibComponent=checkbox   style="  "  formControlName=checkbox   >   checkbox  </mat-checkbox><button  mat-raised-button color=primary  id=ci6342 dibComponent=button   style="  "  [attr.aria-label]="'button'"  type=button  ><span class=dibButtonCaption >button</span></button><button  mat-raised-button color=primary  id=ci7043 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></mat-card-content></mat-card></ng-container></div></mat-tab><mat-tab   #tabReference6345  style="  padding:10px !important;  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  "  ><ng-template mat-tab-label ><dib-icon src=thumb_up ></dib-icon>&nbsp;  <app-tab-label [value]="getTabTitle('tabSecond', 'dibexComponentsApplicationLayout.tabSecond', 'Second (with icon)')" tabPortId=6345  dibid="tabSecond__caption.6345"></app-tab-label></ng-template><div   style="  padding:10px !important;  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  " id=ci6345 dibComponent=div  ><ng-container [dibPort]="'6345'" ><button  mat-raised-button color=primary  id=ci6346 dibComponent=button   style="  "  [attr.aria-label]="'button'"  type=button  ><span class=dibButtonCaption >button</span></button><mat-form-field  id=ci6347 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >input Email</mat-label><input   matInput  type=email   formControlName=inputEmail1   name=inputEmail1   [attr.aria-label]="'input Email'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci6348 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >input Text</mat-label><input   matInput  type=text   formControlName=inputText1   name=inputText1   [attr.aria-label]="'input Text'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div></mat-tab><mat-tab   #tabReference7049  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexTestClientGrid', portId: 7049, portAlias: 'appLayout', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  gap: 10px;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabLoadContainer', 'dibexComponentsApplicationLayout.tabLoadContainer', 'Load Container')" tabPortId=7049  dibid="tabLoadContainer__caption.7049"></app-tab-label></ng-template><mat-card   style="  " id=ci7049 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7049'" ></ng-container></mat-card-content></mat-card></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci6329 dibComponent=card  ><mat-card-header ><mat-card-title >accordion</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 60px;"  ><ng-container [dibPort]="'6329'" ><mat-accordion  id=ci6330 dibComponent=accordion   style="  width:300px !important;   display:flex; flex-direction: column;  flex: 1 1 0%;  align-self: stretch;  " ><mat-expansion-panel   style="  display:flex; flex-direction: column;  gap: 10px;  flex: 1 1 0%;  "  ><mat-expansion-panel-header><mat-panel-title > Buttons  </mat-panel-title><mat-panel-description></mat-panel-description></mat-expansion-panel-header><div   style="  display:flex; flex-direction: column;  gap: 10px;  flex: 1 1 0%;  " id=ci6331 dibComponent=div  ><ng-container [dibPort]="'6331'" ><button  mat-raised-button color=primary  id=ci6332 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button><button  mat-raised-button color=primary  id=ci6333 dibComponent=button   style="  "  [attr.aria-label]="'button2'"  type=button  ><span class=dibButtonCaption >button2</span></button><button  mat-raised-button color=primary  id=ci6334 dibComponent=button   style="  "  [attr.aria-label]="'button3'"  type=button  ><span class=dibButtonCaption >button3</span></button><button  mat-raised-button color=primary  id=ci6335 dibComponent=button   style="  "  [attr.aria-label]="'button4'"  type=button  ><span class=dibButtonCaption >button4</span></button></ng-container></div></mat-expansion-panel><mat-expansion-panel   style="  display:flex; flex-direction: column;  "  ><mat-expansion-panel-header><mat-panel-title > Fields  </mat-panel-title><mat-panel-description></mat-panel-description></mat-expansion-panel-header><div   style="  display:flex; flex-direction: column;  " id=ci7045 dibComponent=div  ><ng-container [dibPort]="'7045'" ><mat-form-field id=ci7047 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText5   name=inputText5   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7046 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >inputEmail</mat-label><input   matInput  type=email   formControlName=inputEmail3   name=inputEmail3   [attr.aria-label]="'inputEmail'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7048 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >inputNumber</mat-label><input   matInput  type=number   formControlName=inputNumber1   name=inputNumber1   [attr.aria-label]="'inputNumber'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div></mat-expansion-panel></mat-accordion></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci7034 dibComponent=card  ><mat-card-header ><mat-card-title >tabsStepper</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7034'" ><mat-horizontal-stepper  id=ci6349 dibComponent=tabsStepper   style="  " ><mat-step   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  [label]="'First'" tabId=6350    ><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  " id=ci6350 dibComponent=div  ><ng-container [dibPort]="'6350'" ><button  mat-raised-button color=primary  id=ci6351 dibComponent=button   style="  "  [attr.aria-label]="'button'"  type=button  ><span class=dibButtonCaption >button</span></button><button  mat-raised-button color=primary  id=ci7036 dibComponent=button   style="  "  [attr.aria-label]="'button'"  type=button  ><span class=dibButtonCaption >button</span></button><button  mat-raised-button color=primary  id=ci7035 dibComponent=button   style="  "  [attr.aria-label]="'button'"  type=button  ><span class=dibButtonCaption >button</span></button></ng-container></div></mat-step><mat-step   style="  display:flex; flex-direction: column;"  [label]="'Second'" tabId=6354    ><div   style="  display:flex; flex-direction: column;  " id=ci6354 dibComponent=div  ><ng-container [dibPort]="'6354'" ><mat-form-field id=ci7037 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText3   name=inputText3   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6355 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >inputEmail</mat-label><input   matInput  type=email   formControlName=inputEmail2   name=inputEmail2   [attr.aria-label]="'inputEmail'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7038 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >inputNumber</mat-label><input   matInput  type=number   formControlName=inputNumber   name=inputNumber   [attr.aria-label]="'inputNumber'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div></mat-step><mat-step   style="  display:flex; flex-direction: column;"  [label]="'Third'" tabId=6352    ><div   style="  display:flex; flex-direction: column;  " id=ci6352 dibComponent=div  ><ng-container [dibPort]="'6352'" ><mat-form-field id=ci6353 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText2   name=inputText2   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci7039 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div></mat-step></mat-horizontal-stepper></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci7083 dibComponent=card  ><mat-card-header ><mat-card-title >Splitter Components</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7083'" ><span  id=ci7084 dibComponent=comment   style="  " ><div class=dib-comment > Please see the <a href='/nav/dibexSplitter'>Splitter Demo</a></div></span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci7077 dibComponent=card  ><mat-card-header ><mat-card-title >subcontainer</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7077'" ><span  id=ci7079 dibComponent=comment   style="  " ><div class=dib-comment > Subcontainers are used to load other containers as soon as their parent/hosting containers are loaded.<br>The alternative is loading containers via <a href='/nav/dibexPorts'>Ports</a>.  </div></span><div   style="  flex: 1 1 0%;  " id=ci7078 dibComponent=subcontainer   ><ng-container [dibPort]="'7078'" parentContainerName=dibexComponentsApplicationLayout  subContainerName=dibexTestClientForm  subContainerId=174  dropinName=form ></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1300px" id=ci7080 dibComponent=card  ><mat-card-header ><mat-card-title >iframe</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7080'" ><span  id=ci7081 dibComponent=comment   style="  " ><div class=dib-comment > Iframes are used to include other sites or static HTML from a local file.  </div></span><iframe  id=ci7082 dibComponent=iframe  (click)="navigationService.openUrl('https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road');"  style="  min-height:800px"  src='https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road'  ></iframe></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, expansion_1.MatExpansionModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule, stepper_1.MatStepperModule, checkbox_1.MatCheckboxModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsApplicationLayoutModule = class dibexComponentsApplicationLayoutModule {
+                static entry = dibexComponentsApplicationLayoutComponent;
+                static ɵfac = function dibexComponentsApplicationLayoutModule_Factory(t) { return new (t || dibexComponentsApplicationLayoutModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsApplicationLayoutModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsApplicationLayoutModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsApplicationLayoutModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsApplicationLayoutComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsApplicationLayoutModule, { declarations: [dibexComponentsApplicationLayoutComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, expansion_1.MatExpansionModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule, stepper_1.MatStepperModule, checkbox_1.MatCheckboxModule] }); })();
+        }
+    };
+});

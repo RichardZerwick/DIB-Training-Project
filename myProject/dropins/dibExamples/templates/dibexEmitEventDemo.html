@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    *********************************
+    - See /nav/dibexActionEmitEvent -
+    *********************************
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropinbase Emit Event Demo</title>
+  <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+    
+    .letter {
+        display: inline-block;
+        transition: color 0.1s;
+    }
+
+    #text-container {
+        position: relative;
+        font-size: 2em;
+        font-weight: bold;
+        transition: transform 0.1s;
+    }
+
+    #container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .piece {
+      position: absolute;
+      width: calc(100% / 8);
+      height: calc(100% / 8);
+      background-size: 800% 800%;
+      transition: all 2s;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+   
+  </style>
+
+<script>
+    // Variables for explodeImage():
+    const imageUrl = 'http://localhost/test/logo2.png'; // Your image URL here
+    var explodeRadius = 200;
+
+    // Variables for textSpin():
+    var word = 'dropinbase';
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    //const textContainer = document.getElementById('text-container');
+
+    var maxSpeed = 36; // Maximum speed of the spin
+    const minSpeed = 0.5; // Minimum speed of the spin
+    var maxScale = 2.5; // Maximum scale of the letters
+    const minScale = 0.1; // Minimum scale of the letters
+    const cycles = 1; // Number of cycles
+    var cycleDuration = 7; // Duration of each cycle in seconds
+    
+    parent.eventService.on('myEvent').subscribe( (params) => {
+      
+        if(params.action == 'explodeImage') {
+
+            if(!!params.explodeRadius) {
+                explodeRadius = params.explodeRadius;
+            }
+            explodeImage(imageUrl);
+            explodeRadius = params.explodeRadius;
+
+        } else if(params.action == 'textSpin') {
+
+            if(!!params.value) {
+                var p = params.value;
+                if(!!p.word) word = p.word;
+                if(!!p.maxSpeed) maxSpeed = p.maxSpeed;
+                if(!!p.maxScale) maxScale = p.maxScale;
+                if(!!p.cycleDuration) cycleDuration = p.cycleDuration;
+            }
+
+            textSpin();
+        }
+
+    });
+
+    function showContainer(prefix='') {
+        var cont = document.getElementById(prefix + 'container');
+        cont.style.display = 'block';
+
+        var hidePrefix = (prefix == '') ? 'text-' : '';
+        var hideCont = document.getElementById(hidePrefix + 'container');
+        hideCont.style.display = 'none';
+
+        return cont;
+    }
+
+    function explodeImage (imageUrl) {
+
+        var container = showContainer();
+
+        container.style.display = 'block';
+
+        // Clear it from any child spans previously created
+        while (!!container.firstChild)
+            container.firstChild.remove();
+
+        // Create pieces 
+        var max = 8;
+
+        for (let row = 0; row < max; row++) {
+            for (let col = 0; col < max; col++) {
+                const piece = document.createElement('div');
+                piece.className = 'piece';
+                piece.style.backgroundImage = `url(${imageUrl})`;
+                piece.style.left = `${(col * (100 / max))}%`;
+                piece.style.top = `${(row * (100 / max))}%`;
+                piece.style.backgroundPosition = `${(100 / (max-1)) * col}% ${(100 / (max-1)) * row}%`;
+                container.appendChild(piece);
+            }
+        }
+
+        // Initial delay
+        setTimeout(() => {
+            // Explode pieces
+            document.querySelectorAll('.piece').forEach((piece, index) => {
+                const theta = index / 18 * 2 * Math.PI;
+                const r = explodeRadius; // Radius of explosion
+                const x = r * Math.cos(theta);
+                const y = r * Math.sin(theta);
+                piece.style.transform = `translate(${x}px, ${y}px) rotateX(${360 * Math.random()}deg) rotateY(${360 * Math.random()}deg) rotateZ(${360 * Math.random()}deg) scale(0.5)`;
+            });
+
+            // Rotate and gather pieces
+            setTimeout(() => {
+                document.querySelectorAll('.piece').forEach((piece) => {
+                    //piece.style.transform = `translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)`;
+                    piece.style.transform = `none`;
+                });
+
+                // Apply the explicit transformation reset after a small delay
+                setTimeout(() => {
+                    document.querySelectorAll('.piece').forEach((piece) => {
+                        // Explicitly reset transformations to original values
+                        piece.style.transform = `none`;
+                    });
+                }, 50); // You can adjust this delay as needed
+
+            }, 2000);
+        }, 500);
+    };
+
+    function textSpin() {
+
+        let angle = 0;
+        let previousFullRotations = 0; // Track the number of full rotations
+        const duration = cycles * cycleDuration; // Total duration in seconds
+        const endTime = Date.now() + duration * 1000;
+
+        // show hide container 
+        var textContainer = showContainer('text-');
+        
+        // Clear it from any child spans previously created
+        while (!!textContainer.firstChild)
+            textContainer.firstChild.remove();
+
+        // Create individual letter elements
+        word.split('').forEach((letter, i) => {
+            const span = document.createElement('span');
+            span.className = 'letter';
+            span.textContent = letter;
+            textContainer.appendChild(span);
+        });
+
+        animate();
+
+        function animate() {
+            const now = Date.now();
+            const timeLeft = Math.max(0, endTime - now);
+            const cycleProgress = ((duration * 1000 - timeLeft) / 1000) % cycleDuration / cycleDuration;
+
+            // Determine if we are in the speeding up or slowing down part of the cycle
+            const speedingUp = cycleProgress < 0.5;
+
+            // Compute rotation speed and scale based on the progress within the current cycle
+            const speedProgress = speedingUp ? cycleProgress * 2 : 1 - (cycleProgress - 0.5) * 2;
+            const speed = minSpeed + (maxSpeed - minSpeed) * speedProgress;
+            const scale = minScale + (maxScale - minScale) * speedProgress;
+
+            angle += speed; // Allow angle to grow beyond 360 degrees
+
+            const fullRotations = Math.floor(angle / 360);
+            if (fullRotations - previousFullRotations > 1) {
+                previousFullRotations = fullRotations;
+                // Change color for each letter based on the number of full rotations
+                Array.from(textContainer.children).forEach((child, i) => {
+                    const colorIndex = (i + fullRotations) % colors.length;
+                    child.style.color = colors[colorIndex];
+                });
+            }
+
+            // Apply transformations to the entire container
+            textContainer.style.transform = `rotate(${angle}deg) scale(${scale})`;
+
+            if (timeLeft > 0) {
+                requestAnimationFrame(animate);
+            } else {
+                // Reset transformations to original position and scale
+                textContainer.style.transform = `none`;
+            }
+        }
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <div id="container"></div>  
+  <div id="text-container"></div>
+  
+</body>
+</html>

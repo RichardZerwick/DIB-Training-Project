@@ -1,0 +1,442 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexNavigationComponent, containerModules, fullDateTimeOptions, dibexNavigationModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexNavigationComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 46);
+    } }
+    function dibexNavigationComponent_mat_error_44_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 3 chars or more");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexNavigationComponent_mat_error_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 20 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexNavigationComponent_mat_error_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Only alpha-numeric and space allowed");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexNavigationComponent = class dibexNavigationComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 323, name: 'dibexNavigation', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*7616'] }, dropin: 'plain', activeFilter: null, configs: { "clickedLast": "dibexSimpleGrid", "selected": "dibexSimpleGrid" }, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexNavigation');
+                    this.containerName = 'dibexNavigation'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { testValue: { itemId: 7650, type: 'text', fieldAlias: 'testValue', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.minLength(3), forms_1.Validators.maxLength(20), forms_1.Validators.pattern(/^[a-zA-Z0-9 ]*$/)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('testValue', this.model.modelItems.testValue.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('html', `<h3>Using navigationService.goTo()</h3>
+<ul>
+<li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibexTestClientForm','window','record=new&dibexTestClientForm.name=TheName',{changeUrl:true});">Open Form using window port alias, and Set Value (provide name above)</a></li>
+<li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibDocs','','?area=docs&id=264&doc=Start-Here&',{changeUrl:true});">Open a specific doc</a></li>
+</ul>
+<h3>Using HTML a-tag</h3>
+<ul>
+<li><a href="/nav/dibDocs/?area=docs&doc=Start-Here">Use href to open specific docs</a></li>
+<li><a href="/nav/dibexTestClientForm/window?record=new&dibexTestClientForm.name={{getValue('testValue')}}">Open Form using window port alias, and Set Value (provide name above)</a></li>
+</ul>`);
+                    this.setInnerHtml('html', `<h3>Using navigationService.goTo()</h3>
+<ul>
+<li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibexTestClientForm','window','record=new&dibexTestClientForm.name=TheName',{changeUrl:true});">Open Form using window port alias, and Set Value (provide name above)</a></li>
+<li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibDocs','','?area=docs&id=264&doc=Start-Here&',{changeUrl:true});">Open a specific doc</a></li>
+</ul>
+<h3>Using HTML a-tag</h3>
+<ul>
+<li><a href="/nav/dibDocs/?area=docs&doc=Start-Here">Use href to open specific docs</a></li>
+<li><a href="/nav/dibexTestClientForm/window?record=new&dibexTestClientForm.name={{getValue('testValue')}}">Open Form using window port alias, and Set Value (provide name above)</a></li>
+</ul>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "buttonMessage", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/messageWithLink", itemAlias: "buttonMessage", waitForCompletion: false, containerName: "dibexNavigation", handlers: [] }, this.clientData, { itemEventId: 'ie462-dib', itemId: '7652', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnOpenTab", actionType: "click", responseType: 'actions', submitUrl: "shared.action.activate-tab?item=tabGrid&containerName=dibDatabaseTasks", itemAlias: "btnOpenTab", waitForCompletion: false, containerName: "dibexNavigation", handlers: [] }, this.clientData, { itemEventId: 'ie464-dib', itemId: '7640', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexNavigation', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexNavigation' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexNavigationComponent_Factory(t) { return new (t || dibexNavigationComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexNavigationComponent, selectors: [["dibex-navigation"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 130, vars: 35, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci7616", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexNavigation", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci7653", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], [3, "dibPort"], ["id", "ci7629", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci7626", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci7627", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci7630", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 250px", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7631", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["id", "ci7654", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["id", "ci7645", "dibComponent", "comment"], ["id", "ci7646", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci7647", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["id", "ci7650", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "testValue", "minlength", "3", "maxlength", "20", "name", "testValue"], [4, "ngIf"], ["mat-raised-button", "", "color", "primary", "id", "ci7648", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 250px", 3, "click"], ["id", "ci7658", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], ["id", "ci7636", "dibComponent", "comment"], ["id", "ci7632", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci7633", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7634", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7635", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["id", "ci7657", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], ["id", "ci7641", "dibComponent", "comment"], ["id", "ci7637", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci7638", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7639", "dibComponent", "button", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7640", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnOpenTab", "type", "button", 2, "margin", "0px 10px !important", "flex", "0 1 170px", 3, "containerPortId"], ["id", "ci7656", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "0px"], ["id", "ci7643", "dibComponent", "comment"], ["target", "blank", "href", "https://regex101.com/"], [2, "cursor", "pointer", "text-decoration", "underline", 3, "click"], ["href", "/nav/dibDocs/?area=docs&doc=Start-Here"], [3, "href"], ["id", "ci7655", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "1200px"], ["id", "ci7651", "dibComponent", "comment"], ["mat-raised-button", "", "color", "primary", "id", "ci7652", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "buttonMessage", "type", "button", 2, "width", "200px !important", 3, "containerPortId"], ["mode", "indeterminate"]], template: function dibexNavigationComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexNavigationComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexNavigationComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "span", 8)(9, "div", 9);
+                        i0.ɵɵtext(10, " The best way to setup navigation is with ports.");
+                        i0.ɵɵelement(11, "br");
+                        i0.ɵɵtext(12, "Any layout item can be the target in which a container opens.");
+                        i0.ɵɵelement(13, "br");
+                        i0.ɵɵtext(14, "Items like buttons or tabs can then be linked to the ports to activate them. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "div", 10);
+                        i0.ɵɵelementContainerStart(16, 7);
+                        i0.ɵɵelementStart(17, "button", 11);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_17_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "own", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(18, "span", 12);
+                        i0.ɵɵtext(19, "Open Client Grid as Base Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(20, "button", 13);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_20_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "main", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(21, "span", 12);
+                        i0.ɵɵtext(22, "Open Client Grid in GRIDS-tab of dibexOverview");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(23, "button", 14);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_23_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "splitterDemo", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(24, "span", 12);
+                        i0.ɵɵtext(25, "Open Client Grid in Splitter Demo");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(26, "mat-card", 15)(27, "mat-card-content", 16);
+                        i0.ɵɵelementContainerStart(28, 7);
+                        i0.ɵɵelementStart(29, "span", 17)(30, "div", 9);
+                        i0.ɵɵtext(31, " Contents of the ");
+                        i0.ɵɵelementStart(32, "b");
+                        i0.ɵɵtext(33, "expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(34, " field is seen as query parameters when used with ports. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(35, "div", 18);
+                        i0.ɵɵelementContainerStart(36, 7);
+                        i0.ɵɵelementStart(37, "button", 19);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_37_listener($event) { return ctx.navigationService.goTo("dibexTestClientForm", "window", "?record=first", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(38, "span", 12);
+                        i0.ɵɵtext(39, "Open Client Form on First Record");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(40, "mat-form-field", 20)(41, "mat-label");
+                        i0.ɵɵtext(42, "Provide a Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(43, "input", 21);
+                        i0.ɵɵtemplate(44, dibexNavigationComponent_mat_error_44_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵtemplate(45, dibexNavigationComponent_mat_error_45_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵtemplate(46, dibexNavigationComponent_mat_error_46_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(47, "button", 23);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_47_listener($event) { return ctx.navigationService.goTo("dibexTestClientForm", "window", "record=new&dibexTestClientForm.name=@{value_self_testValue}", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(48, "span", 12);
+                        i0.ɵɵtext(49, "Open Client Form on New Record and Set Value");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(50, "mat-card", 24)(51, "mat-card-content", 16);
+                        i0.ɵɵelementContainerStart(52, 7);
+                        i0.ɵɵelementStart(53, "span", 25)(54, "div", 9);
+                        i0.ɵɵtext(55, " Expressions on buttons can also contain URLs.");
+                        i0.ɵɵelement(56, "br");
+                        i0.ɵɵtext(57, "This is mostly used for external sites and not recommended for navigation to containers, ");
+                        i0.ɵɵelement(58, "br");
+                        i0.ɵɵtext(59, "since if the names of the containers that they reference change, they will no longer work! ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(60, "div", 26);
+                        i0.ɵɵelementContainerStart(61, 7);
+                        i0.ɵɵelementStart(62, "button", 27);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_62_listener() { return ctx.navigationService.openUrl("https://www.nationalgeographic.com/"); });
+                        i0.ɵɵelementStart(63, "span", 12);
+                        i0.ɵɵtext(64, "Open External URL");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(65, "button", 28);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_65_listener() { return ctx.navigationService.openUrl("/nav/dibexPorts"); });
+                        i0.ɵɵelementStart(66, "span", 12);
+                        i0.ɵɵtext(67, "Open Ports Example");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(68, "button", 29);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_68_listener() { return ctx.navigationService.openUrl("https://www.nationalgeographic.com/", "_blank"); });
+                        i0.ɵɵelementStart(69, "span", 12);
+                        i0.ɵɵtext(70, "Suffix with |_blank to Open in New Tab");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(71, "mat-card", 30)(72, "mat-card-content", 16);
+                        i0.ɵɵelementContainerStart(73, 7);
+                        i0.ɵɵelementStart(74, "span", 31)(75, "div", 9);
+                        i0.ɵɵtext(76, " Containers can be opened with both client and server-side actions.");
+                        i0.ɵɵelement(77, "br");
+                        i0.ɵɵtext(78, "Note, the buttons below link to other examples. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(79, "div", 32);
+                        i0.ɵɵelementContainerStart(80, 7);
+                        i0.ɵɵelementStart(81, "button", 33);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_81_listener($event) { return ctx.navigationService.goTo("dibexActionOpenContainer", "own", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(82, "span", 12);
+                        i0.ɵɵtext(83, "Open Container Demo");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(84, "button", 34);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_button_click_84_listener($event) { return ctx.navigationService.goTo("dibexActionOpenUrl", "own", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(85, "span", 12);
+                        i0.ɵɵtext(86, "Open Url Demo");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(87, "button", 35)(88, "span", 12);
+                        i0.ɵɵtext(89, "Open Tab on Different Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(90, "mat-card", 36)(91, "mat-card-content", 37);
+                        i0.ɵɵelementContainerStart(92, 7);
+                        i0.ɵɵelementStart(93, "span", 38)(94, "div", 9);
+                        i0.ɵɵtext(95, " Raw HTML can contain links to open containers.");
+                        i0.ɵɵelement(96, "br");
+                        i0.ɵɵtext(97, "The following Dropinbase components accept HTML in the expression field:");
+                        i0.ɵɵelement(98, "br");
+                        i0.ɵɵtext(99, "span, spanInterpolation, html, safeHtml, comment (like this one: ");
+                        i0.ɵɵelementStart(100, "a", 39);
+                        i0.ɵɵtext(101, "https://regex101.com");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(102, ") ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(103, "h3");
+                        i0.ɵɵtext(104, "Using navigationService.goTo()");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(105, "ul")(106, "li")(107, "a", 40);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_a_click_107_listener() { return ctx.navigationService.goTo("dibexTestClientForm", "window", "record=new&dibexTestClientForm.name=TheName", { changeUrl: true }); });
+                        i0.ɵɵtext(108, "Open Form using window port alias, and Set Value (provide name above)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(109, "li")(110, "a", 40);
+                        i0.ɵɵlistener("click", function dibexNavigationComponent_Template_a_click_110_listener() { return ctx.navigationService.goTo("dibDocs", "", "?area=docs&id=264&doc=Start-Here&", { changeUrl: true }); });
+                        i0.ɵɵtext(111, "Open a specific doc");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(112, "h3");
+                        i0.ɵɵtext(113, "Using HTML a-tag");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(114, "ul")(115, "li")(116, "a", 41);
+                        i0.ɵɵtext(117, "Use href to open specific docs");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(118, "li")(119, "a", 42);
+                        i0.ɵɵtext(120, "Open Form using window port alias, and Set Value (provide name above)");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(121, "mat-card", 43)(122, "mat-card-content", 16);
+                        i0.ɵɵelementContainerStart(123, 7);
+                        i0.ɵɵelementStart(124, "span", 44)(125, "div", 9);
+                        i0.ɵɵtext(126, " Even Popup Messages and Prompts can have HTML Links, but then DIB::$ALLOWEDHTML must be set ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(127, "button", 45)(128, "span", 12);
+                        i0.ɵɵtext(129, "Popup Message with Link");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(33, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7616");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7653");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "7626");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open Client Grid as Base Container");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Open Client Grid in GRIDS-tab of dibexOverview");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Open Client Grid in Splitter Demo");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7654");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "7646");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open Client Form on First Record");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Provide a Name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("testValue", "minlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("testValue", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("testValue", "pattern", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open Client Form on New Record and Set Value");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7658");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "7632");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open External URL");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Open Ports Example");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Suffix with |_blank to Open in New Tab");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7657");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "7637");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open Container Demo");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Open Url Demo");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Open Tab on Different Container");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7656");
+                        i0.ɵɵadvance(27);
+                        i0.ɵɵpropertyInterpolate1("href", "/nav/dibexTestClientForm/window?record=new&dibexTestClientForm.name=", ctx.getValue("testValue"), "", i0.ɵɵsanitizeUrl);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "7655");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Popup Message with Link");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.MinLengthValidator, i5.MaxLengthValidator, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i7.MatError, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexNavigation'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexNavigationComponent.prototype, "reloadContainer", null);
+            exports_1("dibexNavigationComponent", dibexNavigationComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexNavigationComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-navigation', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci7616 dibComponent=subcontainer   ><ng-container [dibPort]="'7616'" parentContainerName=dibexNavigation  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7653 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'7653'" ><span  id=ci7629 dibComponent=comment   style="  " ><div class=dib-comment > The best way to setup navigation is with ports.<br>Any layout item can be the target in which a container opens.<br>Items like buttons or tabs can then be linked to the ports to activate them.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci7626 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7626'" ><button  mat-raised-button color=primary  id=ci7627 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'own',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Client Grid as Base Container'"  type=button  ><span class=dibButtonCaption >Open Client Grid as Base Container</span></button><button  mat-raised-button color=primary  id=ci7630 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'main',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 250px;  "  [attr.aria-label]="'Open Client Grid in GRIDS-tab of dibexOverview'"  type=button  ><span class=dibButtonCaption >Open Client Grid in GRIDS-tab of dibexOverview</span></button><button  mat-raised-button color=primary  id=ci7631 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'splitterDemo',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Client Grid in Splitter Demo'"  type=button  ><span class=dibButtonCaption >Open Client Grid in Splitter Demo</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7654 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7654'" ><span  id=ci7645 dibComponent=comment   style="  " ><div class=dib-comment > Contents of the <b>expression</b> field is seen as query parameters when used with ports.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci7646 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7646'" ><button  mat-raised-button color=primary  id=ci7647 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientForm',  'window',  '?record=first',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Client Form on First Record'"  type=button  ><span class=dibButtonCaption >Open Client Form on First Record</span></button><mat-form-field id=ci7650 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Provide a Name</mat-label><input   matInput  type=text   formControlName=testValue   minlength='3'  maxlength='20'  name=testValue   [attr.aria-label]="'Provide a Name'" ><mat-error *ngIf="hasError('testValue','minlength',model.$formGroup)">Please enter 3 chars or more</mat-error><mat-error *ngIf="hasError('testValue','maxlength',model.$formGroup)">Please enter 20 chars or less</mat-error><mat-error *ngIf="hasError('testValue','pattern',model.$formGroup)">Only alpha-numeric and space allowed</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci7648 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientForm',  'window',  'record=new&dibexTestClientForm.name=@{value_self_testValue}',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 250px;  "  [attr.aria-label]="'Open Client Form on New Record and Set Value'"  type=button  ><span class=dibButtonCaption >Open Client Form on New Record and Set Value</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7658 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7658'" ><span  id=ci7636 dibComponent=comment   style="  " ><div class=dib-comment > Expressions on buttons can also contain URLs.<br>This is mostly used for external sites and not recommended for navigation to containers, <br>since if the names of the containers that they reference change, they will no longer work!  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci7632 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7632'" ><button  mat-raised-button color=primary  id=ci7633 dibComponent=button  (click)="navigationService.openUrl('https://www.nationalgeographic.com/');"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open External URL'"  type=button  ><span class=dibButtonCaption >Open External URL</span></button><button  mat-raised-button color=primary  id=ci7634 dibComponent=button  (click)="navigationService.openUrl('/nav/dibexPorts');"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Ports Example'"  type=button  ><span class=dibButtonCaption >Open Ports Example</span></button><button  mat-raised-button color=primary  id=ci7635 dibComponent=button  (click)="navigationService.openUrl('https://www.nationalgeographic.com/', '_blank');"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Suffix with |_blank to Open in New Tab'"  type=button  ><span class=dibButtonCaption >Suffix with |_blank to Open in New Tab</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7657 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7657'" ><span  id=ci7641 dibComponent=comment   style="  " ><div class=dib-comment > Containers can be opened with both client and server-side actions.<br>Note, the buttons below link to other examples.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci7637 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7637'" ><button  mat-raised-button color=primary  id=ci7638 dibComponent=button   (click)="navigationService.goTo(  'dibexActionOpenContainer',  'own',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Container Demo'"  type=button  ><span class=dibButtonCaption >Open Container Demo</span></button><button  mat-raised-button color=primary  id=ci7639 dibComponent=button   (click)="navigationService.goTo(  'dibexActionOpenUrl',  'own',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Url Demo'"  type=button  ><span class=dibButtonCaption >Open Url Demo</span></button><button  mat-raised-button color=primary  id=ci7640 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnOpenTab   style="  margin:0px 10px !important;   flex: 0 1 170px;  "  [attr.aria-label]="'Open Tab on Different Container'"  type=button  ><span class=dibButtonCaption >Open Tab on Different Container</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7656 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 0px;"  ><ng-container [dibPort]="'7656'" ><span  id=ci7643 dibComponent=comment   style="  " ><div class=dib-comment > Raw HTML can contain links to open containers.<br>The following Dropinbase components accept HTML in the expression field:<br>span, spanInterpolation, html, safeHtml, comment (like this one: <a target='blank' href='https://regex101.com/'>https://regex101.com</a>)  </div></span><h3>Using navigationService.goTo()</h3><ul><li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibexTestClientForm','window','record=new&dibexTestClientForm.name=TheName',{changeUrl:true});">Open Form using window port alias, and Set Value (provide name above)</a></li><li><a style="cursor:pointer;text-decoration: underline" (click)="navigationService.goTo('dibDocs','','?area=docs&id=264&doc=Start-Here&',{changeUrl:true});">Open a specific doc</a></li></ul><h3>Using HTML a-tag</h3><ul><li><a href="/nav/dibDocs/?area=docs&doc=Start-Here">Use href to open specific docs</a></li><li><a href="/nav/dibexTestClientForm/window?record=new&dibexTestClientForm.name={{getValue('testValue')}}">Open Form using window port alias, and Set Value (provide name above)</a></li></ul></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 1200px" id=ci7655 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7655'" ><span  id=ci7651 dibComponent=comment   style="  " ><div class=dib-comment > Even Popup Messages and Prompts can have HTML Links, but then DIB::$ALLOWEDHTML must be set  </div></span><button  mat-raised-button color=primary  id=ci7652 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=buttonMessage   style="  width:200px !important;   "  [attr.aria-label]="'Popup Message with Link'"  type=button  ><span class=dibButtonCaption >Popup Message with Link</span></button></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexNavigationModule = class dibexNavigationModule {
+                static entry = dibexNavigationComponent;
+                static ɵfac = function dibexNavigationModule_Factory(t) { return new (t || dibexNavigationModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexNavigationModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexNavigationModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexNavigationModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexNavigationComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexNavigationModule, { declarations: [dibexNavigationComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule] }); })();
+        }
+    };
+});

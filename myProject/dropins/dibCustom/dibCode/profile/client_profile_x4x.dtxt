@@ -1,0 +1,2663 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "@angular/router", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@angular/material/checkbox", "@ngbracket/ngx-layout/extended", "@angular-material-components/datetime-picker", "@angular/material/datepicker", "@angular/material/form-field", "@angular/material/input", "@angular/cdk/text-field", "@angular/material/progress-bar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, router_1, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, checkbox_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, _c0, importsRequired, profileComponent, containerModules, fullDateTimeOptions, profileModule;
+    var __moduleName = context_1 && context_1.id;
+    function profileComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 88);
+    } }
+    function profileComponent_mat_error_19_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_20_Template(rf, ctx) { if (rf & 1) {
+        const _r117 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_20_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r117); const ctx_r116 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r116.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_27_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 30 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_29_Template(rf, ctx) { if (rf & 1) {
+        const _r119 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_29_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r119); const ctx_r118 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r118.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_30_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 50 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_38_Template(rf, ctx) { if (rf & 1) {
+        const _r121 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_38_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r121); const ctx_r120 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r120.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_39_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 50 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_47_Template(rf, ctx) { if (rf & 1) {
+        const _r123 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_47_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r123); const ctx_r122 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r122.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_48_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_49_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_54_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 150 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_55_Template(rf, ctx) { if (rf & 1) {
+        const _r125 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_55_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r125); const ctx_r124 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r124.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_56_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_57_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_64_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_65_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 250 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_66_Template(rf, ctx) { if (rf & 1) {
+        const _r127 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_66_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r127); const ctx_r126 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r126.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_67_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_68_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_73_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_74_Template(rf, ctx) { if (rf & 1) {
+        const _r129 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_74_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r129); const ctx_r128 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r128.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_75_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_76_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_81_Template(rf, ctx) { if (rf & 1) {
+        const _r131 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_81_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r131); const ctx_r130 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r130.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_82_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_83_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_89_Template(rf, ctx) { if (rf & 1) {
+        const _r133 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_89_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r133); const ctx_r132 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r132.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_90_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_91_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_99_Template(rf, ctx) { if (rf & 1) {
+        const _r135 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_99_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r135); const ctx_r134 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r134.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_100_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_101_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_111_Template(rf, ctx) { if (rf & 1) {
+        const _r137 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_111_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r137); const ctx_r136 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r136.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_112_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_113_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_123_Template(rf, ctx) { if (rf & 1) {
+        const _r139 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_123_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r139); const ctx_r138 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r138.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_124_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_125_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_133_Template(rf, ctx) { if (rf & 1) {
+        const _r141 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_133_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r141); const ctx_r140 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r140.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_134_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_135_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_142_Template(rf, ctx) { if (rf & 1) {
+        const _r143 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_142_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r143); const ctx_r142 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r142.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_143_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_144_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_149_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 25 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_150_Template(rf, ctx) { if (rf & 1) {
+        const _r145 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_150_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r145); const ctx_r144 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r144.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_151_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_152_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_157_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_158_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 120 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_159_Template(rf, ctx) { if (rf & 1) {
+        const _r147 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_159_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r147); const ctx_r146 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r146.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_160_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_161_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_166_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 50 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_167_Template(rf, ctx) { if (rf & 1) {
+        const _r149 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_167_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r149); const ctx_r148 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r148.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_168_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_169_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_179_Template(rf, ctx) { if (rf & 1) {
+        const _r151 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_179_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r151); const ctx_r150 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r150.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_180_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_181_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_189_Template(rf, ctx) { if (rf & 1) {
+        const _r153 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_189_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r153); const ctx_r152 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r152.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_190_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_191_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_198_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 250 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_199_Template(rf, ctx) { if (rf & 1) {
+        const _r155 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_199_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r155); const ctx_r154 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r154.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_200_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_201_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_206_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 250 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_207_Template(rf, ctx) { if (rf & 1) {
+        const _r157 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_207_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r157); const ctx_r156 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r156.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_208_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_209_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_214_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 25 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_215_Template(rf, ctx) { if (rf & 1) {
+        const _r159 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_215_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r159); const ctx_r158 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r158.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_216_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_217_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_222_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 6 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_223_Template(rf, ctx) { if (rf & 1) {
+        const _r161 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_223_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r161); const ctx_r160 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r160.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_224_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_225_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_231_Template(rf, ctx) { if (rf & 1) {
+        const _r163 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_231_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r163); const ctx_r162 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r162.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_232_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_233_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_240_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 255 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_241_Template(rf, ctx) { if (rf & 1) {
+        const _r165 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_241_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r165); const ctx_r164 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r164.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_242_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_243_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_248_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 255 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_249_Template(rf, ctx) { if (rf & 1) {
+        const _r167 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_249_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r167); const ctx_r166 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r166.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_250_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_251_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_256_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 255 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_257_Template(rf, ctx) { if (rf & 1) {
+        const _r169 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_257_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r169); const ctx_r168 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r168.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_258_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_259_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_error_264_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 40 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_265_Template(rf, ctx) { if (rf & 1) {
+        const _r171 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 89);
+        i0.ɵɵlistener("click", function profileComponent_mat_icon_265_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r171); const ctx_r170 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r170.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_266_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 90);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function profileComponent_mat_icon_267_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 91);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    // @todo francois we need to import these files before the view loads
+    async function importFiles() {
+        for (const fileLocation of importsRequired) {
+            await SystemJS.import(fileLocation);
+        }
+    }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i1 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i2 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
+                i3 = router_1_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i12 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i17 = card_1_1;
+            },
+            function (checkbox_1_1) {
+                checkbox_1 = checkbox_1_1;
+                i9 = checkbox_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            },
+            function (i14_1) {
+                i14 = i14_1;
+            },
+            function (i15_1) {
+                i15 = i15_1;
+            },
+            function (i16_1) {
+                i16 = i16_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            // Promise.resolve()
+            // .then(async () => {
+            //   await importFiles();
+            // })
+            profileComponent = class profileComponent extends shared_1.BaseComponent {
+                crudService;
+                httpClient;
+                urlService;
+                router;
+                sd;
+                cd;
+                allClientData;
+                model;
+                clientData;
+                htmlContent = '';
+                view = {
+                    container: {
+                        id: 371,
+                        name: 'profile',
+                        subContainerItemAliases: [],
+                        allChildContainers: [],
+                        refreshChildContainers: {
+                            "_": []
+                        },
+                        dropin: 'form',
+                        activeFilter: 'profile',
+                        configs: {},
+                        keepInMemory: false
+                    },
+                    items: {},
+                    primaryKeys: ["id"],
+                    recordStatus: 'create',
+                    debug: false,
+                    debugItem: false
+                };
+                constructor(injector, crudService, httpClient, urlService, router, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.crudService = crudService;
+                    this.httpClient = httpClient;
+                    this.urlService = urlService;
+                    this.router = router;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    //Define the lists
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'profile');
+                    this.containerName = 'profile'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {
+                        id: {
+                            itemId: 8526,
+                            type: 'number',
+                            fieldAlias: 'id',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: false,
+                            update: false,
+                            required: true,
+                            // service: null,
+                            itemAlias: 'id',
+                            default: '',
+                            dataType: 'number',
+                            contentType: 'integer',
+                            changeUrl: false
+                        },
+                        username: {
+                            itemId: 8527,
+                            type: 'text',
+                            fieldAlias: 'username',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(30)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        first_name: {
+                            itemId: 8530,
+                            type: 'text',
+                            fieldAlias: 'first_name',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(50)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        last_name: {
+                            itemId: 8531,
+                            type: 'text',
+                            fieldAlias: 'last_name',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(50)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        password: {
+                            itemId: 8532,
+                            type: 'text',
+                            fieldAlias: 'password',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(150)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        default_url: {
+                            itemId: 8533,
+                            type: 'text',
+                            fieldAlias: 'default_url',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(250)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        pef_security_policy_id: {
+                            itemId: 8534,
+                            type: 'number',
+                            fieldAlias: 'pef_security_policy_id',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'number',
+                            contentType: 'integer',
+                            changeUrl: false
+                        },
+                        login_attempts: {
+                            itemId: 8535,
+                            type: 'number',
+                            fieldAlias: 'login_attempts',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'number',
+                            contentType: 'integer',
+                            changeUrl: false
+                        },
+                        reset_expiry: {
+                            itemId: 8536,
+                            type: 'datetime',
+                            fieldAlias: 'reset_expiry',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        login_lockout: {
+                            itemId: 8537,
+                            type: 'datetime',
+                            fieldAlias: 'login_lockout',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        login_blocked_count: {
+                            itemId: 8538,
+                            type: 'boolean',
+                            fieldAlias: 'login_blocked_count',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'change'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '0',
+                            dataType: 'boolean',
+                            contentType: 'tick',
+                            changeUrl: false
+                        },
+                        login_expiry: {
+                            itemId: 8539,
+                            type: 'datetime',
+                            fieldAlias: 'login_expiry',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        login_group_expiry: {
+                            itemId: 8540,
+                            type: 'datetime',
+                            fieldAlias: 'login_group_expiry',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        last_login_datetime: {
+                            itemId: 8541,
+                            type: 'datetime',
+                            fieldAlias: 'last_login_datetime',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        password_history: {
+                            itemId: 8542,
+                            type: 'text',
+                            fieldAlias: 'password_history',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'multilinetext',
+                            changeUrl: false
+                        },
+                        language: {
+                            itemId: 8543,
+                            type: 'text',
+                            fieldAlias: 'language',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(25)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        email: {
+                            itemId: 8544,
+                            type: 'text',
+                            fieldAlias: 'email',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(120)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: true,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        mobile_number: {
+                            itemId: 8545,
+                            type: 'text',
+                            fieldAlias: 'mobile_number',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(50)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        larger_font: {
+                            itemId: 8546,
+                            type: 'boolean',
+                            fieldAlias: 'larger_font',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'change'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '0',
+                            dataType: 'boolean',
+                            contentType: 'tick',
+                            changeUrl: false
+                        },
+                        test_user: {
+                            itemId: 8547,
+                            type: 'boolean',
+                            fieldAlias: 'test_user',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'change'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '0',
+                            dataType: 'boolean',
+                            contentType: 'tick',
+                            changeUrl: false
+                        },
+                        password_expiry: {
+                            itemId: 8548,
+                            type: 'datetime',
+                            fieldAlias: 'password_expiry',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        password_remember_expiry: {
+                            itemId: 8549,
+                            type: 'datetime',
+                            fieldAlias: 'password_remember_expiry',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        password_remember: {
+                            itemId: 8550,
+                            type: 'text',
+                            fieldAlias: 'password_remember',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(250)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        password_remember_hash: {
+                            itemId: 8551,
+                            type: 'text',
+                            fieldAlias: 'password_remember_hash',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(250)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        dib_username: {
+                            itemId: 8552,
+                            type: 'text',
+                            fieldAlias: 'dib_username',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(25)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        supplier_code: {
+                            itemId: 8553,
+                            type: 'text',
+                            fieldAlias: 'supplier_code',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(6)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        created_datetime: {
+                            itemId: 8554,
+                            type: 'datetime',
+                            fieldAlias: 'created_datetime',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'datetime',
+                            contentType: 'datetime',
+                            changeUrl: false
+                        },
+                        reset_guid: {
+                            itemId: 8555,
+                            type: 'text',
+                            fieldAlias: 'reset_guid',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(255)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        activation_guid: {
+                            itemId: 8556,
+                            type: 'text',
+                            fieldAlias: 'activation_guid',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(255)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        notes: {
+                            itemId: 8557,
+                            type: 'text',
+                            fieldAlias: 'notes',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(255)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                        dibuid: {
+                            itemId: 8558,
+                            type: 'text',
+                            fieldAlias: 'dibuid',
+                            formControl: new forms_1.FormControl({ value: '', disabled: false }, {
+                                validators: [
+                                    forms_1.Validators.maxLength(40)
+                                ],
+                                updateOn: 'blur'
+                            }),
+                            create: true,
+                            update: true,
+                            required: false,
+                            // service: null,
+                            itemAlias: null,
+                            default: '',
+                            dataType: 'text',
+                            contentType: 'text',
+                            changeUrl: false
+                        },
+                    };
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('username', this.model.modelItems.username.formControl);
+                    this.model.$formGroup.addControl('first_name', this.model.modelItems.first_name.formControl);
+                    this.model.$formGroup.addControl('last_name', this.model.modelItems.last_name.formControl);
+                    this.model.$formGroup.addControl('password', this.model.modelItems.password.formControl);
+                    this.model.$formGroup.addControl('default_url', this.model.modelItems.default_url.formControl);
+                    this.model.$formGroup.addControl('pef_security_policy_id', this.model.modelItems.pef_security_policy_id.formControl);
+                    this.model.$formGroup.addControl('login_attempts', this.model.modelItems.login_attempts.formControl);
+                    this.model.$formGroup.addControl('reset_expiry', this.model.modelItems.reset_expiry.formControl);
+                    this.model.$formGroup.addControl('login_lockout', this.model.modelItems.login_lockout.formControl);
+                    this.model.$formGroup.addControl('login_blocked_count', this.model.modelItems.login_blocked_count.formControl);
+                    this.model.$formGroup.addControl('login_expiry', this.model.modelItems.login_expiry.formControl);
+                    this.model.$formGroup.addControl('login_group_expiry', this.model.modelItems.login_group_expiry.formControl);
+                    this.model.$formGroup.addControl('last_login_datetime', this.model.modelItems.last_login_datetime.formControl);
+                    this.model.$formGroup.addControl('password_history', this.model.modelItems.password_history.formControl);
+                    this.model.$formGroup.addControl('language', this.model.modelItems.language.formControl);
+                    this.model.$formGroup.addControl('email', this.model.modelItems.email.formControl);
+                    this.model.$formGroup.addControl('mobile_number', this.model.modelItems.mobile_number.formControl);
+                    this.model.$formGroup.addControl('larger_font', this.model.modelItems.larger_font.formControl);
+                    this.model.$formGroup.addControl('test_user', this.model.modelItems.test_user.formControl);
+                    this.model.$formGroup.addControl('password_expiry', this.model.modelItems.password_expiry.formControl);
+                    this.model.$formGroup.addControl('password_remember_expiry', this.model.modelItems.password_remember_expiry.formControl);
+                    this.model.$formGroup.addControl('password_remember', this.model.modelItems.password_remember.formControl);
+                    this.model.$formGroup.addControl('password_remember_hash', this.model.modelItems.password_remember_hash.formControl);
+                    this.model.$formGroup.addControl('dib_username', this.model.modelItems.dib_username.formControl);
+                    this.model.$formGroup.addControl('supplier_code', this.model.modelItems.supplier_code.formControl);
+                    this.model.$formGroup.addControl('created_datetime', this.model.modelItems.created_datetime.formControl);
+                    this.model.$formGroup.addControl('reset_guid', this.model.modelItems.reset_guid.formControl);
+                    this.model.$formGroup.addControl('activation_guid', this.model.modelItems.activation_guid.formControl);
+                    this.model.$formGroup.addControl('notes', this.model.modelItems.notes.formControl);
+                    this.model.$formGroup.addControl('dibuid', this.model.modelItems.dibuid.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy))
+                        .subscribe(change => {
+                        //--dib-controller-action--modelChange--
+                    });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    //Defining the list item services
+                    lists = this.lists;
+                    //--dib-controller-action--onInit--
+                    this.canRead = true;
+                    this.canUpdate = true;
+                    this.canCreate = true;
+                    this.eventService.on(`reload${this.containerName}`).subscribe(_ => {
+                        //console.log("reload event fired", `reload${this.containerName}`);
+                    });
+                    this.setup();
+                    this.reloadContainer();
+                }
+                setup() {
+                    this.setupPrimaryKeys();
+                    this.setupDelete();
+                    this.setupSubmit();
+                }
+                setupSubmit() {
+                    this.submit$ = new rxjs_1.Subject();
+                    this.submit$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => {
+                        //--dib-controller-action--beforeSubmit--
+                        this.busy = true;
+                    }), operators_1.switchMap(() => this.crudService.update(this.model.crudUrl, this.view.container.name, {
+                        primaryKeys: this.primaryKeys,
+                        clientData: this.clientData,
+                        activeFilter: this.view.container.activeFilter,
+                        // recordData : this.model.$formGroup.getRawValue() // Know that when something is disabled the value will not be returned so for this reason we use getRawValue
+                        model: this.model,
+                        formGroup: this.model.$formGroup
+                    })
+                        .pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => {
+                        // @todo perhaps makes this more generic
+                        if (response.message == "No changes were made to existing database values.") {
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        if (response.success) {
+                            if (this.view.recordStatus == 'create') {
+                                this.primaryKeys$.next(response.records);
+                                //--dib-controller-action--create--
+                            }
+                            else {
+                                this.primaryKeys$.next(response.records);
+                                //--dib-controller-action--update--
+                            }
+                            this.model.$formGroup.markAsPristine();
+                            //--dib-controller-action--onSubmit--
+                        }
+                        else {
+                            //--dib-controller-action--onSubmitFailed--
+                            if (this.view.recordStatus == 'create') {
+                                //--dib-controller-action--createFailed--
+                            }
+                            else {
+                                //--dib-controller-action--updateFailed--
+                            }
+                        }
+                    })).subscribe();
+                }
+                onSubmit() {
+                    this.submit$.next(null);
+                }
+                setupDelete() {
+                    this.delete$ = new rxjs_1.Subject();
+                    this.delete$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => {
+                        //--dib-controller-action--beforeDelete--
+                        this.busy = true;
+                    }), operators_1.switchMap(() => this.crudService.delete(this.model.crudUrl, this.view.container.name, {
+                        primaryKeys: this.primaryKeys,
+                        clientData: this.clientData,
+                        activeFilter: this.view.container.activeFilter,
+                    })
+                        .pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => {
+                        if (response.success) {
+                            this.primaryKeys$.next(response.records);
+                            //--dib-controller-action--delete--
+                        }
+                    })).subscribe();
+                }
+                deleteRecord() {
+                    this.messagingService.confirm({
+                        title: 'Delete Record',
+                        message: 'Are you sure you want to delete?',
+                        okText: 'Yes',
+                        cancelText: 'Cancel'
+                    }).then(result => {
+                        if (result !== false) {
+                            this.delete$.next(null);
+                        }
+                    });
+                }
+                setupPrimaryKeys() {
+                    this.primaryKeys$ = new rxjs_1.Subject();
+                    this.position$ = new rxjs_1.Subject();
+                    this.primaryKeys$
+                        .pipe(operators_1.takeUntil(this.onDestroy), 
+                    //distinctUntilChanged(),
+                    operators_1.tap(primaryKeys => {
+                        //--dib-controller-action--beforeLoad--
+                        this.view.recordStatus = 'create';
+                        if (!!primaryKeys && Object.keys(primaryKeys).length > 0) {
+                            this.view.recordStatus = 'update';
+                        }
+                        this.primaryKeys = primaryKeys;
+                        this.updateUrl();
+                        this.busy = true;
+                    }), operators_1.switchMap(primaryKeys => {
+                        if (this.canCreate || (!!primaryKeys === true && Object.keys(primaryKeys).length > 0)) {
+                            return this.crudService.read(this.model.crudUrl, this.view.container.name, {
+                                primaryKeys,
+                                clientData: this.clientData,
+                                activeFilter: this.view.container.activeFilter,
+                                canCreate: this.canCreate
+                            })
+                                .pipe(operators_1.catchError((err) => {
+                                this.busy = false;
+                                return rxjs_1.of({ success: false, message: `${err}` });
+                            }), operators_1.finalize(() => {
+                            }));
+                        }
+                        this.busy = false;
+                        return rxjs_1.empty();
+                    }), operators_1.switchMap(response => {
+                        this.busy = false;
+                        if (response.success) {
+                            this.model.$formGroup.reset();
+                            // When there are active filters involved it seems that we receive an array from the server.
+                            if (Array.isArray(response.records) && response.records.length > 0) {
+                                response.records = response.records[0];
+                            }
+                            // If it is still an array, it means no record was returned during the active filter - we now need to enable the create if create is available
+                            if (this.view.recordStatus == 'update' && Array.isArray(response.records) && this.view.container.activeFilter !== null && this.view.container.activeFilter.length > 0) {
+                                if (this.canCreate) {
+                                    // const findingThefirstRecord =await this.recordPosition(1).subscribe();
+                                    // if (findingThefirstRecord.records === null) {
+                                    this.addRecord();
+                                    // }
+                                }
+                            }
+                            if (response.records.id !== undefined) {
+                                this.setValue('id', response.records.id);
+                            }
+                            if (response.records.username !== undefined) {
+                                this.setValue('username', response.records.username);
+                            }
+                            if (response.records.first_name !== undefined) {
+                                this.setValue('first_name', response.records.first_name);
+                            }
+                            if (response.records.last_name !== undefined) {
+                                this.setValue('last_name', response.records.last_name);
+                            }
+                            if (response.records.password !== undefined) {
+                                this.setValue('password', response.records.password);
+                            }
+                            if (response.records.default_url !== undefined) {
+                                this.setValue('default_url', response.records.default_url);
+                            }
+                            if (response.records.pef_security_policy_id !== undefined) {
+                                this.setValue('pef_security_policy_id', response.records.pef_security_policy_id);
+                            }
+                            if (response.records.login_attempts !== undefined) {
+                                this.setValue('login_attempts', response.records.login_attempts);
+                            }
+                            if (response.records.reset_expiry !== undefined) {
+                                this.setValue('reset_expiry', this.getDate(response.records.reset_expiry));
+                            }
+                            if (response.records.login_lockout !== undefined) {
+                                this.setValue('login_lockout', this.getDate(response.records.login_lockout));
+                            }
+                            if (response.records.login_blocked_count !== undefined) {
+                                this.setValue('login_blocked_count', response.records.login_blocked_count == 1);
+                            }
+                            if (response.records.login_expiry !== undefined) {
+                                this.setValue('login_expiry', this.getDate(response.records.login_expiry));
+                            }
+                            if (response.records.login_group_expiry !== undefined) {
+                                this.setValue('login_group_expiry', this.getDate(response.records.login_group_expiry));
+                            }
+                            if (response.records.last_login_datetime !== undefined) {
+                                this.setValue('last_login_datetime', this.getDate(response.records.last_login_datetime));
+                            }
+                            if (response.records.password_history !== undefined) {
+                                this.setValue('password_history', response.records.password_history);
+                            }
+                            if (response.records.language !== undefined) {
+                                this.setValue('language', response.records.language);
+                            }
+                            if (response.records.email !== undefined) {
+                                this.setValue('email', response.records.email);
+                            }
+                            if (response.records.mobile_number !== undefined) {
+                                this.setValue('mobile_number', response.records.mobile_number);
+                            }
+                            if (response.records.larger_font !== undefined) {
+                                this.setValue('larger_font', response.records.larger_font == 1);
+                            }
+                            if (response.records.test_user !== undefined) {
+                                this.setValue('test_user', response.records.test_user == 1);
+                            }
+                            if (response.records.password_expiry !== undefined) {
+                                this.setValue('password_expiry', this.getDate(response.records.password_expiry));
+                            }
+                            if (response.records.password_remember_expiry !== undefined) {
+                                this.setValue('password_remember_expiry', this.getDate(response.records.password_remember_expiry));
+                            }
+                            if (response.records.password_remember !== undefined) {
+                                this.setValue('password_remember', response.records.password_remember);
+                            }
+                            if (response.records.password_remember_hash !== undefined) {
+                                this.setValue('password_remember_hash', response.records.password_remember_hash);
+                            }
+                            if (response.records.dib_username !== undefined) {
+                                this.setValue('dib_username', response.records.dib_username);
+                            }
+                            if (response.records.supplier_code !== undefined) {
+                                this.setValue('supplier_code', response.records.supplier_code);
+                            }
+                            if (response.records.created_datetime !== undefined) {
+                                this.setValue('created_datetime', this.getDate(response.records.created_datetime));
+                            }
+                            if (response.records.reset_guid !== undefined) {
+                                this.setValue('reset_guid', response.records.reset_guid);
+                            }
+                            if (response.records.activation_guid !== undefined) {
+                                this.setValue('activation_guid', response.records.activation_guid);
+                            }
+                            if (response.records.notes !== undefined) {
+                                this.setValue('notes', response.records.notes);
+                            }
+                            if (response.records.dibuid !== undefined) {
+                                this.setValue('dibuid', response.records.dibuid);
+                            }
+                            this.model.updateFormDefaults(this);
+                            this.portService.setUrlDefaults(false, this);
+                            Object.keys(this.model.$formGroup.controls).forEach(field => {
+                                if (this.model.modelItems[field][this.view.recordStatus]) {
+                                    this.model.$formGroup.controls[field].enable();
+                                }
+                                else {
+                                    this.model.$formGroup.controls[field].disable();
+                                }
+                            });
+                            //--dib-controller-action--load--
+                            this.reloadSubcontainers();
+                            return this.paging();
+                        }
+                    }), operators_1.tap((response) => {
+                        window.dispatchEvent(new Event('resize'));
+                        this.pagingInfo = response.records;
+                        if (response.records !== null && response.records.current !== null && response.records.current !== undefined)
+                            this.position$.next(response.records.current.current);
+                    }))
+                        .subscribe();
+                }
+                addRecord() {
+                    if (this.containerNameOpenedByUrl()) {
+                        const currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!!currentUrlInfo.params !== false) {
+                            // Need to remove all primary ids from this url
+                            Object.keys(this.primaryKeys).forEach((key, value) => {
+                                delete currentUrlInfo.params[`primary_${key}`];
+                            });
+                            currentUrlInfo.params['record'] = 'new';
+                        }
+                        else {
+                            currentUrlInfo.params = { record: 'new' };
+                        }
+                        Object.keys(currentUrlInfo.params).forEach((value) => {
+                            if (value.indexOf('primary_') !== -1) {
+                                delete currentUrlInfo.params[value];
+                            }
+                        });
+                        this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, currentUrlInfo.params);
+                    }
+                    this.primaryKeys$.next(null);
+                }
+                ngAfterViewInit() {
+                    super.ngAfterViewInit();
+                    window.dispatchEvent(new Event('resize'));
+                    //--dib-controller-action--afterViewInit--
+                }
+                ngOnDestroy() {
+                    //--dib-controller-action--onDestroy--
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                /**
+                 * Update the url params
+                 */
+                updateUrl() {
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    if (!!this.primaryKeys
+                        && currentUrlInfo.containerName == this.view.container.name
+                        && Object.keys(this.primaryKeys).length > 0) {
+                        let urlKeys = {};
+                        if (!!currentUrlInfo.params) {
+                            urlKeys = currentUrlInfo.params;
+                        }
+                        Object.keys(this.primaryKeys).forEach((key, value) => {
+                            delete urlKeys['record'];
+                            urlKeys[`primary_${key}`] = this.primaryKeys[key];
+                        });
+                        currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!this.navigationService.paramsEqual(urlKeys, currentUrlInfo.params)) {
+                            this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, urlKeys, { changeUrl: true, originContainer: this });
+                        }
+                    }
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    //--dib-controller-action--reloadContainer--
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        // To accomodate for columnHeaders in grids @todo probably need to execute updateFromDefault from all container instead of a general one
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({
+                        name: 'onReloadprofile',
+                        value: this
+                    });
+                    this.eventService.emit({
+                        name: 'OnReloadContainer',
+                        value: 'profile'
+                    });
+                    //console.log("reloadContainer", 'reloadprofile');
+                    this.onLoad();
+                }
+                onLoad() {
+                    // Can the user read this form?
+                    if (!this.canRead && !this.canCreate)
+                        return;
+                    if (!this.canRead && this.canCreate) {
+                        this.addRecord();
+                        return;
+                    }
+                    // Need to calculate the primary key -> 
+                    // 1. From url
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    let primaryKeys = {};
+                    if (currentUrlInfo.containerName == this.view.container.name) {
+                        this.view.primaryKeys.forEach(key => {
+                            if (!!currentUrlInfo.params[`primary_${key}`]) {
+                                primaryKeys[key] = currentUrlInfo.params[`primary_${key}`];
+                            }
+                        });
+                        if (Object.keys(primaryKeys).length > 0) {
+                            this.primaryKeys$.next(primaryKeys);
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.New) {
+                            this.paging().subscribe((result) => {
+                                this.pagingInfo = result.records;
+                                this.primaryKeys$.next(null);
+                            });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.First) {
+                            this.paging().subscribe((result) => {
+                                this.pagingInfo = result.records;
+                                this.goToRecord(shared_2.FormPosition.First);
+                            });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.Last) {
+                            this.paging().subscribe((result) => {
+                                this.pagingInfo = result.records;
+                                this.goToRecord(shared_2.FormPosition.Last);
+                            });
+                            return;
+                        }
+                    }
+                    // If no primary keys get the first record
+                    if (Object.keys(primaryKeys).length == 0) {
+                        this.recordPosition(1).subscribe((response) => {
+                            this.primaryKeys$.next(response.records);
+                        });
+                        return;
+                    }
+                    this.primaryKeys$.next(primaryKeys);
+                }
+                /**
+                 * Position can be as follows
+                 * FormPosition.First
+                 * FormPosition.Stay
+                 * FormPosition.Last
+                 * FormPosition.Next
+                 * FormPosition.Previous
+                 */
+                goToRecord(formPosition) {
+                    if (!!this.pagingInfo && !!this.pagingInfo[formPosition])
+                        this.primaryKeys$.next(this.pagingInfo[formPosition]);
+                }
+                recordPosition(position) {
+                    return this.crudService.recordPosition(`profile`, position, {
+                        clientData: this.clientData,
+                        activeFilter: this.view.container.activeFilter,
+                    });
+                }
+                paging() {
+                    if (!this.canRead)
+                        return rxjs_1.of({ records: { current: { current: 1 } } });
+                    if (!!this.primaryKeys == true && Object.keys(this.primaryKeys).length > 0) {
+                        return this.crudService.recordInfo('profile', {
+                            primaryKeys: this.primaryKeys,
+                            activeFilter: this.view.container.activeFilter,
+                            clientData: this.clientData
+                        });
+                    }
+                    else {
+                        return this.recordPosition(1).pipe(operators_1.switchMap((result) => this.crudService.recordInfo('profile', {
+                            primaryKeys: result.records,
+                            activeFilter: this.view.container.activeFilter,
+                            clientData: this.clientData
+                        }).pipe(operators_1.map((response) => {
+                            if (response.records == null) {
+                                return { records: { current: { current: 1 } } };
+                            }
+                            return response;
+                        }))));
+                    }
+                }
+                static ɵfac = function profileComponent_Factory(t) { return new (t || profileComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.CrudService), i0.ɵɵdirectiveInject(i2.HttpClient), i0.ɵɵdirectiveInject(i1.UrlService), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i1.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: profileComponent, selectors: [["profile"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 268, vars: 174, consts: [["mode", "indeterminate", 4, "ngIf"], ["containerName", "profile", 2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci8513", "dibComponent", "row", "dib-inject-content", "replace", 2, "padding", "5px 10px 6px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%"], [3, "dibPort"], ["mat-mini-fab", "", "color", "accent", "id", "ci8514", "dibComponent", "btnSave", "aria-label", "Save record", "matTooltipClass", "dib-tooltip", "type", "submit", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/save.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci8517", "dibComponent", "btnReload", "aria-label", "Restore saved data", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci8518", "dibComponent", "span", 2, "width", "250px !important", 3, "innerHtml"], ["id", "ci8521", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "center", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%", "align-self", "center", "max-width", "1300px"], ["id", "ci8522", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap"], ["id", "ci8526", "dibComponent", "inputNumber", "item-alias", "id", "appearance", "standard", 3, "hidden"], ["matInput", "", "type", "number", "formControlName", "id", "required", "true", "name", "id"], [4, "ngIf"], ["class", "dib_form_input_done", "matSuffix", "", 3, "click", 4, "ngIf"], ["class", "dib_form_input_done_all", "matSuffix", "", 4, "ngIf"], ["class", "dib_form_input_priority_high", "matSuffix", "", 4, "ngIf"], ["id", "ci8527", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "username", "maxlength", "30", "required", "true", "name", "username"], ["id", "ci8530", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "first_name", "maxlength", "50", "required", "true", "name", "first_name"], ["id", "ci8531", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "last_name", "maxlength", "50", "required", "true", "name", "last_name"], ["id", "ci8532", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "password", "maxlength", "150", "name", "password"], ["id", "ci8524", "dibComponent", "section", 2, "flex", "1 1 0%", 3, "hidden"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", 3, "hidden"], ["id", "ci8533", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "default_url", "maxlength", "250", "required", "true", "name", "default_url"], ["id", "ci8534", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "pef_security_policy_id", "required", "true", "name", "pef_security_policy_id"], ["id", "ci8535", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "login_attempts", "name", "login_attempts"], ["id", "ci8536", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matPrefix", "", 3, "for"], ["matInput", "", "formControlName", "reset_expiry", "name", "reset_expiry", 3, "ngxMatDatetimePicker"], ["picker8536", ""], ["id", "ci8537", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "login_lockout", "name", "login_lockout", 3, "ngxMatDatetimePicker"], ["picker8537", ""], ["id", "ci8538", "dibComponent", "checkbox", "formControlName", "login_blocked_count"], ["id", "ci8539", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "login_expiry", "name", "login_expiry", 3, "ngxMatDatetimePicker"], ["picker8539", ""], ["id", "ci8523", "dibComponent", "section", 2, "flex", "1 1 0%", 3, "hidden"], ["id", "ci8540", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "login_group_expiry", "name", "login_group_expiry", 3, "ngxMatDatetimePicker"], ["picker8540", ""], ["id", "ci8541", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "last_login_datetime", "name", "last_login_datetime", 3, "ngxMatDatetimePicker"], ["picker8541", ""], ["id", "ci8542", "dibComponent", "inputTextArea", "appearance", "standard"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "4", "cdkAutosizeMaxRows", "10", "matInput", "", "formControlName", "password_history", "name", "password_history"], ["id", "ci8543", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "language", "maxlength", "25", "name", "language"], ["id", "ci8544", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "email", "maxlength", "120", "required", "true", "name", "email"], ["id", "ci8545", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "mobile_number", "maxlength", "50", "name", "mobile_number"], ["id", "ci8546", "dibComponent", "checkbox", "formControlName", "larger_font"], ["id", "ci8547", "dibComponent", "checkbox", "formControlName", "test_user"], ["id", "ci8548", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "password_expiry", "name", "password_expiry", 3, "ngxMatDatetimePicker"], ["picker8548", ""], ["id", "ci8549", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "password_remember_expiry", "name", "password_remember_expiry", 3, "ngxMatDatetimePicker"], ["picker8549", ""], ["id", "ci8550", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "password_remember", "maxlength", "250", "name", "password_remember"], ["id", "ci8551", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "password_remember_hash", "maxlength", "250", "name", "password_remember_hash"], ["id", "ci8552", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "dib_username", "maxlength", "25", "name", "dib_username"], ["id", "ci8553", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "supplier_code", "maxlength", "6", "name", "supplier_code"], ["id", "ci8554", "dibComponent", "timeDatePicker", "appearance", "standard"], ["matInput", "", "formControlName", "created_datetime", "name", "created_datetime", 3, "ngxMatDatetimePicker"], ["picker8554", ""], ["id", "ci8555", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "reset_guid", "maxlength", "255", "name", "reset_guid"], ["id", "ci8556", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "activation_guid", "maxlength", "255", "name", "activation_guid"], ["id", "ci8557", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "notes", "maxlength", "255", "name", "notes"], ["id", "ci8558", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "dibuid", "maxlength", "40", "name", "dibuid"], ["mode", "indeterminate"], ["matSuffix", "", 1, "dib_form_input_done", 3, "click"], ["matSuffix", "", 1, "dib_form_input_done_all"], ["matSuffix", "", 1, "dib_form_input_priority_high"]], template: function profileComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, profileComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function profileComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainerStart(4, 4);
+                        i0.ɵɵelementStart(5, "button", 5);
+                        i0.ɵɵelement(6, "dib-icon", 6);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(7, "button", 7);
+                        i0.ɵɵlistener("click", function profileComponent_Template_button_click_7_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(8, "dib-icon", 8);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(9, "span", 9);
+                        i0.ɵɵpipe(10, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(11, "div", 10);
+                        i0.ɵɵelementContainerStart(12, 4);
+                        i0.ɵɵelementStart(13, "mat-card", 11)(14, "mat-card-content", 12)(15, "mat-form-field", 13)(16, "mat-label");
+                        i0.ɵɵtext(17, "Id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(18, "input", 14);
+                        i0.ɵɵtemplate(19, profileComponent_mat_error_19_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(20, profileComponent_mat_icon_20_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(21, profileComponent_mat_icon_21_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(22, profileComponent_mat_icon_22_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(23, "mat-form-field", 19)(24, "mat-label");
+                        i0.ɵɵtext(25, "Username");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(26, "input", 20);
+                        i0.ɵɵtemplate(27, profileComponent_mat_error_27_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(28, profileComponent_mat_error_28_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(29, profileComponent_mat_icon_29_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(30, profileComponent_mat_icon_30_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(31, profileComponent_mat_icon_31_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(32, "mat-form-field", 21)(33, "mat-label");
+                        i0.ɵɵtext(34, "First Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(35, "input", 22);
+                        i0.ɵɵtemplate(36, profileComponent_mat_error_36_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(37, profileComponent_mat_error_37_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(38, profileComponent_mat_icon_38_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(39, profileComponent_mat_icon_39_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(40, profileComponent_mat_icon_40_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(41, "mat-form-field", 23)(42, "mat-label");
+                        i0.ɵɵtext(43, "Last Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(44, "input", 24);
+                        i0.ɵɵtemplate(45, profileComponent_mat_error_45_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(46, profileComponent_mat_error_46_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(47, profileComponent_mat_icon_47_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(48, profileComponent_mat_icon_48_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(49, profileComponent_mat_icon_49_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(50, "mat-form-field", 25)(51, "mat-label");
+                        i0.ɵɵtext(52, "Password");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(53, "input", 26);
+                        i0.ɵɵtemplate(54, profileComponent_mat_error_54_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(55, profileComponent_mat_icon_55_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(56, profileComponent_mat_icon_56_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(57, profileComponent_mat_icon_57_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(58, "mat-card", 27)(59, "mat-card-content", 28)(60, "mat-form-field", 29)(61, "mat-label");
+                        i0.ɵɵtext(62, "Default Url");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(63, "input", 30);
+                        i0.ɵɵtemplate(64, profileComponent_mat_error_64_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(65, profileComponent_mat_error_65_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(66, profileComponent_mat_icon_66_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(67, profileComponent_mat_icon_67_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(68, profileComponent_mat_icon_68_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(69, "mat-form-field", 31)(70, "mat-label");
+                        i0.ɵɵtext(71, "Pef Security Policy");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(72, "input", 32);
+                        i0.ɵɵtemplate(73, profileComponent_mat_error_73_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(74, profileComponent_mat_icon_74_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(75, profileComponent_mat_icon_75_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(76, profileComponent_mat_icon_76_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(77, "mat-form-field", 33)(78, "mat-label");
+                        i0.ɵɵtext(79, "Login Attempts");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(80, "input", 34);
+                        i0.ɵɵtemplate(81, profileComponent_mat_icon_81_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(82, profileComponent_mat_icon_82_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(83, profileComponent_mat_icon_83_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(84, "mat-form-field", 35);
+                        i0.ɵɵelement(85, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(86, "mat-label");
+                        i0.ɵɵtext(87, "Reset Expiry");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(88, "input", 37);
+                        i0.ɵɵtemplate(89, profileComponent_mat_icon_89_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(90, profileComponent_mat_icon_90_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(91, profileComponent_mat_icon_91_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(92, "ngx-mat-datetime-picker", null, 38);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(94, "mat-form-field", 39);
+                        i0.ɵɵelement(95, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(96, "mat-label");
+                        i0.ɵɵtext(97, "Login Lockout");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(98, "input", 40);
+                        i0.ɵɵtemplate(99, profileComponent_mat_icon_99_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(100, profileComponent_mat_icon_100_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(101, profileComponent_mat_icon_101_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(102, "ngx-mat-datetime-picker", null, 41);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(104, "mat-checkbox", 42);
+                        i0.ɵɵtext(105, " Login Blocked Count ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(106, "mat-form-field", 43);
+                        i0.ɵɵelement(107, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(108, "mat-label");
+                        i0.ɵɵtext(109, "Login Expiry");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(110, "input", 44);
+                        i0.ɵɵtemplate(111, profileComponent_mat_icon_111_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(112, profileComponent_mat_icon_112_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(113, profileComponent_mat_icon_113_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(114, "ngx-mat-datetime-picker", null, 45);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(116, "mat-card", 46)(117, "mat-card-content", 28)(118, "mat-form-field", 47);
+                        i0.ɵɵelement(119, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(120, "mat-label");
+                        i0.ɵɵtext(121, "Login Group Expiry");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(122, "input", 48);
+                        i0.ɵɵtemplate(123, profileComponent_mat_icon_123_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(124, profileComponent_mat_icon_124_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(125, profileComponent_mat_icon_125_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(126, "ngx-mat-datetime-picker", null, 49);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(128, "mat-form-field", 50);
+                        i0.ɵɵelement(129, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(130, "mat-label");
+                        i0.ɵɵtext(131, "Last Login Datetime");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(132, "input", 51);
+                        i0.ɵɵtemplate(133, profileComponent_mat_icon_133_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(134, profileComponent_mat_icon_134_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(135, profileComponent_mat_icon_135_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(136, "ngx-mat-datetime-picker", null, 52);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(138, "mat-form-field", 53)(139, "mat-label");
+                        i0.ɵɵtext(140, "Password History");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(141, "textarea", 54);
+                        i0.ɵɵtemplate(142, profileComponent_mat_icon_142_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(143, profileComponent_mat_icon_143_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(144, profileComponent_mat_icon_144_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(145, "mat-form-field", 55)(146, "mat-label");
+                        i0.ɵɵtext(147, "Language");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(148, "input", 56);
+                        i0.ɵɵtemplate(149, profileComponent_mat_error_149_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(150, profileComponent_mat_icon_150_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(151, profileComponent_mat_icon_151_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(152, profileComponent_mat_icon_152_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(153, "mat-form-field", 57)(154, "mat-label");
+                        i0.ɵɵtext(155, "Email");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(156, "input", 58);
+                        i0.ɵɵtemplate(157, profileComponent_mat_error_157_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(158, profileComponent_mat_error_158_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(159, profileComponent_mat_icon_159_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(160, profileComponent_mat_icon_160_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(161, profileComponent_mat_icon_161_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(162, "mat-form-field", 59)(163, "mat-label");
+                        i0.ɵɵtext(164, "Mobile Number");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(165, "input", 60);
+                        i0.ɵɵtemplate(166, profileComponent_mat_error_166_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(167, profileComponent_mat_icon_167_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(168, profileComponent_mat_icon_168_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(169, profileComponent_mat_icon_169_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(170, "mat-checkbox", 61);
+                        i0.ɵɵtext(171, " Larger Font ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(172, "mat-checkbox", 62);
+                        i0.ɵɵtext(173, " Test User ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(174, "mat-form-field", 63);
+                        i0.ɵɵelement(175, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(176, "mat-label");
+                        i0.ɵɵtext(177, "Password Expiry");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(178, "input", 64);
+                        i0.ɵɵtemplate(179, profileComponent_mat_icon_179_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(180, profileComponent_mat_icon_180_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(181, profileComponent_mat_icon_181_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(182, "ngx-mat-datetime-picker", null, 65);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(184, "mat-form-field", 66);
+                        i0.ɵɵelement(185, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(186, "mat-label");
+                        i0.ɵɵtext(187, "Password Remember Expiry");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(188, "input", 67);
+                        i0.ɵɵtemplate(189, profileComponent_mat_icon_189_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(190, profileComponent_mat_icon_190_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(191, profileComponent_mat_icon_191_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(192, "ngx-mat-datetime-picker", null, 68);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(194, "mat-form-field", 69)(195, "mat-label");
+                        i0.ɵɵtext(196, "Password Remember");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(197, "input", 70);
+                        i0.ɵɵtemplate(198, profileComponent_mat_error_198_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(199, profileComponent_mat_icon_199_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(200, profileComponent_mat_icon_200_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(201, profileComponent_mat_icon_201_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(202, "mat-form-field", 71)(203, "mat-label");
+                        i0.ɵɵtext(204, "Password Remember Hash");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(205, "input", 72);
+                        i0.ɵɵtemplate(206, profileComponent_mat_error_206_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(207, profileComponent_mat_icon_207_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(208, profileComponent_mat_icon_208_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(209, profileComponent_mat_icon_209_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(210, "mat-form-field", 73)(211, "mat-label");
+                        i0.ɵɵtext(212, "Dib Username");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(213, "input", 74);
+                        i0.ɵɵtemplate(214, profileComponent_mat_error_214_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(215, profileComponent_mat_icon_215_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(216, profileComponent_mat_icon_216_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(217, profileComponent_mat_icon_217_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(218, "mat-form-field", 75)(219, "mat-label");
+                        i0.ɵɵtext(220, "Supplier Code");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(221, "input", 76);
+                        i0.ɵɵtemplate(222, profileComponent_mat_error_222_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(223, profileComponent_mat_icon_223_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(224, profileComponent_mat_icon_224_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(225, profileComponent_mat_icon_225_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(226, "mat-form-field", 77);
+                        i0.ɵɵelement(227, "mat-datepicker-toggle", 36);
+                        i0.ɵɵelementStart(228, "mat-label");
+                        i0.ɵɵtext(229, "Created Datetime");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(230, "input", 78);
+                        i0.ɵɵtemplate(231, profileComponent_mat_icon_231_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(232, profileComponent_mat_icon_232_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(233, profileComponent_mat_icon_233_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelement(234, "ngx-mat-datetime-picker", null, 79);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(236, "mat-form-field", 80)(237, "mat-label");
+                        i0.ɵɵtext(238, "Reset Guid");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(239, "input", 81);
+                        i0.ɵɵtemplate(240, profileComponent_mat_error_240_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(241, profileComponent_mat_icon_241_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(242, profileComponent_mat_icon_242_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(243, profileComponent_mat_icon_243_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(244, "mat-form-field", 82)(245, "mat-label");
+                        i0.ɵɵtext(246, "Activation Guid");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(247, "input", 83);
+                        i0.ɵɵtemplate(248, profileComponent_mat_error_248_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(249, profileComponent_mat_icon_249_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(250, profileComponent_mat_icon_250_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(251, profileComponent_mat_icon_251_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(252, "mat-form-field", 84)(253, "mat-label");
+                        i0.ɵɵtext(254, "Notes");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(255, "input", 85);
+                        i0.ɵɵtemplate(256, profileComponent_mat_error_256_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(257, profileComponent_mat_icon_257_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(258, profileComponent_mat_icon_258_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(259, profileComponent_mat_icon_259_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(260, "mat-form-field", 86)(261, "mat-label");
+                        i0.ɵɵtext(262, "Dibuid");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(263, "input", 87);
+                        i0.ɵɵtemplate(264, profileComponent_mat_error_264_Template, 2, 0, "mat-error", 15);
+                        i0.ɵɵtemplate(265, profileComponent_mat_icon_265_Template, 2, 0, "mat-icon", 16);
+                        i0.ɵɵtemplate(266, profileComponent_mat_icon_266_Template, 2, 0, "mat-icon", 17);
+                        i0.ɵɵtemplate(267, profileComponent_mat_icon_267_Template, 2, 0, "mat-icon", 18);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        const _r39 = i0.ɵɵreference(93);
+                        const _r43 = i0.ɵɵreference(103);
+                        const _r47 = i0.ɵɵreference(115);
+                        const _r51 = i0.ɵɵreference(127);
+                        const _r55 = i0.ɵɵreference(137);
+                        const _r75 = i0.ɵɵreference(183);
+                        const _r79 = i0.ɵɵreference(193);
+                        const _r99 = i0.ɵɵreference(235);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(172, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "8513");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Save record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Restore saved data")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(10, 170, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "8521");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Id");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Username");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("username", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("username", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "First Name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("first_name", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("first_name", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("first_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("first_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("first_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Last Name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("last_name", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("last_name", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("last_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("last_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("last_name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Password");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("password", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Default Url");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("default_url", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("default_url", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("default_url", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("default_url", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("default_url", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Pef Security Policy");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("pef_security_policy_id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("pef_security_policy_id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("pef_security_policy_id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("pef_security_policy_id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Login Attempts");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("login_attempts", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("login_attempts", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("login_attempts", ctx.model.$formGroup));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("for", _r39);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r39);
+                        i0.ɵɵattribute("aria-label", "Reset Expiry");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("reset_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("reset_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("reset_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("for", _r43);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r43);
+                        i0.ɵɵattribute("aria-label", "Login Lockout");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("login_lockout", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("login_lockout", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("login_lockout", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("for", _r47);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r47);
+                        i0.ɵɵattribute("aria-label", "Login Expiry");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("login_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("login_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("login_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("for", _r51);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r51);
+                        i0.ɵɵattribute("aria-label", "Login Group Expiry");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("login_group_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("login_group_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("login_group_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("for", _r55);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r55);
+                        i0.ɵɵattribute("aria-label", "Last Login Datetime");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("last_login_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("last_login_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("last_login_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Password History");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password_history", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password_history", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password_history", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Language");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("language", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("language", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("language", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("language", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Email");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("email", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("email", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("email", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("email", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("email", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Mobile Number");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("mobile_number", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("mobile_number", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("mobile_number", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("mobile_number", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("for", _r75);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r75);
+                        i0.ɵɵattribute("aria-label", "Password Expiry");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("for", _r79);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r79);
+                        i0.ɵɵattribute("aria-label", "Password Remember Expiry");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password_remember_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password_remember_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password_remember_expiry", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Password Remember");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("password_remember", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password_remember", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password_remember", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password_remember", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Password Remember Hash");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("password_remember_hash", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("password_remember_hash", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("password_remember_hash", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("password_remember_hash", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Dib Username");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("dib_username", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("dib_username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("dib_username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("dib_username", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Supplier Code");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("supplier_code", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("supplier_code", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("supplier_code", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("supplier_code", ctx.model.$formGroup));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("for", _r99);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngxMatDatetimePicker", _r99);
+                        i0.ɵɵattribute("aria-label", "Created Datetime");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("created_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("created_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("created_datetime", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Reset Guid");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("reset_guid", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("reset_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("reset_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("reset_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Activation Guid");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("activation_guid", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("activation_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("activation_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("activation_guid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Notes");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("notes", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Dibuid");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("dibuid", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("dibuid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("dibuid", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("dibuid", ctx.model.$formGroup));
+                    } }, dependencies: [i4.NgClass, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NumberValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.RequiredValidator, i6.MaxLengthValidator, i6.FormGroupDirective, i6.FormControlName, i1.DibIconComponent, i1.DibPortDirective, i1.DibRemoveFocusDirective, i7.NgxMatDatetimepicker, i7.NgxMatDatepickerInput, i8.MatMiniFabButton, i9.MatCheckbox, i10.MatDatepickerToggle, i11.MatFormField, i11.MatLabel, i11.MatError, i11.MatPrefix, i11.MatSuffix, i12.MatIcon, i13.MatInput, i14.CdkTextareaAutosize, i15.MatProgressBar, i16.MatTooltip, i17.MatCard, i17.MatCardContent, i1.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloadprofile'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], profileComponent.prototype, "reloadContainer", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('goToRecordprofile'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [String]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], profileComponent.prototype, "goToRecord", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('recordPositionprofile'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Number]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], profileComponent.prototype, "recordPosition", null);
+            exports_1("profileComponent", profileComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(profileComponent, [{
+                    type: core_1.Component,
+                    args: [{
+                            selector: 'profile',
+                            template: `
+      <mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"
+ [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" containerName=profile  [ngClass]="{ 'dib-editor' : view.debug }" 
+><div style="display:flex; flex-direction:column; align-items:stretch"><div 
+ style="  padding:5px 10px 6px !important;
+ display:flex; flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 10px 10px;
+ flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;  " id=ci8513 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'8513'" ><button mat-mini-fab color=accent  id=ci8514 dibComponent=btnSave   style="  " aria-label="Save record"
+ [matTooltip]="'Save record'"
+ [matTooltipShowDelay]="'300'"
+ [matTooltipHideDelay]="'300'"
+ [matTooltipPosition]="'below'"
+ matTooltipClass=dib-tooltip   type=submit
+ ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/save.svg"></dib-icon></button><button 
+ mat-mini-fab color=primary  id=ci8517 dibComponent=btnReload   style="  " aria-label="Restore saved data"
+ [matTooltip]="'Restore saved data'"
+ [matTooltipShowDelay]="'300'"
+ [matTooltipHideDelay]="'300'"
+ [matTooltipPosition]="'below'"
+ matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button
+ ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><span  id=ci8518 dibComponent=span   style="
+ width:250px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml"
+></span></ng-container></div><div 
+ style="  display:flex; flex-direction: row;
+ justify-content: center;
+ align-items: stretch;
+ gap: 10px 10px;
+ flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;
+ align-self: center;  max-width:1300px" id=ci8521 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'8521'" ><mat-card   style="  flex: 1 1 0%;  " id=ci8522 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: column;
+ justify-content: flex-start;
+ align-items: stretch;  flex-wrap: nowrap;"  ><mat-form-field  id=ci8526 dibComponent=inputNumber   style="  "  item-alias=id  [hidden]="true"
+ appearance=standard
+ ><mat-label >Id</mat-label><input 
+ matInput
+ type=number   formControlName=id   required=true  name=id
+  [attr.aria-label]="'Id'" ><mat-error *ngIf="hasError('id','required',model.$formGroup)">Please enter a value</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8527 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Username</mat-label><input 
+ matInput
+ type=text   formControlName=username   maxlength='30'  required=true  name=username
+  [attr.aria-label]="'Username'" ><mat-error *ngIf="hasError('username','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('username','maxlength',model.$formGroup)">Please enter 30 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('username', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('username', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('username', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8530 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >First Name</mat-label><input 
+ matInput
+ type=text   formControlName=first_name   maxlength='50'  required=true  name=first_name
+  [attr.aria-label]="'First Name'" ><mat-error *ngIf="hasError('first_name','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('first_name','maxlength',model.$formGroup)">Please enter 50 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('first_name', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('first_name', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('first_name', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8531 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Last Name</mat-label><input 
+ matInput
+ type=text   formControlName=last_name   maxlength='50'  required=true  name=last_name
+  [attr.aria-label]="'Last Name'" ><mat-error *ngIf="hasError('last_name','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('last_name','maxlength',model.$formGroup)">Please enter 50 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('last_name', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('last_name', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('last_name', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8532 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Password</mat-label><input 
+ matInput
+ type=text   formControlName=password   maxlength='150'  name=password
+  [attr.aria-label]="'Password'" ><mat-error *ngIf="hasError('password','maxlength',model.$formGroup)">Please enter 150 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci8524 dibComponent=section  [hidden]="true"
+><mat-card-content   style="  display:flex; flex-direction: column;
+ justify-content: flex-start;
+ align-items: stretch;  flex-wrap: nowrap;" [hidden]="true"
+ ><mat-form-field id=ci8533 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Default Url</mat-label><input 
+ matInput
+ type=text   formControlName=default_url   maxlength='250'  required=true  name=default_url
+  [attr.aria-label]="'Default Url'" ><mat-error *ngIf="hasError('default_url','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('default_url','maxlength',model.$formGroup)">Please enter 250 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('default_url', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('default_url', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('default_url', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci8534 dibComponent=inputNumber   style="  "  appearance=standard
+ ><mat-label >Pef Security Policy</mat-label><input 
+ matInput
+ type=number   formControlName=pef_security_policy_id   required=true  name=pef_security_policy_id
+  [attr.aria-label]="'Pef Security Policy'" ><mat-error *ngIf="hasError('pef_security_policy_id','required',model.$formGroup)">Please enter a value</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('pef_security_policy_id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('pef_security_policy_id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('pef_security_policy_id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci8535 dibComponent=inputNumber   style="  "  appearance=standard
+ ><mat-label >Login Attempts</mat-label><input 
+ matInput
+ type=number   formControlName=login_attempts   name=login_attempts
+  [attr.aria-label]="'Login Attempts'" ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('login_attempts', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('login_attempts', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('login_attempts', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci8536 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8536"></mat-datepicker-toggle><mat-label >Reset Expiry</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8536"   formControlName=reset_expiry   name=reset_expiry
+  [attr.aria-label]="'Reset Expiry'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('reset_expiry', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('reset_expiry', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('reset_expiry', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8536></ngx-mat-datetime-picker></mat-form-field><mat-form-field  id=ci8537 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8537"></mat-datepicker-toggle><mat-label >Login Lockout</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8537"   formControlName=login_lockout   name=login_lockout
+  [attr.aria-label]="'Login Lockout'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('login_lockout', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('login_lockout', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('login_lockout', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8537></ngx-mat-datetime-picker></mat-form-field><mat-checkbox  id=ci8538 dibComponent=checkbox   style="  "  formControlName=login_blocked_count   > 
+ Login Blocked Count
+ </mat-checkbox><mat-form-field  id=ci8539 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8539"></mat-datepicker-toggle><mat-label >Login Expiry</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8539"   formControlName=login_expiry   name=login_expiry
+  [attr.aria-label]="'Login Expiry'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('login_expiry', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('login_expiry', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('login_expiry', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8539></ngx-mat-datetime-picker></mat-form-field></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci8523 dibComponent=section  [hidden]="true"
+><mat-card-content   style="  display:flex; flex-direction: column;
+ justify-content: flex-start;
+ align-items: stretch;  flex-wrap: nowrap;" [hidden]="true"
+ ><mat-form-field  id=ci8540 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8540"></mat-datepicker-toggle><mat-label >Login Group Expiry</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8540"   formControlName=login_group_expiry   name=login_group_expiry
+  [attr.aria-label]="'Login Group Expiry'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('login_group_expiry', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('login_group_expiry', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('login_group_expiry', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8540></ngx-mat-datetime-picker></mat-form-field><mat-form-field  id=ci8541 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8541"></mat-datepicker-toggle><mat-label >Last Login Datetime</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8541"   formControlName=last_login_datetime   name=last_login_datetime
+  [attr.aria-label]="'Last Login Datetime'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('last_login_datetime', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('last_login_datetime', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('last_login_datetime', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8541></ngx-mat-datetime-picker></mat-form-field><mat-form-field  id=ci8542 dibComponent=inputTextArea   style="  "  appearance=standard  
+><mat-label >Password History</mat-label><textarea cdkTextareaAutosize cdkAutosizeMinRows=4  cdkAutosizeMaxRows=10  
+ matInput  formControlName=password_history   name=password_history
+  [attr.aria-label]="'Password History'" ></textarea><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password_history', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password_history', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password_history', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8543 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Language</mat-label><input 
+ matInput
+ type=text   formControlName=language   maxlength='25'  name=language
+  [attr.aria-label]="'Language'" ><mat-error *ngIf="hasError('language','maxlength',model.$formGroup)">Please enter 25 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('language', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('language', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('language', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8544 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Email</mat-label><input 
+ matInput
+ type=text   formControlName=email   maxlength='120'  required=true  name=email
+  [attr.aria-label]="'Email'" ><mat-error *ngIf="hasError('email','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('email','maxlength',model.$formGroup)">Please enter 120 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('email', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('email', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('email', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8545 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Mobile Number</mat-label><input 
+ matInput
+ type=text   formControlName=mobile_number   maxlength='50'  name=mobile_number
+  [attr.aria-label]="'Mobile Number'" ><mat-error *ngIf="hasError('mobile_number','maxlength',model.$formGroup)">Please enter 50 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('mobile_number', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('mobile_number', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('mobile_number', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-checkbox  id=ci8546 dibComponent=checkbox   style="  "  formControlName=larger_font   > 
+ Larger Font
+ </mat-checkbox><mat-checkbox  id=ci8547 dibComponent=checkbox   style="  "  formControlName=test_user   > 
+ Test User
+ </mat-checkbox><mat-form-field  id=ci8548 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8548"></mat-datepicker-toggle><mat-label >Password Expiry</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8548"   formControlName=password_expiry   name=password_expiry
+  [attr.aria-label]="'Password Expiry'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password_expiry', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password_expiry', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password_expiry', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8548></ngx-mat-datetime-picker></mat-form-field><mat-form-field  id=ci8549 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8549"></mat-datepicker-toggle><mat-label >Password Remember Expiry</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8549"   formControlName=password_remember_expiry   name=password_remember_expiry
+  [attr.aria-label]="'Password Remember Expiry'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password_remember_expiry', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password_remember_expiry', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password_remember_expiry', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8549></ngx-mat-datetime-picker></mat-form-field><mat-form-field id=ci8550 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Password Remember</mat-label><input 
+ matInput
+ type=text   formControlName=password_remember   maxlength='250'  name=password_remember
+  [attr.aria-label]="'Password Remember'" ><mat-error *ngIf="hasError('password_remember','maxlength',model.$formGroup)">Please enter 250 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password_remember', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password_remember', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password_remember', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8551 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Password Remember Hash</mat-label><input 
+ matInput
+ type=text   formControlName=password_remember_hash   maxlength='250'  name=password_remember_hash
+  [attr.aria-label]="'Password Remember Hash'" ><mat-error *ngIf="hasError('password_remember_hash','maxlength',model.$formGroup)">Please enter 250 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('password_remember_hash', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('password_remember_hash', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('password_remember_hash', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8552 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Dib Username</mat-label><input 
+ matInput
+ type=text   formControlName=dib_username   maxlength='25'  name=dib_username
+  [attr.aria-label]="'Dib Username'" ><mat-error *ngIf="hasError('dib_username','maxlength',model.$formGroup)">Please enter 25 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('dib_username', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('dib_username', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('dib_username', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8553 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Supplier Code</mat-label><input 
+ matInput
+ type=text   formControlName=supplier_code   maxlength='6'  name=supplier_code
+  [attr.aria-label]="'Supplier Code'" ><mat-error *ngIf="hasError('supplier_code','maxlength',model.$formGroup)">Please enter 6 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('supplier_code', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('supplier_code', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('supplier_code', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci8554 dibComponent=timeDatePicker   style="  "  appearance=standard
+ ><mat-datepicker-toggle matPrefix [for]="picker8554"></mat-datepicker-toggle><mat-label >Created Datetime</mat-label><input 
+ matInput 
+ [ngxMatDatetimePicker]="picker8554"   formControlName=created_datetime   name=created_datetime
+  [attr.aria-label]="'Created Datetime'"  ><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('created_datetime', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('created_datetime', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('created_datetime', model.$formGroup)" matSuffix >priority_high</mat-icon><ngx-mat-datetime-picker #picker8554></ngx-mat-datetime-picker></mat-form-field><mat-form-field id=ci8555 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Reset Guid</mat-label><input 
+ matInput
+ type=text   formControlName=reset_guid   maxlength='255'  name=reset_guid
+  [attr.aria-label]="'Reset Guid'" ><mat-error *ngIf="hasError('reset_guid','maxlength',model.$formGroup)">Please enter 255 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('reset_guid', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('reset_guid', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('reset_guid', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8556 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Activation Guid</mat-label><input 
+ matInput
+ type=text   formControlName=activation_guid   maxlength='255'  name=activation_guid
+  [attr.aria-label]="'Activation Guid'" ><mat-error *ngIf="hasError('activation_guid','maxlength',model.$formGroup)">Please enter 255 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('activation_guid', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('activation_guid', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('activation_guid', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8557 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Notes</mat-label><input 
+ matInput
+ type=text   formControlName=notes   maxlength='255'  name=notes
+  [attr.aria-label]="'Notes'" ><mat-error *ngIf="hasError('notes','maxlength',model.$formGroup)">Please enter 255 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('notes', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('notes', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('notes', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci8558 dibComponent=inputText   style="  "  appearance=standard
+ ><mat-label >Dibuid</mat-label><input 
+ matInput
+ type=text   formControlName=dibuid   maxlength='40'  name=dibuid
+  [attr.aria-label]="'Dibuid'" ><mat-error *ngIf="hasError('dibuid','maxlength',model.$formGroup)">Please enter 40 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('dibuid', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('dibuid', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('dibuid', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></mat-card-content></mat-card></ng-container></div></div></form>
+  `
+                        }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.CrudService }, { type: i2.HttpClient }, { type: i1.UrlService }, { type: i3.Router }, { type: i0.ViewContainerRef }, { type: i1.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [], goToRecord: [], recordPosition: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, checkbox_1.MatCheckboxModule];
+            // Format used for the Intl format functions
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            profileModule = class profileModule {
+                static entry = profileComponent;
+                static ɵfac = function profileModule_Factory(t) { return new (t || profileModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: profileModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+                        { provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },
+                    ], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", profileModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(profileModule, [{
+                    type: core_3.NgModule,
+                    args: [{
+                            imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules],
+                            providers: [
+                                { provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },
+                            ],
+                            declarations: [profileComponent],
+                        }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(profileModule, { declarations: [profileComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, checkbox_1.MatCheckboxModule] }); })();
+        }
+    };
+});

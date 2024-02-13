@@ -1,0 +1,1761 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/select", "@angular/material/autocomplete", "@angular/material/checkbox", "@angular/material/radio", "@angular/material/datepicker", "@angular/material/tabs", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, select_1, autocomplete_1, checkbox_1, radio_1, datepicker_1, core_4, tabs_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, _c0, _c1, _c2, _c3, _c4, importsRequired, dibexDropinbaseServicesComponent, containerModules, fullDateTimeOptions, dibexDropinbaseServicesModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexDropinbaseServicesComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 148);
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_19_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 149);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabThisContainer", "dibexDropinbaseServices.tabThisContainer", "Values On This Container"));
+    } }
+    function dibexDropinbaseServicesComponent_mat_option_34_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 150);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r33 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r33.id);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", item_r33.id_display_value, "");
+    } }
+    function dibexDropinbaseServicesComponent_button_42_Template(rf, ctx) { if (rf & 1) {
+        const _r35 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 151);
+        i0.ɵɵlistener("click", function dibexDropinbaseServicesComponent_button_42_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r35); const ctx_r34 = i0.ɵɵnextContext(); const _r4 = i0.ɵɵreference(40); const _r5 = i0.ɵɵreference(41); ctx_r34.clearDropdown(ctx_r34.model.modelItems.autocomplete.formControl, $event, ctx_r34.lists.list5132, _r4); return i0.ɵɵresetView(_r5.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexDropinbaseServicesComponent_mat_progress_bar_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 148);
+    } }
+    function dibexDropinbaseServicesComponent_mat_option_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 152);
+    } if (rf & 2) {
+        const item_r36 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r36.id == "0"))("value", item_r36)("innerHtml", item_r36.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexDropinbaseServicesComponent_span_239_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵelement(1, "span", 153);
+        i0.ɵɵpipe(2, "safeHtml");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("innerHTML", !ctx_r11.getValue("inputDate") ? "Sorry, first provide an <b>inputDate</b> above" : i0.ɵɵpipeBind1(2, 1, (ctx_r11.getValue("inputDate") <= ctx_r11.getClientData("dibDate") ? "Ooops, it already expired on " : "It expires on ") + ctx_r11.getValue("inputDate")), i0.ɵɵsanitizeHtml);
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_265_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 154);
+    } if (rf & 2) {
+        const ctx_r13 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r13.getTabTitle("tabForm", "dibexDropinbaseServices.tabForm", "Values on Form"));
+    } }
+    function dibexDropinbaseServicesComponent_button_402_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 155)(1, "span", 7);
+        i0.ɵɵtext(2, "You found me - set my color in the form :)");
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r14 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(2, _c1, ctx_r14.hasValue("color", "dibexDibNgServicesForm") ? ctx_r14.getValue("color", "dibexDibNgServicesForm") : "grey"));
+        i0.ɵɵattribute("aria-label", "You found me - set my color in the form :)");
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_406_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 156);
+    } if (rf & 2) {
+        const ctx_r17 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r17.getTabTitle("tabGrid", "dibexDropinbaseServices.tabGrid", "Values on Grid"));
+    } }
+    function dibexDropinbaseServicesComponent_span_479_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span", 157)(1, "b");
+        i0.ɵɵtext(2);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtext(3, " joined on ");
+        i0.ɵɵelementStart(4, "b");
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtext(6, ".");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r18 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx_r18.resolve("clickedLast_dibexDibNgServicesGrid_first_name"));
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate(ctx_r18.resolve("clickedLast_dibexDibNgServicesGrid_join_date"));
+    } }
+    function dibexDropinbaseServicesComponent_button_480_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 158)(1, "span", 7);
+        i0.ɵɵtext(2, "You found me");
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        i0.ɵɵattribute("aria-label", "You found me");
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_489_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 159);
+    } if (rf & 2) {
+        const ctx_r21 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r21.getTabTitle("tabFillInValues", "dibexDropinbaseServices.tabFillInValues", "Fill In Values"));
+    } }
+    function dibexDropinbaseServicesComponent_button_523_Template(rf, ctx) { if (rf & 1) {
+        const _r38 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 151);
+        i0.ɵɵlistener("click", function dibexDropinbaseServicesComponent_button_523_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r38); const ctx_r37 = i0.ɵɵnextContext(); const _r22 = i0.ɵɵreference(521); const _r23 = i0.ɵɵreference(522); ctx_r37.clearDropdown(ctx_r37.model.modelItems.selectStaffId.formControl, $event, ctx_r37.lists.list5246, _r22); return i0.ɵɵresetView(_r23.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexDropinbaseServicesComponent_mat_progress_bar_526_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 148);
+    } }
+    function dibexDropinbaseServicesComponent_mat_option_527_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 152);
+    } if (rf & 2) {
+        const item_r39 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r39.id == "0"))("value", item_r39)("innerHtml", item_r39.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_574_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 160);
+    } if (rf & 2) {
+        const ctx_r29 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r29.getTabTitle("tabEnvOtherValues", "dibexDropinbaseServices.tabEnvOtherValues", "Environment and Other Values"));
+    } }
+    function dibexDropinbaseServicesComponent_ng_template_657_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 161);
+    } if (rf & 2) {
+        const ctx_r31 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r31.getTabTitle("tabSetClientData", "dibexDropinbaseServices.tabSetClientData", "Client Data"));
+    } }
+    function dibexDropinbaseServicesComponent_span_683_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "span", 162);
+        i0.ɵɵpipe(1, "safeHtml");
+    } if (rf & 2) {
+        const ctx_r32 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(1, 1, ctx_r32.getHtml("spanNextDemoPrerequisites")), i0.ɵɵsanitizeHtml);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i17 = card_1_1;
+            },
+            function (select_1_1) {
+                select_1 = select_1_1;
+                i15 = select_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (checkbox_1_1) {
+                checkbox_1 = checkbox_1_1;
+                i9 = checkbox_1_1;
+            },
+            function (radio_1_1) {
+                radio_1 = radio_1_1;
+                i18 = radio_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i10 = datepicker_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i19 = tabs_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i12 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            },
+            function (i14_1) {
+                i14 = i14_1;
+            },
+            function (i16_1) {
+                i16 = i16_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "background-color": a0 }; };
+            _c2 = function (a0) { return { "dib-editor": a0 }; };
+            _c3 = function (a1) { return { changeUrl: false, originContainer: a1 }; };
+            _c4 = function (a3) { return { containerName: "dibexDibNgServicesGrid", portId: 5145, portAlias: "main", options: a3 }; };
+            importsRequired = [];
+            dibexDropinbaseServicesComponent = class dibexDropinbaseServicesComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 210, name: 'dibexDropinbaseServices', subContainerItemAliases: [], allChildContainers: ["dibexDibNgServicesForm", "dibexDibNgServicesGrid"], refreshChildContainers: { "tabSetClientData": [''], "tabForm": ['dibexDibNgServicesForm*5155'], "tabGrid": ['dibexDibNgServicesGrid*5223'], "tabThisContainer": [''], "tabEnvOtherValues": [''], "tabFillInValues": [''], "_": [] }, dropin: 'plain', activeFilter: null, configs: { "alias": "dibexDibNgServicesForm", "selected": "dibexDibNgServicesGrid", "clickedLast": "dibexDibNgServicesGrid" }, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5132 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexDropinbaseServices&containerItemId=5132", null, null, 40);
+                    this.lists.list5246 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexDropinbaseServices&containerItemId=5246", null, null, 40);
+                    this.lists.list5130 = new shared_2.DibEnumList(this.translationService, this.eventService, 'enum', ['A', 'B', 'C', 'D'], false);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexDropinbaseServices');
+                    this.containerName = 'dibexDropinbaseServices'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { enum: { itemId: 5130, type: 'text', fieldAlias: 'enum', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'enum', default: '', dataType: 'text', contentType: 'text', changeUrl: false,
+                            enum: ['A', 'B', 'C', 'D'] }, autocomplete: { itemId: 5132, type: 'select', fieldAlias: 'autocomplete', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'autocomplete', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5132 }, checkbox: { itemId: 5136, type: 'boolean', fieldAlias: 'checkbox', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, radioGroup: { itemId: 5137, type: 'text', fieldAlias: 'radioGroup', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker: { itemId: 5141, type: 'date', fieldAlias: 'datepicker', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputDate: { itemId: 5142, type: 'date', fieldAlias: 'inputDate', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'inputDate', default: '', dataType: 'date', contentType: 'text', changeUrl: false }, selectStaffId: { itemId: 5246, type: 'select', fieldAlias: 'selectStaffId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5246 }, userFullName: { itemId: 5272, type: 'text', fieldAlias: 'userFullName', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '@{env_user_fullname}', dataType: 'text', contentType: 'text', changeUrl: false }, monthEnd: { itemId: 5273, type: 'date', fieldAlias: 'monthEnd', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '@{monthEnd}', dataType: 'date', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('enum', this.model.modelItems.enum.formControl);
+                    this.model.$formGroup.addControl('autocomplete', this.model.modelItems.autocomplete.formControl);
+                    this.model.$formGroup.addControl('checkbox', this.model.modelItems.checkbox.formControl);
+                    this.model.$formGroup.addControl('radioGroup', this.model.modelItems.radioGroup.formControl);
+                    this.model.$formGroup.addControl('datepicker', this.model.modelItems.datepicker.formControl);
+                    this.model.$formGroup.addControl('inputDate', this.model.modelItems.inputDate.formControl);
+                    this.model.$formGroup.addControl('selectStaffId', this.model.modelItems.selectStaffId.formControl);
+                    this.model.$formGroup.addControl('userFullName', this.model.modelItems.userFullName.formControl);
+                    this.model.$formGroup.addControl('monthEnd', this.model.modelItems.monthEnd.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('spanDisabled', `<i>[dibDisabled]="getValue('enum')==='A'"</i>`);
+                    this.setInnerHtml('spanHidden', `<i>[hidden]="getValue('enum')==='B'"</i>`);
+                    this.setInnerHtml('span', `<u>NOTE</u>: this entire card will be:<br>disabled when <b>getValue('radioGroup')==='Pear'</b>
+<br>hidden when <b>getValue('radioGroup')==='Hide Demo'</b>`);
+                    this.setInnerHtml('spanSentenceDemo', `<i>See the <b>Environment and Other Values</b> tab for obtaining datetime.</i>`);
+                    this.setInnerHtml('span2', `<i>shared.action.set-custom?fruit=Apple&valueEnum=B</i>`);
+                    this.setInnerHtml('span3', `<i>shared.action.set-custom?containerName=dibexDibNgServicesForm&fruit=@&#123;value_self_radioGroup&#125;&valueEnum=@&#123;value_self_enum&#125;</i>`);
+                    this.setInnerHtml('spanImportant', `References to values on containers that are not yet loaded will result in errors being logged in the Console (press F12).
+<br>When the main container is loaded, the form is loaded in a subcontainer with it. All references to the form will then work.
+<br>References to the grid will only work once the grid is loaded via its port.
+<br>Also note, when switching tabs the HTML is removed from the DOM, but not the JavaScript models which holds the values of items and enables references to them.`);
+                    this.setInnerHtml('spanInstructions', `Also select a <b>Filter Position</b> under 'Values on Grid', and then select any record in the grid.
+<br>
+<br><span style="color:red">Note, the buttons below will not be enabled unless their conditions are met:</span>
+<br>Expression Fields button: <span style="color:red">[dibDisabled]="!getValue('selectStaffId') || !getValue('positionFilter', 'dibexDibNgServicesGrid')"</span>
+<br>Submit Url Fields button: <span style="color:red">[dibDisabled]="!getValue('first_name','dibexDibNgServicesForm') || !resolve('clickedLast_dibexDibNgServicesGrid_id')"</span>`);
+                    this.setInnerHtml('spanExplanation2', `The <b>Submit Url</b> field in Item and Container Events can have Fill In values.
+<br>Since clientData is sent to the server and is normally sufficient for server-side actions, Fill In values are often used for client-side actions.
+<br>
+<br>The button below has the following string in the item event's <b>Submit Url</b> field:<br><b>'shared.action.set-value?dibexDibNgServicesForm.first_name=@&#123;clickedLast_dibexDibNgServicesGrid_first_name&#125;'</b>
+<br>
+<br>It will set the first_name field on the form to the first_name of the last clicked record in the grid.
+<br>Again, these values are resolved and then the action is performed. Off-course multiple values can be set using the & operator in the action string.
+<br>The <b>set-value</b> action does not require the target item to have an alias.
+<br>Note, Fill Ins are available for any string in the Submit Url fields (item events, container events, server-side actions, etc).`);
+                    this.setInnerHtml('span9', `When the Port is set on a component (normally a button), the <b>Expression</b> field can contain a query string that will be added to the URL.
+<br>
+<br>The button below has the following string in the <b>Expression</b> field:<br><b>'?primary_id=@&#123;value_self_staffId&#125;&dibexStaffForm.selectedPosition=@&#123;value_dibexDibNgServicesGrid_positionFilter&#125;'</b>
+<br>
+<br>These values are resolved and then added to the URL when the popup form is opened.
+<br>The <b>primary_id=</b> part navigates to the selected Record.
+<br>The <b>dibexStaffForm.selectedPosition=</b> part sets a value on the popup. Note, to make this work <b>selectedPosition</b> has an alias and is an unbound field.
+<br>Bound fields (like first_name) obtain their values from the data-source request, or from defaults (on new records).`);
+                    this.setInnerHtml('spanExplanation3', `<b>Form Defaults</b> can be set on Form Components, and they are resolved on any type of container where you can include a Form Component (form, grid, plain, etc).
+<br>On form and editable grid containers, they are resolved only when a new record is opened (set <b>?record=new</b> in the URL on forms).
+<br>On any other container type, and on editable grids but not under 'columns', they are resolved when the container is opened.
+<br>On editable grids showing related records on forms via a filter, <b>Form Defaults</b> are often used to insert the value of the foreign key field.
+<br>
+<br>On the grid, the following fields have form defaults:<br>Filter Position: <b>Employee</b> - <i>hard-coded value</i>
+<br>Join Date: <b>@&#123;dibDate&#125;</b>
+<br>Position: <b>@&#123;value_self_positionFilter&#125;</b>
+<br>
+<br>On the form, the following field has a default:<br>Position: <b>@&#123;value_dibexDibNgServicesGrid_positionFilter&#125;</b>
+<br>
+<br>The following inputs are on this 'plain' container and are therefore resolved when the container first loads:`);
+                    this.setInnerHtml('spanDemoGrid', `<i>Select 'Manager' in the grid to make the sentence appear, and then select any record.</i>
+<br>Sentence:`);
+                    this.setInnerHtml('h2', `Dropinbase Services and Angular Directives`);
+                    this.setInnerHtml('spanSetCustomClientData', `<h2>Set Global Custom Client Data</h2>
+shared.action.set-custom?myVar=AAA&myVar2=BBB
+<h2>Set Container Custom Client Data</h2>
+<i>These values will only be available for the named container. Setting of the value will only be successful if the container has been loaded.</i>
+<br>shared.action.set-custom?containerName=myContainer&myVar=AAA&myVar2=BBB`);
+                    this.setInnerHtml('spanNextDemoPrerequisites', `For the next demo, first select values for <b>enum</b> and <b>radioGroup</b> on the first tab`);
+                    this.setInnerHtml('span10', `<i>shared.action.set-custom?containerName=staffForm&position=Employee</i>`);
+                    this.setInnerHtml('spanDemo', `<h2>Demos</h2>`);
+                    this.setInnerHtml('spanCaption', `radioGroup`);
+                    this.setInnerHtml('spanColor', `<i>[ngStyle]="&#123;'background-color': getValue('radioGroup')==='Apple' ? 'crimson' : (<br>getValue('radioGroup')==='Pear' ? 'yellowgreen' : (<br>getValue('radioGroup')==='Pawpaw' ? 'yellow' : 'grey'))&#125;"</i>`);
+                    this.setInnerHtml('spanDisabled', `<i>[dibDisabled]="getValue('enum')==='A'"</i>`);
+                    this.setInnerHtml('spanHidden', `<i>[hidden]="getValue('enum')==='B'"</i>`);
+                    this.setInnerHtml('span', `<u>NOTE</u>: this entire card will be:<br>disabled when <b>getValue('radioGroup')==='Pear'</b>
+<br>hidden when <b>getValue('radioGroup')==='Hide Demo'</b>`);
+                    this.setInnerHtml('spanSentenceDemo', `<i>See the <b>Environment and Other Values</b> tab for obtaining datetime.</i>`);
+                    this.setInnerHtml('span2', `<i>shared.action.set-custom?fruit=Apple&valueEnum=B</i>`);
+                    this.setInnerHtml('span3', `<i>shared.action.set-custom?containerName=dibexDibNgServicesForm&fruit=@&#123;value_self_radioGroup&#125;&valueEnum=@&#123;value_self_enum&#125;</i>`);
+                    this.setInnerHtml('spanImportant', `References to values on containers that are not yet loaded will result in errors being logged in the Console (press F12).
+<br>When the main container is loaded, the form is loaded in a subcontainer with it. All references to the form will then work.
+<br>References to the grid will only work once the grid is loaded via its port.
+<br>Also note, when switching tabs the HTML is removed from the DOM, but not the JavaScript models which holds the values of items and enables references to them.`);
+                    this.setInnerHtml('spanInstructions', `Also select a <b>Filter Position</b> under 'Values on Grid', and then select any record in the grid.
+<br>
+<br><span style="color:red">Note, the buttons below will not be enabled unless their conditions are met:</span>
+<br>Expression Fields button: <span style="color:red">[dibDisabled]="!getValue('selectStaffId') || !getValue('positionFilter', 'dibexDibNgServicesGrid')"</span>
+<br>Submit Url Fields button: <span style="color:red">[dibDisabled]="!getValue('first_name','dibexDibNgServicesForm') || !resolve('clickedLast_dibexDibNgServicesGrid_id')"</span>`);
+                    this.setInnerHtml('spanExplanation2', `The <b>Submit Url</b> field in Item and Container Events can have Fill In values.
+<br>Since clientData is sent to the server and is normally sufficient for server-side actions, Fill In values are often used for client-side actions.
+<br>
+<br>The button below has the following string in the item event's <b>Submit Url</b> field:<br><b>'shared.action.set-value?dibexDibNgServicesForm.first_name=@&#123;clickedLast_dibexDibNgServicesGrid_first_name&#125;'</b>
+<br>
+<br>It will set the first_name field on the form to the first_name of the last clicked record in the grid.
+<br>Again, these values are resolved and then the action is performed. Off-course multiple values can be set using the & operator in the action string.
+<br>The <b>set-value</b> action does not require the target item to have an alias.
+<br>Note, Fill Ins are available for any string in the Submit Url fields (item events, container events, server-side actions, etc).`);
+                    this.setInnerHtml('span9', `When the Port is set on a component (normally a button), the <b>Expression</b> field can contain a query string that will be added to the URL.
+<br>
+<br>The button below has the following string in the <b>Expression</b> field:<br><b>'?primary_id=@&#123;value_self_staffId&#125;&dibexStaffForm.selectedPosition=@&#123;value_dibexDibNgServicesGrid_positionFilter&#125;'</b>
+<br>
+<br>These values are resolved and then added to the URL when the popup form is opened.
+<br>The <b>primary_id=</b> part navigates to the selected Record.
+<br>The <b>dibexStaffForm.selectedPosition=</b> part sets a value on the popup. Note, to make this work <b>selectedPosition</b> has an alias and is an unbound field.
+<br>Bound fields (like first_name) obtain their values from the data-source request, or from defaults (on new records).`);
+                    this.setInnerHtml('spanExplanation3', `<b>Form Defaults</b> can be set on Form Components, and they are resolved on any type of container where you can include a Form Component (form, grid, plain, etc).
+<br>On form and editable grid containers, they are resolved only when a new record is opened (set <b>?record=new</b> in the URL on forms).
+<br>On any other container type, and on editable grids but not under 'columns', they are resolved when the container is opened.
+<br>On editable grids showing related records on forms via a filter, <b>Form Defaults</b> are often used to insert the value of the foreign key field.
+<br>
+<br>On the grid, the following fields have form defaults:<br>Filter Position: <b>Employee</b> - <i>hard-coded value</i>
+<br>Join Date: <b>@&#123;dibDate&#125;</b>
+<br>Position: <b>@&#123;value_self_positionFilter&#125;</b>
+<br>
+<br>On the form, the following field has a default:<br>Position: <b>@&#123;value_dibexDibNgServicesGrid_positionFilter&#125;</b>
+<br>
+<br>The following inputs are on this 'plain' container and are therefore resolved when the container first loads:`);
+                    this.setInnerHtml('spanDemoGrid', `<i>Select 'Manager' in the grid to make the sentence appear, and then select any record.</i>
+<br>Sentence:`);
+                    this.setInnerHtml('h2', `Dropinbase Services and Angular Directives`);
+                    this.setInnerHtml('spanSetCustomClientData', `<h2>Set Global Custom Client Data</h2>
+shared.action.set-custom?myVar=AAA&myVar2=BBB
+<h2>Set Container Custom Client Data</h2>
+<i>These values will only be available for the named container. Setting of the value will only be successful if the container has been loaded.</i>
+<br>shared.action.set-custom?containerName=myContainer&myVar=AAA&myVar2=BBB`);
+                    this.setInnerHtml('spanNextDemoPrerequisites', `For the next demo, first select values for <b>enum</b> and <b>radioGroup</b> on the first tab`);
+                    this.setInnerHtml('span10', `<i>shared.action.set-custom?containerName=staffForm&position=Employee</i>`);
+                    this.setInnerHtml('spanDemo', `<h2>Demos</h2>`);
+                    this.setInnerHtml('spanCaption', `radioGroup`);
+                    this.setInnerHtml('spanColor', `<i>[ngStyle]="&#123;'background-color': getValue('radioGroup')==='Apple' ? 'crimson' : (<br>getValue('radioGroup')==='Pear' ? 'yellowgreen' : (<br>getValue('radioGroup')==='Pawpaw' ? 'yellow' : 'grey'))&#125;"</i>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnViewDesign", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/General/gotoDesigner?container=dibexDropinbaseServices", itemAlias: "btnViewDesign", waitForCompletion: false, containerName: "dibexDropinbaseServices", handlers: [] }, this.clientData, { itemEventId: 'ie255-dib', itemId: '5276', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnSetGlobalClientData", actionType: "click", responseType: 'actions', submitUrl: "shared.action.set-custom?fruit=Apple&valueEnum=B", itemAlias: "btnSetGlobalClientData", waitForCompletion: false, containerName: "dibexDropinbaseServices", handlers: [] }, this.clientData, { itemEventId: 'ie251-dib', itemId: '5208', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnSetContainerClientData", actionType: "click", responseType: 'actions', submitUrl: "shared.action.set-custom?containerName=dibexDibNgServicesForm&fruit=@{value_self_radioGroup}&valueEnum=@{value_self_enum}", itemAlias: "btnSetContainerClientData", waitForCompletion: false, containerName: "dibexDropinbaseServices", handlers: [] }, this.clientData, { itemEventId: 'ie252-dib', itemId: '5209', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnSetFirstName", actionType: "click", responseType: 'actions', submitUrl: "shared.action.set-value?dibexDibNgServicesForm.first_name=@{clickedLast_dibexDibNgServicesGrid_first_name}", itemAlias: "btnSetFirstName", waitForCompletion: false, containerName: "dibexDropinbaseServices", handlers: [] }, this.clientData, { itemEventId: 'ie254-dib', itemId: '5252', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5132 = this.lists.list5132.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5132 = new Date().getTime();
+                    let previousUrlChange5132;
+                    let previousResponse5132;
+                    this.lists.list5132.items = rxjs_1.combineLatest([this.lists.list5132.updatedList$, itemsUpdateSource5132]).pipe(operators_1.tap(() => { this.lists.list5132.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5132 - new Date().getTime()) / 1000;
+                        previousTimeChange5132 = new Date().getTime();
+                        previousUrlChange5132 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5132 = response;
+                            this.lists.list5132.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5132.items.subscribe(records => this.lists.list5132.lastItems = records);
+                    this.lists.list5132.multiSelected = [];
+                    this.lists.list5132.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5132.updatedList$.next([]);
+                        self.lists.list5132.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5132.refresh();
+                    }
+                    else {
+                        self.lists.list5132.searchForm.setValue('');
+                        self.lists.list5132.updatedList$.next(self.lists.list5132.multiSelected);
+                        self.model.modelItems.autocomplete.formControl.setValue(self.lists.list5132.multiSelected);
+                    } };
+                    this.lists.list5132.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5132.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5132.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5132.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5132.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5132.multiSelected = self.removeDuplicateIdsFromArray(lists.list5132.multiSelected);
+                    };
+                    const itemsUpdateSource5246 = this.lists.list5246.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5246 = new Date().getTime();
+                    let previousUrlChange5246;
+                    let previousResponse5246;
+                    this.lists.list5246.items = rxjs_1.combineLatest([this.lists.list5246.updatedList$, itemsUpdateSource5246]).pipe(operators_1.tap(() => { this.lists.list5246.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5246 - new Date().getTime()) / 1000;
+                        previousTimeChange5246 = new Date().getTime();
+                        previousUrlChange5246 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5246 = response;
+                            this.lists.list5246.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5246.items.subscribe(records => this.lists.list5246.lastItems = records);
+                    this.lists.list5246.multiSelected = [];
+                    this.lists.list5246.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5246.updatedList$.next([]);
+                        self.lists.list5246.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5246.refresh();
+                    }
+                    else {
+                        self.lists.list5246.searchForm.setValue('');
+                        self.lists.list5246.updatedList$.next(self.lists.list5246.multiSelected);
+                        self.model.modelItems.selectStaffId.formControl.setValue(self.lists.list5246.multiSelected);
+                    } };
+                    this.lists.list5246.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5246.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5246.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5246.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5246.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5246.multiSelected = self.removeDuplicateIdsFromArray(lists.list5246.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list5132.setupModel(this.model.modelItems.autocomplete.formControl); this.lists.list5246.setupModel(this.model.modelItems.selectStaffId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list5132.dispose();
+                    this.lists.list5246.dispose();
+                    this.lists.list5130.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexDropinbaseServices', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexDropinbaseServices' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexDropinbaseServicesComponent_Factory(t) { return new (t || dibexDropinbaseServicesComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexDropinbaseServicesComponent, selectors: [["dibex-dropinbase-services"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 723, vars: 213, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5274", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "20px 10px", "flex-wrap", "wrap", "align-content", "flex-start"], [3, "dibPort"], ["mat-raised-button", "", "color", "primary", "id", "ci5276", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnViewDesign", "type", "button", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci5275", "dibComponent", "h2"], ["id", "ci5125", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci5143", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexDropinbaseServices", "dibTabGoToParent", "", "dibAutoTabSelection", "5183,5144,5145,5206,5184,5126", "dibAutoTabSelectionAliases", "tabThisContainer,tabForm,tabGrid,tabFillInValues,tabEnvOtherValues,tabSetClientData", 2, "overflow", "auto !important", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "overflow", "auto !important"], ["tabReference5183", ""], ["mat-tab-label", ""], ["id", "ci5183", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "overflow", "auto !important"], ["id", "ci5193", "dibComponent", "comment", 2, "margin", "10px !important"], [1, "dib-comment"], ["id", "ci5131", "dibComponent", "section", 2, "flex", "1 1 0%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "wrap", "align-content", "flex-start"], ["id", "ci5130", "dibComponent", "selectEnum", "item-alias", "enum", "appearance", "standard", 2, "width", "200px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["formControlName", "enum"], [3, "value", 4, "ngFor", "ngForOf"], ["id", "ci5132", "dibComponent", "autocomplete", "item-alias", "autocomplete", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%", "min-width", "150px", "max-width", "300px"], ["type", "text", "matInput", "", "formControlName", "autocomplete", 3, "matAutocomplete"], ["auto5132trigger", "matAutocompleteTrigger", "input5132", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto5132", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci5136", "dibComponent", "checkbox", "formControlName", "checkbox"], ["id", "ci5141", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker", "name", "datepicker", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker5141", ""], ["id", "ci5142", "dibComponent", "inputDate", "item-alias", "inputDate", "appearance", "standard"], ["matInput", "", "type", "date", "formControlName", "inputDate", "name", "inputDate"], ["id", "ci5285", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5286", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5137", "dibComponent", "radioGroup", "name", "radioGroup", "formControlName", "radioGroup", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "5px", "flex", "0 1 0%"], ["id", "ci5138", "dibComponent", "radioButton", "value", "Apple", "name", "radioButton"], ["id", "ci5139", "dibComponent", "radioButton", "value", "Pear", "name", "radioButton1"], ["id", "ci5140", "dibComponent", "radioButton", "value", "Pawpaw", "name", "radioButton2"], ["id", "ci5287", "dibComponent", "radioButton", "value", "Hide Demo", "name", "radioButton3"], ["id", "ci5127", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap"], ["id", "ci5129", "dibComponent", "comment"], ["id", "ci5186", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5128", "dibComponent", "spanInterpolation", "item-alias", "serviceListThisContainer", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px"], ["target", "_blank", "href", "https://angular.io/api/common/DatePipe"], ["target", "_blank", "href", "https://date-fns.org/v2.29.3/docs/format"], ["id", "ci5187", "dibComponent", "div", 2, "padding", "10px !important", "flex", "1 1 0%", "border", "1px solid grey", "border-radius", "8px", 3, "dibDisabled", "hidden"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci5202", "dibComponent", "span", 2, "padding", "10px !important", "border", "1px solid orange", "border-radius", "8px", 3, "innerHtml"], ["id", "ci5203", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5134", "dibComponent", "spanInterpolation", 2, "padding", "10px !important", "flex", "1 1 50%", "border", "1px solid orange", "border-radius", "8px"], [4, "ngIf"], ["id", "ci5204", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["id", "ci5199", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci5194", "dibComponent", "button", "type", "button", 2, "flex", "1 1 50%", 3, "dibDisabled"], ["id", "ci5195", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["id", "ci5196", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci5197", "dibComponent", "button", "type", "button", 2, "flex", "1 1 50%", 3, "hidden"], ["id", "ci5198", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["id", "ci5200", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "id", "ci5201", "dibComponent", "button", "type", "button", 2, "flex", "1 1 50%", 3, "ngStyle"], ["id", "ci5288", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], [2, "display", "flex", "flex-direction", "column", "overflow", "auto !important"], ["tabReference5144", ""], ["id", "ci5144", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "overflow", "auto !important"], ["id", "ci5155", "dibComponent", "subcontainer"], ["parentContainerName", "dibexDropinbaseServices", "subContainerName", "dibexDibNgServicesForm", "subContainerId", "211", "dropinName", "form", 3, "dibPort"], ["id", "ci5179", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci5181", "dibComponent", "comment"], ["id", "ci5190", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5180", "dibComponent", "spanInterpolation", "item-alias", "serviceListFormContainer", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px"], ["id", "ci5191", "dibComponent", "div", 2, "padding", "10px !important", "flex", "1 1 0%", "border", "1px solid grey", "border-radius", "8px"], [2, "display", "flex", "flex-direction", "column"], ["id", "ci5259", "dibComponent", "spanInterpolation"], ["id", "ci5261", "dibComponent", "spanInterpolation", 2, "margin", "10px 0px !important"], ["mat-raised-button", "", "id", "ci5260", "dibComponent", "button", "style", "  ", "type", "button", 3, "ngStyle", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "overflow", "auto !important", 3, "dibTabGoTo"], ["tabReference5145", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci5145", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "overflow", "auto !important"], ["id", "ci5223", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5216", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci5217", "dibComponent", "comment"], ["id", "ci5218", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5219", "dibComponent", "spanInterpolation", "item-alias", "serviceListGridContainer", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px"], ["id", "ci5262", "dibComponent", "div", 2, "padding", "10px !important", "flex", "1 1 0%", "border", "1px solid grey", "border-radius", "8px"], ["id", "ci5265", "dibComponent", "span", 2, "margin", "10px 0px !important", 3, "innerHtml"], ["id", "ci5263", "dibComponent", "spanInterpolation", "style", "  ", 4, "ngIf"], ["mat-raised-button", "", "ngStyle", "{background-color: getValue('color','dibexDibNgServicesForm')}", "id", "ci5264", "dibComponent", "button", "style", "  ", "type", "button", 4, "ngIf"], ["id", "ci5221", "dibComponent", "comment", 2, "color", "red"], ["id", "ci5222", "dibComponent", "span", 3, "innerHtml"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "max-width", "1200px"], ["tabReference5206", ""], ["id", "ci5206", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "max-width", "1200px"], ["id", "ci5205", "dibComponent", "comment", 2, "margin", "10px !important"], ["id", "ci5254", "dibComponent", "section", 2, "flex", "0 1 0%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["id", "ci5246", "dibComponent", "autocomplete", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex", "0 1 0%", "align-self", "flex-start"], ["type", "text", "matInput", "", "formControlName", "selectStaffId", 3, "matAutocomplete"], ["auto5246trigger", "matAutocompleteTrigger", "input5246", ""], ["auto5246", "matAutocomplete"], ["id", "ci5248", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5249", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5255", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5224", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci5225", "dibComponent", "button", "type", "button", 3, "dibDisabled", "click"], ["id", "ci5250", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5253", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5251", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci5252", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnSetFirstName", "type", "button", 3, "dibDisabled", "containerPortId"], ["id", "ci5256", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5257", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5272", "dibComponent", "inputText", "appearance", "standard", 2, "width", "200px !important"], ["matInput", "", "type", "text", "formControlName", "userFullName", "name", "userFullName"], ["id", "ci5273", "dibComponent", "inputDate", "appearance", "standard", 2, "width", "200px !important"], ["matInput", "", "type", "date", "formControlName", "monthEnd", "name", "monthEnd"], ["tabReference5184", ""], ["id", "ci5184", "dibComponent", "card", 2, "max-width", "1200px"], ["id", "ci5192", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5133", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci5135", "dibComponent", "comment"], ["id", "ci5189", "dibComponent", "spanInterpolation", "item-alias", "spanserviceListEnvVars", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px"], ["id", "ci5188", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci5185", "dibComponent", "spanInterpolation", "item-alias", "serviceListDates", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "max-width", "1200px"], ["tabReference5126", ""], ["id", "ci5126", "dibComponent", "column", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "max-width", "1200px"], ["id", "ci5207", "dibComponent", "comment", 2, "margin", "10px !important"], ["id", "ci5277", "dibComponent", "span", 2, "padding", "10px !important", "border", "1px solid grey", "border-radius", "8px", 3, "innerHtml"], ["id", "ci5281", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5210", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci5208", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnSetGlobalClientData", "type", "button", 2, "flex", "1 1 50%", 3, "containerPortId"], ["id", "ci5212", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["id", "ci5215", "dibComponent", "spanInterpolation"], ["id", "ci5278", "dibComponent", "span", "style", "  color:red", 3, "innerHtml", 4, "ngIf"], ["id", "ci5211", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important", 3, "dibDisabled"], ["mat-raised-button", "", "color", "primary", "id", "ci5209", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnSetContainerClientData", "type", "button", 2, "flex", "1 1 50%", 3, "containerPortId"], ["id", "ci5213", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["id", "ci5279", "dibComponent", "card", 2, "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5283", "dibComponent", "comment"], ["id", "ci5282", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "align-content", "flex-start", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci5280", "dibComponent", "span", 2, "flex", "1 1 50%", 3, "innerHtml"], ["mode", "indeterminate"], ["tabPortId", "5183", "dibid", "tabThisContainer__caption.5183", 3, "value"], [3, "value"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"], [3, "innerHTML"], ["tabPortId", "5144", "dibid", "tabForm__caption.5144", 3, "value"], ["mat-raised-button", "", "id", "ci5260", "dibComponent", "button", "type", "button", 3, "ngStyle"], ["tabPortId", "5145", "dibid", "tabGrid__caption.5145", 3, "value"], ["id", "ci5263", "dibComponent", "spanInterpolation"], ["mat-raised-button", "", "ngStyle", "{background-color: getValue('color','dibexDibNgServicesForm')}", "id", "ci5264", "dibComponent", "button", "type", "button"], ["tabPortId", "5206", "dibid", "tabFillInValues__caption.5206", 3, "value"], ["tabPortId", "5184", "dibid", "tabEnvOtherValues__caption.5184", 3, "value"], ["tabPortId", "5126", "dibid", "tabSetClientData__caption.5126", 3, "value"], ["id", "ci5278", "dibComponent", "span", 2, "color", "red", 3, "innerHtml"]], template: function dibexDropinbaseServicesComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r40 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexDropinbaseServicesComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexDropinbaseServicesComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "mat-card", 3)(4, "mat-card-content", 4);
+                        i0.ɵɵelementContainerStart(5, 5);
+                        i0.ɵɵelementStart(6, "button", 6)(7, "span", 7);
+                        i0.ɵɵtext(8, "View Design");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "h2", 8)(10, "span");
+                        i0.ɵɵtext(11, "Dropinbase Services and Angular Directives");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(12, "mat-card", 9)(13, "mat-card-content", 10);
+                        i0.ɵɵelementContainerStart(14, 5);
+                        i0.ɵɵelementStart(15, "div", 11)(16, "mat-tab-group", 12)(17, "mat-tab", 13, 14);
+                        i0.ɵɵtemplate(19, dibexDropinbaseServicesComponent_ng_template_19_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(20, "div", 16);
+                        i0.ɵɵelementContainerStart(21, 5);
+                        i0.ɵɵelementStart(22, "span", 17)(23, "div", 18);
+                        i0.ɵɵtext(24, " Having live references to values anywhere in the app, even in Client Data, provides powerful possibilities when combined with directives like *ngIf or [ngStyle]. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(25, "mat-card", 19)(26, "mat-card-header")(27, "mat-card-title");
+                        i0.ɵɵtext(28, "Select Values");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(29, "mat-card-content", 20)(30, "mat-form-field", 21)(31, "mat-label");
+                        i0.ɵɵtext(32, "enum");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(33, "mat-select", 22);
+                        i0.ɵɵtemplate(34, dibexDropinbaseServicesComponent_mat_option_34_Template, 2, 2, "mat-option", 23);
+                        i0.ɵɵpipe(35, "async");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(36, "mat-form-field", 24)(37, "mat-label");
+                        i0.ɵɵtext(38, "autocomplete");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(39, "input", 25, 26);
+                        i0.ɵɵtemplate(42, dibexDropinbaseServicesComponent_button_42_Template, 3, 0, "button", 27);
+                        i0.ɵɵelementStart(43, "mat-autocomplete", 28, 29);
+                        i0.ɵɵlistener("opened", function dibexDropinbaseServicesComponent_Template_mat_autocomplete_opened_43_listener() { return ctx.lists.list5132.refresh(); });
+                        i0.ɵɵtemplate(45, dibexDropinbaseServicesComponent_mat_progress_bar_45_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(46, dibexDropinbaseServicesComponent_mat_option_46_Template, 1, 5, "mat-option", 30);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(47, "mat-checkbox", 31);
+                        i0.ɵɵtext(48, " checkbox ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(49, "mat-form-field", 32)(50, "mat-label");
+                        i0.ɵɵtext(51, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(52, "input", 33);
+                        i0.ɵɵlistener("focus", function dibexDropinbaseServicesComponent_Template_input_focus_52_listener() { i0.ɵɵrestoreView(_r40); const _r10 = i0.ɵɵreference(55); return i0.ɵɵresetView(_r10.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(53, "mat-datepicker-toggle", 34)(54, "mat-datepicker", null, 35);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(56, "mat-form-field", 36)(57, "mat-label");
+                        i0.ɵɵtext(58, "inputDate");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(59, "input", 37);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(60, "div", 38);
+                        i0.ɵɵelementContainerStart(61, 5);
+                        i0.ɵɵelement(62, "span", 39);
+                        i0.ɵɵpipe(63, "safeHtml");
+                        i0.ɵɵelementStart(64, "mat-radio-group", 40)(65, "mat-radio-button", 41);
+                        i0.ɵɵtext(66, " Apple");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(67, "mat-radio-button", 42);
+                        i0.ɵɵtext(68, " Pear");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(69, "mat-radio-button", 43);
+                        i0.ɵɵtext(70, " Pawpaw");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(71, "mat-radio-button", 44);
+                        i0.ɵɵtext(72, " Hide Demo");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(73, "mat-card", 45)(74, "mat-card-header")(75, "mat-card-title");
+                        i0.ɵɵtext(76, "References to This Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(77, "mat-card-content", 46)(78, "span", 47)(79, "div", 18);
+                        i0.ɵɵtext(80, " Change values and see how the references to them automatically update ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(81, "div", 48);
+                        i0.ɵɵelementContainerStart(82, 5);
+                        i0.ɵɵelementStart(83, "span", 49)(84, "h2");
+                        i0.ɵɵtext(85, "getValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(86, "b");
+                        i0.ɵɵtext(87, "getValue('enum'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(88);
+                        i0.ɵɵelement(89, "br");
+                        i0.ɵɵelementStart(90, "b");
+                        i0.ɵɵtext(91, "getValue('autocomplete'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(92);
+                        i0.ɵɵelementStart(93, "i");
+                        i0.ɵɵtext(94, "returns the primary key value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(95, "br");
+                        i0.ɵɵelementStart(96, "b");
+                        i0.ɵɵtext(97, "getValue('checkbox'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(98);
+                        i0.ɵɵelement(99, "br");
+                        i0.ɵɵelementStart(100, "b");
+                        i0.ɵɵtext(101, "getValue('inputDate'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(102);
+                        i0.ɵɵelement(103, "br");
+                        i0.ɵɵelementStart(104, "b");
+                        i0.ɵɵtext(105, "getValue('radioGroup'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(106);
+                        i0.ɵɵelement(107, "br")(108, "br");
+                        i0.ɵɵelementStart(109, "i");
+                        i0.ɵɵtext(110, "The datepicker component provides a date ");
+                        i0.ɵɵelementStart(111, "b");
+                        i0.ɵɵtext(112, "object");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(113, " which is not useful in for eg. *ngIf comparisons. ");
+                        i0.ɵɵelement(114, "br");
+                        i0.ɵɵtext(115, "For displays in strings it can be piped to any format: ");
+                        i0.ɵɵelementStart(116, "a", 50);
+                        i0.ɵɵtext(117, "https://angular.io/api/common/DatePipe");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(118, "br");
+                        i0.ɵɵtext(119, "For directives like *ngIf, use the Dropinbase dateFormat() function. ");
+                        i0.ɵɵelement(120, "br");
+                        i0.ɵɵelementStart(121, "b");
+                        i0.ɵɵtext(122, "Available formats here: ");
+                        i0.ɵɵelementStart(123, "a", 51);
+                        i0.ɵɵtext(124, "https://date-fns.org/v2.29.3/docs/format");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelement(125, "br")(126, "br");
+                        i0.ɵɵelementStart(127, "b");
+                        i0.ɵɵtext(128, "getValue('datepicker'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(129);
+                        i0.ɵɵelementStart(130, "i");
+                        i0.ɵɵtext(131, "the raw object");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(132, "br");
+                        i0.ɵɵelementStart(133, "b");
+                        i0.ɵɵtext(134, "getValue('datepicker') | date:'yyyy-MM-dd':");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(135);
+                        i0.ɵɵpipe(136, "date");
+                        i0.ɵɵelementStart(137, "i");
+                        i0.ɵɵtext(138, "piped to yyyy-MM-dd format");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(139, "br");
+                        i0.ɵɵelementStart(140, "b");
+                        i0.ɵɵtext(141, "formatDate('datepicker', 'yyyy-MM-dd'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(142);
+                        i0.ɵɵelementStart(143, "i");
+                        i0.ɵɵtext(144, "using formatDate() function");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(145, "br");
+                        i0.ɵɵelementStart(146, "b");
+                        i0.ɵɵtext(147, "formatDate('inputDate', 'yyyy-MM-dd'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(148);
+                        i0.ɵɵelementStart(149, "i");
+                        i0.ɵɵtext(150, "formatDate() function works with any date field component");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(151, "h2");
+                        i0.ɵɵtext(152, "getDisplayValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(153, "b");
+                        i0.ɵɵtext(154, "getDisplayValue('autocomplete'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(155);
+                        i0.ɵɵelementStart(156, "i");
+                        i0.ɵɵtext(157, "for dropdowns only - returns the display value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(158, "h2");
+                        i0.ɵɵtext(159, "getRawValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(160, "b");
+                        i0.ɵɵtext(161, "getRawValue('autocomplete')|json :");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(162);
+                        i0.ɵɵpipe(163, "json");
+                        i0.ɵɵelementStart(164, "i");
+                        i0.ɵɵtext(165, "for dropdowns only - returns the object (piped to JSON)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(166, "br");
+                        i0.ɵɵelementStart(167, "b");
+                        i0.ɵɵtext(168, "getRawValue('autocomplete').id_display_value: ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(169);
+                        i0.ɵɵelementStart(170, "i");
+                        i0.ɵɵtext(171, "for dropdowns only - returns the dropdown's display value; same as getDisplayValue('autocomplete')");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(172, "br");
+                        i0.ɵɵelementStart(173, "b");
+                        i0.ɵɵtext(174, "getRawValue('autocomplete').id:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(175);
+                        i0.ɵɵelementStart(176, "i");
+                        i0.ɵɵtext(177, "for dropdowns only - returns the dropdown's id value; same as getValue('autocomplete')");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(178, "h2");
+                        i0.ɵɵtext(179, "resolve");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(180, "b");
+                        i0.ɵɵtext(181, "resolve('value_self_enum'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(182);
+                        i0.ɵɵelement(183, "br");
+                        i0.ɵɵelementStart(184, "b");
+                        i0.ɵɵtext(185, "resolve('value_self_datepicker'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(186);
+                        i0.ɵɵelementStart(187, "i");
+                        i0.ɵɵtext(188, "note this works, even if alias is not ticked!");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(189, "br");
+                        i0.ɵɵelementStart(190, "b");
+                        i0.ɵɵtext(191, "resolve('self_enum'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(192);
+                        i0.ɵɵelementStart(193, "i");
+                        i0.ɵɵtext(194, "shorthand for value_self_enum");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(195, "br")(196, "br");
+                        i0.ɵɵelementStart(197, "b");
+                        i0.ɵɵtext(198, "resolve('alias_self_enum'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(199);
+                        i0.ɵɵelementStart(200, "i");
+                        i0.ɵɵtext(201, "works only with items where alias is ticked, ie included in clientData");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(202, "br");
+                        i0.ɵɵelementStart(203, "b");
+                        i0.ɵɵtext(204, "resolve('alias_self_datepicker'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(205);
+                        i0.ɵɵelementStart(206, "i");
+                        i0.ɵɵtext(207, "always undefined, because datepicker alias is not ticked!");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(208, "h2");
+                        i0.ɵɵtext(209, "hasValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(210, "b");
+                        i0.ɵɵtext(211, "hasValue('enum'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(212);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(213, "div", 52)(214, "mat-toolbar")(215, "mat-toolbar-row")(216, "span");
+                        i0.ɵɵtext(217, "Demo");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(218, "div", 53);
+                        i0.ɵɵelementContainerStart(219, 5);
+                        i0.ɵɵelement(220, "span", 54);
+                        i0.ɵɵpipe(221, "safeHtml");
+                        i0.ɵɵelementStart(222, "div", 55);
+                        i0.ɵɵelementContainerStart(223, 5);
+                        i0.ɵɵelementStart(224, "span", 56);
+                        i0.ɵɵtext(225, "Greetings ");
+                        i0.ɵɵelementStart(226, "b");
+                        i0.ɵɵtext(227);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(228);
+                        i0.ɵɵelement(229, "br");
+                        i0.ɵɵtext(230);
+                        i0.ɵɵelement(231, "br");
+                        i0.ɵɵtext(232, "Check the checkbox to view its expiry date.");
+                        i0.ɵɵelement(233, "br");
+                        i0.ɵɵtext(234, "Note, the date and time is ");
+                        i0.ɵɵelementStart(235, "b");
+                        i0.ɵɵtext(236);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(237, ".");
+                        i0.ɵɵelement(238, "br");
+                        i0.ɵɵtemplate(239, dibexDropinbaseServicesComponent_span_239_Template, 3, 3, "span", 57);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(240, "span", 58);
+                        i0.ɵɵpipe(241, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(242, "div", 59);
+                        i0.ɵɵelementContainerStart(243, 5);
+                        i0.ɵɵelementStart(244, "button", 60)(245, "span", 7);
+                        i0.ɵɵtext(246, "Disabled when enum='A'");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(247, "span", 61);
+                        i0.ɵɵpipe(248, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(249, "div", 62);
+                        i0.ɵɵelementContainerStart(250, 5);
+                        i0.ɵɵelementStart(251, "button", 63)(252, "span", 7);
+                        i0.ɵɵtext(253, "Hidden when enum='B'");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(254, "span", 64);
+                        i0.ɵɵpipe(255, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(256, "div", 65);
+                        i0.ɵɵelementContainerStart(257, 5);
+                        i0.ɵɵelementStart(258, "button", 66)(259, "span", 7);
+                        i0.ɵɵtext(260, "Fruit Color");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(261, "span", 67);
+                        i0.ɵɵpipe(262, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(263, "mat-tab", 68, 69);
+                        i0.ɵɵtemplate(265, dibexDropinbaseServicesComponent_ng_template_265_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(266, "div", 70);
+                        i0.ɵɵelementContainerStart(267, 5);
+                        i0.ɵɵelementStart(268, "div", 71);
+                        i0.ɵɵelementContainer(269, 72);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(270, "mat-card", 73)(271, "mat-card-header")(272, "mat-card-title");
+                        i0.ɵɵtext(273, "References to Values on Form");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(274, "mat-card-content", 46)(275, "span", 74)(276, "div", 18);
+                        i0.ɵɵtext(277, " Note, the references below are not on the form above. They demonstrate how to reference values on any other container. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(278, "div", 75);
+                        i0.ɵɵelementContainerStart(279, 5);
+                        i0.ɵɵelementStart(280, "span", 76)(281, "h2");
+                        i0.ɵɵtext(282, "getValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(283, "br");
+                        i0.ɵɵelementStart(284, "b");
+                        i0.ɵɵtext(285, "getValue('first_name', 'dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(286);
+                        i0.ɵɵelement(287, "br");
+                        i0.ɵɵelementStart(288, "b");
+                        i0.ɵɵtext(289, "formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(290);
+                        i0.ɵɵelement(291, "br");
+                        i0.ɵɵelementStart(292, "b");
+                        i0.ɵɵtext(293, "formatDate('join_date', 'yyyy-w', 'dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(294);
+                        i0.ɵɵelementStart(295, "h2");
+                        i0.ɵɵtext(296, "getDisplayValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(297, "b");
+                        i0.ɵɵtext(298, "getDisplayValue('manager_id', 'dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(299);
+                        i0.ɵɵelementStart(300, "i");
+                        i0.ɵɵtext(301, "for dropdowns only - returns the dropdown's display value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(302, "h2");
+                        i0.ɵɵtext(303, "getRawValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(304, "b");
+                        i0.ɵɵtext(305, "getRawValue('manager_id', 'dibexDibNgServicesForm')|json :");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(306);
+                        i0.ɵɵpipe(307, "json");
+                        i0.ɵɵelementStart(308, "i");
+                        i0.ɵɵtext(309, "for dropdowns only - returns the object (piped to JSON)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(310, "br");
+                        i0.ɵɵelementStart(311, "b");
+                        i0.ɵɵtext(312, "!!getValue('manager_id', 'dibexDibNgServicesForm') ? getRawValue('manager_id', 'dibexDibNgServicesForm').id_display_value : 'none':");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(313);
+                        i0.ɵɵelementStart(314, "i");
+                        i0.ɵɵtext(315, "Note, to avoid errors, we first need to check if the element exists.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(316, "h2");
+                        i0.ɵɵtext(317, "resolve");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(318, "b");
+                        i0.ɵɵtext(319, "resolve('value_dibexDibNgServicesForm_first_name'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(320);
+                        i0.ɵɵelement(321, "br");
+                        i0.ɵɵelementStart(322, "b");
+                        i0.ɵɵtext(323, "resolve('value_dibexDibNgServicesForm_position'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(324);
+                        i0.ɵɵelementStart(325, "i");
+                        i0.ɵɵtext(326, "note this works, even if alias is not ticked!");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(327, "br");
+                        i0.ɵɵelementStart(328, "b");
+                        i0.ɵɵtext(329, "resolve('value_dibexDibNgServicesForm_color'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(330);
+                        i0.ɵɵelementStart(331, "i");
+                        i0.ɵɵtext(332, "note this works, even if alias is not ticked!");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(333, "br");
+                        i0.ɵɵelementStart(334, "b");
+                        i0.ɵɵtext(335, "resolve('self_first_name', 'dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(336);
+                        i0.ɵɵelementStart(337, "i");
+                        i0.ɵɵtext(338, "implies the use of value_");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(339, "br")(340, "br");
+                        i0.ɵɵelementStart(341, "b");
+                        i0.ɵɵtext(342, "resolve('alias_dibexDibNgServicesForm_first_name'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(343);
+                        i0.ɵɵelementStart(344, "i");
+                        i0.ɵɵtext(345, "works, because first_name has an alias");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(346, "br");
+                        i0.ɵɵelementStart(347, "b");
+                        i0.ɵɵtext(348, "resolve('alias_dibexDibNgServicesForm_color'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(349);
+                        i0.ɵɵelementStart(350, "i");
+                        i0.ɵɵtext(351, "undefined, because color has no alias");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(352, "h2");
+                        i0.ɵɵtext(353, "hasValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(354, "b");
+                        i0.ɵɵtext(355, "hasValue('color','dibexDibNgServicesForm'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(356);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(357, "div", 77)(358, "mat-toolbar")(359, "mat-toolbar-row")(360, "span");
+                        i0.ɵɵtext(361, "Demo");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(362, "div", 78);
+                        i0.ɵɵelementContainerStart(363, 5);
+                        i0.ɵɵelementStart(364, "span", 79)(365, "b");
+                        i0.ɵɵtext(366);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(367, " is a ");
+                        i0.ɵɵelementStart(368, "b");
+                        i0.ɵɵtext(369);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(370, ", ");
+                        i0.ɵɵelement(371, "br");
+                        i0.ɵɵtext(372, "who reports to ");
+                        i0.ɵɵelementStart(373, "b");
+                        i0.ɵɵtext(374);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(375, ".");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(376, "span", 80)(377, "i");
+                        i0.ɵɵtext(378, "When you add a record using the ");
+                        i0.ɵɵelementStart(379, "b");
+                        i0.ɵɵtext(380, "+");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(381, "\u00A0button in the form above, the ");
+                        i0.ɵɵelementStart(382, "b");
+                        i0.ɵɵtext(383, "position");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(384, " field will obtains its default value from the enum on the Grid (next tab):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(385, "br")(386, "br");
+                        i0.ɵɵelementStart(387, "b");
+                        i0.ɵɵtext(388, "@{value_dibexDibNgServicesGrid_positionFilter}:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(389);
+                        i0.ɵɵelement(390, "br")(391, "br");
+                        i0.ɵɵelementStart(392, "i");
+                        i0.ɵɵtext(393, "Below is a button being hidden with an *ngIf, and colored according to the Color field in the form. ");
+                        i0.ɵɵelement(394, "br");
+                        i0.ɵɵtext(395, "Here are its attributes - see if you can make it appear:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(396, "br")(397, "br");
+                        i0.ɵɵelementStart(398, "b");
+                        i0.ɵɵtext(399, "*ngIf=\"equalTo('Employee','position','dibexDibNgServicesForm') && formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm') > resolve('monthStart')\"");
+                        i0.ɵɵelement(400, "br");
+                        i0.ɵɵtext(401, "[ngStyle]=\"{'background-color': getValue('color','dibexDibNgServicesForm')}\"");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵtemplate(402, dibexDropinbaseServicesComponent_button_402_Template, 3, 4, "button", 81);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(403, "mat-tab", 82, 83);
+                        i0.ɵɵtemplate(406, dibexDropinbaseServicesComponent_ng_template_406_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(407, "div", 84);
+                        i0.ɵɵelementContainerStart(408, 5);
+                        i0.ɵɵelementStart(409, "div", 85);
+                        i0.ɵɵelementContainer(410, 5);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(411, "mat-card", 86)(412, "mat-card-header")(413, "mat-card-title");
+                        i0.ɵɵtext(414, "References to Values on Grid");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(415, "mat-card-content", 46)(416, "span", 87)(417, "div", 18);
+                        i0.ɵɵtext(418, " Note, the references below are not on the grid above. They demonstrate how to reference values on any grid. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(419, "div", 88);
+                        i0.ɵɵelementContainerStart(420, 5);
+                        i0.ɵɵelementStart(421, "span", 89)(422, "h2");
+                        i0.ɵɵtext(423, "getValue, getDisplayValue & getRawValue");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(424, "i");
+                        i0.ɵɵtext(425, "Note, the services above can be used only for values outside ");
+                        i0.ɵɵelementStart(426, "b");
+                        i0.ɵɵtext(427, "'columns'");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(428, " on the grid.");
+                        i0.ɵɵelement(429, "br");
+                        i0.ɵɵtext(430, "They work exactly the same as for forms. Here we'll demo only getValue:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(431, "br")(432, "br");
+                        i0.ɵɵelementStart(433, "b");
+                        i0.ɵɵtext(434, "getValue('first_name', 'dibexDibNgServicesGrid'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(435);
+                        i0.ɵɵelementStart(436, "i");
+                        i0.ɵɵtext(437, "does not work!");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(438, "br");
+                        i0.ɵɵelementStart(439, "b");
+                        i0.ɵɵtext(440, "getValue('positionFilter', 'dibexDibNgServicesGrid'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(441);
+                        i0.ɵɵelementStart(442, "i");
+                        i0.ɵɵtext(443, "this works");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(444, "h2");
+                        i0.ɵɵtext(445, "resolve");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(446, "b");
+                        i0.ɵɵtext(447, "resolve('clickedLast_dibexDibNgServicesGrid_id'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(448);
+                        i0.ɵɵelement(449, "br");
+                        i0.ɵɵelementStart(450, "b");
+                        i0.ɵɵtext(451, "resolve('clickedLast_dibexDibNgServicesGrid_first_name'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(452);
+                        i0.ɵɵelement(453, "br")(454, "br");
+                        i0.ɵɵelementStart(455, "b");
+                        i0.ɵɵtext(456, "resolve('selected_dibexDibNgServicesGrid_0_id')");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(457);
+                        i0.ɵɵelement(458, "br");
+                        i0.ɵɵelementStart(459, "b");
+                        i0.ɵɵtext(460, "resolve('selected_dibexDibNgServicesGrid_1_id')");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(461);
+                        i0.ɵɵelementStart(462, "i");
+                        i0.ɵɵtext(463, "need to select at least 2 records in the grid");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(464, "br");
+                        i0.ɵɵelementStart(465, "b");
+                        i0.ɵɵtext(466, "resolve('selected_dibexDibNgServicesGrid_0_first_name')");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(467);
+                        i0.ɵɵelementStart(468, "i");
+                        i0.ɵɵtext(469, "undefined because 'selected' contains only primary key values");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(470, "div", 90)(471, "mat-toolbar")(472, "mat-toolbar-row")(473, "span");
+                        i0.ɵɵtext(474, "Demo");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(475, "div", 78);
+                        i0.ɵɵelementContainerStart(476, 5);
+                        i0.ɵɵelement(477, "span", 91);
+                        i0.ɵɵpipe(478, "safeHtml");
+                        i0.ɵɵtemplate(479, dibexDropinbaseServicesComponent_span_479_Template, 7, 2, "span", 92);
+                        i0.ɵɵtemplate(480, dibexDropinbaseServicesComponent_button_480_Template, 3, 1, "button", 93);
+                        i0.ɵɵpipe(481, "date");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(482, "span", 94)(483, "div", 18);
+                        i0.ɵɵtext(484, " IMPORTANT ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(485, "span", 95);
+                        i0.ɵɵpipe(486, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(487, "mat-tab", 96, 97);
+                        i0.ɵɵtemplate(489, dibexDropinbaseServicesComponent_ng_template_489_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(490, "div", 98);
+                        i0.ɵɵelementContainerStart(491, 5);
+                        i0.ɵɵelementStart(492, "span", 99)(493, "div", 18);
+                        i0.ɵɵtext(494, " Dropinbase ");
+                        i0.ɵɵelementStart(495, "b");
+                        i0.ɵɵtext(496, "Fill In");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(497, " values are used in the ");
+                        i0.ɵɵelementStart(498, "b");
+                        i0.ɵɵtext(499, "Expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(500, " field when Ports are opened, in the ");
+                        i0.ɵɵelementStart(501, "b");
+                        i0.ɵɵtext(502, "Submit Url");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(503, " field when actions are executed, and in ");
+                        i0.ɵɵelementStart(504, "b");
+                        i0.ɵɵtext(505, "Form Defaults");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(506, ".");
+                        i0.ɵɵelement(507, "br");
+                        i0.ɵɵtext(508, "They use the form ");
+                        i0.ɵɵelementStart(509, "b");
+                        i0.ɵɵtext(510, "@{RESOLVE_REFERENCE}");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(511, " and are replaced with the value they reference at the time when the action is executed. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(512, "mat-card", 100)(513, "mat-card-header")(514, "mat-card-title");
+                        i0.ɵɵtext(515, "Select Values");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(516, "mat-card-content", 101)(517, "mat-form-field", 102)(518, "mat-label");
+                        i0.ɵɵtext(519, "Select Staff");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(520, "input", 103, 104);
+                        i0.ɵɵtemplate(523, dibexDropinbaseServicesComponent_button_523_Template, 3, 0, "button", 27);
+                        i0.ɵɵelementStart(524, "mat-autocomplete", 28, 105);
+                        i0.ɵɵlistener("opened", function dibexDropinbaseServicesComponent_Template_mat_autocomplete_opened_524_listener() { return ctx.lists.list5246.refresh(); });
+                        i0.ɵɵtemplate(526, dibexDropinbaseServicesComponent_mat_progress_bar_526_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(527, dibexDropinbaseServicesComponent_mat_option_527_Template, 1, 5, "mat-option", 30);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(528, "span", 106);
+                        i0.ɵɵpipe(529, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(530, "mat-card", 107)(531, "mat-card-header")(532, "mat-card-title");
+                        i0.ɵɵtext(533, "Expression Fields");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(534, "mat-card-content", 101);
+                        i0.ɵɵelementContainerStart(535, 5);
+                        i0.ɵɵelement(536, "span", 108);
+                        i0.ɵɵpipe(537, "safeHtml");
+                        i0.ɵɵelementStart(538, "div", 109);
+                        i0.ɵɵelementContainerStart(539, 5);
+                        i0.ɵɵelementStart(540, "button", 110);
+                        i0.ɵɵlistener("click", function dibexDropinbaseServicesComponent_Template_button_click_540_listener($event) { return ctx.navigationService.goTo("dibexStaffForm", "main", "?primary_id=@{value_self_selectStaffId}&dibexStaffForm.selectedPosition=@{value_dibexDibNgServicesGrid_positionFilter}", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(541, "span", 7);
+                        i0.ɵɵtext(542, "Open Staff Record and Set Value");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(543, "mat-card", 111)(544, "mat-card-header")(545, "mat-card-title");
+                        i0.ɵɵtext(546, "Submit Url Fields");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(547, "mat-card-content", 101);
+                        i0.ɵɵelementContainerStart(548, 5);
+                        i0.ɵɵelement(549, "span", 112);
+                        i0.ɵɵpipe(550, "safeHtml");
+                        i0.ɵɵelementStart(551, "div", 113);
+                        i0.ɵɵelementContainerStart(552, 5);
+                        i0.ɵɵelementStart(553, "button", 114)(554, "span", 7);
+                        i0.ɵɵtext(555, "Set First Name on Form");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(556, "mat-card", 115)(557, "mat-card-header")(558, "mat-card-title");
+                        i0.ɵɵtext(559, "Form Defaults");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(560, "mat-card-content", 101);
+                        i0.ɵɵelementContainerStart(561, 5);
+                        i0.ɵɵelement(562, "span", 116);
+                        i0.ɵɵpipe(563, "safeHtml");
+                        i0.ɵɵelementStart(564, "mat-form-field", 117)(565, "mat-label");
+                        i0.ɵɵtext(566, "User Full Name(@{env_user_fullname})");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(567, "input", 118);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(568, "mat-form-field", 119)(569, "mat-label");
+                        i0.ɵɵtext(570, "Month End (@{monthEnd})");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(571, "input", 120);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(572, "mat-tab", 96, 121);
+                        i0.ɵɵtemplate(574, dibexDropinbaseServicesComponent_ng_template_574_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(575, "mat-card", 122)(576, "mat-card-content", 53);
+                        i0.ɵɵelementContainerStart(577, 5);
+                        i0.ɵɵelementStart(578, "div", 123);
+                        i0.ɵɵelementContainerStart(579, 5);
+                        i0.ɵɵelementStart(580, "mat-card", 124)(581, "mat-card-header")(582, "mat-card-title");
+                        i0.ɵɵtext(583, "References to Environment Variables");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(584, "mat-card-content", 46)(585, "span", 125)(586, "div", 18)(587, "b");
+                        i0.ɵɵtext(588, "Environment Variables");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(589, " are values that are set on the server, and loaded once when the Dropinbase Framework is initialized in the browser.");
+                        i0.ɵɵelement(590, "br");
+                        i0.ɵɵtext(591, "In the browser's Console (press F12 in Chrome to access it),you can filter for the 'environment' request in the Network-tab, and view the results there.");
+                        i0.ɵɵelement(592, "br");
+                        i0.ɵɵtext(593, "The values are set using the /configs/Environment.php file. This file can be adjusted to add values, eg ");
+                        i0.ɵɵelementStart(594, "b");
+                        i0.ɵɵtext(595, "client_id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(596, " or ");
+                        i0.ɵɵelementStart(597, "b");
+                        i0.ɵɵtext(598, "rank");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(599, " linked to the current user.");
+                        i0.ɵɵelement(600, "br");
+                        i0.ɵɵtext(601, "If for whatever reason the values change dynamically, they can be reloaded using the ");
+                        i0.ɵɵelementStart(602, "b");
+                        i0.ɵɵtext(603, "shared.action.reload-env");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(604, " action. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(605, "span", 126)(606, "h2");
+                        i0.ɵɵtext(607, "getEnv");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(608, "b");
+                        i0.ɵɵtext(609, "getEnv('user_fullname'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(610);
+                        i0.ɵɵelement(611, "br");
+                        i0.ɵɵelementStart(612, "b");
+                        i0.ɵɵtext(613, "getEnv('default_url'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(614);
+                        i0.ɵɵelementStart(615, "h2");
+                        i0.ɵɵtext(616, "resolve");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(617, "b");
+                        i0.ɵɵtext(618, "resolve('env_user_fullname'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(619);
+                        i0.ɵɵelement(620, "br");
+                        i0.ɵɵelementStart(621, "b");
+                        i0.ɵɵtext(622, "resolve('env_default_url'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(623);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(624, "mat-card", 127)(625, "mat-card-header")(626, "mat-card-title");
+                        i0.ɵɵtext(627, "Date Values");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(628, "mat-card-content", 46)(629, "span", 128)(630, "h2");
+                        i0.ɵɵtext(631, "resolve");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(632, "b");
+                        i0.ɵɵtext(633, "resolve('dibDate'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(634);
+                        i0.ɵɵelement(635, "br");
+                        i0.ɵɵelementStart(636, "b");
+                        i0.ɵɵtext(637, "resolve('dibDateTime'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(638);
+                        i0.ɵɵelement(639, "br");
+                        i0.ɵɵelementStart(640, "b");
+                        i0.ɵɵtext(641, "resolve('yearStart'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(642);
+                        i0.ɵɵelement(643, "br");
+                        i0.ɵɵelementStart(644, "b");
+                        i0.ɵɵtext(645, "resolve('yearEnd'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(646);
+                        i0.ɵɵelement(647, "br");
+                        i0.ɵɵelementStart(648, "b");
+                        i0.ɵɵtext(649, "resolve('monthStart'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(650);
+                        i0.ɵɵelement(651, "br");
+                        i0.ɵɵelementStart(652, "b");
+                        i0.ɵɵtext(653, "resolve('monthEnd'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(654);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(655, "mat-tab", 129, 130);
+                        i0.ɵɵtemplate(657, dibexDropinbaseServicesComponent_ng_template_657_Template, 1, 1, "ng-template", 15);
+                        i0.ɵɵelementStart(658, "div", 131);
+                        i0.ɵɵelementContainerStart(659, 5);
+                        i0.ɵɵelementStart(660, "span", 132)(661, "div", 18);
+                        i0.ɵɵtext(662, " Per definition, clientData consists of data you select per container to be included with all server requests.");
+                        i0.ɵɵelement(663, "br");
+                        i0.ɵɵtext(664, "Custom 'memory' values can be added to clientData which will be sent to the server, but is also accessible in the browser.");
+                        i0.ɵɵelement(665, "br");
+                        i0.ɵɵtext(666, "This is useful for global variables and scenarios where timing of events and server-responses are an issue, or for setting custom default values. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(667, "span", 133);
+                        i0.ɵɵpipe(668, "safeHtml");
+                        i0.ɵɵelement(669, "span", 134);
+                        i0.ɵɵpipe(670, "safeHtml");
+                        i0.ɵɵelementStart(671, "mat-card", 135)(672, "mat-card-content", 136);
+                        i0.ɵɵelementContainerStart(673, 5);
+                        i0.ɵɵelementStart(674, "button", 137)(675, "span", 7);
+                        i0.ɵɵtext(676, "Add Global Custom Values to ClientData");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(677, "span", 138);
+                        i0.ɵɵpipe(678, "safeHtml");
+                        i0.ɵɵelementStart(679, "span", 139)(680, "b");
+                        i0.ɵɵtext(681, "resolve('custom_global_fruit'):");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(682);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵtemplate(683, dibexDropinbaseServicesComponent_span_683_Template, 2, 3, "span", 140);
+                        i0.ɵɵelementStart(684, "mat-card", 141)(685, "mat-card-content", 136);
+                        i0.ɵɵelementContainerStart(686, 5);
+                        i0.ɵɵelementStart(687, "button", 142)(688, "span", 7);
+                        i0.ɵɵtext(689, "Add Container Custom Values to ClientData");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(690, "span", 143);
+                        i0.ɵɵpipe(691, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(692, "mat-card", 144)(693, "mat-card-content", 53);
+                        i0.ɵɵelementContainerStart(694, 5);
+                        i0.ɵɵelementStart(695, "span", 145)(696, "div", 18);
+                        i0.ɵɵtext(697, " The following button opens a form using ");
+                        i0.ɵɵelementStart(698, "b");
+                        i0.ɵɵtext(699, "?record=first'");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(700, ".");
+                        i0.ɵɵelement(701, "br");
+                        i0.ɵɵtext(702, "We want to set the position field to 'Employee' for this record, so we also add ");
+                        i0.ɵɵelementStart(703, "b");
+                        i0.ɵɵtext(704, "&staffForm.position=Employee");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(705, " to the ");
+                        i0.ɵɵelementStart(706, "b");
+                        i0.ɵɵtext(707, "Expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(708, " field.");
+                        i0.ɵɵelement(709, "br");
+                        i0.ɵɵtext(710, "However, the response to the server request that reads the record data overwrites any values that are set with URL parameters.");
+                        i0.ɵɵelement(711, "br");
+                        i0.ɵɵtext(712, "Therefore we create a custom clientData value for this container only, and then set the position field using ");
+                        i0.ɵɵelementStart(713, "b");
+                        i0.ɵɵtext(714, "set-value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(715, " on the container's ");
+                        i0.ɵɵelementStart(716, "b");
+                        i0.ɵɵtext(717, "reload-container");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(718, " event. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(719, "div", 146);
+                        i0.ɵɵelementContainerStart(720, 5);
+                        i0.ɵɵelement(721, "span", 147);
+                        i0.ɵɵpipe(722, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r7 = i0.ɵɵreference(44);
+                        const _r10 = i0.ɵɵreference(55);
+                        const _r25 = i0.ɵɵreference(525);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(205, _c2, ctx.view.debug));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5274");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "View Design");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5125");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5183");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(35, 159, ctx.lists.list5130.items));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("matAutocomplete", _r7);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.autocomplete.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "autocomplete"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5132.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list5132.lastItems);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("matDatepicker", _r10)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r10);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "inputDate");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5285");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(63, 161, ctx.getHtml("spanCaption")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Apple");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Pear");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Pawpaw");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Hide Demo");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵproperty("dibPort", "5186");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("enum"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("autocomplete"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("checkbox"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("inputDate"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("radioGroup"), "");
+                        i0.ɵɵadvance(23);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("datepicker"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind2(136, 163, ctx.getValue("datepicker"), "yyyy-MM-dd"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.formatDate("datepicker", "yyyy-MM-dd"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.formatDate("inputDate", "yyyy-MM-dd"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getDisplayValue("autocomplete"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(163, 166, ctx.getRawValue("autocomplete")), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getRawValue("autocomplete").id_display_value, "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getRawValue("autocomplete").id, "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_self_enum"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_self_datepicker"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("self_enum"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("alias_self_enum"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("alias_self_datepicker"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.hasValue("enum"), "");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", ctx.getValue("radioGroup") === "Pear")("hidden", ctx.getValue("radioGroup") === "Hide Demo");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5187");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(221, 168, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5203");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate(ctx.getDisplayValue("autocomplete"));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵtextInterpolate1("! You chose option ", ctx.getValue("enum"), ". ");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵtextInterpolate1("Would you like a ", ctx.getValue("radioGroup"), "?");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate(ctx.getClientData("dibDateTime"));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", !!ctx.getValue("checkbox"));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(241, 170, ctx.getHtml("spanSentenceDemo")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5199");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", ctx.getValue("enum") === "A");
+                        i0.ɵɵattribute("aria-label", "Disabled when enum='A'");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(248, 172, ctx.getHtml("spanDisabled")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5196");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("hidden", ctx.getValue("enum") === "B");
+                        i0.ɵɵattribute("aria-label", "Hidden when enum='B'");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(255, 174, ctx.getHtml("spanHidden")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5200");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(207, _c1, ctx.getValue("radioGroup") === "Apple" ? "crimson" : ctx.getValue("radioGroup") === "Pear" ? "yellowgreen" : ctx.getValue("radioGroup") === "Pawpaw" ? "yellow" : "grey"));
+                        i0.ɵɵattribute("aria-label", "Fruit Color");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(262, 176, ctx.getHtml("spanColor")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5144");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5155");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "5190");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("first_name", "dibexDibNgServicesForm"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.formatDate("join_date", "yyyy-MM-dd", "dibexDibNgServicesForm"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.formatDate("join_date", "yyyy-w", "dibexDibNgServicesForm"), "");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getDisplayValue("manager_id", "dibexDibNgServicesForm"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(307, 178, ctx.getRawValue("manager_id", "dibexDibNgServicesForm")), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", !!ctx.getValue("manager_id", "dibexDibNgServicesForm") ? ctx.getRawValue("manager_id", "dibexDibNgServicesForm").id_display_value : "none", "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_dibexDibNgServicesForm_first_name"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_dibexDibNgServicesForm_position"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_dibexDibNgServicesForm_color"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("self_first_name", "dibexDibNgServicesForm"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("alias_dibexDibNgServicesForm_first_name"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("alias_dibexDibNgServicesForm_color"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.hasValue("color", "dibexDibNgServicesForm"), "");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5191");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵtextInterpolate(ctx.getValue("first_name", "dibexDibNgServicesForm"));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵtextInterpolate(ctx.resolve("value_dibexDibNgServicesForm_position"));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate(ctx.getDisplayValue("manager_id", "dibexDibNgServicesForm"));
+                        i0.ɵɵadvance(15);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("value_dibexDibNgServicesGrid_positionFilter"), "");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("ngIf", ctx.hasValue("color", "dibexDibNgServicesForm") && ctx.equalTo("Employee", "position", "dibexDibNgServicesForm") && ctx.formatDate("join_date", "yyyy-MM-dd", "dibexDibNgServicesForm") > ctx.resolve("monthStart"));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(211, _c4, i0.ɵɵpureFunction1(209, _c3, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5145");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5223");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "5218");
+                        i0.ɵɵadvance(15);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("first_name", "dibexDibNgServicesGrid"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getValue("positionFilter", "dibexDibNgServicesGrid"), "\u2003- ");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("clickedLast_dibexDibNgServicesGrid_id"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("clickedLast_dibexDibNgServicesGrid_first_name"), "");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("selected_dibexDibNgServicesGrid_0_id"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("selected_dibexDibNgServicesGrid_1_id"), "\u2003- ");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("selected_dibexDibNgServicesGrid_0_first_name"), "\u2003- ");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "5262");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(478, 180, ctx.getHtml("spanDemoGrid")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.getValue("positionFilter", "dibexDibNgServicesGrid") === "Manager");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.getValue("position", "dibexDibNgServicesForm") === "Employee" && i0.ɵɵpipeBind2(481, 182, ctx.getValue("join_date", "dibexDibNgServicesForm"), "yyyy-MM-dd") > ctx.resolve("monthStart"));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(486, 185, ctx.getHtml("spanImportant")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5206");
+                        i0.ɵɵadvance(29);
+                        i0.ɵɵproperty("matAutocomplete", _r25);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.selectStaffId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "selectStaffId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5246.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list5246.lastItems);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(529, 187, ctx.getHtml("spanInstructions")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5249");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(537, 189, ctx.getHtml("span9")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5224");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", !ctx.getValue("selectStaffId") || !ctx.getValue("positionFilter", "dibexDibNgServicesGrid"));
+                        i0.ɵɵattribute("aria-label", "Open Staff Record and Set Value");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5250");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(550, 191, ctx.getHtml("spanExplanation2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5251");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", !ctx.getValue("first_name", "dibexDibNgServicesForm") || !ctx.resolve("clickedLast_dibexDibNgServicesGrid_id"))("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Set First Name on Form");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5256");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(563, 193, ctx.getHtml("spanExplanation3")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵattribute("aria-label", "User Full Name(@{env_user_fullname})");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Month End (@{monthEnd})");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5184");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5192");
+                        i0.ɵɵadvance(31);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getEnv("user_fullname"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.getEnv("default_url"), "");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("env_user_fullname"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("env_default_url"), "");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("dibDate"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("dibDateTime"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("yearStart"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("yearEnd"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("monthStart"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("monthEnd"), "");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5126");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(668, 195, ctx.getHtml("spanSetCustomClientData")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(670, 197, ctx.getHtml("spanDemo")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5210");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Add Global Custom Values to ClientData");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(678, 199, ctx.getHtml("span2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_global_fruit"), "");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", !ctx.getValue("radioGroup") || !ctx.getValue("enum"));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", !ctx.getValue("radioGroup") || !ctx.getValue("enum"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5211");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Add Container Custom Values to ClientData");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(691, 201, ctx.getHtml("span3")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5279");
+                        i0.ɵɵadvance(26);
+                        i0.ɵɵproperty("dibPort", "5282");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(722, 203, ctx.getHtml("span10")), i0.ɵɵsanitizeHtml);
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i2.DibListenersDirective, i2.DibDisabledDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatButton, i8.MatIconButton, i9.MatCheckbox, i10.MatDatepicker, i10.MatDatepickerInput, i10.MatDatepickerToggle, i11.MatFormField, i11.MatLabel, i11.MatPrefix, i11.MatSuffix, i12.MatIcon, i13.MatInput, i14.MatProgressBar, i15.MatSelect, i16.MatToolbar, i16.MatToolbarRow, i17.MatCard, i17.MatCardContent, i17.MatCardHeader, i17.MatCardTitle, i18.MatRadioGroup, i18.MatRadioButton, i19.MatTabLabel, i19.MatTab, i19.MatTabGroup, i3.AsyncPipe, i3.JsonPipe, i3.DatePipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexDropinbaseServices'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexDropinbaseServicesComponent.prototype, "reloadContainer", null);
+            exports_1("dibexDropinbaseServicesComponent", dibexDropinbaseServicesComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexDropinbaseServicesComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-dropinbase-services', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5274 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 20px 10px;  flex-wrap: wrap; align-content: flex-start;"  ><ng-container [dibPort]="'5274'" ><button  mat-raised-button color=primary  id=ci5276 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnViewDesign   style="  "  [attr.aria-label]="'View Design'"  type=button  ><span class=dibButtonCaption >View Design</span></button><h2  id=ci5275 dibComponent=h2   style="  "  ><span >Dropinbase Services and Angular Directives</span></h2></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5125 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5125'" ><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci5143 dibComponent=tabs   style="  overflow:auto !important;"  itemAlias=tabs  [portId]="portId" containerName=dibexDropinbaseServices  dibTabGoToParent   dibAutoTabSelection="5183,5144,5145,5206,5184,5126"  dibAutoTabSelectionAliases="tabThisContainer,tabForm,tabGrid,tabFillInValues,tabEnvOtherValues,tabSetClientData"  [container]="this"  ><mat-tab   #tabReference5183  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabThisContainer', 'dibexDropinbaseServices.tabThisContainer', 'Values On This Container')" tabPortId=5183  dibid="tabThisContainer__caption.5183"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  overflow:auto !important;" id=ci5183 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5183'" ><span  id=ci5193 dibComponent=comment   style="  margin:10px !important;   " ><div class=dib-comment > Having live references to values anywhere in the app, even in Client Data, provides powerful possibilities when combined with directives like *ngIf or [ngStyle].  </div></span><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5131 dibComponent=section  ><mat-card-header ><mat-card-title >Select Values</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: wrap; align-content: flex-start;"  ><mat-form-field  id=ci5130 dibComponent=selectEnum   style="  width:200px !important;   display:flex; flex-direction: column;  flex-wrap: nowrap;  "  item-alias=enum   appearance=standard   ><mat-label>enum</mat-label><mat-select formControlName=enum    ><mat-option *ngFor="let item of lists.list5130.items | async" [value]="item.id"> {{item.id_display_value}}</mat-option></mat-select></mat-form-field><mat-form-field  id=ci5132 dibComponent=autocomplete   style="  display:flex; flex-direction: column;  flex: 1 1 0%;  min-width:150px;max-width:300px"  item-alias=autocomplete   appearance=standard   ><mat-label>autocomplete</mat-label><input #auto5132trigger=matAutocompleteTrigger   type=text  matInput formControlName=autocomplete   #input5132  [matAutocomplete]="auto5132"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.autocomplete.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.autocomplete.formControl, $event, lists.list5132, auto5132trigger); input5132.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto5132=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'autocomplete')"  (opened)="$any(lists.list5132).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list5132).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5132.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><mat-checkbox  id=ci5136 dibComponent=checkbox   style="  "  formControlName=checkbox   >   checkbox  </mat-checkbox><mat-form-field  id=ci5141 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker5141"   [placeholder]="'datepicker'"   formControlName=datepicker   name=datepicker   [attr.aria-label]="'datepicker'"  (focus)="datePicker5141.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker5141" ></mat-datepicker-toggle><mat-datepicker #datePicker5141 ></mat-datepicker></mat-form-field><mat-form-field  id=ci5142 dibComponent=inputDate   style="  "  item-alias=inputDate   appearance=standard  ><mat-label >inputDate</mat-label><input   matInput   type=date   formControlName=inputDate   name=inputDate   [attr.aria-label]="'inputDate'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5285 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5285'" ><span  id=ci5286 dibComponent=span   style="  "  [innerHtml]="getHtml('spanCaption') | safeHtml" ></span><mat-radio-group  id=ci5137 dibComponent=radioGroup   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 5px;  flex: 0 1 0%;  "  name=radioGroup   formControlName=radioGroup  ><mat-radio-button  id=ci5138 dibComponent=radioButton   style="  "  value=Apple   name=radioButton   [attr.aria-label]="'Apple'" > Apple</mat-radio-button><mat-radio-button  id=ci5139 dibComponent=radioButton   style="  "  value=Pear   name=radioButton1   [attr.aria-label]="'Pear'" > Pear</mat-radio-button><mat-radio-button  id=ci5140 dibComponent=radioButton   style="  "  value=Pawpaw   name=radioButton2   [attr.aria-label]="'Pawpaw'" > Pawpaw</mat-radio-button><mat-radio-button  id=ci5287 dibComponent=radioButton   style="  "  value="Hide Demo"  name=radioButton3   [attr.aria-label]="'Hide Demo'" > Hide Demo</mat-radio-button></mat-radio-group></ng-container></div></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5127 dibComponent=section  ><mat-card-header ><mat-card-title >References to This Container</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci5129 dibComponent=comment   style="  " ><div class=dib-comment > Change values and see how the references to them automatically update  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;  overflow:auto !important;" id=ci5186 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5186'" ><span  id=ci5128 dibComponent=spanInterpolation   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  item-alias=serviceListThisContainer  ><h2>getValue</h2><b>getValue('enum'):</b> {{getValue('enum')}}<br><b>getValue('autocomplete'):</b> {{getValue('autocomplete')}}&emsp;- <i>returns the primary key value</i><br><b>getValue('checkbox'):</b> {{getValue('checkbox')}}<br><b>getValue('inputDate'):</b> {{getValue('inputDate')}}<br><b>getValue('radioGroup'):</b> {{getValue('radioGroup')}}<br><br><i>The datepicker component provides a date <b>object</b> which is not useful in for eg. *ngIf comparisons. <br>For displays in strings it can be piped to any format: <a target='_blank' href='https://angular.io/api/common/DatePipe'>https://angular.io/api/common/DatePipe</a><br>For directives like *ngIf, use the Dropinbase dateFormat() function. <br><b>Available formats here: <a target='_blank' href='https://date-fns.org/v2.29.3/docs/format'>https://date-fns.org/v2.29.3/docs/format</a></b></i><br><br><b>getValue('datepicker'):</b> {{getValue('datepicker')}}&emsp;- <i>the raw object</i><br><b>getValue('datepicker') | date:'yyyy-MM-dd':</b> {{getValue('datepicker') | date:'yyyy-MM-dd'}}&emsp;- <i>piped to yyyy-MM-dd format</i><br><b>formatDate('datepicker', 'yyyy-MM-dd'):</b> {{formatDate('datepicker', 'yyyy-MM-dd')}}&emsp;- <i>using formatDate() function</i><br><b>formatDate('inputDate', 'yyyy-MM-dd'):</b> {{formatDate('inputDate', 'yyyy-MM-dd')}}&emsp;- <i>formatDate() function works with any date field component</i><h2>getDisplayValue</h2><b>getDisplayValue('autocomplete'):</b> {{getDisplayValue('autocomplete')}}&emsp;- <i>for dropdowns only - returns the display value</i><h2>getRawValue</h2><b>getRawValue('autocomplete')|json :</b> {{getRawValue('autocomplete')|json}}&emsp;- <i>for dropdowns only - returns the object (piped to JSON)</i><br><b>getRawValue('autocomplete').id_display_value: </b> {{getRawValue('autocomplete').id_display_value}}&emsp;- <i>for dropdowns only - returns the dropdown&apos;s display value; same as getDisplayValue('autocomplete')</i><br><b>getRawValue('autocomplete').id:</b> {{getRawValue('autocomplete').id}}&emsp;- <i>for dropdowns only - returns the dropdown&apos;s id value; same as getValue('autocomplete')</i><h2>resolve</h2><b>resolve('value_self_enum'):</b> {{resolve('value_self_enum')}}<br><b>resolve('value_self_datepicker'):</b> {{resolve('value_self_datepicker')}}&emsp;- <i>note this works, even if alias is not ticked!</i><br><b>resolve('self_enum'):</b> {{resolve('self_enum')}}&emsp;- <i>shorthand for value_self_enum</i><br><br><b>resolve('alias_self_enum'):</b> {{resolve('alias_self_enum')}}&emsp;- <i>works only with items where alias is ticked, ie included in clientData</i><br><b>resolve('alias_self_datepicker'):</b> {{resolve('alias_self_datepicker')}}&emsp;- <i>always undefined, because datepicker alias is not ticked!</i><h2>hasValue</h2><b>hasValue('enum'):</b> {{hasValue('enum')}}</span><div [dibDisabled]="getValue('radioGroup')==='Pear'"
+[hidden]="getValue('radioGroup')==='Hide Demo'"  style="  padding:10px !important;  flex: 1 1 0%;  border: 1px solid grey; border-radius: 8px;" id=ci5187 dibComponent=div  ><mat-toolbar ><mat-toolbar-row><span >Demo</span></mat-toolbar-row></mat-toolbar><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;" ><ng-container [dibPort]="'5187'" ><span  id=ci5202 dibComponent=span   style="  padding:10px !important;  border: 1px solid orange; border-radius: 8px;"  [innerHtml]="getHtml('span') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5203 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5203'" ><span  id=ci5134 dibComponent=spanInterpolation   style="  padding:10px !important;  flex: 1 1 50%;  border: 1px solid orange; border-radius: 8px;" >Greetings <b>{{getDisplayValue('autocomplete')}}</b>! You chose option {{getValue('enum')}}. <br>Would you like a {{getValue('radioGroup')}}?<br>Check the checkbox to view its expiry date.<br>Note, the date and time is <b>{{getClientData('dibDateTime')}}</b>.<br><span *ngIf="!!getValue('checkbox')"><span [innerHTML]="!getValue('inputDate') ? 'Sorry, first provide an <b>inputDate</b> above' : (getValue('inputDate') <= getClientData('dibDate') ? 'Ooops, it already expired on ' : 'It expires on ') + getValue('inputDate') | safeHtml"></span></span></span><span  id=ci5204 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('spanSentenceDemo') | safeHtml" ></span></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5199 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5199'" ><button  mat-raised-button color=primary  [dibDisabled]="getValue('enum')==='A'" id=ci5194 dibComponent=button   style="  flex: 1 1 50%;  "  [attr.aria-label]="'Disabled when enum=\\'A\\''"  type=button  ><span class=dibButtonCaption >Disabled when enum=\'A\'</span></button><span  id=ci5195 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('spanDisabled') | safeHtml" ></span></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5196 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5196'" ><button  mat-raised-button color=primary  [hidden]="getValue('enum')==='B'" id=ci5197 dibComponent=button   style="  flex: 1 1 50%;  "  [attr.aria-label]="'Hidden when enum=\\'B\\''"  type=button  ><span class=dibButtonCaption >Hidden when enum=\'B\'</span></button><span  id=ci5198 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('spanHidden') | safeHtml" ></span></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: space-between;  align-items: center;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5200 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5200'" ><button  mat-raised-button [ngStyle]="{'background-color': getValue('radioGroup')==='Apple' ? 'crimson' : (getValue('radioGroup')==='Pear' ? 'yellowgreen' : (getValue('radioGroup')==='Pawpaw' ? 'yellow' : 'grey'))}" id=ci5201 dibComponent=button   style="  flex: 1 1 50%;  "  [attr.aria-label]="'Fruit Color'"  type=button  ><span class=dibButtonCaption >Fruit Color</span></button><span  id=ci5288 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('spanColor') | safeHtml" ></span></ng-container></div></ng-container></div></div></ng-container></div></mat-card-content></mat-card></ng-container></div></mat-tab><mat-tab   #tabReference5144  style="  display:flex; flex-direction: column;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabForm', 'dibexDropinbaseServices.tabForm', 'Values on Form')" tabPortId=5144  dibid="tabForm__caption.5144"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  overflow:auto !important;" id=ci5144 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5144'" ><div   style="  " id=ci5155 dibComponent=subcontainer   ><ng-container [dibPort]="'5155'" parentContainerName=dibexDropinbaseServices  subContainerName=dibexDibNgServicesForm  subContainerId=211  dropinName=form ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5179 dibComponent=section  ><mat-card-header ><mat-card-title >References to Values on Form</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci5181 dibComponent=comment   style="  " ><div class=dib-comment > Note, the references below are not on the form above. They demonstrate how to reference values on any other container.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5190 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5190'" ><span  id=ci5180 dibComponent=spanInterpolation   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  item-alias=serviceListFormContainer  ><h2>getValue</h2><br><b>getValue('first_name', 'dibexDibNgServicesForm'):</b> {{getValue('first_name', 'dibexDibNgServicesForm')}}<br><b>formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm'):</b> {{formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm')}}<br><b>formatDate('join_date', 'yyyy-w', 'dibexDibNgServicesForm'):</b> {{formatDate('join_date', 'yyyy-w', 'dibexDibNgServicesForm')}}<h2>getDisplayValue</h2><b>getDisplayValue('manager_id', 'dibexDibNgServicesForm'):</b> {{getDisplayValue('manager_id', 'dibexDibNgServicesForm')}}&emsp;- <i>for dropdowns only - returns the dropdown&apos;s display value</i><h2>getRawValue</h2><b>getRawValue('manager_id', 'dibexDibNgServicesForm')|json :</b> {{getRawValue('manager_id', 'dibexDibNgServicesForm')|json}}&emsp;- <i>for dropdowns only - returns the object (piped to JSON)</i><br><b>!!getValue('manager_id', 'dibexDibNgServicesForm') ? getRawValue('manager_id', 'dibexDibNgServicesForm').id_display_value : 'none':</b> {{!!getValue('manager_id', 'dibexDibNgServicesForm') ? getRawValue('manager_id', 'dibexDibNgServicesForm').id_display_value : 'none'}}&emsp;- <i>Note, to avoid errors, we first need to check if the element exists.</i><h2>resolve</h2><b>resolve('value_dibexDibNgServicesForm_first_name'):</b> {{resolve('value_dibexDibNgServicesForm_first_name')}}<br><b>resolve('value_dibexDibNgServicesForm_position'):</b> {{resolve('value_dibexDibNgServicesForm_position')}}&emsp;- <i>note this works, even if alias is not ticked!</i><br><b>resolve('value_dibexDibNgServicesForm_color'):</b> {{resolve('value_dibexDibNgServicesForm_color')}}&emsp;- <i>note this works, even if alias is not ticked!</i><br><b>resolve('self_first_name', 'dibexDibNgServicesForm'):</b> {{resolve('self_first_name', 'dibexDibNgServicesForm')}}&emsp;- <i>implies the use of value_</i><br><br><b>resolve('alias_dibexDibNgServicesForm_first_name'):</b> {{resolve('alias_dibexDibNgServicesForm_first_name')}}&emsp;- <i>works, because first_name has an alias</i><br><b>resolve('alias_dibexDibNgServicesForm_color'):</b> {{resolve('alias_dibexDibNgServicesForm_color')}}&emsp;- <i>undefined, because color has no alias</i><h2>hasValue</h2><b>hasValue('color','dibexDibNgServicesForm'):</b> {{hasValue('color','dibexDibNgServicesForm')}}</span><div   style="  padding:10px !important;  flex: 1 1 0%;  border: 1px solid grey; border-radius: 8px;" id=ci5191 dibComponent=div  ><mat-toolbar ><mat-toolbar-row><span >Demo</span></mat-toolbar-row></mat-toolbar><div   style="  display:flex; flex-direction: column;" ><ng-container [dibPort]="'5191'" ><span  id=ci5259 dibComponent=spanInterpolation   style="  " ><b>{{getValue('first_name','dibexDibNgServicesForm')}}</b> is a <b>{{resolve('value_dibexDibNgServicesForm_position')}}</b>, <br>who reports to <b>{{getDisplayValue('manager_id','dibexDibNgServicesForm')}}</b>.</span><span  id=ci5261 dibComponent=spanInterpolation   style="  margin:10px 0px !important;   " ><i>When you add a record using the <b>+</b>&nbsp;button in the form above, the <b>position</b> field will obtains its default value from the enum on the Grid (next tab):</i><br><br><b>@&#123;value_dibexDibNgServicesGrid_positionFilter&#125;:</b> {{resolve('value_dibexDibNgServicesGrid_positionFilter')}}<br><br><i>Below is a button being hidden with an *ngIf, and colored according to the Color field in the form. <br>Here are its attributes - see if you can make it appear:</i><br><br><b>*ngIf="equalTo('Employee','position','dibexDibNgServicesForm') && formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm') > resolve('monthStart')"<br>[ngStyle]="&#123;'background-color': getValue('color','dibexDibNgServicesForm')&#125;"</b></span><button  mat-raised-button
+*ngIf="hasValue('color','dibexDibNgServicesForm') && equalTo('Employee', 'position', 'dibexDibNgServicesForm') && formatDate('join_date', 'yyyy-MM-dd', 'dibexDibNgServicesForm') > resolve('monthStart')" [ngStyle]="{'background-color': (hasValue('color','dibexDibNgServicesForm') ? getValue('color','dibexDibNgServicesForm') : 'grey')}" id=ci5260 dibComponent=button   style="  "  [attr.aria-label]="'You found me - set my color in the form :)'"  type=button  ><span class=dibButtonCaption >You found me - set my color in the form :)</span></button></ng-container></div></div></ng-container></div></mat-card-content></mat-card></ng-container></div></mat-tab><mat-tab   #tabReference5145  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexDibNgServicesGrid', portId: 5145, portAlias: 'main', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabGrid', 'dibexDropinbaseServices.tabGrid', 'Values on Grid')" tabPortId=5145  dibid="tabGrid__caption.5145"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  overflow:auto !important;" id=ci5145 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5145'" ><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5223 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5223'" ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5216 dibComponent=section  ><mat-card-header ><mat-card-title >References to Values on Grid</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci5217 dibComponent=comment   style="  " ><div class=dib-comment > Note, the references below are not on the grid above. They demonstrate how to reference values on any grid.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5218 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5218'" ><span  id=ci5219 dibComponent=spanInterpolation   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  item-alias=serviceListGridContainer  ><h2>getValue, getDisplayValue & getRawValue</h2><i>Note, the services above can be used only for values outside <b>'columns'</b> on the grid.<br>They work exactly the same as for forms. Here we'll demo only getValue:</i><br><br><b>getValue('first_name', 'dibexDibNgServicesGrid'):</b> {{getValue('first_name', 'dibexDibNgServicesGrid')}}&emsp;- <i>does not work!</i><br><b>getValue('positionFilter', 'dibexDibNgServicesGrid'):</b> {{getValue('positionFilter', 'dibexDibNgServicesGrid')}}&emsp;- <i>this works</i><h2>resolve</h2><b>resolve('clickedLast_dibexDibNgServicesGrid_id'):</b> {{resolve('clickedLast_dibexDibNgServicesGrid_id')}}<br><b>resolve('clickedLast_dibexDibNgServicesGrid_first_name'):</b> {{resolve('clickedLast_dibexDibNgServicesGrid_first_name')}}<br><br><b>resolve('selected_dibexDibNgServicesGrid_0_id')</b> {{resolve('selected_dibexDibNgServicesGrid_0_id')}}<br><b>resolve('selected_dibexDibNgServicesGrid_1_id')</b> {{resolve('selected_dibexDibNgServicesGrid_1_id')}}&emsp;- <i>need to select at least 2 records in the grid</i><br><b>resolve('selected_dibexDibNgServicesGrid_0_first_name')</b> {{resolve('selected_dibexDibNgServicesGrid_0_first_name')}}&emsp;- <i>undefined because 'selected' contains only primary key values</i></span><div   style="  padding:10px !important;  flex: 1 1 0%;  border: 1px solid grey; border-radius: 8px;" id=ci5262 dibComponent=div  ><mat-toolbar ><mat-toolbar-row><span >Demo</span></mat-toolbar-row></mat-toolbar><div   style="  display:flex; flex-direction: column;" ><ng-container [dibPort]="'5262'" ><span  id=ci5265 dibComponent=span   style="  margin:10px 0px !important;   "  [innerHtml]="getHtml('spanDemoGrid') | safeHtml" ></span><span   *ngIf="getValue('positionFilter', 'dibexDibNgServicesGrid')==='Manager'" id=ci5263 dibComponent=spanInterpolation   style="  " ><b>{{resolve('clickedLast_dibexDibNgServicesGrid_first_name')}}</b> joined on <b>{{resolve('clickedLast_dibexDibNgServicesGrid_join_date')}}</b>.</span><button  mat-raised-button *ngIf="getValue('position','dibexDibNgServicesForm')==='Employee' && ((getValue('join_date', 'dibexDibNgServicesForm') | date:'yyyy-MM-dd') > resolve('monthStart'))"
+ngStyle="{background-color: getValue('color','dibexDibNgServicesForm')}" id=ci5264 dibComponent=button   style="  "  [attr.aria-label]="'You found me'"  type=button  ><span class=dibButtonCaption >You found me</span></button></ng-container></div></div></ng-container></div><span  id=ci5221 dibComponent=comment   style="  color:red" ><div class=dib-comment > IMPORTANT  </div></span><span  id=ci5222 dibComponent=span   style="  "  [innerHtml]="getHtml('spanImportant') | safeHtml" ></span></mat-card-content></mat-card></ng-container></div></mat-tab><mat-tab   #tabReference5206  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  max-width:1200px"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabFillInValues', 'dibexDropinbaseServices.tabFillInValues', 'Fill In Values')" tabPortId=5206  dibid="tabFillInValues__caption.5206"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  max-width:1200px" id=ci5206 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5206'" ><span  id=ci5205 dibComponent=comment   style="  margin:10px !important;   " ><div class=dib-comment > Dropinbase <b>Fill In</b> values are used in the <b>Expression</b> field when Ports are opened, in the <b>Submit Url</b> field when actions are executed, and in <b>Form Defaults</b>.<br>They use the form <b>@&#123;RESOLVE_REFERENCE&#125;</b> and are replaced with the value they reference at the time when the action is executed.  </div></span><mat-card   style="  flex: 0 1 0%;  overflow:auto !important;" id=ci5254 dibComponent=section  ><mat-card-header ><mat-card-title >Select Values</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><mat-form-field  id=ci5246 dibComponent=autocomplete   style="  display:flex; flex-direction: column;  flex: 0 1 0%;  align-self: flex-start;  "  appearance=standard   ><mat-label>Select Staff</mat-label><input #auto5246trigger=matAutocompleteTrigger   type=text  matInput formControlName=selectStaffId   #input5246  [matAutocomplete]="auto5246"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.selectStaffId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.selectStaffId.formControl, $event, lists.list5246, auto5246trigger); input5246.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto5246=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'selectStaffId')"  (opened)="$any(lists.list5246).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list5246).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5246.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><span  id=ci5248 dibComponent=span   style="  "  [innerHtml]="getHtml('spanInstructions') | safeHtml" ></span></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5249 dibComponent=card  ><mat-card-header ><mat-card-title >Expression Fields</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5249'" ><span  id=ci5255 dibComponent=span   style="  "  [innerHtml]="getHtml('span9') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;  overflow:auto !important;" id=ci5224 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5224'" ><button  mat-raised-button color=primary  [dibDisabled]="!getValue('selectStaffId') || !getValue('positionFilter', 'dibexDibNgServicesGrid')" id=ci5225 dibComponent=button   (click)="navigationService.goTo(  'dibexStaffForm',  'main',  '?primary_id=@{value_self_selectStaffId}&dibexStaffForm.selectedPosition=@{value_dibexDibNgServicesGrid_positionFilter}',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Open Staff Record and Set Value'"  type=button  ><span class=dibButtonCaption >Open Staff Record and Set Value</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5250 dibComponent=card  ><mat-card-header ><mat-card-title >Submit Url Fields</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5250'" ><span  id=ci5253 dibComponent=span   style="  "  [innerHtml]="getHtml('spanExplanation2') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;  overflow:auto !important;" id=ci5251 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5251'" ><button  mat-raised-button color=primary
+[dibDisabled]="!getValue('first_name','dibexDibNgServicesForm') || !resolve('clickedLast_dibexDibNgServicesGrid_id')" id=ci5252 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnSetFirstName   style="  "  [attr.aria-label]="'Set First Name on Form'"  type=button  ><span class=dibButtonCaption >Set First Name on Form</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5256 dibComponent=card  ><mat-card-header ><mat-card-title >Form Defaults</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5256'" ><span  id=ci5257 dibComponent=span   style="  "  [innerHtml]="getHtml('spanExplanation3') | safeHtml" ></span><mat-form-field id=ci5272 dibComponent=inputText   style="  width:200px !important;   "  appearance=standard  ><mat-label >User Full Name(@&#123;env_user_fullname&#125;)</mat-label><input   matInput  type=text   formControlName=userFullName   name=userFullName   [attr.aria-label]="'User Full Name(@&#123;env_user_fullname&#125;)'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci5273 dibComponent=inputDate   style="  width:200px !important;   "  appearance=standard  ><mat-label >Month End (@&#123;monthEnd&#125;)</mat-label><input   matInput   type=date   formControlName=monthEnd   name=monthEnd   [attr.aria-label]="'Month End (@&#123;monthEnd&#125;)'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></mat-card-content></mat-card></ng-container></div></mat-tab><mat-tab   #tabReference5184  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  max-width:1200px"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabEnvOtherValues', 'dibexDropinbaseServices.tabEnvOtherValues', 'Environment and Other Values')" tabPortId=5184  dibid="tabEnvOtherValues__caption.5184"></app-tab-label></ng-template><mat-card   style="  max-width:1200px" id=ci5184 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'5184'" ><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5192 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5192'" ><mat-card   style="  flex: 1 1 0%;  " id=ci5133 dibComponent=section  ><mat-card-header ><mat-card-title >References to Environment Variables</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci5135 dibComponent=comment   style="  " ><div class=dib-comment ><b>Environment Variables</b> are values that are set on the server, and loaded once when the Dropinbase Framework is initialized in the browser.<br>In the browser's Console (press F12 in Chrome to access it),you can filter for the 'environment' request in the Network-tab, and view the results there.<br>The values are set using the /configs/Environment.php file. This file can be adjusted to add values, eg <b>client_id</b> or <b>rank</b> linked to the current user.<br>If for whatever reason the values change dynamically, they can be reloaded using the <b>shared.action.reload-env</b> action.  </div></span><span  id=ci5189 dibComponent=spanInterpolation   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  item-alias=spanserviceListEnvVars  ><h2>getEnv</h2><b>getEnv('user_fullname'):</b> {{getEnv('user_fullname')}}<br><b>getEnv('default_url'):</b> {{getEnv('default_url')}}<h2>resolve</h2><b>resolve('env_user_fullname'):</b> {{resolve('env_user_fullname')}}<br><b>resolve('env_default_url'):</b> {{resolve('env_default_url')}}</span></mat-card-content></mat-card></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5188 dibComponent=section  ><mat-card-header ><mat-card-title >Date Values</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci5185 dibComponent=spanInterpolation   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  item-alias=serviceListDates  ><h2>resolve</h2><b>resolve('dibDate'):</b> {{resolve('dibDate')}}<br><b>resolve('dibDateTime'):</b> {{resolve('dibDateTime')}}<br><b>resolve('yearStart'):</b> {{resolve('yearStart')}}<br><b>resolve('yearEnd'):</b> {{resolve('yearEnd')}}<br><b>resolve('monthStart'):</b> {{resolve('monthStart')}}<br><b>resolve('monthEnd'):</b> {{resolve('monthEnd')}}</span></mat-card-content></mat-card></ng-container></mat-card-content></mat-card></mat-tab><mat-tab   #tabReference5126  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  max-width:1200px"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabSetClientData', 'dibexDropinbaseServices.tabSetClientData', 'Client Data')" tabPortId=5126  dibid="tabSetClientData__caption.5126"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  max-width:1200px" id=ci5126 dibComponent=column   dib-inject-content=replace  ><ng-container [dibPort]="'5126'" ><span  id=ci5207 dibComponent=comment   style="  margin:10px !important;   " ><div class=dib-comment > Per definition, clientData consists of data you select per container to be included with all server requests.<br>Custom 'memory' values can be added to clientData which will be sent to the server, but is also accessible in the browser.<br>This is useful for global variables and scenarios where timing of events and server-responses are an issue, or for setting custom default values.  </div></span><span  id=ci5277 dibComponent=span   style="  padding:10px !important;  border: 1px solid grey; border-radius: 8px;"  [innerHtml]="getHtml('spanSetCustomClientData') | safeHtml" ></span><span  id=ci5281 dibComponent=span   style="  "  [innerHtml]="getHtml('spanDemo') | safeHtml" ></span><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5210 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;"  ><ng-container [dibPort]="'5210'" ><button  mat-raised-button color=primary  id=ci5208 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnSetGlobalClientData   style="  flex: 1 1 50%;  "  [attr.aria-label]="'Add Global Custom Values to ClientData'"  type=button  ><span class=dibButtonCaption >Add Global Custom Values to ClientData</span></button><span  id=ci5212 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('span2') | safeHtml" ></span><span  id=ci5215 dibComponent=spanInterpolation   style="  " ><b>resolve('custom_global_fruit'):</b> {{resolve('custom_global_fruit')}}</span></ng-container></mat-card-content></mat-card><span   *ngIf="!getValue('radioGroup') || !getValue('enum')" id=ci5278 dibComponent=span   style="  color:red"  [innerHtml]="getHtml('spanNextDemoPrerequisites') | safeHtml" ></span><mat-card   [dibDisabled]="!getValue('radioGroup') || !getValue('enum')"  style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5211 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;"  ><ng-container [dibPort]="'5211'" ><button  mat-raised-button color=primary  id=ci5209 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnSetContainerClientData   style="  flex: 1 1 50%;  "  [attr.aria-label]="'Add Container Custom Values to ClientData'"  type=button  ><span class=dibButtonCaption >Add Container Custom Values to ClientData</span></button><span  id=ci5213 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('span3') | safeHtml" ></span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  overflow:auto !important;" id=ci5279 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'5279'" ><span  id=ci5283 dibComponent=comment   style="  " ><div class=dib-comment > The following button opens a form using <b>?record=first'</b>.<br>We want to set the position field to 'Employee' for this record, so we also add <b>&staffForm.position=Employee</b> to the <b>Expression</b> field.<br>However, the response to the server request that reads the record data overwrites any values that are set with URL parameters.<br>Therefore we create a custom clientData value for this container only, and then set the position field using <b>set-value</b> on the container's <b>reload-container</b> event.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;  flex-wrap: wrap; align-content: flex-start;  flex: 1 1 0%;  overflow:auto !important;" id=ci5282 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5282'" ><span  id=ci5280 dibComponent=span   style="  flex: 1 1 50%;  "  [innerHtml]="getHtml('span10') | safeHtml" ></span></ng-container></div></ng-container></mat-card-content></mat-card></ng-container></div></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, select_1.MatSelectModule, autocomplete_1.MatAutocompleteModule, checkbox_1.MatCheckboxModule, radio_1.MatRadioModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, tabs_1.MatTabsModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexDropinbaseServicesModule = class dibexDropinbaseServicesModule {
+                static entry = dibexDropinbaseServicesComponent;
+                static ɵfac = function dibexDropinbaseServicesModule_Factory(t) { return new (t || dibexDropinbaseServicesModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexDropinbaseServicesModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexDropinbaseServicesModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexDropinbaseServicesModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexDropinbaseServicesComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexDropinbaseServicesModule, { declarations: [dibexDropinbaseServicesComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, select_1.MatSelectModule, autocomplete_1.MatAutocompleteModule, checkbox_1.MatCheckboxModule, radio_1.MatRadioModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, tabs_1.MatTabsModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

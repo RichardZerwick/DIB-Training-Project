@@ -1,0 +1,202 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, _c0, importsRequired, dibexPortsDialogComponent, containerModules, fullDateTimeOptions, dibexPortsDialogModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPortsDialogComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 12);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPortsDialogComponent = class dibexPortsDialogComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 246, name: 'dibexPortsDialog', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6027'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPortsDialog');
+                    this.containerName = 'dibexPortsDialog'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('comments', `The button below opens a plain container as a dialog to gather information from the user.`);
+                    this.setInnerHtml('comments', `The button below opens a plain container as a dialog to gather information from the user.`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPortsDialog', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPortsDialog' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPortsDialogComponent_Factory(t) { return new (t || dibexPortsDialogComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPortsDialogComponent, selectors: [["dibex-ports-dialog"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 15, vars: 12, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6027", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPortsDialog", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6028", "dibComponent", "card", 2, "width", "1300px !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px 10px"], [3, "dibPort"], ["id", "ci6029", "dibComponent", "span", 2, "font-size", "14px", "border", "1px", "border-style", "solid", "border-color", "#c3c3c3", "padding", "9px", "background-color", "#FFF9E0", 3, "innerHtml"], ["id", "ci6030", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci6031", "dibComponent", "button", "type", "button", 3, "click"], [1, "dibButtonCaption"], ["mode", "indeterminate"]], template: function dibexPortsDialogComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPortsDialogComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPortsDialogComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelement(8, "span", 8);
+                        i0.ɵɵpipe(9, "safeHtml");
+                        i0.ɵɵelementStart(10, "div", 9);
+                        i0.ɵɵelementContainerStart(11, 7);
+                        i0.ɵɵelementStart(12, "button", 10);
+                        i0.ɵɵlistener("click", function dibexPortsDialogComponent_Template_button_click_12_listener($event) { return ctx.navigationService.goTo("dibexDialog", "own", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(13, "span", 11);
+                        i0.ɵɵtext(14, "Open Floating Dialog");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(10, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6027");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6028");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(9, 8, ctx.getHtml("comments")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6030");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Open Floating Dialog");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibPortDirective, i6.MatButton, i7.MatProgressBar, i8.MatCard, i8.MatCardContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPortsDialog'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPortsDialogComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPortsDialogComponent", dibexPortsDialogComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPortsDialogComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-ports-dialog', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6027 dibComponent=subcontainer   ><ng-container [dibPort]="'6027'" parentContainerName=dibexPortsDialog  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:1300px !important;   " id=ci6028 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px 10px;"  ><ng-container [dibPort]="'6028'" ><span  id=ci6029 dibComponent=span   style="  font-size: 14px;border:1px; border-style:solid; border-color:#c3c3c3; padding: 9px; background-color: #FFF9E0"  [innerHtml]="getHtml('comments') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci6030 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6030'" ><button  mat-raised-button color=primary  id=ci6031 dibComponent=button   (click)="navigationService.goTo(  'dibexDialog',  'own',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Open Floating Dialog'"  type=button  ><span class=dibButtonCaption >Open Floating Dialog</span></button></ng-container></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPortsDialogModule = class dibexPortsDialogModule {
+                static entry = dibexPortsDialogComponent;
+                static ɵfac = function dibexPortsDialogModule_Factory(t) { return new (t || dibexPortsDialogModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPortsDialogModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPortsDialogModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPortsDialogModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPortsDialogComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPortsDialogModule, { declarations: [dibexPortsDialogComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,683 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@angular/material/divider", "@angular/material/menu", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, divider_1, menu_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, _c0, importsRequired, dibexComponentsButtonsComponent, containerModules, fullDateTimeOptions, dibexComponentsButtonsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsButtonsComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 121);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i7 = divider_1_1;
+            },
+            function (menu_1_1) {
+                menu_1 = menu_1_1;
+                i11 = menu_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexComponentsButtonsComponent = class dibexComponentsButtonsComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 266, name: 'dibexComponentsButtons', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6383'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsButtons');
+                    this.containerName = 'dibexComponentsButtons'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "buttonEvent", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "buttonEvent", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie413-dib', itemId: '7051', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "buttonEvent1", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "buttonEvent1", waitForCompletion: false, containerName: "dibexComponentsButtons", continue() { return this.messagingService.confirm({ message: this.translate('dibexComponentsButtons.buttonEvent1.click', `Would you indeed like to be greeted?`), okText: this.translate('dibexComponentsButtons.buttonEvent1.click.okText', `Count Me In`), cancelText: this.translate('dibexComponentsButtons.buttonEvent1.click.cancelText', `Maybe Later`) }); },
+                        handlers: [] }, this.clientData, { itemEventId: 'ie416-dib', itemId: '7123', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "icon", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "icon", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie414-dib', itemId: '6386', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "menuItem", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "menuItem", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie438-dib', itemId: '7359', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "menuItem1", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "menuItem1", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie439-dib', itemId: '7360', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "menuItem2", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "menuItem2", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie440-dib', itemId: '7362', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "menuItem3", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "menuItem3", waitForCompletion: false, containerName: "dibexComponentsButtons", handlers: [] }, this.clientData, { itemEventId: 'ie441-dib', itemId: '7363', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsButtons', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsButtons' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsButtonsComponent_Factory(t) { return new (t || dibexComponentsButtonsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsButtonsComponent, selectors: [["dibex-components-buttons"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 256, vars: 273, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6383", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsButtons", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6384", "dibComponent", "div", 2, "width", "600px !important", "padding", "10px !important", "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], [3, "dibPort"], ["id", "ci7050", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci6385", "dibComponent", "button", "type", "button", 3, "click"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "accent", "id", "ci7051", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "buttonEvent", "type", "button", 3, "containerPortId"], ["mat-raised-button", "", "color", "accent", "id", "ci7123", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "buttonEvent1", "type", "button", 3, "containerPortId"], ["mat-button", "", "color", "primary", "id", "ci7052", "dibComponent", "button", "type", "button", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci7053", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci7056", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7057", "dibComponent", "comment"], [1, "dib-comment"], ["mat-raised-button", "", "color", "primary", "id", "ci7055", "dibComponent", "button", "dibDisabled", "true", "type", "button", 3, "click"], ["id", "ci7356", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7357", "dibComponent", "comment"], ["mat-button", "", "id", "ci7358", "dibComponent", "menu", "type", "button", 2, "width", "250px !important", 3, "matMenuTriggerFor"], ["dibexComponentsButtonsmenu", ""], ["id", "ci7359", "dibComponent", "menuItem", "dibListeners", "", "eventList", "  click ", "actionId", "menuItem", "aria-label", "Greetings to one and all!", "matTooltipClass", "dib-tooltip", "mat-menu-item", "", "type", "button", 3, "containerPortId", "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci7360", "dibComponent", "menuItem", "dibListeners", "", "eventList", "  click ", "actionId", "menuItem1", "aria-label", "Greetings to one and all!", "matTooltipClass", "dib-tooltip", "mat-menu-item", "", "type", "button", 3, "containerPortId", "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci7361", "dibComponent", "menuItem", "mat-menu-item", "", "type", "button", 3, "matMenuTriggerFor"], ["dibexComponentsButtonsmenuItemNest", "matMenu"], ["id", "ci7362", "dibComponent", "menuItem", "dibListeners", "", "eventList", "  click ", "actionId", "menuItem2", "aria-label", "Greetings to one and all!", "matTooltipClass", "dib-tooltip", "mat-menu-item", "", "type", "button", 3, "containerPortId", "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci7363", "dibComponent", "menuItem", "dibListeners", "", "eventList", "  click ", "actionId", "menuItem3", "aria-label", "Greetings to one and all!", "matTooltipClass", "dib-tooltip", "mat-menu-item", "", "type", "button", 3, "containerPortId", "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci7054", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci6390", "dibComponent", "comment"], ["id", "ci6386", "dibComponent", "icon", "dibListeners", "", "eventList", "  click ", "actionId", "icon", "src", "lock_black_24dp.svg", 3, "containerPortId"], ["id", "ci6388", "dibComponent", "icon", "src", "home_black_24dp.svg"], ["id", "ci6389", "dibComponent", "icon", "src", "done_black_24dp.svg"], ["id", "ci7058", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7059", "dibComponent", "comment"], ["id", "ci6387", "dibComponent", "largeIcon", "aria-label", "Some description about this button's purpose", "matTooltipClass", "dib-tooltip", 2, "display", "flex", "flex-direction", "row", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], [1, "dib-large-icon", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "row", "justify-content", "space-between", "align-items", "center"], ["src", "home_black_24dp.svg", 1, "dibIconLarge"], [1, "dibIconLargeTitle", 2, "flex", "1 1 0%"], [1, "dibIconLargeDescription"], ["id", "ci6391", "dibComponent", "card", 2, "width", "1000px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "15px"], ["id", "ci7060", "dibComponent", "comment"], ["id", "ci6392", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-button", "", "color", "basic", "id", "ci6393", "dibComponent", "button", "aria-label", "mat-button color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "color", "primary", "id", "ci6394", "dibComponent", "button", "aria-label", "mat-button color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "color", "accent", "id", "ci6395", "dibComponent", "button", "aria-label", "mat-button color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "color", "warn", "id", "ci6396", "dibComponent", "button", "aria-label", "mat-button color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "id", "ci6397", "dibComponent", "button", "aria-label", "mat-button disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "color", "link", "id", "ci6398", "dibComponent", "button", "aria-label", "mat-button color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-button", "", "color", "link", "id", "ci7061", "dibComponent", "button", "aria-label", "mat-button color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "face"], ["id", "ci6406", "dibComponent", "divider"], ["id", "ci6399", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "basic", "id", "ci6402", "dibComponent", "button", "aria-label", "mat-raised-button color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "color", "primary", "id", "ci6405", "dibComponent", "button", "aria-label", "mat-raised-button color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "color", "accent", "id", "ci6404", "dibComponent", "button", "aria-label", "mat-raised-button color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "color", "warn", "id", "ci6403", "dibComponent", "button", "aria-label", "mat-raised-button color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "id", "ci6400", "dibComponent", "button", "aria-label", "mat-raised-button disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "color", "link", "id", "ci6401", "dibComponent", "button", "aria-label", "mat-raised-button color= \"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-raised-button", "", "color", "link", "id", "ci7062", "dibComponent", "button", "aria-label", "mat-raised-button color= \"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci6407", "dibComponent", "divider"], ["id", "ci6408", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-flat-button", "", "color", "basic", "id", "ci6410", "dibComponent", "button", "aria-label", "mat-flat-button color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "color", "primary", "id", "ci6411", "dibComponent", "button", "aria-label", "mat-flat-button color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "color", "accent", "id", "ci6412", "dibComponent", "button", "aria-label", "mat-flat-button color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "color", "warn", "id", "ci6414", "dibComponent", "button", "aria-label", "mat-flat-button color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "id", "ci6409", "dibComponent", "button", "aria-label", "mat-flat-button disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "color", "link", "id", "ci6413", "dibComponent", "button", "aria-label", "mat-flat-button color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-flat-button", "", "color", "link", "id", "ci7063", "dibComponent", "button", "aria-label", "mat-flat-button color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci6415", "dibComponent", "divider"], ["id", "ci6416", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-stroked-button", "", "color", "basic", "id", "ci6417", "dibComponent", "button", "aria-label", "mat-stroked-button color= \"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "color", "primary", "id", "ci6418", "dibComponent", "button", "aria-label", "mat-stroked-button color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "color", "accent", "id", "ci6419", "dibComponent", "button", "aria-label", "mat-stroked-button color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "color", "warn", "id", "ci6420", "dibComponent", "button", "aria-label", "mat-stroked-button color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "id", "ci6421", "dibComponent", "button", "aria-label", "mat-stroked-button disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "color", "link", "id", "ci6422", "dibComponent", "button", "aria-label", "mat-stroked-button color= \"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-stroked-button", "", "color", "link", "id", "ci7064", "dibComponent", "button", "aria-label", "mat-stroked-button color= \"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 2, "width", "250px !important", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["id", "ci6423", "dibComponent", "divider"], ["id", "ci6424", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-icon-button", "", "color", "basic", "id", "ci6425", "dibComponent", "button", "aria-label", "mat-icon-button color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "home"], ["mat-icon-button", "", "color", "primary", "id", "ci6426", "dibComponent", "button", "aria-label", "mat-icon-button color= \"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "settings"], ["mat-icon-button", "", "color", "accent", "id", "ci6427", "dibComponent", "button", "aria-label", "mat-icon-button color= \"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "search"], ["mat-icon-button", "", "color", "warn", "id", "ci6428", "dibComponent", "button", "aria-label", "mat-icon-button color= \"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "report_problem"], ["mat-icon-button", "", "id", "ci6429", "dibComponent", "button", "aria-label", "mat-icon-button disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "lock"], ["mat-icon-button", "", "color", "link", "id", "ci6430", "dibComponent", "button", "aria-label", "mat-icon-button color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "favorite_border"], ["id", "ci6438", "dibComponent", "divider"], ["id", "ci6431", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-fab", "", "color", "basic", "id", "ci6432", "dibComponent", "button", "aria-label", "mat-fab color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-fab", "", "color", "primary", "id", "ci6433", "dibComponent", "button", "aria-label", "mat-fab color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "language"], ["mat-fab", "", "color", "accent", "id", "ci6434", "dibComponent", "button", "aria-label", "mat-fab color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "done"], ["mat-fab", "", "color", "warn", "id", "ci6435", "dibComponent", "button", "aria-label", "mat-fab color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "logout"], ["mat-fab", "", "color", "disabled", "id", "ci6436", "dibComponent", "button", "aria-label", "mat-fab disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "info"], ["mat-fab", "", "color", "link", "id", "ci6437", "dibComponent", "button", "aria-label", "mat-fab color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "schedule"], ["id", "ci6439", "dibComponent", "divider"], ["id", "ci6440", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-mini-fab", "", "color", "basic", "id", "ci6441", "dibComponent", "button", "aria-label", "mat-mini-fab color=\"basic\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["mat-mini-fab", "", "color", "primary", "id", "ci6442", "dibComponent", "button", "aria-label", "mat-mini-fab color=\"primary\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "dashboard"], ["mat-mini-fab", "", "color", "accent", "id", "ci6443", "dibComponent", "button", "aria-label", ";mat-mini-fab color=\"accent\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "manage_accounts"], ["mat-mini-fab", "", "color", "warn", "id", "ci6444", "dibComponent", "button", "aria-label", "mat-mini-fab color=\"warn\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "shopping_bag"], ["mat-mini-fab", "", "id", "ci6445", "dibComponent", "button", "aria-label", "mat-mini-fab disabled=ticked", "matTooltipClass", "dib-tooltip", "dibDisabled", "true", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "question_answer"], ["mat-mini-fab", "", "color", "link", "id", "ci6446", "dibComponent", "button", "aria-label", "mat-mini-fab color=\"link\"", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "store"], ["mode", "indeterminate"]], template: function dibexComponentsButtonsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexComponentsButtonsComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsButtonsComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "mat-card", 7)(8, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(9, 6);
+                        i0.ɵɵelementStart(10, "button", 9);
+                        i0.ɵɵlistener("click", function dibexComponentsButtonsComponent_Template_button_click_10_listener($event) { return ctx.navigationService.goTo("dibexTestClientForm", "window", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(11, "span", 10);
+                        i0.ɵɵtext(12, "Linked to a Port");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(13, "button", 11)(14, "span", 10);
+                        i0.ɵɵtext(15, "Linked to an Event with color Accent");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(16, "button", 12)(17, "span", 10);
+                        i0.ɵɵtext(18, "Event with Confirmation Message");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(19, "button", 13);
+                        i0.ɵɵlistener("click", function dibexComponentsButtonsComponent_Template_button_click_19_listener() { return ctx.navigationService.openUrl("/logout"); });
+                        i0.ɵɵelementStart(20, "span", 10);
+                        i0.ɵɵtext(21, "Logout Button with Flat Style (Watch Out...)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(22, "button", 14);
+                        i0.ɵɵlistener("click", function dibexComponentsButtonsComponent_Template_button_click_22_listener() { return ctx.navigationService.openUrl("/files/dropins/dibExamples/img/dibSummary.png", "_blank"); });
+                        i0.ɵɵelementStart(23, "span", 10);
+                        i0.ɵɵtext(24, "View/Download Fixed File");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(25, "mat-card", 15)(26, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(27, 6);
+                        i0.ɵɵelementStart(28, "span", 16)(29, "div", 17);
+                        i0.ɵɵtext(30, " Buttons can be disabled (and hidden).");
+                        i0.ɵɵelement(31, "br");
+                        i0.ɵɵtext(32, "Use [dibDisabled] to disable them conditionally.");
+                        i0.ɵɵelement(33, "br");
+                        i0.ɵɵtext(34, "Use shared.action.item-handler to disable them programmatically. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(35, "button", 18);
+                        i0.ɵɵlistener("click", function dibexComponentsButtonsComponent_Template_button_click_35_listener($event) { return ctx.navigationService.goTo("dibexTestClientForm", "window", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(36, "span", 10);
+                        i0.ɵɵtext(37, "Disabled Button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(38, "mat-card", 19)(39, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(40, 6);
+                        i0.ɵɵelementStart(41, "span", 20)(42, "div", 17);
+                        i0.ɵɵtext(43, " Use ");
+                        i0.ɵɵelementStart(44, "b");
+                        i0.ɵɵtext(45, "menu");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(46, " and ");
+                        i0.ɵɵelementStart(47, "b");
+                        i0.ɵɵtext(48, "menuItem");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(49, " to create a nested menu.");
+                        i0.ɵɵelement(50, "br");
+                        i0.ɵɵtext(51, "Add tooltips to menuItems that appear on mouse hover ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(52, "button", 21)(53, "span", 10);
+                        i0.ɵɵtext(54, "My Menu");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(55, "mat-menu", null, 22)(57, "button", 23)(58, "span", 10);
+                        i0.ɵɵtext(59, "Action 1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(60, "button", 24)(61, "span", 10);
+                        i0.ɵɵtext(62, "Action 2");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(63, "button", 25)(64, "span", 10);
+                        i0.ɵɵtext(65, "Nested menu items");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(66, "mat-menu", null, 26)(68, "button", 27)(69, "span", 10);
+                        i0.ɵɵtext(70, "More Actions 1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(71, "button", 28)(72, "span", 10);
+                        i0.ɵɵtext(73, "More Actions 2");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(74, "mat-card", 29)(75, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(76, 6);
+                        i0.ɵɵelementStart(77, "span", 30)(78, "div", 17);
+                        i0.ɵɵtext(79, " An ");
+                        i0.ɵɵelementStart(80, "b");
+                        i0.ɵɵtext(81, "icon");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(82, " must be linked to an image and can't contain a caption ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(83, "dib-icon", 31)(84, "dib-icon", 32)(85, "dib-icon", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(86, "mat-card", 34)(87, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(88, 6);
+                        i0.ɵɵelementStart(89, "span", 35)(90, "div", 17);
+                        i0.ɵɵtext(91, " Use ");
+                        i0.ɵɵelementStart(92, "b");
+                        i0.ɵɵtext(93, "largeIcon");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(94, " for eg Dashboards ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(95, "span", 36)(96, "mat-card", 37)(97, "div", 38);
+                        i0.ɵɵelement(98, "dib-icon", 39);
+                        i0.ɵɵelementStart(99, "h2", 40);
+                        i0.ɵɵtext(100, "Large Icon");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(101, "span", 41);
+                        i0.ɵɵtext(102, "Some description about this button's purpose");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(103, "mat-card", 42)(104, "mat-card-content", 43);
+                        i0.ɵɵelementContainerStart(105, 6);
+                        i0.ɵɵelementStart(106, "span", 44)(107, "div", 17);
+                        i0.ɵɵtext(108, " Buttons can be styled using attributes, icons and CSS.");
+                        i0.ɵɵelement(109, "br");
+                        i0.ɵɵelementStart(110, "i");
+                        i0.ɵɵtext(111, "Hover over the buttons to view attributes.");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(112, "div", 45);
+                        i0.ɵɵelementContainerStart(113, 6);
+                        i0.ɵɵelementStart(114, "button", 46)(115, "span", 10);
+                        i0.ɵɵtext(116, "basic");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(117, "button", 47)(118, "span", 10);
+                        i0.ɵɵtext(119, "primary");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(120, "button", 48)(121, "span", 10);
+                        i0.ɵɵtext(122, "accent");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(123, "button", 49)(124, "span", 10);
+                        i0.ɵɵtext(125, "warn");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(126, "button", 50)(127, "span", 10);
+                        i0.ɵɵtext(128, "disabled");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(129, "button", 51)(130, "span", 10);
+                        i0.ɵɵtext(131, "link");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(132, "button", 52);
+                        i0.ɵɵelement(133, "dib-icon", 53);
+                        i0.ɵɵelementStart(134, "span", 10);
+                        i0.ɵɵtext(135, "With Icon");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(136, "mat-divider", 54);
+                        i0.ɵɵelementStart(137, "div", 55);
+                        i0.ɵɵelementContainerStart(138, 6);
+                        i0.ɵɵelementStart(139, "button", 56)(140, "span", 10);
+                        i0.ɵɵtext(141, "basic raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(142, "button", 57)(143, "span", 10);
+                        i0.ɵɵtext(144, "primary raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(145, "button", 58)(146, "span", 10);
+                        i0.ɵɵtext(147, "accent raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(148, "button", 59)(149, "span", 10);
+                        i0.ɵɵtext(150, "warn raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(151, "button", 60)(152, "span", 10);
+                        i0.ɵɵtext(153, "disabled raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(154, "button", 61)(155, "span", 10);
+                        i0.ɵɵtext(156, "link raised");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(157, "button", 62);
+                        i0.ɵɵelement(158, "dib-icon", 53);
+                        i0.ɵɵelementStart(159, "span", 10);
+                        i0.ɵɵtext(160, "With Icon");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(161, "mat-divider", 63);
+                        i0.ɵɵelementStart(162, "div", 64);
+                        i0.ɵɵelementContainerStart(163, 6);
+                        i0.ɵɵelementStart(164, "button", 65)(165, "span", 10);
+                        i0.ɵɵtext(166, "basic flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(167, "button", 66)(168, "span", 10);
+                        i0.ɵɵtext(169, "primary flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(170, "button", 67)(171, "span", 10);
+                        i0.ɵɵtext(172, "accent flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(173, "button", 68)(174, "span", 10);
+                        i0.ɵɵtext(175, "warn flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(176, "button", 69)(177, "span", 10);
+                        i0.ɵɵtext(178, "disabled flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(179, "button", 70)(180, "span", 10);
+                        i0.ɵɵtext(181, "link flat");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(182, "button", 71);
+                        i0.ɵɵelement(183, "dib-icon", 53);
+                        i0.ɵɵelementStart(184, "span", 10);
+                        i0.ɵɵtext(185, "With Icon");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(186, "mat-divider", 72);
+                        i0.ɵɵelementStart(187, "div", 73);
+                        i0.ɵɵelementContainerStart(188, 6);
+                        i0.ɵɵelementStart(189, "button", 74)(190, "span", 10);
+                        i0.ɵɵtext(191, "basic stroke");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(192, "button", 75)(193, "span", 10);
+                        i0.ɵɵtext(194, "primary stroked");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(195, "button", 76)(196, "span", 10);
+                        i0.ɵɵtext(197, "accent stroked");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(198, "button", 77)(199, "span", 10);
+                        i0.ɵɵtext(200, "warn stroked");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(201, "button", 78)(202, "span", 10);
+                        i0.ɵɵtext(203, "disabled stroked");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(204, "button", 79)(205, "span", 10);
+                        i0.ɵɵtext(206, "link stroked");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(207, "button", 80);
+                        i0.ɵɵelement(208, "dib-icon", 53);
+                        i0.ɵɵelementStart(209, "span", 10);
+                        i0.ɵɵtext(210, "With Icon");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(211, "mat-divider", 81);
+                        i0.ɵɵelementStart(212, "div", 82);
+                        i0.ɵɵelementContainerStart(213, 6);
+                        i0.ɵɵelementStart(214, "button", 83);
+                        i0.ɵɵelement(215, "dib-icon", 84);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(216, "button", 85);
+                        i0.ɵɵelement(217, "dib-icon", 86);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(218, "button", 87);
+                        i0.ɵɵelement(219, "dib-icon", 88);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(220, "button", 89);
+                        i0.ɵɵelement(221, "dib-icon", 90);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(222, "button", 91);
+                        i0.ɵɵelement(223, "dib-icon", 92);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(224, "button", 93);
+                        i0.ɵɵelement(225, "dib-icon", 94);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(226, "mat-divider", 95);
+                        i0.ɵɵelementStart(227, "div", 96);
+                        i0.ɵɵelementContainerStart(228, 6);
+                        i0.ɵɵelementStart(229, "button", 97);
+                        i0.ɵɵelement(230, "dib-icon", 53);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(231, "button", 98);
+                        i0.ɵɵelement(232, "dib-icon", 99);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(233, "button", 100);
+                        i0.ɵɵelement(234, "dib-icon", 101);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(235, "button", 102);
+                        i0.ɵɵelement(236, "dib-icon", 103);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(237, "button", 104);
+                        i0.ɵɵelement(238, "dib-icon", 105);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(239, "button", 106);
+                        i0.ɵɵelement(240, "dib-icon", 107);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(241, "mat-divider", 108);
+                        i0.ɵɵelementStart(242, "div", 109);
+                        i0.ɵɵelementContainerStart(243, 6);
+                        i0.ɵɵelementStart(244, "button", 110);
+                        i0.ɵɵelement(245, "dib-icon", 53);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(246, "button", 111);
+                        i0.ɵɵelement(247, "dib-icon", 112);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(248, "button", 113);
+                        i0.ɵɵelement(249, "dib-icon", 114);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(250, "button", 115);
+                        i0.ɵɵelement(251, "dib-icon", 116);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(252, "button", 117);
+                        i0.ɵɵelement(253, "dib-icon", 118);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(254, "button", 119);
+                        i0.ɵɵelement(255, "dib-icon", 120);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        const _r1 = i0.ɵɵreference(56);
+                        const _r2 = i0.ɵɵreference(67);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(271, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6383");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6384");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7050");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Linked to a Port");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Linked to an Event with color Accent");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Event with Confirmation Message");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Logout Button with Flat Style (Watch Out...)");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "View/Download Fixed File");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7056");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵattribute("aria-label", "Disabled Button");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7356");
+                        i0.ɵɵadvance(12);
+                        i0.ɵɵproperty("matMenuTriggerFor", _r1);
+                        i0.ɵɵattribute("aria-label", "My Menu");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("matTooltip", "Greetings to one and all!")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "right");
+                        i0.ɵɵattribute("aria-label", "Action 1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("matTooltip", "Greetings to one and all!")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "right");
+                        i0.ɵɵattribute("aria-label", "Action 2");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matMenuTriggerFor", _r2);
+                        i0.ɵɵattribute("aria-label", "Nested menu items");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("matTooltip", "Greetings to one and all!")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "right");
+                        i0.ɵɵattribute("aria-label", "More Actions 1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("matTooltip", "Greetings to one and all!")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "right");
+                        i0.ɵɵattribute("aria-label", "More Actions 2");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7054");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "7058");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("matTooltip", "Some description about this button's purpose")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "6391");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "6392");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "basic");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "primary");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "accent");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "warn");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "disabled");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "link");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-button color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "With Icon");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6399");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "basic raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "primary raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "accent raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "warn raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "disabled raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color= \"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "link raised");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-raised-button color= \"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "With Icon");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6408");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "basic flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "primary flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "accent flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "warn flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "disabled flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "link flat");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-flat-button color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "With Icon");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6416");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color= \"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "basic stroke");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "primary stroked");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "accent stroked");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "warn stroked");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "disabled stroked");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color= \"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "link stroked");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "mat-stroked-button color= \"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "With Icon");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6424");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button color= \"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button color= \"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button color= \"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-icon-button color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "6431");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-fab color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-fab color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-fab color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-fab color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-fab disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-fab color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "6440");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "mat-mini-fab color=\"basic\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-mini-fab color=\"primary\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", ";mat-mini-fab color=\"accent\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-mini-fab color=\"warn\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-mini-fab disabled=ticked")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "mat-mini-fab color=\"link\"")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibIconComponent, i2.DibPortDirective, i2.DibListenersDirective, i2.DibDisabledDirective, i6.MatButton, i6.MatIconButton, i6.MatMiniFabButton, i6.MatFabButton, i7.MatDivider, i8.MatProgressBar, i9.MatTooltip, i10.MatCard, i10.MatCardContent, i11.MatMenu, i11.MatMenuItem, i11.MatMenuTrigger], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsButtons'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsButtonsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsButtonsComponent", dibexComponentsButtonsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsButtonsComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-buttons', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6383 dibComponent=subcontainer   ><ng-container [dibPort]="'6383'" parentContainerName=dibexComponentsButtons  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  width:600px !important;   padding:10px !important;  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6384 dibComponent=div  ><ng-container [dibPort]="'6384'" ><mat-card   style="  flex: 1 1 0%;  " id=ci7050 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7050'" ><button  mat-raised-button color=primary  id=ci6385 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientForm',  'window',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Linked to a Port'"  type=button  ><span class=dibButtonCaption >Linked to a Port</span></button><button  mat-raised-button color=accent  id=ci7051 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=buttonEvent   style="  "  [attr.aria-label]="'Linked to an Event with color Accent'"  type=button  ><span class=dibButtonCaption >Linked to an Event with color Accent</span></button><button  mat-raised-button color=accent  id=ci7123 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=buttonEvent1   style="  "  [attr.aria-label]="'Event with Confirmation Message'"  type=button  ><span class=dibButtonCaption >Event with Confirmation Message</span></button><button  mat-button color=primary  id=ci7052 dibComponent=button  (click)="navigationService.openUrl('/logout');"  style="  "  [attr.aria-label]="'Logout Button with Flat Style (Watch Out...)'"  type=button  ><span class=dibButtonCaption >Logout Button with Flat Style (Watch Out...)</span></button><button  mat-raised-button color=primary  id=ci7053 dibComponent=button  (click)="navigationService.openUrl('/files/dropins/dibExamples/img/dibSummary.png', '_blank');"  style="  "  [attr.aria-label]="'View/Download Fixed File'"  type=button  ><span class=dibButtonCaption >View/Download Fixed File</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7056 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7056'" ><span  id=ci7057 dibComponent=comment   style="  " ><div class=dib-comment > Buttons can be disabled (and hidden).<br>Use [dibDisabled] to disable them conditionally.<br>Use shared.action.item-handler to disable them programmatically.  </div></span><button  mat-raised-button color=primary  id=ci7055 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientForm',  'window',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  " dibDisabled=true   [attr.aria-label]="'Disabled Button'"  type=button  ><span class=dibButtonCaption >Disabled Button</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7356 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7356'" ><span  id=ci7357 dibComponent=comment   style="  " ><div class=dib-comment > Use <b>menu</b> and <b>menuItem</b> to create a nested menu.<br>Add tooltips to menuItems that appear on mouse hover  </div></span><button   mat-button id=ci7358 dibComponent=menu   style="  width:250px !important;   "  [matMenuTriggerFor]="dibexComponentsButtonsmenu"  [attr.aria-label]="'My Menu'"  type=button  ><span class=dibButtonCaption >My Menu</span></button><mat-menu #dibexComponentsButtonsmenu><button  id=ci7359 dibComponent=menuItem  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=menuItem   style="  " aria-label="Greetings to one and all!"  [matTooltip]="'Greetings to one and all!'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'right'"  matTooltipClass=dib-tooltip   mat-menu-item  [attr.aria-label]="'Action 1'"  type=button  ><span class=dibButtonCaption >Action 1</span></button><button  id=ci7360 dibComponent=menuItem  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=menuItem1   style="  " aria-label="Greetings to one and all!"  [matTooltip]="'Greetings to one and all!'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'right'"  matTooltipClass=dib-tooltip   mat-menu-item  [attr.aria-label]="'Action 2'"  type=button  ><span class=dibButtonCaption >Action 2</span></button><button  id=ci7361 dibComponent=menuItem   style="  "  mat-menu-item [matMenuTriggerFor]="dibexComponentsButtonsmenuItemNest"  [attr.aria-label]="'Nested menu items'"  type=button  ><span class=dibButtonCaption >Nested menu items</span></button><mat-menu #dibexComponentsButtonsmenuItemNest=matMenu ><button  id=ci7362 dibComponent=menuItem  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=menuItem2   style="  " aria-label="Greetings to one and all!"  [matTooltip]="'Greetings to one and all!'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'right'"  matTooltipClass=dib-tooltip   mat-menu-item  [attr.aria-label]="'More Actions 1'"  type=button  ><span class=dibButtonCaption >More Actions 1</span></button><button  id=ci7363 dibComponent=menuItem  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=menuItem3   style="  " aria-label="Greetings to one and all!"  [matTooltip]="'Greetings to one and all!'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'right'"  matTooltipClass=dib-tooltip   mat-menu-item  [attr.aria-label]="'More Actions 2'"  type=button  ><span class=dibButtonCaption >More Actions 2</span></button></mat-menu></mat-menu></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7054 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7054'" ><span  id=ci6390 dibComponent=comment   style="  " ><div class=dib-comment > An <b>icon</b> must be linked to an image and can't contain a caption  </div></span><dib-icon  id=ci6386 dibComponent=icon  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=icon   style="  "  src="lock_black_24dp.svg"></dib-icon><dib-icon  id=ci6388 dibComponent=icon   style="  "  src="home_black_24dp.svg"></dib-icon><dib-icon  id=ci6389 dibComponent=icon   style="  "  src="done_black_24dp.svg"></dib-icon></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7058 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7058'" ><span  id=ci7059 dibComponent=comment   style="  " ><div class=dib-comment > Use <b>largeIcon</b> for eg Dashboards  </div></span><span  id=ci6387 dibComponent=largeIcon   style="  display:flex; flex-direction: row;  " aria-label="Some description about this button's purpose"  [matTooltip]="'Some description about this button\\'s purpose'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  ><mat-card class=dib-large-icon  style="display:flex; flex-direction:column;flex:1 1 0%"><div style="display:flex; flex-direction:row; justify-content:space-between; align-items:center;"><dib-icon class=dibIconLarge  src="home_black_24dp.svg"></dib-icon><h2 style="flex: 1 1 0%" class=dibIconLargeTitle >Large Icon</h2></div><span class=dibIconLargeDescription >Some description about this button\'s purpose</span></mat-card></span></ng-container></mat-card-content></mat-card><mat-card   style="  width:1000px !important;   flex: 1 1 0%;  " id=ci6391 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 15px;"  ><ng-container [dibPort]="'6391'" ><span  id=ci7060 dibComponent=comment   style="  " ><div class=dib-comment > Buttons can be styled using attributes, icons and CSS.<br><i>Hover over the buttons to view attributes.</i></div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6392 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6392'" ><button  mat-button color=basic  id=ci6393 dibComponent=button   style="  " aria-label="mat-button color=&quot;basic&quot;"  [matTooltip]="'mat-button color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'basic'"  type=button  ><span class=dibButtonCaption >basic</span></button><button  mat-button color=primary  id=ci6394 dibComponent=button   style="  " aria-label="mat-button color=&quot;primary&quot;"  [matTooltip]="'mat-button color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'primary'"  type=button  ><span class=dibButtonCaption >primary</span></button><button  mat-button color=accent  id=ci6395 dibComponent=button   style="  " aria-label="mat-button color=&quot;accent&quot;"  [matTooltip]="'mat-button color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'accent'"  type=button  ><span class=dibButtonCaption >accent</span></button><button  mat-button color=warn  id=ci6396 dibComponent=button   style="  " aria-label="mat-button color=&quot;warn&quot;"  [matTooltip]="'mat-button color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'warn'"  type=button  ><span class=dibButtonCaption >warn</span></button><button  mat-button id=ci6397 dibComponent=button   style="  " aria-label="mat-button disabled=ticked"  [matTooltip]="'mat-button disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   [attr.aria-label]="'disabled'"  type=button  ><span class=dibButtonCaption >disabled</span></button><button  mat-button color=link  id=ci6398 dibComponent=button   style="  " aria-label="mat-button color=&quot;link&quot;"  [matTooltip]="'mat-button color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'link'"  type=button  ><span class=dibButtonCaption >link</span></button><button  mat-button color=link  id=ci7061 dibComponent=button   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  " aria-label="mat-button color=&quot;link&quot;"  [matTooltip]="'mat-button color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'With Icon'"  type=button  ><dib-icon src=face ></dib-icon><span class=dibButtonCaption >With Icon</span></button></ng-container></div><mat-divider  id=ci6406 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6399 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6399'" ><button  mat-raised-button color=basic  id=ci6402 dibComponent=button   style="  " aria-label="mat-raised-button color=&quot;basic&quot;"  [matTooltip]="'mat-raised-button color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'basic raised'"  type=button  ><span class=dibButtonCaption >basic raised</span></button><button  mat-raised-button color=primary  id=ci6405 dibComponent=button   style="  " aria-label="mat-raised-button color=&quot;primary&quot;"  [matTooltip]="'mat-raised-button color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'primary raised'"  type=button  ><span class=dibButtonCaption >primary raised</span></button><button  mat-raised-button color=accent  id=ci6404 dibComponent=button   style="  " aria-label="mat-raised-button color=&quot;accent&quot;"  [matTooltip]="'mat-raised-button color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'accent raised'"  type=button  ><span class=dibButtonCaption >accent raised</span></button><button  mat-raised-button color=warn  id=ci6403 dibComponent=button   style="  " aria-label="mat-raised-button color=&quot;warn&quot;"  [matTooltip]="'mat-raised-button color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'warn raised'"  type=button  ><span class=dibButtonCaption >warn raised</span></button><button  mat-raised-button id=ci6400 dibComponent=button   style="  " aria-label="mat-raised-button disabled=ticked"  [matTooltip]="'mat-raised-button disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   [attr.aria-label]="'disabled raised'"  type=button  ><span class=dibButtonCaption >disabled raised</span></button><button  mat-raised-button color= "link" id=ci6401 dibComponent=button   style="  " aria-label="mat-raised-button color= &quot;link&quot;"  [matTooltip]="'mat-raised-button color= &quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'link raised'"  type=button  ><span class=dibButtonCaption >link raised</span></button><button  mat-raised-button color= "link" id=ci7062 dibComponent=button   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  " aria-label="mat-raised-button color= &quot;link&quot;"  [matTooltip]="'mat-raised-button color= &quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'With Icon'"  type=button  ><dib-icon src=face ></dib-icon><span class=dibButtonCaption >With Icon</span></button></ng-container></div><mat-divider  id=ci6407 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6408 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6408'" ><button  mat-flat-button color=basic  id=ci6410 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;basic&quot;"  [matTooltip]="'mat-flat-button color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'basic flat'"  type=button  ><span class=dibButtonCaption >basic flat</span></button><button  mat-flat-button color=primary  id=ci6411 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;primary&quot;"  [matTooltip]="'mat-flat-button color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'primary flat'"  type=button  ><span class=dibButtonCaption >primary flat</span></button><button  mat-flat-button color=accent  id=ci6412 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;accent&quot;"  [matTooltip]="'mat-flat-button color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'accent flat'"  type=button  ><span class=dibButtonCaption >accent flat</span></button><button  mat-flat-button color=warn  id=ci6414 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;warn&quot;"  [matTooltip]="'mat-flat-button color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'warn flat'"  type=button  ><span class=dibButtonCaption >warn flat</span></button><button  mat-flat-button id=ci6409 dibComponent=button   style="  " aria-label="mat-flat-button disabled=ticked"  [matTooltip]="'mat-flat-button disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   [attr.aria-label]="'disabled flat'"  type=button  ><span class=dibButtonCaption >disabled flat</span></button><button  mat-flat-button color=link  id=ci6413 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;link&quot;"  [matTooltip]="'mat-flat-button color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'link flat'"  type=button  ><span class=dibButtonCaption >link flat</span></button><button  mat-flat-button color=link  id=ci7063 dibComponent=button   style="  " aria-label="mat-flat-button color=&quot;link&quot;"  [matTooltip]="'mat-flat-button color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'With Icon'"  type=button  ><dib-icon src=face ></dib-icon><span class=dibButtonCaption >With Icon</span></button></ng-container></div><mat-divider  id=ci6415 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6416 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6416'" ><button  mat-stroked-button color= "basic" id=ci6417 dibComponent=button   style="  " aria-label="mat-stroked-button color= &quot;basic&quot;"  [matTooltip]="'mat-stroked-button color= &quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'basic stroke'"  type=button  ><span class=dibButtonCaption >basic stroke</span></button><button  mat-stroked-button color= "primary" id=ci6418 dibComponent=button   style="  " aria-label="mat-stroked-button color=&quot;primary&quot;"  [matTooltip]="'mat-stroked-button color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'primary stroked'"  type=button  ><span class=dibButtonCaption >primary stroked</span></button><button  mat-stroked-button color= "accent" id=ci6419 dibComponent=button   style="  " aria-label="mat-stroked-button color=&quot;accent&quot;"  [matTooltip]="'mat-stroked-button color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'accent stroked'"  type=button  ><span class=dibButtonCaption >accent stroked</span></button><button  mat-stroked-button color= "warn" id=ci6420 dibComponent=button   style="  " aria-label="mat-stroked-button color=&quot;warn&quot;"  [matTooltip]="'mat-stroked-button color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'warn stroked'"  type=button  ><span class=dibButtonCaption >warn stroked</span></button><button  mat-stroked-button id=ci6421 dibComponent=button   style="  " aria-label="mat-stroked-button disabled=ticked"  [matTooltip]="'mat-stroked-button disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   [attr.aria-label]="'disabled stroked'"  type=button  ><span class=dibButtonCaption >disabled stroked</span></button><button  mat-stroked-button color= "link" id=ci6422 dibComponent=button   style="  " aria-label="mat-stroked-button color= &quot;link&quot;"  [matTooltip]="'mat-stroked-button color= &quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'link stroked'"  type=button  ><span class=dibButtonCaption >link stroked</span></button><button  mat-stroked-button color= "link" id=ci7064 dibComponent=button   style="  width:250px !important;   " aria-label="mat-stroked-button color= &quot;link&quot;"  [matTooltip]="'mat-stroked-button color= &quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'With Icon'"  type=button  ><dib-icon src=face ></dib-icon><span class=dibButtonCaption >With Icon</span></button></ng-container></div><mat-divider  id=ci6423 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6424 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6424'" ><button  mat-icon-button color=basic  id=ci6425 dibComponent=button   style="  " aria-label="mat-icon-button color=&quot;basic&quot;"  [matTooltip]="'mat-icon-button color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=home ></dib-icon></button><button  mat-icon-button color= "primary" id=ci6426 dibComponent=button   style="  " aria-label="mat-icon-button color= &quot;primary&quot;"  [matTooltip]="'mat-icon-button color= &quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=settings ></dib-icon></button><button  mat-icon-button color= "accent" id=ci6427 dibComponent=button   style="  " aria-label="mat-icon-button color= &quot;accent&quot;"  [matTooltip]="'mat-icon-button color= &quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=search ></dib-icon></button><button  mat-icon-button color= "warn" id=ci6428 dibComponent=button   style="  " aria-label="mat-icon-button color= &quot;warn&quot;"  [matTooltip]="'mat-icon-button color= &quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=report_problem ></dib-icon></button><button  mat-icon-button id=ci6429 dibComponent=button   style="  " aria-label="mat-icon-button disabled=ticked"  [matTooltip]="'mat-icon-button disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   type=button  ><dib-icon src=lock ></dib-icon></button><button  mat-icon-button color=link  id=ci6430 dibComponent=button   style="  " aria-label="mat-icon-button color=&quot;link&quot;"  [matTooltip]="'mat-icon-button color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=favorite_border ></dib-icon></button></ng-container></div><mat-divider  id=ci6438 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6431 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6431'" ><button  mat-fab color=basic  id=ci6432 dibComponent=button   style="  " aria-label="mat-fab color=&quot;basic&quot;"  [matTooltip]="'mat-fab color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=face ></dib-icon></button><button  mat-fab color=primary  id=ci6433 dibComponent=button   style="  " aria-label="mat-fab color=&quot;primary&quot;"  [matTooltip]="'mat-fab color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=language ></dib-icon></button><button  mat-fab color=accent  id=ci6434 dibComponent=button   style="  " aria-label="mat-fab color=&quot;accent&quot;"  [matTooltip]="'mat-fab color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=done ></dib-icon></button><button  mat-fab color=warn  id=ci6435 dibComponent=button   style="  " aria-label="mat-fab color=&quot;warn&quot;"  [matTooltip]="'mat-fab color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=logout ></dib-icon></button><button  mat-fab color=disabled  id=ci6436 dibComponent=button   style="  " aria-label="mat-fab disabled=ticked"  [matTooltip]="'mat-fab disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   type=button  ><dib-icon src=info ></dib-icon></button><button  mat-fab color=link  id=ci6437 dibComponent=button   style="  " aria-label="mat-fab color=&quot;link&quot;"  [matTooltip]="'mat-fab color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=schedule ></dib-icon></button></ng-container></div><mat-divider  id=ci6439 dibComponent=divider   style="  " ></mat-divider><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci6440 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6440'" ><button  mat-mini-fab color=basic  id=ci6441 dibComponent=button   style="  " aria-label="mat-mini-fab color=&quot;basic&quot;"  [matTooltip]="'mat-mini-fab color=&quot;basic&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=face ></dib-icon></button><button  mat-mini-fab color=primary  id=ci6442 dibComponent=button   style="  " aria-label="mat-mini-fab color=&quot;primary&quot;"  [matTooltip]="'mat-mini-fab color=&quot;primary&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=dashboard ></dib-icon></button><button  mat-mini-fab color=accent  id=ci6443 dibComponent=button   style="  " aria-label=";mat-mini-fab color=&quot;accent&quot;"  [matTooltip]="';mat-mini-fab color=&quot;accent&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=manage_accounts ></dib-icon></button><button  mat-mini-fab color=warn  id=ci6444 dibComponent=button   style="  " aria-label="mat-mini-fab color=&quot;warn&quot;"  [matTooltip]="'mat-mini-fab color=&quot;warn&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=shopping_bag ></dib-icon></button><button  mat-mini-fab id=ci6445 dibComponent=button   style="  " aria-label="mat-mini-fab disabled=ticked"  [matTooltip]="'mat-mini-fab disabled=ticked'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip  dibDisabled=true   type=button  ><dib-icon src=question_answer ></dib-icon></button><button  mat-mini-fab color=link  id=ci6446 dibComponent=button   style="  " aria-label="mat-mini-fab color=&quot;link&quot;"  [matTooltip]="'mat-mini-fab color=&quot;link&quot;'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=button  ><dib-icon src=store ></dib-icon></button></ng-container></div></ng-container></mat-card-content></mat-card></ng-container></div></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, divider_1.MatDividerModule, menu_1.MatMenuModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsButtonsModule = class dibexComponentsButtonsModule {
+                static entry = dibexComponentsButtonsComponent;
+                static ɵfac = function dibexComponentsButtonsModule_Factory(t) { return new (t || dibexComponentsButtonsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsButtonsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsButtonsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsButtonsModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsButtonsComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsButtonsModule, { declarations: [dibexComponentsButtonsComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, divider_1.MatDividerModule, menu_1.MatMenuModule] }); })();
+        }
+    };
+});

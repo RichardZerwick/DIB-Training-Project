@@ -1,0 +1,1289 @@
+System.register(["tslib", "@angular/core", "@angular/material/table", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/material/sort", "@angular/material/paginator", "@angular/common", "@angular/material/card", "@angular/material/autocomplete", "@ngbracket/ngx-layout/extended", "@angular/material/button", "@angular/material/checkbox", "@angular/material/form-field", "@angular/material/icon", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, table_1, shared_1, core_2, shared_2, shared_3, http_1, forms_1, core_3, shared_4, rxjs_1, operators_1, table_2, sort_1, paginator_1, core_4, common_1, shared_5, shared_6, card_1, autocomplete_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, _c0, _c1, _c2, _c3, _c4, _c5, importsRequired, dibexGridDynamicColumnsComponent, containerModules, dibexGridDynamicColumnsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexGridDynamicColumnsComponent_th_11_Template(rf, ctx) { if (rf & 1) {
+        const _r22 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 29)(1, "mat-checkbox", 30);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_th_11_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r22); const ctx_r21 = i0.ɵɵnextContext(); $event.preventDefault(); return i0.ɵɵresetView(ctx_r21.masterToggle()); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r1.masterIsChecked)("indeterminate", ctx_r1.masterIsIndeterminate);
+    } }
+    function dibexGridDynamicColumnsComponent_td_12_Template(rf, ctx) { if (rf & 1) {
+        const _r26 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 31)(1, "mat-checkbox", 32);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_td_12_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexGridDynamicColumnsComponent_td_12_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r26); const row_r23 = restoredCtx.$implicit; const ctx_r25 = i0.ɵɵnextContext(); return i0.ɵɵresetView($event ? ctx_r25.selection.toggle(row_r23) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r23 = ctx.$implicit;
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r2.selection.isSelected(row_r23));
+    } }
+    function dibexGridDynamicColumnsComponent_td_14_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r27 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r27.id_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_14_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r27 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r27.id, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 34);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_td_14_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_td_14_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r27 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r27 && !!row_r27.id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r27 && !row_r27.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_th_15_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Id ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_15_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Id");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_15_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r37 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 43)(2, "mat-label");
+        i0.ɵɵtext(3, "Id");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 44);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_th_15_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r37); const ctx_r36 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r36.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_th_15_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r37); const ctx_r38 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r38.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r35 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r35.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Id");
+    } }
+    function dibexGridDynamicColumnsComponent_th_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_th_15_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_th_15_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_th_15_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r4.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r4.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r4.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_td_17_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r39 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r39.name_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_17_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r39 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r39.name, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 45);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_td_17_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_td_17_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r39 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r39 && !!row_r39.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r39 && !row_r39.name_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_th_18_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_18_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_18_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r49 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 46)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 47);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_th_18_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r49); const ctx_r48 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r48.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_th_18_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r49); const ctx_r50 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r50.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r47 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r47.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexGridDynamicColumnsComponent_th_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_th_18_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_th_18_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_th_18_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r6 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r6.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r6.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r6.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_td_20_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r51 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r51.vip_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_20_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r51 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r51.vip, "");
+    } }
+    function dibexGridDynamicColumnsComponent_td_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 48);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_td_20_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_td_20_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r51 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r51 && !!row_r51.vip_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r51 && !row_r51.vip_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_th_21_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Vip ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_21_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Vip");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_th_21_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r61 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 49)(2, "mat-label");
+        i0.ɵɵtext(3, "Vip");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 50);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_th_21_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r61); const ctx_r60 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r60.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_th_21_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r61); const ctx_r62 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r62.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r59 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r59.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Vip");
+    } }
+    function dibexGridDynamicColumnsComponent_th_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_th_21_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_th_21_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_th_21_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r8.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r8.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r8.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_td_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 52);
+        i0.ɵɵelementContainer(2, 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r67 = ctx.$implicit;
+        const dynamicColumn_r63 = i0.ɵɵnextContext().$implicit;
+        const ctx_r65 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("dibData", row_r67)("dibItemName", dynamicColumn_r63.id)("dibComponentParent", ctx_r65);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r63 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(dynamicColumn_r63.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r63 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", dynamicColumn_r63.id_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r76 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 55)(1, "mat-form-field", 56)(2, "mat-label");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 57);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r76); const ctx_r75 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r75.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r76); const ctx_r77 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r77.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const dynamicColumn_r63 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate1(" ", dynamicColumn_r63.id_display_value, "");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("name", dynamicColumn_r63.id);
+        i0.ɵɵattribute("aria-label", dynamicColumn_r63.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_th_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_2_Template, 2, 1, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_3_Template, 2, 1, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_ng_container_22_th_2_div_4_Template, 5, 3, "div", 54);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r66 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r66.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r66.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r66.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0, 51);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_ng_container_22_td_1_Template, 3, 3, "td", 14);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_container_22_th_2_Template, 5, 3, "th", 15);
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r63 = ctx.$implicit;
+        i0.ɵɵproperty("matColumnDef", dynamicColumn_r63.id);
+    } }
+    function dibexGridDynamicColumnsComponent_th_25_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 60);
+    } }
+    function dibexGridDynamicColumnsComponent_th_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 58);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_th_25_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 59);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r10 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r10.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r10.busy);
+    } }
+    function dibexGridDynamicColumnsComponent_th_27_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r80 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r80.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexGridDynamicColumnsComponent_th_27_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 61);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_th_27_span_1_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r11.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r11.busy && ctx_r11.tableDataSource.data.length == 0);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_28_tr_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 63);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_container_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_ng_container_28_tr_1_Template, 1, 0, "tr", 62);
+        i0.ɵɵpipe(2, "async");
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const column_r81 = ctx.$implicit;
+        const ctx_r12 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpipeBind1(2, 1, ctx_r12.columnHeaders.getArray(column_r81).items$));
+    } }
+    function dibexGridDynamicColumnsComponent_tr_29_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 64);
+    } if (rf & 2) {
+        const ctx_r13 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r13.busy ? "visible" : "hidden"));
+    } }
+    function dibexGridDynamicColumnsComponent_tr_30_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 64);
+    } if (rf & 2) {
+        const ctx_r14 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r14.tableDataSource.data.length == 0 ? "visible" : "hidden"));
+    } }
+    function dibexGridDynamicColumnsComponent_tr_31_Template(rf, ctx) { if (rf & 1) {
+        const _r85 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 65);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_tr_31_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r85); const row_r83 = restoredCtx.$implicit; const ctx_r84 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r84.rowClick(row_r83, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r83 = ctx.$implicit;
+        const ctx_r15 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r15.isHighlighted(row_r83)));
+    } }
+    function dibexGridDynamicColumnsComponent_33_ng_template_0_Template(rf, ctx) { }
+    function dibexGridDynamicColumnsComponent_33_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, dibexGridDynamicColumnsComponent_33_ng_template_0_Template, 0, 0, "ng-template", 66);
+    } if (rf & 2) {
+        i0.ɵɵnextContext();
+        const _r19 = i0.ɵɵreference(38);
+        i0.ɵɵproperty("ngTemplateOutlet", _r19);
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_checkbox_2_Template(rf, ctx) { if (rf & 1) {
+        const _r91 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-checkbox", 72);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_checkbox_2_Template_mat_checkbox_click_0_listener($event) { i0.ɵɵrestoreView(_r91); const ctx_r90 = i0.ɵɵnextContext(2); $event.preventDefault(); return i0.ɵɵresetView(ctx_r90.clearAll()); });
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r87 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("checked", true);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" ", ctx_r87.numberOfSelectedItems + " ", "item", ctx_r87.numberOfSelectedItems > 1 ? "s " : " ", "selected ");
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_mat_icon_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility_off");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_Template(rf, ctx) { if (rf & 1) {
+        const _r95 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 73);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r95); const ctx_r94 = i0.ɵɵnextContext(2); ctx_r94.gridShowClipboardDefault = !ctx_r94.gridShowClipboardDefault; return i0.ɵɵresetView(ctx_r94.gridShowClipboardDefault && ctx_r94.scrollToBottom()); });
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_mat_icon_1_Template, 2, 0, "mat-icon", 26);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_mat_icon_2_Template, 2, 0, "mat-icon", 26);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r88 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r88.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r88.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r88.gridShowClipboardDefault ? "hide" : "show", "");
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_paginator_5_Template(rf, ctx) { if (rf & 1) {
+        const _r98 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-paginator", 74, 75);
+        i0.ɵɵlistener("page", function dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_paginator_5_Template_mat_paginator_page_0_listener($event) { i0.ɵɵrestoreView(_r98); const ctx_r97 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r97.changePage($event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r89 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("length", ctx_r89.page.totalRecords)("pageSize", ctx_r89.page.pageSize)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c2));
+    } }
+    function dibexGridDynamicColumnsComponent_mat_toolbar_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-toolbar")(1, "mat-toolbar-row", 67);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_checkbox_2_Template, 2, 3, "mat-checkbox", 68);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_mat_toolbar_36_button_3_Template, 4, 3, "button", 69);
+        i0.ɵɵelement(4, "span", 70);
+        i0.ɵɵtemplate(5, dibexGridDynamicColumnsComponent_mat_toolbar_36_mat_paginator_5_Template, 2, 4, "mat-paginator", 71);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r18 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r18.numberOfSelectedItems);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r18.selectedDataNotInPage().length > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", true);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_2_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r111 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r111.id_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_2_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r111 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r111.id, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 34);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_td_2_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_td_2_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r111 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r111 && !!row_r111.id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r111 && !row_r111.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Id ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Id");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r121 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 43)(2, "mat-label");
+        i0.ɵɵtext(3, "Id");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 44);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r121); const ctx_r120 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r120.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r121); const ctx_r122 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r122.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r119 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r119.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Id");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_ng_template_37_th_3_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r100 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r100.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r100.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r100.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_5_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r123 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r123.name_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_5_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r123 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r123.name, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 45);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_td_5_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_td_5_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r123 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r123 && !!row_r123.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r123 && !row_r123.name_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r133 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 46)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 47);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r133); const ctx_r132 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r132.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r133); const ctx_r134 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r134.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r131 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r131.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_6_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_ng_template_37_th_6_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r102 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r102.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r102.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r102.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_8_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r135 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r135.vip_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_8_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r135 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r135.vip, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 48);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_td_8_span_2_Template, 2, 1, "span", 26);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_td_8_span_3_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r135 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r135 && !!row_r135.vip_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r135 && !row_r135.vip_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1, " Vip ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1, "Vip");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r145 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 42)(1, "mat-form-field", 49)(2, "mat-label");
+        i0.ɵɵtext(3, "Vip");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 50);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r145); const ctx_r144 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r144.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r145); const ctx_r146 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r146.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r143 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r143.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Vip");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_2_Template, 2, 0, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_3_Template, 2, 0, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_ng_template_37_th_9_div_4_Template, 5, 2, "div", 39);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r104 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r104.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r104.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r104.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_td_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 33)(1, "div", 52);
+        i0.ɵɵelementContainer(2, 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r151 = ctx.$implicit;
+        const dynamicColumn_r147 = i0.ɵɵnextContext().$implicit;
+        const ctx_r149 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("dibData", row_r151)("dibItemName", dynamicColumn_r147.id)("dibComponentParent", ctx_r149);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 40);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r147 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(dynamicColumn_r147.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 41);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r147 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", dynamicColumn_r147.id_display_value, "");
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r160 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 55)(1, "mat-form-field", 56)(2, "mat-label");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 57);
+        i0.ɵɵlistener("keydown.enter", function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r160); const ctx_r159 = i0.ɵɵnextContext(4); return i0.ɵɵresetView(ctx_r159.searchGrid(false)); })("keydown.esc", function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r160); const ctx_r161 = i0.ɵɵnextContext(4); return i0.ɵɵresetView(ctx_r161.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const dynamicColumn_r147 = i0.ɵɵnextContext(2).$implicit;
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate1(" ", dynamicColumn_r147.id_display_value, "");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("name", dynamicColumn_r147.id);
+        i0.ɵɵattribute("aria-label", dynamicColumn_r147.id_display_value);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 35)(1, "div", 36);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_2_Template, 2, 1, "div", 37);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_3_Template, 2, 1, "div", 38);
+        i0.ɵɵtemplate(4, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_div_4_Template, 5, 3, "div", 54);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r150 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r150.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r150.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r150.showSearch);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0, 51);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_td_1_Template, 3, 3, "td", 14);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_th_2_Template, 5, 3, "th", 15);
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const dynamicColumn_r147 = ctx.$implicit;
+        i0.ɵɵproperty("matColumnDef", dynamicColumn_r147.id);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_13_Template(rf, ctx) { if (rf & 1) {
+        const _r164 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 29)(1, "mat-checkbox", 78);
+        i0.ɵɵlistener("change", function dibexGridDynamicColumnsComponent_ng_template_37_th_13_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r164); const ctx_r163 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r163.masterToggle($event) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r106 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r106.masterIsChecked)("indeterminate", ctx_r106.masterIsIndeterminate);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_td_14_Template(rf, ctx) { if (rf & 1) {
+        const _r168 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 79)(1, "mat-checkbox", 32);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_ng_template_37_td_14_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexGridDynamicColumnsComponent_ng_template_37_td_14_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r168); const row_r165 = restoredCtx.$implicit; const ctx_r167 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r167.selection.toggle(row_r165) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r165 = ctx.$implicit;
+        const ctx_r107 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r107.selection.isSelected(row_r165));
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_16_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 60);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_16_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 58);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_ng_template_37_th_16_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 59);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r108 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r108.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r108.busy);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_18_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r170 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r170.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_th_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 61);
+        i0.ɵɵtemplate(1, dibexGridDynamicColumnsComponent_ng_template_37_th_18_span_1_Template, 2, 1, "span", 26);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r109 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r109.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r109.busy && ctx_r109.tableDataSource.data.length == 0);
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_tr_19_Template(rf, ctx) { if (rf & 1) {
+        const _r173 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 65);
+        i0.ɵɵlistener("click", function dibexGridDynamicColumnsComponent_ng_template_37_tr_19_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r173); const row_r171 = restoredCtx.$implicit; const ctx_r172 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r172.rowClick(row_r171, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r171 = ctx.$implicit;
+        const ctx_r110 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r110.isHighlighted(row_r171)));
+    } }
+    function dibexGridDynamicColumnsComponent_ng_template_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 76);
+        i0.ɵɵelementContainerStart(1, 13);
+        i0.ɵɵtemplate(2, dibexGridDynamicColumnsComponent_ng_template_37_td_2_Template, 4, 2, "td", 14);
+        i0.ɵɵtemplate(3, dibexGridDynamicColumnsComponent_ng_template_37_th_3_Template, 5, 3, "th", 15);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(4, 16);
+        i0.ɵɵtemplate(5, dibexGridDynamicColumnsComponent_ng_template_37_td_5_Template, 4, 2, "td", 14);
+        i0.ɵɵtemplate(6, dibexGridDynamicColumnsComponent_ng_template_37_th_6_Template, 5, 3, "th", 15);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(7, 17);
+        i0.ɵɵtemplate(8, dibexGridDynamicColumnsComponent_ng_template_37_td_8_Template, 4, 2, "td", 14);
+        i0.ɵɵtemplate(9, dibexGridDynamicColumnsComponent_ng_template_37_th_9_Template, 5, 3, "th", 15);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(10, dibexGridDynamicColumnsComponent_ng_template_37_ng_container_10_Template, 3, 1, "ng-container", 18);
+        i0.ɵɵpipe(11, "async");
+        i0.ɵɵelementContainerStart(12, 10);
+        i0.ɵɵtemplate(13, dibexGridDynamicColumnsComponent_ng_template_37_th_13_Template, 2, 2, "th", 11);
+        i0.ɵɵtemplate(14, dibexGridDynamicColumnsComponent_ng_template_37_td_14_Template, 2, 1, "td", 77);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(15, 19);
+        i0.ɵɵtemplate(16, dibexGridDynamicColumnsComponent_ng_template_37_th_16_Template, 2, 2, "th", 20);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(17, 21);
+        i0.ɵɵtemplate(18, dibexGridDynamicColumnsComponent_ng_template_37_th_18_Template, 2, 2, "th", 22);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(19, dibexGridDynamicColumnsComponent_ng_template_37_tr_19_Template, 1, 3, "tr", 25);
+        i0.ɵɵpipe(20, "async");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r20 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("dataSource", ctx_r20.selectionDataSource);
+        i0.ɵɵadvance(10);
+        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(11, 3, ctx_r20.lists.list6685.items));
+        i0.ɵɵadvance(9);
+        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(20, 5, ctx_r20.columnsToDisplay.items$));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_4 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (table_1_1) {
+                table_1 = table_1_1;
+                table_2 = table_1_1;
+                i15 = table_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                shared_6 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_3_1) {
+                core_3 = core_3_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (sort_1_1) {
+                sort_1 = sort_1_1;
+                i16 = sort_1_1;
+            },
+            function (paginator_1_1) {
+                paginator_1 = paginator_1_1;
+                i17 = paginator_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { visibility: a0 }; };
+            _c1 = function (a0) { return { "dib-grid-selected": a0 }; };
+            _c2 = function () { return [10, 20, 50, 100]; };
+            _c3 = function (a0) { return { "dib-editor": a0 }; };
+            _c4 = function () { return ["_dibBusy"]; };
+            _c5 = function () { return ["_dibNoRecords"]; };
+            importsRequired = [];
+            dibexGridDynamicColumnsComponent = class dibexGridDynamicColumnsComponent extends shared_1.GridComponent {
+                httpClient;
+                ref;
+                crudService;
+                sd;
+                cd;
+                view = { container: { id: 191, name: 'dibexGridDynamicColumns', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5418'] }, dropin: 'grid', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ['id'], recordStatus: 'create', debug: false, debugItem: false };
+                gridMultiselect = false; //default: false
+                gridPersistSelection = false; //default: false
+                gridMasterSelectAllFirst = true; //default:true
+                gridShowDuplicatesInClipboard = false; //default:false
+                gridShowClipboardDefault = false; //default:false
+                gridRowClickChangesSelection = true; //default:true
+                gridHighlightLastClickedOnly = false; //default:false
+                gridClickedLastNullable = false; //default:false
+                selection = new shared_1.SelectionModel(this.gridMultiselect, []);
+                selectionDataSource = new table_1.MatTableDataSource(this.selection.selected);
+                page = { pageSize: 20, pageIndex: 1, };
+                columnsToDisplay = new shared_3.DibArray(['id', 'name', 'vip',]);
+                allColumnsToDisplay = new shared_3.DibArray(['id', 'name', 'vip',]);
+                columnHeaders = new shared_3.DibArrayList({ "1": new shared_3.DibArray([]) });
+                showSearchDefault = false;
+                showSearch = this.showSearchDefault;
+                constructor(injector, httpClient, ref, crudService, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.ref = ref;
+                    this.crudService = crudService;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list6685 = new shared_3.DibList("/peff/Crud/componentlist?containerName=dibexGridDynamicColumns&containerItemId=6685", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_3.DibContainerModel(this.injector, 'dibexGridDynamicColumns');
+                    this.containerName = 'dibexGridDynamicColumns'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { id: { itemId: 6682, type: 'text', fieldAlias: 'id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, name: { itemId: 6683, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, vip: { itemId: 6684, type: 'text', fieldAlias: 'vip', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, componentAndList: { itemId: 6685, type: 'select', fieldAlias: 'componentAndList', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 6685 }, };
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.addControl('vip', this.model.modelItems.vip.formControl);
+                    this.model.$formGroup.addControl('componentAndList', this.model.modelItems.componentAndList.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'modelChange'); });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "dibexGridDynamicColumns", actionType: "after readmany", responseType: 'actions', submitUrl: "/dropins/dibExamples/ContainerEvents/dynamicColumnsData", itemAlias: "", waitForCompletion: false, containerName: "dibexGridDynamicColumns", handlers: [] }, this.clientData, { containerEventId: 'ce18-dib' });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource6685 = this.lists.list6685.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange6685 = new Date().getTime();
+                    let previousUrlChange6685;
+                    let previousResponse6685;
+                    this.lists.list6685.items = rxjs_1.combineLatest([this.lists.list6685.updatedList$, itemsUpdateSource6685]).pipe(operators_1.tap(() => { this.lists.list6685.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange6685 - new Date().getTime()) / 1000;
+                        previousTimeChange6685 = new Date().getTime();
+                        previousUrlChange6685 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse6685 = response;
+                            this.lists.list6685.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list6685.items.subscribe(records => this.lists.list6685.lastItems = records);
+                    this.lists.list6685.multiSelected = [];
+                    this.lists.list6685.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list6685.updatedList$.next([]);
+                        self.lists.list6685.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list6685.refresh();
+                    }
+                    else {
+                        self.lists.list6685.searchForm.setValue('');
+                        self.lists.list6685.updatedList$.next(self.lists.list6685.multiSelected);
+                        self.model.modelItems.componentAndList.formControl.setValue(self.lists.list6685.multiSelected);
+                    } };
+                    this.lists.list6685.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list6685.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list6685.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list6685.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list6685.multiSelected.push(value);
+                            }
+                        }
+                        lists.list6685.multiSelected = self.removeDuplicateIdsFromArray(lists.list6685.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'onInit');
+                    this.tableDataSource.data = [];
+                    this.resetPage();
+                    this.setupGridSearchAll();
+                    this.tableDataSource
+                        .connect().pipe(operators_1.tap(_ => { const selected = this.selection.selected; this.selection._emitChanges = false; this.selection.deselect(...this.selection.selected.filter(s => !!this.tableDataSource.data.find(d => this.compareRows(s, d)))); this.selection.select(...this.tableDataSource.data.filter(d => !!selected.find(s => this.compareRows(s, d)))); this.selection._emitChanges = true; })).subscribe();
+                    this.selection.changed.pipe().subscribe(c => {
+                        this.updateSelectionClientData(c);
+                        if (this.gridShowDuplicatesInClipboard)
+                            this.selectionDataSource.data = c.source.selected;
+                        else
+                            this.selectionDataSource.data = this.selectedDataNotInPage(c.source.selected);
+                    });
+                    this.columnHeaders.addArray('1', new shared_3.DibArray(['id', 'name', 'vip']));
+                    rxjs_1.merge(this.eventService.on('reloaddibexGridDynamicColumns'), this.lists['list6685'].items).pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.columnHeaders.addToInitialArray('1', []); this.columnsToDisplay.addToInitialArray([]); }), operators_1.debounceTime(300)).subscribe((result) => { this.columnHeaders.addToInitialArray('1', result.map(i => i.id.toString())); this.columnsToDisplay.addToInitialArray(result.map(i => i.id.toString())); window.dispatchEvent(new Event('resize')); });
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list6685.setupModel(this.model.modelItems.componentAndList.formControl); window.dispatchEvent(new Event('resize')); this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'afterViewInit'); this.setupService(); this.reloadContainer(); this.clientData.selected_self = null; this.updateSearchFromUrl(); this.eventService.on(`${this.view.container.name}selectRow`).pipe(operators_1.takeUntil(this.onDestroy)).subscribe((selectRecord) => { const column = selectRecord['column']; const value = selectRecord['value']; let found = false; this.tableDataSource.data.forEach(row => { if (row[column] == value) {
+                    found = true;
+                    this.rowSelect(row);
+                } }); this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'rowSelected'); }); }
+                rowClick(row, e) {
+                    if (!!e.srcElement.firstChild && !!e.srcElement.firstChild.attributes && !!e.srcElement.firstChild.attributes.type && e.srcElement.firstChild.attributes.type.value == 'checkbox') {
+                        return;
+                    }
+                    if (e.srcElement && ["button", "a", "mat-icon", "dib-icon"].includes(e.srcElement.tagName.toLocaleLowerCase())) {
+                        return;
+                    }
+                    this.rowSelect(row);
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'rowClick');
+                }
+                rowSelect(row) {
+                    if (this.gridRowClickChangesSelection) {
+                        this.selection.toggle(row);
+                    }
+                    if (this.gridClickedLastNullable && this.clickedLast && this.compareRows(row, this.clickedLast)) {
+                        this.clickedLast = null;
+                    }
+                    else {
+                        this.clickedLast = row;
+                    }
+                    let lastClickValue = {};
+                    if (this.clickedLast !== null) {
+                        Object.keys(this.model.modelItems).forEach(key => { if (!!this.model.modelItems[key].itemAlias == true) {
+                            lastClickValue[key] = this.clickedLast[key];
+                        } });
+                        this.clientData.clickedLast_self = lastClickValue;
+                    }
+                    else {
+                        this.clientData.clickedLast_self = null;
+                    }
+                    this.eventService.emit({ name: `clickedLast_dibexGridDynamicColumns`, value: this.clientData.clickedLast_self });
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'rowSelected');
+                }
+                updateSelectionClientData(selectionChange) {
+                    const { selected } = selectionChange.source || {};
+                    const firstSelection = selected ? selected[0] : {};
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'rowsDeselected');
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'rowsSelected');
+                    if (!selected[0]) {
+                        this.clientData.selected_self = null;
+                        this.eventService.emit({ name: `selected_dibexGridDynamicColumns`, value: this.clientData.selected_self });
+                        return;
+                    }
+                    let cdSelected = this.gridMultiselect ? selected.map(s => { let res = {}; this.view.primaryKeys.forEach((key) => { if (!!s[key]) {
+                        res[key] = s[key];
+                    } }); return res; }) : this.view.primaryKeys.reduce((res, key) => ({ ...res, [key]: firstSelection[key] }), {});
+                    if (Object.keys(cdSelected).length == 0) {
+                        cdSelected = selected;
+                    }
+                    this.clientData.selected_self = cdSelected;
+                    this.eventService.emit({ name: `selected_dibexGridDynamicColumns`, value: cdSelected });
+                }
+                ;
+                setupService() {
+                    this.sort.sortChange.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((sort) => { this.page$.next(this.page); })).subscribe();
+                    this.page$.pipe(operators_1.tap(page => { this.page = page; this.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.tap(page => { this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'beforeLoad'); this.clearClientDataSelection(); if (this.showSearch) {
+                        this.clientData.gridFilter_self = this.allClientData.gridFilter;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: this.clientData.gridFilter_self });
+                    }
+                    else {
+                        delete this.clientData.gridFilter_self;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: null });
+                    } }), operators_1.switchMap((page) => { const sort = this.sort.direction == '' ? [] : [{ "property": this.sort.active, "direction": this.sort.direction.toUpperCase() }]; return this.crudService.list(this.model.crudUrl, this.view.container.name, { page: { number: page.pageIndex + 1, limit: page.pageSize }, searchText: null, sort: sort, filter: this.filter, clientData: this.clientData, activeFilter: this.view.container.activeFilter }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` }))); }), operators_1.tap((response) => {
+                        this.busy = false;
+                        window.dispatchEvent(new Event('resize'));
+                        if (response.success) {
+                            this.tableDataSource.data = [];
+                            const data = response.records;
+                            if (!!data === true) {
+                                this.tableDataSource.data = data;
+                                this.page.length = Math.ceil(response.filtertotal / this.page.pageSize);
+                                this.page.records = response.filtertotal;
+                                this.page.totalRecords = response.total;
+                                this.page.fromRecord = this.page.pageIndex == 0 ? 1 : (this.page.pageIndex) * this.page.pageSize;
+                                this.page.toRecord = this.page.fromRecord == 1 ? this.page.fromRecord + this.tableDataSource.data.length - 1 : this.page.fromRecord + this.tableDataSource.data.length;
+                                if (this.page.toRecord > this.page.totalRecords) {
+                                    this.page.toRecord = this.page.totalRecords;
+                                    this.page.allRecords = true;
+                                }
+                            }
+                            this.handleSelectionOnPage();
+                            this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'load');
+                            this.reloadSubcontainers();
+                            this.eventService.processDelayedEventQueue(this.view.container.name);
+                        }
+                    })).subscribe();
+                }
+                ;
+                ngOnDestroy() {
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'onDestroy');
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list6685.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                ;
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    this.actionService.handle(this.containerActionReference(), 'dibexGridDynamicColumns', 'reloadContainer');
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexGridDynamicColumns', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexGridDynamicColumns' });
+                    this.resetPage();
+                    this.page$.next(this.page);
+                }
+                ;
+                resetPage() {
+                    this.page = { number: 1, length: 0, pageSize: 20, pageIndex: 0, lastLoad: 1, totalRecords: 0, allRecords: false };
+                    this.page.allRecords = false;
+                    if (!this.gridPersistSelection) {
+                        this.selection.clear();
+                    }
+                    if (!!this.paginator) {
+                        this.paginator._intl.itemsPerPageLabel = '';
+                        this.paginator.pageSize = this.page.pageSize;
+                        this.paginator.firstPage();
+                    }
+                }
+                ;
+                static ɵfac = function dibexGridDynamicColumnsComponent_Factory(t) { return new (t || dibexGridDynamicColumnsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i2.CrudService), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexGridDynamicColumnsComponent, selectors: [["dibex-grid-dynamic-columns"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 39, vars: 22, consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5418", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexGridDynamicColumns", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci4688", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], [3, "dibPort"], ["fill-height", "", "debounceTime", "300", 3, "additionalSpace", "footerElement"], ["gridScroll", ""], ["mat-table", "", "matSort", "", 1, "", 3, "dataSource"], ["matColumnDef", "_select"], ["mat-header-cell", "", "style", "width:80px", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "id"], ["mat-cell", "", "style", "padding: 2px; ", 4, "matCellDef"], ["mat-header-cell", "", "style", "padding:2px; text-align:left; vertical-align:top; ", 4, "matHeaderCellDef"], ["matColumnDef", "name"], ["matColumnDef", "vip"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "_dibBusy"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "_dibNoRecords"], ["mat-header-cell", "", "class", "dib-no-records-found", 4, "matHeaderCellDef"], [4, "ngFor", "ngForOf"], ["mat-header-row", "", "class", "dib-grid-loader", 3, "ngStyle", 4, "matHeaderRowDef"], ["mat-row", "", 3, "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], [4, "ngIf"], ["footerdibexGridDynamicColumns", ""], ["_selectedTable", ""], ["mat-header-cell", "", 2, "width", "80px"], ["color", "primary", 3, "checked", "indeterminate", "click"], ["mat-cell", ""], ["color", "primary", 3, "checked", "click", "change"], ["mat-cell", "", 2, "padding", "2px"], ["id", "ci6682", "dibComponent", "sqlText"], ["mat-header-cell", "", 2, "padding", "2px", "text-align", "left", "vertical-align", "top"], [1, "dibGridSearch", 2, "display", "flex", "flex-direction", "column"], ["mat-sort-header", "", 4, "ngIf"], ["mat-sort-header", "", "class", "dibGridSearchTitle", 4, "ngIf"], ["class", "dibGridSearchInput", "dib-edit", "", 3, "formGroup", 4, "ngIf"], ["mat-sort-header", ""], ["mat-sort-header", "", 1, "dibGridSearchTitle"], ["dib-edit", "", 1, "dibGridSearchInput", 3, "formGroup"], ["id", "ci6682", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "id", "name", "id", 3, "keydown.enter", "keydown.esc"], ["id", "ci6683", "dibComponent", "sqlText"], ["id", "ci6683", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "name", "name", "name", 3, "keydown.enter", "keydown.esc"], ["id", "ci6684", "dibComponent", "sqlText"], ["id", "ci6684", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "vip", "name", "vip", 3, "keydown.enter", "keydown.esc"], [3, "matColumnDef"], ["id", "ci6685", "dibComponent", "componentAndList", "dib-nav", "true", 1, "dib-custom-component"], ["dibComponentName", "notfound", "dibDropin", "", "dibComponentLocation", "/peff/Template/component/dibexGridDynamicColumns?dropin=setNgxMaterial.grid&componentPath=dynamic-column-text", 3, "dibData", "dibItemName", "dibComponentParent"], ["class", "dibGridSearchInput", "dib-edit", "", 4, "ngIf"], ["dib-edit", "", 1, "dibGridSearchInput"], [2, "flex", "1 1 0%"], ["matInput", "", "type", "text", 3, "name", "keydown.enter", "keydown.esc"], ["mat-header-cell", ""], ["mode", "indeterminate", 4, "ngIf"], ["mode", "indeterminate"], ["mat-header-cell", "", 1, "dib-no-records-found"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-header-row", ""], ["mat-header-row", "", 1, "dib-grid-loader", 3, "ngStyle"], ["mat-row", "", 3, "ngClass", "click"], [3, "ngTemplateOutlet"], [1, "grid-footer"], ["class", "mat-body", "matTooltip", "Clear all", "position", "above", "color", "primary", 3, "checked", "click", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [2, "flex", "1 1 auto"], ["style", "background: none", 3, "length", "pageSize", "pageSizeOptions", "page", 4, "ngIf"], ["matTooltip", "Clear all", "position", "above", "color", "primary", 1, "mat-body", 3, "checked", "click"], ["mat-button", "", 3, "click"], [2, "background", "none", 3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], ["mat-table", "", 1, "", 2, "margin-top", "1rem", 3, "dataSource"], ["mat-cell", "", "style", "width:80px", 4, "matCellDef"], ["color", "primary", 3, "checked", "indeterminate", "change"], ["mat-cell", "", 2, "width", "80px"]], template: function dibexGridDynamicColumnsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0);
+                        i0.ɵɵlistener("ngSubmit", function dibexGridDynamicColumnsComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(1, "div", 1)(2, "div", 2);
+                        i0.ɵɵelementContainer(3, 3);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(4, "mat-card", 4)(5, "mat-card-content", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "div", 7, 8)(9, "table", 9);
+                        i0.ɵɵelementContainerStart(10, 10);
+                        i0.ɵɵtemplate(11, dibexGridDynamicColumnsComponent_th_11_Template, 2, 2, "th", 11);
+                        i0.ɵɵtemplate(12, dibexGridDynamicColumnsComponent_td_12_Template, 2, 1, "td", 12);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(13, 13);
+                        i0.ɵɵtemplate(14, dibexGridDynamicColumnsComponent_td_14_Template, 4, 2, "td", 14);
+                        i0.ɵɵtemplate(15, dibexGridDynamicColumnsComponent_th_15_Template, 5, 3, "th", 15);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(16, 16);
+                        i0.ɵɵtemplate(17, dibexGridDynamicColumnsComponent_td_17_Template, 4, 2, "td", 14);
+                        i0.ɵɵtemplate(18, dibexGridDynamicColumnsComponent_th_18_Template, 5, 3, "th", 15);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(19, 17);
+                        i0.ɵɵtemplate(20, dibexGridDynamicColumnsComponent_td_20_Template, 4, 2, "td", 14);
+                        i0.ɵɵtemplate(21, dibexGridDynamicColumnsComponent_th_21_Template, 5, 3, "th", 15);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(22, dibexGridDynamicColumnsComponent_ng_container_22_Template, 3, 1, "ng-container", 18);
+                        i0.ɵɵpipe(23, "async");
+                        i0.ɵɵelementContainerStart(24, 19);
+                        i0.ɵɵtemplate(25, dibexGridDynamicColumnsComponent_th_25_Template, 2, 2, "th", 20);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(26, 21);
+                        i0.ɵɵtemplate(27, dibexGridDynamicColumnsComponent_th_27_Template, 2, 2, "th", 22);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(28, dibexGridDynamicColumnsComponent_ng_container_28_Template, 3, 3, "ng-container", 23);
+                        i0.ɵɵtemplate(29, dibexGridDynamicColumnsComponent_tr_29_Template, 1, 3, "tr", 24);
+                        i0.ɵɵtemplate(30, dibexGridDynamicColumnsComponent_tr_30_Template, 1, 3, "tr", 24);
+                        i0.ɵɵtemplate(31, dibexGridDynamicColumnsComponent_tr_31_Template, 1, 3, "tr", 25);
+                        i0.ɵɵpipe(32, "async");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(33, dibexGridDynamicColumnsComponent_33_Template, 1, 1, null, 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(34, "div", null, 27);
+                        i0.ɵɵtemplate(36, dibexGridDynamicColumnsComponent_mat_toolbar_36_Template, 6, 3, "mat-toolbar", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵtemplate(37, dibexGridDynamicColumnsComponent_ng_template_37_Template, 21, 7, "ng-template", null, 28, i0.ɵɵtemplateRefExtractor);
+                    } if (rf & 2) {
+                        const _r17 = i0.ɵɵreference(35);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(18, _c3, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5418");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4688");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("additionalSpace", 5)("footerElement", _r17);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dataSource", ctx.tableDataSource);
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(23, 14, ctx.lists.list6685.items));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("ngForOf", ctx.columnHeaders.getKeys());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(20, _c4));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(21, _c5));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(32, 16, ctx.columnsToDisplay.items$));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.gridShowClipboardDefault);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.gridMultiselect || true);
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibComponentDirective, i2.DibFillHeightDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatCheckbox, i8.MatFormField, i8.MatLabel, i9.MatIcon, i10.MatInput, i11.MatProgressBar, i12.MatToolbar, i12.MatToolbarRow, i13.MatTooltip, i14.MatCard, i14.MatCardContent, i15.MatTable, i15.MatHeaderCellDef, i15.MatHeaderRowDef, i15.MatColumnDef, i15.MatCellDef, i15.MatRowDef, i15.MatHeaderCell, i15.MatCell, i15.MatHeaderRow, i15.MatRow, i16.MatSort, i16.MatSortHeader, i17.MatPaginator, i3.AsyncPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_2.EventHandler('reloaddibexGridDynamicColumns'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexGridDynamicColumnsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexGridDynamicColumnsComponent", dibexGridDynamicColumnsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridDynamicColumnsComponent, [{
+                    type: core_2.Component,
+                    args: [{ selector: 'dibex-grid-dynamic-columns', template: `
+<form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5418 dibComponent=subcontainer   ><ng-container [dibPort]="'5418'" parentContainerName=dibexGridDynamicColumns  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci4688 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4688'" ><!-- <div dib-scroll-pager scrollOffset=50 (nextPage)="nextPage()"> --><div #gridScroll fill-height debounceTime=300  [additionalSpace]=5 [footerElement]="footerdibexGridDynamicColumns" ><table mat-table [dataSource]="tableDataSource" matSort class=""><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (click)="$event.preventDefault();masterToggle()"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6682 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.id_display_value"> {{row.id_display_value}}</span><span *ngIf="!!row && !row.id_display_value"> {{row.id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Id  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Id</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6682 dibComponent=inputText   style="  " ><mat-label >Id</mat-label><input   matInput  type=text   formControlName=id   name=id   [attr.aria-label]="'Id'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6683 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6683 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=vip  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6684 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.vip_display_value"> {{row.vip_display_value}}</span><span *ngIf="!!row && !row.vip_display_value"> {{row.vip}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Vip  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Vip</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6684 dibComponent=inputText   style="  " ><mat-label >Vip</mat-label><input   matInput  type=text   formControlName=vip   name=vip   [attr.aria-label]="'Vip'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container *ngFor="let dynamicColumn of (lists.list6685.items | async); let colIndex = index" [matColumnDef]="dynamicColumn.id"><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div   style="  " id=ci6685 dibComponent=componentAndList   class=dib-custom-component   dib-nav=true ><ng-container   [dibData]="row"  dibComponentName=notfound   [dibItemName]="dynamicColumn.id"  dibDropin=""  dibComponentLocation="/peff/Template/component/dibexGridDynamicColumns?dropin=setNgxMaterial.grid&componentPath=dynamic-column-text"   [dibComponentParent]="this"></ng-container></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header>{{dynamicColumn.id_display_value}}</div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  > {{dynamicColumn.id_display_value}}</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit><mat-form-field style="flex: 1 1 0%"><mat-label> {{dynamicColumn.id_display_value}}</mat-label><input matInput type=text  [name]="dynamicColumn.id" [attr.aria-label]="dynamicColumn.id_display_value"   (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><ng-container *ngFor="let column of columnHeaders.getKeys()"><tr mat-header-row *matHeaderRowDef="(columnHeaders.getArray(column).items$ | async);"></tr></ng-container><tr mat-header-row [ngStyle]="{visibility : busy? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibBusy']"></tr><tr mat-header-row [ngStyle]="{visibility : tableDataSource.data.length == 0? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibNoRecords']"></tr><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table><ng-template [ngTemplateOutlet]="_selectedTable" *ngIf=gridShowClipboardDefault ></ng-template></div><div #footerdibexGridDynamicColumns><mat-toolbar *ngIf="gridMultiselect || true"><mat-toolbar-row class = "grid-footer"><mat-checkbox  class = "mat-body"  matTooltip = "Clear all"  position = "above"  *ngIf=numberOfSelectedItems    color=primary   (click)="$event.preventDefault();clearAll()"  [checked]="true"  > {{numberOfSelectedItems + " "}}item{{numberOfSelectedItems>1?"s ":" "}}selected  </mat-checkbox><button  *ngIf="selectedDataNotInPage().length>0"  mat-button  (click)="gridShowClipboardDefault = !gridShowClipboardDefault; gridShowClipboardDefault&&scrollToBottom()"  ><mat-icon *ngIf="!gridShowClipboardDefault">visibility</mat-icon><mat-icon *ngIf=gridShowClipboardDefault >visibility_off</mat-icon> {{gridShowClipboardDefault?"hide":"show"}}</button><span style ="flex: 1 1 auto"></span><mat-paginator *ngIf=true  #paginator [length]="page.totalRecords" (page)="changePage($event)" style = "background: none"  [pageSize]="page.pageSize"  [pageSizeOptions]="[10, 20, 50, 100]" ></mat-paginator></mat-toolbar-row></mat-toolbar></div></ng-container></mat-card-content></mat-card></div></form><ng-template #_selectedTable ><table style ="margin-top:1rem" mat-table [dataSource]="selectionDataSource" class=""><ng-container matColumnDef=id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6682 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.id_display_value"> {{row.id_display_value}}</span><span *ngIf="!!row && !row.id_display_value"> {{row.id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Id  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Id</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6682 dibComponent=inputText   style="  " ><mat-label >Id</mat-label><input   matInput  type=text   formControlName=id   name=id   [attr.aria-label]="'Id'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6683 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6683 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=vip  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6684 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.vip_display_value"> {{row.vip_display_value}}</span><span *ngIf="!!row && !row.vip_display_value"> {{row.vip}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Vip  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Vip</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6684 dibComponent=inputText   style="  " ><mat-label >Vip</mat-label><input   matInput  type=text   formControlName=vip   name=vip   [attr.aria-label]="'Vip'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container *ngFor="let dynamicColumn of (lists.list6685.items | async); let colIndex = index" [matColumnDef]="dynamicColumn.id"><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div   style="  " id=ci6685 dibComponent=componentAndList   class=dib-custom-component   dib-nav=true ><ng-container   [dibData]="row"  dibComponentName=notfound   [dibItemName]="dynamicColumn.id"  dibDropin=""  dibComponentLocation="/peff/Template/component/dibexGridDynamicColumns?dropin=setNgxMaterial.grid&componentPath=dynamic-column-text"   [dibComponentParent]="this"></ng-container></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header>{{dynamicColumn.id_display_value}}</div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  > {{dynamicColumn.id_display_value}}</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit><mat-form-field style="flex: 1 1 0%"><mat-label> {{dynamicColumn.id_display_value}}</mat-label><input matInput type=text  [name]="dynamicColumn.id" [attr.aria-label]="dynamicColumn.id_display_value"   (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (change)="$event ? masterToggle($event) : null"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row" style = "width:80px"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table></ng-template>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ChangeDetectorRef }, { type: i2.CrudService }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, autocomplete_1.MatAutocompleteModule];
+            dibexGridDynamicColumnsModule = class dibexGridDynamicColumnsModule {
+                static entry = dibexGridDynamicColumnsComponent;
+                static ɵfac = function dibexGridDynamicColumnsModule_Factory(t) { return new (t || dibexGridDynamicColumnsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexGridDynamicColumnsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], imports: [common_1.CommonModule, shared_5.SharedModule, containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] });
+            };
+            exports_1("default", dibexGridDynamicColumnsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridDynamicColumnsModule, [{
+                    type: core_4.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_5.SharedModule, ...containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule], providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], declarations: [dibexGridDynamicColumnsComponent], exports: [] }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexGridDynamicColumnsModule, { declarations: [dibexGridDynamicColumnsComponent], imports: [common_1.CommonModule, shared_5.SharedModule, card_1.MatCardModule, autocomplete_1.MatAutocompleteModule, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] }); })();
+        }
+    };
+});

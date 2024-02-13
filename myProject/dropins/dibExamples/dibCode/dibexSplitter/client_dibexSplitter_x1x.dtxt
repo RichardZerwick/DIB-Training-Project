@@ -1,0 +1,319 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "angular-split", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, angular_split_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, _c0, importsRequired, dibexSplitterComponent, containerModules, fullDateTimeOptions, dibexSplitterModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexSplitterComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 25);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (angular_split_1_1) {
+                angular_split_1 = angular_split_1_1;
+                i5 = angular_split_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i7 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexSplitterComponent = class dibexSplitterComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 199, name: 'dibexSplitter', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexGridInlineEditDemo", "dibexPlain", "dibexTestClientGrid"], refreshChildContainers: { "_": ['dibDocsExampleHtml*4889', 'dibexTestClientGrid*4896', 'dibexPlain*4896', 'dibexGridInlineEditDemo*4896'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexSplitter');
+                    this.containerName = 'dibexSplitter'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('content', `<h2>Top Area</h2>`);
+                    this.setInnerHtml('content2', `<h2>Bottom Area</h2>`);
+                    this.setInnerHtml('content3', `<h2>Right Area</h2>`);
+                    this.setInnerHtml('span', `<i>This area's size has been fixed to 200px, using:<br><b>[size]="200" [lockSize]="true"</b></i>`);
+                    this.setInnerHtml('span1', `<i>This area's size has a maximum of 30%, using:<br><b>[size]="20" [maxSize]="30"</b></i>`);
+                    this.setInnerHtml('span2', `See <a target='_blank' href='https://angular-split.github.io/documentation'>https://angular-split.github.io/documentation</a> for more info.`);
+                    this.setInnerHtml('content4', `<h2>Left Area</h2>`);
+                    this.setInnerHtml('content5', `<h2>Center Area</h2>`);
+                    this.setInnerHtml('span3', `<i>This area has a minimum width of 200px, using:<br><b>[size]="200" [minSize]="200"</b></i>`);
+                    this.setInnerHtml('content', `<h2>Top Area</h2>`);
+                    this.setInnerHtml('content2', `<h2>Bottom Area</h2>`);
+                    this.setInnerHtml('content3', `<h2>Right Area</h2>`);
+                    this.setInnerHtml('span', `<i>This area's size has been fixed to 200px, using:<br><b>[size]="200" [lockSize]="true"</b></i>`);
+                    this.setInnerHtml('span1', `<i>This area's size has a maximum of 30%, using:<br><b>[size]="20" [maxSize]="30"</b></i>`);
+                    this.setInnerHtml('span2', `See <a target='_blank' href='https://angular-split.github.io/documentation'>https://angular-split.github.io/documentation</a> for more info.`);
+                    this.setInnerHtml('content4', `<h2>Left Area</h2>`);
+                    this.setInnerHtml('content5', `<h2>Center Area</h2>`);
+                    this.setInnerHtml('span3', `<i>This area has a minimum width of 200px, using:<br><b>[size]="200" [minSize]="200"</b></i>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexSplitter', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexSplitter' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexSplitterComponent_Factory(t) { return new (t || dibexSplitterComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexSplitterComponent, selectors: [["dibex-splitter"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 56, vars: 40, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci4889", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexSplitter", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["fill-height", "", "unit", "pixel", "id", "ci4890", "dibComponent", "splitHorizontal", "direction", "horizontal", 2, "flex", "0 1 auto"], [3, "dibPort"], ["id", "ci4891", "dibComponent", "splitArea", 2, "padding", "0px 10px !important", "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "0 1 auto", 3, "size", "lockSize"], ["mat-raised-button", "", "color", "primary", "id", "ci4899", "dibComponent", "button", "type", "button"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci4901", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci4900", "dibComponent", "button", "type", "button"], ["id", "ci4904", "dibComponent", "span", 3, "innerHtml"], ["id", "ci4892", "dibComponent", "splitArea", 2, "flex", "0 1 auto", 3, "size"], ["id", "ci4894", "dibComponent", "splitVertical", "direction", "vertical", 2, "flex", "0 1 auto"], ["size", "20", "id", "ci4895", "dibComponent", "splitArea", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "0 1 auto"], ["id", "ci4906", "dibComponent", "span", 2, "flex", "0 1 0%", "display", "block", "text-align", "center", 3, "innerHtml"], ["id", "ci5056", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "center", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "min-width", "800px"], ["mat-raised-button", "", "color", "accent", "id", "ci5055", "dibComponent", "button", "type", "button", 2, "flex", "0 1 280px", 3, "click"], ["mat-raised-button", "", "color", "accent", "id", "ci5057", "dibComponent", "button", "type", "button", 2, "flex", "0 1 280px", 3, "click"], ["id", "ci4896", "dibComponent", "splitArea", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "0 1 auto", 3, "size"], ["id", "ci4897", "dibComponent", "splitArea", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "justify-content", "center", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%", 3, "size", "maxSize"], ["id", "ci4905", "dibComponent", "span", 3, "innerHtml"], ["id", "ci4893", "dibComponent", "splitArea", 2, "display", "flex", "flex-direction", "column", "justify-content", "center", "align-items", "center", "flex-wrap", "nowrap", "flex", "0 1 auto", 3, "size", "minSize"], ["id", "ci5070", "dibComponent", "span", 3, "innerHtml"], ["mode", "indeterminate"]], template: function dibexSplitterComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexSplitterComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexSplitterComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "as-split", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "as-split-area", 7);
+                        i0.ɵɵelementContainerStart(8, 6);
+                        i0.ɵɵelementStart(9, "h2");
+                        i0.ɵɵtext(10, "Left Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(11, "button", 8)(12, "span", 9);
+                        i0.ɵɵtext(13, "button 1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(14, "button", 10)(15, "span", 9);
+                        i0.ɵɵtext(16, "button 2");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(17, "button", 11)(18, "span", 9);
+                        i0.ɵɵtext(19, "button 3");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(20, "span", 12);
+                        i0.ɵɵpipe(21, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(22, "as-split-area", 13);
+                        i0.ɵɵelementContainerStart(23, 6);
+                        i0.ɵɵelementStart(24, "as-split", 14);
+                        i0.ɵɵelementContainerStart(25, 6);
+                        i0.ɵɵelementStart(26, "as-split-area", 15);
+                        i0.ɵɵelementContainerStart(27, 6);
+                        i0.ɵɵelementStart(28, "h2");
+                        i0.ɵɵtext(29, "Top Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(30, "span", 16);
+                        i0.ɵɵpipe(31, "safeHtml");
+                        i0.ɵɵelementStart(32, "div", 17);
+                        i0.ɵɵelementContainerStart(33, 6);
+                        i0.ɵɵelementStart(34, "button", 18);
+                        i0.ɵɵlistener("click", function dibexSplitterComponent_Template_button_click_34_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "splitterDemo", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(35, "span", 9);
+                        i0.ɵɵtext(36, "Click Me to Load Grid");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(37, "button", 19);
+                        i0.ɵɵlistener("click", function dibexSplitterComponent_Template_button_click_37_listener($event) { return ctx.navigationService.goTo("dibexPlain", "splitterDemo", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(38, "span", 9);
+                        i0.ɵɵtext(39, "Click Me to Load a Plain Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(40, "as-split-area", 20);
+                        i0.ɵɵelementContainerStart(41, 6);
+                        i0.ɵɵelementStart(42, "h2");
+                        i0.ɵɵtext(43, "Center Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(44, "as-split-area", 21);
+                        i0.ɵɵelementContainerStart(45, 6);
+                        i0.ɵɵelementStart(46, "h2");
+                        i0.ɵɵtext(47, "Bottom Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(48, "span", 22);
+                        i0.ɵɵpipe(49, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(50, "as-split-area", 23);
+                        i0.ɵɵelementContainerStart(51, 6);
+                        i0.ɵɵelementStart(52, "h2");
+                        i0.ɵɵtext(53, "Right Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(54, "span", 24);
+                        i0.ɵɵpipe(55, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(38, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4889");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4890");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("size", 200)("lockSize", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "4891");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button 1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button 2");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button 3");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(21, 30, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("size", "*");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "4892");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4894");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4895");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(31, 32, ctx.getHtml("span2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5056");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Click Me to Load Grid");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Click Me to Load a Plain Container");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("size", 60);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "4896");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("size", 20)("maxSize", 30);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "4897");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(49, 34, ctx.getHtml("span1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("size", 200)("minSize", 200);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "4893");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(55, 36, ctx.getHtml("span3")), i0.ɵɵsanitizeHtml);
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.SplitComponent, i5.SplitAreaDirective, i6.ɵNgNoValidate, i6.NgControlStatusGroup, i6.FormGroupDirective, i2.DibPortDirective, i2.DibFillHeightDirective, i7.MatButton, i8.MatProgressBar, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexSplitter'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexSplitterComponent.prototype, "reloadContainer", null);
+            exports_1("dibexSplitterComponent", dibexSplitterComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSplitterComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-splitter', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci4889 dibComponent=subcontainer   ><ng-container [dibPort]="'4889'" parentContainerName=dibexSplitter  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><as-split   fill-height unit=pixel  id=ci4890 dibComponent=splitHorizontal   style="  flex: 0 1 auto;  "  direction=horizontal  ><ng-container [dibPort]="'4890'" ><as-split-area   [size]="200" [lockSize]="true"  id=ci4891 dibComponent=splitArea   style="  padding:0px 10px !important;  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 0 1 auto;  " ><ng-container [dibPort]="'4891'" ><h2>Left Area</h2><button  mat-raised-button color=primary  id=ci4899 dibComponent=button   style="  "  [attr.aria-label]="'button 1'"  type=button  ><span class=dibButtonCaption >button 1</span></button><button  mat-raised-button color=primary  id=ci4901 dibComponent=button   style="  "  [attr.aria-label]="'button 2'"  type=button  ><span class=dibButtonCaption >button 2</span></button><button  mat-raised-button color=primary  id=ci4900 dibComponent=button   style="  "  [attr.aria-label]="'button 3'"  type=button  ><span class=dibButtonCaption >button 3</span></button><span  id=ci4904 dibComponent=span   style="  "  [innerHtml]="getHtml('span') | safeHtml" ></span></ng-container></as-split-area><as-split-area   [size]="'*'" id=ci4892 dibComponent=splitArea   style="  flex: 0 1 auto;  " ><ng-container [dibPort]="'4892'" ><as-split  id=ci4894 dibComponent=splitVertical   style="  flex: 0 1 auto;  "  direction=vertical  ><ng-container [dibPort]="'4894'" ><as-split-area   size=20  id=ci4895 dibComponent=splitArea   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 0 1 auto;  " ><ng-container [dibPort]="'4895'" ><h2>Top Area</h2><span  id=ci4906 dibComponent=span   style="  flex: 0 1 0%;  display: block; text-align: center"  [innerHtml]="getHtml('span2') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: center;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  min-width: 800px;" id=ci5056 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5056'" ><button  mat-raised-button color=accent  id=ci5055 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'splitterDemo',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  flex: 0 1 280px;  "  [attr.aria-label]="'Click Me to Load Grid'"  type=button  ><span class=dibButtonCaption >Click Me to Load Grid</span></button><button  mat-raised-button color=accent  id=ci5057 dibComponent=button   (click)="navigationService.goTo(  'dibexPlain',  'splitterDemo',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  flex: 0 1 280px;  "  [attr.aria-label]="'Click Me to Load a Plain Container'"  type=button  ><span class=dibButtonCaption >Click Me to Load a Plain Container</span></button></ng-container></div></ng-container></as-split-area><as-split-area   [size]="60" id=ci4896 dibComponent=splitArea   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 0 1 auto;  " ><ng-container [dibPort]="'4896'" ><h2>Center Area</h2></ng-container></as-split-area><as-split-area   [size]="20" [maxSize]="30" id=ci4897 dibComponent=splitArea   style="  padding:10px !important;  display:flex; flex-direction: column;  justify-content: center;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><ng-container [dibPort]="'4897'" ><h2>Bottom Area</h2><span  id=ci4905 dibComponent=span   style="  "  [innerHtml]="getHtml('span1') | safeHtml" ></span></ng-container></as-split-area></ng-container></as-split></ng-container></as-split-area><as-split-area   [size]="200" [minSize]="200" id=ci4893 dibComponent=splitArea   style="  display:flex; flex-direction: column;  justify-content: center;  align-items: center;  flex-wrap: nowrap;  flex: 0 1 auto;  " ><ng-container [dibPort]="'4893'" ><h2>Right Area</h2><span  id=ci5070 dibComponent=span   style="  "  [innerHtml]="getHtml('span3') | safeHtml" ></span></ng-container></as-split-area></ng-container></as-split></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [angular_split_1.AngularSplitModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexSplitterModule = class dibexSplitterModule {
+                static entry = dibexSplitterComponent;
+                static ɵfac = function dibexSplitterModule_Factory(t) { return new (t || dibexSplitterModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexSplitterModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexSplitterModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSplitterModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexSplitterComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexSplitterModule, { declarations: [dibexSplitterComponent], imports: [common_1.CommonModule, shared_4.SharedModule, angular_split_1.AngularSplitModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

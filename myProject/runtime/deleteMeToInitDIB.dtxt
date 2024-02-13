@@ -1,0 +1,8 @@
+If this file does not exist in the /runtime/ folder, Dropinbase will perform the following actions to initialize certain basic configurations:
+					- Create the /runtime/ folder with its subfolders
+					- Create the Dib.php file if it does not exist based on the /configs/DibTmpl.php file
+					- Check if there are new dropin folders and create 'module' dropin records in pef_dropin for them
+					- Check if the dibDatabaseVersion setting in pef_setting corresponds with the latest build no in /vendor/dropinbase/dropinbase/Migration Scripts.dtxt.
+					  If not, attempt to run the outstanding scripts, and update the dibDatabaseVersion setting.
+					  NOTE: please check if this file has any other notices like PHP changes that must be made!
+					

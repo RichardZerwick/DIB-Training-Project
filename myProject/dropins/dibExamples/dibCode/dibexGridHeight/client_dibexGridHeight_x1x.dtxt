@@ -1,0 +1,228 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/tabs", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, tabs_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, _c0, _c1, _c2, _c3, importsRequired, dibexGridHeightComponent, containerModules, fullDateTimeOptions, dibexGridHeightModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexGridHeightComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 19);
+    } }
+    function dibexGridHeightComponent_ng_template_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 20);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabFillHeightFalse", "dibexGridHeight.tabFillHeightFalse", "fillHeight=false"));
+    } }
+    function dibexGridHeightComponent_ng_template_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 21);
+    } if (rf & 2) {
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r5.getTabTitle("tabFillHeight200px", "dibexGridHeight.tabFillHeight200px", "fillHeight with 200px buffer"));
+    } }
+    function dibexGridHeightComponent_ng_template_24_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 22);
+    } if (rf & 2) {
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r8.getTabTitle("tabExplicitHeight", "dibexGridHeight.tabExplicitHeight", "Explicit Height 300px"));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i7 = card_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i8 = tabs_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            _c1 = function (a1) { return { changeUrl: false, originContainer: a1 }; };
+            _c2 = function (a3) { return { containerName: "dibexGridSizeFillHeight200px", portId: 4635, portAlias: "main", options: a3 }; };
+            _c3 = function (a3) { return { containerName: "dibexGridSizeExplicitHeight", portId: 4636, portAlias: "main", options: a3 }; };
+            importsRequired = [];
+            dibexGridHeightComponent = class dibexGridHeightComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 187, name: 'dibexGridHeight', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexGridSizeExplicitHeight", "dibexGridSizeFillHeight200px", "dibexGridSizeFillHeightFalse"], refreshChildContainers: { "tabFillHeightFalse": ['dibexGridSizeFillHeightFalse*4634'], "tabFillHeight200px": ['dibexGridSizeFillHeight200px*4635'], "tabExplicitHeight": ['dibexGridSizeExplicitHeight*4636'], "_": ['dibDocsExampleHtml*5115'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexGridHeight');
+                    this.containerName = 'dibexGridHeight'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexGridHeight', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexGridHeight' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexGridHeightComponent_Factory(t) { return new (t || dibexGridHeightComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexGridHeightComponent, selectors: [["dibex-grid-height"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 27, vars: 22, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5115", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexGridHeight", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci4632", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], [3, "dibPort"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci4633", "dibComponent", "tabs", "itemAlias", "tabsDemo", "containerName", "dibexGridHeight", "dibTabGoToParent", "", "dibAutoTabSelection", "4634,4635,4636", "dibAutoTabSelectionAliases", "tabFillHeightFalse,tabFillHeight200px,tabExplicitHeight", 2, "align-self", "stretch", 3, "portId", "container"], ["tabReference4634", ""], ["mat-tab-label", ""], ["id", "ci4634", "dibComponent", "subcontainer", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["parentContainerName", "dibexGridHeight", "subContainerName", "dibexGridSizeFillHeightFalse", "subContainerId", "188", "dropinName", "grid", 3, "dibPort"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", 3, "dibTabGoTo"], ["tabReference4635", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci4635", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["tabReference4636", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci4636", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["mode", "indeterminate"], ["tabPortId", "4634", "dibid", "tabFillHeightFalse__caption.4634", 3, "value"], ["tabPortId", "4635", "dibid", "tabFillHeight200px__caption.4635", 3, "value"], ["tabPortId", "4636", "dibid", "tabExplicitHeight__caption.4636", 3, "value"]], template: function dibexGridHeightComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexGridHeightComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexGridHeightComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "div", 8)(9, "mat-tab-group", 9)(10, "mat-tab", 6, 10);
+                        i0.ɵɵtemplate(12, dibexGridHeightComponent_ng_template_12_Template, 1, 1, "ng-template", 11);
+                        i0.ɵɵelementStart(13, "div", 12);
+                        i0.ɵɵelementContainer(14, 13);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "mat-tab", 14, 15);
+                        i0.ɵɵtemplate(18, dibexGridHeightComponent_ng_template_18_Template, 1, 1, "ng-template", 11);
+                        i0.ɵɵelementStart(19, "div", 16);
+                        i0.ɵɵelementContainer(20, 7);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(21, "mat-tab", 14, 17);
+                        i0.ɵɵtemplate(24, dibexGridHeightComponent_ng_template_24_Template, 1, 1, "ng-template", 11);
+                        i0.ɵɵelementStart(25, "div", 18);
+                        i0.ɵɵelementContainer(26, 7);
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(12, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5115");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4632");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4634");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(16, _c2, i0.ɵɵpureFunction1(14, _c1, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4635");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(20, _c3, i0.ɵɵpureFunction1(18, _c1, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4636");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i6.MatProgressBar, i7.MatCard, i7.MatCardContent, i8.MatTabLabel, i8.MatTab, i8.MatTabGroup], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexGridHeight'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexGridHeightComponent.prototype, "reloadContainer", null);
+            exports_1("dibexGridHeightComponent", dibexGridHeightComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridHeightComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-grid-height', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5115 dibComponent=subcontainer   ><ng-container [dibPort]="'5115'" parentContainerName=dibexGridHeight  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci4632 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4632'" ><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci4633 dibComponent=tabs   style="  align-self: stretch;  "  itemAlias=tabsDemo  [portId]="portId" containerName=dibexGridHeight  dibTabGoToParent   dibAutoTabSelection="4634,4635,4636"  dibAutoTabSelectionAliases="tabFillHeightFalse,tabFillHeight200px,tabExplicitHeight"  [container]="this"  ><mat-tab   #tabReference4634  style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabFillHeightFalse', 'dibexGridHeight.tabFillHeightFalse', 'fillHeight=false')" tabPortId=4634  dibid="tabFillHeightFalse__caption.4634"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  " id=ci4634 dibComponent=subcontainer   ><ng-container [dibPort]="'4634'" parentContainerName=dibexGridHeight  subContainerName=dibexGridSizeFillHeightFalse  subContainerId=188  dropinName=grid ></ng-container></div></mat-tab><mat-tab   #tabReference4635  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexGridSizeFillHeight200px', portId: 4635, portAlias: 'main', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabFillHeight200px', 'dibexGridHeight.tabFillHeight200px', 'fillHeight with 200px buffer')" tabPortId=4635  dibid="tabFillHeight200px__caption.4635"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  " id=ci4635 dibComponent=div  ><ng-container [dibPort]="'4635'" ></ng-container></div></mat-tab><mat-tab   #tabReference4636  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexGridSizeExplicitHeight', portId: 4636, portAlias: 'main', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabExplicitHeight', 'dibexGridHeight.tabExplicitHeight', 'Explicit Height 300px')" tabPortId=4636  dibid="tabExplicitHeight__caption.4636"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  " id=ci4636 dibComponent=div  ><ng-container [dibPort]="'4636'" ></ng-container></div></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, tabs_1.MatTabsModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexGridHeightModule = class dibexGridHeightModule {
+                static entry = dibexGridHeightComponent;
+                static ɵfac = function dibexGridHeightModule_Factory(t) { return new (t || dibexGridHeightModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexGridHeightModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexGridHeightModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridHeightModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexGridHeightComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexGridHeightModule, { declarations: [dibexGridHeightComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, tabs_1.MatTabsModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,1883 @@
+System.register(["tslib", "@angular/core", "@angular/material/table", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/material/sort", "@angular/material/paginator", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@ngbracket/ngx-layout/extended", "@angular/material/checkbox", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, table_1, shared_1, core_2, shared_2, shared_3, http_1, forms_1, core_3, shared_4, rxjs_1, operators_1, table_2, sort_1, paginator_1, core_4, common_1, shared_5, shared_6, button_1, icon_1, card_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, _c0, _c1, _c2, _c3, _c4, _c5, importsRequired, dibexGridSizeExplicitHeightComponent, containerModules, dibexGridSizeExplicitHeightModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexGridSizeExplicitHeightComponent_button_10_Template(rf, ctx) { if (rf & 1) {
+        const _r34 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 41);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_button_10_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r34); const ctx_r33 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r33.searchGrid()); });
+        i0.ɵɵelement(1, "dib-icon", 42);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Apply filter criteria specified in column headers")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexGridSizeExplicitHeightComponent_button_11_Template(rf, ctx) { if (rf & 1) {
+        const _r36 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 43);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_button_11_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r36); const ctx_r35 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r35.clearSearch()); });
+        i0.ɵɵelement(1, "dib-icon", 44);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Show all records and clear filter criteria")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexGridSizeExplicitHeightComponent_div_13_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r37 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2("\u00A0to\u00A0", ctx_r37.page.toRecord, "\u00A0of\u00A0", ctx_r37.page.records, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_div_13_span_4_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r38 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1("(Total: ", ctx_r38.page.totalRecords, ")");
+    } }
+    function dibexGridSizeExplicitHeightComponent_div_13_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 45);
+        i0.ɵɵtext(1);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_div_13_span_2_Template, 2, 2, "span", 38);
+        i0.ɵɵtext(3, "\u00A0");
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_div_13_span_4_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" Client Grid: ", ctx_r2.page.fromRecord, "");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r2.page.fromRecord > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r2.page.totalRecords != ctx_r2.page.records);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_21_Template(rf, ctx) { if (rf & 1) {
+        const _r40 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 46)(1, "mat-checkbox", 47);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_th_21_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r40); const ctx_r39 = i0.ɵɵnextContext(); $event.preventDefault(); return i0.ɵɵresetView(ctx_r39.masterToggle()); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r4.masterIsChecked)("indeterminate", ctx_r4.masterIsIndeterminate);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_22_Template(rf, ctx) { if (rf & 1) {
+        const _r44 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 48)(1, "mat-checkbox", 49);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_td_22_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexGridSizeExplicitHeightComponent_td_22_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r44); const row_r41 = restoredCtx.$implicit; const ctx_r43 = i0.ɵɵnextContext(); return i0.ɵɵresetView($event ? ctx_r43.selection.toggle(row_r41) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r41 = ctx.$implicit;
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r5.selection.isSelected(row_r41));
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_24_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r45 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r45.client_id_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_24_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r45 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r45.client_id, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_24_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 51);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_24_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_24_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r45 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r45 && !!row_r45.client_id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r45 && !row_r45.client_id_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_25_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Client ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_25_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Client");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_25_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r55 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 60)(2, "mat-label");
+        i0.ɵɵtext(3, "Client");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 61);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_25_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r55); const ctx_r54 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r54.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_25_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r55); const ctx_r56 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r56.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r53 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r53.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_25_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_25_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_25_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r7 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r7.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r7.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r7.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_27_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r57 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r57.name_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_27_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r57 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r57.name, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_27_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 62);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_27_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_27_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r57 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r57 && !!row_r57.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r57 && !row_r57.name_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_28_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_28_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_28_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r67 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 63)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 64);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_28_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r67); const ctx_r66 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r66.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_28_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r67); const ctx_r68 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r68.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r65 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r65.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_28_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_28_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_28_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r9 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r9.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r9.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r9.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_30_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r69 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r69.start_date_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_30_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r69 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r69.start_date, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_30_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 65);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_30_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_30_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r69 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r69 && !!row_r69.start_date_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r69 && !row_r69.start_date_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_31_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Start Date ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_31_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Start Date");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_31_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r79 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 66)(2, "mat-label");
+        i0.ɵɵtext(3, "Start Date");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 67);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_31_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r79); const ctx_r78 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r78.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_31_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r79); const ctx_r80 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r80.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r77 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r77.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Start Date");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_31_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_31_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_31_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r11.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r11.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r11.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_33_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r81 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r81.email_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_33_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r81 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r81.email, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_33_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 68);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_33_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_33_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r81 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r81 && !!row_r81.email_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r81 && !row_r81.email_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_34_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Email ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_34_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Email");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_34_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r91 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 69)(2, "mat-label");
+        i0.ɵɵtext(3, "Email");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 70);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_34_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r91); const ctx_r90 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r90.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_34_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r91); const ctx_r92 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r92.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r89 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r89.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Email");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_34_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_34_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_34_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_34_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r13 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_36_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r93 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r93.client_contact_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_36_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r93 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r93.client_contact, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 71);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_36_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_36_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r93 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r93 && !!row_r93.client_contact_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r93 && !row_r93.client_contact_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_37_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Client Contact ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_37_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Client Contact");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_37_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r103 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 72)(2, "mat-label");
+        i0.ɵɵtext(3, "Client Contact");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 73);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_37_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r103); const ctx_r102 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r102.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_37_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r103); const ctx_r104 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r104.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r101 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r101.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client Contact");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_37_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_37_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_37_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r15 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r15.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r15.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r15.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_39_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r105 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r105.count_of_projects_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_39_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r105 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r105.count_of_projects, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_39_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 74);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_39_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_39_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r105 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r105 && !!row_r105.count_of_projects_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r105 && !row_r105.count_of_projects_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_40_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Count Of Projects ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_40_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Count Of Projects");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_40_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r115 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 75)(2, "mat-label");
+        i0.ɵɵtext(3, "Count Of Projects");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 76);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_40_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r115); const ctx_r114 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r114.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_40_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r115); const ctx_r116 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r116.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r113 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r113.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Count Of Projects");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_40_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_40_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_40_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r17 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r17.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r17.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r17.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_42_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r117 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r117.project_last_updated_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_42_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r117 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r117.project_last_updated, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_42_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 77);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_42_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_42_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r117 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r117 && !!row_r117.project_last_updated_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r117 && !row_r117.project_last_updated_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_43_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Project Last Updated ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_43_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Project Last Updated");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_43_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r127 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 78)(2, "mat-label");
+        i0.ɵɵtext(3, "Project Last Updated");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 79);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_43_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r127); const ctx_r126 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r126.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_43_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r127); const ctx_r128 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r128.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r125 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r125.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Project Last Updated");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_43_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_43_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_43_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_43_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r19 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r19.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r19.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r19.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_45_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r129 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r129.vip_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_45_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r129 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r129.vip, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_td_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 80);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_td_45_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_td_45_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r129 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r129 && !!row_r129.vip_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r129 && !row_r129.vip_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_46_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " VIP ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_46_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "VIP");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_46_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r139 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 81)(2, "mat-label");
+        i0.ɵɵtext(3, "VIP");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 82);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_th_46_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r139); const ctx_r138 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r138.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_th_46_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r139); const ctx_r140 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r140.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r137 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r137.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "VIP");
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_th_46_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_th_46_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_th_46_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r21 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r21.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r21.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r21.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_48_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 85);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_48_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 83);
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_th_48_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 84);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r22 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r22.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r22.busy);
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_50_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r142 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r142.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexGridSizeExplicitHeightComponent_th_50_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 86);
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_th_50_span_1_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r23 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r23.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r23.busy && ctx_r23.tableDataSource.data.length == 0);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_container_51_tr_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 88);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_container_51_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0);
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_ng_container_51_tr_1_Template, 1, 0, "tr", 87);
+        i0.ɵɵpipe(2, "async");
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const column_r143 = ctx.$implicit;
+        const ctx_r24 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpipeBind1(2, 1, ctx_r24.columnHeaders.getArray(column_r143).items$));
+    } }
+    function dibexGridSizeExplicitHeightComponent_tr_52_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 89);
+    } if (rf & 2) {
+        const ctx_r25 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r25.busy ? "visible" : "hidden"));
+    } }
+    function dibexGridSizeExplicitHeightComponent_tr_53_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 89);
+    } if (rf & 2) {
+        const ctx_r26 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r26.tableDataSource.data.length == 0 ? "visible" : "hidden"));
+    } }
+    function dibexGridSizeExplicitHeightComponent_tr_54_Template(rf, ctx) { if (rf & 1) {
+        const _r147 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 90);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_tr_54_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r147); const row_r145 = restoredCtx.$implicit; const ctx_r146 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r146.rowClick(row_r145, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r145 = ctx.$implicit;
+        const ctx_r27 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r27.isHighlighted(row_r145)));
+    } }
+    function dibexGridSizeExplicitHeightComponent_56_ng_template_0_Template(rf, ctx) { }
+    function dibexGridSizeExplicitHeightComponent_56_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, dibexGridSizeExplicitHeightComponent_56_ng_template_0_Template, 0, 0, "ng-template", 91);
+    } if (rf & 2) {
+        i0.ɵɵnextContext();
+        const _r31 = i0.ɵɵreference(61);
+        i0.ɵɵproperty("ngTemplateOutlet", _r31);
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_checkbox_2_Template(rf, ctx) { if (rf & 1) {
+        const _r153 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-checkbox", 97);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_checkbox_2_Template_mat_checkbox_click_0_listener($event) { i0.ɵɵrestoreView(_r153); const ctx_r152 = i0.ɵɵnextContext(2); $event.preventDefault(); return i0.ɵɵresetView(ctx_r152.clearAll()); });
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r149 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("checked", true);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" ", ctx_r149.numberOfSelectedItems + " ", "item", ctx_r149.numberOfSelectedItems > 1 ? "s " : " ", "selected ");
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_mat_icon_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility_off");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_Template(rf, ctx) { if (rf & 1) {
+        const _r157 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 98);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r157); const ctx_r156 = i0.ɵɵnextContext(2); ctx_r156.gridShowClipboardDefault = !ctx_r156.gridShowClipboardDefault; return i0.ɵɵresetView(ctx_r156.gridShowClipboardDefault && ctx_r156.scrollToBottom()); });
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_mat_icon_1_Template, 2, 0, "mat-icon", 38);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_mat_icon_2_Template, 2, 0, "mat-icon", 38);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r150 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r150.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r150.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r150.gridShowClipboardDefault ? "hide" : "show", "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_paginator_5_Template(rf, ctx) { if (rf & 1) {
+        const _r160 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-paginator", 99, 100);
+        i0.ɵɵlistener("page", function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_paginator_5_Template_mat_paginator_page_0_listener($event) { i0.ɵɵrestoreView(_r160); const ctx_r159 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r159.changePage($event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r151 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("length", ctx_r151.page.totalRecords)("pageSize", ctx_r151.page.pageSize)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c2));
+    } }
+    function dibexGridSizeExplicitHeightComponent_mat_toolbar_59_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-toolbar")(1, "mat-toolbar-row", 92);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_checkbox_2_Template, 2, 3, "mat-checkbox", 93);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_button_3_Template, 4, 3, "button", 94);
+        i0.ɵɵelement(4, "span", 95);
+        i0.ɵɵtemplate(5, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_mat_paginator_5_Template, 2, 4, "mat-paginator", 96);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r30 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r30.numberOfSelectedItems);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r30.selectedDataNotInPage().length > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", true);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r182 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r182.client_id_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r182 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r182.client_id, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 51);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r182 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r182 && !!row_r182.client_id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r182 && !row_r182.client_id_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Client ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Client");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r192 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 60)(2, "mat-label");
+        i0.ɵɵtext(3, "Client");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 61);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r192); const ctx_r191 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r191.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r192); const ctx_r193 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r193.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r190 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r190.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r162 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r162.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r162.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r162.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r194 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r194.name_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r194 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r194.name, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 62);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r194 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r194 && !!row_r194.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r194 && !row_r194.name_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r204 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 63)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 64);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r204); const ctx_r203 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r203.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r204); const ctx_r205 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r205.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r202 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r202.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r164 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r164.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r164.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r164.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r206 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r206.start_date_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r206 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r206.start_date, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 65);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r206 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r206 && !!row_r206.start_date_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r206 && !row_r206.start_date_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Start Date ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Start Date");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r216 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 66)(2, "mat-label");
+        i0.ɵɵtext(3, "Start Date");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 67);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r216); const ctx_r215 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r215.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r216); const ctx_r217 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r217.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r214 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r214.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Start Date");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r166 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r166.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r166.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r166.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r218 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r218.email_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r218 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r218.email, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 68);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r218 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r218 && !!row_r218.email_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r218 && !row_r218.email_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Email ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Email");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r228 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 69)(2, "mat-label");
+        i0.ɵɵtext(3, "Email");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 70);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r228); const ctx_r227 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r227.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r228); const ctx_r229 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r229.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r226 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r226.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Email");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r168 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r168.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r168.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r168.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r230 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r230.client_contact_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r230 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r230.client_contact, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 71);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r230 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r230 && !!row_r230.client_contact_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r230 && !row_r230.client_contact_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Client Contact ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Client Contact");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r240 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 72)(2, "mat-label");
+        i0.ɵɵtext(3, "Client Contact");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 73);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r240); const ctx_r239 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r239.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r240); const ctx_r241 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r241.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r238 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r238.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client Contact");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r170 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r170.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r170.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r170.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r242 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r242.count_of_projects_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r242 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r242.count_of_projects, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 74);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r242 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r242 && !!row_r242.count_of_projects_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r242 && !row_r242.count_of_projects_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Count Of Projects ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Count Of Projects");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r252 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 75)(2, "mat-label");
+        i0.ɵɵtext(3, "Count Of Projects");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 76);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r252); const ctx_r251 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r251.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r252); const ctx_r253 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r253.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r250 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r250.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Count Of Projects");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r172 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r172.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r172.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r172.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r254 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r254.project_last_updated_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r254 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r254.project_last_updated, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 77);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r254 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r254 && !!row_r254.project_last_updated_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r254 && !row_r254.project_last_updated_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " Project Last Updated ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "Project Last Updated");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r264 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 78)(2, "mat-label");
+        i0.ɵɵtext(3, "Project Last Updated");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 79);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r264); const ctx_r263 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r263.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r264); const ctx_r265 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r265.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r262 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r262.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Project Last Updated");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r174 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r174.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r174.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r174.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r266 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r266.vip_display_value, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r266 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r266.vip, "");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 50)(1, "div", 80);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_span_2_Template, 2, 1, "span", 38);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_span_3_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r266 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r266 && !!row_r266.vip_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r266 && !row_r266.vip_display_value);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 57);
+        i0.ɵɵtext(1, " VIP ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 58);
+        i0.ɵɵtext(1, "VIP");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r276 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 59)(1, "mat-form-field", 81)(2, "mat-label");
+        i0.ɵɵtext(3, "VIP");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 82);
+        i0.ɵɵlistener("keydown.enter", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r276); const ctx_r275 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r275.searchGrid(false)); })("keydown.esc", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r276); const ctx_r277 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r277.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r274 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r274.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "VIP");
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 52)(1, "div", 53);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_2_Template, 2, 0, "div", 54);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_3_Template, 2, 0, "div", 55);
+        i0.ɵɵtemplate(4, dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_div_4_Template, 5, 2, "div", 56);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r176 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r176.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r176.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r176.showSearch);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_26_Template(rf, ctx) { if (rf & 1) {
+        const _r279 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 46)(1, "mat-checkbox", 103);
+        i0.ɵɵlistener("change", function dibexGridSizeExplicitHeightComponent_ng_template_60_th_26_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r279); const ctx_r278 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r278.masterToggle($event) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r177 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r177.masterIsChecked)("indeterminate", ctx_r177.masterIsIndeterminate);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_td_27_Template(rf, ctx) { if (rf & 1) {
+        const _r283 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 104)(1, "mat-checkbox", 49);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_ng_template_60_td_27_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexGridSizeExplicitHeightComponent_ng_template_60_td_27_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r283); const row_r280 = restoredCtx.$implicit; const ctx_r282 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r282.selection.toggle(row_r280) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r280 = ctx.$implicit;
+        const ctx_r178 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r178.selection.isSelected(row_r280));
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_29_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 85);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_29_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 83);
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_ng_template_60_th_29_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 84);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r179 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r179.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r179.busy);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_31_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r285 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r285.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_th_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 86);
+        i0.ɵɵtemplate(1, dibexGridSizeExplicitHeightComponent_ng_template_60_th_31_span_1_Template, 2, 1, "span", 38);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r180 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r180.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r180.busy && ctx_r180.tableDataSource.data.length == 0);
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_tr_32_Template(rf, ctx) { if (rf & 1) {
+        const _r288 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 90);
+        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_ng_template_60_tr_32_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r288); const row_r286 = restoredCtx.$implicit; const ctx_r287 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r287.rowClick(row_r286, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r286 = ctx.$implicit;
+        const ctx_r181 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r181.isHighlighted(row_r286)));
+    } }
+    function dibexGridSizeExplicitHeightComponent_ng_template_60_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 101);
+        i0.ɵɵelementContainerStart(1, 21);
+        i0.ɵɵtemplate(2, dibexGridSizeExplicitHeightComponent_ng_template_60_td_2_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(3, dibexGridSizeExplicitHeightComponent_ng_template_60_th_3_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(4, 24);
+        i0.ɵɵtemplate(5, dibexGridSizeExplicitHeightComponent_ng_template_60_td_5_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(6, dibexGridSizeExplicitHeightComponent_ng_template_60_th_6_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(7, 25);
+        i0.ɵɵtemplate(8, dibexGridSizeExplicitHeightComponent_ng_template_60_td_8_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(9, dibexGridSizeExplicitHeightComponent_ng_template_60_th_9_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(10, 26);
+        i0.ɵɵtemplate(11, dibexGridSizeExplicitHeightComponent_ng_template_60_td_11_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(12, dibexGridSizeExplicitHeightComponent_ng_template_60_th_12_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(13, 27);
+        i0.ɵɵtemplate(14, dibexGridSizeExplicitHeightComponent_ng_template_60_td_14_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(15, dibexGridSizeExplicitHeightComponent_ng_template_60_th_15_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(16, 28);
+        i0.ɵɵtemplate(17, dibexGridSizeExplicitHeightComponent_ng_template_60_td_17_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(18, dibexGridSizeExplicitHeightComponent_ng_template_60_th_18_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(19, 29);
+        i0.ɵɵtemplate(20, dibexGridSizeExplicitHeightComponent_ng_template_60_td_20_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(21, dibexGridSizeExplicitHeightComponent_ng_template_60_th_21_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(22, 30);
+        i0.ɵɵtemplate(23, dibexGridSizeExplicitHeightComponent_ng_template_60_td_23_Template, 4, 2, "td", 22);
+        i0.ɵɵtemplate(24, dibexGridSizeExplicitHeightComponent_ng_template_60_th_24_Template, 5, 3, "th", 23);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(25, 18);
+        i0.ɵɵtemplate(26, dibexGridSizeExplicitHeightComponent_ng_template_60_th_26_Template, 2, 2, "th", 19);
+        i0.ɵɵtemplate(27, dibexGridSizeExplicitHeightComponent_ng_template_60_td_27_Template, 2, 1, "td", 102);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(28, 31);
+        i0.ɵɵtemplate(29, dibexGridSizeExplicitHeightComponent_ng_template_60_th_29_Template, 2, 2, "th", 32);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(30, 33);
+        i0.ɵɵtemplate(31, dibexGridSizeExplicitHeightComponent_ng_template_60_th_31_Template, 2, 2, "th", 34);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(32, dibexGridSizeExplicitHeightComponent_ng_template_60_tr_32_Template, 1, 3, "tr", 37);
+        i0.ɵɵpipe(33, "async");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r32 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("dataSource", ctx_r32.selectionDataSource);
+        i0.ɵɵadvance(32);
+        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(33, 2, ctx_r32.columnsToDisplay.items$));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_4 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (table_1_1) {
+                table_1 = table_1_1;
+                table_2 = table_1_1;
+                i15 = table_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                shared_6 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_3_1) {
+                core_3 = core_3_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (sort_1_1) {
+                sort_1 = sort_1_1;
+                i16 = sort_1_1;
+            },
+            function (paginator_1_1) {
+                paginator_1 = paginator_1_1;
+                i17 = paginator_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i9 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { visibility: a0 }; };
+            _c1 = function (a0) { return { "dib-grid-selected": a0 }; };
+            _c2 = function () { return [10, 20, 50, 100]; };
+            _c3 = function (a0) { return { "dib-editor": a0 }; };
+            _c4 = function () { return ["_dibBusy"]; };
+            _c5 = function () { return ["_dibNoRecords"]; };
+            importsRequired = [];
+            dibexGridSizeExplicitHeightComponent = class dibexGridSizeExplicitHeightComponent extends shared_1.GridComponent {
+                httpClient;
+                ref;
+                crudService;
+                sd;
+                cd;
+                view = { container: { id: 190, name: 'dibexGridSizeExplicitHeight', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'grid', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ['client_id'], recordStatus: 'create', debug: false, debugItem: false };
+                gridMultiselect = false; //default: false
+                gridPersistSelection = false; //default: false
+                gridMasterSelectAllFirst = true; //default:true
+                gridShowDuplicatesInClipboard = false; //default:false
+                gridShowClipboardDefault = false; //default:false
+                gridRowClickChangesSelection = true; //default:true
+                gridHighlightLastClickedOnly = false; //default:false
+                gridClickedLastNullable = false; //default:false
+                selection = new shared_1.SelectionModel(this.gridMultiselect, []);
+                selectionDataSource = new table_1.MatTableDataSource(this.selection.selected);
+                page = { pageSize: 20, pageIndex: 1, };
+                columnsToDisplay = new shared_3.DibArray(['client_id', 'name', 'start_date', 'email', 'client_contact', 'count_of_projects', 'project_last_updated', 'vip',]);
+                allColumnsToDisplay = new shared_3.DibArray(['client_id', 'name', 'start_date', 'email', 'client_contact', 'count_of_projects', 'project_last_updated', 'vip',]);
+                columnHeaders = new shared_3.DibArrayList({ "1": new shared_3.DibArray([]) });
+                showSearchDefault = false;
+                showSearch = this.showSearchDefault;
+                constructor(injector, httpClient, ref, crudService, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.ref = ref;
+                    this.crudService = crudService;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_3.DibContainerModel(this.injector, 'dibexGridSizeExplicitHeight');
+                    this.containerName = 'dibexGridSizeExplicitHeight'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { client_id: { itemId: 4681, type: 'text', fieldAlias: 'client_id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, name: { itemId: 4682, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, start_date: { itemId: 4683, type: 'text', fieldAlias: 'start_date', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, email: { itemId: 4684, type: 'text', fieldAlias: 'email', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, client_contact: { itemId: 4685, type: 'text', fieldAlias: 'client_contact', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, count_of_projects: { itemId: 4686, type: 'text', fieldAlias: 'count_of_projects', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, project_last_updated: { itemId: 4687, type: 'text', fieldAlias: 'project_last_updated', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, vip: { itemId: 5993, type: 'text', fieldAlias: 'vip', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('client_id', this.model.modelItems.client_id.formControl);
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.addControl('start_date', this.model.modelItems.start_date.formControl);
+                    this.model.$formGroup.addControl('email', this.model.modelItems.email.formControl);
+                    this.model.$formGroup.addControl('client_contact', this.model.modelItems.client_contact.formControl);
+                    this.model.$formGroup.addControl('count_of_projects', this.model.modelItems.count_of_projects.formControl);
+                    this.model.$formGroup.addControl('project_last_updated', this.model.modelItems.project_last_updated.formControl);
+                    this.model.$formGroup.addControl('vip', this.model.modelItems.vip.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.tableDataSource.data = [];
+                    this.resetPage();
+                    this.setupGridSearchAll();
+                    this.tableDataSource
+                        .connect().pipe(operators_1.tap(_ => { const selected = this.selection.selected; this.selection._emitChanges = false; this.selection.deselect(...this.selection.selected.filter(s => !!this.tableDataSource.data.find(d => this.compareRows(s, d)))); this.selection.select(...this.tableDataSource.data.filter(d => !!selected.find(s => this.compareRows(s, d)))); this.selection._emitChanges = true; })).subscribe();
+                    this.selection.changed.pipe().subscribe(c => {
+                        this.updateSelectionClientData(c);
+                        if (this.gridShowDuplicatesInClipboard)
+                            this.selectionDataSource.data = c.source.selected;
+                        else
+                            this.selectionDataSource.data = this.selectedDataNotInPage(c.source.selected);
+                    });
+                    this.columnHeaders.addArray('1', new shared_3.DibArray(['client_id', 'name', 'start_date', 'email', 'client_contact', 'count_of_projects', 'project_last_updated', 'vip']));
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.setupService(); this.reloadContainer(); this.clientData.selected_self = null; this.updateSearchFromUrl(); this.eventService.on(`${this.view.container.name}selectRow`).pipe(operators_1.takeUntil(this.onDestroy)).subscribe((selectRecord) => { const column = selectRecord['column']; const value = selectRecord['value']; let found = false; this.tableDataSource.data.forEach(row => { if (row[column] == value) {
+                    found = true;
+                    this.rowSelect(row);
+                } }); }); }
+                rowClick(row, e) {
+                    if (!!e.srcElement.firstChild && !!e.srcElement.firstChild.attributes && !!e.srcElement.firstChild.attributes.type && e.srcElement.firstChild.attributes.type.value == 'checkbox') {
+                        return;
+                    }
+                    if (e.srcElement && ["button", "a", "mat-icon", "dib-icon"].includes(e.srcElement.tagName.toLocaleLowerCase())) {
+                        return;
+                    }
+                    this.rowSelect(row);
+                }
+                rowSelect(row) {
+                    if (this.gridRowClickChangesSelection) {
+                        this.selection.toggle(row);
+                    }
+                    if (this.gridClickedLastNullable && this.clickedLast && this.compareRows(row, this.clickedLast)) {
+                        this.clickedLast = null;
+                    }
+                    else {
+                        this.clickedLast = row;
+                    }
+                    let lastClickValue = {};
+                    if (this.clickedLast !== null) {
+                        Object.keys(this.model.modelItems).forEach(key => { if (!!this.model.modelItems[key].itemAlias == true) {
+                            lastClickValue[key] = this.clickedLast[key];
+                        } });
+                        this.clientData.clickedLast_self = lastClickValue;
+                    }
+                    else {
+                        this.clientData.clickedLast_self = null;
+                    }
+                    this.eventService.emit({ name: `clickedLast_dibexGridSizeExplicitHeight`, value: this.clientData.clickedLast_self });
+                }
+                updateSelectionClientData(selectionChange) {
+                    const { selected } = selectionChange.source || {};
+                    const firstSelection = selected ? selected[0] : {};
+                    if (!selected[0]) {
+                        this.clientData.selected_self = null;
+                        this.eventService.emit({ name: `selected_dibexGridSizeExplicitHeight`, value: this.clientData.selected_self });
+                        return;
+                    }
+                    let cdSelected = this.gridMultiselect ? selected.map(s => { let res = {}; this.view.primaryKeys.forEach((key) => { if (!!s[key]) {
+                        res[key] = s[key];
+                    } }); return res; }) : this.view.primaryKeys.reduce((res, key) => ({ ...res, [key]: firstSelection[key] }), {});
+                    if (Object.keys(cdSelected).length == 0) {
+                        cdSelected = selected;
+                    }
+                    this.clientData.selected_self = cdSelected;
+                    this.eventService.emit({ name: `selected_dibexGridSizeExplicitHeight`, value: cdSelected });
+                }
+                ;
+                setupService() {
+                    this.sort.sortChange.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((sort) => { this.page$.next(this.page); })).subscribe();
+                    this.page$.pipe(operators_1.tap(page => { this.page = page; this.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.tap(page => { this.clearClientDataSelection(); if (this.showSearch) {
+                        this.clientData.gridFilter_self = this.allClientData.gridFilter;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: this.clientData.gridFilter_self });
+                    }
+                    else {
+                        delete this.clientData.gridFilter_self;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: null });
+                    } }), operators_1.switchMap((page) => { const sort = this.sort.direction == '' ? [] : [{ "property": this.sort.active, "direction": this.sort.direction.toUpperCase() }]; return this.crudService.list(this.model.crudUrl, this.view.container.name, { page: { number: page.pageIndex + 1, limit: page.pageSize }, searchText: null, sort: sort, filter: this.filter, clientData: this.clientData, activeFilter: this.view.container.activeFilter }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` }))); }), operators_1.tap((response) => {
+                        this.busy = false;
+                        window.dispatchEvent(new Event('resize'));
+                        if (response.success) {
+                            this.tableDataSource.data = [];
+                            const data = response.records;
+                            if (!!data === true) {
+                                this.tableDataSource.data = data;
+                                this.page.length = Math.ceil(response.filtertotal / this.page.pageSize);
+                                this.page.records = response.filtertotal;
+                                this.page.totalRecords = response.total;
+                                this.page.fromRecord = this.page.pageIndex == 0 ? 1 : (this.page.pageIndex) * this.page.pageSize;
+                                this.page.toRecord = this.page.fromRecord == 1 ? this.page.fromRecord + this.tableDataSource.data.length - 1 : this.page.fromRecord + this.tableDataSource.data.length;
+                                if (this.page.toRecord > this.page.totalRecords) {
+                                    this.page.toRecord = this.page.totalRecords;
+                                    this.page.allRecords = true;
+                                }
+                            }
+                            this.handleSelectionOnPage();
+                            this.reloadSubcontainers();
+                            this.eventService.processDelayedEventQueue(this.view.container.name);
+                        }
+                    })).subscribe();
+                }
+                ;
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                ;
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexGridSizeExplicitHeight', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexGridSizeExplicitHeight' });
+                    this.resetPage();
+                    this.page$.next(this.page);
+                }
+                ;
+                resetPage() {
+                    this.page = { number: 1, length: 0, pageSize: 20, pageIndex: 0, lastLoad: 1, totalRecords: 0, allRecords: false };
+                    this.page.allRecords = false;
+                    if (!this.gridPersistSelection) {
+                        this.selection.clear();
+                    }
+                    if (!!this.paginator) {
+                        this.paginator._intl.itemsPerPageLabel = '';
+                        this.paginator.pageSize = this.page.pageSize;
+                        this.paginator.firstPage();
+                    }
+                }
+                ;
+                static ɵfac = function dibexGridSizeExplicitHeightComponent_Factory(t) { return new (t || dibexGridSizeExplicitHeightComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i2.CrudService), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexGridSizeExplicitHeightComponent, selectors: [["dibex-grid-size-explicit-height"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 62, vars: 31, consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci4671", "dibComponent", "row", "dib-inject-content", "replace", 2, "padding", "5px 10px 0px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], [3, "dibPort"], ["mat-mini-fab", "", "color", "accent", "id", "ci4672", "dibComponent", "btnReload", "aria-label", "Reload Record(s)", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci4678", "dibComponent", "span", 2, "width", "150px !important", 3, "innerHtml"], ["mat-mini-fab", "", "color", "primary", "id", "ci4676", "dibComponent", "btnFilterOpen", "aria-label", "Display headers for filtering records", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/search.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci4674", "dibComponent", "btnFilterApply", "style", "  ", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["mat-mini-fab", "", "color", "primary", "id", "ci4675", "dibComponent", "btnFilterClear", "style", "  ", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["id", "ci4673", "dibComponent", "spacer", 2, "flex", "1 1 0%"], ["class", "dib-grid-totals", "id", "ci4677", "dibComponent", "gridTotals", "style", "  display:flex; flex-direction: row;  flex-wrap: nowrap;  ", 4, "ngIf"], ["id", "ci4679", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], [2, "height", "300px", "overflow", "auto"], ["gridScroll", ""], ["mat-table", "", "matSort", "", 1, "", 3, "dataSource"], ["matColumnDef", "_select"], ["mat-header-cell", "", "style", "width:80px", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "client_id"], ["mat-cell", "", "style", "padding: 2px; ", 4, "matCellDef"], ["mat-header-cell", "", "style", "padding:2px; text-align:left; vertical-align:top; ", 4, "matHeaderCellDef"], ["matColumnDef", "name"], ["matColumnDef", "start_date"], ["matColumnDef", "email"], ["matColumnDef", "client_contact"], ["matColumnDef", "count_of_projects"], ["matColumnDef", "project_last_updated"], ["matColumnDef", "vip"], ["matColumnDef", "_dibBusy"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "_dibNoRecords"], ["mat-header-cell", "", "class", "dib-no-records-found", 4, "matHeaderCellDef"], [4, "ngFor", "ngForOf"], ["mat-header-row", "", "class", "dib-grid-loader", 3, "ngStyle", 4, "matHeaderRowDef"], ["mat-row", "", 3, "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], [4, "ngIf"], ["footerdibexGridSizeExplicitHeight", ""], ["_selectedTable", ""], ["mat-mini-fab", "", "color", "primary", "id", "ci4674", "dibComponent", "btnFilterApply", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci4675", "dibComponent", "btnFilterClear", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"], ["id", "ci4677", "dibComponent", "gridTotals", 1, "dib-grid-totals", 2, "display", "flex", "flex-direction", "row", "flex-wrap", "nowrap"], ["mat-header-cell", "", 2, "width", "80px"], ["color", "primary", 3, "checked", "indeterminate", "click"], ["mat-cell", ""], ["color", "primary", 3, "checked", "click", "change"], ["mat-cell", "", 2, "padding", "2px"], ["id", "ci4681", "dibComponent", "sqlText"], ["mat-header-cell", "", 2, "padding", "2px", "text-align", "left", "vertical-align", "top"], [1, "dibGridSearch", 2, "display", "flex", "flex-direction", "column"], ["mat-sort-header", "", 4, "ngIf"], ["mat-sort-header", "", "class", "dibGridSearchTitle", 4, "ngIf"], ["class", "dibGridSearchInput", "dib-edit", "", 3, "formGroup", 4, "ngIf"], ["mat-sort-header", ""], ["mat-sort-header", "", 1, "dibGridSearchTitle"], ["dib-edit", "", 1, "dibGridSearchInput", 3, "formGroup"], ["id", "ci4681", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "client_id", "name", "client_id", 3, "keydown.enter", "keydown.esc"], ["id", "ci4682", "dibComponent", "sqlText"], ["id", "ci4682", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "name", "name", "name", 3, "keydown.enter", "keydown.esc"], ["id", "ci4683", "dibComponent", "sqlText"], ["id", "ci4683", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "start_date", "name", "start_date", 3, "keydown.enter", "keydown.esc"], ["id", "ci4684", "dibComponent", "sqlText"], ["id", "ci4684", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "email", "name", "email", 3, "keydown.enter", "keydown.esc"], ["id", "ci4685", "dibComponent", "sqlText"], ["id", "ci4685", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "client_contact", "name", "client_contact", 3, "keydown.enter", "keydown.esc"], ["id", "ci4686", "dibComponent", "sqlText"], ["id", "ci4686", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "count_of_projects", "name", "count_of_projects", 3, "keydown.enter", "keydown.esc"], ["id", "ci4687", "dibComponent", "sqlText"], ["id", "ci4687", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "project_last_updated", "name", "project_last_updated", 3, "keydown.enter", "keydown.esc"], ["id", "ci5993", "dibComponent", "sqlText"], ["id", "ci5993", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "vip", "name", "vip", 3, "keydown.enter", "keydown.esc"], ["mat-header-cell", ""], ["mode", "indeterminate", 4, "ngIf"], ["mode", "indeterminate"], ["mat-header-cell", "", 1, "dib-no-records-found"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-header-row", ""], ["mat-header-row", "", 1, "dib-grid-loader", 3, "ngStyle"], ["mat-row", "", 3, "ngClass", "click"], [3, "ngTemplateOutlet"], [1, "grid-footer"], ["class", "mat-body", "matTooltip", "Clear all", "position", "above", "color", "primary", 3, "checked", "click", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [2, "flex", "1 1 auto"], ["style", "background: none", 3, "length", "pageSize", "pageSizeOptions", "page", 4, "ngIf"], ["matTooltip", "Clear all", "position", "above", "color", "primary", 1, "mat-body", 3, "checked", "click"], ["mat-button", "", 3, "click"], [2, "background", "none", 3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], ["mat-table", "", 1, "", 2, "margin-top", "1rem", 3, "dataSource"], ["mat-cell", "", "style", "width:80px", 4, "matCellDef"], ["color", "primary", 3, "checked", "indeterminate", "change"], ["mat-cell", "", 2, "width", "80px"]], template: function dibexGridSizeExplicitHeightComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0);
+                        i0.ɵɵlistener("ngSubmit", function dibexGridSizeExplicitHeightComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(1, "div", 1)(2, "div", 2);
+                        i0.ɵɵelementContainerStart(3, 3);
+                        i0.ɵɵelementStart(4, "button", 4);
+                        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_Template_button_click_4_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(5, "dib-icon", 5);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(6, "span", 6);
+                        i0.ɵɵpipe(7, "safeHtml");
+                        i0.ɵɵelementStart(8, "button", 7);
+                        i0.ɵɵlistener("click", function dibexGridSizeExplicitHeightComponent_Template_button_click_8_listener() { return ctx.toggleSearch(); });
+                        i0.ɵɵelement(9, "dib-icon", 8);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(10, dibexGridSizeExplicitHeightComponent_button_10_Template, 2, 4, "button", 9);
+                        i0.ɵɵtemplate(11, dibexGridSizeExplicitHeightComponent_button_11_Template, 2, 4, "button", 10);
+                        i0.ɵɵelement(12, "span", 11);
+                        i0.ɵɵtemplate(13, dibexGridSizeExplicitHeightComponent_div_13_Template, 5, 3, "div", 12);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(14, "mat-card", 13)(15, "mat-card-content", 14);
+                        i0.ɵɵelementContainerStart(16, 3);
+                        i0.ɵɵelementStart(17, "div", 15, 16)(19, "table", 17);
+                        i0.ɵɵelementContainerStart(20, 18);
+                        i0.ɵɵtemplate(21, dibexGridSizeExplicitHeightComponent_th_21_Template, 2, 2, "th", 19);
+                        i0.ɵɵtemplate(22, dibexGridSizeExplicitHeightComponent_td_22_Template, 2, 1, "td", 20);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(23, 21);
+                        i0.ɵɵtemplate(24, dibexGridSizeExplicitHeightComponent_td_24_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(25, dibexGridSizeExplicitHeightComponent_th_25_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(26, 24);
+                        i0.ɵɵtemplate(27, dibexGridSizeExplicitHeightComponent_td_27_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(28, dibexGridSizeExplicitHeightComponent_th_28_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(29, 25);
+                        i0.ɵɵtemplate(30, dibexGridSizeExplicitHeightComponent_td_30_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(31, dibexGridSizeExplicitHeightComponent_th_31_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(32, 26);
+                        i0.ɵɵtemplate(33, dibexGridSizeExplicitHeightComponent_td_33_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(34, dibexGridSizeExplicitHeightComponent_th_34_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(35, 27);
+                        i0.ɵɵtemplate(36, dibexGridSizeExplicitHeightComponent_td_36_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(37, dibexGridSizeExplicitHeightComponent_th_37_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(38, 28);
+                        i0.ɵɵtemplate(39, dibexGridSizeExplicitHeightComponent_td_39_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(40, dibexGridSizeExplicitHeightComponent_th_40_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(41, 29);
+                        i0.ɵɵtemplate(42, dibexGridSizeExplicitHeightComponent_td_42_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(43, dibexGridSizeExplicitHeightComponent_th_43_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(44, 30);
+                        i0.ɵɵtemplate(45, dibexGridSizeExplicitHeightComponent_td_45_Template, 4, 2, "td", 22);
+                        i0.ɵɵtemplate(46, dibexGridSizeExplicitHeightComponent_th_46_Template, 5, 3, "th", 23);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(47, 31);
+                        i0.ɵɵtemplate(48, dibexGridSizeExplicitHeightComponent_th_48_Template, 2, 2, "th", 32);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(49, 33);
+                        i0.ɵɵtemplate(50, dibexGridSizeExplicitHeightComponent_th_50_Template, 2, 2, "th", 34);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(51, dibexGridSizeExplicitHeightComponent_ng_container_51_Template, 3, 3, "ng-container", 35);
+                        i0.ɵɵtemplate(52, dibexGridSizeExplicitHeightComponent_tr_52_Template, 1, 3, "tr", 36);
+                        i0.ɵɵtemplate(53, dibexGridSizeExplicitHeightComponent_tr_53_Template, 1, 3, "tr", 36);
+                        i0.ɵɵtemplate(54, dibexGridSizeExplicitHeightComponent_tr_54_Template, 1, 3, "tr", 37);
+                        i0.ɵɵpipe(55, "async");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(56, dibexGridSizeExplicitHeightComponent_56_Template, 1, 1, null, 38);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(57, "div", null, 39);
+                        i0.ɵɵtemplate(59, dibexGridSizeExplicitHeightComponent_mat_toolbar_59_Template, 6, 3, "mat-toolbar", 38);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵtemplate(60, dibexGridSizeExplicitHeightComponent_ng_template_60_Template, 34, 4, "ng-template", null, 40, i0.ɵɵtemplateRefExtractor);
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(27, _c3, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4671");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Reload Record(s)")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(7, 23, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Display headers for filtering records")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.page.fromRecord > -1);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4679");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dataSource", ctx.tableDataSource);
+                        i0.ɵɵadvance(32);
+                        i0.ɵɵproperty("ngForOf", ctx.columnHeaders.getKeys());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(29, _c4));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(30, _c5));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(55, 25, ctx.columnsToDisplay.items$));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.gridShowClipboardDefault);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.gridMultiselect || true);
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibIconComponent, i2.DibPortDirective, i2.DibRemoveFocusDirective, i6.MatButton, i6.MatMiniFabButton, i7.MatCheckbox, i8.MatFormField, i8.MatLabel, i9.MatIcon, i10.MatInput, i11.MatProgressBar, i12.MatToolbar, i12.MatToolbarRow, i13.MatTooltip, i14.MatCard, i14.MatCardContent, i15.MatTable, i15.MatHeaderCellDef, i15.MatHeaderRowDef, i15.MatColumnDef, i15.MatCellDef, i15.MatRowDef, i15.MatHeaderCell, i15.MatCell, i15.MatHeaderRow, i15.MatRow, i16.MatSort, i16.MatSortHeader, i17.MatPaginator, i3.AsyncPipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_2.EventHandler('reloaddibexGridSizeExplicitHeight'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexGridSizeExplicitHeightComponent.prototype, "reloadContainer", null);
+            exports_1("dibexGridSizeExplicitHeightComponent", dibexGridSizeExplicitHeightComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridSizeExplicitHeightComponent, [{
+                    type: core_2.Component,
+                    args: [{ selector: 'dibex-grid-size-explicit-height', template: `
+<form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  padding:5px 10px 0px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4671 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4671'" ><button   mat-mini-fab color=accent  id=ci4672 dibComponent=btnReload   style="  " aria-label="Reload Record(s)"  [matTooltip]="'Reload Record(s)'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><span  id=ci4678 dibComponent=span   style="  width:150px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml" ></span><button mat-mini-fab color=primary  id=ci4676 dibComponent=btnFilterOpen   style="  " aria-label="Display headers for filtering records"  [matTooltip]="'Display headers for filtering records'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="toggleSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/search.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci4674 dibComponent=btnFilterApply   style="  " aria-label="Apply filter criteria specified in column headers"  [matTooltip]="'Apply filter criteria specified in column headers'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="searchGrid()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci4675 dibComponent=btnFilterClear   style="  " aria-label="Show all records and clear filter criteria"  [matTooltip]="'Show all records and clear filter criteria'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="clearSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"></dib-icon></button><span  id=ci4673 dibComponent=spacer   style="  flex: 1 1 0%;  " ></span><div class=dib-grid-totals  id=ci4677 dibComponent=gridTotals   style="  display:flex; flex-direction: row;  flex-wrap: nowrap;  "  *ngIf="page.fromRecord > -1" > Client Grid: {{page.fromRecord}}<span *ngIf='page.fromRecord>0'>&nbsp;to&nbsp;{{page.toRecord}}&nbsp;of&nbsp;{{page.records}}</span>&nbsp;<span *ngIf='page.totalRecords!=page.records'>(Total: {{page.totalRecords}})</span></div></ng-container></div><mat-card   style="  " id=ci4679 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4679'" ><!-- <div style="height:300px; overflow:auto;" dib-scroll-pager scrollOffset=50 (nextPage)="nextPage()"> --><div #gridScroll style="height:300px; overflow:auto;" ><table mat-table [dataSource]="tableDataSource" matSort class=""><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (click)="$event.preventDefault();masterToggle()"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=client_id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4681 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_id_display_value"> {{row.client_id_display_value}}</span><span *ngIf="!!row && !row.client_id_display_value"> {{row.client_id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4681 dibComponent=inputText   style="  " ><mat-label >Client</mat-label><input   matInput  type=text   formControlName=client_id   name=client_id   [attr.aria-label]="'Client'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4682 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4682 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=start_date  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4683 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.start_date_display_value"> {{row.start_date_display_value}}</span><span *ngIf="!!row && !row.start_date_display_value"> {{row.start_date}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Start Date  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Start Date</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4683 dibComponent=inputText   style="  " ><mat-label >Start Date</mat-label><input   matInput  type=text   formControlName=start_date   name=start_date   [attr.aria-label]="'Start Date'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=email  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4684 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.email_display_value"> {{row.email_display_value}}</span><span *ngIf="!!row && !row.email_display_value"> {{row.email}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Email  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Email</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4684 dibComponent=inputText   style="  " ><mat-label >Email</mat-label><input   matInput  type=text   formControlName=email   name=email   [attr.aria-label]="'Email'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=client_contact  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4685 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_contact_display_value"> {{row.client_contact_display_value}}</span><span *ngIf="!!row && !row.client_contact_display_value"> {{row.client_contact}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client Contact  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client Contact</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4685 dibComponent=inputText   style="  " ><mat-label >Client Contact</mat-label><input   matInput  type=text   formControlName=client_contact   name=client_contact   [attr.aria-label]="'Client Contact'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=count_of_projects  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4686 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.count_of_projects_display_value"> {{row.count_of_projects_display_value}}</span><span *ngIf="!!row && !row.count_of_projects_display_value"> {{row.count_of_projects}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Count Of Projects  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Count Of Projects</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4686 dibComponent=inputText   style="  " ><mat-label >Count Of Projects</mat-label><input   matInput  type=text   formControlName=count_of_projects   name=count_of_projects   [attr.aria-label]="'Count Of Projects'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=project_last_updated  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4687 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.project_last_updated_display_value"> {{row.project_last_updated_display_value}}</span><span *ngIf="!!row && !row.project_last_updated_display_value"> {{row.project_last_updated}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Project Last Updated  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Project Last Updated</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4687 dibComponent=inputText   style="  " ><mat-label >Project Last Updated</mat-label><input   matInput  type=text   formControlName=project_last_updated   name=project_last_updated   [attr.aria-label]="'Project Last Updated'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=vip  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci5993 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.vip_display_value"> {{row.vip_display_value}}</span><span *ngIf="!!row && !row.vip_display_value"> {{row.vip}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> VIP  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >VIP</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci5993 dibComponent=inputText   style="  " ><mat-label >VIP</mat-label><input   matInput  type=text   formControlName=vip   name=vip   [attr.aria-label]="'VIP'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><ng-container *ngFor="let column of columnHeaders.getKeys()"><tr mat-header-row *matHeaderRowDef="(columnHeaders.getArray(column).items$ | async);"></tr></ng-container><tr mat-header-row [ngStyle]="{visibility : busy? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibBusy']"></tr><tr mat-header-row [ngStyle]="{visibility : tableDataSource.data.length == 0? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibNoRecords']"></tr><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table><ng-template [ngTemplateOutlet]="_selectedTable" *ngIf=gridShowClipboardDefault ></ng-template></div><div #footerdibexGridSizeExplicitHeight><mat-toolbar *ngIf="gridMultiselect || true"><mat-toolbar-row class = "grid-footer"><mat-checkbox  class = "mat-body"  matTooltip = "Clear all"  position = "above"  *ngIf=numberOfSelectedItems    color=primary   (click)="$event.preventDefault();clearAll()"  [checked]="true"  > {{numberOfSelectedItems + " "}}item{{numberOfSelectedItems>1?"s ":" "}}selected  </mat-checkbox><button  *ngIf="selectedDataNotInPage().length>0"  mat-button  (click)="gridShowClipboardDefault = !gridShowClipboardDefault; gridShowClipboardDefault&&scrollToBottom()"  ><mat-icon *ngIf="!gridShowClipboardDefault">visibility</mat-icon><mat-icon *ngIf=gridShowClipboardDefault >visibility_off</mat-icon> {{gridShowClipboardDefault?"hide":"show"}}</button><span style ="flex: 1 1 auto"></span><mat-paginator *ngIf=true  #paginator [length]="page.totalRecords" (page)="changePage($event)" style = "background: none"  [pageSize]="page.pageSize"  [pageSizeOptions]="[10, 20, 50, 100]" ></mat-paginator></mat-toolbar-row></mat-toolbar></div></ng-container></mat-card-content></mat-card></div></form><ng-template #_selectedTable ><table style ="margin-top:1rem" mat-table [dataSource]="selectionDataSource" class=""><ng-container matColumnDef=client_id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4681 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_id_display_value"> {{row.client_id_display_value}}</span><span *ngIf="!!row && !row.client_id_display_value"> {{row.client_id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4681 dibComponent=inputText   style="  " ><mat-label >Client</mat-label><input   matInput  type=text   formControlName=client_id   name=client_id   [attr.aria-label]="'Client'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4682 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4682 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=start_date  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4683 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.start_date_display_value"> {{row.start_date_display_value}}</span><span *ngIf="!!row && !row.start_date_display_value"> {{row.start_date}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Start Date  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Start Date</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4683 dibComponent=inputText   style="  " ><mat-label >Start Date</mat-label><input   matInput  type=text   formControlName=start_date   name=start_date   [attr.aria-label]="'Start Date'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=email  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4684 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.email_display_value"> {{row.email_display_value}}</span><span *ngIf="!!row && !row.email_display_value"> {{row.email}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Email  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Email</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4684 dibComponent=inputText   style="  " ><mat-label >Email</mat-label><input   matInput  type=text   formControlName=email   name=email   [attr.aria-label]="'Email'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=client_contact  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4685 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_contact_display_value"> {{row.client_contact_display_value}}</span><span *ngIf="!!row && !row.client_contact_display_value"> {{row.client_contact}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client Contact  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client Contact</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4685 dibComponent=inputText   style="  " ><mat-label >Client Contact</mat-label><input   matInput  type=text   formControlName=client_contact   name=client_contact   [attr.aria-label]="'Client Contact'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=count_of_projects  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4686 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.count_of_projects_display_value"> {{row.count_of_projects_display_value}}</span><span *ngIf="!!row && !row.count_of_projects_display_value"> {{row.count_of_projects}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Count Of Projects  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Count Of Projects</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4686 dibComponent=inputText   style="  " ><mat-label >Count Of Projects</mat-label><input   matInput  type=text   formControlName=count_of_projects   name=count_of_projects   [attr.aria-label]="'Count Of Projects'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=project_last_updated  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4687 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.project_last_updated_display_value"> {{row.project_last_updated_display_value}}</span><span *ngIf="!!row && !row.project_last_updated_display_value"> {{row.project_last_updated}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Project Last Updated  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Project Last Updated</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4687 dibComponent=inputText   style="  " ><mat-label >Project Last Updated</mat-label><input   matInput  type=text   formControlName=project_last_updated   name=project_last_updated   [attr.aria-label]="'Project Last Updated'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=vip  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci5993 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.vip_display_value"> {{row.vip_display_value}}</span><span *ngIf="!!row && !row.vip_display_value"> {{row.vip}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> VIP  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >VIP</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci5993 dibComponent=inputText   style="  " ><mat-label >VIP</mat-label><input   matInput  type=text   formControlName=vip   name=vip   [attr.aria-label]="'VIP'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (change)="$event ? masterToggle($event) : null"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row" style = "width:80px"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table></ng-template>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ChangeDetectorRef }, { type: i2.CrudService }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule];
+            dibexGridSizeExplicitHeightModule = class dibexGridSizeExplicitHeightModule {
+                static entry = dibexGridSizeExplicitHeightComponent;
+                static ɵfac = function dibexGridSizeExplicitHeightModule_Factory(t) { return new (t || dibexGridSizeExplicitHeightModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexGridSizeExplicitHeightModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], imports: [common_1.CommonModule, shared_5.SharedModule, containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] });
+            };
+            exports_1("default", dibexGridSizeExplicitHeightModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexGridSizeExplicitHeightModule, [{
+                    type: core_4.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_5.SharedModule, ...containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule], providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], declarations: [dibexGridSizeExplicitHeightComponent], exports: [] }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexGridSizeExplicitHeightModule, { declarations: [dibexGridSizeExplicitHeightComponent], imports: [common_1.CommonModule, shared_5.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] }); })();
+        }
+    };
+});

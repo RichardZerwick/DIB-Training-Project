@@ -1,0 +1,90 @@
+----
+
+[2024-02-12 15:44:43] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:46:52] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:47:18] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:51:17] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:51:43] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:54:31] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:55:30] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:57:21] 172.18.0.1 system_public(x2x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/peff/Crud/componentlist?containerName=dibDesigner&containerItemId=3901&limit=1&page=1&query=p__1
+Request blocked. The request requires container 'dibDesigner' in active permissions records for this perm_group (x2x). Check that pef_dropin.pef_dropin_cache_db_id is set where needed, and regenerate permisssions.
+
+----
+
+[2024-02-12 15:57:21] 172.18.0.1 system_public(x2x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/peff/Crud/componentlist?containerName=dibDesigner&containerItemId=3900&limit=1&page=1&query=p__363
+Request blocked. The request requires container 'dibDesigner' in active permissions records for this perm_group (x2x). Check that pef_dropin.pef_dropin_cache_db_id is set where needed, and regenerate permisssions.
+
+----
+
+[2024-02-12 15:57:22] 172.18.0.1 system_public(x2x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/peff/Api/getPortInfo?containerName=dibDesigner
+Request blocked. The request requires container 'dibDesigner' in active permissions records for this perm_group (x2x). Check that pef_dropin.pef_dropin_cache_db_id is set where needed, and regenerate permisssions.
+
+----
+
+[2024-02-12 15:58:17] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 15:58:45] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-12 16:00:16] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-13 08:16:33] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+
+----
+
+[2024-02-13 08:19:19] 172.18.0.1 admin(x1x) DATABASE: dropinbase ON host.docker.internal
+URL:	https://localhost/dropins/dibAdmin/DClearFiles/clearFiles?containerName=dibDesigner&itemEventId=dib*i_ev2646&itemAlias=quickClearCrudCache
+Request blocked. User's permgroup (x1x) lacks permissions to container 'register'.
+

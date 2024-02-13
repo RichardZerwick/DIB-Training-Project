@@ -1,0 +1,427 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/datepicker", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, datepicker_1, core_4, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexValidationClientSideComponent, containerModules, fullDateTimeOptions, dibexValidationClientSideModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexValidationClientSideComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 39);
+    } }
+    function dibexValidationClientSideComponent_mat_error_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/larger than 5");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_16_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 10");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_24_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/larger than 2000-01-01");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 2000-12-31");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_34_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 5 chars or more");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_35_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 10 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a valid email address");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_85_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Only alpha-numeric and space allowed, and must be 4-10 chars long");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_103_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Only alphabetical characters allowed (no spaces)");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_108_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Only alpha-numeric and space allowed");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationClientSideComponent_mat_error_113_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Only alpha-numeric and the following chars allowed:_!$ *,.?:");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i6 = datepicker_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexValidationClientSideComponent = class dibexValidationClientSideComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 310, name: 'dibexValidationClientSide', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*7145'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexValidationClientSide');
+                    this.containerName = 'dibexValidationClientSide'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { alphabetical: { itemId: 7147, type: 'text', fieldAlias: 'alphabetical', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.pattern(/^[a-zA-Z]*$/)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, minMaxNumber: { itemId: 7148, type: 'number', fieldAlias: 'minMaxNumber', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.min(5), forms_1.Validators.max(10)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, minMaxLength: { itemId: 7149, type: 'text', fieldAlias: 'minMaxLength', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.minLength(5), forms_1.Validators.maxLength(10)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, alphaNumeric: { itemId: 7150, type: 'text', fieldAlias: 'alphaNumeric', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.pattern(/^[a-zA-Z0-9 ]*$/)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, regex: { itemId: 7151, type: 'text', fieldAlias: 'regex', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.pattern(/^[a-zA-Z0-9:_!$ *,.?:]*$/)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, email: { itemId: 7153, type: 'text', fieldAlias: 'email', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, minMaxDate: { itemId: 7154, type: 'date', fieldAlias: 'minMaxDate', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, minMaxText: { itemId: 7155, type: 'text', fieldAlias: 'minMaxText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, customRegex: { itemId: 7161, type: 'text', fieldAlias: 'customRegex', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.pattern(/^[a-zA-Z0-9 ]{4,10}$/)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTel: { itemId: 7166, type: 'text', fieldAlias: 'inputTel', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTelWithPlaceholder: { itemId: 7168, type: 'text', fieldAlias: 'inputTelWithPlaceholder', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('alphabetical', this.model.modelItems.alphabetical.formControl);
+                    this.model.$formGroup.addControl('minMaxNumber', this.model.modelItems.minMaxNumber.formControl);
+                    this.model.$formGroup.addControl('minMaxLength', this.model.modelItems.minMaxLength.formControl);
+                    this.model.$formGroup.addControl('alphaNumeric', this.model.modelItems.alphaNumeric.formControl);
+                    this.model.$formGroup.addControl('regex', this.model.modelItems.regex.formControl);
+                    this.model.$formGroup.addControl('email', this.model.modelItems.email.formControl);
+                    this.model.$formGroup.addControl('minMaxDate', this.model.modelItems.minMaxDate.formControl);
+                    this.model.$formGroup.addControl('minMaxText', this.model.modelItems.minMaxText.formControl);
+                    this.model.$formGroup.addControl('customRegex', this.model.modelItems.customRegex.formControl);
+                    this.model.$formGroup.addControl('inputTel', this.model.modelItems.inputTel.formControl);
+                    this.model.$formGroup.addControl('inputTelWithPlaceholder', this.model.modelItems.inputTelWithPlaceholder.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexValidationClientSide', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexValidationClientSide' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexValidationClientSideComponent_Factory(t) { return new (t || dibexValidationClientSideComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexValidationClientSideComponent, selectors: [["dibex-validation-client-side"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 114, vars: 32, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci7145", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexValidationClientSide", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci7146", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "500px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], [3, "dibPort"], ["id", "ci7148", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "minMaxNumber", "min", "5", "max", "10", "name", "minMaxNumber"], [4, "ngIf"], ["id", "ci7154", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "minMaxDate", "name", "minMaxDate", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker7154", ""], ["id", "ci7155", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "minMaxText", "name", "minMaxText"], ["id", "ci7149", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "minMaxLength", "minlength", "5", "maxlength", "10", "name", "minMaxLength"], ["id", "ci7153", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "email", "name", "email"], ["id", "ci7167", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci7166", "dibComponent", "inputTel", "appearance", "standard", 2, "margin", "0px 0px 10px !important"], ["pattern", "[0-9]{3}-[0-9]{3}-[0-9]{4}", "matInput", "", "type", "tel", "formControlName", "inputTel", "name", "inputTel"], ["id", "ci7169", "dibComponent", "comment"], ["id", "ci7168", "dibComponent", "inputTel", "appearance", "standard", 2, "margin", "0px 0px 10px !important"], ["pattern", "[0-9]{3}-[0-9]{3}-[0-9]{4}", "placeholder", "Format: 123-456-7890", "matInput", "", "type", "tel", "formControlName", "inputTelWithPlaceholder", "name", "inputTelWithPlaceholder"], ["id", "ci7160", "dibComponent", "comment"], ["target", "blank", "href", "https://regex101.com/"], ["id", "ci7161", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "customRegex", "name", "customRegex"], ["id", "ci7152", "dibComponent", "comment"], ["id", "ci7147", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "alphabetical", "name", "alphabetical"], ["id", "ci7150", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "alphaNumeric", "name", "alphaNumeric"], ["id", "ci7151", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "regex", "name", "regex"], ["mode", "indeterminate"]], template: function dibexValidationClientSideComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r13 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexValidationClientSideComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexValidationClientSideComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-header")(7, "mat-card-title");
+                        i0.ɵɵtext(8, "Client-side Validation and Limits");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(10, 7);
+                        i0.ɵɵelementStart(11, "mat-form-field", 8)(12, "mat-label");
+                        i0.ɵɵtext(13, "Min Value: 5, Max Value: 10");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(14, "input", 9);
+                        i0.ɵɵtemplate(15, dibexValidationClientSideComponent_mat_error_15_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵtemplate(16, dibexValidationClientSideComponent_mat_error_16_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(17, "mat-form-field", 11)(18, "mat-label");
+                        i0.ɵɵtext(19, "Dates between 2000-01-01 and 2000-12-31");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(20, "input", 12);
+                        i0.ɵɵlistener("focus", function dibexValidationClientSideComponent_Template_input_focus_20_listener() { i0.ɵɵrestoreView(_r13); const _r3 = i0.ɵɵreference(23); return i0.ɵɵresetView(_r3.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(21, "mat-datepicker-toggle", 13)(22, "mat-datepicker", null, 14);
+                        i0.ɵɵtemplate(24, dibexValidationClientSideComponent_mat_error_24_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵtemplate(25, dibexValidationClientSideComponent_mat_error_25_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(26, "mat-form-field", 15)(27, "mat-label");
+                        i0.ɵɵtext(28, "m-p (TODO)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(29, "input", 16);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(30, "mat-form-field", 17)(31, "mat-label");
+                        i0.ɵɵtext(32, "Min Length: 5, Max Length: 10");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(33, "input", 18);
+                        i0.ɵɵtemplate(34, dibexValidationClientSideComponent_mat_error_34_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵtemplate(35, dibexValidationClientSideComponent_mat_error_35_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(36, "mat-form-field", 19)(37, "mat-label");
+                        i0.ɵɵtext(38, "Validation Type: email");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(39, "input", 20);
+                        i0.ɵɵtemplate(40, dibexValidationClientSideComponent_mat_error_40_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(41, "span", 21)(42, "div", 22);
+                        i0.ɵɵtext(43, " The following ");
+                        i0.ɵɵelementStart(44, "b");
+                        i0.ɵɵtext(45, "inputTel");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(46, " field uses a pattern specified in ");
+                        i0.ɵɵelementStart(47, "b");
+                        i0.ɵɵtext(48, "Attributes2");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(49, " to force input. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(50, "mat-form-field", 23)(51, "mat-label");
+                        i0.ɵɵtext(52, "inputTel");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(53, "input", 24);
+                        i0.ɵɵelementStart(54, "mat-hint");
+                        i0.ɵɵtext(55, "Format: 123-456-7890");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(56, "span", 25)(57, "div", 22);
+                        i0.ɵɵtext(58, " Using a placeholder to guide the user, is an alternative to using hints like above.");
+                        i0.ɵɵelement(59, "br");
+                        i0.ɵɵtext(60, "See the ");
+                        i0.ɵɵelementStart(61, "b");
+                        i0.ɵɵtext(62, "Attributes2");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(63, "-field. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(64, "mat-form-field", 26)(65, "mat-label");
+                        i0.ɵɵtext(66, "inputTel");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(67, "input", 27);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(68, "span", 28)(69, "div", 22);
+                        i0.ɵɵtext(70, " The following field uses the ");
+                        i0.ɵɵelementStart(71, "b");
+                        i0.ɵɵtext(72, "Input Regex");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(73, " and ");
+                        i0.ɵɵelementStart(74, "b");
+                        i0.ɵɵtext(75, "Regex Validation Message");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(76, " fields to specify custom validation.");
+                        i0.ɵɵelement(77, "br");
+                        i0.ɵɵtext(78, "Use a chatbot to create a regular expression, and test it here: ");
+                        i0.ɵɵelementStart(79, "a", 29);
+                        i0.ɵɵtext(80, "https://regex101.com");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(81, "mat-form-field", 30)(82, "mat-label");
+                        i0.ɵɵtext(83, "Alpha-numeric and Space. 4-10 chars long.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(84, "input", 31);
+                        i0.ɵɵtemplate(85, dibexValidationClientSideComponent_mat_error_85_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(86, "span", 32)(87, "div", 22);
+                        i0.ɵɵtext(88, " The following inputs use stored Regular Expressions from the ");
+                        i0.ɵɵelementStart(89, "b");
+                        i0.ɵɵtext(90, "Validation Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(91, " (pef_validation_type) table.");
+                        i0.ɵɵelement(92, "br");
+                        i0.ɵɵtext(93, "You can add your own entries here for often used types.");
+                        i0.ɵɵelement(94, "br");
+                        i0.ɵɵtext(95, "Do not alter the existing ones as Dropinbase uses them, except ");
+                        i0.ɵɵelementStart(96, "b");
+                        i0.ɵɵtext(97, "alpha_num_list");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(98, ". ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(99, "mat-form-field", 33)(100, "mat-label");
+                        i0.ɵɵtext(101, "Alphabetical Characters Only");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(102, "input", 34);
+                        i0.ɵɵtemplate(103, dibexValidationClientSideComponent_mat_error_103_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(104, "mat-form-field", 35)(105, "mat-label");
+                        i0.ɵɵtext(106, "Alpha-numeric and Space");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(107, "input", 36);
+                        i0.ɵɵtemplate(108, dibexValidationClientSideComponent_mat_error_108_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(109, "mat-form-field", 37)(110, "mat-label");
+                        i0.ɵɵtext(111, "Alpha-numeric and _!$ *,.?:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(112, "input", 38);
+                        i0.ɵɵtemplate(113, dibexValidationClientSideComponent_mat_error_113_Template, 2, 0, "mat-error", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r3 = i0.ɵɵreference(23);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(30, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7145");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7146");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Min Value: 5, Max Value: 10");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxNumber", "min", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxNumber", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r3)("placeholder", "Dates between 2000-01-01 and 2000-12-31");
+                        i0.ɵɵattribute("aria-label", "Dates between 2000-01-01 and 2000-12-31");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r3);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxDate", "min", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxDate", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "m-p (TODO)");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Min Length: 5, Max Length: 10");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxLength", "minlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("minMaxLength", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Validation Type: email");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("email", "email", ctx.model.$formGroup));
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵattribute("aria-label", "inputTel");
+                        i0.ɵɵadvance(14);
+                        i0.ɵɵattribute("aria-label", "inputTel");
+                        i0.ɵɵadvance(17);
+                        i0.ɵɵattribute("aria-label", "Alpha-numeric and Space. 4-10 chars long.");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("customRegex", "pattern", ctx.model.$formGroup));
+                        i0.ɵɵadvance(17);
+                        i0.ɵɵattribute("aria-label", "Alphabetical Characters Only");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("alphabetical", "pattern", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Alpha-numeric and Space");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("alphaNumeric", "pattern", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Alpha-numeric and _!$ *,.?:");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("regex", "pattern", ctx.model.$formGroup));
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.MinLengthValidator, i5.MaxLengthValidator, i5.PatternValidator, i5.MinValidator, i5.MaxValidator, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibRemoveFocusDirective, i6.MatDatepicker, i6.MatDatepickerInput, i6.MatDatepickerToggle, i7.MatFormField, i7.MatLabel, i7.MatHint, i7.MatError, i7.MatPrefix, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent, i10.MatCardHeader, i10.MatCardTitle], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexValidationClientSide'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexValidationClientSideComponent.prototype, "reloadContainer", null);
+            exports_1("dibexValidationClientSideComponent", dibexValidationClientSideComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexValidationClientSideComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-validation-client-side', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci7145 dibComponent=subcontainer   ><ng-container [dibPort]="'7145'" parentContainerName=dibexValidationClientSide  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  max-width: 500px" id=ci7146 dibComponent=card  ><mat-card-header ><mat-card-title >Client-side Validation and Limits</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'7146'" ><mat-form-field  id=ci7148 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >Min Value: 5, Max Value: 10</mat-label><input   matInput  type=number   formControlName=minMaxNumber   min=5   max=10   name=minMaxNumber   [attr.aria-label]="'Min Value: 5, Max Value: 10'" ><mat-error *ngIf="hasError('minMaxNumber','min',model.$formGroup)">Please enter a value equal/larger than 5</mat-error><mat-error *ngIf="hasError('minMaxNumber','max',model.$formGroup)">Please enter a value equal/smaller than 10</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7154 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>Dates between 2000-01-01 and 2000-12-31</mat-label><input   matInput [matDatepicker]="datePicker7154"   [placeholder]="'Dates between 2000-01-01 and 2000-12-31'"   formControlName=minMaxDate   name=minMaxDate   [attr.aria-label]="'Dates between 2000-01-01 and 2000-12-31'"  (focus)="datePicker7154.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker7154" ></mat-datepicker-toggle><mat-datepicker #datePicker7154 ></mat-datepicker><mat-error *ngIf="hasError('minMaxDate','min',model.$formGroup)">Please enter a value equal/larger than 2000-01-01</mat-error><mat-error *ngIf="hasError('minMaxDate','max',model.$formGroup)">Please enter a value equal/smaller than 2000-12-31</mat-error></mat-form-field><mat-form-field id=ci7155 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >m-p (TODO)</mat-label><input   matInput  type=text   formControlName=minMaxText   name=minMaxText   [attr.aria-label]="'m-p (TODO)'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci7149 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Min Length: 5, Max Length: 10</mat-label><input   matInput  type=text   formControlName=minMaxLength   minlength='5'  maxlength='10'  name=minMaxLength   [attr.aria-label]="'Min Length: 5, Max Length: 10'" ><mat-error *ngIf="hasError('minMaxLength','minlength',model.$formGroup)">Please enter 5 chars or more</mat-error><mat-error *ngIf="hasError('minMaxLength','maxlength',model.$formGroup)">Please enter 10 chars or less</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7153 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >Validation Type: email</mat-label><input   matInput  type=email   formControlName=email   name=email   [attr.aria-label]="'Validation Type: email'" ><mat-error *ngIf="hasError('email','email',model.$formGroup)">Please enter a valid email address</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7167 dibComponent=comment   style="  " ><div class=dib-comment > The following <b>inputTel</b> field uses a pattern specified in <b>Attributes2</b> to force input.  </div></span><mat-form-field  id=ci7166 dibComponent=inputTel   style="  margin:0px 0px 10px !important;   "  appearance=standard  ><mat-label >inputTel</mat-label><input pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"   matInput  type=tel   formControlName=inputTel   name=inputTel   [attr.aria-label]="'inputTel'" ><mat-hint>Format: 123-456-7890</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7169 dibComponent=comment   style="  " ><div class=dib-comment > Using a placeholder to guide the user, is an alternative to using hints like above.<br>See the <b>Attributes2</b>-field.  </div></span><mat-form-field  id=ci7168 dibComponent=inputTel   style="  margin:0px 0px 10px !important;   "  appearance=standard  ><mat-label >inputTel</mat-label><input pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"   matInput  type=tel   formControlName=inputTelWithPlaceholder   name=inputTelWithPlaceholder   [attr.aria-label]="'inputTel'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7160 dibComponent=comment   style="  " ><div class=dib-comment > The following field uses the <b>Input Regex</b> and <b>Regex Validation Message</b> fields to specify custom validation.<br>Use a chatbot to create a regular expression, and test it here: <a target='blank' href='https://regex101.com/'>https://regex101.com</a></div></span><mat-form-field id=ci7161 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Alpha-numeric and Space. 4-10 chars long.</mat-label><input   matInput  type=text   formControlName=customRegex   name=customRegex   [attr.aria-label]="'Alpha-numeric and Space. 4-10 chars long.'" ><mat-error *ngIf="hasError('customRegex','pattern', model.$formGroup)">Only alpha-numeric and space allowed, and must be 4-10 chars long</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7152 dibComponent=comment   style="  " ><div class=dib-comment > The following inputs use stored Regular Expressions from the <b>Validation Type</b> (pef_validation_type) table.<br>You can add your own entries here for often used types.<br>Do not alter the existing ones as Dropinbase uses them, except <b>alpha_num_list</b>.  </div></span><mat-form-field id=ci7147 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Alphabetical Characters Only</mat-label><input   matInput  type=text   formControlName=alphabetical   name=alphabetical   [attr.aria-label]="'Alphabetical Characters Only'" ><mat-error *ngIf="hasError('alphabetical','pattern',model.$formGroup)">Only alphabetical characters allowed (no spaces)</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci7150 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Alpha-numeric and Space</mat-label><input   matInput  type=text   formControlName=alphaNumeric   name=alphaNumeric   [attr.aria-label]="'Alpha-numeric and Space'" ><mat-error *ngIf="hasError('alphaNumeric','pattern',model.$formGroup)">Only alpha-numeric and space allowed</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci7151 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Alpha-numeric and _!$ *,.?:</mat-label><input   matInput  type=text   formControlName=regex   name=regex   [attr.aria-label]="'Alpha-numeric and _!$ *,.?:'" ><mat-error *ngIf="hasError('regex','pattern',model.$formGroup)">Only alpha-numeric and the following chars allowed:_!$ *,.?:</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexValidationClientSideModule = class dibexValidationClientSideModule {
+                static entry = dibexValidationClientSideComponent;
+                static ɵfac = function dibexValidationClientSideModule_Factory(t) { return new (t || dibexValidationClientSideModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexValidationClientSideModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexValidationClientSideModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexValidationClientSideModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexValidationClientSideComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexValidationClientSideModule, { declarations: [dibexValidationClientSideComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule] }); })();
+        }
+    };
+});

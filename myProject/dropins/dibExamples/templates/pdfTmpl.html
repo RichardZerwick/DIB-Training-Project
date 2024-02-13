@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+~$// Use a container name to identify the database to use~
+~setmaindb(dibexPhpDatabase)~
+
+<h2>List of Clients</h2>
+
+~$// The param function implements PDO parameters to avoid any SQL injection.
+     Definition: param(VALUE, RSSQL_DOMAIN_NUMBER)
+~
+
+|rssql123;SELECT name FROM test_client WHERE id > ~param(^profile_id^, 123)~ ORDER BY name LIMIT 10|
+~name~ <br>
+|End123|
+
+</body>
+</html>

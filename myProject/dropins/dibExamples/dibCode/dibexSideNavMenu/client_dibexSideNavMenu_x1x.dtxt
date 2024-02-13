@@ -1,0 +1,397 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/sidenav", "@angular/material/list", "@angular/material/tabs", "@angular/material/icon", "@angular/material/button", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar", "@angular/material/toolbar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, sidenav_1, list_1, tabs_1, icon_1, button_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexSideNavMenuComponent, containerModules, fullDateTimeOptions, dibexSideNavMenuModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexSideNavMenuComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 33);
+    } }
+    function dibexSideNavMenuComponent_ng_template_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 34);
+    } if (rf & 2) {
+        const ctx_r3 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r3.getTabTitle("tabDashboard", "dibexSideNavMenu.tabDashboard", "Dashboard"));
+    } }
+    function dibexSideNavMenuComponent_ng_template_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 35);
+    } if (rf & 2) {
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r5.getTabTitle("tabCompanies", "dibexSideNavMenu.tabCompanies", "Companies"));
+    } }
+    function dibexSideNavMenuComponent_ng_template_42_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 36);
+    } if (rf & 2) {
+        const ctx_r7 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r7.getTabTitle("tabCrm", "dibexSideNavMenu.tabCrm", "CRM"));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (sidenav_1_1) {
+                sidenav_1 = sidenav_1_1;
+                i9 = sidenav_1_1;
+            },
+            function (list_1_1) {
+                list_1 = list_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i10 = tabs_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexSideNavMenuComponent = class dibexSideNavMenuComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 215, name: 'dibexSideNavMenu', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "tabDashboard": [''], "_": ['dibDocsExampleHtml*5358'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5365 = new shared_2.DibMenu("/dropins/setNgxMaterial/menu/Menu/list?containerName=dibexSideNavMenu&rootMenuId=5365", null, null);
+                    this.lists.list5373 = new shared_2.DibMenu("/dropins/setNgxMaterial/menu/Menu/list?containerName=dibexSideNavMenu&rootMenuId=5373", null, null);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexSideNavMenu');
+                    this.containerName = 'dibexSideNavMenu'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('span1', `sidenavContent component.
+<br><b>mode="side"</b>: Sidenav appears side-by-side with the main content, shrinking the main content's width to make space for the sidenav.`);
+                    this.setInnerHtml('span1', `sidenavContent component.
+<br><b>mode="side"</b>: Sidenav appears side-by-side with the main content, shrinking the main content's width to make space for the sidenav.`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "iconButton", actionType: "click", responseType: 'actions', submitUrl: "menu.action.toggle-icons", itemAlias: "iconButton", waitForCompletion: false, containerName: "dibexSideNavMenu", handlers: [] }, this.clientData, { itemEventId: 'ie257-dib', itemId: '5387', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5365 = this.lists.list5365.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5365 = new Date().getTime();
+                    let previousUrlChange5365;
+                    let previousResponse5365;
+                    this.lists.list5365.items = rxjs_1.combineLatest([this.lists.list5365.updatedList$, itemsUpdateSource5365]).pipe(operators_1.tap(() => { this.lists.list5365.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5365 - new Date().getTime()) / 1000;
+                        previousTimeChange5365 = new Date().getTime();
+                        previousUrlChange5365 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5365 = response;
+                            this.lists.list5365.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            window.dispatchEvent(new Event('resize'));
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5365.items.subscribe(records => this.lists.list5365.lastItems = records);
+                    this.lists.list5365.multiSelected = [];
+                    this.lists.list5365.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5365.updatedList$.next([]);
+                        self.lists.list5365.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5365.refresh();
+                    }
+                    else {
+                        self.lists.list5365.searchForm.setValue('');
+                        self.lists.list5365.updatedList$.next(self.lists.list5365.multiSelected);
+                        self.model.modelItems.sidenavMenu.formControl.setValue(self.lists.list5365.multiSelected);
+                    } };
+                    this.lists.list5365.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5365.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5365.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5365.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5365.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5365.multiSelected = self.removeDuplicateIdsFromArray(lists.list5365.multiSelected);
+                    };
+                    const itemsUpdateSource5373 = this.lists.list5373.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5373 = new Date().getTime();
+                    let previousUrlChange5373;
+                    let previousResponse5373;
+                    this.lists.list5373.items = rxjs_1.combineLatest([this.lists.list5373.updatedList$, itemsUpdateSource5373]).pipe(operators_1.tap(() => { this.lists.list5373.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5373 - new Date().getTime()) / 1000;
+                        previousTimeChange5373 = new Date().getTime();
+                        previousUrlChange5373 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5373 = response;
+                            this.lists.list5373.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            window.dispatchEvent(new Event('resize'));
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5373.items.subscribe(records => this.lists.list5373.lastItems = records);
+                    this.lists.list5373.multiSelected = [];
+                    this.lists.list5373.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5373.updatedList$.next([]);
+                        self.lists.list5373.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5373.refresh();
+                    }
+                    else {
+                        self.lists.list5373.searchForm.setValue('');
+                        self.lists.list5373.updatedList$.next(self.lists.list5373.multiSelected);
+                        self.model.modelItems.sidenavMenu1.formControl.setValue(self.lists.list5373.multiSelected);
+                    } };
+                    this.lists.list5373.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5373.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5373.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5373.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5373.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5373.multiSelected = self.removeDuplicateIdsFromArray(lists.list5373.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexSideNavMenu', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexSideNavMenu' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexSideNavMenuComponent_Factory(t) { return new (t || dibexSideNavMenuComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexSideNavMenuComponent, selectors: [["dibex-side-nav-menu"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 46, vars: 22, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5358", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexSideNavMenu", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5364", "dibComponent", "card", 2, "width", "400px !important", "flex", "0 1 0%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], [3, "dibPort"], ["id", "ci5365", "dibComponent", "sidenavMenu", 2, "overflow", "auto !important"], ["dibComponentName", "sidenavMenu", "dibDropin", "", "dibComponentLocation", "/peff/Template/component/dibexSideNavMenu?componentPath=sidenav-menu&dropin=setNgxMaterial.menu", 3, "dibComponentParent", "dibData"], ["id", "ci5359", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch"], ["fill-height", "", "id", "ci5360", "dibComponent", "sidenavContainer", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mode", "side", "opened", "", "position", "start", "id", "ci5361", "dibComponent", "sidenav", 2, "padding", "5px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["sidenavA", ""], ["id", "ci5386", "dibComponent", "toolbar", 2, "height", "49px !important"], ["id", "ci5387", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "iconButton", "type", "button", 3, "containerPortId"], ["src", "menu"], ["id", "ci5373", "dibComponent", "sidenavMenu", 2, "overflow", "auto !important"], ["id", "ci5362", "dibComponent", "sidenavContent", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci5382", "dibComponent", "icon", "src", "menu", 2, "z-index", "100", "position", "absolute", "top", "5px", "left", "5px", "cursor", "pointer", 3, "click"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci5381", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexSideNavMenu", "dibTabGoToParent", "", "dibAutoTabSelection", "5383,5384,5385", "dibAutoTabSelectionAliases", "tabDashboard,tabCompanies,tabCrm", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "overflow", "auto !important"], ["tabReference5383", ""], ["mat-tab-label", ""], ["id", "ci5383", "dibComponent", "card", 2, "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["id", "ci5363", "dibComponent", "span", 2, "height", "200px !important", 3, "innerHtml"], ["tabReference5384", ""], ["id", "ci5384", "dibComponent", "card", 2, "overflow", "auto !important"], ["tabReference5385", ""], ["id", "ci5385", "dibComponent", "card", 2, "overflow", "auto !important"], ["mode", "indeterminate"], ["tabPortId", "5383", "dibid", "tabDashboard__caption.5383", 3, "value"], ["tabPortId", "5384", "dibid", "tabCompanies__caption.5384", 3, "value"], ["tabPortId", "5385", "dibid", "tabCrm__caption.5385", 3, "value"]], template: function dibexSideNavMenuComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r8 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexSideNavMenuComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexSideNavMenuComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "div", 8);
+                        i0.ɵɵelementContainer(9, 9);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(10, "mat-card", 10)(11, "mat-card-content", 11);
+                        i0.ɵɵelementContainerStart(12, 7);
+                        i0.ɵɵelementStart(13, "mat-sidenav-container", 12)(14, "mat-sidenav", 13, 14)(16, "mat-toolbar", 15)(17, "button", 16);
+                        i0.ɵɵelement(18, "dib-icon", 17);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(19, "div", 18);
+                        i0.ɵɵelementContainer(20, 9);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(21, "mat-sidenav-content", 19);
+                        i0.ɵɵelementContainerStart(22, 7);
+                        i0.ɵɵelementStart(23, "dib-icon", 20);
+                        i0.ɵɵlistener("click", function dibexSideNavMenuComponent_Template_dib_icon_click_23_listener() { i0.ɵɵrestoreView(_r8); const _r1 = i0.ɵɵreference(15); return i0.ɵɵresetView(_r1.toggle()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(24, "div", 21)(25, "mat-tab-group", 22)(26, "mat-tab", 23, 24);
+                        i0.ɵɵtemplate(28, dibexSideNavMenuComponent_ng_template_28_Template, 1, 1, "ng-template", 25);
+                        i0.ɵɵelementStart(29, "mat-card", 26)(30, "mat-card-content", 27);
+                        i0.ɵɵelementContainerStart(31, 7);
+                        i0.ɵɵelement(32, "span", 28);
+                        i0.ɵɵpipe(33, "safeHtml");
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(34, "mat-tab", 23, 29);
+                        i0.ɵɵtemplate(36, dibexSideNavMenuComponent_ng_template_36_Template, 1, 1, "ng-template", 25);
+                        i0.ɵɵelementStart(37, "mat-card", 30)(38, "mat-card-content", 27);
+                        i0.ɵɵelementContainer(39, 7);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(40, "mat-tab", 23, 31);
+                        i0.ɵɵtemplate(42, dibexSideNavMenuComponent_ng_template_42_Template, 1, 1, "ng-template", 25);
+                        i0.ɵɵelementStart(43, "mat-card", 32)(44, "mat-card-content", 27);
+                        i0.ɵɵelementContainer(45, 7);
+                        i0.ɵɵelementEnd()()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(20, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5358");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5364");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibComponentParent", ctx)("dibData", ctx.lists.list5365);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5359");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibComponentParent", ctx)("dibData", ctx.lists.list5373);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5362");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5383");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(33, 18, ctx.getHtml("span1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5384");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5385");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibIconComponent, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibListenersDirective, i2.DibComponentDirective, i2.DibFillHeightDirective, i6.MatProgressBar, i7.MatToolbar, i8.MatCard, i8.MatCardContent, i9.MatSidenav, i9.MatSidenavContainer, i9.MatSidenavContent, i10.MatTabLabel, i10.MatTab, i10.MatTabGroup, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexSideNavMenu'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexSideNavMenuComponent.prototype, "reloadContainer", null);
+            exports_1("dibexSideNavMenuComponent", dibexSideNavMenuComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSideNavMenuComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-side-nav-menu', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5358 dibComponent=subcontainer   ><ng-container [dibPort]="'5358'" parentContainerName=dibexSideNavMenu  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:400px !important;   flex: 0 1 0%;  overflow:auto !important;" id=ci5364 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5364'" ><div  id=ci5365 dibComponent=sidenavMenu   style="  overflow:auto !important;" ><ng-container  dibComponentName=sidenavMenu   dibDropin=""  dibComponentLocation="/peff/Template/component/dibexSideNavMenu?componentPath=sidenav-menu&dropin=setNgxMaterial.menu"   [dibComponentParent]="this"  [dibData]="lists.list5365"  ></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  " id=ci5359 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5359'" ><mat-sidenav-container   fill-height id=ci5360 dibComponent=sidenavContainer   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><mat-sidenav   mode=side  opened position=start  id=ci5361 dibComponent=sidenav   style="  padding:5px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  flex-wrap: nowrap;  flex: 1 1 0%;  "  #sidenavA  ><mat-toolbar  id=ci5386 dibComponent=toolbar   style="  height:49px !important" ><button id=ci5387 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=iconButton   style="  "  type=button  ><dib-icon src=menu ></dib-icon></button></mat-toolbar><div  id=ci5373 dibComponent=sidenavMenu   style="  overflow:auto !important;" ><ng-container  dibComponentName=sidenavMenu   dibDropin=""  dibComponentLocation="/peff/Template/component/dibexSideNavMenu?componentPath=sidenav-menu&dropin=setNgxMaterial.menu"   [dibComponentParent]="this"  [dibData]="lists.list5373"  ></ng-container></div></mat-sidenav><mat-sidenav-content  id=ci5362 dibComponent=sidenavContent   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " ><ng-container [dibPort]="'5362'"><dib-icon   (click)="sidenavA.toggle()" id=ci5382 dibComponent=icon   style="  z-index: 100; position: absolute; top: 5px; left: 5px; cursor: pointer;"  src=menu ></dib-icon><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci5381 dibComponent=tabs   style="  "  itemAlias=tabs  [portId]="portId" containerName=dibexSideNavMenu  dibTabGoToParent   dibAutoTabSelection="5383,5384,5385"  dibAutoTabSelectionAliases="tabDashboard,tabCompanies,tabCrm"  [container]="this"  ><mat-tab   #tabReference5383  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabDashboard', 'dibexSideNavMenu.tabDashboard', 'Dashboard')" tabPortId=5383  dibid="tabDashboard__caption.5383"></app-tab-label></ng-template><mat-card   style="  overflow:auto !important;" id=ci5383 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5383'" ><span  id=ci5363 dibComponent=span   style="  height:200px !important;   "  [innerHtml]="getHtml('span1') | safeHtml" ></span></ng-container></mat-card-content></mat-card></mat-tab><mat-tab   #tabReference5384  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabCompanies', 'dibexSideNavMenu.tabCompanies', 'Companies')" tabPortId=5384  dibid="tabCompanies__caption.5384"></app-tab-label></ng-template><mat-card   style="  overflow:auto !important;" id=ci5384 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5384'" ></ng-container></mat-card-content></mat-card></mat-tab><mat-tab   #tabReference5385  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  overflow:auto !important;"  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabCrm', 'dibexSideNavMenu.tabCrm', 'CRM')" tabPortId=5385  dibid="tabCrm__caption.5385"></app-tab-label></ng-template><mat-card   style="  overflow:auto !important;" id=ci5385 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5385'" ></ng-container></mat-card-content></mat-card></mat-tab></mat-tab-group></div></ng-container></mat-sidenav-content></mat-sidenav-container></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, sidenav_1.MatSidenavModule, list_1.MatListModule, tabs_1.MatTabsModule, icon_1.MatIconModule, button_1.MatButtonModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexSideNavMenuModule = class dibexSideNavMenuModule {
+                static entry = dibexSideNavMenuComponent;
+                static ɵfac = function dibexSideNavMenuModule_Factory(t) { return new (t || dibexSideNavMenuModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexSideNavMenuModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexSideNavMenuModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSideNavMenuModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexSideNavMenuComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexSideNavMenuModule, { declarations: [dibexSideNavMenuComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, sidenav_1.MatSidenavModule, list_1.MatListModule, tabs_1.MatTabsModule, icon_1.MatIconModule, button_1.MatButtonModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,339 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/autocomplete", "@angular/material/divider", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, autocomplete_1, divider_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, _c0, _c1, importsRequired, dibexPhpFilesDibExcelComponent, containerModules, fullDateTimeOptions, dibexPhpFilesDibExcelModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPhpFilesDibExcelComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 24);
+    } }
+    function dibexPhpFilesDibExcelComponent_button_14_Template(rf, ctx) { if (rf & 1) {
+        const _r8 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 25);
+        i0.ɵɵlistener("click", function dibexPhpFilesDibExcelComponent_button_14_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); const _r1 = i0.ɵɵreference(12); const _r2 = i0.ɵɵreference(13); ctx_r7.clearDropdown(ctx_r7.model.modelItems.clientId.formControl, $event, ctx_r7.lists.list5650, _r1); return i0.ɵɵresetView(_r2.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexPhpFilesDibExcelComponent_mat_progress_bar_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 24);
+    } }
+    function dibexPhpFilesDibExcelComponent_mat_option_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 26);
+    } if (rf & 2) {
+        const item_r9 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r9.id == "0"))("value", item_r9)("innerHtml", item_r9.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i10 = icon_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i12 = divider_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPhpFilesDibExcelComponent = class dibexPhpFilesDibExcelComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 225, name: 'dibexPhpFilesDibExcel', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5646'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5650 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexPhpFilesDibExcel&containerItemId=5650", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPhpFilesDibExcel');
+                    this.containerName = 'dibexPhpFilesDibExcel'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 5650, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5650 }, fileUpload: { itemId: 5655, type: 'text', fieldAlias: 'fileUpload', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'fileUpload', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.$formGroup.addControl('fileUpload', this.model.modelItems.fileUpload.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('span', `The following button demonstrates the method most used to write tables to .xlsx files, since it can copy the style of a specified row in the template.`);
+                    this.setInnerHtml('span1', `Add arrays in various layouts containing formulas, add worksheets, set ranges, set content, set formulas`);
+                    this.setInnerHtml('span', `The following button demonstrates the method most used to write tables to .xlsx files, since it can copy the style of a specified row in the template.`);
+                    this.setInnerHtml('span1', `Add arrays in various layouts containing formulas, add worksheets, set ranges, set content, set formulas`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnVarious", actionType: "click", responseType: 'new-tab', submitUrl: "/dropins/dibExamples/DibExcel/variousTasks", itemAlias: "btnVarious", waitForCompletion: false, containerName: "dibexPhpFilesDibExcel", handlers: [] }, this.clientData, { itemEventId: 'ie289-dib', itemId: '5648', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnWriteTable", actionType: "click", responseType: 'new-tab', submitUrl: "/dropins/dibExamples/DibExcel/writeTable", itemAlias: "btnWriteTable", waitForCompletion: false, containerName: "dibexPhpFilesDibExcel", handlers: [] }, this.clientData, { itemEventId: 'ie290-dib', itemId: '5649', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnImportFile", actionType: "click", responseType: '2000', submitUrl: "/dropins/dibExamples/DibExcel/uploadFile", itemAlias: "btnImportFile", waitForCompletion: false, containerName: "dibexPhpFilesDibExcel", handlers: [] }, this.clientData, { itemEventId: 'ie291-dib', itemId: '5657', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5650 = this.lists.list5650.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5650 = new Date().getTime();
+                    let previousUrlChange5650;
+                    let previousResponse5650;
+                    this.lists.list5650.items = rxjs_1.combineLatest([this.lists.list5650.updatedList$, itemsUpdateSource5650]).pipe(operators_1.tap(() => { this.lists.list5650.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5650 - new Date().getTime()) / 1000;
+                        previousTimeChange5650 = new Date().getTime();
+                        previousUrlChange5650 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5650 = response;
+                            this.lists.list5650.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5650.items.subscribe(records => this.lists.list5650.lastItems = records);
+                    this.lists.list5650.multiSelected = [];
+                    this.lists.list5650.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5650.updatedList$.next([]);
+                        self.lists.list5650.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5650.refresh();
+                    }
+                    else {
+                        self.lists.list5650.searchForm.setValue('');
+                        self.lists.list5650.updatedList$.next(self.lists.list5650.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list5650.multiSelected);
+                    } };
+                    this.lists.list5650.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5650.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5650.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5650.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5650.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5650.multiSelected = self.removeDuplicateIdsFromArray(lists.list5650.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list5650.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list5650.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPhpFilesDibExcel', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPhpFilesDibExcel' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPhpFilesDibExcelComponent_Factory(t) { return new (t || dibexPhpFilesDibExcelComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPhpFilesDibExcelComponent, selectors: [["dibex-php-files-dib-excel"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 35, vars: 34, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5646", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPhpFilesDibExcel", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5647", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "15px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5650", "dibComponent", "autocomplete", "item-alias", "clientId", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%", "align-self", "stretch"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto5650trigger", "matAutocompleteTrigger", "input5650", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto5650", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci5651", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5649", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnWriteTable", "item-alias", "btnWriteTable", "type", "button", 2, "width", "300px !important", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci5653", "dibComponent", "divider", 2, "align-self", "stretch"], ["id", "ci5652", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5648", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnVarious", "item-alias", "btnVarious", "type", "button", 2, "width", "300px !important", 3, "containerPortId"], ["id", "ci5654", "dibComponent", "divider", 2, "align-self", "stretch"], ["id", "ci5655", "dibComponent", "fileUpload", "item-alias", "fileUpload", 3, "containerName", "itemId", "primaryKeyData", "fieldName", "parentContainer", "preview", "previewHeight", "previewWidth", "caption", "multipleFiles"], ["mat-raised-button", "", "color", "primary", "id", "ci5657", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnImportFile", "item-alias", "btnImportFile", "type", "button", 2, "width", "300px !important", 3, "containerPortId"], ["mode", "indeterminate"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"]], template: function dibexPhpFilesDibExcelComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPhpFilesDibExcelComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPhpFilesDibExcelComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "mat-form-field", 8)(9, "mat-label");
+                        i0.ɵɵtext(10, "Select a Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(11, "input", 9, 10);
+                        i0.ɵɵtemplate(14, dibexPhpFilesDibExcelComponent_button_14_Template, 3, 0, "button", 11);
+                        i0.ɵɵelementStart(15, "mat-autocomplete", 12, 13);
+                        i0.ɵɵlistener("opened", function dibexPhpFilesDibExcelComponent_Template_mat_autocomplete_opened_15_listener() { return ctx.lists.list5650.refresh(); });
+                        i0.ɵɵtemplate(17, dibexPhpFilesDibExcelComponent_mat_progress_bar_17_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(18, dibexPhpFilesDibExcelComponent_mat_option_18_Template, 1, 5, "mat-option", 14);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(19, "span", 15);
+                        i0.ɵɵpipe(20, "safeHtml");
+                        i0.ɵɵelementStart(21, "button", 16)(22, "span", 17);
+                        i0.ɵɵtext(23, "Write Table");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(24, "mat-divider", 18)(25, "span", 19);
+                        i0.ɵɵpipe(26, "safeHtml");
+                        i0.ɵɵelementStart(27, "button", 20)(28, "span", 17);
+                        i0.ɵɵtext(29, "Do Various Tasks");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(30, "mat-divider", 21)(31, "file-upload", 22);
+                        i0.ɵɵelementStart(32, "button", 23)(33, "span", 17);
+                        i0.ɵɵtext(34, "Import File");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r4 = i0.ɵɵreference(16);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(32, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5646");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5647");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matAutocomplete", _r4);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5650.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list5650.lastItems);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(20, 28, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Write Table");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(26, 30, ctx.getHtml("span1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Do Various Tasks");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("containerName", "dibexPhpFilesDibExcel")("itemId", 5655)("primaryKeyData", ctx.primaryKeys)("fieldName", "fileUpload")("parentContainer", ctx)("preview", false)("previewHeight", "")("previewWidth", "")("caption", "Select a .xlsx file (<1Mb)")("multipleFiles", false);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Import File");
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.FileUploadComponent, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatButton, i8.MatIconButton, i9.MatFormField, i9.MatLabel, i9.MatSuffix, i10.MatIcon, i11.MatInput, i12.MatDivider, i13.MatProgressBar, i14.MatCard, i14.MatCardContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPhpFilesDibExcel'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPhpFilesDibExcelComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPhpFilesDibExcelComponent", dibexPhpFilesDibExcelComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpFilesDibExcelComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-php-files-dib-excel', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5646 dibComponent=subcontainer   ><ng-container [dibPort]="'5646'" parentContainerName=dibexPhpFilesDibExcel  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5647 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 15px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5647'" ><mat-form-field  id=ci5650 dibComponent=autocomplete   style="  display:flex; flex-direction: column;  flex: 1 1 0%;  align-self: stretch;  "  item-alias=clientId   appearance=standard   ><mat-label>Select a Client</mat-label><input #auto5650trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input5650  [matAutocomplete]="auto5650"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list5650, auto5650trigger); input5650.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto5650=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list5650).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list5650).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5650.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><span  id=ci5651 dibComponent=span   style="  "  [innerHtml]="getHtml('span') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5649 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnWriteTable   style="  width:300px !important;   "  item-alias=btnWriteTable   [attr.aria-label]="'Write Table'"  type=button  ><span class=dibButtonCaption >Write Table</span></button><mat-divider  id=ci5653 dibComponent=divider   style="  align-self: stretch;  " ></mat-divider><span  id=ci5652 dibComponent=span   style="  "  [innerHtml]="getHtml('span1') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5648 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnVarious   style="  width:300px !important;   "  item-alias=btnVarious   [attr.aria-label]="'Do Various Tasks'"  type=button  ><span class=dibButtonCaption >Do Various Tasks</span></button><mat-divider  id=ci5654 dibComponent=divider   style="  align-self: stretch;  " ></mat-divider><!-- Set the last param to true to allow mutliple files to be uploaded simultaneously, or to false to only allow one file per fileUpload component --><file-upload id=ci5655 dibComponent=fileUpload   style="  "  item-alias=fileUpload   [containerName]="'dibexPhpFilesDibExcel'"   [itemId]="5655"   [primaryKeyData]="primaryKeys"   [fieldName]="'fileUpload'"  [parentContainer]="this"  [preview]="false"  [previewHeight]="''"  [previewWidth]="''"  [caption]="'Select a .xlsx file (<1Mb)'"  [multipleFiles]="false"></file-upload><button  mat-raised-button color=primary  id=ci5657 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnImportFile   style="  width:300px !important;   "  item-alias=btnImportFile   [attr.aria-label]="'Import File'"  type=button  ><span class=dibButtonCaption >Import File</span></button></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, divider_1.MatDividerModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPhpFilesDibExcelModule = class dibexPhpFilesDibExcelModule {
+                static entry = dibexPhpFilesDibExcelComponent;
+                static ɵfac = function dibexPhpFilesDibExcelModule_Factory(t) { return new (t || dibexPhpFilesDibExcelModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPhpFilesDibExcelModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPhpFilesDibExcelModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpFilesDibExcelModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPhpFilesDibExcelComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPhpFilesDibExcelModule, { declarations: [dibexPhpFilesDibExcelComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, divider_1.MatDividerModule] }); })();
+        }
+    };
+});

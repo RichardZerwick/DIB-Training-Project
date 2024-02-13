@@ -1,0 +1,344 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/autocomplete", "@angular/material/select", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, autocomplete_1, select_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, _c0, _c1, importsRequired, dibexSetValuesComponent, containerModules, fullDateTimeOptions, dibexSetValuesModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexSetValuesComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 23);
+    } }
+    function dibexSetValuesComponent_button_12_Template(rf, ctx) { if (rf & 1) {
+        const _r9 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 24);
+        i0.ɵɵlistener("click", function dibexSetValuesComponent_button_12_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(); const _r1 = i0.ɵɵreference(10); const _r2 = i0.ɵɵreference(11); ctx_r8.clearDropdown(ctx_r8.model.modelItems.clientId.formControl, $event, ctx_r8.lists.list6093, _r1); return i0.ɵɵresetView(_r2.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexSetValuesComponent_mat_progress_bar_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 23);
+    } }
+    function dibexSetValuesComponent_mat_option_16_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 25);
+    } if (rf & 2) {
+        const item_r10 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r10.id == "0"))("value", item_r10)("innerHtml", item_r10.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexSetValuesComponent_mat_option_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 26);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r11 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r11.id);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", item_r11.id_display_value, "");
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i10 = icon_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (select_1_1) {
+                select_1 = select_1_1;
+                i13 = select_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexSetValuesComponent = class dibexSetValuesComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 249, name: 'dibexSetValues', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list6093 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexSetValues&containerItemId=6093", null, null, 40);
+                    this.lists.list6096 = new shared_2.DibEnumList(this.translationService, this.eventService, 'fruit', ['coconut', 'orange', 'grape', 'kiwi'], false);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexSetValues');
+                    this.containerName = 'dibexSetValues'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 6093, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 6093 }, inputText: { itemId: 6095, type: 'text', fieldAlias: 'inputText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, fruit: { itemId: 6096, type: 'text', fieldAlias: 'fruit', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'fruit', default: '', dataType: 'text', contentType: 'text', changeUrl: false,
+                            enum: ['coconut', 'orange', 'grape', 'kiwi'] }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.$formGroup.addControl('inputText', this.model.modelItems.inputText.formControl);
+                    this.model.$formGroup.addControl('fruit', this.model.modelItems.fruit.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource6093 = this.lists.list6093.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange6093 = new Date().getTime();
+                    let previousUrlChange6093;
+                    let previousResponse6093;
+                    this.lists.list6093.items = rxjs_1.combineLatest([this.lists.list6093.updatedList$, itemsUpdateSource6093]).pipe(operators_1.tap(() => { this.lists.list6093.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange6093 - new Date().getTime()) / 1000;
+                        previousTimeChange6093 = new Date().getTime();
+                        previousUrlChange6093 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse6093 = response;
+                            this.lists.list6093.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list6093.items.subscribe(records => this.lists.list6093.lastItems = records);
+                    this.lists.list6093.multiSelected = [];
+                    this.lists.list6093.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list6093.updatedList$.next([]);
+                        self.lists.list6093.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list6093.refresh();
+                    }
+                    else {
+                        self.lists.list6093.searchForm.setValue('');
+                        self.lists.list6093.updatedList$.next(self.lists.list6093.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list6093.multiSelected);
+                    } };
+                    this.lists.list6093.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list6093.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list6093.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list6093.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list6093.multiSelected.push(value);
+                            }
+                        }
+                        lists.list6093.multiSelected = self.removeDuplicateIdsFromArray(lists.list6093.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list6093.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list6093.dispose();
+                    this.lists.list6096.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexSetValues', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexSetValues' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexSetValuesComponent_Factory(t) { return new (t || dibexSetValuesComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexSetValuesComponent, selectors: [["dibex-set-values"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 34, vars: 17, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6072", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px"], [3, "dibPort"], ["id", "ci6093", "dibComponent", "autocomplete", "item-alias", "clientId", "appearance", "standard", 2, "width", "250px !important", "display", "flex", "flex-direction", "column", "align-self", "stretch"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto6093trigger", "matAutocompleteTrigger", "input6093", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto6093", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci6096", "dibComponent", "selectEnum", "item-alias", "fruit", "appearance", "standard", 2, "display", "flex", "flex-direction", "column"], ["formControlName", "fruit"], [3, "value", 4, "ngFor", "ngForOf"], ["mat-raised-button", "", "color", "primary", "id", "ci6073", "dibComponent", "button", "type", "button", 3, "click"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci6074", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci6094", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["id", "ci6095", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText", "name", "inputText", "aria-label", "inputText"], ["mode", "indeterminate"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"], [3, "value"]], template: function dibexSetValuesComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexSetValuesComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexSetValuesComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "mat-card", 3)(4, "mat-card-content", 4);
+                        i0.ɵɵelementContainerStart(5, 5);
+                        i0.ɵɵelementStart(6, "mat-form-field", 6)(7, "mat-label");
+                        i0.ɵɵtext(8, "Select a Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(9, "input", 7, 8);
+                        i0.ɵɵtemplate(12, dibexSetValuesComponent_button_12_Template, 3, 0, "button", 9);
+                        i0.ɵɵelementStart(13, "mat-autocomplete", 10, 11);
+                        i0.ɵɵlistener("opened", function dibexSetValuesComponent_Template_mat_autocomplete_opened_13_listener() { return ctx.lists.list6093.refresh(); });
+                        i0.ɵɵtemplate(15, dibexSetValuesComponent_mat_progress_bar_15_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(16, dibexSetValuesComponent_mat_option_16_Template, 1, 5, "mat-option", 12);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(17, "mat-form-field", 13)(18, "mat-label");
+                        i0.ɵɵtext(19, "Select Fruit");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(20, "mat-select", 14);
+                        i0.ɵɵtemplate(21, dibexSetValuesComponent_mat_option_21_Template, 2, 2, "mat-option", 15);
+                        i0.ɵɵpipe(22, "async");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(23, "button", 16);
+                        i0.ɵɵlistener("click", function dibexSetValuesComponent_Template_button_click_23_listener($event) { return ctx.navigationService.goTo("dibexSetValuesOnForm", "main", "?record=first&dibexSetValuesOnForm.urlValue=set by url", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(24, "span", 17);
+                        i0.ɵɵtext(25, "Open Form and Set Value");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(26, "button", 18);
+                        i0.ɵɵlistener("click", function dibexSetValuesComponent_Template_button_click_26_listener($event) { return ctx.navigationService.goTo("dibexSetValuesOnForm", "main", "?record=new&dibexSetValuesOnForm.urlValue=set by url on new record", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(27, "span", 17);
+                        i0.ɵɵtext(28, "Open Form and Set Value on New Record");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(29, "mat-card", 19)(30, "mat-card-content", 20);
+                        i0.ɵɵelementContainerStart(31, 5);
+                        i0.ɵɵelementStart(32, "mat-form-field", 21);
+                        i0.ɵɵelement(33, "input", 22);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r4 = i0.ɵɵreference(14);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(15, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "6072");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matAutocomplete", _r4);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list6093.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list6093.lastItems);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(22, 13, ctx.lists.list6096.items));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵattribute("aria-label", "Open Form and Set Value");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Open Form and Set Value on New Record");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6094");
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatButton, i8.MatIconButton, i9.MatFormField, i9.MatLabel, i9.MatSuffix, i10.MatIcon, i11.MatInput, i12.MatProgressBar, i13.MatSelect, i14.MatCard, i14.MatCardContent, i3.AsyncPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexSetValues'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexSetValuesComponent.prototype, "reloadContainer", null);
+            exports_1("dibexSetValuesComponent", dibexSetValuesComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSetValuesComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-set-values', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><mat-card   style="  " id=ci6072 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;"  ><ng-container [dibPort]="'6072'" ><mat-form-field  id=ci6093 dibComponent=autocomplete   style="  width:250px !important;   display:flex; flex-direction: column;  align-self: stretch;  "  item-alias=clientId   appearance=standard   ><mat-label>Select a Client</mat-label><input #auto6093trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input6093  [matAutocomplete]="auto6093"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list6093, auto6093trigger); input6093.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto6093=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list6093).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list6093).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list6093.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><mat-form-field  id=ci6096 dibComponent=selectEnum   style="  display:flex; flex-direction: column;  "  item-alias=fruit   appearance=standard   ><mat-label>Select Fruit</mat-label><mat-select formControlName=fruit    ><mat-option *ngFor="let item of lists.list6096.items | async" [value]="item.id"> {{item.id_display_value}}</mat-option></mat-select></mat-form-field><button  mat-raised-button color=primary  id=ci6073 dibComponent=button   (click)="navigationService.goTo(  'dibexSetValuesOnForm',  'main',  '?record=first&dibexSetValuesOnForm.urlValue=set by url',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Open Form and Set Value'"  type=button  ><span class=dibButtonCaption >Open Form and Set Value</span></button><button  mat-raised-button color=primary  id=ci6074 dibComponent=button   (click)="navigationService.goTo(  'dibexSetValuesOnForm',  'main',  '?record=new&dibexSetValuesOnForm.urlValue=set by url on new record',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Open Form and Set Value on New Record'"  type=button  ><span class=dibButtonCaption >Open Form and Set Value on New Record</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci6094 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'6094'" ><mat-form-field id=ci6095 dibComponent=inputText   style="  "  appearance=standard  ><input   matInput  type=text   formControlName=inputText   name=inputText   aria-label=inputText  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, select_1.MatSelectModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexSetValuesModule = class dibexSetValuesModule {
+                static entry = dibexSetValuesComponent;
+                static ɵfac = function dibexSetValuesModule_Factory(t) { return new (t || dibexSetValuesModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexSetValuesModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexSetValuesModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSetValuesModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexSetValuesComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexSetValuesModule, { declarations: [dibexSetValuesComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, select_1.MatSelectModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,22 @@
+
+<div 
+    [ngStyle]="styleObject" 
+    [dibDisabled]  = "((setDisabled == undefined || setDisabled == false) ? false : true)"
+>
+    <mat-form-field style="flex: 0 0 auto; width:140px" appearance="standard">
+        <input  
+            matInput 
+            [matDatepicker]="datePicker999" 
+            startView="multi-year"  
+            [min]="1970-01-01" [max]="2100-12-31" 
+            name="datepicker" aria-label="datepicker"
+            [(value)]="data[itemName]"
+            (focus)="datePicker999.open()"  (blur)="datePicker999.close()"
+            (dateChange)="onDateChange($event)"
+        >
+        <mat-datepicker-toggle matSuffix [for]="datePicker999"></mat-datepicker-toggle>
+
+        <mat-datepicker #datePicker999></mat-datepicker>
+    </mat-form-field>
+
+</div>

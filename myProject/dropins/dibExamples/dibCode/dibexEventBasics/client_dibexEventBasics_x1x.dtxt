@@ -1,0 +1,1485 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "@angular/router", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/select", "@angular/material/progress-bar", "@angular/material/divider", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/cdk/text-field", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, router_1, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, select_1, progress_bar_1, divider_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, _c0, importsRequired, dibexEventBasicsComponent, containerModules, fullDateTimeOptions, dibexEventBasicsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexEventBasicsComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 147);
+    } }
+    function dibexEventBasicsComponent_mat_error_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_15_Template(rf, ctx) { if (rf & 1) {
+        const _r19 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 148);
+        i0.ɵɵlistener("click", function dibexEventBasicsComponent_mat_icon_15_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r19); const ctx_r18 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r18.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_16_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 149);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 150);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_error_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_error_23_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 80 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_24_Template(rf, ctx) { if (rf & 1) {
+        const _r21 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 148);
+        i0.ɵɵlistener("click", function dibexEventBasicsComponent_mat_icon_24_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r21); const ctx_r20 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r20.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 149);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 150);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_error_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 100 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_32_Template(rf, ctx) { if (rf & 1) {
+        const _r23 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 148);
+        i0.ɵɵlistener("click", function dibexEventBasicsComponent_mat_icon_32_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r23); const ctx_r22 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r22.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_33_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 149);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_icon_34_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 150);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexEventBasicsComponent_mat_progress_bar_225_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 147);
+    } }
+    function dibexEventBasicsComponent_mat_option_226_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "span", 153);
+    } if (rf & 2) {
+        const item_r24 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵproperty("innerHtml", item_r24.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexEventBasicsComponent_mat_option_226_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 151);
+        i0.ɵɵtemplate(1, dibexEventBasicsComponent_mat_option_226_span_1_Template, 1, 1, "span", 152);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r24 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r24);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", item_r24.id_display_value);
+    } }
+    function dibexEventBasicsComponent_mat_progress_bar_232_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 147);
+    } }
+    function dibexEventBasicsComponent_mat_option_233_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "span", 153);
+    } if (rf & 2) {
+        const item_r27 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵproperty("innerHtml", item_r27.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexEventBasicsComponent_mat_option_233_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 151);
+        i0.ɵɵtemplate(1, dibexEventBasicsComponent_mat_option_233_span_1_Template, 1, 1, "span", 152);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r27 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r27);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", item_r27.id_display_value);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i1 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i2 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
+                i3 = router_1_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i17 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i10 = icon_1_1;
+            },
+            function (select_1_1) {
+                select_1 = select_1_1;
+                i15 = select_1_1;
+            },
+            function (progress_bar_1_1) {
+                progress_bar_1 = progress_bar_1_1;
+                i14 = progress_bar_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i13 = divider_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i16_1) {
+                i16 = i16_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexEventBasicsComponent = class dibexEventBasicsComponent extends shared_1.BaseComponent {
+                crudService;
+                httpClient;
+                urlService;
+                router;
+                sd;
+                cd;
+                allClientData;
+                model;
+                clientData;
+                htmlContent = '';
+                view = { container: { id: 218, name: 'dibexEventBasics', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5420'] }, dropin: 'form', activeFilter: null, configs: {}, keepInMemory: false }, items: { spanTableEventMsg: { 'disabled': false, 'visible': true, 'class': null, 'style': null }, }, primaryKeys: ["id"], recordStatus: 'create', debug: false, debugItem: false };
+                constructor(injector, crudService, httpClient, urlService, router, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.crudService = crudService;
+                    this.httpClient = httpClient;
+                    this.urlService = urlService;
+                    this.router = router;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5497 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexEventBasics&containerItemId=5497", null, null, 40);
+                    this.lists.list5498 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexEventBasics&containerItemId=5498", 'dibexEventBasics_clientContactId', null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexEventBasics');
+                    this.containerName = 'dibexEventBasics'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputDateTime: { itemId: 5431, type: 'text', fieldAlias: 'inputDateTime', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, id: { itemId: 5468, type: 'number', fieldAlias: 'id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required], updateOn: 'blur' }), create: false, update: false, required: true, itemAlias: 'id', default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, name: { itemId: 5469, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: true }, { validators: [forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(80)], updateOn: 'blur' }), create: false, update: false, required: true, itemAlias: 'name', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, textArea: { itemId: 5486, type: 'text', fieldAlias: 'textArea', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'multilinetext', changeUrl: false }, clientId: { itemId: 5497, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5497 }, clientContactId: { itemId: 5498, type: 'select', fieldAlias: 'clientContactId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5498 }, progressValue: { itemId: 5510, type: 'number', fieldAlias: 'progressValue', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, SelectTextEvent: { itemId: 5690, type: 'text', fieldAlias: 'SelectTextEvent', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, CopyEvent: { itemId: 5692, type: 'text', fieldAlias: 'CopyEvent', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, setMyValue: { itemId: 5705, type: 'text', fieldAlias: 'setMyValue', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, phone: { itemId: 6214, type: 'text', fieldAlias: 'phone', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.maxLength(100)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputDateTime', this.model.modelItems.inputDateTime.formControl);
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.addControl('textArea', this.model.modelItems.textArea.formControl);
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.$formGroup.addControl('clientContactId', this.model.modelItems.clientContactId.formControl);
+                    this.model.$formGroup.addControl('progressValue', this.model.modelItems.progressValue.formControl);
+                    this.model.$formGroup.addControl('SelectTextEvent', this.model.modelItems.SelectTextEvent.formControl);
+                    this.model.$formGroup.addControl('CopyEvent', this.model.modelItems.CopyEvent.formControl);
+                    this.model.$formGroup.addControl('setMyValue', this.model.modelItems.setMyValue.formControl);
+                    this.model.$formGroup.addControl('phone', this.model.modelItems.phone.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'modelChange'); });
+                    super.ngOnInit();
+                    this.setInnerHtml('spanSubmitUrl', `<b>click -> shared.action.set-value?inputDateTime=@&#123;dibDateTime&#125;-@&#123;value_self_name&#125;</b>`);
+                    this.setInnerHtml('spanContEvent', `This message should hardly be visible - it is replaced by an action triggered on the afterViewInit container event.`);
+                    this.setInnerHtml('spanTableEventMsg', `Add any non-alphabetical characters to the client's name above (space is allowed),<br>and save the record.
+<br>The table event will block it and respond, and make this message red.
+<br>Note, <b>Enable Ts Vars</b> on Pg2 in the Designer is set for this
+<br>item (<b>spanTableEventMsg</b>) to enable the style change action.`);
+                    this.setInnerHtml('spanContainerEventServerInfo', `After a successful update of a record above, the 'after update' container event will return a message.`);
+                    this.setInnerHtml('spanSubmitUrl1', `<b>afterViewInit -> /dropins/dibExamples/Events/setHtml</b>`);
+                    this.setInnerHtml('spanSubmitUrl2', `<b>au -> see Table Events on Designer (Pg1)<br>see Table Event PHP code in /dropins/dibExamples/components/tableEvents/test_client.php</b>`);
+                    this.setInnerHtml('spanSubmitUrl3', `<b>after update -> /dropins/dibExamples/ContainerEvents/afterUpdate</b>`);
+                    this.setInnerHtml('spanItemEvent', `<i>One or more actions can be triggered by user interaction on an item, eg <b>click</b> and/or <b>change</b>.</i>`);
+                    this.setInnerHtml('spanContainerEvent', `<i>Triggered in generated client-side code (browser) (eg <b>beforeLoad</b>) and can execute client- or server-side code</i>`);
+                    this.setInnerHtml('spanTableEvent', `<i>Table event triggers (eg <b>au,bc</b> = <b>after update</b> and <b>before create</b>) occur when changes are made to data on containers linked to tables. The trigger occurs on the server and server-side code is executed. Note, <b>all</b> containers based on the table with table-events are affected. The PHP code can cancel the operation and/or return messages and actions.</i>`);
+                    this.setInnerHtml('spanContainerEventServer', `<i>Triggered in generated server-side code (PHP) (eg <b>before delete</b>) and calls server-side code, which in turn can send client-side actions to the browser.
+<br>Note, server-side trigger names always consist of more than one word, eg <b>after update</b> or <b>before delete</b> (as opposed eg. <b>mouseover</b>).
+<br>The PHP code can cancel the operation and/or return messages and actions.</i>`);
+                    this.setInnerHtml('spanSubmitUrl4', `<b>click -> shared.action.append-value?textArea=xxx</b>
+<br><b>click -> /dropins/dibExamples/Events/countClients</b>`);
+                    this.setInnerHtml('spanRefreshItemSelects', `<i>The select component is easier to use than autocompletes, but it does not refresh its list with each use, has no search/filter feature, and has a limited list.
+<br>When you select a Client, a change event refreshes the Client Contact list.</i>`);
+                    this.setInnerHtml('spanSubmitUrl6', `<b>click -> refresh the Docs container above</b>`);
+                    this.setInnerHtml('spanTableEvent1', `<i>Target items can be reloaded. This can be dropdowns, subcontainers or port items
+<br>This is often needed when dropdowns or containers have filters that are affected by selected values</i>`);
+                    this.setInnerHtml('spanResponseQueue', `<i>Events that calls server-side actions from the browser wait 30 seconds for a response before giving up and displaying an error message.
+<br>Queues provide for longer running actions, which normally involves a progress-bar and/or progress updates.
+<br>The <b>Response Type</b> below is 1200 which tells the browser to poll the server each 1200 ms for any pending actions, like updating the progress bar.</i>`);
+                    this.setInnerHtml('spanSubmitUrl7', `<b>click -> /dropins/dibExamples/Events/btnHelloWorld_click</b>`);
+                    this.setInnerHtml('spanResponseActions', `<i>The default type used for client-side or server-side actions that return messages and/or actions (JSON response).</i>`);
+                    this.setInnerHtml('spanResponseNewTab', `<b>new-tab</b> display returned HTML in a new browser tab.`);
+                    this.setInnerHtml('spanSubmitUrl8', `<b>click -> /dropins/dibExamples/Events/redirectToHoliday</b>`);
+                    this.setInnerHtml('spanResponseRedirect', `<i>Used for calls to the server that must expect a file for downloading in return</i>`);
+                    this.setInnerHtml('spanSubmitUrl9', `<b>click -> /dropins/dibExamples/Events/longRunningCode</b>`);
+                    this.setInnerHtml('spanSubmitUrl10', `<b>change-> Refresh dibexEventBasics.clientContactId</b>`);
+                    this.setInnerHtml('spanSubmitUrl11', `<b>click -> /dropins/dibExamples/Events/getHtml</b>`);
+                    this.setInnerHtml('spanResponseWindow', `<b>window</b> - display HTML in a popup window, using the following settings:<br><b>scrollbars=yes, resizable=yes, status=yes, location=no, toolbar=yes, menubar=no, width=900, height=800</b>`);
+                    this.setInnerHtml('spanResponseBasicWindow', `<b>basic-window</b> - display HTML in a more basic popup window with these settings:<br><b>scrollbars=no, resizable=no, status=no, location=no, toolbar=no, menubar=no, width=600, height=300, left=100, top=100</b>`);
+                    this.setInnerHtml('spanConfirmMsg', `<i>Ask the user for confirmation before executing an action.
+<br>By default 'Yes' and 'Cancel' captions are displayed, but they are configurable using the event fields.</i>`);
+                    this.setInnerHtml('spanSubmitUrl12', `<b>click -> /dropins/dibExamples/Events/prank</b>`);
+                    this.setInnerHtml('spanSubmitUrl13', `<b>click -> dibexPopupForm (with Confirmation Message)</b>`);
+                    this.setInnerHtml('spanPort', `<i>Ports can be activated with 'Open Container in Port' under Item Details in the Designer,<br>but if specified as an Item Event instead, the action can be coupled with other event options
+<br>like starting a queue, a confirmation message, or opening of multiple containers.</i>`);
+                    this.setInnerHtml('spanResponseRedirect1', `<i>In case you need to redirect to another site completely...</i>`);
+                    this.setInnerHtml('spanSubmitUrl14', `<b>click -> /dropins/dibExamples/Events/createDocx</b>`);
+                    this.setInnerHtml('spanSubmitUrl15', `<b>click -> shared.action.open-url?url=https://www.tripadvisor.com/Tourism-g12-Antarctica-Vacations.html</b>`);
+                    this.setInnerHtml('spanSubmitUrl', `<b>click -> shared.action.set-value?inputDateTime=@&#123;dibDateTime&#125;-@&#123;value_self_name&#125;</b>`);
+                    this.setInnerHtml('spanContEvent', `This message should hardly be visible - it is replaced by an action triggered on the afterViewInit container event.`);
+                    this.setInnerHtml('spanTableEventMsg', `Add any non-alphabetical characters to the client's name above (space is allowed),<br>and save the record.
+<br>The table event will block it and respond, and make this message red.
+<br>Note, <b>Enable Ts Vars</b> on Pg2 in the Designer is set for this
+<br>item (<b>spanTableEventMsg</b>) to enable the style change action.`);
+                    this.setInnerHtml('spanContainerEventServerInfo', `After a successful update of a record above, the 'after update' container event will return a message.`);
+                    this.setInnerHtml('spanSubmitUrl1', `<b>afterViewInit -> /dropins/dibExamples/Events/setHtml</b>`);
+                    this.setInnerHtml('spanSubmitUrl2', `<b>au -> see Table Events on Designer (Pg1)<br>see Table Event PHP code in /dropins/dibExamples/components/tableEvents/test_client.php</b>`);
+                    this.setInnerHtml('spanSubmitUrl3', `<b>after update -> /dropins/dibExamples/ContainerEvents/afterUpdate</b>`);
+                    this.setInnerHtml('spanItemEvent', `<i>One or more actions can be triggered by user interaction on an item, eg <b>click</b> and/or <b>change</b>.</i>`);
+                    this.setInnerHtml('spanContainerEvent', `<i>Triggered in generated client-side code (browser) (eg <b>beforeLoad</b>) and can execute client- or server-side code</i>`);
+                    this.setInnerHtml('spanTableEvent', `<i>Table event triggers (eg <b>au,bc</b> = <b>after update</b> and <b>before create</b>) occur when changes are made to data on containers linked to tables. The trigger occurs on the server and server-side code is executed. Note, <b>all</b> containers based on the table with table-events are affected. The PHP code can cancel the operation and/or return messages and actions.</i>`);
+                    this.setInnerHtml('spanContainerEventServer', `<i>Triggered in generated server-side code (PHP) (eg <b>before delete</b>) and calls server-side code, which in turn can send client-side actions to the browser.
+<br>Note, server-side trigger names always consist of more than one word, eg <b>after update</b> or <b>before delete</b> (as opposed eg. <b>mouseover</b>).
+<br>The PHP code can cancel the operation and/or return messages and actions.</i>`);
+                    this.setInnerHtml('spanSubmitUrl4', `<b>click -> shared.action.append-value?textArea=xxx</b>
+<br><b>click -> /dropins/dibExamples/Events/countClients</b>`);
+                    this.setInnerHtml('spanRefreshItemSelects', `<i>The select component is easier to use than autocompletes, but it does not refresh its list with each use, has no search/filter feature, and has a limited list.
+<br>When you select a Client, a change event refreshes the Client Contact list.</i>`);
+                    this.setInnerHtml('spanSubmitUrl6', `<b>click -> refresh the Docs container above</b>`);
+                    this.setInnerHtml('spanTableEvent1', `<i>Target items can be reloaded. This can be dropdowns, subcontainers or port items
+<br>This is often needed when dropdowns or containers have filters that are affected by selected values</i>`);
+                    this.setInnerHtml('spanResponseQueue', `<i>Events that calls server-side actions from the browser wait 30 seconds for a response before giving up and displaying an error message.
+<br>Queues provide for longer running actions, which normally involves a progress-bar and/or progress updates.
+<br>The <b>Response Type</b> below is 1200 which tells the browser to poll the server each 1200 ms for any pending actions, like updating the progress bar.</i>`);
+                    this.setInnerHtml('spanSubmitUrl7', `<b>click -> /dropins/dibExamples/Events/btnHelloWorld_click</b>`);
+                    this.setInnerHtml('spanResponseActions', `<i>The default type used for client-side or server-side actions that return messages and/or actions (JSON response).</i>`);
+                    this.setInnerHtml('spanResponseNewTab', `<b>new-tab</b> display returned HTML in a new browser tab.`);
+                    this.setInnerHtml('spanSubmitUrl8', `<b>click -> /dropins/dibExamples/Events/redirectToHoliday</b>`);
+                    this.setInnerHtml('spanResponseRedirect', `<i>Used for calls to the server that must expect a file for downloading in return</i>`);
+                    this.setInnerHtml('spanSubmitUrl9', `<b>click -> /dropins/dibExamples/Events/longRunningCode</b>`);
+                    this.setInnerHtml('spanSubmitUrl10', `<b>change-> Refresh dibexEventBasics.clientContactId</b>`);
+                    this.setInnerHtml('spanSubmitUrl11', `<b>click -> /dropins/dibExamples/Events/getHtml</b>`);
+                    this.setInnerHtml('spanResponseWindow', `<b>window</b> - display HTML in a popup window, using the following settings:<br><b>scrollbars=yes, resizable=yes, status=yes, location=no, toolbar=yes, menubar=no, width=900, height=800</b>`);
+                    this.setInnerHtml('spanResponseBasicWindow', `<b>basic-window</b> - display HTML in a more basic popup window with these settings:<br><b>scrollbars=no, resizable=no, status=no, location=no, toolbar=no, menubar=no, width=600, height=300, left=100, top=100</b>`);
+                    this.setInnerHtml('spanConfirmMsg', `<i>Ask the user for confirmation before executing an action.
+<br>By default 'Yes' and 'Cancel' captions are displayed, but they are configurable using the event fields.</i>`);
+                    this.setInnerHtml('spanSubmitUrl12', `<b>click -> /dropins/dibExamples/Events/prank</b>`);
+                    this.setInnerHtml('spanSubmitUrl13', `<b>click -> dibexPopupForm (with Confirmation Message)</b>`);
+                    this.setInnerHtml('spanPort', `<i>Ports can be activated with 'Open Container in Port' under Item Details in the Designer,<br>but if specified as an Item Event instead, the action can be coupled with other event options
+<br>like starting a queue, a confirmation message, or opening of multiple containers.</i>`);
+                    this.setInnerHtml('spanResponseRedirect1', `<i>In case you need to redirect to another site completely...</i>`);
+                    this.setInnerHtml('spanSubmitUrl14', `<b>click -> /dropins/dibExamples/Events/createDocx</b>`);
+                    this.setInnerHtml('spanSubmitUrl15', `<b>click -> shared.action.open-url?url=https://www.tripadvisor.com/Tourism-g12-Antarctica-Vacations.html</b>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "dibexEventBasics", actionType: "afterViewInit", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/setHtml", itemAlias: "", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { containerEventId: 'ce13-dib' });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "dibexEventBasics", actionType: "after update", responseType: 'actions', submitUrl: "/dropins/dibExamples/ContainerEvents/afterUpdate", itemAlias: "", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { containerEventId: 'ce14-dib' });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "SelectTextEvent", actionType: "mouseout", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/eventTrigger", itemAlias: "SelectTextEvent", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie299-dib', itemId: '5690', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "MouseoverEvent", actionType: "mouseover", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/eventTrigger", itemAlias: "MouseoverEvent", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie300-dib', itemId: '5691', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "CopyEvent", actionType: "copy", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/eventTrigger", itemAlias: "CopyEvent", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie301-dib', itemId: '5692', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnNextAction", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/btnNextAction", itemAlias: "btnNextAction", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie302-dib', itemId: '5695', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnPopupYesNo", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/btnPopupYN", itemAlias: "btnPopupYesNo", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie303-dib', itemId: '5701', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnPrompt", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/promptQuestion", itemAlias: "btnPrompt", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie304-dib', itemId: '5702', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnHelloWorldHidden", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "btnHelloWorldHidden", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie305-dib', itemId: '5703', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "hiddenPromptButton", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/hiddenPromptButton", itemAlias: "hiddenPromptButton", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie306-dib', itemId: '5704', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnTimeName", actionType: "click", responseType: 'actions', submitUrl: "shared.action.set-value?inputDateTime=@{dibDateTime}-@{value_self_name}", itemAlias: "btnTimeName", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie261-dib', itemId: '5430', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnActionCountClients", actionType: "click", responseType: 'actions', submitUrl: "shared.action.append-value?textArea=xxx", itemAlias: "btnActionCountClients", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie262-dib', itemId: '5485', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnActionCountClients", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/countClients", itemAlias: "btnActionCountClients", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie263-dib', itemId: '5485', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnStartQueueFromClient", actionType: "click", responseType: '1200', submitUrl: "/dropins/dibExamples/Queue/startQueueFromClient", itemAlias: "btnStartQueueFromClient", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie266-dib', itemId: '5508', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseNewTab", actionType: "click", responseType: 'new-tab', submitUrl: "/dropins/dibExamples/Events/getHtml", itemAlias: "btnResponseNewTab", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie268-dib', itemId: '5517', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseRedirect", actionType: "click", responseType: 'redirect', submitUrl: "/dropins/dibExamples/Events/createDocx", itemAlias: "btnResponseRedirect", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie269-dib', itemId: '5521', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseBasicWindow", actionType: "click", responseType: 'basic-window', submitUrl: "/dropins/dibExamples/Events/getHtml", itemAlias: "btnResponseBasicWindow", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie270-dib', itemId: '5525', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseWindow", actionType: "click", responseType: 'window', submitUrl: "/dropins/dibExamples/Events/getHtml", itemAlias: "btnResponseWindow", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie271-dib', itemId: '5526', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnConfirmMsg", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/prank", itemAlias: "btnConfirmMsg", waitForCompletion: false, containerName: "dibexEventBasics", continue() { return this.messagingService.confirm({ message: this.translate('dibexEventBasics.btnConfirmMsg.click', `This may delete your Dropinbase installation completely :)Continue?`), okText: this.translate('dibexEventBasics.btnConfirmMsg.click.okText', `Go for it`), cancelText: this.translate('dibexEventBasics.btnConfirmMsg.click.cancelText', `Not this time`) }); },
+                        handlers: [] }, this.clientData, { itemEventId: 'ie272-dib', itemId: '5534', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnPort", actionType: "click", responseType: 'actions', submitUrl: null, itemAlias: "btnPort", waitForCompletion: false, containerName: "dibexEventBasics", continue() { return this.messagingService.confirm({ message: this.translate('dibexEventBasics.btnPort.click', `A little message. Continue?`), okText: this.translate('dibexEventBasics.btnPort.click.okText', `Yes`), cancelText: this.translate('dibexEventBasics.btnPort.click.cancelText', `Cancel`) }); },
+                        handlers: [() => new Promise((resolve, reject) => { return this.navigationService.goTo('dibexPopupForm', '', '', { changeUrl: true, originContainer: this }); }),] }, this.clientData, { itemEventId: 'ie273-dib', itemId: '5539', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnRefreshSubcDocs", actionType: "click", responseType: 'actions', submitUrl: null, itemAlias: "btnRefreshSubcDocs", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [() => new Promise((resolve, reject) => { this.containerService.bufferContainerReloading.next({ port: '5496', containerName: 'dibexEventBasics' }); return resolve(); }),] }, this.clientData, { itemEventId: 'ie264-dib', itemId: '5496', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseActions1", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "btnResponseActions1", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie307-dib', itemId: '5706', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseActions", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/helloWorld", itemAlias: "btnResponseActions", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie265-dib', itemId: '5506', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnMoreInfoQueue", actionType: "click", responseType: 'actions', submitUrl: "shared.action.open-url?target=blank&url=/nav/dibexQueue/own", itemAlias: "btnMoreInfoQueue", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie267-dib', itemId: '5513', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseRedirectHoliday", actionType: "click", responseType: 'redirect', submitUrl: "/dropins/dibExamples/Events/redirectToHoliday", itemAlias: "btnResponseRedirectHoliday", waitForCompletion: false, containerName: "dibexEventBasics", continue() { return this.messagingService.confirm({ message: this.translate('dibexEventBasics.btnResponseRedirectHoliday.click', `Click browser&apos;s back button to return :)`), okText: this.translate('dibexEventBasics.btnResponseRedirectHoliday.click.okText', `Yes`), cancelText: this.translate('dibexEventBasics.btnResponseRedirectHoliday.click.cancelText', `Cancel`) }); },
+                        handlers: [] }, this.clientData, { itemEventId: 'ie276-dib', itemId: '5582', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnResponseRedirectHoliday1", actionType: "click", responseType: 'redirect', submitUrl: "shared.action.open-url?url=https://www.tripadvisor.com/Tourism-g12-Antarctica-Vacations.html",
+                        itemAlias: "btnResponseRedirectHoliday1", waitForCompletion: false, containerName: "dibexEventBasics", handlers: [] }, this.clientData, { itemEventId: 'ie277-dib', itemId: '5585', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5497 = this.lists.list5497.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5497 = new Date().getTime();
+                    let previousUrlChange5497;
+                    let previousResponse5497;
+                    this.lists.list5497.items = rxjs_1.combineLatest([this.lists.list5497.updatedList$, itemsUpdateSource5497]).pipe(operators_1.tap(() => { this.lists.list5497.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5497 - new Date().getTime()) / 1000;
+                        previousTimeChange5497 = new Date().getTime();
+                        previousUrlChange5497 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5497 = response;
+                            this.lists.list5497.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5497.items.subscribe(records => this.lists.list5497.lastItems = records);
+                    this.lists.list5497.multiSelected = [];
+                    this.lists.list5497.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5497.updatedList$.next([]);
+                        self.lists.list5497.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5497.refresh();
+                    }
+                    else {
+                        self.lists.list5497.searchForm.setValue('');
+                        self.lists.list5497.updatedList$.next(self.lists.list5497.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list5497.multiSelected);
+                    } };
+                    this.lists.list5497.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5497.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5497.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5497.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5497.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5497.multiSelected = self.removeDuplicateIdsFromArray(lists.list5497.multiSelected);
+                    };
+                    const itemsUpdateSource5498 = this.lists.list5498.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5498 = new Date().getTime();
+                    let previousUrlChange5498;
+                    let previousResponse5498;
+                    this.lists.list5498.items = rxjs_1.combineLatest([this.lists.list5498.updatedList$, itemsUpdateSource5498]).pipe(operators_1.tap(() => { this.lists.list5498.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5498 - new Date().getTime()) / 1000;
+                        previousTimeChange5498 = new Date().getTime();
+                        previousUrlChange5498 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5498 = response;
+                            this.lists.list5498.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5498.items.subscribe(records => this.lists.list5498.lastItems = records);
+                    this.lists.list5498.multiSelected = [];
+                    this.lists.list5498.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5498.updatedList$.next([]);
+                        self.lists.list5498.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5498.refresh();
+                    }
+                    else {
+                        self.lists.list5498.searchForm.setValue('');
+                        self.lists.list5498.updatedList$.next(self.lists.list5498.multiSelected);
+                        self.model.modelItems.clientContactId.formControl.setValue(self.lists.list5498.multiSelected);
+                    } };
+                    this.lists.list5498.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5498.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5498.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5498.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5498.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5498.multiSelected = self.removeDuplicateIdsFromArray(lists.list5498.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'onInit');
+                    this.canRead = true;
+                    this.canUpdate = true;
+                    this.canCreate = true;
+                    this.eventService.on(`reload${this.containerName}`).subscribe(_ => { });
+                    this.setup();
+                    this.reloadContainer();
+                }
+                setup() { this.setupPrimaryKeys(); this.setupDelete(); this.setupSubmit(); }
+                setupSubmit() {
+                    this.submit$ = new rxjs_1.Subject();
+                    this.submit$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'beforeSubmit'); this.busy = true; }), operators_1.switchMap(() => this.crudService.update(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, model: this.model, formGroup: this.model.$formGroup }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => {
+                        if (response.message == "No changes were made to existing database values.") {
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        if (response.success) {
+                            if (this.view.recordStatus == 'create') {
+                                this.primaryKeys$.next(response.records);
+                                this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'create');
+                            }
+                            else {
+                                this.primaryKeys$.next(response.records);
+                                this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'update');
+                            }
+                            this.model.$formGroup.markAsPristine();
+                            this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'onSubmit');
+                        }
+                        else {
+                            this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'onSubmitFailed');
+                            if (this.view.recordStatus == 'create') {
+                                this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'createFailed');
+                            }
+                            else {
+                                this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'updateFailed');
+                            }
+                        }
+                    })).subscribe();
+                }
+                onSubmit() { this.submit$.next(null); }
+                setupDelete() { this.delete$ = new rxjs_1.Subject(); this.delete$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'beforeDelete'); this.busy = true; }), operators_1.switchMap(() => this.crudService.delete(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => { if (response.success) {
+                    this.primaryKeys$.next(response.records);
+                    this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'delete');
+                } })).subscribe(); }
+                deleteRecord() { this.messagingService.confirm({ title: 'Delete Record', message: 'Are you sure you want to delete?', okText: 'Yes', cancelText: 'Cancel' }).then(result => { if (result !== false) {
+                    this.delete$.next(null);
+                } }); }
+                setupPrimaryKeys() {
+                    this.primaryKeys$ = new rxjs_1.Subject();
+                    this.position$ = new rxjs_1.Subject();
+                    this.primaryKeys$
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(primaryKeys => {
+                        this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'beforeLoad');
+                        this.view.recordStatus = 'create';
+                        if (!!primaryKeys && Object.keys(primaryKeys).length > 0) {
+                            this.view.recordStatus = 'update';
+                        }
+                        this.primaryKeys = primaryKeys;
+                        this.updateUrl();
+                        this.busy = true;
+                    }), operators_1.switchMap(primaryKeys => {
+                        if (this.canCreate || (!!primaryKeys === true && Object.keys(primaryKeys).length > 0)) {
+                            return this.crudService.read(this.model.crudUrl, this.view.container.name, { primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, canCreate: this.canCreate }).pipe(operators_1.catchError((err) => { this.busy = false; return rxjs_1.of({ success: false, message: `${err}` }); }), operators_1.finalize(() => { }));
+                        }
+                        this.busy = false;
+                        return rxjs_1.empty();
+                    }), operators_1.switchMap(response => {
+                        this.busy = false;
+                        if (response.success) {
+                            this.model.$formGroup.reset();
+                            if (Array.isArray(response.records) && response.records.length > 0) {
+                                response.records = response.records[0];
+                            }
+                            if (this.view.recordStatus == 'update' && Array.isArray(response.records) && this.view.container.activeFilter !== null && this.view.container.activeFilter.length > 0) {
+                                if (this.canCreate) {
+                                    this.addRecord();
+                                }
+                            }
+                            if (response.records.inputDateTime !== undefined) {
+                                this.setValue('inputDateTime', response.records.inputDateTime);
+                            }
+                            if (response.records.id !== undefined) {
+                                this.setValue('id', response.records.id);
+                            }
+                            if (response.records.name !== undefined) {
+                                this.setValue('name', response.records.name);
+                            }
+                            if (response.records.textArea !== undefined) {
+                                this.setValue('textArea', response.records.textArea);
+                            }
+                            if (response.records.clientId !== undefined) {
+                                if (response.records.clientId == null) {
+                                    this.setValue('clientId', null);
+                                }
+                                else {
+                                    this.lists[`list5497`].multiSelected = [];
+                                    if (response.records.clientId_display_value == undefined) {
+                                        this.setValue('clientId', response.records.clientId);
+                                        if (typeof response.records.clientId == 'object' && response.records.clientId !== null) {
+                                            this.lists[`list5497`].multiSelected = response.records.clientId;
+                                        }
+                                    }
+                                    else {
+                                        this.setValue('clientId', { 'id': response.records.clientId, 'id_display_value': response.records.clientId_display_value });
+                                    }
+                                }
+                            }
+                            if (response.records.clientContactId !== undefined) {
+                                if (response.records.clientContactId == null) {
+                                    this.setValue('clientContactId', null);
+                                }
+                                else {
+                                    this.lists[`list5498`].multiSelected = [];
+                                    if (response.records.clientContactId_display_value == undefined) {
+                                        this.setValue('clientContactId', response.records.clientContactId);
+                                        if (typeof response.records.clientContactId == 'object' && response.records.clientContactId !== null) {
+                                            this.lists[`list5498`].multiSelected = response.records.clientContactId;
+                                        }
+                                    }
+                                    else {
+                                        this.setValue('clientContactId', { 'id': response.records.clientContactId, 'id_display_value': response.records.clientContactId_display_value });
+                                    }
+                                }
+                            }
+                            if (response.records.progressValue !== undefined) {
+                                this.setValue('progressValue', response.records.progressValue);
+                            }
+                            if (response.records.SelectTextEvent !== undefined) {
+                                this.setValue('SelectTextEvent', response.records.SelectTextEvent);
+                            }
+                            if (response.records.CopyEvent !== undefined) {
+                                this.setValue('CopyEvent', response.records.CopyEvent);
+                            }
+                            if (response.records.setMyValue !== undefined) {
+                                this.setValue('setMyValue', response.records.setMyValue);
+                            }
+                            if (response.records.phone !== undefined) {
+                                this.setValue('phone', response.records.phone);
+                            }
+                            this.model.updateFormDefaults(this);
+                            this.portService.setUrlDefaults(false, this);
+                            Object.keys(this.model.$formGroup.controls).forEach(field => { if (this.model.modelItems[field][this.view.recordStatus]) {
+                                this.model.$formGroup.controls[field].enable();
+                            }
+                            else {
+                                this.model.$formGroup.controls[field].disable();
+                            } });
+                            this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'load');
+                            this.reloadSubcontainers();
+                            return this.paging();
+                        }
+                    }), operators_1.tap((response) => { window.dispatchEvent(new Event('resize')); this.pagingInfo = response.records; if (response.records !== null && response.records.current !== null && response.records.current !== undefined)
+                        this.position$.next(response.records.current.current); })).subscribe();
+                }
+                addRecord() {
+                    if (this.containerNameOpenedByUrl()) {
+                        const currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!!currentUrlInfo.params !== false) {
+                            Object.keys(this.primaryKeys).forEach((key, value) => { delete currentUrlInfo.params[`primary_${key}`]; });
+                            currentUrlInfo.params['record'] = 'new';
+                        }
+                        else {
+                            currentUrlInfo.params = { record: 'new' };
+                        }
+                        Object.keys(currentUrlInfo.params).forEach((value) => { if (value.indexOf('primary_') !== -1) {
+                            delete currentUrlInfo.params[value];
+                        } });
+                        this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, currentUrlInfo.params);
+                    }
+                    this.primaryKeys$.next(null);
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list5497.setupModel(this.model.modelItems.clientId.formControl); this.lists.list5498.setupModel(this.model.modelItems.clientContactId.formControl); window.dispatchEvent(new Event('resize')); this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'afterViewInit'); }
+                ngOnDestroy() {
+                    this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'onDestroy');
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list5497.dispose();
+                    this.lists.list5498.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                updateUrl() {
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    if (!!this.primaryKeys
+                        && currentUrlInfo.containerName == this.view.container.name
+                        && Object.keys(this.primaryKeys).length > 0) {
+                        let urlKeys = {};
+                        if (!!currentUrlInfo.params) {
+                            urlKeys = currentUrlInfo.params;
+                        }
+                        Object.keys(this.primaryKeys).forEach((key, value) => { delete urlKeys['record']; urlKeys[`primary_${key}`] = this.primaryKeys[key]; });
+                        currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!this.navigationService.paramsEqual(urlKeys, currentUrlInfo.params)) {
+                            this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, urlKeys, { changeUrl: true, originContainer: this });
+                        }
+                    }
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    this.actionService.handle(this.containerActionReference(), 'dibexEventBasics', 'reloadContainer');
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexEventBasics', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexEventBasics' });
+                    this.onLoad();
+                }
+                onLoad() {
+                    if (!this.canRead && !this.canCreate)
+                        return;
+                    if (!this.canRead && this.canCreate) {
+                        this.addRecord();
+                        return;
+                    }
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    let primaryKeys = {};
+                    if (currentUrlInfo.containerName == this.view.container.name) {
+                        this.view.primaryKeys.forEach(key => { if (!!currentUrlInfo.params[`primary_${key}`]) {
+                            primaryKeys[key] = currentUrlInfo.params[`primary_${key}`];
+                        } });
+                        if (Object.keys(primaryKeys).length > 0) {
+                            this.primaryKeys$.next(primaryKeys);
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.New) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.primaryKeys$.next(null); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.First) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.First); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.Last) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.Last); });
+                            return;
+                        }
+                    }
+                    if (Object.keys(primaryKeys).length == 0) {
+                        this.recordPosition(1).subscribe((response) => { this.primaryKeys$.next(response.records); });
+                        return;
+                    }
+                    this.primaryKeys$.next(primaryKeys);
+                }
+                goToRecord(formPosition) { if (!!this.pagingInfo && !!this.pagingInfo[formPosition])
+                    this.primaryKeys$.next(this.pagingInfo[formPosition]); }
+                recordPosition(position) { return this.crudService.recordPosition(`dibexEventBasics`, position, { clientData: this.clientData, activeFilter: this.view.container.activeFilter, }); }
+                paging() {
+                    if (!this.canRead)
+                        return rxjs_1.of({ records: { current: { current: 1 } } });
+                    if (!!this.primaryKeys == true && Object.keys(this.primaryKeys).length > 0) {
+                        return this.crudService.recordInfo('dibexEventBasics', { primaryKeys: this.primaryKeys, activeFilter: this.view.container.activeFilter, clientData: this.clientData });
+                    }
+                    else {
+                        return this.recordPosition(1).pipe(operators_1.switchMap((result) => this.crudService.recordInfo('dibexEventBasics', { primaryKeys: result.records, activeFilter: this.view.container.activeFilter, clientData: this.clientData }).pipe(operators_1.map((response) => {
+                            if (response.records == null) {
+                                return { records: { current: { current: 1 } } };
+                            }
+                            return response;
+                        }))));
+                    }
+                }
+                static ɵfac = function dibexEventBasicsComponent_Factory(t) { return new (t || dibexEventBasicsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.CrudService), i0.ɵɵdirectiveInject(i2.HttpClient), i0.ɵɵdirectiveInject(i1.UrlService), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i1.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexEventBasicsComponent, selectors: [["dibex-event-basics"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 383, vars: 214, consts: [["mode", "indeterminate", 4, "ngIf"], ["containerName", "dibexEventBasics", 2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5420", "dibComponent", "subcontainer", 2, "flex", "1 1 0%", "max-width", "1300px"], ["parentContainerName", "dibexEventBasics", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["fill-height", "", "id", "ci5499", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "max-width", "1300px"], [3, "dibPort"], ["id", "ci5467", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "baseline", "gap", "10px"], ["id", "ci5468", "dibComponent", "inputNumber", "item-alias", "id", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "id", "required", "true", "name", "id"], [4, "ngIf"], ["class", "dib_form_input_done", "matSuffix", "", 3, "click", 4, "ngIf"], ["class", "dib_form_input_done_all", "matSuffix", "", 4, "ngIf"], ["class", "dib_form_input_priority_high", "matSuffix", "", 4, "ngIf"], ["id", "ci5469", "dibComponent", "inputText", "item-alias", "name", "dibDisabled", "true", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "name", "maxlength", "80", "required", "true", "name", "name"], ["id", "ci6214", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "phone", "maxlength", "100", "name", "phone"], ["color", "accent", "mat-raised-button", "", "id", "ci5470", "dibComponent", "btnSave", "aria-label", "Save changes", "matTooltipClass", "dib-tooltip", "type", "submit", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/save.svg"], [1, "dibButtonCaption"], ["id", "ci5472", "dibComponent", "spacer", 2, "flex", "1 1 0%"], ["id", "ci5471", "dibComponent", "formPaging", 2, "border", "1px solid lightgray", "border-radius", "3px"], ["dibComponentName", "formPager", "dibDropin", "form", "dibComponentLocation", "/peff/Template/component/dibexEventBasics?componentPath=pager&dropin=setNgxMaterial.form", 3, "dibComponentParent"], ["id", "ci5419", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap"], ["id", "ci5428", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci5421", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5423", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci5479", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5433", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5432", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci5430", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnTimeName", "type", "button", 3, "containerPortId"], ["id", "ci5431", "dibComponent", "inputText", "appearance", "standard", 2, "flex", "1 1 0%"], ["matInput", "", "type", "text", "formControlName", "inputDateTime", "name", "inputDateTime"], ["id", "ci5424", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], ["id", "ci5480", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5476", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5473", "dibComponent", "span", 2, "padding", "10px !important", "border", "1px solid orange", 3, "innerHtml"], ["id", "ci5422", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5426", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], ["id", "ci5481", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5477", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5474", "dibComponent", "span", "item-alias", "spanTableEventMsg", 2, "padding", "10px !important", "border", "1px solid orange", 3, "hidden", "dibDisabled", "ngClass", "ngStyle", "innerHtml"], ["id", "ci5425", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], ["id", "ci5482", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5478", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5475", "dibComponent", "span", 2, "padding", "10px !important", "border", "1px solid orange", 3, "innerHtml"], ["id", "ci5693", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px 10px"], ["id", "ci5694", "dibComponent", "comment", "dibClientData", "{\"selected\" : \"self\"}"], ["target", "_blank", "href", "https://www.w3schools.com/jsref/dom_obj_event.asp"], ["id", "ci5690", "dibComponent", "inputText", "dibListeners", "", "eventList", "  mouseout ", "actionId", "SelectTextEvent", "appearance", "standard", 2, "width", "350px !important", 3, "containerPortId"], ["matInput", "", "type", "text", "formControlName", "SelectTextEvent", "name", "SelectTextEvent"], ["id", "ci5692", "dibComponent", "inputText", "dibListeners", "", "eventList", "  copy ", "actionId", "CopyEvent", "appearance", "standard", 2, "width", "350px !important", 3, "containerPortId"], ["matInput", "", "type", "text", "formControlName", "CopyEvent", "name", "CopyEvent"], ["mat-raised-button", "", "color", "primary", "id", "ci5691", "dibComponent", "button", "dibListeners", "", "eventList", "  mouseover ", "actionId", "MouseoverEvent", "type", "button", 2, "width", "350px !important", 3, "containerPortId"], ["id", "ci5427", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci5429", "dibComponent", "comment"], ["id", "ci5483", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5484", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci5485", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnActionCountClients", "type", "button", 3, "containerPortId"], ["id", "ci5486", "dibComponent", "inputTextArea", "appearance", "standard", 2, "flex", "1 1 0%"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "3", "cdkAutosizeMaxRows", "10", "matInput", "", "formControlName", "textArea", "name", "textArea"], ["id", "ci5487", "dibComponent", "comment"], ["mat-raised-button", "", "color", "accent", "id", "ci7065", "dibComponent", "button", "type", "button", 2, "width", "300px !important", 3, "click"], ["id", "ci5488", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci5489", "dibComponent", "comment"], ["id", "ci5531", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5532", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5533", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5535", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5534", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnConfirmMsg", "item-alias", "btnConfirmMsg", "type", "button", 3, "containerPortId"], ["id", "ci5536", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5538", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5537", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5539", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnPort", "item-alias", "btnPort", "type", "button", 3, "containerPortId"], ["id", "ci5490", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5493", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5495", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5494", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5496", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnRefreshSubcDocs", "item-alias", "btnRefreshSubcDocs", "type", "button", 3, "containerPortId"], ["id", "ci5491", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5492", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5523", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5497", "dibComponent", "select", "item-alias", "clientId", "appearance", "standard", 2, "display", "flex", "flex-direction", "column"], ["formControlName", "clientId", 3, "compareWith", "openedChange"], [3, "value", 4, "ngFor", "ngForOf"], ["id", "ci5498", "dibComponent", "select", "dib-active-filter", "dibexEventBasics_clientContactId", "dib-container-filter-settings", "{  'dibexEventBasics_clientContactId' : 'alias_self_clientId'}", "appearance", "standard", 2, "display", "flex", "flex-direction", "column"], ["formControlName", "clientContactId", 3, "compareWith", "openedChange"], ["id", "ci5507", "dibComponent", "comment"], ["id", "ci5500", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5503", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5505", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5504", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5506", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseActions", "item-alias", "btnResponseActions", "type", "button", 3, "containerPortId"], ["mat-raised-button", "", "color", "primary", "id", "ci5706", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseActions1", "item-alias", "btnResponseActions1", "type", "button", 3, "containerPortId"], ["id", "ci5501", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5502", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5522", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5512", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci5508", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnStartQueueFromClient", "item-alias", "btnStartQueueFromClient", "type", "button", 3, "containerPortId"], ["mat-raised-button", "", "color", "accent", "id", "ci5513", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnMoreInfoQueue", "type", "button", 3, "containerPortId"], ["id", "ci5509", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci5510", "dibComponent", "inputNumber", "appearance", "standard", 2, "width", "90px !important", "flex", "0 1 50px"], ["matInput", "", "type", "number", "formControlName", "progressValue", "name", "progressValue", "aria-label", "progressValue"], ["id", "ci5511", "dibComponent", "progressBar", 2, "flex", "1 1 100%"], ["color", "accent", "mode", "buffer", 3, "value", "bufferValue"], ["id", "ci5514", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%"], ["id", "ci5518", "dibComponent", "section", 2, "flex", "1 1 50%"], ["id", "ci5520", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5584", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5521", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseRedirect", "item-alias", "btnResponseRedirect", "type", "button", 3, "containerPortId"], ["id", "ci5583", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5519", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5582", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseRedirectHoliday", "item-alias", "btnResponseRedirectHoliday", "type", "button", 3, "containerPortId"], ["id", "ci5586", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5585", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseRedirectHoliday1", "item-alias", "btnResponseRedirectHoliday1", "type", "button", 3, "containerPortId"], ["id", "ci5515", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], ["id", "ci5524", "dibComponent", "span", 3, "innerHtml"], ["id", "ci5516", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5517", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseNewTab", "item-alias", "btnResponseNewTab", "type", "button", 3, "containerPortId"], ["id", "ci5529", "dibComponent", "divider"], ["id", "ci5527", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5526", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseWindow", "item-alias", "btnResponseWindow", "type", "button", 3, "containerPortId"], ["id", "ci5530", "dibComponent", "divider"], ["id", "ci5528", "dibComponent", "span", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5525", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnResponseBasicWindow", "item-alias", "btnResponseBasicWindow", "type", "button", 3, "containerPortId"], ["id", "ci5698", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["id", "ci5699", "dibComponent", "comment"], ["id", "ci5700", "dibComponent", "row", "dibClientData", "{\"selected\" : \"self\"}", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "accent", "id", "ci5701", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnPopupYesNo", "type", "button", 3, "containerPortId"], ["id", "ci5705", "dibComponent", "inputText", "appearance", "standard", 2, "width", "300px !important"], ["matInput", "", "type", "text", "formControlName", "setMyValue", "name", "setMyValue"], ["mat-raised-button", "", "color", "accent", "id", "ci5703", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnHelloWorldHidden", "item-alias", "btnHelloWorldHidden", "type", "button", 3, "containerPortId", "hidden"], ["mat-raised-button", "", "color", "accent", "id", "ci5704", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "hiddenPromptButton", "item-alias", "hiddenPromptButton", "type", "button", 3, "containerPortId", "hidden"], ["id", "ci5707", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci5708", "dibComponent", "comment"], ["id", "ci5709", "dibComponent", "row", "dibClientData", "{\"selected\" : \"self\"}", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "accent", "id", "ci5702", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnPrompt", "item-alias", "btnPrompt", "type", "button", 3, "containerPortId"], ["id", "ci5696", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci5697", "dibComponent", "comment"], ["mat-raised-button", "", "color", "accent", "id", "ci5695", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnNextAction", "type", "button", 3, "containerPortId"], ["mode", "indeterminate"], ["matSuffix", "", 1, "dib_form_input_done", 3, "click"], ["matSuffix", "", 1, "dib_form_input_done_all"], ["matSuffix", "", 1, "dib_form_input_priority_high"], [3, "value"], [3, "innerHtml", 4, "ngIf"], [3, "innerHtml"]], template: function dibexEventBasicsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexEventBasicsComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexEventBasicsComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "mat-card", 7)(8, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(9, 6);
+                        i0.ɵɵelementStart(10, "mat-form-field", 9)(11, "mat-label");
+                        i0.ɵɵtext(12, "Id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(13, "input", 10);
+                        i0.ɵɵtemplate(14, dibexEventBasicsComponent_mat_error_14_Template, 2, 0, "mat-error", 11);
+                        i0.ɵɵtemplate(15, dibexEventBasicsComponent_mat_icon_15_Template, 2, 0, "mat-icon", 12);
+                        i0.ɵɵtemplate(16, dibexEventBasicsComponent_mat_icon_16_Template, 2, 0, "mat-icon", 13);
+                        i0.ɵɵtemplate(17, dibexEventBasicsComponent_mat_icon_17_Template, 2, 0, "mat-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(18, "mat-form-field", 15)(19, "mat-label");
+                        i0.ɵɵtext(20, "Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(21, "input", 16);
+                        i0.ɵɵtemplate(22, dibexEventBasicsComponent_mat_error_22_Template, 2, 0, "mat-error", 11);
+                        i0.ɵɵtemplate(23, dibexEventBasicsComponent_mat_error_23_Template, 2, 0, "mat-error", 11);
+                        i0.ɵɵtemplate(24, dibexEventBasicsComponent_mat_icon_24_Template, 2, 0, "mat-icon", 12);
+                        i0.ɵɵtemplate(25, dibexEventBasicsComponent_mat_icon_25_Template, 2, 0, "mat-icon", 13);
+                        i0.ɵɵtemplate(26, dibexEventBasicsComponent_mat_icon_26_Template, 2, 0, "mat-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(27, "mat-form-field", 17)(28, "mat-label");
+                        i0.ɵɵtext(29, "Phone");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(30, "input", 18);
+                        i0.ɵɵtemplate(31, dibexEventBasicsComponent_mat_error_31_Template, 2, 0, "mat-error", 11);
+                        i0.ɵɵtemplate(32, dibexEventBasicsComponent_mat_icon_32_Template, 2, 0, "mat-icon", 12);
+                        i0.ɵɵtemplate(33, dibexEventBasicsComponent_mat_icon_33_Template, 2, 0, "mat-icon", 13);
+                        i0.ɵɵtemplate(34, dibexEventBasicsComponent_mat_icon_34_Template, 2, 0, "mat-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(35, "button", 19);
+                        i0.ɵɵelement(36, "dib-icon", 20);
+                        i0.ɵɵelementStart(37, "span", 21);
+                        i0.ɵɵtext(38, "Save");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(39, "span", 22);
+                        i0.ɵɵelementStart(40, "div", 23);
+                        i0.ɵɵelementContainer(41, 24);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(42, "mat-card", 25)(43, "mat-card-header")(44, "mat-card-title");
+                        i0.ɵɵtext(45, "Event Origins");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(46, "mat-card-content", 26);
+                        i0.ɵɵelementContainerStart(47, 6);
+                        i0.ɵɵelementStart(48, "span", 27)(49, "div", 28);
+                        i0.ɵɵtext(50, " There are mainly 4 places where events originate/trigger ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(51, "div", 29);
+                        i0.ɵɵelementContainerStart(52, 6);
+                        i0.ɵɵelementStart(53, "mat-card", 30)(54, "mat-card-header")(55, "mat-card-title");
+                        i0.ɵɵtext(56, "Item Events");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(57, "mat-card-content", 31);
+                        i0.ɵɵelement(58, "span", 32);
+                        i0.ɵɵpipe(59, "safeHtml");
+                        i0.ɵɵelement(60, "span", 33);
+                        i0.ɵɵpipe(61, "safeHtml");
+                        i0.ɵɵelementStart(62, "div", 34);
+                        i0.ɵɵelementContainerStart(63, 6);
+                        i0.ɵɵelementStart(64, "button", 35)(65, "span", 21);
+                        i0.ɵɵtext(66, "Set Time & Name");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(67, "mat-form-field", 36)(68, "mat-label");
+                        i0.ɵɵtext(69, "Date & Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(70, "input", 37);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(71, "mat-card", 38)(72, "mat-card-header")(73, "mat-card-title");
+                        i0.ɵɵtext(74, "Container Events - Client-side");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(75, "mat-card-content", 31);
+                        i0.ɵɵelement(76, "span", 39);
+                        i0.ɵɵpipe(77, "safeHtml");
+                        i0.ɵɵelement(78, "span", 40);
+                        i0.ɵɵpipe(79, "safeHtml");
+                        i0.ɵɵelement(80, "span", 41);
+                        i0.ɵɵpipe(81, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(82, "div", 42);
+                        i0.ɵɵelementContainerStart(83, 6);
+                        i0.ɵɵelementStart(84, "mat-card", 43)(85, "mat-card-header")(86, "mat-card-title");
+                        i0.ɵɵtext(87, "Table Events");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(88, "mat-card-content", 31);
+                        i0.ɵɵelement(89, "span", 44);
+                        i0.ɵɵpipe(90, "safeHtml");
+                        i0.ɵɵelement(91, "span", 45);
+                        i0.ɵɵpipe(92, "safeHtml");
+                        i0.ɵɵelement(93, "span", 46);
+                        i0.ɵɵpipe(94, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(95, "mat-card", 47)(96, "mat-card-header")(97, "mat-card-title");
+                        i0.ɵɵtext(98, "Container Events - Server-side");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(99, "mat-card-content", 31);
+                        i0.ɵɵelement(100, "span", 48);
+                        i0.ɵɵpipe(101, "safeHtml");
+                        i0.ɵɵelement(102, "span", 49);
+                        i0.ɵɵpipe(103, "safeHtml");
+                        i0.ɵɵelement(104, "span", 50);
+                        i0.ɵɵpipe(105, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(106, "mat-card", 51)(107, "mat-card-header")(108, "mat-card-title");
+                        i0.ɵɵtext(109, "Item Event Triggers");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(110, "mat-card-content", 52);
+                        i0.ɵɵelementContainerStart(111, 6);
+                        i0.ɵɵelementStart(112, "span", 53)(113, "div", 28);
+                        i0.ɵɵtext(114, " The common HTML event triggers are available on components.");
+                        i0.ɵɵelement(115, "br");
+                        i0.ɵɵtext(116, "See ");
+                        i0.ɵɵelementStart(117, "a", 54);
+                        i0.ɵɵtext(118, "HTML Events");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(119, " for more details. ");
+                        i0.ɵɵelement(120, "br");
+                        i0.ɵɵelementStart(121, "b");
+                        i0.ɵɵtext(122, "Note,");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(123, " remove the 'on' from each event type. Eg where the HTML event is 'onclick', use 'click' instead. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(124, "mat-form-field", 55)(125, "mat-label");
+                        i0.ɵɵtext(126, "(mouseout) Hover over and then leave this text box");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(127, "input", 56);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(128, "mat-form-field", 57)(129, "mat-label");
+                        i0.ɵɵtext(130, "(copy) Select and copy some text in here");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(131, "input", 58);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(132, "button", 59)(133, "span", 21);
+                        i0.ɵɵtext(134, "(mouseover) Hover over here");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(135, "mat-card", 60)(136, "mat-card-header")(137, "mat-card-title");
+                        i0.ɵɵtext(138, "Code Execution");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(139, "mat-card-content", 31);
+                        i0.ɵɵelementContainerStart(140, 6);
+                        i0.ɵɵelementStart(141, "span", 61)(142, "div", 28);
+                        i0.ɵɵtext(143, " Events trigger code to execute, either in the client (browser),\u00A0on the server or both.");
+                        i0.ɵɵelement(144, "br");
+                        i0.ɵɵtext(145, "Furthermore, multiple actions can be triggered on the same item/container/table. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(146, "span", 62);
+                        i0.ɵɵpipe(147, "safeHtml");
+                        i0.ɵɵelementStart(148, "div", 63);
+                        i0.ɵɵelementContainerStart(149, 6);
+                        i0.ɵɵelementStart(150, "button", 64)(151, "span", 21);
+                        i0.ɵɵtext(152, "Append text and count clients");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(153, "mat-form-field", 65)(154, "mat-label");
+                        i0.ɵɵtext(155, "Text Area");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(156, "textarea", 66);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(157, "span", 67)(158, "div", 28);
+                        i0.ɵɵtext(159, " Dropinbase comes with many useful client-side actions, and developers can add their own! ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(160, "button", 68);
+                        i0.ɵɵlistener("click", function dibexEventBasicsComponent_Template_button_click_160_listener($event) { return ctx.navigationService.goTo("dibexActionBasics", "main", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(161, "span", 21);
+                        i0.ɵɵtext(162, "More Info: Action Basics");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(163, "mat-card", 69)(164, "mat-card-header")(165, "mat-card-title");
+                        i0.ɵɵtext(166, "Event Options");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(167, "mat-card-content", 31);
+                        i0.ɵɵelementContainerStart(168, 6);
+                        i0.ɵɵelementStart(169, "span", 70)(170, "div", 28);
+                        i0.ɵɵtext(171, " Events come with various options ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(172, "div", 71);
+                        i0.ɵɵelementContainerStart(173, 6);
+                        i0.ɵɵelementStart(174, "mat-card", 72)(175, "mat-card-header")(176, "mat-card-title");
+                        i0.ɵɵtext(177, "Confirmation Message");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(178, "mat-card-content", 31);
+                        i0.ɵɵelement(179, "span", 73);
+                        i0.ɵɵpipe(180, "safeHtml");
+                        i0.ɵɵelement(181, "span", 74);
+                        i0.ɵɵpipe(182, "safeHtml");
+                        i0.ɵɵelementStart(183, "button", 75)(184, "span", 21);
+                        i0.ɵɵtext(185, "Delete Dropinbase (don't worry)");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(186, "mat-card", 76)(187, "mat-card-header")(188, "mat-card-title");
+                        i0.ɵɵtext(189, "Open Container In Port");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(190, "mat-card-content", 31);
+                        i0.ɵɵelement(191, "span", 77);
+                        i0.ɵɵpipe(192, "safeHtml");
+                        i0.ɵɵelement(193, "span", 78);
+                        i0.ɵɵpipe(194, "safeHtml");
+                        i0.ɵɵelementStart(195, "button", 79)(196, "span", 21);
+                        i0.ɵɵtext(197, "Confirm before Open");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(198, "div", 80);
+                        i0.ɵɵelementContainerStart(199, 6);
+                        i0.ɵɵelementStart(200, "mat-card", 81)(201, "mat-card-header")(202, "mat-card-title");
+                        i0.ɵɵtext(203, "Refresh Item (subcontainer)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(204, "mat-card-content", 31);
+                        i0.ɵɵelement(205, "span", 82);
+                        i0.ɵɵpipe(206, "safeHtml");
+                        i0.ɵɵelement(207, "span", 83);
+                        i0.ɵɵpipe(208, "safeHtml");
+                        i0.ɵɵelementStart(209, "button", 84)(210, "span", 21);
+                        i0.ɵɵtext(211, "Refresh Docs Container");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(212, "mat-card", 85)(213, "mat-card-header")(214, "mat-card-title");
+                        i0.ɵɵtext(215, "Refresh Item - Selects");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(216, "mat-card-content", 31);
+                        i0.ɵɵelement(217, "span", 86);
+                        i0.ɵɵpipe(218, "safeHtml");
+                        i0.ɵɵelement(219, "span", 87);
+                        i0.ɵɵpipe(220, "safeHtml");
+                        i0.ɵɵelementStart(221, "mat-form-field", 88)(222, "mat-label");
+                        i0.ɵɵtext(223, "Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(224, "mat-select", 89);
+                        i0.ɵɵlistener("openedChange", function dibexEventBasicsComponent_Template_mat_select_openedChange_224_listener($event) { return ctx.lists.list5497.refresh($event); });
+                        i0.ɵɵtemplate(225, dibexEventBasicsComponent_mat_progress_bar_225_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(226, dibexEventBasicsComponent_mat_option_226_Template, 2, 2, "mat-option", 90);
+                        i0.ɵɵpipe(227, "async");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(228, "mat-form-field", 91)(229, "mat-label");
+                        i0.ɵɵtext(230, "Related Client Contact");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(231, "mat-select", 92);
+                        i0.ɵɵlistener("openedChange", function dibexEventBasicsComponent_Template_mat_select_openedChange_231_listener($event) { return ctx.lists.list5498.refresh($event); });
+                        i0.ɵɵtemplate(232, dibexEventBasicsComponent_mat_progress_bar_232_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(233, dibexEventBasicsComponent_mat_option_233_Template, 2, 2, "mat-option", 90);
+                        i0.ɵɵpipe(234, "async");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(235, "span", 93)(236, "div", 28);
+                        i0.ɵɵtext(237, " Each event must have a ");
+                        i0.ɵɵelementStart(238, "b");
+                        i0.ɵɵtext(239, "Response Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(240, " which tells the browser how to handle and respond to actions ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(241, "div", 94);
+                        i0.ɵɵelementContainerStart(242, 6);
+                        i0.ɵɵelementStart(243, "mat-card", 95)(244, "mat-card-header")(245, "mat-card-title");
+                        i0.ɵɵtext(246, "Response Type = actions");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(247, "mat-card-content", 31);
+                        i0.ɵɵelement(248, "span", 96);
+                        i0.ɵɵpipe(249, "safeHtml");
+                        i0.ɵɵelement(250, "span", 97);
+                        i0.ɵɵpipe(251, "safeHtml");
+                        i0.ɵɵelementStart(252, "button", 98)(253, "span", 21);
+                        i0.ɵɵtext(254, "Greetings from the server");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(255, "button", 99)(256, "span", 21);
+                        i0.ɵɵtext(257, "Greetings from the server");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(258, "mat-card", 100)(259, "mat-card-header")(260, "mat-card-title");
+                        i0.ɵɵtext(261, "Response Type for Queues");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(262, "mat-card-content", 31);
+                        i0.ɵɵelement(263, "span", 101);
+                        i0.ɵɵpipe(264, "safeHtml");
+                        i0.ɵɵelement(265, "span", 102);
+                        i0.ɵɵpipe(266, "safeHtml");
+                        i0.ɵɵelementStart(267, "div", 103);
+                        i0.ɵɵelementContainerStart(268, 6);
+                        i0.ɵɵelementStart(269, "button", 104)(270, "span", 21);
+                        i0.ɵɵtext(271, "Long Running Action");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(272, "button", 105)(273, "span", 21);
+                        i0.ɵɵtext(274, "More Info about Queues...");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(275, "div", 106);
+                        i0.ɵɵelementContainerStart(276, 6);
+                        i0.ɵɵelementStart(277, "mat-form-field", 107);
+                        i0.ɵɵelement(278, "input", 108);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(279, "div", 109);
+                        i0.ɵɵelement(280, "mat-progress-bar", 110);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(281, "div", 111);
+                        i0.ɵɵelementContainerStart(282, 6);
+                        i0.ɵɵelementStart(283, "mat-card", 112)(284, "mat-card-header")(285, "mat-card-title");
+                        i0.ɵɵtext(286, "Response Type = redirect");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(287, "mat-card-content", 31);
+                        i0.ɵɵelement(288, "span", 113);
+                        i0.ɵɵpipe(289, "safeHtml");
+                        i0.ɵɵelement(290, "span", 114);
+                        i0.ɵɵpipe(291, "safeHtml");
+                        i0.ɵɵelementStart(292, "button", 115)(293, "span", 21);
+                        i0.ɵɵtext(294, "Create .docx");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(295, "span", 116);
+                        i0.ɵɵpipe(296, "safeHtml");
+                        i0.ɵɵelement(297, "span", 117);
+                        i0.ɵɵpipe(298, "safeHtml");
+                        i0.ɵɵelementStart(299, "button", 118)(300, "span", 21);
+                        i0.ɵɵtext(301, "Go on Holiday");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(302, "span", 119);
+                        i0.ɵɵpipe(303, "safeHtml");
+                        i0.ɵɵelementStart(304, "button", 120)(305, "span", 21);
+                        i0.ɵɵtext(306, "Something cool...");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(307, "mat-card", 121)(308, "mat-card-header")(309, "mat-card-title");
+                        i0.ɵɵtext(310, "Response Type for HTML");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(311, "mat-card-content", 31);
+                        i0.ɵɵelement(312, "span", 122);
+                        i0.ɵɵpipe(313, "safeHtml");
+                        i0.ɵɵelement(314, "span", 123);
+                        i0.ɵɵpipe(315, "safeHtml");
+                        i0.ɵɵelementStart(316, "button", 124)(317, "span", 21);
+                        i0.ɵɵtext(318, "Display HTML Response in New Tab");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(319, "mat-divider", 125)(320, "span", 126);
+                        i0.ɵɵpipe(321, "safeHtml");
+                        i0.ɵɵelementStart(322, "button", 127)(323, "span", 21);
+                        i0.ɵɵtext(324, "Display HTML in Window");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(325, "mat-divider", 128)(326, "span", 129);
+                        i0.ɵɵpipe(327, "safeHtml");
+                        i0.ɵɵelementStart(328, "button", 130)(329, "span", 21);
+                        i0.ɵɵtext(330, "Display HTML in Basic Window");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(331, "mat-card", 131)(332, "mat-card-header")(333, "mat-card-title");
+                        i0.ɵɵtext(334, "Popup Yes/No with Actions");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(335, "mat-card-content", 132);
+                        i0.ɵɵelementContainerStart(336, 6);
+                        i0.ɵɵelementStart(337, "span", 133)(338, "div", 28);
+                        i0.ɵɵtext(339, " With ClientFunctions::addMsgPopup() function, the server can respond ");
+                        i0.ɵɵelement(340, "br");
+                        i0.ɵɵtext(341, "with a Yes/No type of prompt. The Yes and No buttons can execute actions and their captions can be customized. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(342, "div", 134);
+                        i0.ɵɵelementContainerStart(343, 6);
+                        i0.ɵɵelementStart(344, "button", 135)(345, "span", 21);
+                        i0.ɵɵtext(346, "Popup Yes/No Msg");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(347, "mat-form-field", 136)(348, "mat-label");
+                        i0.ɵɵtext(349, "Set My Value with 'Yes'");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(350, "input", 137);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(351, "button", 138)(352, "button", 139);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(353, "mat-card", 140)(354, "mat-card-header")(355, "mat-card-title");
+                        i0.ɵɵtext(356, "Prompt with Action");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(357, "mat-card-content", 132);
+                        i0.ɵɵelementContainerStart(358, 6);
+                        i0.ɵɵelementStart(359, "span", 141)(360, "div", 28);
+                        i0.ɵɵtext(361, " With ClientFunctions::prompt() function, the server can respond ");
+                        i0.ɵɵelement(362, "br");
+                        i0.ɵɵtext(363, "with a text-input prompt. The Submit and Cancel buttons can execute custom actions. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(364, "div", 142);
+                        i0.ɵɵelementContainerStart(365, 6);
+                        i0.ɵɵelementStart(366, "button", 143)(367, "span", 21);
+                        i0.ɵɵtext(368, "Prompt");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(369, "mat-card", 144)(370, "mat-card-header")(371, "mat-card-title");
+                        i0.ɵɵtext(372, "Next Action");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(373, "mat-card-content", 132);
+                        i0.ɵɵelementContainerStart(374, 6);
+                        i0.ɵɵelementStart(375, "span", 145)(376, "div", 28);
+                        i0.ɵɵtext(377, " By using the ClientFunctions::addSubmitUrl() function, the server can respond ");
+                        i0.ɵɵelement(378, "br");
+                        i0.ɵɵtext(379, "with the next server-side function call that the client must execute. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(380, "button", 146)(381, "span", 21);
+                        i0.ɵɵtext(382, "Next Action");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(212, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5420");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5499");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5467");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Id");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("name", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("name", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Phone");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("phone", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Save changes")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵattribute("aria-label", "Save");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibComponentParent", ctx);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5419");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5421");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(59, 142, ctx.getHtml("spanItemEvent")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(61, 144, ctx.getHtml("spanSubmitUrl")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5432");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Set Time & Name");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Date & Name");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(77, 146, ctx.getHtml("spanContainerEvent")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(79, 148, ctx.getHtml("spanSubmitUrl1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(81, 150, ctx.getHtml("spanContEvent")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5422");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(90, 152, ctx.getHtml("spanTableEvent")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(92, 154, ctx.getHtml("spanSubmitUrl2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("hidden", !ctx.view.items.spanTableEventMsg.visible)("dibDisabled", ctx.view.items.spanTableEventMsg.disabled)("ngClass", ctx.view.items.spanTableEventMsg.class)("ngStyle", ctx.view.items.spanTableEventMsg.style)("innerHtml", i0.ɵɵpipeBind1(94, 156, ctx.getHtml("spanTableEventMsg")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(101, 158, ctx.getHtml("spanContainerEventServer")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(103, 160, ctx.getHtml("spanSubmitUrl3")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(105, 162, ctx.getHtml("spanContainerEventServerInfo")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5693");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "(mouseout) Hover over and then leave this text box");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "(copy) Select and copy some text in here");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "(mouseover) Hover over here");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5427");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(147, 164, ctx.getHtml("spanSubmitUrl4")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5484");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Append text and count clients");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Text Area");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "More Info: Action Basics");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5488");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5531");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(180, 166, ctx.getHtml("spanConfirmMsg")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(182, 168, ctx.getHtml("spanSubmitUrl12")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Delete Dropinbase (don't worry)");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(192, 170, ctx.getHtml("spanPort")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(194, 172, ctx.getHtml("spanSubmitUrl13")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Confirm before Open");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5490");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(206, 174, ctx.getHtml("spanTableEvent1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(208, 176, ctx.getHtml("spanSubmitUrl6")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Refresh Docs Container");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(218, 178, ctx.getHtml("spanRefreshItemSelects")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(220, 180, ctx.getHtml("spanSubmitUrl10")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("compareWith", ctx.selectCompareFn);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5497.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(227, 182, ctx.lists.list5497.items));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("compareWith", ctx.selectCompareFn);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5498.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(234, 184, ctx.lists.list5498.items));
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "5500");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(249, 186, ctx.getHtml("spanResponseActions")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(251, 188, ctx.getHtml("spanSubmitUrl7")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Greetings from the server");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Greetings from the server");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(264, 190, ctx.getHtml("spanResponseQueue")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(266, 192, ctx.getHtml("spanSubmitUrl9")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5512");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Long Running Action");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "More Info about Queues...");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5509");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("value", ctx.getValue("progressValue"))("bufferValue", 100);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5514");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(289, 194, ctx.getHtml("spanResponseRedirect")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(291, 196, ctx.getHtml("spanSubmitUrl14")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Create .docx");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(296, 198, ctx.getHtml("spanResponseRedirect1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(298, 200, ctx.getHtml("spanSubmitUrl8")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Go on Holiday");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(303, 202, ctx.getHtml("spanSubmitUrl15")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Something cool...");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(313, 204, ctx.getHtml("spanSubmitUrl11")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(315, 206, ctx.getHtml("spanResponseNewTab")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Display HTML Response in New Tab");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(321, 208, ctx.getHtml("spanResponseWindow")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Display HTML in Window");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(327, 210, ctx.getHtml("spanResponseBasicWindow")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Display HTML in Basic Window");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5698");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5700");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Popup Yes/No Msg");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Set My Value with 'Yes'");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5707");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "5709");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Prompt");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "5696");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Next Action");
+                    } }, dependencies: [i4.NgClass, i4.NgForOf, i4.NgIf, i4.NgStyle, i5.DefaultClassDirective, i5.DefaultStyleDirective, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NumberValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.RequiredValidator, i6.MaxLengthValidator, i6.FormGroupDirective, i6.FormControlName, i1.DibIconComponent, i1.DibPortDirective, i1.DibListenersDirective, i1.DibComponentDirective, i1.DibFillHeightDirective, i1.DibDisabledDirective, i1.DibRemoveFocusDirective, i7.MatOption, i8.MatButton, i9.MatFormField, i9.MatLabel, i9.MatError, i9.MatSuffix, i10.MatIcon, i11.MatInput, i12.CdkTextareaAutosize, i13.MatDivider, i14.MatProgressBar, i15.MatSelect, i16.MatTooltip, i17.MatCard, i17.MatCardContent, i17.MatCardHeader, i17.MatCardTitle, i4.AsyncPipe, i1.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexEventBasics'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexEventBasicsComponent.prototype, "reloadContainer", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('goToRecorddibexEventBasics'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [String]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexEventBasicsComponent.prototype, "goToRecord", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('recordPositiondibexEventBasics'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Number]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexEventBasicsComponent.prototype, "recordPosition", null);
+            exports_1("dibexEventBasicsComponent", dibexEventBasicsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexEventBasicsComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-event-basics', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" containerName=dibexEventBasics  [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  max-width:1300px;" id=ci5420 dibComponent=subcontainer   ><ng-container [dibPort]="'5420'" parentContainerName=dibexEventBasics  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   fill-height  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  max-width:1300px;" id=ci5499 dibComponent=div  ><ng-container [dibPort]="'5499'" ><mat-card   style="  flex: 1 1 0%;  " id=ci5467 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: baseline;  gap: 10px;"  ><ng-container [dibPort]="'5467'" ><mat-form-field  id=ci5468 dibComponent=inputNumber   style="  "  item-alias=id   appearance=standard  ><mat-label >Id</mat-label><input   matInput  type=number   formControlName=id   required=true  name=id   [attr.aria-label]="'Id'" ><mat-error *ngIf="hasError('id','required',model.$formGroup)">Please enter a value</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci5469 dibComponent=inputText   style="  "  item-alias=name  dibDisabled=true   appearance=standard  ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   maxlength='80'  required=true  name=name   [attr.aria-label]="'Name'" ><mat-error *ngIf="hasError('name','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('name','maxlength',model.$formGroup)">Please enter 80 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('name', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('name', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('name', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci6214 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Phone</mat-label><input   matInput  type=text   formControlName=phone   maxlength='100'  name=phone   [attr.aria-label]="'Phone'" ><mat-error *ngIf="hasError('phone','maxlength',model.$formGroup)">Please enter 100 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('phone', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('phone', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('phone', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button color=accent  mat-raised-button id=ci5470 dibComponent=btnSave   style="  " aria-label="Save changes"  [matTooltip]="'Save changes'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   [attr.aria-label]="'Save'"  type=submit  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/save.svg"></dib-icon><span class=dibButtonCaption >Save</span></button><span  id=ci5472 dibComponent=spacer   style="  flex: 1 1 0%;  " ></span><div  id=ci5471 dibComponent=formPaging   style="  border: 1px solid lightgray; border-radius: 3px" ><ng-container  dibComponentName=formPager   dibDropin=form   dibComponentLocation="/peff/Template/component/dibexEventBasics?componentPath=pager&dropin=setNgxMaterial.form"   [dibComponentParent]="this"  ></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5419 dibComponent=card  ><mat-card-header ><mat-card-title >Event Origins</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap;"  ><ng-container [dibPort]="'5419'" ><span  id=ci5428 dibComponent=comment   style="  " ><div class=dib-comment > There are mainly 4 places where events originate/trigger  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5421 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5421'" ><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci5423 dibComponent=section  ><mat-card-header ><mat-card-title >Item Events</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5479 dibComponent=span   style="  "  [innerHtml]="getHtml('spanItemEvent') | safeHtml" ></span><span  id=ci5433 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5432 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5432'" ><button  mat-raised-button color=primary  id=ci5430 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnTimeName   style="  "  [attr.aria-label]="'Set Time & Name'"  type=button  ><span class=dibButtonCaption >Set Time & Name</span></button><mat-form-field id=ci5431 dibComponent=inputText   style="  flex: 1 1 0%;  "  appearance=standard  ><mat-label >Date & Name</mat-label><input   matInput  type=text   formControlName=inputDateTime   name=inputDateTime   [attr.aria-label]="'Date & Name'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci5424 dibComponent=section  ><mat-card-header ><mat-card-title >Container Events - Client-side</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5480 dibComponent=span   style="  "  [innerHtml]="getHtml('spanContainerEvent') | safeHtml" ></span><span  id=ci5476 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl1') | safeHtml" ></span><span  id=ci5473 dibComponent=span   style="  padding:10px !important;  border: 1px solid orange;"  [innerHtml]="getHtml('spanContEvent') | safeHtml" ></span></mat-card-content></mat-card></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5422 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5422'" ><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci5426 dibComponent=section  ><mat-card-header ><mat-card-title >Table Events</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5481 dibComponent=span   style="  "  [innerHtml]="getHtml('spanTableEvent') | safeHtml" ></span><span  id=ci5477 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl2') | safeHtml" ></span><span  id=ci5474 dibComponent=span   style="  padding:10px !important;  border: 1px solid orange;"  item-alias=spanTableEventMsg  [hidden]="!view.items.spanTableEventMsg.visible"  [dibDisabled]="view.items.spanTableEventMsg.disabled"  [ngClass]="view.items.spanTableEventMsg.class"   [ngStyle]="view.items.spanTableEventMsg.style"  [innerHtml]="getHtml('spanTableEventMsg') | safeHtml" ></span></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci5425 dibComponent=section  ><mat-card-header ><mat-card-title >Container Events - Server-side</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5482 dibComponent=span   style="  "  [innerHtml]="getHtml('spanContainerEventServer') | safeHtml" ></span><span  id=ci5478 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl3') | safeHtml" ></span><span  id=ci5475 dibComponent=span   style="  padding:10px !important;  border: 1px solid orange;"  [innerHtml]="getHtml('spanContainerEventServerInfo') | safeHtml" ></span></mat-card-content></mat-card></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5693 dibComponent=card  ><mat-card-header ><mat-card-title >Item Event Triggers</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px 10px;"  ><ng-container [dibPort]="'5693'" ><span  id=ci5694 dibComponent=comment  dibClientData='{"selected" : "self"}'  style="  " ><div class=dib-comment > The common HTML event triggers are available on components.<br>See <a target='_blank' href='https://www.w3schools.com/jsref/dom_obj_event.asp'>HTML Events</a> for more details. <br><b>Note,</b> remove the &apos;on&apos; from each event type. Eg where the HTML event is &apos;onclick&apos;, use &apos;click&apos; instead.  </div></span><mat-form-field id=ci5690 dibComponent=inputText  dibListeners eventList="  mouseout " [containerPortId]="containerActionReference()" actionId=SelectTextEvent   style="  width:350px !important;   "  appearance=standard  ><mat-label >(mouseout) Hover over and then leave this text box</mat-label><input   matInput  type=text   formControlName=SelectTextEvent   name=SelectTextEvent   [attr.aria-label]="'(mouseout) Hover over and then leave this text box'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci5692 dibComponent=inputText  dibListeners eventList="  copy " [containerPortId]="containerActionReference()" actionId=CopyEvent   style="  width:350px !important;   "  appearance=standard  ><mat-label >(copy) Select and copy some text in here</mat-label><input   matInput  type=text   formControlName=CopyEvent   name=CopyEvent   [attr.aria-label]="'(copy) Select and copy some text in here'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci5691 dibComponent=button  dibListeners eventList="  mouseover " [containerPortId]="containerActionReference()" actionId=MouseoverEvent   style="  width:350px !important;   "  [attr.aria-label]="'(mouseover) Hover over here'"  type=button  ><span class=dibButtonCaption >(mouseover) Hover over here</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5427 dibComponent=card  ><mat-card-header ><mat-card-title >Code Execution</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'5427'" ><span  id=ci5429 dibComponent=comment   style="  " ><div class=dib-comment > Events trigger code to execute, either in the client (browser),&nbsp;on the server or both.<br>Furthermore, multiple actions can be triggered on the same item/container/table.  </div></span><span  id=ci5483 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl4') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci5484 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5484'" ><button  mat-raised-button color=primary  id=ci5485 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnActionCountClients   style="  "  [attr.aria-label]="'Append text and count clients'"  type=button  ><span class=dibButtonCaption >Append text and count clients</span></button><mat-form-field  id=ci5486 dibComponent=inputTextArea   style="  flex: 1 1 0%;  "  appearance=standard   ><mat-label >Text Area</mat-label><textarea cdkTextareaAutosize cdkAutosizeMinRows=3  cdkAutosizeMaxRows=10    matInput  formControlName=textArea   name=textArea   [attr.aria-label]="'Text Area'" ></textarea><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div><span  id=ci5487 dibComponent=comment   style="  " ><div class=dib-comment > Dropinbase comes with many useful client-side actions, and developers can add their own!  </div></span><button  mat-raised-button color=accent  id=ci7065 dibComponent=button   (click)="navigationService.goTo(  'dibexActionBasics',  'main',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  width:300px !important;   "  [attr.aria-label]="'More Info: Action Basics'"  type=button  ><span class=dibButtonCaption >More Info: Action Basics</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5488 dibComponent=card  ><mat-card-header ><mat-card-title >Event Options</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'5488'" ><span  id=ci5489 dibComponent=comment   style="  " ><div class=dib-comment > Events come with various options  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5531 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5531'" ><mat-card   style="  flex: 1 1 50%;  " id=ci5532 dibComponent=section  ><mat-card-header ><mat-card-title >Confirmation Message</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5533 dibComponent=span   style="  "  [innerHtml]="getHtml('spanConfirmMsg') | safeHtml" ></span><span  id=ci5535 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl12') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5534 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnConfirmMsg   style="  "  item-alias=btnConfirmMsg   [attr.aria-label]="'Delete Dropinbase (don\\'t worry)'"  type=button  ><span class=dibButtonCaption >Delete Dropinbase (don\'t worry)</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  " id=ci5536 dibComponent=section  ><mat-card-header ><mat-card-title >Open Container In Port</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5538 dibComponent=span   style="  "  [innerHtml]="getHtml('spanPort') | safeHtml" ></span><span  id=ci5537 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl13') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5539 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnPort   style="  "  item-alias=btnPort   [attr.aria-label]="'Confirm before Open'"  type=button  ><span class=dibButtonCaption >Confirm before Open</span></button></mat-card-content></mat-card></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5490 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5490'" ><mat-card   style="  flex: 1 1 50%;  " id=ci5493 dibComponent=section  ><mat-card-header ><mat-card-title >Refresh Item (subcontainer)</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5495 dibComponent=span   style="  "  [innerHtml]="getHtml('spanTableEvent1') | safeHtml" ></span><span  id=ci5494 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl6') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5496 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnRefreshSubcDocs   style="  "  item-alias=btnRefreshSubcDocs   [attr.aria-label]="'Refresh Docs Container'"  type=button  ><span class=dibButtonCaption >Refresh Docs Container</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  " id=ci5491 dibComponent=section  ><mat-card-header ><mat-card-title >Refresh Item - Selects</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5492 dibComponent=span   style="  "  [innerHtml]="getHtml('spanRefreshItemSelects') | safeHtml" ></span><span  id=ci5523 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl10') | safeHtml" ></span><mat-form-field  id=ci5497 dibComponent=select   style="  display:flex; flex-direction: column;  "  item-alias=clientId   appearance=standard   ><mat-label>Client</mat-label><mat-select [compareWith]="selectCompareFn"   formControlName=clientId    (openedChange)="lists.list5497.refresh($event)"  ><mat-progress-bar *ngIf="$any(lists.list5497).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5497.items | async" [value]="item" ><span *ngIf="item.id_display_value"   [innerHtml]="item.id_display_value"  ></span></mat-option></mat-select></mat-form-field><mat-form-field  id=ci5498 dibComponent=select   dib-active-filter='dibexEventBasics_clientContactId'  dib-container-filter-settings="{  'dibexEventBasics_clientContactId' : 'alias_self_clientId'}"  style="  display:flex; flex-direction: column;  "  appearance=standard   ><mat-label>Related Client Contact</mat-label><mat-select [compareWith]="selectCompareFn"   formControlName=clientContactId    (openedChange)="lists.list5498.refresh($event)"  ><mat-progress-bar *ngIf="$any(lists.list5498).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5498.items | async" [value]="item" ><span *ngIf="item.id_display_value"   [innerHtml]="item.id_display_value"  ></span></mat-option></mat-select></mat-form-field></mat-card-content></mat-card></ng-container></div><span  id=ci5507 dibComponent=comment   style="  " ><div class=dib-comment > Each event must have a <b>Response Type</b> which tells the browser how to handle and respond to actions  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5500 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5500'" ><mat-card   style="  flex: 1 1 50%;  " id=ci5503 dibComponent=section  ><mat-card-header ><mat-card-title >Response Type = actions</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5505 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseActions') | safeHtml" ></span><span  id=ci5504 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl7') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5506 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseActions   style="  "  item-alias=btnResponseActions   [attr.aria-label]="'Greetings from the server'"  type=button  ><span class=dibButtonCaption >Greetings from the server</span></button><button  mat-raised-button color=primary  id=ci5706 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseActions1   style="  "  item-alias=btnResponseActions1   [attr.aria-label]="'Greetings from the server'"  type=button  ><span class=dibButtonCaption >Greetings from the server</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  " id=ci5501 dibComponent=section  ><mat-card-header ><mat-card-title >Response Type for Queues</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5502 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseQueue') | safeHtml" ></span><span  id=ci5522 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl9') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  " id=ci5512 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5512'" ><button  mat-raised-button color=primary  id=ci5508 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnStartQueueFromClient   style="  "  item-alias=btnStartQueueFromClient   [attr.aria-label]="'Long Running Action'"  type=button  ><span class=dibButtonCaption >Long Running Action</span></button><button  mat-raised-button color=accent  id=ci5513 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnMoreInfoQueue   style="  "  [attr.aria-label]="'More Info about Queues...'"  type=button  ><span class=dibButtonCaption >More Info about Queues...</span></button></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5509 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5509'" ><mat-form-field  id=ci5510 dibComponent=inputNumber   style="  width:90px !important;   flex: 0 1 50px;  "  appearance=standard  ><input   matInput  type=number   formControlName=progressValue   name=progressValue   aria-label=progressValue  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><div  id=ci5511 dibComponent=progressBar   style="  flex: 1 1 100%;  " ><mat-progress-bar   color=accent
+mode=buffer
+[value]="getValue('progressValue')"
+[bufferValue]="100"  style="  "  ></mat-progress-bar></div></ng-container></div></mat-card-content></mat-card></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  " id=ci5514 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5514'" ><mat-card   style="  flex: 1 1 50%;  " id=ci5518 dibComponent=section  ><mat-card-header ><mat-card-title >Response Type = redirect</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5520 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseRedirect') | safeHtml" ></span><span  id=ci5584 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl14') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5521 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseRedirect   style="  "  item-alias=btnResponseRedirect   [attr.aria-label]="'Create .docx'"  type=button  ><span class=dibButtonCaption >Create .docx</span></button><span  id=ci5583 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseRedirect1') | safeHtml" ></span><span  id=ci5519 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl8') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5582 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseRedirectHoliday   style="  "  item-alias=btnResponseRedirectHoliday   [attr.aria-label]="'Go on Holiday'"  type=button  ><span class=dibButtonCaption >Go on Holiday</span></button><span  id=ci5586 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl15') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5585 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseRedirectHoliday1   style="  "  item-alias=btnResponseRedirectHoliday1   [attr.aria-label]="'Something cool...'"  type=button  ><span class=dibButtonCaption >Something cool...</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci5515 dibComponent=section  ><mat-card-header ><mat-card-title >Response Type for HTML</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><span  id=ci5524 dibComponent=span   style="  "  [innerHtml]="getHtml('spanSubmitUrl11') | safeHtml" ></span><span  id=ci5516 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseNewTab') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5517 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseNewTab   style="  "  item-alias=btnResponseNewTab   [attr.aria-label]="'Display HTML Response in New Tab'"  type=button  ><span class=dibButtonCaption >Display HTML Response in New Tab</span></button><mat-divider  id=ci5529 dibComponent=divider   style="  " ></mat-divider><span  id=ci5527 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseWindow') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5526 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseWindow   style="  "  item-alias=btnResponseWindow   [attr.aria-label]="'Display HTML in Window'"  type=button  ><span class=dibButtonCaption >Display HTML in Window</span></button><mat-divider  id=ci5530 dibComponent=divider   style="  " ></mat-divider><span  id=ci5528 dibComponent=span   style="  "  [innerHtml]="getHtml('spanResponseBasicWindow') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5525 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnResponseBasicWindow   style="  "  item-alias=btnResponseBasicWindow   [attr.aria-label]="'Display HTML in Basic Window'"  type=button  ><span class=dibButtonCaption >Display HTML in Basic Window</span></button></mat-card-content></mat-card></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5698 dibComponent=card  ><mat-card-header ><mat-card-title >Popup Yes/No with Actions</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5698'" ><span  id=ci5699 dibComponent=comment   style="  " ><div class=dib-comment > With ClientFunctions::addMsgPopup() function, the server can respond <br>with a Yes/No type of prompt. The Yes and No buttons can execute actions and their captions can be customized.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5700 dibComponent=row  dibClientData='{"selected" : "self"}'  dib-inject-content=replace  ><ng-container [dibPort]="'5700'" ><button  mat-raised-button color=accent  id=ci5701 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnPopupYesNo   style="  "  [attr.aria-label]="'Popup Yes/No Msg'"  type=button  ><span class=dibButtonCaption >Popup Yes/No Msg</span></button><mat-form-field id=ci5705 dibComponent=inputText   style="  width:300px !important;   "  appearance=standard  ><mat-label >Set My Value with \'Yes\'</mat-label><input   matInput  type=text   formControlName=setMyValue   name=setMyValue   [attr.aria-label]="'Set My Value with \\'Yes\\''" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=accent  id=ci5703 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnHelloWorldHidden   style="  "  item-alias=btnHelloWorldHidden  [hidden]="true"  type=button  ></button><button  mat-raised-button color=accent  id=ci5704 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=hiddenPromptButton   style="  "  item-alias=hiddenPromptButton  [hidden]="true"  type=button  ></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5707 dibComponent=card  ><mat-card-header ><mat-card-title >Prompt with Action</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5707'" ><span  id=ci5708 dibComponent=comment   style="  " ><div class=dib-comment > With ClientFunctions::prompt() function, the server can respond <br>with a text-input prompt. The Submit and Cancel buttons can execute custom actions.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5709 dibComponent=row  dibClientData='{"selected" : "self"}'  dib-inject-content=replace  ><ng-container [dibPort]="'5709'" ><button  mat-raised-button color=accent  id=ci5702 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnPrompt   style="  "  item-alias=btnPrompt   [attr.aria-label]="'Prompt'"  type=button  ><span class=dibButtonCaption >Prompt</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci5696 dibComponent=card  ><mat-card-header ><mat-card-title >Next Action</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5696'" ><span  id=ci5697 dibComponent=comment   style="  " ><div class=dib-comment > By using the ClientFunctions::addSubmitUrl() function, the server can respond <br>with the next server-side function call that the client must execute.  </div></span><button  mat-raised-button color=accent  id=ci5695 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnNextAction   style="  "  [attr.aria-label]="'Next Action'"  type=button  ><span class=dibButtonCaption >Next Action</span></button></ng-container></mat-card-content></mat-card></ng-container></div></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.CrudService }, { type: i2.HttpClient }, { type: i1.UrlService }, { type: i3.Router }, { type: i0.ViewContainerRef }, { type: i1.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [], goToRecord: [], recordPosition: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, select_1.MatSelectModule, progress_bar_1.MatProgressBarModule, divider_1.MatDividerModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexEventBasicsModule = class dibexEventBasicsModule {
+                static entry = dibexEventBasicsComponent;
+                static ɵfac = function dibexEventBasicsModule_Factory(t) { return new (t || dibexEventBasicsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexEventBasicsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexEventBasicsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexEventBasicsModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexEventBasicsComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexEventBasicsModule, { declarations: [dibexEventBasicsComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, select_1.MatSelectModule, progress_bar_1.MatProgressBarModule, divider_1.MatDividerModule] }); })();
+        }
+    };
+});

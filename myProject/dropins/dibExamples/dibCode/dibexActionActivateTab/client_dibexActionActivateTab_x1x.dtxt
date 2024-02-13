@@ -1,0 +1,262 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/tabs", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, tabs_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, _c0, importsRequired, dibexActionActivateTabComponent, containerModules, fullDateTimeOptions, dibexActionActivateTabModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexActionActivateTabComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 24);
+    } }
+    function dibexActionActivateTabComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 25);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabPerson", "dibexActionActivateTab.tabPerson", "Person"));
+    } }
+    function dibexActionActivateTabComponent_ng_template_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 26);
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r4.getTabTitle("tabCompany", "dibexActionActivateTab.tabCompany", "Company"));
+    } }
+    function dibexActionActivateTabComponent_ng_template_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 27);
+    } if (rf & 2) {
+        const ctx_r6 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r6.getTabTitle("tabStaff", "dibexActionActivateTab.tabStaff", "Staff"));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i9 = tabs_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexActionActivateTabComponent = class dibexActionActivateTabComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 269, name: 'dibexActionActivateTab', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6466'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexActionActivateTab');
+                    this.containerName = 'dibexActionActivateTab'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientside", actionType: "click", responseType: 'actions', submitUrl: "shared.action.activate-tab?itemAlias=tabCompany", itemAlias: "btnClientside", waitForCompletion: false, containerName: "dibexActionActivateTab", handlers: [] }, this.clientData, { itemEventId: 'ie334-dib', itemId: '6469', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnServerside", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/activateTab", itemAlias: "btnServerside", waitForCompletion: false, containerName: "dibexActionActivateTab", handlers: [] }, this.clientData, { itemEventId: 'ie335-dib', itemId: '6470', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientsideTabIndex", actionType: "click", responseType: 'actions', submitUrl: "shared.action.activate-tab?itemAlias=tabs&tabIndex=1", itemAlias: "btnClientsideTabIndex", waitForCompletion: false, containerName: "dibexActionActivateTab", handlers: [] }, this.clientData, { itemEventId: 'ie434-dib', itemId: '7351', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnTabOnOtherContainer", actionType: "click", responseType: 'actions', submitUrl: "shared.action.activate-tab?itemAlias=DatabaseHolder&containerName=dibAdmin", itemAlias: "btnTabOnOtherContainer", waitForCompletion: false, containerName: "dibexActionActivateTab", handlers: [] }, this.clientData, { itemEventId: 'ie461-dib', itemId: '7642', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexActionActivateTab', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexActionActivateTab' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexActionActivateTabComponent_Factory(t) { return new (t || dibexActionActivateTabComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexActionActivateTabComponent, selectors: [["dibex-action-activate-tab"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 39, vars: 21, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6466", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionActivateTab", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6467", "dibComponent", "card", 2, "width", "1035px !important", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "15px"], [3, "dibPort"], ["id", "ci6468", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci6469", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci7351", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientsideTabIndex", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["mat-raised-button", "", "color", "primary", "id", "ci6470", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnServerside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["mat-raised-button", "", "color", "primary", "id", "ci7642", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnTabOnOtherContainer", "type", "button", 2, "width", "250px !important", 3, "containerPortId"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci6471", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexActionActivateTab", "dibTabGoToParent", "", "dibAutoTabSelection", "6472,6473,6474", "dibAutoTabSelectionAliases", "tabPerson,tabCompany,tabStaff", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "column"], ["tabReference6472", ""], ["mat-tab-label", ""], ["id", "ci6472", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["tabReference6473", ""], ["id", "ci6473", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["tabReference6474", ""], ["id", "ci6474", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["mode", "indeterminate"], ["tabPortId", "6472", "dibid", "tabPerson__caption.6472", 3, "value"], ["tabPortId", "6473", "dibid", "tabCompany__caption.6473", 3, "value"], ["tabPortId", "6474", "dibid", "tabStaff__caption.6474", 3, "value"]], template: function dibexActionActivateTabComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexActionActivateTabComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexActionActivateTabComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "div", 8);
+                        i0.ɵɵelementContainerStart(9, 7);
+                        i0.ɵɵelementStart(10, "button", 9)(11, "span", 10);
+                        i0.ɵɵtext(12, "Origin: Client-side");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(13, "button", 11)(14, "span", 10);
+                        i0.ɵɵtext(15, "Origin: Client-side (uses tabIndex)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(16, "button", 12)(17, "span", 10);
+                        i0.ɵɵtext(18, "Origin: Server-side");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(19, "button", 13)(20, "span", 10);
+                        i0.ɵɵtext(21, "Activate Tab on Different Opened Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(22, "div", 14)(23, "mat-tab-group", 15)(24, "mat-tab", 16, 17);
+                        i0.ɵɵtemplate(26, dibexActionActivateTabComponent_ng_template_26_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(27, "div", 19);
+                        i0.ɵɵelementContainer(28, 7);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(29, "mat-tab", 16, 20);
+                        i0.ɵɵtemplate(31, dibexActionActivateTabComponent_ng_template_31_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(32, "div", 21);
+                        i0.ɵɵelementContainer(33, 7);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(34, "mat-tab", 16, 22);
+                        i0.ɵɵtemplate(36, dibexActionActivateTabComponent_ng_template_36_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(37, "div", 23);
+                        i0.ɵɵelementContainer(38, 7);
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(19, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6466");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6467");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6468");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Client-side");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Client-side (uses tabIndex)");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Server-side");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Activate Tab on Different Opened Container");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6472");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6473");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6474");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibListenersDirective, i6.MatButton, i7.MatProgressBar, i8.MatCard, i8.MatCardContent, i9.MatTabLabel, i9.MatTab, i9.MatTabGroup], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexActionActivateTab'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexActionActivateTabComponent.prototype, "reloadContainer", null);
+            exports_1("dibexActionActivateTabComponent", dibexActionActivateTabComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionActivateTabComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-action-activate-tab', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6466 dibComponent=subcontainer   ><ng-container [dibPort]="'6466'" parentContainerName=dibexActionActivateTab  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:1035px !important;   overflow:auto !important;" id=ci6467 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 15px;"  ><ng-container [dibPort]="'6467'" ><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci6468 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6468'" ><button  mat-raised-button color=primary  id=ci6469 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Client-side'"  type=button  ><span class=dibButtonCaption >Origin: Client-side</span></button><button  mat-raised-button color=primary  id=ci7351 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientsideTabIndex   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Client-side (uses tabIndex)'"  type=button  ><span class=dibButtonCaption >Origin: Client-side (uses tabIndex)</span></button><button  mat-raised-button color=primary  id=ci6470 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnServerside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Server-side'"  type=button  ><span class=dibButtonCaption >Origin: Server-side</span></button><button  mat-raised-button color=primary  id=ci7642 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnTabOnOtherContainer   style="  width:250px !important;   "  [attr.aria-label]="'Activate Tab on Different Opened Container'"  type=button  ><span class=dibButtonCaption >Activate Tab on Different Opened Container</span></button></ng-container></div><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci6471 dibComponent=tabs   style="  "  itemAlias=tabs  [portId]="portId" containerName=dibexActionActivateTab  dibTabGoToParent   dibAutoTabSelection="6472,6473,6474"  dibAutoTabSelectionAliases="tabPerson,tabCompany,tabStaff"  [container]="this"  ><mat-tab   #tabReference6472  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabPerson', 'dibexActionActivateTab.tabPerson', 'Person')" tabPortId=6472  dibid="tabPerson__caption.6472"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  " id=ci6472 dibComponent=div  ><ng-container [dibPort]="'6472'" ></ng-container></div></mat-tab><mat-tab   #tabReference6473  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabCompany', 'dibexActionActivateTab.tabCompany', 'Company')" tabPortId=6473  dibid="tabCompany__caption.6473"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  " id=ci6473 dibComponent=div  ><ng-container [dibPort]="'6473'" ></ng-container></div></mat-tab><mat-tab   #tabReference6474  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabStaff', 'dibexActionActivateTab.tabStaff', 'Staff')" tabPortId=6474  dibid="tabStaff__caption.6474"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  " id=ci6474 dibComponent=div  ><ng-container [dibPort]="'6474'" ></ng-container></div></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexActionActivateTabModule = class dibexActionActivateTabModule {
+                static entry = dibexActionActivateTabComponent;
+                static ɵfac = function dibexActionActivateTabModule_Factory(t) { return new (t || dibexActionActivateTabModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexActionActivateTabModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexActionActivateTabModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionActivateTabModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexActionActivateTabComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexActionActivateTabModule, { declarations: [dibexActionActivateTabComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule] }); })();
+        }
+    };
+});

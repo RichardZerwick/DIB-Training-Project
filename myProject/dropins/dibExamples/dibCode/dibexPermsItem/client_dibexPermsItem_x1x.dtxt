@@ -1,0 +1,721 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "@angular/router", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@angular/material/checkbox", "@angular/material/tabs", "@angular/material/datepicker", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, router_1, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, checkbox_1, tabs_1, datepicker_1, core_4, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, _c0, importsRequired, dibexPermsItemComponent, containerModules, fullDateTimeOptions, dibexPermsItemModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPermsItemComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 44);
+    } }
+    function dibexPermsItemComponent_mat_error_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_29_Template(rf, ctx) { if (rf & 1) {
+        const _r19 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 45);
+        i0.ɵɵlistener("click", function dibexPermsItemComponent_mat_icon_29_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r19); const ctx_r18 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r18.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_30_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 46);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 47);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_error_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_error_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 80 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_38_Template(rf, ctx) { if (rf & 1) {
+        const _r21 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 45);
+        i0.ɵɵlistener("click", function dibexPermsItemComponent_mat_icon_38_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r21); const ctx_r20 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r20.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_39_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 46);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 47);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_error_47_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 100 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_48_Template(rf, ctx) { if (rf & 1) {
+        const _r23 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 45);
+        i0.ɵɵlistener("click", function dibexPermsItemComponent_mat_icon_48_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r23); const ctx_r22 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r22.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_49_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 46);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_50_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 47);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_58_Template(rf, ctx) { if (rf & 1) {
+        const _r25 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 45);
+        i0.ɵɵlistener("click", function dibexPermsItemComponent_mat_icon_58_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r25); const ctx_r24 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r24.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_59_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 46);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexPermsItemComponent_mat_icon_60_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 47);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i1 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i2 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
+                i3 = router_1_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i7 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i11 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i15 = card_1_1;
+            },
+            function (checkbox_1_1) {
+                checkbox_1 = checkbox_1_1;
+                i8 = checkbox_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i9 = datepicker_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            },
+            function (i14_1) {
+                i14 = i14_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPermsItemComponent = class dibexPermsItemComponent extends shared_1.BaseComponent {
+                crudService;
+                httpClient;
+                urlService;
+                router;
+                sd;
+                cd;
+                allClientData;
+                model;
+                clientData;
+                htmlContent = '';
+                view = { container: { id: 243, name: 'dibexPermsItem', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexPermProjectForm", "dibexPermProjectGrid"], refreshChildContainers: { "dibexPermProjectGrid": ['dibexPermProjectGrid*5947'], "dibexPermProjectForm": ['dibexPermProjectForm*5948'], "_": ['dibDocsExampleHtml*5933'] }, dropin: 'form', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ["id"], recordStatus: 'create', debug: false, debugItem: false };
+                constructor(injector, crudService, httpClient, urlService, router, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.crudService = crudService;
+                    this.httpClient = httpClient;
+                    this.urlService = urlService;
+                    this.router = router;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPermsItem');
+                    this.containerName = 'dibexPermsItem'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { id: { itemId: 5942, type: 'number', fieldAlias: 'id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required], updateOn: 'blur' }), create: false, update: false, required: true, itemAlias: 'id', default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, name: { itemId: 5943, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(80)], updateOn: 'blur' }), create: true, update: false, required: true, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, phone: { itemId: 5944, type: 'text', fieldAlias: 'phone', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.maxLength(100)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, vip: { itemId: 5945, type: 'boolean', fieldAlias: 'vip', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: false, required: false, itemAlias: null, default: '', dataType: 'boolean', contentType: 'tick', changeUrl: false }, start_date: { itemId: 5949, type: 'date', fieldAlias: 'start_date', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, };
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.addControl('phone', this.model.modelItems.phone.formControl);
+                    this.model.$formGroup.addControl('vip', this.model.modelItems.vip.formControl);
+                    this.model.$formGroup.addControl('start_date', this.model.modelItems.start_date.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.canRead = true;
+                    this.canUpdate = true;
+                    this.canCreate = true;
+                    this.eventService.on(`reload${this.containerName}`).subscribe(_ => { });
+                    this.setup();
+                    this.reloadContainer();
+                }
+                setup() { this.setupPrimaryKeys(); this.setupDelete(); this.setupSubmit(); }
+                setupSubmit() {
+                    this.submit$ = new rxjs_1.Subject();
+                    this.submit$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.busy = true; }), operators_1.switchMap(() => this.crudService.update(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, model: this.model, formGroup: this.model.$formGroup }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => {
+                        if (response.message == "No changes were made to existing database values.") {
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        if (response.success) {
+                            if (this.view.recordStatus == 'create') {
+                                this.primaryKeys$.next(response.records);
+                            }
+                            else {
+                                this.primaryKeys$.next(response.records);
+                            }
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        else {
+                            if (this.view.recordStatus == 'create') { }
+                            else { }
+                        }
+                    })).subscribe();
+                }
+                onSubmit() { this.submit$.next(null); }
+                setupDelete() { this.delete$ = new rxjs_1.Subject(); this.delete$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.busy = true; }), operators_1.switchMap(() => this.crudService.delete(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => { if (response.success) {
+                    this.primaryKeys$.next(response.records);
+                } })).subscribe(); }
+                deleteRecord() { this.messagingService.confirm({ title: 'Delete Record', message: 'Are you sure you want to delete?', okText: 'Yes', cancelText: 'Cancel' }).then(result => { if (result !== false) {
+                    this.delete$.next(null);
+                } }); }
+                setupPrimaryKeys() {
+                    this.primaryKeys$ = new rxjs_1.Subject();
+                    this.position$ = new rxjs_1.Subject();
+                    this.primaryKeys$
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(primaryKeys => {
+                        this.view.recordStatus = 'create';
+                        if (!!primaryKeys && Object.keys(primaryKeys).length > 0) {
+                            this.view.recordStatus = 'update';
+                        }
+                        this.primaryKeys = primaryKeys;
+                        this.updateUrl();
+                        this.busy = true;
+                    }), operators_1.switchMap(primaryKeys => {
+                        if (this.canCreate || (!!primaryKeys === true && Object.keys(primaryKeys).length > 0)) {
+                            return this.crudService.read(this.model.crudUrl, this.view.container.name, { primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, canCreate: this.canCreate }).pipe(operators_1.catchError((err) => { this.busy = false; return rxjs_1.of({ success: false, message: `${err}` }); }), operators_1.finalize(() => { }));
+                        }
+                        this.busy = false;
+                        return rxjs_1.empty();
+                    }), operators_1.switchMap(response => {
+                        this.busy = false;
+                        if (response.success) {
+                            this.model.$formGroup.reset();
+                            if (Array.isArray(response.records) && response.records.length > 0) {
+                                response.records = response.records[0];
+                            }
+                            if (this.view.recordStatus == 'update' && Array.isArray(response.records) && this.view.container.activeFilter !== null && this.view.container.activeFilter.length > 0) {
+                                if (this.canCreate) {
+                                    this.addRecord();
+                                }
+                            }
+                            if (response.records.id !== undefined) {
+                                this.setValue('id', response.records.id);
+                            }
+                            if (response.records.name !== undefined) {
+                                this.setValue('name', response.records.name);
+                            }
+                            if (response.records.phone !== undefined) {
+                                this.setValue('phone', response.records.phone);
+                            }
+                            if (response.records.vip !== undefined) {
+                                this.setValue('vip', response.records.vip == 1);
+                            }
+                            if (response.records.start_date !== undefined) {
+                                this.setValue('start_date', this.getDate(response.records.start_date));
+                            }
+                            this.model.updateFormDefaults(this);
+                            this.portService.setUrlDefaults(false, this);
+                            Object.keys(this.model.$formGroup.controls).forEach(field => { if (this.model.modelItems[field][this.view.recordStatus]) {
+                                this.model.$formGroup.controls[field].enable();
+                            }
+                            else {
+                                this.model.$formGroup.controls[field].disable();
+                            } });
+                            this.reloadSubcontainers();
+                            return this.paging();
+                        }
+                    }), operators_1.tap((response) => { window.dispatchEvent(new Event('resize')); this.pagingInfo = response.records; if (response.records !== null && response.records.current !== null && response.records.current !== undefined)
+                        this.position$.next(response.records.current.current); })).subscribe();
+                }
+                addRecord() {
+                    if (this.containerNameOpenedByUrl()) {
+                        const currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!!currentUrlInfo.params !== false) {
+                            Object.keys(this.primaryKeys).forEach((key, value) => { delete currentUrlInfo.params[`primary_${key}`]; });
+                            currentUrlInfo.params['record'] = 'new';
+                        }
+                        else {
+                            currentUrlInfo.params = { record: 'new' };
+                        }
+                        Object.keys(currentUrlInfo.params).forEach((value) => { if (value.indexOf('primary_') !== -1) {
+                            delete currentUrlInfo.params[value];
+                        } });
+                        this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, currentUrlInfo.params);
+                    }
+                    this.primaryKeys$.next(null);
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                updateUrl() {
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    if (!!this.primaryKeys
+                        && currentUrlInfo.containerName == this.view.container.name
+                        && Object.keys(this.primaryKeys).length > 0) {
+                        let urlKeys = {};
+                        if (!!currentUrlInfo.params) {
+                            urlKeys = currentUrlInfo.params;
+                        }
+                        Object.keys(this.primaryKeys).forEach((key, value) => { delete urlKeys['record']; urlKeys[`primary_${key}`] = this.primaryKeys[key]; });
+                        currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!this.navigationService.paramsEqual(urlKeys, currentUrlInfo.params)) {
+                            this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, urlKeys, { changeUrl: true, originContainer: this });
+                        }
+                    }
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPermsItem', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPermsItem' });
+                    this.onLoad();
+                }
+                onLoad() {
+                    if (!this.canRead && !this.canCreate)
+                        return;
+                    if (!this.canRead && this.canCreate) {
+                        this.addRecord();
+                        return;
+                    }
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    let primaryKeys = {};
+                    if (currentUrlInfo.containerName == this.view.container.name) {
+                        this.view.primaryKeys.forEach(key => { if (!!currentUrlInfo.params[`primary_${key}`]) {
+                            primaryKeys[key] = currentUrlInfo.params[`primary_${key}`];
+                        } });
+                        if (Object.keys(primaryKeys).length > 0) {
+                            this.primaryKeys$.next(primaryKeys);
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.New) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.primaryKeys$.next(null); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.First) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.First); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.Last) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.Last); });
+                            return;
+                        }
+                    }
+                    if (Object.keys(primaryKeys).length == 0) {
+                        this.recordPosition(1).subscribe((response) => { this.primaryKeys$.next(response.records); });
+                        return;
+                    }
+                    this.primaryKeys$.next(primaryKeys);
+                }
+                goToRecord(formPosition) { if (!!this.pagingInfo && !!this.pagingInfo[formPosition])
+                    this.primaryKeys$.next(this.pagingInfo[formPosition]); }
+                recordPosition(position) { return this.crudService.recordPosition(`dibexPermsItem`, position, { clientData: this.clientData, activeFilter: this.view.container.activeFilter, }); }
+                paging() {
+                    if (!this.canRead)
+                        return rxjs_1.of({ records: { current: { current: 1 } } });
+                    if (!!this.primaryKeys == true && Object.keys(this.primaryKeys).length > 0) {
+                        return this.crudService.recordInfo('dibexPermsItem', { primaryKeys: this.primaryKeys, activeFilter: this.view.container.activeFilter, clientData: this.clientData });
+                    }
+                    else {
+                        return this.recordPosition(1).pipe(operators_1.switchMap((result) => this.crudService.recordInfo('dibexPermsItem', { primaryKeys: result.records, activeFilter: this.view.container.activeFilter, clientData: this.clientData }).pipe(operators_1.map((response) => {
+                            if (response.records == null) {
+                                return { records: { current: { current: 1 } } };
+                            }
+                            return response;
+                        }))));
+                    }
+                }
+                static ɵfac = function dibexPermsItemComponent_Factory(t) { return new (t || dibexPermsItemComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.CrudService), i0.ɵɵdirectiveInject(i2.HttpClient), i0.ɵɵdirectiveInject(i1.UrlService), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i1.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPermsItemComponent, selectors: [["dibex-perms-item"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 128, vars: 53, consts: [["mode", "indeterminate", 4, "ngIf"], ["containerName", "dibexPermsItem", 2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5933", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPermsItem", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5934", "dibComponent", "row", "dib-inject-content", "replace", 2, "width", "1300px !important", "padding", "5px 10px 6px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "flex", "1 1 0%"], [3, "dibPort"], ["mat-mini-fab", "", "color", "accent", "id", "ci5935", "dibComponent", "btnSave", "aria-label", "Save record", "matTooltipClass", "dib-tooltip", "type", "submit", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/save.svg"], ["mat-mini-fab", "", "color", "accent", "id", "ci5936", "dibComponent", "btnAdd", "aria-label", "Add new record", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/dibAdmin/images/btn_add.svg"], ["mat-mini-fab", "", "color", "accent", "id", "ci5937", "dibComponent", "btnDelete", "aria-label", "Delete record", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/delete.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci5938", "dibComponent", "btnReload", "aria-label", "Restore saved data", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci5939", "dibComponent", "span", 2, "width", "150px !important", 3, "innerHtml"], ["id", "ci5940", "dibComponent", "formPaging"], ["dibComponentName", "formPager", "dibDropin", "form", "dibComponentLocation", "/peff/Template/component/dibexPermsItem?componentPath=pager&dropin=setNgxMaterial.form", 3, "dibComponentParent"], ["id", "ci5951", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", "flex-wrap", "wrap"], ["id", "ci5941", "dibComponent", "card", 2, "width", "300px !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], ["id", "ci5942", "dibComponent", "inputNumber", "item-alias", "id", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "id", "required", "true", "name", "id"], [4, "ngIf"], ["class", "dib_form_input_done", "matSuffix", "", 3, "click", 4, "ngIf"], ["class", "dib_form_input_done_all", "matSuffix", "", 4, "ngIf"], ["class", "dib_form_input_priority_high", "matSuffix", "", 4, "ngIf"], ["id", "ci5943", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "name", "maxlength", "80", "required", "true", "name", "name"], ["id", "ci5945", "dibComponent", "checkbox", "formControlName", "vip"], ["id", "ci5944", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "phone", "maxlength", "100", "name", "phone"], ["id", "ci5949", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "start_date", "name", "start_date", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker5949", ""], ["id", "ci5952", "dibComponent", "card", 2, "width", "300px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["id", "ci5954", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci5955", "dibComponent", "comment"], ["id", "ci5956", "dibComponent", "comment"], ["id", "ci5953", "dibComponent", "comment"], ["id", "ci5958", "dibComponent", "comment"], ["mode", "indeterminate"], ["matSuffix", "", 1, "dib_form_input_done", 3, "click"], ["matSuffix", "", 1, "dib_form_input_done_all"], ["matSuffix", "", 1, "dib_form_input_priority_high"]], template: function dibexPermsItemComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r26 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexPermsItemComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPermsItemComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "button", 7);
+                        i0.ɵɵelement(8, "dib-icon", 8);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(9, "button", 9);
+                        i0.ɵɵlistener("click", function dibexPermsItemComponent_Template_button_click_9_listener() { return ctx.addRecord(); });
+                        i0.ɵɵelement(10, "dib-icon", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(11, "button", 11);
+                        i0.ɵɵlistener("click", function dibexPermsItemComponent_Template_button_click_11_listener() { return ctx.deleteRecord(); });
+                        i0.ɵɵelement(12, "dib-icon", 12);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(13, "button", 13);
+                        i0.ɵɵlistener("click", function dibexPermsItemComponent_Template_button_click_13_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(14, "dib-icon", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(15, "span", 15);
+                        i0.ɵɵpipe(16, "safeHtml");
+                        i0.ɵɵelementStart(17, "div", 16);
+                        i0.ɵɵelementContainer(18, 17);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(19, "div", 18);
+                        i0.ɵɵelementContainerStart(20, 6);
+                        i0.ɵɵelementStart(21, "mat-card", 19)(22, "mat-card-content", 20);
+                        i0.ɵɵelementContainerStart(23, 6);
+                        i0.ɵɵelementStart(24, "mat-form-field", 21)(25, "mat-label");
+                        i0.ɵɵtext(26, "Id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(27, "input", 22);
+                        i0.ɵɵtemplate(28, dibexPermsItemComponent_mat_error_28_Template, 2, 0, "mat-error", 23);
+                        i0.ɵɵtemplate(29, dibexPermsItemComponent_mat_icon_29_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(30, dibexPermsItemComponent_mat_icon_30_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵtemplate(31, dibexPermsItemComponent_mat_icon_31_Template, 2, 0, "mat-icon", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(32, "mat-form-field", 27)(33, "mat-label");
+                        i0.ɵɵtext(34, "Name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(35, "input", 28);
+                        i0.ɵɵtemplate(36, dibexPermsItemComponent_mat_error_36_Template, 2, 0, "mat-error", 23);
+                        i0.ɵɵtemplate(37, dibexPermsItemComponent_mat_error_37_Template, 2, 0, "mat-error", 23);
+                        i0.ɵɵtemplate(38, dibexPermsItemComponent_mat_icon_38_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(39, dibexPermsItemComponent_mat_icon_39_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵtemplate(40, dibexPermsItemComponent_mat_icon_40_Template, 2, 0, "mat-icon", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(41, "mat-checkbox", 29);
+                        i0.ɵɵtext(42, " VIP ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(43, "mat-form-field", 30)(44, "mat-label");
+                        i0.ɵɵtext(45, "Phone");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(46, "input", 31);
+                        i0.ɵɵtemplate(47, dibexPermsItemComponent_mat_error_47_Template, 2, 0, "mat-error", 23);
+                        i0.ɵɵtemplate(48, dibexPermsItemComponent_mat_icon_48_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(49, dibexPermsItemComponent_mat_icon_49_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵtemplate(50, dibexPermsItemComponent_mat_icon_50_Template, 2, 0, "mat-icon", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(51, "mat-form-field", 32)(52, "mat-label");
+                        i0.ɵɵtext(53, "Start Date");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(54, "input", 33);
+                        i0.ɵɵlistener("focus", function dibexPermsItemComponent_Template_input_focus_54_listener() { i0.ɵɵrestoreView(_r26); const _r14 = i0.ɵɵreference(57); return i0.ɵɵresetView(_r14.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(55, "mat-datepicker-toggle", 34)(56, "mat-datepicker", null, 35);
+                        i0.ɵɵtemplate(58, dibexPermsItemComponent_mat_icon_58_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(59, dibexPermsItemComponent_mat_icon_59_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵtemplate(60, dibexPermsItemComponent_mat_icon_60_Template, 2, 0, "mat-icon", 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(61, "mat-card", 36)(62, "mat-card-content", 37);
+                        i0.ɵɵelementContainerStart(63, 6);
+                        i0.ɵɵelementStart(64, "span", 38)(65, "div", 39);
+                        i0.ɵɵtext(66, " The ");
+                        i0.ɵɵelementStart(67, "b");
+                        i0.ɵɵtext(68, "name");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(69, " and ");
+                        i0.ɵɵelementStart(70, "b");
+                        i0.ɵɵtext(71, "vip");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(72, " fields do not have ");
+                        i0.ɵɵelementStart(73, "b");
+                        i0.ɵɵtext(74, "update");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(75, " rights and therefore the system disables them on existing records. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(76, "span", 40)(77, "div", 39);
+                        i0.ɵɵtext(78, " The ");
+                        i0.ɵɵelementStart(79, "b");
+                        i0.ɵɵtext(80, "phone");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(81, " field has conditional ");
+                        i0.ɵɵelementStart(82, "b");
+                        i0.ɵɵtext(83, "read/view");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(84, ", ");
+                        i0.ɵɵelementStart(85, "b");
+                        i0.ɵɵtext(86, "update");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(87, " and ");
+                        i0.ɵɵelementStart(88, "b");
+                        i0.ɵɵtext(89, "create");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(90, " rights: ");
+                        i0.ɵɵelementStart(91, "b");
+                        i0.ɵɵtext(92, "vip=1");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(93, "span", 41)(94, "div", 39);
+                        i0.ɵɵtext(95, " The ");
+                        i0.ɵɵelementStart(96, "b");
+                        i0.ɵɵtext(97, "start_date");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(98, " field has ");
+                        i0.ɵɵelementStart(99, "b");
+                        i0.ɵɵtext(100, "create");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(101, " and ");
+                        i0.ɵɵelementStart(102, "b");
+                        i0.ɵɵtext(103, "view/read");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(104, " rights, but conditional ");
+                        i0.ɵɵelementStart(105, "b");
+                        i0.ɵɵtext(106, "update");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(107, " rights: ");
+                        i0.ɵɵelementStart(108, "b");
+                        i0.ɵɵtext(109, "vip=1");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(110, "span", 42)(111, "div", 39);
+                        i0.ɵɵtext(112, " Note, the ");
+                        i0.ɵɵelementStart(113, "b");
+                        i0.ɵɵtext(114, "id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(115, " field is an auto-increment field and therefore disabled by default (without item permissions). ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(116, "span", 43)(117, "div", 39);
+                        i0.ɵɵtext(118, " The following items are completely removed for the Admin user: ");
+                        i0.ɵɵelementStart(119, "b");
+                        i0.ɵɵtext(120, "btnAuditTrail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(121, ", ");
+                        i0.ɵɵelementStart(122, "b");
+                        i0.ɵɵtext(123, "updated");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(124, "-field, the ");
+                        i0.ɵɵelementStart(125, "b");
+                        i0.ɵɵtext(126, "tabs");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(127, " which host containers. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        const _r14 = i0.ɵɵreference(57);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(51, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5933");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5934");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Save record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Add new record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Delete record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Restore saved data")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(16, 49, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibComponentParent", ctx);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5951");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5941");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Id");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Name");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("name", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("name", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("name", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Phone");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("phone", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("phone", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r14)("placeholder", "Start Date");
+                        i0.ɵɵattribute("aria-label", "Start Date");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r14);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("start_date", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("start_date", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("start_date", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5952");
+                    } }, dependencies: [i4.NgClass, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NumberValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.RequiredValidator, i6.MaxLengthValidator, i6.FormGroupDirective, i6.FormControlName, i1.DibIconComponent, i1.DibPortDirective, i1.DibComponentDirective, i1.DibRemoveFocusDirective, i7.MatMiniFabButton, i8.MatCheckbox, i9.MatDatepicker, i9.MatDatepickerInput, i9.MatDatepickerToggle, i10.MatFormField, i10.MatLabel, i10.MatError, i10.MatPrefix, i10.MatSuffix, i11.MatIcon, i12.MatInput, i13.MatProgressBar, i14.MatTooltip, i15.MatCard, i15.MatCardContent, i1.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPermsItem'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPermsItemComponent.prototype, "reloadContainer", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('goToRecorddibexPermsItem'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [String]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPermsItemComponent.prototype, "goToRecord", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('recordPositiondibexPermsItem'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Number]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPermsItemComponent.prototype, "recordPosition", null);
+            exports_1("dibexPermsItemComponent", dibexPermsItemComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPermsItemComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-perms-item', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" containerName=dibexPermsItem  [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5933 dibComponent=subcontainer   ><ng-container [dibPort]="'5933'" parentContainerName=dibexPermsItem  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  width:1300px !important;   padding:5px 10px 6px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;  flex-wrap: wrap;  flex: 1 1 0%;  " id=ci5934 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5934'" ><button mat-mini-fab color=accent  id=ci5935 dibComponent=btnSave   style="  " aria-label="Save record"  [matTooltip]="'Save record'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=submit  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/save.svg"></dib-icon></button><button mat-mini-fab color=accent  id=ci5936 dibComponent=btnAdd   style="  " aria-label="Add new record"  [matTooltip]="'Add new record'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="addRecord()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/dibAdmin/images/btn_add.svg"></dib-icon></button><button mat-mini-fab color=accent  id=ci5937 dibComponent=btnDelete   style="  " aria-label="Delete record"  [matTooltip]="'Delete record'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="deleteRecord()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/delete.svg"></dib-icon></button><button   mat-mini-fab color=primary  id=ci5938 dibComponent=btnReload   style="  " aria-label="Restore saved data"  [matTooltip]="'Restore saved data'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><span  id=ci5939 dibComponent=span   style="  width:150px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml" ></span><div  id=ci5940 dibComponent=formPaging   style="  " ><ng-container  dibComponentName=formPager   dibDropin=form   dibComponentLocation="/peff/Template/component/dibexPermsItem?componentPath=pager&dropin=setNgxMaterial.form"   [dibComponentParent]="this"  ></ng-container></div></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  flex-wrap: wrap;  " id=ci5951 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5951'" ><mat-card   style="  width:300px !important;   " id=ci5941 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;"  ><ng-container [dibPort]="'5941'" ><mat-form-field  id=ci5942 dibComponent=inputNumber   style="  "  item-alias=id   appearance=standard  ><mat-label >Id</mat-label><input   matInput  type=number   formControlName=id   required=true  name=id   [attr.aria-label]="'Id'" ><mat-error *ngIf="hasError('id','required',model.$formGroup)">Please enter a value</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci5943 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   maxlength='80'  required=true  name=name   [attr.aria-label]="'Name'" ><mat-error *ngIf="hasError('name','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('name','maxlength',model.$formGroup)">Please enter 80 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('name', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('name', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('name', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-checkbox  id=ci5945 dibComponent=checkbox   style="  "  formControlName=vip   >   VIP  </mat-checkbox><mat-form-field id=ci5944 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Phone</mat-label><input   matInput  type=text   formControlName=phone   maxlength='100'  name=phone   [attr.aria-label]="'Phone'" ><mat-error *ngIf="hasError('phone','maxlength',model.$formGroup)">Please enter 100 chars or less</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('phone', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('phone', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('phone', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci5949 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>Start Date</mat-label><input   matInput [matDatepicker]="datePicker5949"   [placeholder]="'Start Date'"   formControlName=start_date   name=start_date   [attr.aria-label]="'Start Date'"  (focus)="datePicker5949.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker5949" ></mat-datepicker-toggle><mat-datepicker #datePicker5949 ></mat-datepicker><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('start_date', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('start_date', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('start_date', model.$formGroup)" matSuffix >priority_high</mat-icon></mat-form-field></ng-container></mat-card-content></mat-card><mat-card   style="  width:300px !important;   flex: 1 1 0%;  " id=ci5952 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'5952'" ><span  id=ci5954 dibComponent=comment   style="  " ><div class=dib-comment > The <b>name</b> and <b>vip</b> fields do not have <b>update</b> rights and therefore the system disables them on existing records.  </div></span><span  id=ci5955 dibComponent=comment   style="  " ><div class=dib-comment > The <b>phone</b> field has conditional <b>read/view</b>, <b>update</b> and <b>create</b> rights: <b>vip=1</b></div></span><span  id=ci5956 dibComponent=comment   style="  " ><div class=dib-comment > The <b>start_date</b> field has <b>create</b> and <b>view/read</b> rights, but conditional <b>update</b> rights: <b>vip=1</b></div></span><span  id=ci5953 dibComponent=comment   style="  " ><div class=dib-comment > Note, the <b>id</b> field is an auto-increment field and therefore disabled by default (without item permissions).  </div></span><span  id=ci5958 dibComponent=comment   style="  " ><div class=dib-comment > The following items are completely removed for the Admin user: <b>btnAuditTrail</b>, <b>updated</b>-field, the <b>tabs</b> which host containers.  </div></span></ng-container></mat-card-content></mat-card></ng-container></div></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.CrudService }, { type: i2.HttpClient }, { type: i1.UrlService }, { type: i3.Router }, { type: i0.ViewContainerRef }, { type: i1.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [], goToRecord: [], recordPosition: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, checkbox_1.MatCheckboxModule, tabs_1.MatTabsModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPermsItemModule = class dibexPermsItemModule {
+                static entry = dibexPermsItemComponent;
+                static ɵfac = function dibexPermsItemModule_Factory(t) { return new (t || dibexPermsItemModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPermsItemModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPermsItemModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPermsItemModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPermsItemComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPermsItemModule, { declarations: [dibexPermsItemComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, checkbox_1.MatCheckboxModule, tabs_1.MatTabsModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule] }); })();
+        }
+    };
+});

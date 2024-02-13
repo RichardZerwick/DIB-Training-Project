@@ -1,0 +1,262 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexActionItemHandlerComponent, containerModules, fullDateTimeOptions, dibexActionItemHandlerModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexActionItemHandlerComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 24);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexActionItemHandlerComponent = class dibexActionItemHandlerComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 275, name: 'dibexActionItemHandler', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6495'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: { btnClientside: { 'disabled': false, 'visible': true, 'class': null, 'style': null }, cardHidden: { 'disabled': false, 'visible': true, 'class': null, 'style': null }, }, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexActionItemHandler');
+                    this.containerName = 'dibexActionItemHandler'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputText: { itemId: 6503, type: 'text', fieldAlias: 'inputText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputNumber: { itemId: 6504, type: 'number', fieldAlias: 'inputNumber', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, inputColor: { itemId: 6505, type: 'text', fieldAlias: 'inputColor', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputText', this.model.modelItems.inputText.formControl);
+                    this.model.$formGroup.addControl('inputNumber', this.model.modelItems.inputNumber.formControl);
+                    this.model.$formGroup.addControl('inputColor', this.model.modelItems.inputColor.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('spanF12', `<i>View network requests in Developer Console (press F12 in Chrome -> Network)</i>`);
+                    this.setInnerHtml('spanF12', `<i>View network requests in Developer Console (press F12 in Chrome -> Network)</i>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientside", actionType: "click", responseType: 'actions', submitUrl: "shared.action.item-handler?cardHidden=%7B%22visible%22:false%7D&btnClientside=%7B%22style%22:%7B%22height%22:%22200px%22,%22background%22:%22blue%22%7D%7D", itemAlias: "btnClientside", waitForCompletion: false, containerName: "dibexActionItemHandler", handlers: [] }, this.clientData, { itemEventId: 'ie338-dib', itemId: '6499', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnServerside", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/itemHandler", itemAlias: "btnServerside", waitForCompletion: false, containerName: "dibexActionItemHandler", handlers: [] }, this.clientData, { itemEventId: 'ie339-dib', itemId: '6500', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexActionItemHandler', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexActionItemHandler' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexActionItemHandlerComponent_Factory(t) { return new (t || dibexActionItemHandlerComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexActionItemHandlerComponent, selectors: [["dibex-action-item-handler"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 41, vars: 32, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6495", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionItemHandler", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6496", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%"], [3, "dibPort"], ["id", "ci6497", "dibComponent", "card", 2, "width", "500px !important", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "15px"], ["id", "ci6501", "dibComponent", "span", 3, "innerHtml"], ["id", "ci6506", "dibComponent", "comment", 2, "width", "500px !important"], [1, "dib-comment"], ["id", "ci6498", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "primary", "id", "ci6499", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientside", "type", "button", 2, "width", "150px !important", 3, "containerPortId", "hidden", "dibDisabled", "ngClass", "ngStyle"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci6500", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnServerside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["id", "ci6502", "dibComponent", "card", 3, "hidden", "dibDisabled", "ngClass", "ngStyle"], [3, "hidden", "dibDisabled", "ngClass", "ngStyle"], ["id", "ci6503", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText", "name", "inputText"], ["id", "ci6504", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "inputNumber", "name", "inputNumber"], ["id", "ci6505", "dibComponent", "inputColor", "appearance", "standard"], ["matInput", "", "type", "color", "formControlName", "inputColor", "name", "inputColor"], ["mode", "indeterminate"]], template: function dibexActionItemHandlerComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexActionItemHandlerComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexActionItemHandlerComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "mat-card", 7)(8, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(9, 6);
+                        i0.ɵɵelement(10, "span", 9);
+                        i0.ɵɵpipe(11, "safeHtml");
+                        i0.ɵɵelementStart(12, "span", 10)(13, "div", 11);
+                        i0.ɵɵtext(14, " Client-side button will hide \"Hidden Card\" and change size of Client-side Button when pushed. Server-side Button will change size and color of Client-side button and show the Hidden Card. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "div", 12);
+                        i0.ɵɵelementContainerStart(16, 6);
+                        i0.ɵɵelementStart(17, "button", 13)(18, "span", 14);
+                        i0.ɵɵtext(19, "Client-side Button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(20, "button", 15)(21, "span", 14);
+                        i0.ɵɵtext(22, "Server-side Button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(23, "mat-card", 16)(24, "mat-card-header")(25, "mat-card-title");
+                        i0.ɵɵtext(26, "Hidden Card");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(27, "mat-card-content", 17);
+                        i0.ɵɵelementContainerStart(28, 6);
+                        i0.ɵɵelementStart(29, "mat-form-field", 18)(30, "mat-label");
+                        i0.ɵɵtext(31, "Input Text");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(32, "input", 19);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(33, "mat-form-field", 20)(34, "mat-label");
+                        i0.ɵɵtext(35, "Input Number");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(36, "input", 21);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(37, "mat-form-field", 22)(38, "mat-label");
+                        i0.ɵɵtext(39, "Input Color");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(40, "input", 23);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(30, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6495");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6496");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6497");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(11, 28, ctx.getHtml("spanF12")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6498");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", !ctx.view.items.btnClientside.visible)("dibDisabled", ctx.view.items.btnClientside.disabled)("ngClass", ctx.view.items.btnClientside.class)("ngStyle", ctx.view.items.btnClientside.style);
+                        i0.ɵɵattribute("aria-label", "Client-side Button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Server-side Button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("hidden", !ctx.view.items.cardHidden.visible)("dibDisabled", ctx.view.items.cardHidden.disabled)("ngClass", ctx.view.items.cardHidden.class)("ngStyle", ctx.view.items.cardHidden.style);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("hidden", !ctx.view.items.cardHidden.visible)("dibDisabled", ctx.view.items.cardHidden.disabled)("ngClass", ctx.view.items.cardHidden.class)("ngStyle", ctx.view.items.cardHidden.style);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibPort", "6502");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Input Text");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Input Number");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Input Color");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibDisabledDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent, i10.MatCardHeader, i10.MatCardTitle, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexActionItemHandler'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexActionItemHandlerComponent.prototype, "reloadContainer", null);
+            exports_1("dibexActionItemHandlerComponent", dibexActionItemHandlerComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionItemHandlerComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-action-item-handler', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6495 dibComponent=subcontainer   ><ng-container [dibPort]="'6495'" parentContainerName=dibexActionItemHandler  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  display:flex; flex-direction: column;  flex: 1 1 0%;  " id=ci6496 dibComponent=div  ><ng-container [dibPort]="'6496'" ><mat-card   style="  width:500px !important;   overflow:auto !important;" id=ci6497 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 15px;"  ><ng-container [dibPort]="'6497'" ><span  id=ci6501 dibComponent=span   style="  "  [innerHtml]="getHtml('spanF12') | safeHtml" ></span><span  id=ci6506 dibComponent=comment   style="  width:500px !important;   " ><div class=dib-comment > Client-side button will hide "Hidden Card" and change size of Client-side Button when pushed. Server-side Button will change size and color of Client-side button and show the Hidden Card.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci6498 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6498'" ><button  mat-raised-button color=primary  id=ci6499 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientside   style="  width:150px !important;   " [hidden]="!view.items.btnClientside.visible"  [dibDisabled]="view.items.btnClientside.disabled"  [ngClass]="view.items.btnClientside.class"   [ngStyle]="view.items.btnClientside.style"  [attr.aria-label]="'Client-side Button'"  type=button  ><span class=dibButtonCaption >Client-side Button</span></button><button  mat-raised-button color=primary  id=ci6500 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnServerside   style="  width:150px !important;   "  [attr.aria-label]="'Server-side Button'"  type=button  ><span class=dibButtonCaption >Server-side Button</span></button></ng-container></div><mat-card   style="  " id=ci6502 dibComponent=card  [hidden]="!view.items.cardHidden.visible"  [dibDisabled]="view.items.cardHidden.disabled"  [ngClass]="view.items.cardHidden.class"   [ngStyle]="view.items.cardHidden.style" ><mat-card-header ><mat-card-title >Hidden Card</mat-card-title></mat-card-header><mat-card-content   style="  " [hidden]="!view.items.cardHidden.visible"  [dibDisabled]="view.items.cardHidden.disabled"  [ngClass]="view.items.cardHidden.class"   [ngStyle]="view.items.cardHidden.style"  ><ng-container [dibPort]="'6502'" ><mat-form-field id=ci6503 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Input Text</mat-label><input   matInput  type=text   formControlName=inputText   name=inputText   [attr.aria-label]="'Input Text'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6504 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >Input Number</mat-label><input   matInput  type=number   formControlName=inputNumber   name=inputNumber   [attr.aria-label]="'Input Number'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6505 dibComponent=inputColor   style="  "  appearance=standard  ><mat-label >Input Color</mat-label><input   matInput   type=color   formControlName=inputColor   name=inputColor   [attr.aria-label]="'Input Color'" ></mat-form-field></ng-container></mat-card-content></mat-card></ng-container></mat-card-content></mat-card></ng-container></div></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexActionItemHandlerModule = class dibexActionItemHandlerModule {
+                static entry = dibexActionItemHandlerComponent;
+                static ɵfac = function dibexActionItemHandlerModule_Factory(t) { return new (t || dibexActionItemHandlerModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexActionItemHandlerModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexActionItemHandlerModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionItemHandlerModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexActionItemHandlerComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexActionItemHandlerModule, { declarations: [dibexActionItemHandlerComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

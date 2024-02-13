@@ -1,0 +1,275 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, _c0, importsRequired, dibexActionClearCustomComponent, containerModules, fullDateTimeOptions, dibexActionClearCustomModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexActionClearCustomComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 20);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexActionClearCustomComponent = class dibexActionClearCustomComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 271, name: 'dibexActionClearCustom', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6476'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexActionClearCustom');
+                    this.containerName = 'dibexActionClearCustom'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('spanF12', `<i>View network requests in Developer Console (press F12 in Chrome -> Network)</i>`);
+                    this.setInnerHtml('spanF12', `<i>View network requests in Developer Console (press F12 in Chrome -> Network)</i>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientData", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/General/showClientData", itemAlias: "btnClientData", waitForCompletion: false, containerName: "dibexActionClearCustom", handlers: [] }, this.clientData, { itemEventId: 'ie403-dib', itemId: '6923', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientside", actionType: "click", responseType: 'actions', submitUrl: "shared.action.clear-custom?containerName=ALL", itemAlias: "btnClientside", waitForCompletion: false, containerName: "dibexActionClearCustom", handlers: [] }, this.clientData, { itemEventId: 'ie401-dib', itemId: '6919', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnServerside", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/clearCustom", itemAlias: "btnServerside", waitForCompletion: false, containerName: "dibexActionClearCustom", handlers: [] }, this.clientData, { itemEventId: 'ie402-dib', itemId: '6920', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexActionClearCustom', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexActionClearCustom' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexActionClearCustomComponent_Factory(t) { return new (t || dibexActionClearCustomComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexActionClearCustomComponent, selectors: [["dibex-action-clear-custom"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 58, vars: 24, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6476", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionClearCustom", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6917", "dibComponent", "card", 2, "width", "800px !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "15px"], [3, "dibPort"], ["id", "ci6921", "dibComponent", "span", 3, "innerHtml"], ["id", "ci6925", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci6918", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["mat-raised-button", "", "color", "accent", "id", "ci7469", "dibComponent", "button", "type", "button", 3, "click"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci6919", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientside", "type", "button", 2, "width", "200px !important", 3, "containerPortId"], ["mat-raised-button", "", "color", "primary", "id", "ci6920", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnServerside", "type", "button", 2, "width", "200px !important", 3, "containerPortId"], ["id", "ci6922", "dibComponent", "section", 2, "width", "800px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["mat-raised-button", "", "color", "primary", "id", "ci6923", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientData", "type", "button", 2, "width", "170px !important", 3, "containerPortId"], ["id", "ci6924", "dibComponent", "spanInterpolation"], ["mode", "indeterminate"]], template: function dibexActionClearCustomComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexActionClearCustomComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexActionClearCustomComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelement(8, "span", 8);
+                        i0.ɵɵpipe(9, "safeHtml");
+                        i0.ɵɵelementStart(10, "span", 9)(11, "div", 10);
+                        i0.ɵɵtext(12, " First set custom variables on the Set-Custom-Global example,");
+                        i0.ɵɵelement(13, "br");
+                        i0.ɵɵtext(14, "then return here to view and clear them. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "div", 11);
+                        i0.ɵɵelementContainerStart(16, 7);
+                        i0.ɵɵelementStart(17, "button", 12);
+                        i0.ɵɵlistener("click", function dibexActionClearCustomComponent_Template_button_click_17_listener($event) { return ctx.navigationService.goTo("dibexActionSetCustomGlobal", "main", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(18, "span", 13);
+                        i0.ɵɵtext(19, "Go To Set-Custom-Global");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(20, "button", 14)(21, "span", 13);
+                        i0.ɵɵtext(22, "Client-side Button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(23, "button", 15)(24, "span", 13);
+                        i0.ɵɵtext(25, "Server-side Button");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(26, "mat-card", 16)(27, "mat-card-content", 17)(28, "button", 18)(29, "span", 13);
+                        i0.ɵɵtext(30, "Show Client Data");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(31, "span", 19)(32, "h3");
+                        i0.ɵɵtext(33, "Global Variables:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(34, "b");
+                        i0.ɵɵtext(35, "myGVar:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(36);
+                        i0.ɵɵelement(37, "br");
+                        i0.ɵɵelementStart(38, "b");
+                        i0.ɵɵtext(39, "myGVar2:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(40);
+                        i0.ɵɵelement(41, "br");
+                        i0.ɵɵelementStart(42, "b");
+                        i0.ɵɵtext(43, "myGVar3:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(44);
+                        i0.ɵɵelementStart(45, "h3");
+                        i0.ɵɵtext(46, "NOTE: dibexActionSetCustom (containerName) Variables NOT VISIBLE here:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(47, "b");
+                        i0.ɵɵtext(48, "myVar:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(49);
+                        i0.ɵɵelement(50, "br");
+                        i0.ɵɵelementStart(51, "b");
+                        i0.ɵɵtext(52, "myVar2:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(53);
+                        i0.ɵɵelement(54, "br");
+                        i0.ɵɵelementStart(55, "b");
+                        i0.ɵɵtext(56, "myVar3:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(57);
+                        i0.ɵɵelementEnd()()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(22, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6476");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6917");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(9, 20, ctx.getHtml("spanF12")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "6918");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Go To Set-Custom-Global");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Client-side Button");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Server-side Button");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Show Client Data");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_global_myGVar"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_global_myGVar2"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_global_myGVar3"), "");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_dibexActionSetCustom_myVar"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_dibexActionSetCustom_myVar2"), "");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵtextInterpolate1(" ", ctx.resolve("custom_dibexActionSetCustom_myVar3"), "");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibPortDirective, i2.DibListenersDirective, i6.MatButton, i7.MatProgressBar, i8.MatCard, i8.MatCardContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexActionClearCustom'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexActionClearCustomComponent.prototype, "reloadContainer", null);
+            exports_1("dibexActionClearCustomComponent", dibexActionClearCustomComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionClearCustomComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-action-clear-custom', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6476 dibComponent=subcontainer   ><ng-container [dibPort]="'6476'" parentContainerName=dibexActionClearCustom  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:800px !important;   " id=ci6917 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 15px;"  ><ng-container [dibPort]="'6917'" ><span  id=ci6921 dibComponent=span   style="  "  [innerHtml]="getHtml('spanF12') | safeHtml" ></span><span  id=ci6925 dibComponent=comment   style="  " ><div class=dib-comment > First set custom variables on the Set-Custom-Global example,<br>then return here to view and clear them.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci6918 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6918'" ><button  mat-raised-button color=accent  id=ci7469 dibComponent=button   (click)="navigationService.goTo(  'dibexActionSetCustomGlobal',  'main',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Go To Set-Custom-Global'"  type=button  ><span class=dibButtonCaption >Go To Set-Custom-Global</span></button><button  mat-raised-button color=primary  id=ci6919 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientside   style="  width:200px !important;   "  [attr.aria-label]="'Client-side Button'"  type=button  ><span class=dibButtonCaption >Client-side Button</span></button><button  mat-raised-button color=primary  id=ci6920 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnServerside   style="  width:200px !important;   "  [attr.aria-label]="'Server-side Button'"  type=button  ><span class=dibButtonCaption >Server-side Button</span></button></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  width:800px !important;   flex: 1 1 0%;  " id=ci6922 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><button  mat-raised-button color=primary  id=ci6923 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientData   style="  width:170px !important;   "  [attr.aria-label]="'Show Client Data'"  type=button  ><span class=dibButtonCaption >Show Client Data</span></button><span  id=ci6924 dibComponent=spanInterpolation   style="  " ><h3>Global Variables:</h3><b>myGVar:</b> {{resolve('custom_global_myGVar')}}<br><b>myGVar2:</b> {{resolve('custom_global_myGVar2')}}<br><b>myGVar3:</b> {{resolve('custom_global_myGVar3')}}<h3>NOTE: dibexActionSetCustom (containerName) Variables NOT VISIBLE here:</h3><b>myVar:</b> {{resolve('custom_dibexActionSetCustom_myVar')}}<br><b>myVar2:</b> {{resolve('custom_dibexActionSetCustom_myVar2')}}<br><b>myVar3:</b> {{resolve('custom_dibexActionSetCustom_myVar3')}}</span></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexActionClearCustomModule = class dibexActionClearCustomModule {
+                static entry = dibexActionClearCustomComponent;
+                static ɵfac = function dibexActionClearCustomModule_Factory(t) { return new (t || dibexActionClearCustomModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexActionClearCustomModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexActionClearCustomModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionClearCustomModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexActionClearCustomComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexActionClearCustomModule, { declarations: [dibexActionClearCustomComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

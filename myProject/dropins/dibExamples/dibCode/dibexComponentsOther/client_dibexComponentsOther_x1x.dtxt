@@ -1,0 +1,392 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/progress-bar", "@angular/material/progress-spinner", "@angular/material/divider", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, progress_bar_1, progress_spinner_1, divider_1, card_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexComponentsOtherComponent, containerModules, fullDateTimeOptions, dibexComponentsOtherModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsOtherComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 13);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (progress_bar_1_1) {
+                progress_bar_1 = progress_bar_1_1;
+                i8 = progress_bar_1_1;
+            },
+            function (progress_spinner_1_1) {
+                progress_spinner_1 = progress_spinner_1_1;
+                i9 = progress_spinner_1_1;
+            },
+            function (divider_1_1) {
+                divider_1 = divider_1_1;
+                i7 = divider_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexComponentsOtherComponent = class dibexComponentsOtherComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 267, name: 'dibexComponentsOther', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6447'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsOther');
+                    this.containerName = 'dibexComponentsOther'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('html', `<b style="color:red; font-weight:bold"> Hello. This is the HTML component. </b>`);
+                    this.setInnerHtml('h3', `Tada !`);
+                    this.setInnerHtml('html', `<b style="color:red; font-weight:bold"> Hello. This is the HTML component. </b>`);
+                    this.setInnerHtml('h3', `Tada !`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsOther', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsOther' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsOtherComponent_Factory(t) { return new (t || dibexComponentsOtherComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsOtherComponent, selectors: [["dibex-components-other"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 158, vars: 19, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6447", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsOther", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6448", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex", "1 1 0%", "max-width", "1000px"], [3, "dibPort"], ["id", "ci7130", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px"], ["id", "ci6456", "dibComponent", "comment"], [1, "dib-comment"], ["href", "/nav/dibexQueues"], ["id", "ci6452", "dibComponent", "progressBar", 2, "width", "400px !important"], ["mode", "indeterminate"], ["id", "ci6457", "dibComponent", "comment"], ["diameter", "40", "id", "ci6453", "dibComponent", "progressSpinner", "mode", "indeterminate"], ["id", "ci7129", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], ["id", "ci6455", "dibComponent", "comment"], ["id", "ci6451", "dibComponent", "img", "src", "/files/dropins/dibExamples/img/ConsoleActions.png", "title", "img"], ["id", "ci7131", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci6454", "dibComponent", "comment"], ["id", "ci7132", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7133", "dibComponent", "comment"], [2, "color", "red", "font-weight", "bold"], ["id", "ci7134", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7135", "dibComponent", "comment"], ["id", "ci7124", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7125", "dibComponent", "comment"], ["mat-raised-button", "", "color", "primary", "id", "ci7126", "dibComponent", "button", "type", "button"], [1, "dibButtonCaption"], ["id", "ci6458", "dibComponent", "divider", 2, "align-self", "stretch", "border", "2px solid grey"], ["mat-raised-button", "", "color", "primary", "id", "ci7127", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci7128", "dibComponent", "button", "type", "button"], ["id", "ci7136", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci7137", "dibComponent", "comment"], ["id", "ci7139", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex", "1 1 0%"], ["id", "ci7140", "dibComponent", "icon", "src", "menu"], ["id", "ci7141", "dibComponent", "icon", "src", "close"], ["id", "ci7142", "dibComponent", "h3"], ["id", "ci7138", "dibComponent", "spacer", 2, "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci7143", "dibComponent", "button", "type", "button"], ["id", "ci7144", "dibComponent", "icon", "src", "whatshot"]], template: function dibexComponentsOtherComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexComponentsOtherComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsOtherComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "mat-card", 7)(8, "mat-card-header")(9, "mat-card-title");
+                        i0.ɵɵtext(10, "progressBar and progressSpinner");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(11, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(12, 6);
+                        i0.ɵɵelementStart(13, "span", 9)(14, "div", 10);
+                        i0.ɵɵtext(15, " Progress bars are normally updated periodically by long-running code. See for eg ");
+                        i0.ɵɵelementStart(16, "a", 11);
+                        i0.ɵɵtext(17, "Queues");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(18, ".");
+                        i0.ɵɵelement(19, "br");
+                        i0.ɵɵtext(20, "Below the progress bar has been set to ");
+                        i0.ɵɵelementStart(21, "b");
+                        i0.ɵɵtext(22, "indeterminate");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(23, ". ");
+                        i0.ɵɵelement(24, "br");
+                        i0.ɵɵtext(25, "Code can hide/show it as needed using the ");
+                        i0.ɵɵelementStart(26, "b");
+                        i0.ɵɵtext(27, "shared.action.item-handler");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(28, " action. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(29, "div", 12);
+                        i0.ɵɵelement(30, "mat-progress-bar", 13);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(31, "span", 14)(32, "div", 10);
+                        i0.ɵɵtext(33, " Another option: ");
+                        i0.ɵɵelementStart(34, "b");
+                        i0.ɵɵtext(35, "progressSpinner");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelement(36, "mat-progress-spinner", 15);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(37, "mat-card", 16)(38, "mat-card-header")(39, "mat-card-title");
+                        i0.ɵɵtext(40, "img");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(41, "mat-card-content", 17);
+                        i0.ɵɵelementContainerStart(42, 6);
+                        i0.ɵɵelementStart(43, "span", 18)(44, "div", 10);
+                        i0.ɵɵtext(45, " Use the ");
+                        i0.ɵɵelementStart(46, "b");
+                        i0.ɵɵtext(47, "image/icon");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(48, " field on Pg3 in the Designer to set a path to the image.");
+                        i0.ɵɵelement(49, "br");
+                        i0.ɵɵtext(50, "Example of path to external image: ");
+                        i0.ɵɵelementStart(51, "b");
+                        i0.ɵɵtext(52, "https://material.angular.io/assets/img/examples/shiba2.jpg");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(53, "br");
+                        i0.ɵɵtext(54, "Paths to local images in the application folder start with /files/ ");
+                        i0.ɵɵelement(55, "br");
+                        i0.ɵɵtext(56, "eg ");
+                        i0.ɵɵelementStart(57, "b");
+                        i0.ɵɵtext(58, "/files/dropins/dibExamples/img/ConsoleActions.png");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(59, "br");
+                        i0.ɵɵtext(60, "Also ensure that files in the folder containing these images are publicly available, by adding the folder to ");
+                        i0.ɵɵelementStart(61, "b");
+                        i0.ɵɵtext(62, "/configs/AllowedFileExtAndFolders.php");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelement(63, "img", 19);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(64, "mat-card", 20)(65, "mat-card-header")(66, "mat-card-title");
+                        i0.ɵɵtext(67, "comment");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(68, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(69, 6);
+                        i0.ɵɵelementStart(70, "span", 21)(71, "div", 10);
+                        i0.ɵɵtext(72, " The comment component, like this one, is self-explanatory.");
+                        i0.ɵɵelement(73, "br");
+                        i0.ɵɵtext(74, "Provide HTML in the ");
+                        i0.ɵɵelementStart(75, "b");
+                        i0.ɵɵtext(76, "expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(77, "-field.");
+                        i0.ɵɵelement(78, "br");
+                        i0.ɵɵtext(79, "If you'd like to adjust the styling, adjust its class. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(80, "mat-card", 22)(81, "mat-card-header")(82, "mat-card-title");
+                        i0.ɵɵtext(83, "html");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(84, "mat-card-content", 17);
+                        i0.ɵɵelementContainerStart(85, 6);
+                        i0.ɵɵelementStart(86, "span", 23)(87, "div", 10);
+                        i0.ɵɵtext(88, " The ");
+                        i0.ɵɵelementStart(89, "b");
+                        i0.ɵɵtext(90, "html");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(91, " component simply displays the raw HTML provided in the ");
+                        i0.ɵɵelementStart(92, "b");
+                        i0.ɵɵtext(93, "expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(94, " field.");
+                        i0.ɵɵelement(95, "br");
+                        i0.ɵɵtext(96, "Note that Angular will strip any HTML it finds problematic / insecure / invalid. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(97, "b", 24);
+                        i0.ɵɵtext(98, " Hello. This is the HTML component. ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(99, "mat-card", 25)(100, "mat-card-header")(101, "mat-card-title");
+                        i0.ɵɵtext(102, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(103, "mat-card-content", 17);
+                        i0.ɵɵelementContainerStart(104, 6);
+                        i0.ɵɵelementStart(105, "span", 26);
+                        i0.ɵɵelement(106, "div", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(107, "mat-card", 27)(108, "mat-card-header")(109, "mat-card-title");
+                        i0.ɵɵtext(110, "divider");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(111, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(112, 6);
+                        i0.ɵɵelementStart(113, "span", 28)(114, "div", 10);
+                        i0.ɵɵtext(115, " Dividers are layout components. They provide a simple way of grouping elements in sections below one another.");
+                        i0.ɵɵelement(116, "br");
+                        i0.ɵɵtext(117, "Ensure to set the ");
+                        i0.ɵɵelementStart(118, "b");
+                        i0.ɵɵtext(119, "Align Self");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(120, " field to stretch, or a fixed/min width.");
+                        i0.ɵɵelement(121, "br");
+                        i0.ɵɵtext(122, "Color and height can be set using border CSS. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(123, "button", 29)(124, "span", 30);
+                        i0.ɵɵtext(125, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(126, "mat-divider", 31);
+                        i0.ɵɵelementStart(127, "button", 32)(128, "span", 30);
+                        i0.ɵɵtext(129, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(130, "button", 33)(131, "span", 30);
+                        i0.ɵɵtext(132, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(133, "mat-card", 34)(134, "mat-card-header")(135, "mat-card-title");
+                        i0.ɵɵtext(136, "spacer");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(137, "mat-card-content", 35);
+                        i0.ɵɵelementContainerStart(138, 6);
+                        i0.ɵɵelementStart(139, "span", 36)(140, "div", 10)(141, "b");
+                        i0.ɵɵtext(142, "spacer");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(143, " is also a layout component. ");
+                        i0.ɵɵelement(144, "br");
+                        i0.ɵɵtext(145, "It is uses flex-directives to consume any unused space horizontally in the parent element, pushing other elements to the right. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(146, "div", 37);
+                        i0.ɵɵelementContainerStart(147, 6);
+                        i0.ɵɵelement(148, "dib-icon", 38)(149, "dib-icon", 39);
+                        i0.ɵɵelementStart(150, "h3", 40)(151, "span");
+                        i0.ɵɵtext(152, "Tada !");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(153, "span", 41);
+                        i0.ɵɵelementStart(154, "button", 42)(155, "span", 30);
+                        i0.ɵɵtext(156, "Pushed to Right");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(157, "dib-icon", 43);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(17, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6447");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6448");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7130");
+                        i0.ɵɵadvance(30);
+                        i0.ɵɵproperty("dibPort", "7129");
+                        i0.ɵɵadvance(27);
+                        i0.ɵɵproperty("dibPort", "7131");
+                        i0.ɵɵadvance(16);
+                        i0.ɵɵproperty("dibPort", "7132");
+                        i0.ɵɵadvance(19);
+                        i0.ɵɵproperty("dibPort", "7134");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "7124");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "7136");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "7139");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵattribute("aria-label", "Pushed to Right");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.DibIconComponent, i2.DibPortDirective, i6.MatButton, i7.MatDivider, i8.MatProgressBar, i9.MatProgressSpinner, i10.MatCard, i10.MatCardContent, i10.MatCardHeader, i10.MatCardTitle], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsOther'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsOtherComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsOtherComponent", dibexComponentsOtherComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsOtherComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-other', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6447 dibComponent=subcontainer   ><ng-container [dibPort]="'6447'" parentContainerName=dibexComponentsOther  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex: 1 1 0%;  max-width:1000px" id=ci6448 dibComponent=div  ><ng-container [dibPort]="'6448'" ><mat-card   style="  flex: 1 1 0%;  " id=ci7130 dibComponent=card  ><mat-card-header ><mat-card-title >progressBar and progressSpinner</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'7130'" ><span  id=ci6456 dibComponent=comment   style="  " ><div class=dib-comment > Progress bars are normally updated periodically by long-running code. See for eg <a href='/nav/dibexQueues'>Queues</a>.<br>Below the progress bar has been set to <b>indeterminate</b>. <br>Code can hide/show it as needed using the <b>shared.action.item-handler</b> action.  </div></span><div  id=ci6452 dibComponent=progressBar   style="  width:400px !important;   " ><mat-progress-bar   mode=indeterminate   style="  "  ></mat-progress-bar></div><span  id=ci6457 dibComponent=comment   style="  " ><div class=dib-comment > Another option: <b>progressSpinner</b></div></span><mat-progress-spinner   diameter=40  id=ci6453 dibComponent=progressSpinner   style="  "  mode=indeterminate  ></mat-progress-spinner></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7129 dibComponent=card  ><mat-card-header ><mat-card-title >img</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7129'" ><span  id=ci6455 dibComponent=comment   style="  " ><div class=dib-comment > Use the <b>image/icon</b> field on Pg3 in the Designer to set a path to the image.<br>Example of path to external image: <b>https://material.angular.io/assets/img/examples/shiba2.jpg</b><br>Paths to local images in the application folder start with /files/ <br>eg <b>/files/dropins/dibExamples/img/ConsoleActions.png</b><br>Also ensure that files in the folder containing these images are publicly available, by adding the folder to <b>/configs/AllowedFileExtAndFolders.php</b></div></span><img  id=ci6451 dibComponent=img   style="  "  src="/files/dropins/dibExamples/img/ConsoleActions.png"  title=img  /></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7131 dibComponent=card  ><mat-card-header ><mat-card-title >comment</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'7131'" ><span  id=ci6454 dibComponent=comment   style="  " ><div class=dib-comment > The comment component, like this one, is self-explanatory.<br>Provide HTML in the <b>expression</b>-field.<br>If you&apos;d like to adjust the styling, adjust its class.  </div></span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7132 dibComponent=card  ><mat-card-header ><mat-card-title >html</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7132'" ><span  id=ci7133 dibComponent=comment   style="  " ><div class=dib-comment > The <b>html</b> component simply displays the raw HTML provided in the <b>expression</b> field.<br>Note that Angular will strip any HTML it finds problematic / insecure / invalid.  </div></span><b style="color:red; font-weight:bold"> Hello. This is the HTML component. </b></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7134 dibComponent=card  ><mat-card-header ><mat-card-title >safeHtml</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'7134'" ><span  id=ci7135 dibComponent=comment   style="  " ><div class=dib-comment ></div></span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7124 dibComponent=card  ><mat-card-header ><mat-card-title >divider</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;"  ><ng-container [dibPort]="'7124'" ><span  id=ci7125 dibComponent=comment   style="  " ><div class=dib-comment > Dividers are layout components. They provide a simple way of grouping elements in sections below one another.<br>Ensure to set the <b>Align Self</b> field to stretch, or a fixed/min width.<br>Color and height can be set using border CSS.  </div></span><button  mat-raised-button color=primary  id=ci7126 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button><mat-divider  id=ci6458 dibComponent=divider   style="  align-self: stretch;  border: 2px solid grey" ></mat-divider><button  mat-raised-button color=primary  id=ci7127 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button><button  mat-raised-button color=primary  id=ci7128 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci7136 dibComponent=card  ><mat-card-header ><mat-card-title >spacer</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'7136'" ><span  id=ci7137 dibComponent=comment   style="  " ><div class=dib-comment ><b>spacer</b> is also a layout component. <br>It is uses flex-directives to consume any unused space horizontally in the parent element, pushing other elements to the right.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex: 1 1 0%;  " id=ci7139 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7139'" ><dib-icon  id=ci7140 dibComponent=icon   style="  "  src=menu ></dib-icon><dib-icon  id=ci7141 dibComponent=icon   style="  "  src=close ></dib-icon><h3  id=ci7142 dibComponent=h3   style="  "  ><span >Tada !</span></h3><span  id=ci7138 dibComponent=spacer   style="  flex: 1 1 0%;  " ></span><button  mat-raised-button color=primary  id=ci7143 dibComponent=button   style="  "  [attr.aria-label]="'Pushed to Right'"  type=button  ><span class=dibButtonCaption >Pushed to Right</span></button><dib-icon  id=ci7144 dibComponent=icon   style="  "  src=whatshot ></dib-icon></ng-container></div></ng-container></mat-card-content></mat-card></ng-container></div></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [progress_bar_1.MatProgressBarModule, progress_spinner_1.MatProgressSpinnerModule, divider_1.MatDividerModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsOtherModule = class dibexComponentsOtherModule {
+                static entry = dibexComponentsOtherComponent;
+                static ɵfac = function dibexComponentsOtherModule_Factory(t) { return new (t || dibexComponentsOtherModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsOtherModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsOtherModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsOtherModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsOtherComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsOtherModule, { declarations: [dibexComponentsOtherComponent], imports: [common_1.CommonModule, shared_4.SharedModule, progress_bar_1.MatProgressBarModule, progress_spinner_1.MatProgressSpinnerModule, divider_1.MatDividerModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

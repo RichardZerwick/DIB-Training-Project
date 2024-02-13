@@ -1,0 +1,416 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/grid-list", "@angular/material/datepicker", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, grid_list_1, datepicker_1, core_4, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, _c0, importsRequired, dibexLayoutGridListComponent, containerModules, fullDateTimeOptions, dibexLayoutGridListModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexLayoutGridListComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 52);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i12 = card_1_1;
+            },
+            function (grid_list_1_1) {
+                grid_list_1 = grid_list_1_1;
+                i9 = grid_list_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i7 = datepicker_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexLayoutGridListComponent = class dibexLayoutGridListComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 186, name: 'dibexLayoutGridList', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5417'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexLayoutGridList');
+                    this.containerName = 'dibexLayoutGridList'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputText: { itemId: 4628, type: 'text', fieldAlias: 'inputText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker: { itemId: 4629, type: 'date', fieldAlias: 'datepicker', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputText1: { itemId: 6988, type: 'text', fieldAlias: 'inputText1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker1: { itemId: 6989, type: 'date', fieldAlias: 'datepicker1', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputText2: { itemId: 6991, type: 'text', fieldAlias: 'inputText2', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker2: { itemId: 6992, type: 'date', fieldAlias: 'datepicker2', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputText3: { itemId: 6996, type: 'text', fieldAlias: 'inputText3', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker3: { itemId: 6997, type: 'date', fieldAlias: 'datepicker3', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputText4: { itemId: 7000, type: 'text', fieldAlias: 'inputText4', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, datepicker4: { itemId: 7001, type: 'date', fieldAlias: 'datepicker4', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputText', this.model.modelItems.inputText.formControl);
+                    this.model.$formGroup.addControl('datepicker', this.model.modelItems.datepicker.formControl);
+                    this.model.$formGroup.addControl('inputText1', this.model.modelItems.inputText1.formControl);
+                    this.model.$formGroup.addControl('datepicker1', this.model.modelItems.datepicker1.formControl);
+                    this.model.$formGroup.addControl('inputText2', this.model.modelItems.inputText2.formControl);
+                    this.model.$formGroup.addControl('datepicker2', this.model.modelItems.datepicker2.formControl);
+                    this.model.$formGroup.addControl('inputText3', this.model.modelItems.inputText3.formControl);
+                    this.model.$formGroup.addControl('datepicker3', this.model.modelItems.datepicker3.formControl);
+                    this.model.$formGroup.addControl('inputText4', this.model.modelItems.inputText4.formControl);
+                    this.model.$formGroup.addControl('datepicker4', this.model.modelItems.datepicker4.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexLayoutGridList', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexLayoutGridList' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexLayoutGridListComponent_Factory(t) { return new (t || dibexLayoutGridListComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexLayoutGridListComponent, selectors: [["dibex-layout-grid-list"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 112, vars: 47, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5417", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexLayoutGridList", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci4622", "dibComponent", "card", 2, "width", "1300px !important", "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci4631", "dibComponent", "comment"], [1, "dib-comment"], ["cols", "2", "rowHeight", "3:1", "id", "ci4623", "dibComponent", "gridList", "id", "ci4623", "dibComponent", "gridList", 2, "flex", "1 1 0%"], ["id", "ci4624", "dibComponent", "gridTile", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background", "lightcoral"], ["id", "ci4625", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci6991", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText2", "name", "inputText2"], ["datepicker", "", "id", "ci6992", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker2", "name", "datepicker2", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker6992", ""], ["mat-raised-button", "", "color", "primary", "id", "ci6993", "dibComponent", "button", "type", "button"], [1, "dibButtonCaption"], ["id", "ci4626", "dibComponent", "gridTile", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background", "lightgreen"], ["id", "ci4627", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4628", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText", "name", "inputText"], ["datepicker", "", "id", "ci4629", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker", "name", "datepicker", 3, "matDatepicker", "placeholder", "focus"], ["datePicker4629", ""], ["mat-raised-button", "", "color", "primary", "id", "ci6986", "dibComponent", "button", "type", "button"], ["id", "ci6987", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci6988", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText1", "name", "inputText1"], ["datepicker", "", "id", "ci6989", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker1", "name", "datepicker1", 3, "matDatepicker", "placeholder", "focus"], ["datePicker6989", ""], ["mat-raised-button", "", "color", "primary", "id", "ci6990", "dibComponent", "button", "type", "button"], ["id", "ci4630", "dibComponent", "gridTile", 2, "display", "flex", "flex-direction", "column", "justify-content", "center", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "background", "lightblue"], ["id", "ci6994", "dibComponent", "gridTile", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%", "background", "lightyellow"], ["id", "ci6995", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci6996", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText3", "name", "inputText3"], ["datepicker", "", "id", "ci6997", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker3", "name", "datepicker3", 3, "matDatepicker", "placeholder", "focus"], ["datePicker6997", ""], ["mat-raised-button", "", "color", "primary", "id", "ci6998", "dibComponent", "button", "type", "button"], ["id", "ci6999", "dibComponent", "div", 2, "padding", "10px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci7000", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText4", "name", "inputText4"], ["datepicker", "", "id", "ci7001", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker4", "name", "datepicker4", 3, "matDatepicker", "placeholder", "focus"], ["datePicker7001", ""], ["mat-raised-button", "", "color", "primary", "id", "ci7002", "dibComponent", "button", "type", "button"], ["mode", "indeterminate"]], template: function dibexLayoutGridListComponent_Template(rf, ctx) { if (rf & 1) {
+                        const _r6 = i0.ɵɵgetCurrentView();
+                        i0.ɵɵtemplate(0, dibexLayoutGridListComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexLayoutGridListComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "span", 8)(9, "div", 9);
+                        i0.ɵɵtext(10, " gridList attributes: ");
+                        i0.ɵɵelementStart(11, "b");
+                        i0.ɵɵtext(12, "rowHeight=\"3:1\" cols=2 ");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(13, "br");
+                        i0.ɵɵtext(14, "Each color is a different tile. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "mat-grid-list", 10);
+                        i0.ɵɵelementContainerStart(16, 7);
+                        i0.ɵɵelementStart(17, "mat-grid-tile", 11);
+                        i0.ɵɵelementContainerStart(18, 7);
+                        i0.ɵɵelementStart(19, "div", 12);
+                        i0.ɵɵelementContainerStart(20, 7);
+                        i0.ɵɵelementStart(21, "mat-form-field", 13)(22, "mat-label");
+                        i0.ɵɵtext(23, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(24, "input", 14);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(25, "mat-form-field", 15)(26, "mat-label");
+                        i0.ɵɵtext(27, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(28, "input", 16);
+                        i0.ɵɵlistener("focus", function dibexLayoutGridListComponent_Template_input_focus_28_listener() { i0.ɵɵrestoreView(_r6); const _r1 = i0.ɵɵreference(31); return i0.ɵɵresetView(_r1.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(29, "mat-datepicker-toggle", 17)(30, "mat-datepicker", null, 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(32, "button", 19)(33, "span", 20);
+                        i0.ɵɵtext(34, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(35, "mat-grid-tile", 21);
+                        i0.ɵɵelementContainerStart(36, 7);
+                        i0.ɵɵelementStart(37, "div", 22);
+                        i0.ɵɵelementContainerStart(38, 7);
+                        i0.ɵɵelementStart(39, "mat-form-field", 23)(40, "mat-label");
+                        i0.ɵɵtext(41, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(42, "input", 24);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(43, "mat-form-field", 25)(44, "mat-label");
+                        i0.ɵɵtext(45, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(46, "input", 26);
+                        i0.ɵɵlistener("focus", function dibexLayoutGridListComponent_Template_input_focus_46_listener() { i0.ɵɵrestoreView(_r6); const _r2 = i0.ɵɵreference(49); return i0.ɵɵresetView(_r2.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(47, "mat-datepicker-toggle", 17)(48, "mat-datepicker", null, 27);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(50, "button", 28)(51, "span", 20);
+                        i0.ɵɵtext(52, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(53, "div", 29);
+                        i0.ɵɵelementContainerStart(54, 7);
+                        i0.ɵɵelementStart(55, "mat-form-field", 30)(56, "mat-label");
+                        i0.ɵɵtext(57, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(58, "input", 31);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(59, "mat-form-field", 32)(60, "mat-label");
+                        i0.ɵɵtext(61, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(62, "input", 33);
+                        i0.ɵɵlistener("focus", function dibexLayoutGridListComponent_Template_input_focus_62_listener() { i0.ɵɵrestoreView(_r6); const _r3 = i0.ɵɵreference(65); return i0.ɵɵresetView(_r3.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(63, "mat-datepicker-toggle", 17)(64, "mat-datepicker", null, 34);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(66, "button", 35)(67, "span", 20);
+                        i0.ɵɵtext(68, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(69, "mat-grid-tile", 36)(70, "div");
+                        i0.ɵɵtext(71, "3d Tile");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(72, "div");
+                        i0.ɵɵtext(73, "This tile's\u00A0");
+                        i0.ɵɵelementStart(74, "b");
+                        i0.ɵɵtext(75, "expression");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(76, "\u00A0field contains HTML.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainer(77, 7);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(78, "mat-grid-tile", 37);
+                        i0.ɵɵelementContainerStart(79, 7);
+                        i0.ɵɵelementStart(80, "div", 38);
+                        i0.ɵɵelementContainerStart(81, 7);
+                        i0.ɵɵelementStart(82, "mat-form-field", 39)(83, "mat-label");
+                        i0.ɵɵtext(84, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(85, "input", 40);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(86, "mat-form-field", 41)(87, "mat-label");
+                        i0.ɵɵtext(88, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(89, "input", 42);
+                        i0.ɵɵlistener("focus", function dibexLayoutGridListComponent_Template_input_focus_89_listener() { i0.ɵɵrestoreView(_r6); const _r4 = i0.ɵɵreference(92); return i0.ɵɵresetView(_r4.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(90, "mat-datepicker-toggle", 17)(91, "mat-datepicker", null, 43);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(93, "button", 44)(94, "span", 20);
+                        i0.ɵɵtext(95, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(96, "div", 45);
+                        i0.ɵɵelementContainerStart(97, 7);
+                        i0.ɵɵelementStart(98, "mat-form-field", 46)(99, "mat-label");
+                        i0.ɵɵtext(100, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(101, "input", 47);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(102, "mat-form-field", 48)(103, "mat-label");
+                        i0.ɵɵtext(104, "datepicker");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(105, "input", 49);
+                        i0.ɵɵlistener("focus", function dibexLayoutGridListComponent_Template_input_focus_105_listener() { i0.ɵɵrestoreView(_r6); const _r5 = i0.ɵɵreference(108); return i0.ɵɵresetView(_r5.open()); });
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(106, "mat-datepicker-toggle", 17)(107, "mat-datepicker", null, 50);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(109, "button", 51)(110, "span", 20);
+                        i0.ɵɵtext(111, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r1 = i0.ɵɵreference(31);
+                        const _r2 = i0.ɵɵreference(49);
+                        const _r3 = i0.ɵɵreference(65);
+                        const _r4 = i0.ɵɵreference(92);
+                        const _r5 = i0.ɵɵreference(108);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(45, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5417");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4622");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "4623");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4624");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4625");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r1)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r1);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "4626");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "4627");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r2)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r2);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "6987");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r3)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r3);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵproperty("dibPort", "4630");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6994");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6995");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r4)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r4);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "6999");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matDatepicker", _r5)("placeholder", "datepicker");
+                        i0.ɵɵattribute("aria-label", "datepicker");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("for", _r5);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "button1");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatDatepicker, i7.MatDatepickerInput, i7.MatDatepickerToggle, i8.MatFormField, i8.MatLabel, i8.MatPrefix, i9.MatGridList, i9.MatGridTile, i10.MatInput, i11.MatProgressBar, i12.MatCard, i12.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexLayoutGridList'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexLayoutGridListComponent.prototype, "reloadContainer", null);
+            exports_1("dibexLayoutGridListComponent", dibexLayoutGridListComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexLayoutGridListComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-layout-grid-list', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5417 dibComponent=subcontainer   ><ng-container [dibPort]="'5417'" parentContainerName=dibexLayoutGridList  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  width:1300px !important;   flex: 1 1 0%;  " id=ci4622 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4622'" ><span  id=ci4631 dibComponent=comment   style="  " ><div class=dib-comment > gridList attributes: <b>rowHeight="3:1" cols=2 </b><br>Each color is a different tile.  </div></span><mat-grid-list   cols=2  rowHeight="3:1"  style="  flex: 1 1 0%;  " id=ci4623 dibComponent=gridList  id=ci4623 dibComponent=gridList  ><ng-container [dibPort]="'4623'" ><mat-grid-tile  id=ci4624 dibComponent=gridTile   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background:lightcoral;" ><ng-container [dibPort]="'4624'" ><div   style="  padding:10px !important;  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4625 dibComponent=div  ><ng-container [dibPort]="'4625'" ><mat-form-field id=ci6991 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText2   name=inputText2   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field datepicker id=ci6992 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker6992"   [placeholder]="'datepicker'"   formControlName=datepicker2   name=datepicker2   [attr.aria-label]="'datepicker'"  (focus)="datePicker6992.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker6992" ></mat-datepicker-toggle><mat-datepicker #datePicker6992 ></mat-datepicker></mat-form-field><button  mat-raised-button color=primary  id=ci6993 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div></ng-container></mat-grid-tile><mat-grid-tile  id=ci4626 dibComponent=gridTile   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background:lightgreen;" ><ng-container [dibPort]="'4626'" ><div   style="  padding:10px !important;  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4627 dibComponent=div  ><ng-container [dibPort]="'4627'" ><mat-form-field id=ci4628 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText   name=inputText   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field datepicker id=ci4629 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker4629"   [placeholder]="'datepicker'"   formControlName=datepicker   name=datepicker   [attr.aria-label]="'datepicker'"  (focus)="datePicker4629.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker4629" ></mat-datepicker-toggle><mat-datepicker #datePicker4629 ></mat-datepicker></mat-form-field><button  mat-raised-button color=primary  id=ci6986 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div><div   style="  padding:10px !important;  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci6987 dibComponent=div  ><ng-container [dibPort]="'6987'" ><mat-form-field id=ci6988 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText1   name=inputText1   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field datepicker id=ci6989 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker6989"   [placeholder]="'datepicker'"   formControlName=datepicker1   name=datepicker1   [attr.aria-label]="'datepicker'"  (focus)="datePicker6989.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker6989" ></mat-datepicker-toggle><mat-datepicker #datePicker6989 ></mat-datepicker></mat-form-field><button  mat-raised-button color=primary  id=ci6990 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div></ng-container></mat-grid-tile><mat-grid-tile  id=ci4630 dibComponent=gridTile   style="  display:flex; flex-direction: column;  justify-content: center;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  background:lightblue;" ><div>3d Tile</div><div>This tile&apos;s&nbsp;<b>expression</b>&nbsp;field contains HTML.</div><ng-container [dibPort]="'4630'" ></ng-container></mat-grid-tile><mat-grid-tile  id=ci6994 dibComponent=gridTile   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  background:lightyellow;" ><ng-container [dibPort]="'6994'" ><div   style="  padding:10px !important;  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci6995 dibComponent=div  ><ng-container [dibPort]="'6995'" ><mat-form-field id=ci6996 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText3   name=inputText3   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field datepicker id=ci6997 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker6997"   [placeholder]="'datepicker'"   formControlName=datepicker3   name=datepicker3   [attr.aria-label]="'datepicker'"  (focus)="datePicker6997.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker6997" ></mat-datepicker-toggle><mat-datepicker #datePicker6997 ></mat-datepicker></mat-form-field><button  mat-raised-button color=primary  id=ci6998 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div><div   style="  padding:10px !important;  display:flex; flex-direction: column;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci6999 dibComponent=div  ><ng-container [dibPort]="'6999'" ><mat-form-field id=ci7000 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText4   name=inputText4   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field datepicker id=ci7001 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker7001"   [placeholder]="'datepicker'"   formControlName=datepicker4   name=datepicker4   [attr.aria-label]="'datepicker'"  (focus)="datePicker7001.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker7001" ></mat-datepicker-toggle><mat-datepicker #datePicker7001 ></mat-datepicker></mat-form-field><button  mat-raised-button color=primary  id=ci7002 dibComponent=button   style="  "  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button></ng-container></div></ng-container></mat-grid-tile></ng-container></mat-grid-list></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, grid_list_1.MatGridListModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexLayoutGridListModule = class dibexLayoutGridListModule {
+                static entry = dibexLayoutGridListComponent;
+                static ɵfac = function dibexLayoutGridListModule_Factory(t) { return new (t || dibexLayoutGridListModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexLayoutGridListModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexLayoutGridListModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexLayoutGridListModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexLayoutGridListComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexLayoutGridListModule, { declarations: [dibexLayoutGridListComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, grid_list_1.MatGridListModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,236 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/progress-bar", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, progress_bar_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexPhpAsyncComponent, containerModules, fullDateTimeOptions, dibexPhpAsyncModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPhpAsyncComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 19);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (progress_bar_1_1) {
+                progress_bar_1 = progress_bar_1_1;
+                i9 = progress_bar_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexPhpAsyncComponent = class dibexPhpAsyncComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 228, name: 'dibexPhpAsync', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5685'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPhpAsync');
+                    this.containerName = 'dibexPhpAsync'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { progressValue: { itemId: 5682, type: 'number', fieldAlias: 'progressValue', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, msg: { itemId: 5686, type: 'text', fieldAlias: 'msg', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'msg', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('progressValue', this.model.modelItems.progressValue.formControl);
+                    this.model.$formGroup.addControl('msg', this.model.modelItems.msg.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('span', `<i>(alpha-numeric characters and space allowed)</i>`);
+                    this.setInnerHtml('span', `<i>(alpha-numeric characters and space allowed)</i>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnStart", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/DibFunctions/asyncThread", itemAlias: "btnStart", waitForCompletion: false, containerName: "dibexPhpAsync", handlers: [] }, this.clientData, { itemEventId: 'ie297-dib', itemId: '5680', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPhpAsync', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPhpAsync' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPhpAsyncComponent_Factory(t) { return new (t || dibexPhpAsyncComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPhpAsyncComponent, selectors: [["dibex-php-async"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 25, vars: 17, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5685", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPhpAsync", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5679", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5686", "dibComponent", "inputText", "item-alias", "msg", "appearance", "standard"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "3", "cdkAutosizeMaxRows", "10", "matInput", "", "type", "text", "formControlName", "msg", "name", "msg"], ["id", "ci5687", "dibComponent", "span", 2, "margin", "-12px 0px 10px !important", 3, "innerHtml"], ["mat-raised-button", "", "color", "primary", "id", "ci5680", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnStart", "type", "button", 2, "align-self", "flex-start", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci5681", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci5682", "dibComponent", "inputNumber", "appearance", "standard", 2, "width", "90px !important", "flex", "0 1 auto"], ["matInput", "", "type", "number", "formControlName", "progressValue", "name", "progressValue", "aria-label", "progressValue"], ["id", "ci5683", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "center", "align-items", "stretch", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci5684", "dibComponent", "progressBar", 2, "flex", "1 1 100%"], ["color", "accent", "mode", "buffer", 3, "value", "bufferValue"], ["mode", "indeterminate"]], template: function dibexPhpAsyncComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPhpAsyncComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPhpAsyncComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "mat-form-field", 8)(9, "mat-label");
+                        i0.ɵɵtext(10, "Provide a message");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(11, "input", 9);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(12, "span", 10);
+                        i0.ɵɵpipe(13, "safeHtml");
+                        i0.ɵɵelementStart(14, "button", 11)(15, "span", 12);
+                        i0.ɵɵtext(16, "Start Async Thread");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(17, "div", 13);
+                        i0.ɵɵelementContainerStart(18, 7);
+                        i0.ɵɵelementStart(19, "mat-form-field", 14);
+                        i0.ɵɵelement(20, "input", 15);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(21, "div", 16);
+                        i0.ɵɵelementContainerStart(22, 7);
+                        i0.ɵɵelementStart(23, "div", 17);
+                        i0.ɵɵelement(24, "mat-progress-bar", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(15, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5685");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5679");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Provide a message");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(13, 13, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Start Async Thread");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5681");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "5683");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("value", ctx.getValue("progressValue"))("bufferValue", 100);
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPhpAsync'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPhpAsyncComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPhpAsyncComponent", dibexPhpAsyncComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpAsyncComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-php-async', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5685 dibComponent=subcontainer   ><ng-container [dibPort]="'5685'" parentContainerName=dibexPhpAsync  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5679 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5679'" ><mat-form-field id=ci5686 dibComponent=inputText   style="  "  item-alias=msg   appearance=standard  ><mat-label >Provide a message</mat-label><input cdkTextareaAutosize cdkAutosizeMinRows=3  cdkAutosizeMaxRows=10    matInput  type=text   formControlName=msg   name=msg   [attr.aria-label]="'Provide a message'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci5687 dibComponent=span   style="  margin:-12px 0px 10px !important;   "  [innerHtml]="getHtml('span') | safeHtml" ></span><button  mat-raised-button color=primary  id=ci5680 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnStart   style="  align-self: flex-start;  "  [attr.aria-label]="'Start Async Thread'"  type=button  ><span class=dibButtonCaption >Start Async Thread</span></button><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5681 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5681'" ><mat-form-field  id=ci5682 dibComponent=inputNumber   style="  width:90px !important;   flex: 0 1 auto;  "  appearance=standard  ><input   matInput  type=number   formControlName=progressValue   name=progressValue   aria-label=progressValue  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><div   style="  display:flex; flex-direction: column;  justify-content: center;  align-items: stretch;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5683 dibComponent=div  ><ng-container [dibPort]="'5683'" ><div  id=ci5684 dibComponent=progressBar   style="  flex: 1 1 100%;  " ><mat-progress-bar   color=accent
+mode=buffer
+[value]="getValue('progressValue')"
+[bufferValue]="100"  style="  "  ></mat-progress-bar></div></ng-container></div></ng-container></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, progress_bar_1.MatProgressBarModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPhpAsyncModule = class dibexPhpAsyncModule {
+                static entry = dibexPhpAsyncComponent;
+                static ɵfac = function dibexPhpAsyncModule_Factory(t) { return new (t || dibexPhpAsyncModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPhpAsyncModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPhpAsyncModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPhpAsyncModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPhpAsyncComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPhpAsyncModule, { declarations: [dibexPhpAsyncComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, progress_bar_1.MatProgressBarModule] }); })();
+        }
+    };
+});

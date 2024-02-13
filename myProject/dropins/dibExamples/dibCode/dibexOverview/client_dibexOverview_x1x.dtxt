@@ -1,0 +1,1040 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/datepicker", "@angular/material/button", "@angular/material/icon", "@angular/material/select", "@angular/material/progress-bar", "@angular/material/tabs", "@angular/material/autocomplete", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, datepicker_1, core_4, button_1, icon_1, select_1, progress_bar_1, tabs_1, autocomplete_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, _c0, _c1, _c2, _c3, _c4, _c5, _c6, importsRequired, dibexOverviewComponent, containerModules, fullDateTimeOptions, dibexOverviewModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexOverviewComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 125);
+    } }
+    function dibexOverviewComponent_ng_template_55_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 126);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabPlainInSubcontainer", "dibexOverview.tabPlainInSubcontainer", "PLAIN"));
+    } }
+    function dibexOverviewComponent_ng_template_61_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 127);
+    } if (rf & 2) {
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r5.getTabTitle("tabGrid", "dibexOverview.tabGrid", "GRIDS"));
+    } }
+    function dibexOverviewComponent_ng_template_74_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 128);
+    } if (rf & 2) {
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r8.getTabTitle("tabForm", "dibexOverview.tabForm", "FORMS"));
+    } }
+    function dibexOverviewComponent_ng_template_79_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 129);
+    } if (rf & 2) {
+        const ctx_r10 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r10.getTabTitle("tabiFrame", "dibexOverview.tabiFrame", "iFRAMES"));
+    } }
+    function dibexOverviewComponent_button_98_Template(rf, ctx) { if (rf & 1) {
+        const _r20 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 130);
+        i0.ɵɵlistener("click", function dibexOverviewComponent_button_98_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r20); const ctx_r19 = i0.ɵɵnextContext(); const _r11 = i0.ɵɵreference(96); const _r12 = i0.ɵɵreference(97); ctx_r19.clearDropdown(ctx_r19.model.modelItems.clientId.formControl, $event, ctx_r19.lists.list4378, _r11); return i0.ɵɵresetView(_r12.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexOverviewComponent_mat_progress_bar_101_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 125);
+    } }
+    function dibexOverviewComponent_mat_option_102_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 131);
+    } if (rf & 2) {
+        const item_r21 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r21.id == "0"))("value", item_r21)("innerHtml", item_r21.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexOverviewComponent_mat_option_173_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 132);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r22 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r22.id);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", item_r22.id_display_value, "");
+    } }
+    function dibexOverviewComponent_mat_form_field_189_Template(rf, ctx) { if (rf & 1) {
+        const _r25 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-form-field", 133)(1, "mat-label");
+        i0.ɵɵtext(2, "datepicker");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "input", 134);
+        i0.ɵɵlistener("focus", function dibexOverviewComponent_mat_form_field_189_Template_input_focus_3_listener() { i0.ɵɵrestoreView(_r25); const _r23 = i0.ɵɵreference(6); return i0.ɵɵresetView(_r23.open()); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(4, "mat-datepicker-toggle", 135)(5, "mat-datepicker", null, 136);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r23 = i0.ɵɵreference(6);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("matDatepicker", _r23)("placeholder", "datepicker");
+        i0.ɵɵattribute("aria-label", "datepicker");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("for", _r23);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                core_4 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i15 = card_1_1;
+            },
+            function (datepicker_1_1) {
+                datepicker_1 = datepicker_1_1;
+                i9 = datepicker_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i11 = icon_1_1;
+            },
+            function (select_1_1) {
+                select_1 = select_1_1;
+                i14 = select_1_1;
+            },
+            function (progress_bar_1_1) {
+                progress_bar_1 = progress_bar_1_1;
+                i13 = progress_bar_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i16 = tabs_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            _c2 = function (a1) { return { changeUrl: false, originContainer: a1 }; };
+            _c3 = function (a3) { return { containerName: "dibexTestClientGrid", portId: 4372, portAlias: "main", options: a3 }; };
+            _c4 = function (a1) { return { changeUrl: true, originContainer: a1 }; };
+            _c5 = function (a3) { return { containerName: "dibexTestClientForm", portId: 4374, portAlias: "main", options: a3 }; };
+            _c6 = function (a1) { return { "color": "black", "background-color": a1 }; };
+            importsRequired = [];
+            dibexOverviewComponent = class dibexOverviewComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 173, name: 'dibexOverview', subContainerItemAliases: [], allChildContainers: ["dibexiFrame", "dibexiFramePhpHtml", "dibexOverviewReport", "dibexPlain", "dibexTestClientForm", "dibexTestClientGrid"], refreshChildContainers: { "tabGrid": ['dibexTestClientGrid*4372'], "tabForm": ['dibexTestClientForm*4374'], "tabPlainInSubcontainer": ['dibexPlain*4375'], "tabiFrame": ['dibexiFrame*4380'], "_": ['dibexTestClientGrid*4361', 'dibexOverviewReport*4384', 'dibexOverviewReport*4385', 'dibexiFramePhpHtml*4380'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list4378 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexOverview&containerItemId=4378", null, null, 40);
+                    this.lists.list4330 = new shared_2.DibEnumList(this.translationService, this.eventService, 'selectEnum', ['A', 'B', 'C', 'D'], false);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexOverview');
+                    this.containerName = 'dibexOverview'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { datepicker: { itemId: 4317, type: 'date', fieldAlias: 'datepicker', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'date', contentType: 'date', changeUrl: false }, inputNumber: { itemId: 4320, type: 'number', fieldAlias: 'inputNumber', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, selectEnum: { itemId: 4330, type: 'text', fieldAlias: 'selectEnum', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false,
+                            enum: ['A', 'B', 'C', 'D'] }, now: { itemId: 4337, type: 'text', fieldAlias: 'now', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: 'note, I have a default value :)', dataType: 'text', contentType: 'text', changeUrl: false }, setMe: { itemId: 4338, type: 'text', fieldAlias: 'setMe', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: 'The button will update me too', dataType: 'text', contentType: 'text', changeUrl: false }, formula: { itemId: 4341, type: 'text', fieldAlias: 'formula', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'formula', default: '', dataType: 'text', contentType: 'text', changeUrl: false }, progressValue: { itemId: 4354, type: 'number', fieldAlias: 'progressValue', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, clientId: { itemId: 4378, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 4378 }, };
+                    this.model.$formGroup.addControl('datepicker', this.model.modelItems.datepicker.formControl);
+                    this.model.$formGroup.addControl('inputNumber', this.model.modelItems.inputNumber.formControl);
+                    this.model.$formGroup.addControl('selectEnum', this.model.modelItems.selectEnum.formControl);
+                    this.model.$formGroup.addControl('now', this.model.modelItems.now.formControl);
+                    this.model.$formGroup.addControl('setMe', this.model.modelItems.setMe.formControl);
+                    this.model.$formGroup.addControl('formula', this.model.modelItems.formula.formControl);
+                    this.model.$formGroup.addControl('progressValue', this.model.modelItems.progressValue.formControl);
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.modelItems.clientId.formControl.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.switchMap((value) => this.eventService.on(`clientData_${this.view.container.name}`).pipe(operators_1.take(1), operators_1.map((result) => { return value; })))).subscribe(value => { if (!!value && !!value.id == false)
+                        return; if (value !== '' && value != null) {
+                        this.actionService.handle(this.containerActionReference(), 'clientId', 'changed');
+                    } });
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('comment14', `As mentioned, applications consist of containers that are nested in one-another. They can be nested:<ul>
+<li>as a subcontainer (like the 'plain' container above) meaning they are automatically loaded into the view after their parent container is loaded, OR</li>
+<li>via a port, meaning they are only loaded when and if requested.</li>
+</ul>
+Ports allow you to have 1000's of containers, and users will only load those they need and have access to.
+<br>A container's Port records simply define the items (eg a div/card) in which this container can be loaded.
+<br>
+<br>Ports are very flexible:<ul>
+<li>Any layout item like a tab, card or div, can be designated as the target where a container must be loaded.</li><li>Ports are activated by an event, eg. the click of a button. More often the event is the click of a tab that loads a container within the same tab.</li>
+<li>When a port is activated, the URL can optionally change. And if a user browses to that URL, then that port will be activated.</li>
+<li>Containers can be loaded as popup windows (either maximized or not),&nbsp;or inside other layout items.</li>
+<li>The same container can be loaded into different positions and each instance will function independently.</li><li>Multiple containers can be loaded into the same port (eg. a tab), replacing one another. The tab's caption will be updated to the caption set on the port record, and if this is not set, the container's caption.</li>
+</ul>`);
+                    this.setInnerHtml('h2', `Building Apps With Dropinbase (Overview)`);
+                    this.setInnerHtml('span', `(Note, Press <b>Alt-x</b> in the User app to open the Design of the active container)`);
+                    this.setInnerHtml('comment14', `As mentioned, applications consist of containers that are nested in one-another. They can be nested:<ul>
+<li>as a subcontainer (like the 'plain' container above) meaning they are automatically loaded into the view after their parent container is loaded, OR</li>
+<li>via a port, meaning they are only loaded when and if requested.</li>
+</ul>
+Ports allow you to have 1000's of containers, and users will only load those they need and have access to.
+<br>A container's Port records simply define the items (eg a div/card) in which this container can be loaded.
+<br>
+<br>Ports are very flexible:<ul>
+<li>Any layout item like a tab, card or div, can be designated as the target where a container must be loaded.</li><li>Ports are activated by an event, eg. the click of a button. More often the event is the click of a tab that loads a container within the same tab.</li>
+<li>When a port is activated, the URL can optionally change. And if a user browses to that URL, then that port will be activated.</li>
+<li>Containers can be loaded as popup windows (either maximized or not),&nbsp;or inside other layout items.</li>
+<li>The same container can be loaded into different positions and each instance will function independently.</li><li>Multiple containers can be loaded into the same port (eg. a tab), replacing one another. The tab's caption will be updated to the caption set on the port record, and if this is not set, the container's caption.</li>
+</ul>`);
+                    this.setInnerHtml('h2', `Building Apps With Dropinbase (Overview)`);
+                    this.setInnerHtml('span', `(Note, Press <b>Alt-x</b> in the User app to open the Design of the active container)`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "clientId", actionType: "changed", responseType: 'actions', submitUrl: null, itemAlias: "clientId", waitForCompletion: false, containerName: "dibexOverview", handlers: [() => new Promise((resolve, reject) => { return this.navigationService.goTo('dibexiFrame', '', '', { changeUrl: false, originContainer: this }); }), () => new Promise((resolve, reject) => { this.containerService.bufferContainerReloading.next({ port: '4380', containerName: 'dibexOverview' }); return resolve(); }),] }, this.clientData, { itemEventId: 'ie232-dib', itemId: '4378', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnGetActions", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/getActions", itemAlias: "btnGetActions", waitForCompletion: false, containerName: "dibexOverview", handlers: [] }, this.clientData, { itemEventId: 'ie230-dib', itemId: '4344', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnNow", actionType: "click", responseType: 'actions', submitUrl: "shared.action.set-value?now=@{dibDatetime}&setMe=updated", itemAlias: "btnNow", waitForCompletion: false, containerName: "dibexOverview", handlers: [] }, this.clientData, { itemEventId: 'ie228-dib', itemId: '4335', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnCalc", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Events/calcFormula", itemAlias: "btnCalc", waitForCompletion: false, containerName: "dibexOverview", handlers: [] }, this.clientData, { itemEventId: 'ie229-dib', itemId: '4340', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnStartQueue", actionType: "click", responseType: '1200', submitUrl: "/dropins/dibExamples/Queue/startQueueFromClient", itemAlias: "btnStartQueue", waitForCompletion: false, containerName: "dibexOverview", handlers: [] }, this.clientData, { itemEventId: 'ie231-dib', itemId: '4353', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource4378 = this.lists.list4378.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange4378 = new Date().getTime();
+                    let previousUrlChange4378;
+                    let previousResponse4378;
+                    this.lists.list4378.items = rxjs_1.combineLatest([this.lists.list4378.updatedList$, itemsUpdateSource4378]).pipe(operators_1.tap(() => { this.lists.list4378.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange4378 - new Date().getTime()) / 1000;
+                        previousTimeChange4378 = new Date().getTime();
+                        previousUrlChange4378 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse4378 = response;
+                            this.lists.list4378.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list4378.items.subscribe(records => this.lists.list4378.lastItems = records);
+                    this.lists.list4378.multiSelected = [];
+                    this.lists.list4378.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list4378.updatedList$.next([]);
+                        self.lists.list4378.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list4378.refresh();
+                    }
+                    else {
+                        self.lists.list4378.searchForm.setValue('');
+                        self.lists.list4378.updatedList$.next(self.lists.list4378.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list4378.multiSelected);
+                    } };
+                    this.lists.list4378.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list4378.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list4378.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list4378.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list4378.multiSelected.push(value);
+                            }
+                        }
+                        lists.list4378.multiSelected = self.removeDuplicateIdsFromArray(lists.list4378.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list4378.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list4378.dispose();
+                    this.lists.list4330.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexOverview', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexOverview' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexOverviewComponent_Factory(t) { return new (t || dibexOverviewComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexOverviewComponent, selectors: [["dibex-overview"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 477, vars: 92, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci4306", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci4748", "dibComponent", "h2", 2, "margin-left", "20px"], ["id", "ci4364", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap"], ["id", "ci4365", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci4366", "dibComponent", "div", 2, "flex", "0 1 auto", "background", "white"], ["id", "ci4367", "dibComponent", "img", "src", "/files/dropins/dibExamples/img/dibSummary.png"], ["id", "ci4368", "dibComponent", "comment", 2, "padding", "10px 10px 10px 20px !important", "font-size", "25px", "font-weight", "700", "margin-top", "20px"], ["id", "ci4369", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4370", "dibComponent", "comment"], [2, "font-weight", "700", "color", "#1427ed"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci4371", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexOverview", "dibTabGoToParent", "", "dibAutoTabSelection", "4375,4372,4374,4376", "dibAutoTabSelectionAliases", "tabPlainInSubcontainer,tabGrid,tabForm,tabiFrame", 2, "background", "lightsteelblue", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["tabReference4375", ""], ["mat-tab-label", ""], ["id", "ci4375", "dibComponent", "subcontainer", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["parentContainerName", "dibexOverview", "subContainerName", "dibexPlain", "subContainerId", "176", "dropinName", "plain", 3, "dibPort"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px", 3, "dibTabGoTo"], ["tabReference4372", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci4372", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px 10px"], ["id", "ci4373", "dibComponent", "comment", 2, "margin", "0px 6px !important"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", 3, "dibTabGoTo"], ["tabReference4374", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci4374", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap"], ["tabReference4376", ""], ["id", "ci4376", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap"], ["id", "ci4377", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px", "flex-wrap", "nowrap"], ["id", "ci4379", "dibComponent", "comment"], ["id", "ci4378", "dibComponent", "autocomplete", "dibListeners", "", "eventList", "  changed ", "actionId", "clientId", "item-alias", "clientId", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", 3, "containerPortId"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto4378trigger", "matAutocompleteTrigger", "input4378", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto4378", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci4380", "dibComponent", "card", "item-alias", "cardIFrame", 2, "height", "440px !important", "flex", "0 1 auto"], ["item-alias", "cardIFrame", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["id", "ci4307", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4308", "dibComponent", "comment"], ["id", "ci4309", "dibComponent", "comment"], ["id", "ci4310", "dibComponent", "comment"], ["id", "ci7605", "dibComponent", "span", 2, "font-size", "16px", "color", "firebrick", 3, "innerHtml"], ["id", "ci4311", "dibComponent", "div", 2, "flex", "0 1 auto"], ["id", "ci4312", "dibComponent", "img", "src", "/files/dropins/dibAdmin/images/docs/DesignerHelp.png"], ["id", "ci4313", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4314", "dibComponent", "comment"], ["id", "ci4329", "dibComponent", "div", 2, "flex", "0 1 auto"], ["id", "ci4330", "dibComponent", "selectEnum", "appearance", "standard", 2, "width", "200px !important", "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["formControlName", "selectEnum"], [3, "value", 4, "ngFor", "ngForOf"], ["id", "ci4315", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4316", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap"], ["id", "ci4318", "dibComponent", "comment"], ["id", "ci4317", "dibComponent", "datePicker", "style", "  ", "appearance", "standard", 4, "ngIf"], ["id", "ci4319", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4321", "dibComponent", "comment"], ["id", "ci5123", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex", "1 1 0%", "overflow", "auto !important"], ["id", "ci4320", "dibComponent", "inputNumber", "appearance", "standard", 3, "dibDisabled"], ["matInput", "", "type", "number", "formControlName", "inputNumber", "name", "inputNumber"], ["mat-raised-button", "", "color", "primary", "id", "ci5124", "dibComponent", "button", "type", "button", 3, "dibDisabled"], [1, "dibButtonCaption"], ["id", "ci4322", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4323", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4325", "dibComponent", "comment"], ["mat-raised-button", "", "color", "primary", "id", "ci4324", "dibComponent", "button", "type", "button", 3, "hidden"], ["id", "ci4326", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4328", "dibComponent", "comment"], ["mat-raised-button", "", "id", "ci4327", "dibComponent", "button", "type", "button", 3, "ngStyle"], ["id", "ci4331", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4332", "dibComponent", "comment"], ["id", "ci4333", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4334", "dibComponent", "section", 2, "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci4335", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnNow", "type", "button", 3, "containerPortId"], ["id", "ci4336", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4337", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "now", "name", "now"], ["id", "ci4338", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "setMe", "name", "setMe", "aria-label", "setMe"], ["id", "ci4339", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4341", "dibComponent", "inputText", "item-alias", "formula", "appearance", "standard", 2, "min-width", "450px"], ["matInput", "", "type", "text", "formControlName", "formula", "name", "formula"], ["mat-raised-button", "", "color", "primary", "id", "ci4340", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnCalc", "type", "button", 3, "containerPortId"], ["id", "ci4342", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4343", "dibComponent", "comment"], ["mat-raised-button", "", "color", "primary", "id", "ci4344", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnGetActions", "type", "button", 3, "containerPortId"], ["id", "ci4345", "dibComponent", "span", "item-alias", "spanTarget", 3, "innerHtml"], ["id", "ci4346", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["id", "ci4349", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4350", "dibComponent", "comment"], ["id", "ci4352", "dibComponent", "div", 2, "flex", "0 1 auto"], ["mat-raised-button", "", "color", "primary", "id", "ci4353", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnStartQueue", "type", "button", 3, "containerPortId"], ["id", "ci4354", "dibComponent", "inputNumber", "appearance", "standard", 3, "hidden"], ["matInput", "", "type", "number", "formControlName", "progressValue", "name", "progressValue", "aria-label", "progressValue"], ["id", "ci4351", "dibComponent", "progressBar", 2, "margin", "0px 0px 20px !important"], ["color", "accent", "mode", "buffer", 3, "value", "bufferValue"], ["id", "ci4347", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci4348", "dibComponent", "comment"], ["id", "ci4355", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7604", "dibComponent", "img", "src", "/files/dropins/dibAdmin/images/docs/introNestedContainers.png", 2, "max-width", "750px"], ["id", "ci4356", "dibComponent", "span", 2, "font-size", "17px", "border", "1px", "border-style", "solid", "border-color", "#c3c3c3", "padding", "9px", "background-color", "#FFF9E0", 3, "innerHtml"], ["id", "ci4357", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci4358", "dibComponent", "button", "type", "button", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci4359", "dibComponent", "button", "type", "button", 3, "click"], ["mat-raised-button", "", "color", "primary", "id", "ci4360", "dibComponent", "button", "type", "button", 3, "click"], ["id", "ci4361", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4362", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci7606", "dibComponent", "img", "src", "/files/dropins/dibAdmin/images/docs/introPerms.png", 2, "max-width", "750px"], ["id", "ci4363", "dibComponent", "comment"], ["id", "ci4381", "dibComponent", "card", 2, "flex", "1 1 0%"], ["id", "ci4382", "dibComponent", "comment"], ["id", "ci4383", "dibComponent", "comment"], ["id", "ci4384", "dibComponent", "section", "item-alias", "sectionReport", 2, "flex", "1 1 0%"], ["item-alias", "sectionReport", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "stretch", "flex-wrap", "nowrap"], ["id", "ci4385", "dibComponent", "subcontainer", 2, "width", "930px !important", "flex", "1 1 100%"], ["parentContainerName", "dibexOverview", "subContainerName", "dibexOverviewReport", "subContainerId", "193", "dropinName", "iframe", 3, "dibPort"], ["mode", "indeterminate"], ["tabPortId", "4375", "dibid", "tabPlainInSubcontainer__caption.4375", 3, "value"], ["tabPortId", "4372", "dibid", "tabGrid__caption.4372", 3, "value"], ["tabPortId", "4374", "dibid", "tabForm__caption.4374", 3, "value"], ["tabPortId", "4376", "dibid", "tabiFrame__caption.4376", 3, "value"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"], [3, "value"], ["id", "ci4317", "dibComponent", "datePicker", "appearance", "standard"], ["matInput", "", "formControlName", "datepicker", "name", "datepicker", 3, "matDatepicker", "placeholder", "focus"], ["matPrefix", "", 3, "for"], ["datePicker4317", ""]], template: function dibexOverviewComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexOverviewComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexOverviewComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "mat-card", 3)(4, "mat-card-content", 4);
+                        i0.ɵɵelementContainerStart(5, 5);
+                        i0.ɵɵelementStart(6, "h2", 6)(7, "span");
+                        i0.ɵɵtext(8, "Building Apps With Dropinbase (Overview)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card", 7)(10, "mat-card-header")(11, "mat-card-title");
+                        i0.ɵɵtext(12, "Overview of Steps");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(13, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(14, 5);
+                        i0.ɵɵelementStart(15, "span", 9)(16, "div", 10);
+                        i0.ɵɵtext(17, " Dropinbase has the flexibility required and a complete set of features to build just about any ERP/CRM/admin system.");
+                        i0.ɵɵelement(18, "br");
+                        i0.ɵɵtext(19, "Once Dropinbase is connected to one or more databases, it can store an analysis of their tables and relationships.");
+                        i0.ɵɵelement(20, "br");
+                        i0.ɵɵtext(21, "The ");
+                        i0.ɵɵelementStart(22, "b");
+                        i0.ɵɵtext(23, "App Wizard");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(24, " can then build fully functional applications within minutes.");
+                        i0.ɵɵelement(25, "br");
+                        i0.ɵɵtext(26, "The ");
+                        i0.ɵɵelementStart(27, "b");
+                        i0.ɵɵtext(28, "Container Features");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(29, " tool can adjust features and make bulk customizations, while the ");
+                        i0.ɵɵelementStart(30, "b");
+                        i0.ɵɵtext(31, "Designer");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(32, " can make detailed changes. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(33, "div", 11);
+                        i0.ɵɵelementContainerStart(34, 5);
+                        i0.ɵɵelement(35, "img", 12);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(36, "span", 13)(37, "div", 10);
+                        i0.ɵɵtext(38, " A Dropinbase application consists of nested containers/pages, that can be loaded on demand as the user navigates. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(39, "mat-card", 14)(40, "mat-card-header")(41, "mat-card-title");
+                        i0.ɵɵtext(42, "Container Types");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(43, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(44, 5);
+                        i0.ɵɵelementStart(45, "span", 15)(46, "div", 10);
+                        i0.ɵɵtext(47, " There are various types of containers - ");
+                        i0.ɵɵelementStart(48, "span", 16);
+                        i0.ɵɵtext(49, "click the tabs below to investigate");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(50, ". ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(51, "div", 17)(52, "mat-tab-group", 18)(53, "mat-tab", 19, 20);
+                        i0.ɵɵtemplate(55, dibexOverviewComponent_ng_template_55_Template, 1, 1, "ng-template", 21);
+                        i0.ɵɵelementStart(56, "div", 22);
+                        i0.ɵɵelementContainer(57, 23);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(58, "mat-tab", 24, 25);
+                        i0.ɵɵtemplate(61, dibexOverviewComponent_ng_template_61_Template, 1, 1, "ng-template", 21);
+                        i0.ɵɵelementStart(62, "div", 26);
+                        i0.ɵɵelementContainerStart(63, 5);
+                        i0.ɵɵelementStart(64, "span", 27)(65, "div", 10);
+                        i0.ɵɵtext(66, " Containers like grids and forms can be linked to database tables or queries, or even custom data sources like api's.");
+                        i0.ɵɵelement(67, "br");
+                        i0.ɵɵtext(68, "An application can be linked to various databases.");
+                        i0.ɵɵelement(69, "br");
+                        i0.ɵɵtext(70, "Currently the database that hosts the Dropinbase tables must be MariaDb (or MySQL) (soon others will be available). ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(71, "mat-tab", 28, 29);
+                        i0.ɵɵtemplate(74, dibexOverviewComponent_ng_template_74_Template, 1, 1, "ng-template", 21);
+                        i0.ɵɵelementStart(75, "div", 30);
+                        i0.ɵɵelementContainer(76, 5);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(77, "mat-tab", 31, 32);
+                        i0.ɵɵtemplate(79, dibexOverviewComponent_ng_template_79_Template, 1, 1, "ng-template", 21);
+                        i0.ɵɵelementStart(80, "div", 33);
+                        i0.ɵɵelementContainerStart(81, 5);
+                        i0.ɵɵelementStart(82, "mat-card", 34)(83, "mat-card-content", 35);
+                        i0.ɵɵelementContainerStart(84, 5);
+                        i0.ɵɵelementStart(85, "span", 36)(86, "div", 10);
+                        i0.ɵɵtext(87, " Select a Client below. An iframe will be loaded containing custom HTML from a specified file.");
+                        i0.ɵɵelement(88, "br");
+                        i0.ɵɵtext(89, "HTML can also be generated with Dropinbase's powerful templating engine, Eleutheria.");
+                        i0.ɵɵelement(90, "br");
+                        i0.ɵɵtext(91, "See the /dropins/dibExamples/templates/IFrameHtml.html file for details. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(92, "mat-form-field", 37)(93, "mat-label");
+                        i0.ɵɵtext(94, "Select a Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(95, "input", 38, 39);
+                        i0.ɵɵtemplate(98, dibexOverviewComponent_button_98_Template, 3, 0, "button", 40);
+                        i0.ɵɵelementStart(99, "mat-autocomplete", 41, 42);
+                        i0.ɵɵlistener("opened", function dibexOverviewComponent_Template_mat_autocomplete_opened_99_listener() { return ctx.lists.list4378.refresh(); });
+                        i0.ɵɵtemplate(101, dibexOverviewComponent_mat_progress_bar_101_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(102, dibexOverviewComponent_mat_option_102_Template, 1, 5, "mat-option", 43);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(103, "mat-card", 44)(104, "mat-card-content", 45);
+                        i0.ɵɵelementContainer(105, 5);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(106, "mat-card", 46)(107, "mat-card-header")(108, "mat-card-title");
+                        i0.ɵɵtext(109, "The Designer");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(110, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(111, 5);
+                        i0.ɵɵelementStart(112, "span", 47)(113, "div", 10);
+                        i0.ɵɵtext(114, " While the ");
+                        i0.ɵɵelementStart(115, "b");
+                        i0.ɵɵtext(116, "Container Features");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(117, " tool can adjust the base container and other containers using scripts (stored in ");
+                        i0.ɵɵelementStart(118, "b");
+                        i0.ɵɵtext(119, "pef_script");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(120, "),the ");
+                        i0.ɵɵelementStart(121, "b");
+                        i0.ɵɵtext(122, "Designer");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(123, " is used to make detailed changes.");
+                        i0.ɵɵelement(124, "br");
+                        i0.ɵɵtext(125, "Each container has attributes like 'Name', 'Caption' and 'Container Type', but also contains items which make up the content.");
+                        i0.ɵɵelement(126, "br");
+                        i0.ɵɵtext(127, "Eg. the form container above contains buttons and fields, which are positioned via layout items like 'row' and 'section'.");
+                        i0.ɵɵelement(128, "br");
+                        i0.ɵɵtext(129, "New items are added by dragging from the component tree to the item tree, or copy-pasting, or duplicating existing items. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(130, "span", 48)(131, "div", 10);
+                        i0.ɵɵtext(132, " The Designer is used to build and customize containers, but is in fact just a convenient tool to ");
+                        i0.ɵɵelement(133, "br");
+                        i0.ɵɵtext(134, "populate the Dropinbase tables, like ");
+                        i0.ɵɵelementStart(135, "b");
+                        i0.ɵɵtext(136, "pef_container");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(137, " and ");
+                        i0.ɵɵelementStart(138, "b");
+                        i0.ɵɵtext(139, "pef_item");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(140, ", that store the design. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(141, "span", 49)(142, "div", 10);
+                        i0.ɵɵtext(143, " In the Designer, you'll notice each item is of a certain ");
+                        i0.ɵɵelementStart(144, "i");
+                        i0.ɵɵtext(145, "component type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(146, ", and is customizable via attributes and settings.");
+                        i0.ɵɵelement(147, "br");
+                        i0.ɵɵtext(148, "Custom components can be created by developers. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(149, "span", 50);
+                        i0.ɵɵpipe(150, "safeHtml");
+                        i0.ɵɵelementStart(151, "div", 51);
+                        i0.ɵɵelementContainerStart(152, 5);
+                        i0.ɵɵelement(153, "img", 52);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(154, "mat-card", 53)(155, "mat-card-header")(156, "mat-card-title");
+                        i0.ɵɵtext(157, "Dynamic Conditional Directives");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(158, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(159, 5);
+                        i0.ɵɵelementStart(160, "span", 54)(161, "div", 10);
+                        i0.ɵɵtext(162, " Conditional rules can be applied in Attributes of items to show, hide or disable them dynamically.");
+                        i0.ɵɵelement(163, "br");
+                        i0.ɵɵelementStart(164, "b");
+                        i0.ɵɵtext(165, "Note, you can click the 'View Design'-button at the top of this page to investigate how we configured the items below.");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(166, "div", 55);
+                        i0.ɵɵelementContainerStart(167, 5);
+                        i0.ɵɵelementStart(168, "mat-form-field", 56)(169, "mat-label")(170, "b");
+                        i0.ɵɵtext(171, "selectEnum");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(172, "mat-select", 57);
+                        i0.ɵɵtemplate(173, dibexOverviewComponent_mat_option_173_Template, 2, 2, "mat-option", 58);
+                        i0.ɵɵpipe(174, "async");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(175, "div", 59);
+                        i0.ɵɵelementContainerStart(176, 5);
+                        i0.ɵɵelementStart(177, "mat-card", 60)(178, "mat-card-header")(179, "mat-card-title");
+                        i0.ɵɵtext(180, "*ngIf");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(181, "mat-card-content", 61)(182, "span", 62)(183, "div", 10)(184, "b");
+                        i0.ɵɵtext(185, "*ngIf=\"getValue('selectEnum') != 'A'\"");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(186, "br");
+                        i0.ɵɵelementStart(187, "i");
+                        i0.ɵɵtext(188, "Only include the datepicker in the browser (the DOM),\u00A0if selectEnum is not 'A'");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵtemplate(189, dibexOverviewComponent_mat_form_field_189_Template, 7, 4, "mat-form-field", 63);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(190, "mat-card", 64)(191, "mat-card-header")(192, "mat-card-title");
+                        i0.ɵɵtext(193, "[dibDisabled]");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(194, "mat-card-content", 61)(195, "span", 65)(196, "div", 10)(197, "b");
+                        i0.ɵɵtext(198, "[dibDisabled]=\"getValue('selectEnum') == 'C'\"");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(199, "br");
+                        i0.ɵɵelementStart(200, "i");
+                        i0.ɵɵtext(201, "Disable inputNumber and button if selectEnum is 'C'");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(202, "div", 66);
+                        i0.ɵɵelementContainerStart(203, 5);
+                        i0.ɵɵelementStart(204, "mat-form-field", 67)(205, "mat-label");
+                        i0.ɵɵtext(206, "inputNumber");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(207, "input", 68);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(208, "button", 69)(209, "span", 70);
+                        i0.ɵɵtext(210, "Im not available");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(211, "div", 71);
+                        i0.ɵɵelementContainerStart(212, 5);
+                        i0.ɵɵelementStart(213, "mat-card", 72)(214, "mat-card-header")(215, "mat-card-title");
+                        i0.ɵɵtext(216, "[hidden]");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(217, "mat-card-content", 61)(218, "span", 73)(219, "div", 10)(220, "b");
+                        i0.ɵɵtext(221, "[hidden]=\"getValue('selectEnum') > 'B' || getValue('name', 'dibexTestClientForm').includes('Cheese')\"");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(222, "br");
+                        i0.ɵɵelementStart(223, "i");
+                        i0.ɵɵtext(224, "Hide button if selectEnum is greater than 'B' OR the name field on the Client Form (above) includes the word 'Cheese'");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(225, "button", 74)(226, "span", 70);
+                        i0.ɵɵtext(227, "Hello :)");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(228, "mat-card", 75)(229, "mat-card-header")(230, "mat-card-title");
+                        i0.ɵɵtext(231, "[ngStyle]");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(232, "mat-card-content", 61)(233, "span", 76)(234, "div", 10)(235, "b");
+                        i0.ɵɵtext(236);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(237, "br");
+                        i0.ɵɵelementStart(238, "i");
+                        i0.ɵɵtext(239, "If selectEnum is 'A' then green, else if selectEnum = 'B' then yellow, else red.");
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(240, "button", 77)(241, "span", 70);
+                        i0.ɵɵtext(242, "Any css style can be applied ...");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(243, "mat-card", 78)(244, "mat-card-header")(245, "mat-card-title");
+                        i0.ɵɵtext(246, "Events");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(247, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(248, 5);
+                        i0.ɵɵelementStart(249, "span", 79)(250, "div", 10);
+                        i0.ɵɵtext(251, " Containers, items and tables can have various events which are triggered either in the users' browser, or on the server. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(252, "div", 80);
+                        i0.ɵɵelementContainerStart(253, 5);
+                        i0.ɵɵelementStart(254, "mat-card", 81)(255, "mat-card-header")(256, "mat-card-title");
+                        i0.ɵɵtext(257, "Client-side Event");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(258, "mat-card-content", 61)(259, "button", 82)(260, "span", 70);
+                        i0.ɵɵtext(261, "What is the time?");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(262, "div", 83);
+                        i0.ɵɵelementContainerStart(263, 5);
+                        i0.ɵɵelementStart(264, "mat-form-field", 84)(265, "mat-label");
+                        i0.ɵɵtext(266, "Now");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(267, "input", 85);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(268, "mat-form-field", 86);
+                        i0.ɵɵelement(269, "input", 87);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(270, "mat-card", 88)(271, "mat-card-header")(272, "mat-card-title");
+                        i0.ɵɵtext(273, "Server-side Event");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(274, "mat-card-content", 61)(275, "mat-form-field", 89)(276, "mat-label");
+                        i0.ɵɵtext(277, "Provide a formula using digits and the plus symbol (eg 2 + 5 + 1)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(278, "input", 90);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(279, "button", 91)(280, "span", 70);
+                        i0.ɵɵtext(281, "Calculate on the Server");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(282, "mat-card", 92)(283, "mat-card-header")(284, "mat-card-title");
+                        i0.ɵɵtext(285, "Server-side Event returning Actions");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(286, "mat-card-content", 61)(287, "span", 93)(288, "div", 10);
+                        i0.ɵɵtext(289, " Server-side code can return actions that are performed in the browser.");
+                        i0.ɵɵelement(290, "br");
+                        i0.ɵɵtext(291, "This button will set the html of a empty span-tag below, and then click the 'What is the Time?' button above. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(292, "button", 94)(293, "span", 70);
+                        i0.ɵɵtext(294, "Get Actions");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(295, "span", 95);
+                        i0.ɵɵpipe(296, "safeHtml");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(297, "div", 96);
+                        i0.ɵɵelementContainerStart(298, 5);
+                        i0.ɵɵelementStart(299, "mat-card", 97)(300, "mat-card-header")(301, "mat-card-title");
+                        i0.ɵɵtext(302, "Long Running Code");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(303, "mat-card-content", 8)(304, "span", 98)(305, "div", 10);
+                        i0.ɵɵtext(306, " By default, the browser/client will wait for 30 seconds for a reply from the server before timing out. For long-running server-code, actions that update a progress bar and make other changes can be queued on the server, and polling can be setup to fetch these actions. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(307, "div", 99);
+                        i0.ɵɵelementContainerStart(308, 5);
+                        i0.ɵɵelementStart(309, "button", 100)(310, "span", 70);
+                        i0.ɵɵtext(311, "Run 1 min Code");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(312, "mat-form-field", 101);
+                        i0.ɵɵelement(313, "input", 102);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(314, "div", 103);
+                        i0.ɵɵelement(315, "mat-progress-bar", 104);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementStart(316, "mat-card", 105)(317, "mat-card-header")(318, "mat-card-title");
+                        i0.ɵɵtext(319, "Container & Table Events");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(320, "mat-card-content", 61)(321, "span", 106)(322, "div", 10);
+                        i0.ɵɵtext(323, " There are various types of ");
+                        i0.ɵɵelementStart(324, "b");
+                        i0.ɵɵtext(325, "Container Events");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(326, " that can be triggered in the browser/client (eg ");
+                        i0.ɵɵelementStart(327, "b");
+                        i0.ɵɵtext(328, "load");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(329, ", ");
+                        i0.ɵɵelementStart(330, "b");
+                        i0.ɵɵtext(331, "create");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(332, ", ");
+                        i0.ɵɵelementStart(333, "b");
+                        i0.ɵɵtext(334, "update");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(335, ", etc.) or on the server (eg ");
+                        i0.ɵɵelementStart(336, "b");
+                        i0.ɵɵtext(337, "before update");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(338, ", ");
+                        i0.ɵɵelementStart(339, "b");
+                        i0.ɵɵtext(340, "after delete");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(341, ", ");
+                        i0.ɵɵelementStart(342, "b");
+                        i0.ɵɵtext(343, "before readmany");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(344, ", etc).");
+                        i0.ɵɵelement(345, "br");
+                        i0.ɵɵtext(346, "Client events can call client-side or server-side code, and server-side events can call server-side code or return actions to be performed in the browser/client.");
+                        i0.ɵɵelement(347, "br")(348, "br");
+                        i0.ɵɵelementStart(349, "b");
+                        i0.ɵɵtext(350, "Table Events");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(351, ", eg ");
+                        i0.ɵɵelementStart(352, "b");
+                        i0.ɵɵtext(353, "bu");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(354, "(before update) or ");
+                        i0.ɵɵelementStart(355, "b");
+                        i0.ɵɵtext(356, "ac");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(357, "(after create) occur with containers that are linked to database tables.");
+                        i0.ɵɵelement(358, "br");
+                        i0.ɵɵtext(359, "You may have 3 forms and one updatable grid, all linked to the same table. Any data changes performed by these containers will trigger the same events.");
+                        i0.ɵɵelement(360, "br")(361, "br");
+                        i0.ɵɵtext(362, "See the examples for more details. ");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(363, "mat-card", 107)(364, "mat-card-header")(365, "mat-card-title");
+                        i0.ɵɵtext(366, "Subcontainers & Ports");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(367, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(368, 5);
+                        i0.ɵɵelement(369, "img", 108)(370, "span", 109);
+                        i0.ɵɵpipe(371, "safeHtml");
+                        i0.ɵɵelementStart(372, "div", 110);
+                        i0.ɵɵelementContainerStart(373, 5);
+                        i0.ɵɵelementStart(374, "button", 111);
+                        i0.ɵɵlistener("click", function dibexOverviewComponent_Template_button_click_374_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "portCard", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(375, "span", 70);
+                        i0.ɵɵtext(376, "Load Grid in Card below");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(377, "button", 112);
+                        i0.ɵɵlistener("click", function dibexOverviewComponent_Template_button_click_377_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "maxPopup", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(378, "span", 70);
+                        i0.ɵɵtext(379, "Load Grid as Maximized Popup Window");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(380, "button", 113);
+                        i0.ɵɵlistener("click", function dibexOverviewComponent_Template_button_click_380_listener($event) { return ctx.navigationService.goTo("dibexTestClientGrid", "floatPopup", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(381, "span", 70);
+                        i0.ɵɵtext(382, "Load Grid as Floating Popup Window and change the URL");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(383, "mat-card", 114)(384, "mat-card-header")(385, "mat-card-title");
+                        i0.ɵɵtext(386, "Target Port Item");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(387, "mat-card-content", 19);
+                        i0.ɵɵelementContainer(388, 5);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(389, "mat-card", 115)(390, "mat-card-header")(391, "mat-card-title");
+                        i0.ɵɵtext(392, "Permissions");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(393, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(394, 5);
+                        i0.ɵɵelement(395, "img", 116);
+                        i0.ɵɵelementStart(396, "span", 117)(397, "div", 10);
+                        i0.ɵɵtext(398, " Permissions in Dropinbase are based on the rights given to Permissions Groups.");
+                        i0.ɵɵelement(399, "br");
+                        i0.ɵɵtext(400, "A Permission Group can be seen as a Role, eg Staff, Supervisors, Managers, Sales Director, etc.");
+                        i0.ɵɵelement(401, "br");
+                        i0.ɵɵtext(402, "Each Permission Group / Role is then given certain permissions on containers, items, events and even certain records within a container using criteria.");
+                        i0.ɵɵelement(403, "br");
+                        i0.ɵɵtext(404, "In the example above:");
+                        i0.ɵɵelementStart(405, "ul")(406, "li")(407, "strong");
+                        i0.ɵɵtext(408, "Managers");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(409, " can create, read, update and delete all records in the ");
+                        i0.ɵɵelementStart(410, "strong");
+                        i0.ɵɵtext(411, "clientGrid");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(412, " container.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(413, "li")(414, "strong");
+                        i0.ɵɵtext(415, "Data Clerks");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(416, " can read all records, but only update those where the ");
+                        i0.ɵɵelementStart(417, "em");
+                        i0.ɵɵtext(418, "client_status");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(419, " field of the underlying table has a value of 'active'.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(420, "li")(421, "strong");
+                        i0.ɵɵtext(422, "Clients");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(423, " can read can read and update only their own record.\n");
+                        i0.ɵɵelement(424, "br");
+                        i0.ɵɵtext(425, "Values of specific database fields can be stored in a user's session, and made available as parameters in criteria.\n");
+                        i0.ɵɵelement(426, "br");
+                        i0.ɵɵtext(427, "In this case it could be a ");
+                        i0.ɵɵelementStart(428, "em");
+                        i0.ɵɵtext(429, "client_id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(430, " field in pef_login.");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(431, "li")(432, "strong");
+                        i0.ɵɵtext(433, "Data Clerks");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(434, " and ");
+                        i0.ɵɵelementStart(435, "strong");
+                        i0.ɵɵtext(436, "Clients");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(437, " can not create or delete records.");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵtext(438, "Users can be assigned to any combination of these Permission Groups, and their rights are determined by the combined rights of the groups they are linked to. ");
+                        i0.ɵɵelement(439, "br");
+                        i0.ɵɵtext(440, "Each unique combination is called a Permgroup.");
+                        i0.ɵɵelement(441, "br");
+                        i0.ɵɵtext(442, "For eg. a user/login record that is linked to Permission Groups 3 and 5 has Permgroup x3x5x.");
+                        i0.ɵɵelement(443, "br")(444, "br");
+                        i0.ɵɵtext(445, "Dropinbase generates and stores user-interface and server-side code specifically according to the rights of each Permgroup.");
+                        i0.ɵɵelement(446, "br");
+                        i0.ɵɵtext(447, "The code is generated on-the-fly when requested, and is stored in the relevant /dibCode subfolder if it has not been generated and stored already.");
+                        i0.ɵɵelement(448, "br");
+                        i0.ɵɵtext(449, "The file names are suffixed with the relevant permgroup.");
+                        i0.ɵɵelement(450, "br");
+                        i0.ɵɵtext(451, "Before deploying to a production server, all code can be generated. On the production server the folder permissions can be set to read-only, except for the /runtime folder which stores temporary info.");
+                        i0.ɵɵelement(452, "br")(453, "br");
+                        i0.ɵɵtext(454, "Dropinbase will not generate menu items, tabs, buttons, and subcontainers etc. linked to containers that Permgroups do not have rights to access. ");
+                        i0.ɵɵelement(455, "br");
+                        i0.ɵɵtext(456, "This feature is highly convenient, as it ensures each user will automatically only see the elements they have the rights to access. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(457, "mat-card", 118)(458, "mat-card-header")(459, "mat-card-title");
+                        i0.ɵɵtext(460, "Dashboards & Reports");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(461, "mat-card-content", 8);
+                        i0.ɵɵelementContainerStart(462, 5);
+                        i0.ɵɵelementStart(463, "span", 119)(464, "div", 10);
+                        i0.ɵɵtext(465, " No system is complete without a module to generate Dashboards and Reports.");
+                        i0.ɵɵelement(466, "br");
+                        i0.ɵɵtext(467, "Rather than re-invent the wheel and expect you to learn yet another reporting tool, Dropinbase provides tools to integrate the myriad of 3d party options available.");
+                        i0.ɵɵelement(468, "br");
+                        i0.ɵɵtext(469, "The various chart, map and table components require data in specific formats - made easy by a Dropinbase library. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(470, "span", 120)(471, "div", 10);
+                        i0.ɵɵtext(472, " See the /dropins/dibExamples/templates/dibexReportOverview.html file for details. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(473, "mat-card", 121)(474, "mat-card-content", 122)(475, "div", 123);
+                        i0.ɵɵelementContainer(476, 124);
+                        i0.ɵɵelementEnd()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r14 = i0.ɵɵreference(100);
+                        let tmp_37_0;
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(80, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "4306");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("dibPort", "4364");
+                        i0.ɵɵadvance(20);
+                        i0.ɵɵproperty("dibPort", "4366");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "4369");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4375");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(84, _c3, i0.ɵɵpureFunction1(82, _c2, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4372");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(88, _c5, i0.ɵɵpureFunction1(86, _c4, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4374");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4376");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4377");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matAutocomplete", _r14);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list4378.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list4378.lastItems);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4380");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "4307");
+                        i0.ɵɵadvance(38);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(150, 72, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4311");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("dibPort", "4313");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "4329");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(174, 74, ctx.lists.list4330.items));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4315");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("ngIf", ctx.getValue("selectEnum") != "A");
+                        i0.ɵɵadvance(14);
+                        i0.ɵɵproperty("dibPort", "5123");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", ctx.getValue("selectEnum") == "C");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "inputNumber");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibDisabled", ctx.getValue("selectEnum") == "C");
+                        i0.ɵɵattribute("aria-label", "Im not available");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "4322");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("hidden", ctx.getValue("selectEnum") > "B" || ((tmp_37_0 = ctx.getValue("name", "dibexTestClientForm")) !== null && tmp_37_0 !== undefined ? tmp_37_0 : "").includes("Cheese"));
+                        i0.ɵɵattribute("aria-label", "Hello :)");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵtextInterpolate2("[ngStyle]=\"", "{", "'background-color': getValue('selectEnum') == 'A' ? 'green' : (getValue('selectEnum') == 'B' ? 'yellow' : 'red')", "}", "\"");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(90, _c6, ctx.getValue("selectEnum") == "A" ? "green" : ctx.getValue("selectEnum") == "B" ? "yellow" : "red"));
+                        i0.ɵɵattribute("aria-label", "Any css style can be applied ...");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "4331");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "4333");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "What is the time?");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("dibPort", "4336");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "Now");
+                        i0.ɵɵadvance(11);
+                        i0.ɵɵattribute("aria-label", "Provide a formula using digits and the plus symbol (eg 2 + 5 + 1)");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Calculate on the Server");
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Get Actions");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(296, 76, ctx.getHtml("spanTarget")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4346");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵproperty("dibPort", "4352");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Run 1 min Code");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("hidden", true);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("value", ctx.getValue("progressValue"))("bufferValue", 100);
+                        i0.ɵɵadvance(53);
+                        i0.ɵɵproperty("dibPort", "4355");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(371, 78, ctx.getHtml("comment14")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4357");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "Load Grid in Card below");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Load Grid as Maximized Popup Window");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "Load Grid as Floating Popup Window and change the URL");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵproperty("dibPort", "4361");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "4362");
+                        i0.ɵɵadvance(68);
+                        i0.ɵɵproperty("dibPort", "4381");
+                        i0.ɵɵadvance(14);
+                        i0.ɵɵproperty("dibPort", "4385");
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i2.DibListenersDirective, i2.DibDisabledDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatButton, i8.MatIconButton, i9.MatDatepicker, i9.MatDatepickerInput, i9.MatDatepickerToggle, i10.MatFormField, i10.MatLabel, i10.MatPrefix, i10.MatSuffix, i11.MatIcon, i12.MatInput, i13.MatProgressBar, i14.MatSelect, i15.MatCard, i15.MatCardContent, i15.MatCardHeader, i15.MatCardTitle, i16.MatTabLabel, i16.MatTab, i16.MatTabGroup, i3.AsyncPipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexOverview'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexOverviewComponent.prototype, "reloadContainer", null);
+            exports_1("dibexOverviewComponent", dibexOverviewComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexOverviewComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-overview', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><mat-card   style="  flex: 1 1 0%;  " id=ci4306 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4306'" ><h2  id=ci4748 dibComponent=h2   style="  margin-left:20px"  ><span >Building Apps With Dropinbase (Overview)</span></h2></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4364 dibComponent=card  ><mat-card-header ><mat-card-title >Overview of Steps</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4364'" ><span  id=ci4365 dibComponent=comment   style="  " ><div class=dib-comment > Dropinbase has the flexibility required and a complete set of features to build just about any ERP/CRM/admin system.<br>Once Dropinbase is connected to one or more databases, it can store an analysis of their tables and relationships.<br>The <b>App Wizard</b> can then build fully functional applications within minutes.<br>The <b>Container Features</b> tool can adjust features and make bulk customizations, while the <b>Designer</b> can make detailed changes.  </div></span><div   style="  flex: 0 1 auto;  background: white" id=ci4366 dibComponent=div  ><ng-container [dibPort]="'4366'" ><img  id=ci4367 dibComponent=img   style="  "  src="/files/dropins/dibExamples/img/dibSummary.png" /></ng-container></div></ng-container></mat-card-content></mat-card><span  id=ci4368 dibComponent=comment   style="  padding:10px 10px 10px 20px !important;  font-size: 25px; font-weight: 700;margin-top:20px" ><div class=dib-comment > A Dropinbase application consists of nested containers/pages, that can be loaded on demand as the user navigates.  </div></span><mat-card   style="  flex: 1 1 0%;  " id=ci4369 dibComponent=card  ><mat-card-header ><mat-card-title >Container Types</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4369'" ><span  id=ci4370 dibComponent=comment   style="  " ><div class=dib-comment > There are various types of containers - <span style="font-weight:700;color:#1427ed">click the tabs below to investigate</span>.  </div></span><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci4371 dibComponent=tabs   style="  background: lightsteelblue;"  itemAlias=tabs  [portId]="portId" containerName=dibexOverview  dibTabGoToParent   dibAutoTabSelection="4375,4372,4374,4376"  dibAutoTabSelectionAliases="tabPlainInSubcontainer,tabGrid,tabForm,tabiFrame"  [container]="this"  ><mat-tab   #tabReference4375  style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabPlainInSubcontainer', 'dibexOverview.tabPlainInSubcontainer', 'PLAIN')" tabPortId=4375  dibid="tabPlainInSubcontainer__caption.4375"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  " id=ci4375 dibComponent=subcontainer   ><ng-container [dibPort]="'4375'" parentContainerName=dibexOverview  subContainerName=dibexPlain  subContainerId=176  dropinName=plain ></ng-container></div></mat-tab><mat-tab   #tabReference4372  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexTestClientGrid', portId: 4372, portAlias: 'main', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabGrid', 'dibexOverview.tabGrid', 'GRIDS')" tabPortId=4372  dibid="tabGrid__caption.4372"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px 10px;  " id=ci4372 dibComponent=div  ><ng-container [dibPort]="'4372'" ><span  id=ci4373 dibComponent=comment   style="  margin:0px 6px !important;   " ><div class=dib-comment > Containers like grids and forms can be linked to database tables or queries, or even custom data sources like api's.<br>An application can be linked to various databases.<br>Currently the database that hosts the Dropinbase tables must be MariaDb (or MySQL) (soon others will be available).  </div></span></ng-container></div></mat-tab><mat-tab   #tabReference4374  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexTestClientForm', portId: 4374, portAlias: 'main', options: { changeUrl: true, originContainer : this }}"  style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabForm', 'dibexOverview.tabForm', 'FORMS')" tabPortId=4374  dibid="tabForm__caption.4374"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  " id=ci4374 dibComponent=div  ><ng-container [dibPort]="'4374'" ></ng-container></div></mat-tab><mat-tab   #tabReference4376  style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabiFrame', 'dibexOverview.tabiFrame', 'iFRAMES')" tabPortId=4376  dibid="tabiFrame__caption.4376"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;  " id=ci4376 dibComponent=div  ><ng-container [dibPort]="'4376'" ><mat-card   style="  flex: 1 1 0%;  " id=ci4377 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4377'" ><span  id=ci4379 dibComponent=comment   style="  " ><div class=dib-comment > Select a Client below. An iframe will be loaded containing custom HTML from a specified file.<br>HTML can also be generated with Dropinbase's powerful templating engine, Eleutheria.<br>See the /dropins/dibExamples/templates/IFrameHtml.html file for details.  </div></span><mat-form-field  id=ci4378 dibComponent=autocomplete  dibListeners eventList="  changed " [containerPortId]="containerActionReference()" actionId=clientId   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  item-alias=clientId   appearance=standard   ><mat-label>Select a Client</mat-label><input #auto4378trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input4378  [matAutocomplete]="auto4378"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list4378, auto4378trigger); input4378.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto4378=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list4378).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list4378).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list4378.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field></ng-container></mat-card-content></mat-card><mat-card   style="  height:440px !important;   flex: 0 1 auto;  " id=ci4380 dibComponent=card   item-alias=cardIFrame  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  item-alias=cardIFrame   ><ng-container [dibPort]="'4380'" ></ng-container></mat-card-content></mat-card></ng-container></div></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4307 dibComponent=card  ><mat-card-header ><mat-card-title >The Designer</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4307'" ><span  id=ci4308 dibComponent=comment   style="  " ><div class=dib-comment > While the <b>Container Features</b> tool can adjust the base container and other containers using scripts (stored in <b>pef_script</b>),the <b>Designer</b> is used to make detailed changes.<br>Each container has attributes like 'Name', 'Caption' and 'Container Type', but also contains items which make up the content.<br>Eg. the form container above contains buttons and fields, which are positioned via layout items like 'row' and 'section'.<br>New items are added by dragging from the component tree to the item tree, or copy-pasting, or duplicating existing items.  </div></span><span  id=ci4309 dibComponent=comment   style="  " ><div class=dib-comment > The Designer is used to build and customize containers, but is in fact just a convenient tool to <br>populate the Dropinbase tables, like <b>pef_container</b> and <b>pef_item</b>, that store the design.  </div></span><span  id=ci4310 dibComponent=comment   style="  " ><div class=dib-comment > In the Designer, you'll notice each item is of a certain <i>component type</i>, and is customizable via attributes and settings.<br>Custom components can be created by developers.  </div></span><span  id=ci7605 dibComponent=span   style="  font-size:16px; color: firebrick"  [innerHtml]="getHtml('span') | safeHtml" ></span><div   style="  flex: 0 1 auto;  " id=ci4311 dibComponent=div  ><ng-container [dibPort]="'4311'" ><img  id=ci4312 dibComponent=img   style="  "  src="/files/dropins/dibAdmin/images/docs/DesignerHelp.png" /></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4313 dibComponent=card  ><mat-card-header ><mat-card-title >Dynamic Conditional Directives</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4313'" ><span  id=ci4314 dibComponent=comment   style="  " ><div class=dib-comment > Conditional rules can be applied in Attributes of items to show, hide or disable them dynamically.<br><b>Note, you can click the 'View Design'-button at the top of this page to investigate how we configured the items below.</b></div></span><div   style="  flex: 0 1 auto;  " id=ci4329 dibComponent=div  ><ng-container [dibPort]="'4329'" ><mat-form-field  id=ci4330 dibComponent=selectEnum   style="  width:200px !important;   display:flex; flex-direction: column;  flex-wrap: nowrap;  "  appearance=standard   ><mat-label><b>selectEnum</b></mat-label><mat-select formControlName=selectEnum    ><mat-option *ngFor="let item of lists.list4330.items | async" [value]="item.id"> {{item.id_display_value}}</mat-option></mat-select></mat-form-field></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4315 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4315'" ><mat-card   style="  flex: 1 1 0%;  " id=ci4316 dibComponent=section  ><mat-card-header ><mat-card-title >*ngIf</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4318 dibComponent=comment   style="  " ><div class=dib-comment ><b>*ngIf="getValue('selectEnum') != 'A'"</b><br><i>Only include the datepicker in the browser (the DOM),&nbsp;if selectEnum is not 'A'</i></div></span><mat-form-field *ngIf="getValue('selectEnum')!='A'" id=ci4317 dibComponent=datePicker   style="  "  appearance=standard  ><mat-label>datepicker</mat-label><input   matInput [matDatepicker]="datePicker4317"   [placeholder]="'datepicker'"   formControlName=datepicker   name=datepicker   [attr.aria-label]="'datepicker'"  (focus)="datePicker4317.open()"  ><mat-datepicker-toggle matPrefix [for]="datePicker4317" ></mat-datepicker-toggle><mat-datepicker #datePicker4317 ></mat-datepicker></mat-form-field></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4319 dibComponent=section  ><mat-card-header ><mat-card-title >[dibDisabled]</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4321 dibComponent=comment   style="  " ><div class=dib-comment ><b>[dibDisabled]="getValue('selectEnum') == 'C'"</b><br><i>Disable inputNumber and button if selectEnum is 'C'</i></div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex: 1 1 0%;  overflow:auto !important;" id=ci5123 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5123'" ><mat-form-field   [dibDisabled]="getValue('selectEnum') == 'C'" id=ci4320 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >inputNumber</mat-label><input   matInput  type=number   formControlName=inputNumber   name=inputNumber   [attr.aria-label]="'inputNumber'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  [dibDisabled]="getValue('selectEnum') == 'C'" id=ci5124 dibComponent=button   style="  "  [attr.aria-label]="'Im not available'"  type=button  ><span class=dibButtonCaption >Im not available</span></button></ng-container></div></mat-card-content></mat-card></ng-container></div><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4322 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4322'" ><mat-card   style="  flex: 1 1 0%;  " id=ci4323 dibComponent=section  ><mat-card-header ><mat-card-title >[hidden]</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4325 dibComponent=comment   style="  " ><div class=dib-comment ><b>[hidden]="getValue('selectEnum') > 'B' || getValue('name', 'dibexTestClientForm').includes('Cheese')"</b><br><i>Hide button if selectEnum is greater than 'B' OR the name field on the Client Form (above) includes the word 'Cheese'</i></div></span><button  mat-raised-button color=primary  [hidden]="getValue('selectEnum') > 'B' || (getValue('name', 'dibexTestClientForm') ?? '').includes('Cheese')" id=ci4324 dibComponent=button   style="  "  [attr.aria-label]="'Hello :)'"  type=button  ><span class=dibButtonCaption >Hello :)</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4326 dibComponent=section  ><mat-card-header ><mat-card-title >[ngStyle]</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4328 dibComponent=comment   style="  " ><div class=dib-comment ><b>[ngStyle]="{{ '{' }}'background-color': getValue('selectEnum') == 'A' ? 'green' : (getValue('selectEnum') == 'B' ? 'yellow' : 'red'){{ '}' }}"</b><br><i>If selectEnum is 'A' then green, else if selectEnum = 'B' then yellow, else red.</i></div></span><button  mat-raised-button
+[ngStyle]="{'color':'black', 'background-color': getValue('selectEnum') == 'A' ? 'green' : (getValue('selectEnum') == 'B' ? 'yellow' : 'red')}" id=ci4327 dibComponent=button   style="  "  [attr.aria-label]="'Any css style can be applied ...'"  type=button  ><span class=dibButtonCaption >Any css style can be applied ...</span></button></mat-card-content></mat-card></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4331 dibComponent=card  ><mat-card-header ><mat-card-title >Events</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4331'" ><span  id=ci4332 dibComponent=comment   style="  " ><div class=dib-comment > Containers, items and tables can have various events which are triggered either in the users' browser, or on the server.  </div></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4333 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4333'" ><mat-card   style="  flex: 1 1 0%;  " id=ci4334 dibComponent=section  ><mat-card-header ><mat-card-title >Client-side Event</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><button  mat-raised-button color=primary  id=ci4335 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnNow   style="  "  [attr.aria-label]="'What is the time?'"  type=button  ><span class=dibButtonCaption >What is the time?</span></button><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4336 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4336'" ><mat-form-field id=ci4337 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Now</mat-label><input   matInput  type=text   formControlName=now   name=now   [attr.aria-label]="'Now'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci4338 dibComponent=inputText   style="  "  appearance=standard  ><input   matInput  type=text   formControlName=setMe   name=setMe   aria-label=setMe  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></div></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4339 dibComponent=section  ><mat-card-header ><mat-card-title >Server-side Event</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><mat-form-field id=ci4341 dibComponent=inputText   style="  min-width:450px;"  item-alias=formula   appearance=standard  ><mat-label >Provide a formula using digits and the plus symbol (eg 2 + 5 + 1)</mat-label><input   matInput  type=text   formControlName=formula   name=formula   [attr.aria-label]="'Provide a formula using digits and the plus symbol (eg 2 + 5 + 1)'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci4340 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnCalc   style="  "  [attr.aria-label]="'Calculate on the Server'"  type=button  ><span class=dibButtonCaption >Calculate on the Server</span></button></mat-card-content></mat-card></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci4342 dibComponent=section  ><mat-card-header ><mat-card-title >Server-side Event returning Actions</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4343 dibComponent=comment   style="  " ><div class=dib-comment > Server-side code can return actions that are performed in the browser.<br>This button will set the html of a empty span-tag below, and then click the 'What is the Time?' button above.  </div></span><button  mat-raised-button color=primary  id=ci4344 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnGetActions   style="  "  [attr.aria-label]="'Get Actions'"  type=button  ><span class=dibButtonCaption >Get Actions</span></button><span  id=ci4345 dibComponent=span   style="  "  item-alias=spanTarget   [innerHtml]="getHtml('spanTarget') | safeHtml" ></span></mat-card-content></mat-card><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4346 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4346'" ><mat-card   style="  flex: 1 1 0%;  " id=ci4349 dibComponent=section  ><mat-card-header ><mat-card-title >Long Running Code</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4350 dibComponent=comment   style="  " ><div class=dib-comment > By default, the browser/client will wait for 30 seconds for a reply from the server before timing out. For long-running server-code, actions that update a progress bar and make other changes can be queued on the server, and polling can be setup to fetch these actions.  </div></span><div   style="  flex: 0 1 auto;  " id=ci4352 dibComponent=div  ><ng-container [dibPort]="'4352'" ><button  mat-raised-button color=primary  id=ci4353 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnStartQueue   style="  "  [attr.aria-label]="'Run 1 min Code'"  type=button  ><span class=dibButtonCaption >Run 1 min Code</span></button></ng-container></div><mat-form-field  id=ci4354 dibComponent=inputNumber   style="  " [hidden]="true"  appearance=standard  ><input   matInput  type=number   formControlName=progressValue   name=progressValue   aria-label=progressValue  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><div  id=ci4351 dibComponent=progressBar   style="  margin:0px 0px 20px !important;   " ><mat-progress-bar   color=accent
+mode=buffer
+[value]="getValue('progressValue')"
+[bufferValue]="100"  style="  "  ></mat-progress-bar></div></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4347 dibComponent=section  ><mat-card-header ><mat-card-title >Container & Table Events</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;"  ><span  id=ci4348 dibComponent=comment   style="  " ><div class=dib-comment > There are various types of <b>Container Events</b> that can be triggered in the browser/client (eg <b>load</b>, <b>create</b>, <b>update</b>, etc.) or on the server (eg <b>before update</b>, <b>after delete</b>, <b>before readmany</b>, etc).<br>Client events can call client-side or server-side code, and server-side events can call server-side code or return actions to be performed in the browser/client.<br><br><b>Table Events</b>, eg <b>bu</b>(before update) or <b>ac</b>(after create) occur with containers that are linked to database tables.<br>You may have 3 forms and one updatable grid, all linked to the same table. Any data changes performed by these containers will trigger the same events.<br><br>See the examples for more details.  </div></span></mat-card-content></mat-card></ng-container></div></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4355 dibComponent=card  ><mat-card-header ><mat-card-title >Subcontainers & Ports</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4355'" ><img  id=ci7604 dibComponent=img   style="  max-width:750px"  src="/files/dropins/dibAdmin/images/docs/introNestedContainers.png" /><span  id=ci4356 dibComponent=span   style="  font-size: 17px;border:1px; border-style:solid; border-color:#c3c3c3; padding: 9px; background-color: #FFF9E0"  [innerHtml]="getHtml('comment14') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci4357 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4357'" ><button  mat-raised-button color=primary  id=ci4358 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'portCard',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Load Grid in Card below'"  type=button  ><span class=dibButtonCaption >Load Grid in Card below</span></button><button  mat-raised-button color=primary  id=ci4359 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'maxPopup',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Load Grid as Maximized Popup Window'"  type=button  ><span class=dibButtonCaption >Load Grid as Maximized Popup Window</span></button><button  mat-raised-button color=primary  id=ci4360 dibComponent=button   (click)="navigationService.goTo(  'dibexTestClientGrid',  'floatPopup',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'Load Grid as Floating Popup Window and change the URL'"  type=button  ><span class=dibButtonCaption >Load Grid as Floating Popup Window and change the URL</span></button></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci4361 dibComponent=card  ><mat-card-header ><mat-card-title >Target Port Item</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4361'" ></ng-container></mat-card-content></mat-card></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4362 dibComponent=card  ><mat-card-header ><mat-card-title >Permissions</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4362'" ><img  id=ci7606 dibComponent=img   style="  max-width:750px"  src="/files/dropins/dibAdmin/images/docs/introPerms.png" /><span  id=ci4363 dibComponent=comment   style="  " ><div class=dib-comment > Permissions in Dropinbase are based on the rights given to Permissions Groups.<br>A Permission Group can be seen as a Role, eg Staff, Supervisors, Managers, Sales Director, etc.<br>Each Permission Group / Role is then given certain permissions on containers, items, events and even certain records within a container using criteria.<br>In the example above:<ul><li><strong>Managers</strong> can create, read, update and delete all records in the <strong>clientGrid</strong> container.</li><li><strong>Data Clerks</strong> can read all records, but only update those where the <em>client_status</em> field of the underlying table has a value of 'active'.</li><li><strong>Clients</strong> can read can read and update only their own record.
+<br>Values of specific database fields can be stored in a user's session, and made available as parameters in criteria.
+<br>In this case it could be a <em>client_id</em> field in pef_login.</li><li><strong>Data Clerks</strong> and <strong>Clients</strong> can not create or delete records.</li></ul>Users can be assigned to any combination of these Permission Groups, and their rights are determined by the combined rights of the groups they are linked to. <br>Each unique combination is called a Permgroup.<br>For eg. a user/login record that is linked to Permission Groups 3 and 5 has Permgroup x3x5x.<br><br>Dropinbase generates and stores user-interface and server-side code specifically according to the rights of each Permgroup.<br>The code is generated on-the-fly when requested, and is stored in the relevant /dibCode subfolder if it has not been generated and stored already.<br>The file names are suffixed with the relevant permgroup.<br>Before deploying to a production server, all code can be generated. On the production server the folder permissions can be set to read-only, except for the /runtime folder which stores temporary info.<br><br>Dropinbase will not generate menu items, tabs, buttons, and subcontainers etc. linked to containers that Permgroups do not have rights to access. <br>This feature is highly convenient, as it ensures each user will automatically only see the elements they have the rights to access.  </div></span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci4381 dibComponent=card  ><mat-card-header ><mat-card-title >Dashboards & Reports</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4381'" ><span  id=ci4382 dibComponent=comment   style="  " ><div class=dib-comment > No system is complete without a module to generate Dashboards and Reports.<br>Rather than re-invent the wheel and expect you to learn yet another reporting tool, Dropinbase provides tools to integrate the myriad of 3d party options available.<br>The various chart, map and table components require data in specific formats - made easy by a Dropinbase library.  </div></span><span  id=ci4383 dibComponent=comment   style="  " ><div class=dib-comment > See the /dropins/dibExamples/templates/dibexReportOverview.html file for details.  </div></span><mat-card   style="  flex: 1 1 0%;  " id=ci4384 dibComponent=section   item-alias=sectionReport  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: stretch;  flex-wrap: nowrap;"  item-alias=sectionReport   ><div   style="  width:930px !important;   flex: 1 1 100%;  " id=ci4385 dibComponent=subcontainer   ><ng-container [dibPort]="'4385'" parentContainerName=dibexOverview  subContainerName=dibexOverviewReport  subContainerId=193  dropinName=iframe ></ng-container></div></mat-card-content></mat-card></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, button_1.MatButtonModule, icon_1.MatIconModule, select_1.MatSelectModule, progress_bar_1.MatProgressBarModule, tabs_1.MatTabsModule, autocomplete_1.MatAutocompleteModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexOverviewModule = class dibexOverviewModule {
+                static entry = dibexOverviewComponent;
+                static ɵfac = function dibexOverviewModule_Factory(t) { return new (t || dibexOverviewModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexOverviewModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexOverviewModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexOverviewModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexOverviewComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexOverviewModule, { declarations: [dibexOverviewComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, datepicker_1.MatDatepickerModule, core_4.MatNativeDateModule, button_1.MatButtonModule, icon_1.MatIconModule, select_1.MatSelectModule, progress_bar_1.MatProgressBarModule, tabs_1.MatTabsModule, autocomplete_1.MatAutocompleteModule] }); })();
+        }
+    };
+});

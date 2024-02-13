@@ -1,0 +1,1301 @@
+System.register(["tslib", "@angular/core", "@angular/material/table", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/material/sort", "@angular/material/paginator", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@ngbracket/ngx-layout/extended", "@angular/material/checkbox", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, table_1, shared_1, core_2, shared_2, shared_3, http_1, forms_1, core_3, shared_4, rxjs_1, operators_1, table_2, sort_1, paginator_1, core_4, common_1, shared_5, shared_6, button_1, icon_1, card_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, _c0, _c1, _c2, _c3, _c4, _c5, importsRequired, dibexExecuteChildSqlWithParamsComponent, containerModules, dibexExecuteChildSqlWithParamsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexExecuteChildSqlWithParamsComponent_button_12_Template(rf, ctx) { if (rf & 1) {
+        const _r26 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 38);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_button_12_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r26); const ctx_r25 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r25.searchGrid()); });
+        i0.ɵɵelement(1, "dib-icon", 39);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Apply filter criteria specified in column headers")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_button_13_Template(rf, ctx) { if (rf & 1) {
+        const _r28 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 40);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_button_13_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r28); const ctx_r27 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r27.clearSearch()); });
+        i0.ɵɵelement(1, "dib-icon", 41);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Show all records and clear filter criteria")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_div_14_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r29 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2("\u00A0to\u00A0", ctx_r29.page.toRecord, "\u00A0of\u00A0", ctx_r29.page.records, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_div_14_span_4_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r30 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1("(Total: ", ctx_r30.page.totalRecords, ")");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_div_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 42);
+        i0.ɵɵtext(1);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_div_14_span_2_Template, 2, 2, "span", 35);
+        i0.ɵɵtext(3, "\u00A0");
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_div_14_span_4_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" Execute Child SQL: ", ctx_r2.page.fromRecord, "");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r2.page.fromRecord > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r2.page.totalRecords != ctx_r2.page.records);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_22_Template(rf, ctx) { if (rf & 1) {
+        const _r32 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 43)(1, "mat-checkbox", 44);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_th_22_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r32); const ctx_r31 = i0.ɵɵnextContext(); $event.preventDefault(); return i0.ɵɵresetView(ctx_r31.masterToggle()); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r4.masterIsChecked)("indeterminate", ctx_r4.masterIsIndeterminate);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_23_Template(rf, ctx) { if (rf & 1) {
+        const _r36 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 45)(1, "mat-checkbox", 46);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_td_23_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexExecuteChildSqlWithParamsComponent_td_23_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r36); const row_r33 = restoredCtx.$implicit; const ctx_r35 = i0.ɵɵnextContext(); return i0.ɵɵresetView($event ? ctx_r35.selection.toggle(row_r33) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r33 = ctx.$implicit;
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r5.selection.isSelected(row_r33));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_25_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r37 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r37.id_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_25_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r37 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r37.id, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 48);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_td_25_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_td_25_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r37 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r37 && !!row_r37.id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r37 && !row_r37.id_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_26_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " Id ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_26_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "Id");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_26_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r47 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 57)(2, "mat-label");
+        i0.ɵɵtext(3, "Id");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 58);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_th_26_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r47); const ctx_r46 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r46.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_th_26_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r47); const ctx_r48 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r48.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r45 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r45.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Id");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_th_26_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_th_26_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_th_26_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r7 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r7.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r7.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r7.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_28_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r49 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r49.name_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_28_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r49 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r49.name, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 59);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_td_28_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_td_28_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r49 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r49 && !!row_r49.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r49 && !row_r49.name_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_29_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_29_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_29_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r59 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 60)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 61);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_th_29_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r59); const ctx_r58 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r58.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_th_29_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r59); const ctx_r60 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r60.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r57 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r57.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_29_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_th_29_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_th_29_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_th_29_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r9 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r9.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r9.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r9.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_31_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r61 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r61.ttname_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_31_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r61 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r61.ttname, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 62);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_td_31_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_td_31_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r61 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r61 && !!row_r61.ttname_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r61 && !row_r61.ttname_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_32_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " TempTable1 name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_32_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "TempTable1 name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_32_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r71 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 63)(2, "mat-label");
+        i0.ɵɵtext(3, "TempTable1 name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 64);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_th_32_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r71); const ctx_r70 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r70.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_th_32_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r71); const ctx_r72 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r72.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r69 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r69.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "TempTable1 name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_32_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_th_32_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_th_32_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_th_32_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r11.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r11.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r11.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_34_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r73 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r73.tt2name_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_34_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r73 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r73.tt2name, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_td_34_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 65);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_td_34_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_td_34_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r73 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r73 && !!row_r73.tt2name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r73 && !row_r73.tt2name_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_35_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " TempTable2 name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_35_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "TempTable2 name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_35_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r83 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 66)(2, "mat-label");
+        i0.ɵɵtext(3, "TempTable2 name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 67);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_th_35_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r83); const ctx_r82 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r82.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_th_35_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r83); const ctx_r84 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r84.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r81 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r81.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "TempTable2 name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_35_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_th_35_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_th_35_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_th_35_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r13 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_37_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 70);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 68);
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_th_37_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 69);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r14 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r14.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r14.busy);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_39_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r86 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r86.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_th_39_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 71);
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_th_39_span_1_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r15 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r15.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r15.busy && ctx_r15.tableDataSource.data.length == 0);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_container_40_tr_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 73);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_container_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0);
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_ng_container_40_tr_1_Template, 1, 0, "tr", 72);
+        i0.ɵɵpipe(2, "async");
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const column_r87 = ctx.$implicit;
+        const ctx_r16 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpipeBind1(2, 1, ctx_r16.columnHeaders.getArray(column_r87).items$));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_tr_41_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 74);
+    } if (rf & 2) {
+        const ctx_r17 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r17.busy ? "visible" : "hidden"));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_tr_42_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 74);
+    } if (rf & 2) {
+        const ctx_r18 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c0, ctx_r18.tableDataSource.data.length == 0 ? "visible" : "hidden"));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_tr_43_Template(rf, ctx) { if (rf & 1) {
+        const _r91 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 75);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_tr_43_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r91); const row_r89 = restoredCtx.$implicit; const ctx_r90 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r90.rowClick(row_r89, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r89 = ctx.$implicit;
+        const ctx_r19 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r19.isHighlighted(row_r89)));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_45_ng_template_0_Template(rf, ctx) { }
+    function dibexExecuteChildSqlWithParamsComponent_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, dibexExecuteChildSqlWithParamsComponent_45_ng_template_0_Template, 0, 0, "ng-template", 76);
+    } if (rf & 2) {
+        i0.ɵɵnextContext();
+        const _r23 = i0.ɵɵreference(50);
+        i0.ɵɵproperty("ngTemplateOutlet", _r23);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_checkbox_2_Template(rf, ctx) { if (rf & 1) {
+        const _r97 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-checkbox", 82);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_checkbox_2_Template_mat_checkbox_click_0_listener($event) { i0.ɵɵrestoreView(_r97); const ctx_r96 = i0.ɵɵnextContext(2); $event.preventDefault(); return i0.ɵɵresetView(ctx_r96.clearAll()); });
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r93 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("checked", true);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" ", ctx_r93.numberOfSelectedItems + " ", "item", ctx_r93.numberOfSelectedItems > 1 ? "s " : " ", "selected ");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_mat_icon_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility_off");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_Template(rf, ctx) { if (rf & 1) {
+        const _r101 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 83);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r101); const ctx_r100 = i0.ɵɵnextContext(2); ctx_r100.gridShowClipboardDefault = !ctx_r100.gridShowClipboardDefault; return i0.ɵɵresetView(ctx_r100.gridShowClipboardDefault && ctx_r100.scrollToBottom()); });
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_mat_icon_1_Template, 2, 0, "mat-icon", 35);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_mat_icon_2_Template, 2, 0, "mat-icon", 35);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r94 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r94.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r94.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r94.gridShowClipboardDefault ? "hide" : "show", "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_paginator_5_Template(rf, ctx) { if (rf & 1) {
+        const _r104 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-paginator", 84, 85);
+        i0.ɵɵlistener("page", function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_paginator_5_Template_mat_paginator_page_0_listener($event) { i0.ɵɵrestoreView(_r104); const ctx_r103 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r103.changePage($event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r95 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("length", ctx_r95.page.totalRecords)("pageSize", ctx_r95.page.pageSize)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c2));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-toolbar")(1, "mat-toolbar-row", 77);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_checkbox_2_Template, 2, 3, "mat-checkbox", 78);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_button_3_Template, 4, 3, "button", 79);
+        i0.ɵɵelement(4, "span", 80);
+        i0.ɵɵtemplate(5, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_mat_paginator_5_Template, 2, 4, "mat-paginator", 81);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r22 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r22.numberOfSelectedItems);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r22.selectedDataNotInPage().length > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", true);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r118 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r118.id_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r118 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r118.id, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 48);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r118 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r118 && !!row_r118.id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r118 && !row_r118.id_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " Id ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "Id");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r128 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 57)(2, "mat-label");
+        i0.ɵɵtext(3, "Id");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 58);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r128); const ctx_r127 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r127.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r128); const ctx_r129 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r129.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r126 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r126.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Id");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r106 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r106.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r106.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r106.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r130 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r130.name_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r130 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r130.name, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 59);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r130 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r130 && !!row_r130.name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r130 && !row_r130.name_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "Name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r140 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 60)(2, "mat-label");
+        i0.ɵɵtext(3, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 61);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r140); const ctx_r139 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r139.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r140); const ctx_r141 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r141.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r138 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r138.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r108 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r108.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r108.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r108.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r142 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r142.ttname_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r142 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r142.ttname, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 62);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r142 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r142 && !!row_r142.ttname_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r142 && !row_r142.ttname_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " TempTable1 name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "TempTable1 name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r152 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 63)(2, "mat-label");
+        i0.ɵɵtext(3, "TempTable1 name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 64);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r152); const ctx_r151 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r151.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r152); const ctx_r153 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r153.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r150 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r150.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "TempTable1 name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r110 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r110.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r110.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r110.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r154 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r154.tt2name_display_value, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r154 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r154.tt2name, "");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 47)(1, "div", 65);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_span_2_Template, 2, 1, "span", 35);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_span_3_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r154 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r154 && !!row_r154.tt2name_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r154 && !row_r154.tt2name_display_value);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 54);
+        i0.ɵɵtext(1, " TempTable2 name ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1, "TempTable2 name");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r164 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 56)(1, "mat-form-field", 66)(2, "mat-label");
+        i0.ɵɵtext(3, "TempTable2 name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 67);
+        i0.ɵɵlistener("keydown.enter", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r164); const ctx_r163 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r163.searchGrid(false)); })("keydown.esc", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r164); const ctx_r165 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r165.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r162 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r162.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "TempTable2 name");
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 49)(1, "div", 50);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_2_Template, 2, 0, "div", 51);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_3_Template, 2, 0, "div", 52);
+        i0.ɵɵtemplate(4, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_div_4_Template, 5, 2, "div", 53);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r112 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r112.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r112.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r112.showSearch);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_14_Template(rf, ctx) { if (rf & 1) {
+        const _r167 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 43)(1, "mat-checkbox", 88);
+        i0.ɵɵlistener("change", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_14_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r167); const ctx_r166 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r166.masterToggle($event) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r113 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r113.masterIsChecked)("indeterminate", ctx_r113.masterIsIndeterminate);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_15_Template(rf, ctx) { if (rf & 1) {
+        const _r171 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 89)(1, "mat-checkbox", 46);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_15_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_15_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r171); const row_r168 = restoredCtx.$implicit; const ctx_r170 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r170.selection.toggle(row_r168) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r168 = ctx.$implicit;
+        const ctx_r114 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r114.selection.isSelected(row_r168));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_17_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 70);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 68);
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_17_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 69);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r115 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r115.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r115.busy);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_19_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r173 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r173.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_19_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 71);
+        i0.ɵɵtemplate(1, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_19_span_1_Template, 2, 1, "span", 35);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r116 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r116.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r116.busy && ctx_r116.tableDataSource.data.length == 0);
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_tr_20_Template(rf, ctx) { if (rf & 1) {
+        const _r176 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 75);
+        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_ng_template_49_tr_20_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r176); const row_r174 = restoredCtx.$implicit; const ctx_r175 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r175.rowClick(row_r174, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r174 = ctx.$implicit;
+        const ctx_r117 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c1, ctx_r117.isHighlighted(row_r174)));
+    } }
+    function dibexExecuteChildSqlWithParamsComponent_ng_template_49_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 86);
+        i0.ɵɵelementContainerStart(1, 22);
+        i0.ɵɵtemplate(2, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_2_Template, 4, 2, "td", 23);
+        i0.ɵɵtemplate(3, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_3_Template, 5, 3, "th", 24);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(4, 25);
+        i0.ɵɵtemplate(5, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_5_Template, 4, 2, "td", 23);
+        i0.ɵɵtemplate(6, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_6_Template, 5, 3, "th", 24);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(7, 26);
+        i0.ɵɵtemplate(8, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_8_Template, 4, 2, "td", 23);
+        i0.ɵɵtemplate(9, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_9_Template, 5, 3, "th", 24);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(10, 27);
+        i0.ɵɵtemplate(11, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_11_Template, 4, 2, "td", 23);
+        i0.ɵɵtemplate(12, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_12_Template, 5, 3, "th", 24);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(13, 19);
+        i0.ɵɵtemplate(14, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_14_Template, 2, 2, "th", 20);
+        i0.ɵɵtemplate(15, dibexExecuteChildSqlWithParamsComponent_ng_template_49_td_15_Template, 2, 1, "td", 87);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(16, 28);
+        i0.ɵɵtemplate(17, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_17_Template, 2, 2, "th", 29);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(18, 30);
+        i0.ɵɵtemplate(19, dibexExecuteChildSqlWithParamsComponent_ng_template_49_th_19_Template, 2, 2, "th", 31);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(20, dibexExecuteChildSqlWithParamsComponent_ng_template_49_tr_20_Template, 1, 3, "tr", 34);
+        i0.ɵɵpipe(21, "async");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r24 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("dataSource", ctx_r24.selectionDataSource);
+        i0.ɵɵadvance(20);
+        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(21, 2, ctx_r24.columnsToDisplay.items$));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_4 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (table_1_1) {
+                table_1 = table_1_1;
+                table_2 = table_1_1;
+                i15 = table_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                shared_6 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_3_1) {
+                core_3 = core_3_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (sort_1_1) {
+                sort_1 = sort_1_1;
+                i16 = sort_1_1;
+            },
+            function (paginator_1_1) {
+                paginator_1 = paginator_1_1;
+                i17 = paginator_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i9 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i14 = card_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { visibility: a0 }; };
+            _c1 = function (a0) { return { "dib-grid-selected": a0 }; };
+            _c2 = function () { return [10, 20, 50, 100]; };
+            _c3 = function (a0) { return { "dib-editor": a0 }; };
+            _c4 = function () { return ["_dibBusy"]; };
+            _c5 = function () { return ["_dibNoRecords"]; };
+            importsRequired = [];
+            dibexExecuteChildSqlWithParamsComponent = class dibexExecuteChildSqlWithParamsComponent extends shared_1.GridComponent {
+                httpClient;
+                ref;
+                crudService;
+                sd;
+                cd;
+                view = { container: { id: 163, name: 'dibexExecuteChildSqlWithParams', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'grid', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ['id'], recordStatus: 'create', debug: false, debugItem: false };
+                gridMultiselect = false; //default: false
+                gridPersistSelection = false; //default: false
+                gridMasterSelectAllFirst = true; //default:true
+                gridShowDuplicatesInClipboard = false; //default:false
+                gridShowClipboardDefault = false; //default:false
+                gridRowClickChangesSelection = true; //default:true
+                gridHighlightLastClickedOnly = false; //default:false
+                gridClickedLastNullable = false; //default:false
+                selection = new shared_1.SelectionModel(this.gridMultiselect, []);
+                selectionDataSource = new table_1.MatTableDataSource(this.selection.selected);
+                page = { pageSize: 20, pageIndex: 1, };
+                columnsToDisplay = new shared_3.DibArray(['id', 'name', 'ttname', 'tt2name',]);
+                allColumnsToDisplay = new shared_3.DibArray(['id', 'name', 'ttname', 'tt2name',]);
+                columnHeaders = new shared_3.DibArrayList({ "1": new shared_3.DibArray([]) });
+                showSearchDefault = false;
+                showSearch = this.showSearchDefault;
+                constructor(injector, httpClient, ref, crudService, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.ref = ref;
+                    this.crudService = crudService;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_3.DibContainerModel(this.injector, 'dibexExecuteChildSqlWithParams');
+                    this.containerName = 'dibexExecuteChildSqlWithParams'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { id: { itemId: 4091, type: 'text', fieldAlias: 'id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, name: { itemId: 4092, type: 'text', fieldAlias: 'name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, ttname: { itemId: 4093, type: 'text', fieldAlias: 'ttname', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, tt2name: { itemId: 4094, type: 'text', fieldAlias: 'tt2name', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, testa: { itemId: 4121, type: 'number', fieldAlias: 'testa', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'testa', default: '2', dataType: 'number', contentType: 'integer', changeUrl: false }, };
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('name', this.model.modelItems.name.formControl);
+                    this.model.$formGroup.addControl('ttname', this.model.modelItems.ttname.formControl);
+                    this.model.$formGroup.addControl('tt2name', this.model.modelItems.tt2name.formControl);
+                    this.model.$formGroup.addControl('testa', this.model.modelItems.testa.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.tableDataSource.data = [];
+                    this.resetPage();
+                    this.setupGridSearchAll();
+                    this.tableDataSource
+                        .connect().pipe(operators_1.tap(_ => { const selected = this.selection.selected; this.selection._emitChanges = false; this.selection.deselect(...this.selection.selected.filter(s => !!this.tableDataSource.data.find(d => this.compareRows(s, d)))); this.selection.select(...this.tableDataSource.data.filter(d => !!selected.find(s => this.compareRows(s, d)))); this.selection._emitChanges = true; })).subscribe();
+                    this.selection.changed.pipe().subscribe(c => {
+                        this.updateSelectionClientData(c);
+                        if (this.gridShowDuplicatesInClipboard)
+                            this.selectionDataSource.data = c.source.selected;
+                        else
+                            this.selectionDataSource.data = this.selectedDataNotInPage(c.source.selected);
+                    });
+                    this.columnHeaders.addArray('1', new shared_3.DibArray(['id', 'name', 'ttname', 'tt2name']));
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.setupService(); this.reloadContainer(); this.clientData.selected_self = null; this.updateSearchFromUrl(); this.eventService.on(`${this.view.container.name}selectRow`).pipe(operators_1.takeUntil(this.onDestroy)).subscribe((selectRecord) => { const column = selectRecord['column']; const value = selectRecord['value']; let found = false; this.tableDataSource.data.forEach(row => { if (row[column] == value) {
+                    found = true;
+                    this.rowSelect(row);
+                } }); }); }
+                rowClick(row, e) {
+                    if (!!e.srcElement.firstChild && !!e.srcElement.firstChild.attributes && !!e.srcElement.firstChild.attributes.type && e.srcElement.firstChild.attributes.type.value == 'checkbox') {
+                        return;
+                    }
+                    if (e.srcElement && ["button", "a", "mat-icon", "dib-icon"].includes(e.srcElement.tagName.toLocaleLowerCase())) {
+                        return;
+                    }
+                    this.rowSelect(row);
+                }
+                rowSelect(row) {
+                    if (this.gridRowClickChangesSelection) {
+                        this.selection.toggle(row);
+                    }
+                    if (this.gridClickedLastNullable && this.clickedLast && this.compareRows(row, this.clickedLast)) {
+                        this.clickedLast = null;
+                    }
+                    else {
+                        this.clickedLast = row;
+                    }
+                    let lastClickValue = {};
+                    if (this.clickedLast !== null) {
+                        Object.keys(this.model.modelItems).forEach(key => { if (!!this.model.modelItems[key].itemAlias == true) {
+                            lastClickValue[key] = this.clickedLast[key];
+                        } });
+                        this.clientData.clickedLast_self = lastClickValue;
+                    }
+                    else {
+                        this.clientData.clickedLast_self = null;
+                    }
+                    this.eventService.emit({ name: `clickedLast_dibexExecuteChildSqlWithParams`, value: this.clientData.clickedLast_self });
+                }
+                updateSelectionClientData(selectionChange) {
+                    const { selected } = selectionChange.source || {};
+                    const firstSelection = selected ? selected[0] : {};
+                    if (!selected[0]) {
+                        this.clientData.selected_self = null;
+                        this.eventService.emit({ name: `selected_dibexExecuteChildSqlWithParams`, value: this.clientData.selected_self });
+                        return;
+                    }
+                    let cdSelected = this.gridMultiselect ? selected.map(s => { let res = {}; this.view.primaryKeys.forEach((key) => { if (!!s[key]) {
+                        res[key] = s[key];
+                    } }); return res; }) : this.view.primaryKeys.reduce((res, key) => ({ ...res, [key]: firstSelection[key] }), {});
+                    if (Object.keys(cdSelected).length == 0) {
+                        cdSelected = selected;
+                    }
+                    this.clientData.selected_self = cdSelected;
+                    this.eventService.emit({ name: `selected_dibexExecuteChildSqlWithParams`, value: cdSelected });
+                }
+                ;
+                setupService() {
+                    this.sort.sortChange.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((sort) => { this.page$.next(this.page); })).subscribe();
+                    this.page$.pipe(operators_1.tap(page => { this.page = page; this.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.tap(page => { this.clearClientDataSelection(); if (this.showSearch) {
+                        this.clientData.gridFilter_self = this.allClientData.gridFilter;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: this.clientData.gridFilter_self });
+                    }
+                    else {
+                        delete this.clientData.gridFilter_self;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: null });
+                    } }), operators_1.switchMap((page) => { const sort = this.sort.direction == '' ? [] : [{ "property": this.sort.active, "direction": this.sort.direction.toUpperCase() }]; return this.crudService.list(this.model.crudUrl, this.view.container.name, { page: { number: page.pageIndex + 1, limit: page.pageSize }, searchText: null, sort: sort, filter: this.filter, clientData: this.clientData, activeFilter: this.view.container.activeFilter }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` }))); }), operators_1.tap((response) => {
+                        this.busy = false;
+                        window.dispatchEvent(new Event('resize'));
+                        if (response.success) {
+                            this.tableDataSource.data = [];
+                            const data = response.records;
+                            if (!!data === true) {
+                                this.tableDataSource.data = data;
+                                this.page.length = Math.ceil(response.filtertotal / this.page.pageSize);
+                                this.page.records = response.filtertotal;
+                                this.page.totalRecords = response.total;
+                                this.page.fromRecord = this.page.pageIndex == 0 ? 1 : (this.page.pageIndex) * this.page.pageSize;
+                                this.page.toRecord = this.page.fromRecord == 1 ? this.page.fromRecord + this.tableDataSource.data.length - 1 : this.page.fromRecord + this.tableDataSource.data.length;
+                                if (this.page.toRecord > this.page.totalRecords) {
+                                    this.page.toRecord = this.page.totalRecords;
+                                    this.page.allRecords = true;
+                                }
+                            }
+                            this.handleSelectionOnPage();
+                            this.reloadSubcontainers();
+                            this.eventService.processDelayedEventQueue(this.view.container.name);
+                        }
+                    })).subscribe();
+                }
+                ;
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                ;
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexExecuteChildSqlWithParams', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexExecuteChildSqlWithParams' });
+                    this.resetPage();
+                    this.page$.next(this.page);
+                }
+                ;
+                resetPage() {
+                    this.page = { number: 1, length: 0, pageSize: 20, pageIndex: 0, lastLoad: 1, totalRecords: 0, allRecords: false };
+                    this.page.allRecords = false;
+                    if (!this.gridPersistSelection) {
+                        this.selection.clear();
+                    }
+                    if (!!this.paginator) {
+                        this.paginator._intl.itemsPerPageLabel = '';
+                        this.paginator.pageSize = this.page.pageSize;
+                        this.paginator.firstPage();
+                    }
+                }
+                ;
+                static ɵfac = function dibexExecuteChildSqlWithParamsComponent_Factory(t) { return new (t || dibexExecuteChildSqlWithParamsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i2.CrudService), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexExecuteChildSqlWithParamsComponent, selectors: [["dibex-execute-child-sql-with-params"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 51, vars: 33, consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci4082", "dibComponent", "row", "dib-inject-content", "replace", 2, "padding", "5px 10px 6px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci4121", "dibComponent", "inputNumber", "item-alias", "testa", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "testa", "name", "testa", "aria-label", "testa"], ["mat-mini-fab", "", "color", "primary", "id", "ci4083", "dibComponent", "btnReload", "aria-label", "Reload Record(s)", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci4084", "dibComponent", "span", 2, "width", "150px !important", 3, "innerHtml"], ["mat-mini-fab", "", "color", "primary", "id", "ci4085", "dibComponent", "btnFilterOpen", "aria-label", "Display headers for filtering records", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/search.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci4086", "dibComponent", "btnFilterApply", "style", "  ", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["mat-mini-fab", "", "color", "primary", "id", "ci4087", "dibComponent", "btnFilterClear", "style", "  ", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["class", "dib-grid-totals", "id", "ci4088", "dibComponent", "gridTotals", "style", "  display:flex; flex-direction: row;  flex-wrap: nowrap;  ", 4, "ngIf"], ["id", "ci4089", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["fill-height", "", "debounceTime", "300", 3, "additionalSpace", "footerElement"], ["gridScroll", ""], ["mat-table", "", "matSort", "", 1, "", 3, "dataSource"], ["matColumnDef", "_select"], ["mat-header-cell", "", "style", "width:80px", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "id"], ["mat-cell", "", "style", "padding: 2px; ", 4, "matCellDef"], ["mat-header-cell", "", "style", "padding:2px; text-align:left; vertical-align:top; ", 4, "matHeaderCellDef"], ["matColumnDef", "name"], ["matColumnDef", "ttname"], ["matColumnDef", "tt2name"], ["matColumnDef", "_dibBusy"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "_dibNoRecords"], ["mat-header-cell", "", "class", "dib-no-records-found", 4, "matHeaderCellDef"], [4, "ngFor", "ngForOf"], ["mat-header-row", "", "class", "dib-grid-loader", 3, "ngStyle", 4, "matHeaderRowDef"], ["mat-row", "", 3, "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], [4, "ngIf"], ["footerdibexExecuteChildSqlWithParams", ""], ["_selectedTable", ""], ["mat-mini-fab", "", "color", "primary", "id", "ci4086", "dibComponent", "btnFilterApply", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci4087", "dibComponent", "btnFilterClear", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"], ["id", "ci4088", "dibComponent", "gridTotals", 1, "dib-grid-totals", 2, "display", "flex", "flex-direction", "row", "flex-wrap", "nowrap"], ["mat-header-cell", "", 2, "width", "80px"], ["color", "primary", 3, "checked", "indeterminate", "click"], ["mat-cell", ""], ["color", "primary", 3, "checked", "click", "change"], ["mat-cell", "", 2, "padding", "2px"], ["id", "ci4091", "dibComponent", "sqlText"], ["mat-header-cell", "", 2, "padding", "2px", "text-align", "left", "vertical-align", "top"], [1, "dibGridSearch", 2, "display", "flex", "flex-direction", "column"], ["mat-sort-header", "", 4, "ngIf"], ["mat-sort-header", "", "class", "dibGridSearchTitle", 4, "ngIf"], ["class", "dibGridSearchInput", "dib-edit", "", 3, "formGroup", 4, "ngIf"], ["mat-sort-header", ""], ["mat-sort-header", "", 1, "dibGridSearchTitle"], ["dib-edit", "", 1, "dibGridSearchInput", 3, "formGroup"], ["id", "ci4091", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "id", "name", "id", 3, "keydown.enter", "keydown.esc"], ["id", "ci4092", "dibComponent", "sqlText"], ["id", "ci4092", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "name", "name", "name", 3, "keydown.enter", "keydown.esc"], ["id", "ci4093", "dibComponent", "sqlText"], ["id", "ci4093", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "ttname", "name", "ttname", 3, "keydown.enter", "keydown.esc"], ["id", "ci4094", "dibComponent", "sqlText"], ["id", "ci4094", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "tt2name", "name", "tt2name", 3, "keydown.enter", "keydown.esc"], ["mat-header-cell", ""], ["mode", "indeterminate", 4, "ngIf"], ["mode", "indeterminate"], ["mat-header-cell", "", 1, "dib-no-records-found"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-header-row", ""], ["mat-header-row", "", 1, "dib-grid-loader", 3, "ngStyle"], ["mat-row", "", 3, "ngClass", "click"], [3, "ngTemplateOutlet"], [1, "grid-footer"], ["class", "mat-body", "matTooltip", "Clear all", "position", "above", "color", "primary", 3, "checked", "click", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [2, "flex", "1 1 auto"], ["style", "background: none", 3, "length", "pageSize", "pageSizeOptions", "page", 4, "ngIf"], ["matTooltip", "Clear all", "position", "above", "color", "primary", 1, "mat-body", 3, "checked", "click"], ["mat-button", "", 3, "click"], [2, "background", "none", 3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], ["mat-table", "", 1, "", 2, "margin-top", "1rem", 3, "dataSource"], ["mat-cell", "", "style", "width:80px", 4, "matCellDef"], ["color", "primary", 3, "checked", "indeterminate", "change"], ["mat-cell", "", 2, "width", "80px"]], template: function dibexExecuteChildSqlWithParamsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0);
+                        i0.ɵɵlistener("ngSubmit", function dibexExecuteChildSqlWithParamsComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(1, "div", 1)(2, "div", 2);
+                        i0.ɵɵelementContainerStart(3, 3);
+                        i0.ɵɵelementStart(4, "mat-form-field", 4);
+                        i0.ɵɵelement(5, "input", 5);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(6, "button", 6);
+                        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_Template_button_click_6_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(7, "dib-icon", 7);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(8, "span", 8);
+                        i0.ɵɵpipe(9, "safeHtml");
+                        i0.ɵɵelementStart(10, "button", 9);
+                        i0.ɵɵlistener("click", function dibexExecuteChildSqlWithParamsComponent_Template_button_click_10_listener() { return ctx.toggleSearch(); });
+                        i0.ɵɵelement(11, "dib-icon", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(12, dibexExecuteChildSqlWithParamsComponent_button_12_Template, 2, 4, "button", 11);
+                        i0.ɵɵtemplate(13, dibexExecuteChildSqlWithParamsComponent_button_13_Template, 2, 4, "button", 12);
+                        i0.ɵɵtemplate(14, dibexExecuteChildSqlWithParamsComponent_div_14_Template, 5, 3, "div", 13);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(15, "mat-card", 14)(16, "mat-card-content", 15);
+                        i0.ɵɵelementContainerStart(17, 3);
+                        i0.ɵɵelementStart(18, "div", 16, 17)(20, "table", 18);
+                        i0.ɵɵelementContainerStart(21, 19);
+                        i0.ɵɵtemplate(22, dibexExecuteChildSqlWithParamsComponent_th_22_Template, 2, 2, "th", 20);
+                        i0.ɵɵtemplate(23, dibexExecuteChildSqlWithParamsComponent_td_23_Template, 2, 1, "td", 21);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(24, 22);
+                        i0.ɵɵtemplate(25, dibexExecuteChildSqlWithParamsComponent_td_25_Template, 4, 2, "td", 23);
+                        i0.ɵɵtemplate(26, dibexExecuteChildSqlWithParamsComponent_th_26_Template, 5, 3, "th", 24);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(27, 25);
+                        i0.ɵɵtemplate(28, dibexExecuteChildSqlWithParamsComponent_td_28_Template, 4, 2, "td", 23);
+                        i0.ɵɵtemplate(29, dibexExecuteChildSqlWithParamsComponent_th_29_Template, 5, 3, "th", 24);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(30, 26);
+                        i0.ɵɵtemplate(31, dibexExecuteChildSqlWithParamsComponent_td_31_Template, 4, 2, "td", 23);
+                        i0.ɵɵtemplate(32, dibexExecuteChildSqlWithParamsComponent_th_32_Template, 5, 3, "th", 24);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(33, 27);
+                        i0.ɵɵtemplate(34, dibexExecuteChildSqlWithParamsComponent_td_34_Template, 4, 2, "td", 23);
+                        i0.ɵɵtemplate(35, dibexExecuteChildSqlWithParamsComponent_th_35_Template, 5, 3, "th", 24);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(36, 28);
+                        i0.ɵɵtemplate(37, dibexExecuteChildSqlWithParamsComponent_th_37_Template, 2, 2, "th", 29);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(38, 30);
+                        i0.ɵɵtemplate(39, dibexExecuteChildSqlWithParamsComponent_th_39_Template, 2, 2, "th", 31);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(40, dibexExecuteChildSqlWithParamsComponent_ng_container_40_Template, 3, 3, "ng-container", 32);
+                        i0.ɵɵtemplate(41, dibexExecuteChildSqlWithParamsComponent_tr_41_Template, 1, 3, "tr", 33);
+                        i0.ɵɵtemplate(42, dibexExecuteChildSqlWithParamsComponent_tr_42_Template, 1, 3, "tr", 33);
+                        i0.ɵɵtemplate(43, dibexExecuteChildSqlWithParamsComponent_tr_43_Template, 1, 3, "tr", 34);
+                        i0.ɵɵpipe(44, "async");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(45, dibexExecuteChildSqlWithParamsComponent_45_Template, 1, 1, null, 35);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(46, "div", null, 36);
+                        i0.ɵɵtemplate(48, dibexExecuteChildSqlWithParamsComponent_mat_toolbar_48_Template, 6, 3, "mat-toolbar", 35);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵtemplate(49, dibexExecuteChildSqlWithParamsComponent_ng_template_49_Template, 22, 4, "ng-template", null, 37, i0.ɵɵtemplateRefExtractor);
+                    } if (rf & 2) {
+                        const _r21 = i0.ɵɵreference(47);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(29, _c3, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4082");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matTooltip", "Reload Record(s)")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(9, 25, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Display headers for filtering records")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.page.fromRecord > -1);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "4089");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("additionalSpace", 5)("footerElement", _r21);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dataSource", ctx.tableDataSource);
+                        i0.ɵɵadvance(20);
+                        i0.ɵɵproperty("ngForOf", ctx.columnHeaders.getKeys());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(31, _c4));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(32, _c5));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(44, 27, ctx.columnsToDisplay.items$));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.gridShowClipboardDefault);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.gridMultiselect || true);
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibIconComponent, i2.DibPortDirective, i2.DibFillHeightDirective, i2.DibRemoveFocusDirective, i6.MatButton, i6.MatMiniFabButton, i7.MatCheckbox, i8.MatFormField, i8.MatLabel, i9.MatIcon, i10.MatInput, i11.MatProgressBar, i12.MatToolbar, i12.MatToolbarRow, i13.MatTooltip, i14.MatCard, i14.MatCardContent, i15.MatTable, i15.MatHeaderCellDef, i15.MatHeaderRowDef, i15.MatColumnDef, i15.MatCellDef, i15.MatRowDef, i15.MatHeaderCell, i15.MatCell, i15.MatHeaderRow, i15.MatRow, i16.MatSort, i16.MatSortHeader, i17.MatPaginator, i3.AsyncPipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_2.EventHandler('reloaddibexExecuteChildSqlWithParams'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexExecuteChildSqlWithParamsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexExecuteChildSqlWithParamsComponent", dibexExecuteChildSqlWithParamsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexExecuteChildSqlWithParamsComponent, [{
+                    type: core_2.Component,
+                    args: [{ selector: 'dibex-execute-child-sql-with-params', template: `
+<form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  padding:5px 10px 6px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  " id=ci4082 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'4082'" ><mat-form-field  id=ci4121 dibComponent=inputNumber   style="  "  item-alias=testa   appearance=standard  ><input   matInput  type=number   formControlName=testa   name=testa   aria-label=testa  ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button   mat-mini-fab color=primary  id=ci4083 dibComponent=btnReload   style="  " aria-label="Reload Record(s)"  [matTooltip]="'Reload Record(s)'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><span  id=ci4084 dibComponent=span   style="  width:150px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml" ></span><button mat-mini-fab color=primary  id=ci4085 dibComponent=btnFilterOpen   style="  " aria-label="Display headers for filtering records"  [matTooltip]="'Display headers for filtering records'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="toggleSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/search.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci4086 dibComponent=btnFilterApply   style="  " aria-label="Apply filter criteria specified in column headers"  [matTooltip]="'Apply filter criteria specified in column headers'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="searchGrid()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci4087 dibComponent=btnFilterClear   style="  " aria-label="Show all records and clear filter criteria"  [matTooltip]="'Show all records and clear filter criteria'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="clearSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"></dib-icon></button><div class=dib-grid-totals  id=ci4088 dibComponent=gridTotals   style="  display:flex; flex-direction: row;  flex-wrap: nowrap;  "  *ngIf="page.fromRecord > -1" > Execute Child SQL: {{page.fromRecord}}<span *ngIf='page.fromRecord>0'>&nbsp;to&nbsp;{{page.toRecord}}&nbsp;of&nbsp;{{page.records}}</span>&nbsp;<span *ngIf='page.totalRecords!=page.records'>(Total: {{page.totalRecords}})</span></div></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci4089 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'4089'" ><!-- <div dib-scroll-pager scrollOffset=50 (nextPage)="nextPage()"> --><div #gridScroll fill-height debounceTime=300  [additionalSpace]=5 [footerElement]="footerdibexExecuteChildSqlWithParams" ><table mat-table [dataSource]="tableDataSource" matSort class=""><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (click)="$event.preventDefault();masterToggle()"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4091 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.id_display_value"> {{row.id_display_value}}</span><span *ngIf="!!row && !row.id_display_value"> {{row.id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Id  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Id</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4091 dibComponent=inputText   style="  " ><mat-label >Id</mat-label><input   matInput  type=text   formControlName=id   name=id   [attr.aria-label]="'Id'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4092 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4092 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=ttname  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4093 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.ttname_display_value"> {{row.ttname_display_value}}</span><span *ngIf="!!row && !row.ttname_display_value"> {{row.ttname}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> TempTable1 name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >TempTable1 name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4093 dibComponent=inputText   style="  " ><mat-label >TempTable1 name</mat-label><input   matInput  type=text   formControlName=ttname   name=ttname   [attr.aria-label]="'TempTable1 name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=tt2name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4094 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.tt2name_display_value"> {{row.tt2name_display_value}}</span><span *ngIf="!!row && !row.tt2name_display_value"> {{row.tt2name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> TempTable2 name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >TempTable2 name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4094 dibComponent=inputText   style="  " ><mat-label >TempTable2 name</mat-label><input   matInput  type=text   formControlName=tt2name   name=tt2name   [attr.aria-label]="'TempTable2 name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><ng-container *ngFor="let column of columnHeaders.getKeys()"><tr mat-header-row *matHeaderRowDef="(columnHeaders.getArray(column).items$ | async);"></tr></ng-container><tr mat-header-row [ngStyle]="{visibility : busy? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibBusy']"></tr><tr mat-header-row [ngStyle]="{visibility : tableDataSource.data.length == 0? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibNoRecords']"></tr><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table><ng-template [ngTemplateOutlet]="_selectedTable" *ngIf=gridShowClipboardDefault ></ng-template></div><div #footerdibexExecuteChildSqlWithParams><mat-toolbar *ngIf="gridMultiselect || true"><mat-toolbar-row class = "grid-footer"><mat-checkbox  class = "mat-body"  matTooltip = "Clear all"  position = "above"  *ngIf=numberOfSelectedItems    color=primary   (click)="$event.preventDefault();clearAll()"  [checked]="true"  > {{numberOfSelectedItems + " "}}item{{numberOfSelectedItems>1?"s ":" "}}selected  </mat-checkbox><button  *ngIf="selectedDataNotInPage().length>0"  mat-button  (click)="gridShowClipboardDefault = !gridShowClipboardDefault; gridShowClipboardDefault&&scrollToBottom()"  ><mat-icon *ngIf="!gridShowClipboardDefault">visibility</mat-icon><mat-icon *ngIf=gridShowClipboardDefault >visibility_off</mat-icon> {{gridShowClipboardDefault?"hide":"show"}}</button><span style ="flex: 1 1 auto"></span><mat-paginator *ngIf=true  #paginator [length]="page.totalRecords" (page)="changePage($event)" style = "background: none"  [pageSize]="page.pageSize"  [pageSizeOptions]="[10, 20, 50, 100]" ></mat-paginator></mat-toolbar-row></mat-toolbar></div></ng-container></mat-card-content></mat-card></div></form><ng-template #_selectedTable ><table style ="margin-top:1rem" mat-table [dataSource]="selectionDataSource" class=""><ng-container matColumnDef=id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4091 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.id_display_value"> {{row.id_display_value}}</span><span *ngIf="!!row && !row.id_display_value"> {{row.id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Id  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Id</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4091 dibComponent=inputText   style="  " ><mat-label >Id</mat-label><input   matInput  type=text   formControlName=id   name=id   [attr.aria-label]="'Id'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4092 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.name_display_value"> {{row.name_display_value}}</span><span *ngIf="!!row && !row.name_display_value"> {{row.name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4092 dibComponent=inputText   style="  " ><mat-label >Name</mat-label><input   matInput  type=text   formControlName=name   name=name   [attr.aria-label]="'Name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=ttname  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4093 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.ttname_display_value"> {{row.ttname_display_value}}</span><span *ngIf="!!row && !row.ttname_display_value"> {{row.ttname}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> TempTable1 name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >TempTable1 name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4093 dibComponent=inputText   style="  " ><mat-label >TempTable1 name</mat-label><input   matInput  type=text   formControlName=ttname   name=ttname   [attr.aria-label]="'TempTable1 name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=tt2name  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci4094 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.tt2name_display_value"> {{row.tt2name_display_value}}</span><span *ngIf="!!row && !row.tt2name_display_value"> {{row.tt2name}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> TempTable2 name  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >TempTable2 name</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci4094 dibComponent=inputText   style="  " ><mat-label >TempTable2 name</mat-label><input   matInput  type=text   formControlName=tt2name   name=tt2name   [attr.aria-label]="'TempTable2 name'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (change)="$event ? masterToggle($event) : null"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row" style = "width:80px"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table></ng-template>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ChangeDetectorRef }, { type: i2.CrudService }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule];
+            dibexExecuteChildSqlWithParamsModule = class dibexExecuteChildSqlWithParamsModule {
+                static entry = dibexExecuteChildSqlWithParamsComponent;
+                static ɵfac = function dibexExecuteChildSqlWithParamsModule_Factory(t) { return new (t || dibexExecuteChildSqlWithParamsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexExecuteChildSqlWithParamsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], imports: [common_1.CommonModule, shared_5.SharedModule, containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] });
+            };
+            exports_1("default", dibexExecuteChildSqlWithParamsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexExecuteChildSqlWithParamsModule, [{
+                    type: core_4.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_5.SharedModule, ...containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule], providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], declarations: [dibexExecuteChildSqlWithParamsComponent], exports: [] }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexExecuteChildSqlWithParamsModule, { declarations: [dibexExecuteChildSqlWithParamsComponent], imports: [common_1.CommonModule, shared_5.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] }); })();
+        }
+    };
+});

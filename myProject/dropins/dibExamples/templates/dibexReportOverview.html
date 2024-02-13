@@ -1,0 +1,697 @@
+<html>
+<head>
+
+    <!-- *** NOTE: Security measure: always specify UTF-8 encoding, which corresponds with the UTF-8 header which Eleutheria sends to the client -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>DIB Charts</title> 
+    <meta charset="utf-8" />
+
+    ~$// Stylesheets~
+    <style type="text/css">
+        body {
+            font-size: 17px;
+            font-family: helvetica,arial,verdana,sans-serif;
+            color: #333;
+            line-height: 25px;
+        }
+
+        select {
+            height: 22px;
+        }
+
+		.btn {
+			background-color: #008CBA;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border: none;
+            color: white;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px; 
+            cursor: pointer;
+		}
+        
+        .stbClass {
+            min-width:50%;
+            border-collapse: collapse;
+        }
+
+        .stbClass th {
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            font-family: Roboto,"Helvetica Neue",sans-serif;
+            color: white;
+            background: #f69d4e;
+            padding: 4 9;
+        }
+
+        .stbClass tr {
+            font-size: 14px;
+            background: #cacaca;
+            font-family: helvetica,arial,verdana,sans-serif;
+            color: #878a90;
+        } 
+
+        .stbClass tr:nth-child(even) {
+            background-color: #e2e2e2;
+        }
+
+        .stbClass td {
+            padding: 3 7;
+            border: 1px solid white;
+        }
+
+        .stbClass tr:hover {background-color: #f5f5f5;}
+
+        .dibCard {
+            display:block;
+            border: solid 1px rgb(218, 218, 218);
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            padding: 10px;
+            margin-top:15px;
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 2px 0 rgba(0,0,0,0.12);        
+        }
+    </style>
+
+    ~$// Load iframe Js tools, and interface with Dropinbase~
+    <script type="text/javascript" src="/files/dropins/setNgxMaterial/dibAdmin/js/template/TemplateActions.js"></script>
+    
+    ~$// Load tools required to do Ajax calls and messages~
+    <script type="text/javascript" src="/files/dropins/dibAdmin/js/dibTools.js"></script>
+
+    ~$// Load chart tools~
+    <script type="text/javascript" src="/files/dropins/dibAdmin/js/dibChartTools.js"></script>
+
+    ~$// Load Plotly, either from local or CDN~
+    <script type="text/javascript" src="/files/dropins/setCharts/dibPlotly/js/plotly-2.16.1.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script> -->
+
+    ~$// Load ChartJs, either from local or CDN~
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    ~$// Load Google Charts, either from local or CDN~
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    ~$// Load Leaflet CSS and JavaScript~
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+          crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+            crossorigin="">
+    </script>
+
+    ~$// Load GeoEncoding CSS and Javascript~
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+
+    <!-- Make sure you put this AFTER leaflet.js, when using with leaflet -->
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
+
+    ~$// Ability to print~
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+
+        // where to fetch server data:
+        var dataUrl = '/dropins/dibAdmin/DData/getData';
+        
+        // Parameters sent to server when doing data request:
+        var serverParams = {
+            'containerName' : '^dib_containerName^', // dib_containerName is always available as parameter (no need to specify in Valid Params)
+            'itemEventId' : 1,
+            'sqlParams': {} // set content as required. Variables received from Eleutheria can be used, eg 'alias_self_company_id' : ^alias_parent_id^
+        };
+
+        var serverData = {}; // will contain data fetched from server after calling fetchAndRefresh function
+
+        var printDebugInfo = false; // prints data and other info to console for debugging purposes
+        
+        // Palette of colors used to fill in where not specified:
+        var palette = ['#ff7f0e','#1f77b4','#d62728','#2ca02c','#a8dab5','#feed02','#e70084','#55cafb','#7d8d9a','#53230a','#cf9418','#e1e1e1'];
+        // Object returned by ChartJs / Google charts (Plotly does not return an object):
+        var chartRef = {};
+        // Copy of dibCharts
+        var dibChartsCopy = null;
+
+        // Main chart object definitions
+        
+        var dibCharts = {
+            // ChartJs Definition
+            // See https://www.chartjs.org/docs/latest/samples/other-charts/polar-area.html
+            chartjs_a : {
+                type : 'chartJs',
+                config: {
+                    type: 'bar',
+                    data: {
+                        labels: 'dibexPlotlyTest.names',
+                        datasets: [
+                            {
+                                data: 'dibexPlotlyTest.sumExp',
+                                backgroundColor: 'dibexPlotlyTest.color'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Total Yrs of Experience'
+                            }
+                        }
+                    }
+                }
+            },
+
+            chartjs_b : {
+                type : 'chartJs',
+                config: {
+                    type: 'line',
+                    data: {
+                        labels: ['Start'],
+                        datasets: [
+                            {
+                                label: 'Dataset 1',
+                                data: [0],
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Total Yrs of Experience'
+                            }
+                        }
+                    },
+                },
+            },
+
+            // Plotly Chart definitions:
+            // See https://plotly.com/javascript/
+            //     https://www.w3schools.com/js/js_graphics_plotly.asp
+            //     https://plotly.github.io/react-chart-editor/
+            //     https://chart-studio.plotly.com/create/#/   => inspect JSON->Tree to see options....
+
+            // Bar with line
+            plotly_a : {
+                type : 'plotly',
+                data : [
+                    {
+                        type: 'bar',
+                        x: 'dibexPlotlyTest.names',
+                        y: 'dibexPlotlyTest.sumExp',
+                        name: 'Total Yrs of Experience'
+                    },
+                    {
+                        type: 'line',
+                        x: 'dibexPlotlyTest.names',
+                        y: 'dibexPlotlyTest.maxRating',
+                        name: 'Max Skill Rating'
+                    },
+                ],
+                layout : {
+                    title: 'Staff Experience and Skill Rating',
+
+                    yaxis: {
+                        title: 'Years'
+                    }
+                },
+                config: {
+                    responsive: true
+                }
+            },
+
+            // Donut
+            plotly_b : {
+                type : 'plotly',
+                data : [
+                    {
+                        type: 'pie',
+                        labels: 'dibexPlotlyTest.names',
+                        values: 'dibexPlotlyTest.sumExp',
+                        hole: .4,
+                    }
+                ],
+                layout : {
+                    title: 'Staff with Most Experience',
+
+                    xaxis: {
+                        title: 'Years'
+                    }
+                },
+                config: {
+                    responsive: true
+                }
+            },
+
+            dib_table_a : {
+                type : 'dib',
+                data : {
+                    type : 'staticTable',
+                    captions : 'dibexGantsTest.captions',
+                    rows : 'dibexGantsTest.table',
+
+                },
+                config : {
+                    stbHeading : '<p><b>Gantt Chart data (see below)</b></p>',
+                    excludeColumns : [4],
+                    specialColumnFormat : {
+                        /*
+                        2 : {
+                            width : '60px',
+                            caption: 'Special Header',
+                            class : 'specialTest',
+                            headerClass : 'specialHeaderTest',
+                            cellFn : '',
+                        },
+                        */
+                    }
+                    
+                }
+            },
+
+            google_a : {
+                type : 'google',
+                options: {
+                    height: 400,
+                    gantt: {
+                        trackHeight: 50
+                    }
+                },
+                chartType : 'Gantt',
+                queryNameContainingTable : 'dibexGantsTest',
+                dateColumnIndexes : [2, 3], 
+                numberColumnIndexes : [5]
+            },
+
+            google_b : {
+                type : 'google',
+                options: {
+                    allowHtml: true,
+                },
+                chartType : 'OrgChart',
+                queryNameContainingTable : 'dibexOrgChartTest',
+                dateColumnIndexes : [], 
+                numberColumnIndexes : []
+            },
+
+            leaflet_a : {
+                type : 'leaflet',
+                options: {
+                    center: [51.511206, -0.114312],
+                    zoom: 13
+                },
+                tileLayer: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                tileLayerOptions: {
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                    maxZoom: 19
+                },
+                markers: 'dibexOpenStreetMapsMarkers.markers'
+            }
+        };
+
+        // We could add data attributes to dibCharts, but since the Google Js code changes and bloats it, we keep it clean.
+        var google_a_data, google_b_data;
+
+        // See https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+        google.charts.load('current', {'packages':['gantt']});
+        google.charts.setOnLoadCallback(drawGanttChart);
+        
+        function drawGanttChart() {
+            google_a_data = new google.visualization.DataTable();
+
+            google_a_data.addColumn('string', 'Task ID');
+            google_a_data.addColumn('string', 'Task Name');
+            google_a_data.addColumn('date', 'Start Date');
+            google_a_data.addColumn('date', 'End Date');
+            google_a_data.addColumn('number', 'Duration');
+            google_a_data.addColumn('number', 'Percent Complete');
+            google_a_data.addColumn('string', 'Dependencies');
+        }
+
+
+        // https://developers.google.com/chart/interactive/docs/gallery/orgchart
+        google.charts.load('current', {'packages':['orgchart']});
+        google.charts.setOnLoadCallback(drawOrgChart);
+
+        function drawOrgChart() {
+            google_b_data = new google.visualization.DataTable();
+
+            google_b_data.addColumn('string', 'Name');
+            google_b_data.addColumn('string', 'Manager');
+            google_b_data.addColumn('string', 'ToolTip');
+        }
+
+        function loadData() {
+            // First store a replica of the chart definitions in case we want to call loadData again without refreshing the whole template
+            if(!!!dibChartsCopy) 
+                dibChartsCopy = JSON.stringify(dibCharts);
+            else
+                dibCharts = JSON.parse(dibChartsCopy);
+
+            // The fetchAndRefresh function is used to populate the dibCharts object above which contains the chart configurations
+            // It does the following: 
+            // 1. Fetches the data for queries listed in the Designer under valid_params=>dibSqlPerms
+            // 2. Sets values of leaf nodes (eg x: 'dibexPlotlyTest.names') that reference query fields in the objects listed below (eg dibCharts)
+            // 3. Calls the specified function to draw the charts upon the return of the data, refreshCharts() in this case.
+
+            var objects = [dibCharts]; // alternatively something like: [dibCharts.chartjs_a.config.data, dibCharts.plotly_a.data, dibCharts.plotly_b.data]
+            fetchAndRefresh(objects, 'refreshCharts', serverParams);
+        }
+
+        function refreshCharts() {
+            // ChartJs
+            // ChartJs requires colors to be defined
+            // We can get them from the database, but also let the dibSetMissingColors function fill in colors where missing
+            var countOfColorsNeeded = dibCharts.chartjs_a.config.data.labels.length;
+            var transparency = '8f';
+
+            dibSetMissingColors(countOfColorsNeeded, dibCharts.chartjs_a.config.data.datasets[0], 'backgroundColor', transparency); // eg borderColor could also be set with another call to this function... 
+            dibRefreshChartJs('chartjs_a', true); // Since we let user swop between chart types, we base each chart off each own config object (else gridlines remain)
+            dibRefreshChartJs('chartjs_b');
+
+            // Plotly charts
+            dibRefreshPlotly('plotly_a');
+            dibRefreshPlotly('plotly_b');
+
+            // DIB Static Table
+            dibRefreshStaticTable('dib_table_a');
+
+            // Google Gantt chart
+            dibRefreshGoogle('google_a', google_a_data);
+
+            // Google Org chart
+            dibRefreshGoogle('google_b', google_b_data);
+
+            // Leaflet OpenStreetMaps
+            dibRefreshLeaflet('leaflet_a');
+          
+        }
+
+        function setChartJsType(chartName) {
+            chartNo = (chartName == 'chartjs_a') ? 1 : 2;
+            var chartJsType = document.getElementById('chartJsType' + chartNo).value
+            dibCharts[chartName].config.type = chartJsType;
+            var noLegend = ['bar', 'line', 'radar'];
+            dibCharts[chartName].config.options.plugins.legend.display = (noLegend.includes(chartJsType) ? false : true);
+
+            dibRefreshChartJs(chartName, true); // 2nd parameter value (true) ensures the gridlines don't remain when switching to radar/pie/doughnut
+            //chartRef[chartName].update(dibCharts[chartName].config);
+        }
+
+        var addDataIntervalID, maxCounter=0;
+
+        function addDataStart() {
+            // call addData every 2 seconds
+            addDataIntervalID = window.setInterval(addData, 2000);
+        }
+
+        function addDataStop() {
+            // stop calling
+            window.clearInterval(addDataIntervalID);
+        }
+
+        function addData() {
+            var params = JSON.stringify(serverParams);
+            url = '/dropins/dibExamples/General/addDataToChart';
+
+            ajaxPost(url, params, function(data) {
+                if(!!data && data.success) {
+
+                    var newValue = data.records.newValue;
+                    var newLabel = data.records.newLabel;
+
+                    dibCharts['chartjs_b'].config.data.datasets[0].data.push(newValue);
+                    dibCharts['chartjs_b'].config.data.labels.push(newLabel);
+
+                    chartRef['chartjs_b'].update();
+                    maxCounter++;
+                    if(maxCounter > 10) {
+                        addDataStop();
+                        showMessage('Automatically paused retrieving data from server');
+                    }
+
+                    // There may be a warning msg for the user
+                    if(!!data.message)
+                        showMessage(data.message, 'notice', 2000);
+
+                } else {
+                    addDataStop();
+                    if (!!data.message)
+                        showMessage(data.message);
+                    else
+                        showMessage("An error occured. Please refresh the browser and try again, or check the error log and your server connection.");
+                    
+                }
+            });
+        }
+
+        function increaseYrs() {
+            // Set the value in the source data
+            serverData['dibexPlotlyTest.sumExp'][1]++;
+
+            // Both plotly_a and chartjs_a are linked to this data:
+            
+            // Refresh plotly chart
+            dibCharts.plotly_a.layout.datarevision++;
+            dibRefreshPlotly('plotly_a');
+            dibCharts.plotly_b.layout.datarevision++;
+            dibRefreshPlotly('plotly_b');
+
+           
+            forceRedraw('plotlyCard');
+
+           // refreshElement('plotlyCard');
+
+            // ChartJs offers an easy native function
+            //chartRef['chartjs_a'].update();
+        }
+
+        forceRedraw = function (nodeName) {
+            var elm = document.getElementById(nodeName);
+
+            elm.parentNode.style['min-height'] = elm.parentNode.offsetHeight + 'px';
+            elm.style.display = 'none';
+            elm.offsetHeight;
+            elm.style.display = 'flex';
+            setTimeout(function () {
+                elm.parentNode.style['min-height'] = '';
+               
+    var content = elm.innerHTML;
+    elm.innerHTML= content; 
+            }, 500);
+        }
+
+        function refreshElement(nodeName) {
+            var timer = setTimeout(function(){
+                var node = document.getElementById(nodeName);
+
+                node.style.display='none';
+            node.height = node.height + 1;
+            node.offsetHeight = node.offsetHeight + 1;
+
+                node.style.display='flex';
+                node.offsetHeight = node.offsetHeight - 1;    
+        }, 500);
+
+            
+        }
+
+        function printDiv() {
+           // https://html2canvas.hertzen.com/faq
+           // https://stackoverflow.com/questions/14595541/capture-div-into-image-using-html2canvas
+           // this may work better:
+           // https://github.com/1904labs/dom-to-image-more
+            setTimeout(() => {
+                var divId = document.getElementById('printSelect').value;
+
+                html2canvas(
+                    document.getElementById(divId), {
+                    scale: 2, // improves resolution -> change to eg. 4 for higher quality
+                    logging: false,
+                    profile: true,
+                    useCORS: true}
+                ).then(function(canvas) {
+                        var data = canvas.toDataURL('image/jpeg', 0.9);
+                        var src = encodeURI(data);
+
+                        var doc  = `<html><head><title>` + document.title  + `</title>
+                                    <style>
+
+                                    </style>
+                                    </head><body>
+                                        <img src=` + src + ` style="width: 1000px">
+                                    </body>
+                                    </html>`;
+
+                        var mywindow = window.open('', 'PRINT'); // , 'height=400,width=600'
+                        mywindow.document.write(doc);
+                        mywindow.document.close(); // necessary for IE >= 10
+                        mywindow.focus(); // necessary for IE >= 10*/
+
+                        setTimeout(() => {
+                            mywindow.print();
+                        }, 1000);
+                });
+            }, 1000);
+        }
+
+    </script>
+    
+</head>
+
+~$// LOAD CHARTS ~
+<body onload="loadData()">
+
+~$// BUTTONS ~
+<button class="btn" onclick="document.location.reload();">Reload iFrame</button>
+<br><br>
+
+<label for="printSelect">Choose What to Print</label>
+<select name="printSelect" id="printSelect">
+    <option value="printAll">All</option>
+    <option value="printChartJs">ChartJs Charts</option>
+    <option value="plotlyCard">Plotly Charts</option>
+    <option value="dib_table_a">DIB Table</option>
+    <option value="leaflet_a">Leaflet OpenStreetMaps</option>
+</select>
+
+<button id="btnPrint" class="btn" onclick="printDiv();">Print</button>
+
+<div id="printAll">
+<h2>ChartJs</h2>
+    Simple and powerful with <b>8 commonly used chart types</b>.
+    <br>
+    <b>See:</b> <a target="blank_" href="https://www.chartjs.org/docs/latest/samples/information.html">https://www.chartjs.org/docs/latest/samples/information.html</a>
+
+    <div id='printChartJs' class="dibCard" style="display:flex;flex-wrap: wrap;">
+
+        <div style="width:50%; float: right;">
+            <div >
+                <label for="chartJsType1"><b>Choose a Chart Type:</b></label>
+                <select id="chartJsType1" onChange="setChartJsType('chartjs_a');">
+                    <option value="bar">bar</option>
+                    <option value="line">line</option>
+                    <option value="doughnut">doughnut</option>
+                    <option value="pie">pie</option>
+                    <option value="polarArea">polarArea</option>
+                    <option value="radar">radar</option>
+                </select>
+
+                <div style="height:350px; flex: 1 1 auto">
+                    <canvas id="chartjs_a" style=" float:left;margin-left:2em"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div style="width:50%; float: right;">
+            <div>
+                <button class="btn" onClick="addDataStart();return false;">Start Retrieving Data From Server Every 2 Seconds</button>
+                <button class="btn" onClick="addDataStop();return false;">Stop Retrieving</button>
+
+            </div>
+            <div style="height:350px; flex: 1 1 auto">
+                <canvas id="chartjs_b" style=" float:left;margin-left:2em"></canvas>
+            </div>
+        </div>
+    </div>
+
+<h2>Plotly</h2>
+    <b>Over 40</b> chart types, 3D charts, statistical graphs, and SVG maps with tonnes of customizations.
+    <br>
+    <b>See:</b> <a target="blank_" href="https://plotly.com/javascript/">https://plotly.com/javascript/</a>
+    <br>
+    <button class="btn" onclick="increaseYrs();">Increase Yrs of Second Staff Member</button>
+    <br><br>
+    <i>NOTE: since the ChartJs chart above and the Plotly chart below are tied to the same data source field, changes to the data affects both.</i>
+    <br>
+
+    <div id="plotlyCard" class="dibCard" style="display:flex; flex-direction: row;flex-wrap: wrap; height:530px">
+
+        <div style="flex:350px 1 1; display:flex; flex-direction: column;">
+            <h3>Mixed Chart</h3>
+            <div id="plotly_a" style="flex: auto;"></div>
+        </div>
+    
+        <div style="flex:350px 1 1; display:flex; flex-direction: column;">
+            <h3>Pie Chart</h3>
+            <div id="plotly_b" style="flex: auto; "></div>
+            
+        </div>
+    </div>
+
+<h2>DIB Table</h2>
+Quickly plot data from <b>any query in DIB</b>, and style using css classes.
+    <div id="dib_table_a" class="dibCard" style="width:fit-content;overflow:auto"></div>
+    <br>
+
+<h2>Google</h2>
+    <b>More than 15</b> powerful chart types.
+    <br>
+    <b>See:</b> <a target="blank_" href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a>
+
+    <div class="dibCard" style="display:flex; flex-direction: row;flex-wrap: wrap;">
+        
+        <div style="flex:350px 1 0; display:flex; flex-direction: column;">
+            <h3>Gantt Chart</h3>
+            <div id="google_a" style="flex: auto;"></div>
+        </div>
+    
+        <div style="flex:350px 1 0; display:flex; flex-direction: column;">
+            <h3 style="text-align: center;">Org Chart</h3>
+            <div id="google_b" style="flex: auto; "></div>
+            
+        </div>
+    </div>
+
+
+
+<h2>Leaflet</h2>
+    Many different Map Tile providers
+    <br>
+    <b>See:</b><br>
+    <a target="blank_" href="https://leafletjs.com/examples/quick-start/">Info &amp; Quick Start</a><br>
+    <a target="blank_" href="https://leaflet-extras.github.io/leaflet-providers/preview/">Provider demo's</a><br>
+    <a target="blank_" href="https://tomik23.github.io/leaflet-examples">HowTo's</a><br>
+
+    <div class="dibCard" style="display:flex; flex-direction: row;flex-wrap: wrap;">
+        
+        <div style="flex: 1; display:flex; flex-direction: column;">
+            <h3>Open Street Map</h3>
+            <div id="leaflet_a" style="height: 400px;"></div>
+        </div>
+        
+    </div>
+
+<h2>Other</h2>
+<b>
+    The above are merely examples from free providers.
+    <br>Dropinbase provides the tools to easily integrate with 100's of 3d party providers
+    <br>like High Charts, Google Maps, etc.
+</b>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+System.register(["tslib", "@angular/platform-browser", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, platform_browser_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, _c0, importsRequired, dibexOverviewReportComponent, containerModules, fullDateTimeOptions, dibexOverviewReportModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexOverviewReportComponent_iframe_13_Template(rf, ctx) { if (rf & 1) {
+        const _r2 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "iframe", 10);
+        i0.ɵɵlistener("show", function dibexOverviewReportComponent_iframe_13_Template_iframe_show_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(!ctx_r1.busy); })("load", function dibexOverviewReportComponent_iframe_13_Template_iframe_load_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r3 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r3.completed()); });
+        i0.ɵɵpipe(1, "safe");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("src", i0.ɵɵpipeBind1(1, 5, ctx_r0.iframeUrl), i0.ɵɵsanitizeResourceUrl)("forcedSpace", 890)("debounceTime", 200)("debug", "false")("setProperty", "minHeight");
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (platform_browser_1_1) {
+                platform_browser_1 = platform_browser_1_1;
+                i3 = platform_browser_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i7 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexOverviewReportComponent = class dibexOverviewReportComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                sanitizer;
+                view = { container: { id: 193, name: 'dibexOverviewReport', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'iframe', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                doNotReloadiFrame = false;
+                clientData;
+                allClientData;
+                model;
+                frameStyle = { "min-height": "200px" };
+                iframeUrl;
+                constructor(injector, httpClient, viewContainerRef, sd, cd, sanitizer) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    this.sanitizer = sanitizer;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexOverviewReport');
+                    this.containerName = 'dibexOverviewReport'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnGetDataFn", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibAdmin/DData/getData", itemAlias: "btnGetDataFn", waitForCompletion: false, containerName: "dibexOverviewReport", handlers: [] }, this.clientData, { itemEventId: 'ie238-dib', itemId: '4697', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "addDataFn", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/General/addDataToChart", itemAlias: "addDataFn", waitForCompletion: false, containerName: "dibexOverviewReport", handlers: [] }, this.clientData, { itemEventId: 'ie239-dib', itemId: '4698', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnGetDataFn1", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibAdmin/DData/getData", itemAlias: "btnGetDataFn1", waitForCompletion: false, containerName: "dibexOverviewReport", handlers: [] }, this.clientData, { itemEventId: 'ie410-dib', itemId: '6967', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.reloadContainer(); }
+                completed() { this.busy = false; }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexOverviewReport', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexOverviewReport' });
+                    this.reloadSubcontainers();
+                    if (this.iframeUrl != undefined && this.doNotReloadiFrame) {
+                        return;
+                    }
+                    let url = "/dropins/setNgxMaterial/iframe/Template/open/dibexOverviewReport";
+                    url += `?clientData=${encodeURIComponent(JSON.stringify(this.clientData))}`;
+                    url += `&v=${new Date().getTime()}`;
+                    this.iframeUrl = url;
+                }
+                static ɵfac = function dibexOverviewReportComponent_Factory(t) { return new (t || dibexOverviewReportComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i3.DomSanitizer)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexOverviewReportComponent, selectors: [["dibex-overview-report"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 15, vars: 23, consts: [[2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "min-height", "20px", 3, "formGroup", "ngClass"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], ["mat-raised-button", "", "color", "primary", "id", "ci4697", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnGetDataFn", "type", "button", 3, "containerPortId", "hidden"], ["mat-raised-button", "", "color", "primary", "id", "ci6967", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnGetDataFn1", "type", "button", 3, "containerPortId", "hidden"], ["mat-raised-button", "", "color", "primary", "id", "ci4698", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "addDataFn", "type", "button", 3, "containerPortId", "hidden"], ["id", "ci7594", "dibComponent", "span", 3, "innerHtml"], ["id", "ci7595", "dibComponent", "span", 3, "innerHtml"], ["id", "ci7596", "dibComponent", "span", 3, "innerHtml"], ["id", "ci7597", "dibComponent", "span", 3, "innerHtml"], ["sharedDibIframeTracker", "", "name", "dibexOverviewReport", "frameBorder", "0", "width", "100%", "fill-height", "", 3, "src", "forcedSpace", "debounceTime", "debug", "setProperty", "show", "load", 4, "ngIf"], ["sharedDibIframeTracker", "", "name", "dibexOverviewReport", "frameBorder", "0", "width", "100%", "fill-height", "", 3, "src", "forcedSpace", "debounceTime", "debug", "setProperty", "show", "load"]], template: function dibexOverviewReportComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0)(1, "div", 1);
+                        i0.ɵɵelement(2, "button", 2)(3, "button", 3)(4, "button", 4)(5, "span", 5);
+                        i0.ɵɵpipe(6, "safeHtml");
+                        i0.ɵɵelement(7, "span", 6);
+                        i0.ɵɵpipe(8, "safeHtml");
+                        i0.ɵɵelement(9, "span", 7);
+                        i0.ɵɵpipe(10, "safeHtml");
+                        i0.ɵɵelement(11, "span", 8);
+                        i0.ɵɵpipe(12, "safeHtml");
+                        i0.ɵɵtemplate(13, dibexOverviewReportComponent_iframe_13_Template, 2, 7, "iframe", 9);
+                        i0.ɵɵtext(14, "\u00A0 ");
+                        i0.ɵɵelementEnd()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(21, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(6, 13, ctx.getHtml("spanForDistributingExamplesDropin")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(8, 15, ctx.getHtml("spanForDistributingExamplesDropin1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(10, 17, ctx.getHtml("spanForDistributingExamplesDropin2")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(12, 19, ctx.getHtml("spanForDistributingExamplesDropin3")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.iframeUrl);
+                    } }, dependencies: [i4.NgClass, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.NgControlStatusGroup, i6.FormGroupDirective, i2.DibListenersDirective, i2.DibiFrameTrackerDirective, i2.DibFillHeightDirective, i7.MatButton, i2.SafePipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexOverviewReport'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexOverviewReportComponent.prototype, "reloadContainer", null);
+            exports_1("dibexOverviewReportComponent", dibexOverviewReportComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexOverviewReportComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-overview-report', template: `
+<form style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch; min-height:20px"   [formGroup]="model.$formGroup" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch"><button  mat-raised-button color=primary  id=ci4697 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnGetDataFn   style="  " [hidden]="true"  type=button  ></button><button  mat-raised-button color=primary  id=ci6967 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnGetDataFn1   style="  " [hidden]="true"  type=button  ></button><button  mat-raised-button color=primary  id=ci4698 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=addDataFn   style="  " [hidden]="true"  type=button  ></button><span  id=ci7594 dibComponent=span   style="  "  [innerHtml]="getHtml('spanForDistributingExamplesDropin') | safeHtml" ></span><span  id=ci7595 dibComponent=span   style="  "  [innerHtml]="getHtml('spanForDistributingExamplesDropin1') | safeHtml" ></span><span  id=ci7596 dibComponent=span   style="  "  [innerHtml]="getHtml('spanForDistributingExamplesDropin2') | safeHtml" ></span><span  id=ci7597 dibComponent=span   style="  "  [innerHtml]="getHtml('spanForDistributingExamplesDropin3') | safeHtml" ></span><iframe *ngIf=iframeUrl  sharedDibIframeTracker (show)='!busy' (load)="completed()"   name='dibexOverviewReport' [src]="iframeUrl | safe" frameBorder=0  width="100%"  fill-height [forcedSpace]=890 [debounceTime]=200 [debug]="'false'" [setProperty]="'minHeight'"></iframe>&nbsp;   </div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }, { type: i3.DomSanitizer }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexOverviewReportModule = class dibexOverviewReportModule {
+                static entry = dibexOverviewReportComponent;
+                static ɵfac = function dibexOverviewReportModule_Factory(t) { return new (t || dibexOverviewReportModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexOverviewReportModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexOverviewReportModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexOverviewReportModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexOverviewReportComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexOverviewReportModule, { declarations: [dibexOverviewReportComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

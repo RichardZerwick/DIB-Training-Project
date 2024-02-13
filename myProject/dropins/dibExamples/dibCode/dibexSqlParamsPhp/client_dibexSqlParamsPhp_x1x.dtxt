@@ -1,0 +1,1562 @@
+System.register(["tslib", "@angular/core", "@angular/material/table", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/material/sort", "@angular/material/paginator", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/autocomplete", "@angular/material/card", "@ngbracket/ngx-layout/extended", "@angular/material/checkbox", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar", "@angular/material/toolbar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, table_1, shared_1, core_2, shared_2, shared_3, http_1, forms_1, core_3, shared_4, rxjs_1, operators_1, table_2, sort_1, paginator_1, core_4, common_1, shared_5, shared_6, button_1, icon_1, autocomplete_1, card_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, _c0, _c1, _c2, _c3, _c4, _c5, _c6, importsRequired, dibexSqlParamsPhpComponent, containerModules, dibexSqlParamsPhpModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexSqlParamsPhpComponent_button_14_Template(rf, ctx) { if (rf & 1) {
+        const _r34 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 48);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_button_14_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r34); const ctx_r33 = i0.ɵɵnextContext(); const _r0 = i0.ɵɵreference(12); const _r1 = i0.ɵɵreference(13); ctx_r33.clearDropdown(ctx_r33.model.modelItems.clientId.formControl, $event, ctx_r33.lists.list6063, _r0); return i0.ɵɵresetView(_r1.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexSqlParamsPhpComponent_mat_progress_bar_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 49);
+    } }
+    function dibexSqlParamsPhpComponent_mat_option_18_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 50);
+    } if (rf & 2) {
+        const item_r35 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r35.id == "0"))("value", item_r35)("innerHtml", item_r35.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexSqlParamsPhpComponent_button_23_Template(rf, ctx) { if (rf & 1) {
+        const _r37 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 51);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_button_23_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r37); const ctx_r36 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r36.searchGrid()); });
+        i0.ɵɵelement(1, "dib-icon", 52);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Apply filter criteria specified in column headers")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexSqlParamsPhpComponent_button_24_Template(rf, ctx) { if (rf & 1) {
+        const _r39 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 53);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_button_24_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r39); const ctx_r38 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r38.clearSearch()); });
+        i0.ɵɵelement(1, "dib-icon", 54);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("matTooltip", "Show all records and clear filter criteria")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+    } }
+    function dibexSqlParamsPhpComponent_div_26_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r40 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2("\u00A0to\u00A0", ctx_r40.page.toRecord, "\u00A0of\u00A0", ctx_r40.page.records, "");
+    } }
+    function dibexSqlParamsPhpComponent_div_26_span_4_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r41 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1("(Total: ", ctx_r41.page.totalRecords, ")");
+    } }
+    function dibexSqlParamsPhpComponent_div_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 55);
+        i0.ɵɵtext(1);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_div_26_span_2_Template, 2, 2, "span", 45);
+        i0.ɵɵtext(3, "\u00A0");
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_div_26_span_4_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" PHP Parameters: ", ctx_r8.page.fromRecord, "");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r8.page.fromRecord > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r8.page.totalRecords != ctx_r8.page.records);
+    } }
+    function dibexSqlParamsPhpComponent_th_34_Template(rf, ctx) { if (rf & 1) {
+        const _r43 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 56)(1, "mat-checkbox", 57);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_th_34_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r43); const ctx_r42 = i0.ɵɵnextContext(); $event.preventDefault(); return i0.ɵɵresetView(ctx_r42.masterToggle()); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r10 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r10.masterIsChecked)("indeterminate", ctx_r10.masterIsIndeterminate);
+    } }
+    function dibexSqlParamsPhpComponent_td_35_Template(rf, ctx) { if (rf & 1) {
+        const _r47 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 58)(1, "mat-checkbox", 59);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_td_35_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexSqlParamsPhpComponent_td_35_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r47); const row_r44 = restoredCtx.$implicit; const ctx_r46 = i0.ɵɵnextContext(); return i0.ɵɵresetView($event ? ctx_r46.selection.toggle(row_r44) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r44 = ctx.$implicit;
+        const ctx_r11 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r11.selection.isSelected(row_r44));
+    } }
+    function dibexSqlParamsPhpComponent_td_37_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r48 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r48.client_id_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_37_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r48 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r48.client_id, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 61);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_td_37_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_td_37_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r48 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r48 && !!row_r48.client_id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r48 && !row_r48.client_id_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_th_38_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Client ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_38_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Client");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_38_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r58 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 70)(2, "mat-label");
+        i0.ɵɵtext(3, "Client");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 71);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_th_38_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r58); const ctx_r57 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r57.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_th_38_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r58); const ctx_r59 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r59.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r56 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r56.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client");
+    } }
+    function dibexSqlParamsPhpComponent_th_38_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_th_38_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_th_38_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_th_38_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r13 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r13.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_td_40_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r60 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r60.email_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_40_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r60 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r60.email, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_40_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 72);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_td_40_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_td_40_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r60 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r60 && !!row_r60.email_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r60 && !row_r60.email_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_th_41_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Email ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_41_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Email");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_41_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r70 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 73)(2, "mat-label");
+        i0.ɵɵtext(3, "Email");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 74);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_th_41_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r70); const ctx_r69 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r69.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_th_41_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r70); const ctx_r71 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r71.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r68 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r68.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Email");
+    } }
+    function dibexSqlParamsPhpComponent_th_41_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_th_41_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_th_41_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_th_41_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r15 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r15.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r15.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r15.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_td_43_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r72 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r72.client_contact_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_43_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r72 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r72.client_contact, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_43_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 75);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_td_43_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_td_43_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r72 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r72 && !!row_r72.client_contact_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r72 && !row_r72.client_contact_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_th_44_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Client Contact ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_44_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Client Contact");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_44_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r82 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 76)(2, "mat-label");
+        i0.ɵɵtext(3, "Client Contact");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 77);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_th_44_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r82); const ctx_r81 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r81.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_th_44_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r82); const ctx_r83 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r83.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r80 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r80.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client Contact");
+    } }
+    function dibexSqlParamsPhpComponent_th_44_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_th_44_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_th_44_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_th_44_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r17 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r17.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r17.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r17.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_td_46_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r84 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r84.position_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_46_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r84 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r84.position, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 78);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_td_46_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_td_46_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r84 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r84 && !!row_r84.position_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r84 && !row_r84.position_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_th_47_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Position ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_47_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Position");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_47_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r94 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 79)(2, "mat-label");
+        i0.ɵɵtext(3, "Position");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 80);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_th_47_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r94); const ctx_r93 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r93.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_th_47_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r94); const ctx_r95 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r95.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r92 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r92.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Position");
+    } }
+    function dibexSqlParamsPhpComponent_th_47_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_th_47_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_th_47_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_th_47_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r19 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r19.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r19.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r19.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_td_49_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r96 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r96.main_branch_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_49_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r96 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r96.main_branch, "");
+    } }
+    function dibexSqlParamsPhpComponent_td_49_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 81);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_td_49_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_td_49_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r96 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r96 && !!row_r96.main_branch_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r96 && !row_r96.main_branch_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_th_50_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Main Branch ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_50_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Main Branch");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_th_50_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r106 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 82)(2, "mat-label");
+        i0.ɵɵtext(3, "Main Branch");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 83);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_th_50_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r106); const ctx_r105 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r105.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_th_50_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r106); const ctx_r107 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r107.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r104 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("formGroup", ctx_r104.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Main Branch");
+    } }
+    function dibexSqlParamsPhpComponent_th_50_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_th_50_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_th_50_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_th_50_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r21 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r21.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r21.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r21.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_th_52_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 49);
+    } }
+    function dibexSqlParamsPhpComponent_th_52_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 84);
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_th_52_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 14);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r22 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r22.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r22.busy);
+    } }
+    function dibexSqlParamsPhpComponent_th_54_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r109 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r109.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexSqlParamsPhpComponent_th_54_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 85);
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_th_54_span_1_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r23 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r23.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r23.busy && ctx_r23.tableDataSource.data.length == 0);
+    } }
+    function dibexSqlParamsPhpComponent_ng_container_55_tr_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 87);
+    } }
+    function dibexSqlParamsPhpComponent_ng_container_55_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0);
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_ng_container_55_tr_1_Template, 1, 0, "tr", 86);
+        i0.ɵɵpipe(2, "async");
+        i0.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        const column_r110 = ctx.$implicit;
+        const ctx_r24 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpipeBind1(2, 1, ctx_r24.columnHeaders.getArray(column_r110).items$));
+    } }
+    function dibexSqlParamsPhpComponent_tr_56_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 88);
+    } if (rf & 2) {
+        const ctx_r25 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c1, ctx_r25.busy ? "visible" : "hidden"));
+    } }
+    function dibexSqlParamsPhpComponent_tr_57_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 88);
+    } if (rf & 2) {
+        const ctx_r26 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(1, _c1, ctx_r26.tableDataSource.data.length == 0 ? "visible" : "hidden"));
+    } }
+    function dibexSqlParamsPhpComponent_tr_58_Template(rf, ctx) { if (rf & 1) {
+        const _r114 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 89);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_tr_58_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r114); const row_r112 = restoredCtx.$implicit; const ctx_r113 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r113.rowClick(row_r112, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r112 = ctx.$implicit;
+        const ctx_r27 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c2, ctx_r27.isHighlighted(row_r112)));
+    } }
+    function dibexSqlParamsPhpComponent_60_ng_template_0_Template(rf, ctx) { }
+    function dibexSqlParamsPhpComponent_60_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, dibexSqlParamsPhpComponent_60_ng_template_0_Template, 0, 0, "ng-template", 90);
+    } if (rf & 2) {
+        i0.ɵɵnextContext();
+        const _r31 = i0.ɵɵreference(65);
+        i0.ɵɵproperty("ngTemplateOutlet", _r31);
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_mat_checkbox_2_Template(rf, ctx) { if (rf & 1) {
+        const _r120 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-checkbox", 96);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_mat_toolbar_63_mat_checkbox_2_Template_mat_checkbox_click_0_listener($event) { i0.ɵɵrestoreView(_r120); const ctx_r119 = i0.ɵɵnextContext(2); $event.preventDefault(); return i0.ɵɵresetView(ctx_r119.clearAll()); });
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r116 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("checked", true);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" ", ctx_r116.numberOfSelectedItems + " ", "item", ctx_r116.numberOfSelectedItems > 1 ? "s " : " ", "selected ");
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_mat_icon_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon");
+        i0.ɵɵtext(1, "visibility_off");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_Template(rf, ctx) { if (rf & 1) {
+        const _r124 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 97);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r124); const ctx_r123 = i0.ɵɵnextContext(2); ctx_r123.gridShowClipboardDefault = !ctx_r123.gridShowClipboardDefault; return i0.ɵɵresetView(ctx_r123.gridShowClipboardDefault && ctx_r123.scrollToBottom()); });
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_mat_icon_1_Template, 2, 0, "mat-icon", 45);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_mat_icon_2_Template, 2, 0, "mat-icon", 45);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r117 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r117.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r117.gridShowClipboardDefault);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r117.gridShowClipboardDefault ? "hide" : "show", "");
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_mat_paginator_5_Template(rf, ctx) { if (rf & 1) {
+        const _r127 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-paginator", 98, 99);
+        i0.ɵɵlistener("page", function dibexSqlParamsPhpComponent_mat_toolbar_63_mat_paginator_5_Template_mat_paginator_page_0_listener($event) { i0.ɵɵrestoreView(_r127); const ctx_r126 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r126.changePage($event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r118 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("length", ctx_r118.page.totalRecords)("pageSize", ctx_r118.page.pageSize)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c3));
+    } }
+    function dibexSqlParamsPhpComponent_mat_toolbar_63_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-toolbar")(1, "mat-toolbar-row", 91);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_mat_toolbar_63_mat_checkbox_2_Template, 2, 3, "mat-checkbox", 92);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_mat_toolbar_63_button_3_Template, 4, 3, "button", 93);
+        i0.ɵɵelement(4, "span", 94);
+        i0.ɵɵtemplate(5, dibexSqlParamsPhpComponent_mat_toolbar_63_mat_paginator_5_Template, 2, 4, "mat-paginator", 95);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r30 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx_r30.numberOfSelectedItems);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r30.selectedDataNotInPage().length > 0);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", true);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_2_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r143 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r143.client_id_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_2_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r143 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r143.client_id, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 61);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_2_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_td_2_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r143 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r143 && !!row_r143.client_id_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r143 && !row_r143.client_id_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_3_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Client ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_3_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Client");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_3_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r153 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 70)(2, "mat-label");
+        i0.ɵɵtext(3, "Client");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 71);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_ng_template_64_th_3_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r153); const ctx_r152 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r152.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_ng_template_64_th_3_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r153); const ctx_r154 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r154.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r151 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r151.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_th_3_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_3_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_ng_template_64_th_3_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r129 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r129.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r129.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r129.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_5_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r155 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r155.email_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_5_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r155 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r155.email, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 72);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_5_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_td_5_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r155 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r155 && !!row_r155.email_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r155 && !row_r155.email_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_6_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Email ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_6_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Email");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_6_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r165 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 73)(2, "mat-label");
+        i0.ɵɵtext(3, "Email");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 74);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_ng_template_64_th_6_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r165); const ctx_r164 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r164.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_ng_template_64_th_6_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r165); const ctx_r166 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r166.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r163 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r163.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Email");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_6_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_th_6_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_6_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_ng_template_64_th_6_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r131 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r131.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r131.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r131.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_8_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r167 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r167.client_contact_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_8_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r167 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r167.client_contact, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 75);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_8_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_td_8_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r167 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r167 && !!row_r167.client_contact_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r167 && !row_r167.client_contact_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_9_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Client Contact ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_9_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Client Contact");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_9_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r177 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 76)(2, "mat-label");
+        i0.ɵɵtext(3, "Client Contact");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 77);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_ng_template_64_th_9_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r177); const ctx_r176 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r176.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_ng_template_64_th_9_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r177); const ctx_r178 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r178.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r175 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r175.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Client Contact");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_th_9_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_9_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_ng_template_64_th_9_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r133 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r133.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r133.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r133.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_11_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r179 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r179.position_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_11_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r179 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r179.position, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_11_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 78);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_11_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_td_11_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r179 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r179 && !!row_r179.position_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r179 && !row_r179.position_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_12_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Position ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_12_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Position");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_12_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r189 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 79)(2, "mat-label");
+        i0.ɵɵtext(3, "Position");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 80);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_ng_template_64_th_12_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r189); const ctx_r188 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r188.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_ng_template_64_th_12_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r189); const ctx_r190 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r190.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r187 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r187.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Position");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_th_12_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_12_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_ng_template_64_th_12_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r135 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r135.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r135.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r135.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_14_span_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r191 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r191.main_branch_display_value, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_14_span_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r191 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", row_r191.main_branch, "");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 60)(1, "div", 81);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_14_span_2_Template, 2, 1, "span", 45);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_td_14_span_3_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r191 = ctx.$implicit;
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !!row_r191 && !!row_r191.main_branch_display_value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !!row_r191 && !row_r191.main_branch_display_value);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_15_div_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 67);
+        i0.ɵɵtext(1, " Main Branch ");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_15_div_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 68);
+        i0.ɵɵtext(1, "Main Branch");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_15_div_4_Template(rf, ctx) { if (rf & 1) {
+        const _r201 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "div", 69)(1, "mat-form-field", 82)(2, "mat-label");
+        i0.ɵɵtext(3, "Main Branch");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "input", 83);
+        i0.ɵɵlistener("keydown.enter", function dibexSqlParamsPhpComponent_ng_template_64_th_15_div_4_Template_input_keydown_enter_4_listener() { i0.ɵɵrestoreView(_r201); const ctx_r200 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r200.searchGrid(false)); })("keydown.esc", function dibexSqlParamsPhpComponent_ng_template_64_th_15_div_4_Template_input_keydown_esc_4_listener() { i0.ɵɵrestoreView(_r201); const ctx_r202 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r202.clearSearch()); });
+        i0.ɵɵelementEnd()()();
+    } if (rf & 2) {
+        const ctx_r199 = i0.ɵɵnextContext(3);
+        i0.ɵɵproperty("formGroup", ctx_r199.model.$formGroup);
+        i0.ɵɵadvance(4);
+        i0.ɵɵattribute("aria-label", "Main Branch");
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 62)(1, "div", 63);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_th_15_div_2_Template, 2, 0, "div", 64);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_15_div_3_Template, 2, 0, "div", 65);
+        i0.ɵɵtemplate(4, dibexSqlParamsPhpComponent_ng_template_64_th_15_div_4_Template, 5, 2, "div", 66);
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r137 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", !ctx_r137.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r137.showSearch);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r137.showSearch);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_17_Template(rf, ctx) { if (rf & 1) {
+        const _r204 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "th", 56)(1, "mat-checkbox", 102);
+        i0.ɵɵlistener("change", function dibexSqlParamsPhpComponent_ng_template_64_th_17_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r204); const ctx_r203 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r203.masterToggle($event) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const ctx_r138 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r138.masterIsChecked)("indeterminate", ctx_r138.masterIsIndeterminate);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_td_18_Template(rf, ctx) { if (rf & 1) {
+        const _r208 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "td", 103)(1, "mat-checkbox", 59);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_ng_template_64_td_18_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function dibexSqlParamsPhpComponent_ng_template_64_td_18_Template_mat_checkbox_change_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r208); const row_r205 = restoredCtx.$implicit; const ctx_r207 = i0.ɵɵnextContext(2); return i0.ɵɵresetView($event ? ctx_r207.selection.toggle(row_r205) : null); });
+        i0.ɵɵelementEnd()();
+    } if (rf & 2) {
+        const row_r205 = ctx.$implicit;
+        const ctx_r139 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("checked", ctx_r139.selection.isSelected(row_r205));
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_20_mat_progress_bar_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 49);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 84);
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_ng_template_64_th_20_mat_progress_bar_1_Template, 1, 0, "mat-progress-bar", 14);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r140 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r140.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r140.busy);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_22_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "span");
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r210 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(ctx_r210.translate("global.norecordsfound", "No Records Found"));
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_th_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 85);
+        i0.ɵɵtemplate(1, dibexSqlParamsPhpComponent_ng_template_64_th_22_span_1_Template, 2, 1, "span", 45);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r141 = i0.ɵɵnextContext(2);
+        i0.ɵɵattribute("colspan", ctx_r141.columnsToDisplay.get().length);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r141.busy && ctx_r141.tableDataSource.data.length == 0);
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_tr_23_Template(rf, ctx) { if (rf & 1) {
+        const _r213 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "tr", 89);
+        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_ng_template_64_tr_23_Template_tr_click_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r213); const row_r211 = restoredCtx.$implicit; const ctx_r212 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r212.rowClick(row_r211, $event)); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const row_r211 = ctx.$implicit;
+        const ctx_r142 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(1, _c2, ctx_r142.isHighlighted(row_r211)));
+    } }
+    function dibexSqlParamsPhpComponent_ng_template_64_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 100);
+        i0.ɵɵelementContainerStart(1, 31);
+        i0.ɵɵtemplate(2, dibexSqlParamsPhpComponent_ng_template_64_td_2_Template, 4, 2, "td", 32);
+        i0.ɵɵtemplate(3, dibexSqlParamsPhpComponent_ng_template_64_th_3_Template, 5, 3, "th", 33);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(4, 34);
+        i0.ɵɵtemplate(5, dibexSqlParamsPhpComponent_ng_template_64_td_5_Template, 4, 2, "td", 32);
+        i0.ɵɵtemplate(6, dibexSqlParamsPhpComponent_ng_template_64_th_6_Template, 5, 3, "th", 33);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(7, 35);
+        i0.ɵɵtemplate(8, dibexSqlParamsPhpComponent_ng_template_64_td_8_Template, 4, 2, "td", 32);
+        i0.ɵɵtemplate(9, dibexSqlParamsPhpComponent_ng_template_64_th_9_Template, 5, 3, "th", 33);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(10, 36);
+        i0.ɵɵtemplate(11, dibexSqlParamsPhpComponent_ng_template_64_td_11_Template, 4, 2, "td", 32);
+        i0.ɵɵtemplate(12, dibexSqlParamsPhpComponent_ng_template_64_th_12_Template, 5, 3, "th", 33);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(13, 37);
+        i0.ɵɵtemplate(14, dibexSqlParamsPhpComponent_ng_template_64_td_14_Template, 4, 2, "td", 32);
+        i0.ɵɵtemplate(15, dibexSqlParamsPhpComponent_ng_template_64_th_15_Template, 5, 3, "th", 33);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(16, 28);
+        i0.ɵɵtemplate(17, dibexSqlParamsPhpComponent_ng_template_64_th_17_Template, 2, 2, "th", 29);
+        i0.ɵɵtemplate(18, dibexSqlParamsPhpComponent_ng_template_64_td_18_Template, 2, 1, "td", 101);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(19, 38);
+        i0.ɵɵtemplate(20, dibexSqlParamsPhpComponent_ng_template_64_th_20_Template, 2, 2, "th", 39);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementContainerStart(21, 40);
+        i0.ɵɵtemplate(22, dibexSqlParamsPhpComponent_ng_template_64_th_22_Template, 2, 2, "th", 41);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵtemplate(23, dibexSqlParamsPhpComponent_ng_template_64_tr_23_Template, 1, 3, "tr", 44);
+        i0.ɵɵpipe(24, "async");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r32 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("dataSource", ctx_r32.selectionDataSource);
+        i0.ɵɵadvance(23);
+        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(24, 2, ctx_r32.columnsToDisplay.items$));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_4 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (table_1_1) {
+                table_1 = table_1_1;
+                table_2 = table_1_1;
+                i17 = table_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                shared_6 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_3_1) {
+                core_3 = core_3_1;
+                i7 = core_3_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (sort_1_1) {
+                sort_1 = sort_1_1;
+                i18 = sort_1_1;
+            },
+            function (paginator_1_1) {
+                paginator_1 = paginator_1_1;
+                i19 = paginator_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i8 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i11 = icon_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i16 = card_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            },
+            function (i14_1) {
+                i14 = i14_1;
+            },
+            function (i15_1) {
+                i15 = i15_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { visibility: a0 }; };
+            _c2 = function (a0) { return { "dib-grid-selected": a0 }; };
+            _c3 = function () { return [10, 20, 50, 100]; };
+            _c4 = function (a0) { return { "dib-editor": a0 }; };
+            _c5 = function () { return ["_dibBusy"]; };
+            _c6 = function () { return ["_dibNoRecords"]; };
+            importsRequired = [];
+            dibexSqlParamsPhpComponent = class dibexSqlParamsPhpComponent extends shared_1.GridComponent {
+                httpClient;
+                ref;
+                crudService;
+                sd;
+                cd;
+                view = { container: { id: 248, name: 'dibexSqlParamsPhp', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6070'] }, dropin: 'grid', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ['cc_id'], recordStatus: 'create', debug: false, debugItem: false };
+                gridMultiselect = false; //default: false
+                gridPersistSelection = false; //default: false
+                gridMasterSelectAllFirst = true; //default:true
+                gridShowDuplicatesInClipboard = false; //default:false
+                gridShowClipboardDefault = false; //default:false
+                gridRowClickChangesSelection = true; //default:true
+                gridHighlightLastClickedOnly = false; //default:false
+                gridClickedLastNullable = false; //default:false
+                selection = new shared_1.SelectionModel(this.gridMultiselect, []);
+                selectionDataSource = new table_1.MatTableDataSource(this.selection.selected);
+                page = { pageSize: 20, pageIndex: 1, };
+                columnsToDisplay = new shared_3.DibArray(['client_id', 'main_branch', 'client_contact', 'email', 'position',]);
+                allColumnsToDisplay = new shared_3.DibArray(['client_id', 'main_branch', 'client_contact', 'email', 'position',]);
+                columnHeaders = new shared_3.DibArrayList({ "1": new shared_3.DibArray([]) });
+                showSearchDefault = false;
+                showSearch = this.showSearchDefault;
+                constructor(injector, httpClient, ref, crudService, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.ref = ref;
+                    this.crudService = crudService;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list6063 = new shared_3.DibList("/peff/Crud/componentlist?containerName=dibexSqlParamsPhp&containerItemId=6063", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_3.DibContainerModel(this.injector, 'dibexSqlParamsPhp');
+                    this.containerName = 'dibexSqlParamsPhp'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 6063, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 6063 }, client_id: { itemId: 6066, type: 'text', fieldAlias: 'client_id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, email: { itemId: 6067, type: 'text', fieldAlias: 'email', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, client_contact: { itemId: 6068, type: 'text', fieldAlias: 'client_contact', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, position: { itemId: 6069, type: 'text', fieldAlias: 'position', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, main_branch: { itemId: 6071, type: 'text', fieldAlias: 'main_branch', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.modelItems.clientId.formControl.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.switchMap((value) => this.eventService.on(`clientData_${this.view.container.name}`).pipe(operators_1.take(1), operators_1.map((result) => { return value; })))).subscribe(value => { if (!!value && !!value.id == false)
+                        return; if (value !== '' && value != null) {
+                        this.actionService.handle(this.containerActionReference(), 'clientId', 'changed');
+                    } });
+                    this.model.$formGroup.addControl('client_id', this.model.modelItems.client_id.formControl);
+                    this.model.$formGroup.addControl('email', this.model.modelItems.email.formControl);
+                    this.model.$formGroup.addControl('client_contact', this.model.modelItems.client_contact.formControl);
+                    this.model.$formGroup.addControl('position', this.model.modelItems.position.formControl);
+                    this.model.$formGroup.addControl('main_branch', this.model.modelItems.main_branch.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "clientId", actionType: "changed", responseType: 'actions', submitUrl: "shared.action.reload-container?containerName=self", itemAlias: "clientId", waitForCompletion: false, containerName: "dibexSqlParamsPhp", handlers: [] }, this.clientData, { itemEventId: 'ie331-dib', itemId: '6063', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource6063 = this.lists.list6063.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange6063 = new Date().getTime();
+                    let previousUrlChange6063;
+                    let previousResponse6063;
+                    this.lists.list6063.items = rxjs_1.combineLatest([this.lists.list6063.updatedList$, itemsUpdateSource6063]).pipe(operators_1.tap(() => { this.lists.list6063.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange6063 - new Date().getTime()) / 1000;
+                        previousTimeChange6063 = new Date().getTime();
+                        previousUrlChange6063 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse6063 = response;
+                            this.lists.list6063.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list6063.items.subscribe(records => this.lists.list6063.lastItems = records);
+                    this.lists.list6063.multiSelected = [];
+                    this.lists.list6063.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list6063.updatedList$.next([]);
+                        self.lists.list6063.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list6063.refresh();
+                    }
+                    else {
+                        self.lists.list6063.searchForm.setValue('');
+                        self.lists.list6063.updatedList$.next(self.lists.list6063.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list6063.multiSelected);
+                    } };
+                    this.lists.list6063.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list6063.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list6063.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list6063.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list6063.multiSelected.push(value);
+                            }
+                        }
+                        lists.list6063.multiSelected = self.removeDuplicateIdsFromArray(lists.list6063.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.tableDataSource.data = [];
+                    this.resetPage();
+                    this.setupGridSearchAll();
+                    this.tableDataSource
+                        .connect().pipe(operators_1.tap(_ => { const selected = this.selection.selected; this.selection._emitChanges = false; this.selection.deselect(...this.selection.selected.filter(s => !!this.tableDataSource.data.find(d => this.compareRows(s, d)))); this.selection.select(...this.tableDataSource.data.filter(d => !!selected.find(s => this.compareRows(s, d)))); this.selection._emitChanges = true; })).subscribe();
+                    this.selection.changed.pipe().subscribe(c => {
+                        this.updateSelectionClientData(c);
+                        if (this.gridShowDuplicatesInClipboard)
+                            this.selectionDataSource.data = c.source.selected;
+                        else
+                            this.selectionDataSource.data = this.selectedDataNotInPage(c.source.selected);
+                    });
+                    this.columnHeaders.addArray('1', new shared_3.DibArray(['client_id', 'main_branch', 'client_contact', 'email', 'position']));
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list6063.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); this.setupService(); this.reloadContainer(); this.clientData.selected_self = null; this.updateSearchFromUrl(); this.eventService.on(`${this.view.container.name}selectRow`).pipe(operators_1.takeUntil(this.onDestroy)).subscribe((selectRecord) => { const column = selectRecord['column']; const value = selectRecord['value']; let found = false; this.tableDataSource.data.forEach(row => { if (row[column] == value) {
+                    found = true;
+                    this.rowSelect(row);
+                } }); }); }
+                rowClick(row, e) {
+                    if (!!e.srcElement.firstChild && !!e.srcElement.firstChild.attributes && !!e.srcElement.firstChild.attributes.type && e.srcElement.firstChild.attributes.type.value == 'checkbox') {
+                        return;
+                    }
+                    if (e.srcElement && ["button", "a", "mat-icon", "dib-icon"].includes(e.srcElement.tagName.toLocaleLowerCase())) {
+                        return;
+                    }
+                    this.rowSelect(row);
+                }
+                rowSelect(row) {
+                    if (this.gridRowClickChangesSelection) {
+                        this.selection.toggle(row);
+                    }
+                    if (this.gridClickedLastNullable && this.clickedLast && this.compareRows(row, this.clickedLast)) {
+                        this.clickedLast = null;
+                    }
+                    else {
+                        this.clickedLast = row;
+                    }
+                    let lastClickValue = {};
+                    if (this.clickedLast !== null) {
+                        Object.keys(this.model.modelItems).forEach(key => { if (!!this.model.modelItems[key].itemAlias == true) {
+                            lastClickValue[key] = this.clickedLast[key];
+                        } });
+                        this.clientData.clickedLast_self = lastClickValue;
+                    }
+                    else {
+                        this.clientData.clickedLast_self = null;
+                    }
+                    this.eventService.emit({ name: `clickedLast_dibexSqlParamsPhp`, value: this.clientData.clickedLast_self });
+                }
+                updateSelectionClientData(selectionChange) {
+                    const { selected } = selectionChange.source || {};
+                    const firstSelection = selected ? selected[0] : {};
+                    if (!selected[0]) {
+                        this.clientData.selected_self = null;
+                        this.eventService.emit({ name: `selected_dibexSqlParamsPhp`, value: this.clientData.selected_self });
+                        return;
+                    }
+                    let cdSelected = this.gridMultiselect ? selected.map(s => { let res = {}; this.view.primaryKeys.forEach((key) => { if (!!s[key]) {
+                        res[key] = s[key];
+                    } }); return res; }) : this.view.primaryKeys.reduce((res, key) => ({ ...res, [key]: firstSelection[key] }), {});
+                    if (Object.keys(cdSelected).length == 0) {
+                        cdSelected = selected;
+                    }
+                    this.clientData.selected_self = cdSelected;
+                    this.eventService.emit({ name: `selected_dibexSqlParamsPhp`, value: cdSelected });
+                }
+                ;
+                setupService() {
+                    this.sort.sortChange.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap((sort) => { this.page$.next(this.page); })).subscribe();
+                    this.page$.pipe(operators_1.tap(page => { this.page = page; this.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.tap(page => { this.clearClientDataSelection(); if (this.showSearch) {
+                        this.clientData.gridFilter_self = this.allClientData.gridFilter;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: this.clientData.gridFilter_self });
+                    }
+                    else {
+                        delete this.clientData.gridFilter_self;
+                        this.eventService.emit({ name: `gridFilter_${this.view.container.name}`, value: null });
+                    } }), operators_1.switchMap((page) => { const sort = this.sort.direction == '' ? [] : [{ "property": this.sort.active, "direction": this.sort.direction.toUpperCase() }]; return this.crudService.list(this.model.crudUrl, this.view.container.name, { page: { number: page.pageIndex + 1, limit: page.pageSize }, searchText: null, sort: sort, filter: this.filter, clientData: this.clientData, activeFilter: this.view.container.activeFilter }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` }))); }), operators_1.tap((response) => {
+                        this.busy = false;
+                        window.dispatchEvent(new Event('resize'));
+                        if (response.success) {
+                            this.tableDataSource.data = [];
+                            const data = response.records;
+                            if (!!data === true) {
+                                this.tableDataSource.data = data;
+                                this.page.length = Math.ceil(response.filtertotal / this.page.pageSize);
+                                this.page.records = response.filtertotal;
+                                this.page.totalRecords = response.total;
+                                this.page.fromRecord = this.page.pageIndex == 0 ? 1 : (this.page.pageIndex) * this.page.pageSize;
+                                this.page.toRecord = this.page.fromRecord == 1 ? this.page.fromRecord + this.tableDataSource.data.length - 1 : this.page.fromRecord + this.tableDataSource.data.length;
+                                if (this.page.toRecord > this.page.totalRecords) {
+                                    this.page.toRecord = this.page.totalRecords;
+                                    this.page.allRecords = true;
+                                }
+                            }
+                            this.handleSelectionOnPage();
+                            this.reloadSubcontainers();
+                            this.eventService.processDelayedEventQueue(this.view.container.name);
+                        }
+                    })).subscribe();
+                }
+                ;
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list6063.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                ;
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexSqlParamsPhp', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexSqlParamsPhp' });
+                    this.resetPage();
+                    this.page$.next(this.page);
+                }
+                ;
+                resetPage() {
+                    this.page = { number: 1, length: 0, pageSize: 20, pageIndex: 0, lastLoad: 1, totalRecords: 0, allRecords: false };
+                    this.page.allRecords = false;
+                    if (!this.gridPersistSelection) {
+                        this.selection.clear();
+                    }
+                    if (!!this.paginator) {
+                        this.paginator._intl.itemsPerPageLabel = '';
+                        this.paginator.pageSize = this.page.pageSize;
+                        this.paginator.firstPage();
+                    }
+                }
+                ;
+                static ɵfac = function dibexSqlParamsPhpComponent_Factory(t) { return new (t || dibexSqlParamsPhpComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i2.CrudService), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexSqlParamsPhpComponent, selectors: [["dibex-sql-params-php"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 66, vars: 40, consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6070", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexSqlParamsPhp", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6055", "dibComponent", "row", "dib-inject-content", "replace", 2, "padding", "5px 10px 0px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], [3, "dibPort"], ["mat-mini-fab", "", "color", "accent", "id", "ci6056", "dibComponent", "btnReload", "aria-label", "Reload Record(s)", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci6063", "dibComponent", "autocomplete", "dibListeners", "", "eventList", "  changed ", "actionId", "clientId", "item-alias", "clientId", "appearance", "standard", 2, "width", "300px !important", "display", "flex", "flex-direction", "column", "align-self", "stretch", 3, "containerPortId"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto6063trigger", "matAutocompleteTrigger", "input6063", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto6063", "matAutocomplete"], ["mode", "indeterminate", 4, "ngIf"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci6062", "dibComponent", "span", 2, "width", "150px !important", 3, "innerHtml"], ["mat-mini-fab", "", "color", "primary", "id", "ci6060", "dibComponent", "btnFilterOpen", "aria-label", "Display headers for filtering records", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/search.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci6058", "dibComponent", "btnFilterApply", "style", "  ", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["mat-mini-fab", "", "color", "primary", "id", "ci6059", "dibComponent", "btnFilterClear", "style", "  ", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click", 4, "ngIf"], ["id", "ci6057", "dibComponent", "spacer", 2, "flex", "1 1 0%"], ["class", "dib-grid-totals", "id", "ci6061", "dibComponent", "gridTotals", "style", "  display:flex; flex-direction: row;  flex-wrap: nowrap;  ", 4, "ngIf"], ["id", "ci6064", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["fill-height", "", "debounceTime", "300", 3, "additionalSpace", "footerElement"], ["gridScroll", ""], ["mat-table", "", "matSort", "", 1, "", 3, "dataSource"], ["matColumnDef", "_select"], ["mat-header-cell", "", "style", "width:80px", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "client_id"], ["mat-cell", "", "style", "padding: 2px; ", 4, "matCellDef"], ["mat-header-cell", "", "style", "padding:2px; text-align:left; vertical-align:top; ", 4, "matHeaderCellDef"], ["matColumnDef", "email"], ["matColumnDef", "client_contact"], ["matColumnDef", "position"], ["matColumnDef", "main_branch"], ["matColumnDef", "_dibBusy"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "_dibNoRecords"], ["mat-header-cell", "", "class", "dib-no-records-found", 4, "matHeaderCellDef"], [4, "ngFor", "ngForOf"], ["mat-header-row", "", "class", "dib-grid-loader", 3, "ngStyle", 4, "matHeaderRowDef"], ["mat-row", "", 3, "ngClass", "click", 4, "matRowDef", "matRowDefColumns"], [4, "ngIf"], ["footerdibexSqlParamsPhp", ""], ["_selectedTable", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], ["mode", "indeterminate"], [3, "ngClass", "value", "innerHtml"], ["mat-mini-fab", "", "color", "primary", "id", "ci6058", "dibComponent", "btnFilterApply", "aria-label", "Apply filter criteria specified in column headers", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci6059", "dibComponent", "btnFilterClear", "aria-label", "Show all records and clear filter criteria", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"], ["id", "ci6061", "dibComponent", "gridTotals", 1, "dib-grid-totals", 2, "display", "flex", "flex-direction", "row", "flex-wrap", "nowrap"], ["mat-header-cell", "", 2, "width", "80px"], ["color", "primary", 3, "checked", "indeterminate", "click"], ["mat-cell", ""], ["color", "primary", 3, "checked", "click", "change"], ["mat-cell", "", 2, "padding", "2px"], ["id", "ci6066", "dibComponent", "sqlText"], ["mat-header-cell", "", 2, "padding", "2px", "text-align", "left", "vertical-align", "top"], [1, "dibGridSearch", 2, "display", "flex", "flex-direction", "column"], ["mat-sort-header", "", 4, "ngIf"], ["mat-sort-header", "", "class", "dibGridSearchTitle", 4, "ngIf"], ["class", "dibGridSearchInput", "dib-edit", "", 3, "formGroup", 4, "ngIf"], ["mat-sort-header", ""], ["mat-sort-header", "", 1, "dibGridSearchTitle"], ["dib-edit", "", 1, "dibGridSearchInput", 3, "formGroup"], ["id", "ci6066", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "client_id", "name", "client_id", 3, "keydown.enter", "keydown.esc"], ["id", "ci6067", "dibComponent", "sqlText"], ["id", "ci6067", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "email", "name", "email", 3, "keydown.enter", "keydown.esc"], ["id", "ci6068", "dibComponent", "sqlText"], ["id", "ci6068", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "client_contact", "name", "client_contact", 3, "keydown.enter", "keydown.esc"], ["id", "ci6069", "dibComponent", "sqlText"], ["id", "ci6069", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "position", "name", "position", 3, "keydown.enter", "keydown.esc"], ["id", "ci6071", "dibComponent", "sqlText"], ["id", "ci6071", "dibComponent", "inputText"], ["matInput", "", "type", "text", "formControlName", "main_branch", "name", "main_branch", 3, "keydown.enter", "keydown.esc"], ["mat-header-cell", ""], ["mat-header-cell", "", 1, "dib-no-records-found"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-header-row", ""], ["mat-header-row", "", 1, "dib-grid-loader", 3, "ngStyle"], ["mat-row", "", 3, "ngClass", "click"], [3, "ngTemplateOutlet"], [1, "grid-footer"], ["class", "mat-body", "matTooltip", "Clear all", "position", "above", "color", "primary", 3, "checked", "click", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [2, "flex", "1 1 auto"], ["style", "background: none", 3, "length", "pageSize", "pageSizeOptions", "page", 4, "ngIf"], ["matTooltip", "Clear all", "position", "above", "color", "primary", 1, "mat-body", 3, "checked", "click"], ["mat-button", "", 3, "click"], [2, "background", "none", 3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], ["mat-table", "", 1, "", 2, "margin-top", "1rem", 3, "dataSource"], ["mat-cell", "", "style", "width:80px", 4, "matCellDef"], ["color", "primary", 3, "checked", "indeterminate", "change"], ["mat-cell", "", 2, "width", "80px"]], template: function dibexSqlParamsPhpComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0);
+                        i0.ɵɵlistener("ngSubmit", function dibexSqlParamsPhpComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(1, "div", 1)(2, "div", 2);
+                        i0.ɵɵelementContainer(3, 3);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(4, "div", 4);
+                        i0.ɵɵelementContainerStart(5, 5);
+                        i0.ɵɵelementStart(6, "button", 6);
+                        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_Template_button_click_6_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(7, "dib-icon", 7);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(8, "mat-form-field", 8)(9, "mat-label");
+                        i0.ɵɵtext(10, "Select Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(11, "input", 9, 10);
+                        i0.ɵɵtemplate(14, dibexSqlParamsPhpComponent_button_14_Template, 3, 0, "button", 11);
+                        i0.ɵɵelementStart(15, "mat-autocomplete", 12, 13);
+                        i0.ɵɵlistener("opened", function dibexSqlParamsPhpComponent_Template_mat_autocomplete_opened_15_listener() { return ctx.lists.list6063.refresh(); });
+                        i0.ɵɵtemplate(17, dibexSqlParamsPhpComponent_mat_progress_bar_17_Template, 1, 0, "mat-progress-bar", 14);
+                        i0.ɵɵtemplate(18, dibexSqlParamsPhpComponent_mat_option_18_Template, 1, 5, "mat-option", 15);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelement(19, "span", 16);
+                        i0.ɵɵpipe(20, "safeHtml");
+                        i0.ɵɵelementStart(21, "button", 17);
+                        i0.ɵɵlistener("click", function dibexSqlParamsPhpComponent_Template_button_click_21_listener() { return ctx.toggleSearch(); });
+                        i0.ɵɵelement(22, "dib-icon", 18);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(23, dibexSqlParamsPhpComponent_button_23_Template, 2, 4, "button", 19);
+                        i0.ɵɵtemplate(24, dibexSqlParamsPhpComponent_button_24_Template, 2, 4, "button", 20);
+                        i0.ɵɵelement(25, "span", 21);
+                        i0.ɵɵtemplate(26, dibexSqlParamsPhpComponent_div_26_Template, 5, 3, "div", 22);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(27, "mat-card", 23)(28, "mat-card-content", 24);
+                        i0.ɵɵelementContainerStart(29, 5);
+                        i0.ɵɵelementStart(30, "div", 25, 26)(32, "table", 27);
+                        i0.ɵɵelementContainerStart(33, 28);
+                        i0.ɵɵtemplate(34, dibexSqlParamsPhpComponent_th_34_Template, 2, 2, "th", 29);
+                        i0.ɵɵtemplate(35, dibexSqlParamsPhpComponent_td_35_Template, 2, 1, "td", 30);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(36, 31);
+                        i0.ɵɵtemplate(37, dibexSqlParamsPhpComponent_td_37_Template, 4, 2, "td", 32);
+                        i0.ɵɵtemplate(38, dibexSqlParamsPhpComponent_th_38_Template, 5, 3, "th", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(39, 34);
+                        i0.ɵɵtemplate(40, dibexSqlParamsPhpComponent_td_40_Template, 4, 2, "td", 32);
+                        i0.ɵɵtemplate(41, dibexSqlParamsPhpComponent_th_41_Template, 5, 3, "th", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(42, 35);
+                        i0.ɵɵtemplate(43, dibexSqlParamsPhpComponent_td_43_Template, 4, 2, "td", 32);
+                        i0.ɵɵtemplate(44, dibexSqlParamsPhpComponent_th_44_Template, 5, 3, "th", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(45, 36);
+                        i0.ɵɵtemplate(46, dibexSqlParamsPhpComponent_td_46_Template, 4, 2, "td", 32);
+                        i0.ɵɵtemplate(47, dibexSqlParamsPhpComponent_th_47_Template, 5, 3, "th", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(48, 37);
+                        i0.ɵɵtemplate(49, dibexSqlParamsPhpComponent_td_49_Template, 4, 2, "td", 32);
+                        i0.ɵɵtemplate(50, dibexSqlParamsPhpComponent_th_50_Template, 5, 3, "th", 33);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(51, 38);
+                        i0.ɵɵtemplate(52, dibexSqlParamsPhpComponent_th_52_Template, 2, 2, "th", 39);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementContainerStart(53, 40);
+                        i0.ɵɵtemplate(54, dibexSqlParamsPhpComponent_th_54_Template, 2, 2, "th", 41);
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵtemplate(55, dibexSqlParamsPhpComponent_ng_container_55_Template, 3, 3, "ng-container", 42);
+                        i0.ɵɵtemplate(56, dibexSqlParamsPhpComponent_tr_56_Template, 1, 3, "tr", 43);
+                        i0.ɵɵtemplate(57, dibexSqlParamsPhpComponent_tr_57_Template, 1, 3, "tr", 43);
+                        i0.ɵɵtemplate(58, dibexSqlParamsPhpComponent_tr_58_Template, 1, 3, "tr", 44);
+                        i0.ɵɵpipe(59, "async");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(60, dibexSqlParamsPhpComponent_60_Template, 1, 1, null, 45);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(61, "div", null, 46);
+                        i0.ɵɵtemplate(63, dibexSqlParamsPhpComponent_mat_toolbar_63_Template, 6, 3, "mat-toolbar", 45);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵtemplate(64, dibexSqlParamsPhpComponent_ng_template_64_Template, 25, 4, "ng-template", null, 47, i0.ɵɵtemplateRefExtractor);
+                    } if (rf & 2) {
+                        const _r3 = i0.ɵɵreference(16);
+                        const _r29 = i0.ɵɵreference(62);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(36, _c4, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6070");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6055");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Reload Record(s)")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matAutocomplete", _r3);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list6063.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list6063.lastItems);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(20, 32, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Display headers for filtering records")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.showSearch);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.page.fromRecord > -1);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6064");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("additionalSpace", 5)("footerElement", _r29);
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dataSource", ctx.tableDataSource);
+                        i0.ɵɵadvance(23);
+                        i0.ɵɵproperty("ngForOf", ctx.columnHeaders.getKeys());
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(38, _c5));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(39, _c6));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpipeBind1(59, 34, ctx.columnsToDisplay.items$));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.gridShowClipboardDefault);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.gridMultiselect || true);
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet, i3.NgStyle, i4.DefaultClassDirective, i4.DefaultStyleDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibIconComponent, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibListenersDirective, i2.DibFillHeightDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatButton, i8.MatIconButton, i8.MatMiniFabButton, i9.MatCheckbox, i10.MatFormField, i10.MatLabel, i10.MatSuffix, i11.MatIcon, i12.MatInput, i13.MatProgressBar, i14.MatToolbar, i14.MatToolbarRow, i15.MatTooltip, i16.MatCard, i16.MatCardContent, i17.MatTable, i17.MatHeaderCellDef, i17.MatHeaderRowDef, i17.MatColumnDef, i17.MatCellDef, i17.MatRowDef, i17.MatHeaderCell, i17.MatCell, i17.MatHeaderRow, i17.MatRow, i18.MatSort, i18.MatSortHeader, i19.MatPaginator, i3.AsyncPipe, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_2.EventHandler('reloaddibexSqlParamsPhp'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexSqlParamsPhpComponent.prototype, "reloadContainer", null);
+            exports_1("dibexSqlParamsPhpComponent", dibexSqlParamsPhpComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSqlParamsPhpComponent, [{
+                    type: core_2.Component,
+                    args: [{ selector: 'dibex-sql-params-php', template: `
+<form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6070 dibComponent=subcontainer   ><ng-container [dibPort]="'6070'" parentContainerName=dibexSqlParamsPhp  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  padding:5px 10px 0px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci6055 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'6055'" ><button   mat-mini-fab color=accent  id=ci6056 dibComponent=btnReload   style="  " aria-label="Reload Record(s)"  [matTooltip]="'Reload Record(s)'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><mat-form-field  id=ci6063 dibComponent=autocomplete  dibListeners eventList="  changed " [containerPortId]="containerActionReference()" actionId=clientId   style="  width:300px !important;   display:flex; flex-direction: column;  align-self: stretch;  "  item-alias=clientId   appearance=standard   ><mat-label>Select Client</mat-label><input #auto6063trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input6063  [matAutocomplete]="auto6063"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list6063, auto6063trigger); input6063.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto6063=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list6063).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list6063).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list6063.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><span  id=ci6062 dibComponent=span   style="  width:150px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml" ></span><button mat-mini-fab color=primary  id=ci6060 dibComponent=btnFilterOpen   style="  " aria-label="Display headers for filtering records"  [matTooltip]="'Display headers for filtering records'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="toggleSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/search.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci6058 dibComponent=btnFilterApply   style="  " aria-label="Apply filter criteria specified in column headers"  [matTooltip]="'Apply filter criteria specified in column headers'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="searchGrid()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/applyFilters.svg"></dib-icon></button><button mat-mini-fab color=primary  id=ci6059 dibComponent=btnFilterClear   style="  " aria-label="Show all records and clear filter criteria"  [matTooltip]="'Show all records and clear filter criteria'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   *ngIf=showSearch  (click)="clearSearch()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/cancelFilters.svg"></dib-icon></button><span  id=ci6057 dibComponent=spacer   style="  flex: 1 1 0%;  " ></span><div class=dib-grid-totals  id=ci6061 dibComponent=gridTotals   style="  display:flex; flex-direction: row;  flex-wrap: nowrap;  "  *ngIf="page.fromRecord > -1" > PHP Parameters: {{page.fromRecord}}<span *ngIf='page.fromRecord>0'>&nbsp;to&nbsp;{{page.toRecord}}&nbsp;of&nbsp;{{page.records}}</span>&nbsp;<span *ngIf='page.totalRecords!=page.records'>(Total: {{page.totalRecords}})</span></div></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci6064 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'6064'" ><!-- <div dib-scroll-pager scrollOffset=50 (nextPage)="nextPage()"> --><div #gridScroll fill-height debounceTime=300  [additionalSpace]=5 [footerElement]="footerdibexSqlParamsPhp" ><table mat-table [dataSource]="tableDataSource" matSort class=""><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (click)="$event.preventDefault();masterToggle()"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=client_id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6066 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_id_display_value"> {{row.client_id_display_value}}</span><span *ngIf="!!row && !row.client_id_display_value"> {{row.client_id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6066 dibComponent=inputText   style="  " ><mat-label >Client</mat-label><input   matInput  type=text   formControlName=client_id   name=client_id   [attr.aria-label]="'Client'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=email  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6067 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.email_display_value"> {{row.email_display_value}}</span><span *ngIf="!!row && !row.email_display_value"> {{row.email}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Email  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Email</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6067 dibComponent=inputText   style="  " ><mat-label >Email</mat-label><input   matInput  type=text   formControlName=email   name=email   [attr.aria-label]="'Email'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=client_contact  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6068 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_contact_display_value"> {{row.client_contact_display_value}}</span><span *ngIf="!!row && !row.client_contact_display_value"> {{row.client_contact}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client Contact  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client Contact</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6068 dibComponent=inputText   style="  " ><mat-label >Client Contact</mat-label><input   matInput  type=text   formControlName=client_contact   name=client_contact   [attr.aria-label]="'Client Contact'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=position  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6069 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.position_display_value"> {{row.position_display_value}}</span><span *ngIf="!!row && !row.position_display_value"> {{row.position}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Position  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Position</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6069 dibComponent=inputText   style="  " ><mat-label >Position</mat-label><input   matInput  type=text   formControlName=position   name=position   [attr.aria-label]="'Position'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=main_branch  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6071 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.main_branch_display_value"> {{row.main_branch_display_value}}</span><span *ngIf="!!row && !row.main_branch_display_value"> {{row.main_branch}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Main Branch  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Main Branch</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6071 dibComponent=inputText   style="  " ><mat-label >Main Branch</mat-label><input   matInput  type=text   formControlName=main_branch   name=main_branch   [attr.aria-label]="'Main Branch'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><ng-container *ngFor="let column of columnHeaders.getKeys()"><tr mat-header-row *matHeaderRowDef="(columnHeaders.getArray(column).items$ | async);"></tr></ng-container><tr mat-header-row [ngStyle]="{visibility : busy? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibBusy']"></tr><tr mat-header-row [ngStyle]="{visibility : tableDataSource.data.length == 0? 'visible' : 'hidden'}" class=dib-grid-loader  *matHeaderRowDef="['_dibNoRecords']"></tr><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table><ng-template [ngTemplateOutlet]="_selectedTable" *ngIf=gridShowClipboardDefault ></ng-template></div><div #footerdibexSqlParamsPhp><mat-toolbar *ngIf="gridMultiselect || true"><mat-toolbar-row class = "grid-footer"><mat-checkbox  class = "mat-body"  matTooltip = "Clear all"  position = "above"  *ngIf=numberOfSelectedItems    color=primary   (click)="$event.preventDefault();clearAll()"  [checked]="true"  > {{numberOfSelectedItems + " "}}item{{numberOfSelectedItems>1?"s ":" "}}selected  </mat-checkbox><button  *ngIf="selectedDataNotInPage().length>0"  mat-button  (click)="gridShowClipboardDefault = !gridShowClipboardDefault; gridShowClipboardDefault&&scrollToBottom()"  ><mat-icon *ngIf="!gridShowClipboardDefault">visibility</mat-icon><mat-icon *ngIf=gridShowClipboardDefault >visibility_off</mat-icon> {{gridShowClipboardDefault?"hide":"show"}}</button><span style ="flex: 1 1 auto"></span><mat-paginator *ngIf=true  #paginator [length]="page.totalRecords" (page)="changePage($event)" style = "background: none"  [pageSize]="page.pageSize"  [pageSizeOptions]="[10, 20, 50, 100]" ></mat-paginator></mat-toolbar-row></mat-toolbar></div></ng-container></mat-card-content></mat-card></div></form><ng-template #_selectedTable ><table style ="margin-top:1rem" mat-table [dataSource]="selectionDataSource" class=""><ng-container matColumnDef=client_id  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6066 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_id_display_value"> {{row.client_id_display_value}}</span><span *ngIf="!!row && !row.client_id_display_value"> {{row.client_id}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6066 dibComponent=inputText   style="  " ><mat-label >Client</mat-label><input   matInput  type=text   formControlName=client_id   name=client_id   [attr.aria-label]="'Client'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=email  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6067 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.email_display_value"> {{row.email_display_value}}</span><span *ngIf="!!row && !row.email_display_value"> {{row.email}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Email  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Email</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6067 dibComponent=inputText   style="  " ><mat-label >Email</mat-label><input   matInput  type=text   formControlName=email   name=email   [attr.aria-label]="'Email'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=client_contact  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6068 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.client_contact_display_value"> {{row.client_contact_display_value}}</span><span *ngIf="!!row && !row.client_contact_display_value"> {{row.client_contact}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Client Contact  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Client Contact</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6068 dibComponent=inputText   style="  " ><mat-label >Client Contact</mat-label><input   matInput  type=text   formControlName=client_contact   name=client_contact   [attr.aria-label]="'Client Contact'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=position  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6069 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.position_display_value"> {{row.position_display_value}}</span><span *ngIf="!!row && !row.position_display_value"> {{row.position}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Position  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Position</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6069 dibComponent=inputText   style="  " ><mat-label >Position</mat-label><input   matInput  type=text   formControlName=position   name=position   [attr.aria-label]="'Position'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=main_branch  ><td mat-cell *matCellDef="let row;let rowIndex = index;"  style="padding: 2px; " ><div  id=ci6071 dibComponent=sqlText   style="  " ><span *ngIf="!!row && !!row.main_branch_display_value"> {{row.main_branch_display_value}}</span><span *ngIf="!!row && !row.main_branch_display_value"> {{row.main_branch}}</span></div></td><th mat-header-cell *matHeaderCellDef   style="padding:2px; text-align:left; vertical-align:top; " ><div style="display:flex; flex-direction:column; " class=dibGridSearch ><div *ngIf="!showSearch" mat-sort-header> Main Branch  </div><div mat-sort-header class=dibGridSearchTitle  *ngIf=showSearch  >Main Branch</div><div class=dibGridSearchInput  *ngIf=showSearch  dib-edit [formGroup]="model.$formGroup"><mat-form-field id=ci6071 dibComponent=inputText   style="  " ><mat-label >Main Branch</mat-label><input   matInput  type=text   formControlName=main_branch   name=main_branch   [attr.aria-label]="'Main Branch'"  (keydown.enter)='searchGrid(false)' (keydown.esc)='clearSearch()' ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></div></div></th></ng-container><ng-container matColumnDef=_select ><th mat-header-cell *matHeaderCellDef style = "width:80px"><mat-checkbox  color=primary   (change)="$event ? masterToggle($event) : null"  [checked]="masterIsChecked"  [indeterminate]="masterIsIndeterminate"  ></mat-checkbox></th><td mat-cell *matCellDef="let row" style = "width:80px"><mat-checkbox  color=primary   (click)="$event.stopPropagation()"  (change)="$event ? selection.toggle(row) : null"  [checked]="selection.isSelected(row)"  ></mat-checkbox></td></ng-container><ng-container matColumnDef=_dibBusy ><th mat-header-cell *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar></th></ng-container><ng-container matColumnDef=_dibNoRecords ><th mat-header-cell class=dib-no-records-found  *matHeaderCellDef [attr.colspan]="columnsToDisplay.get().length"><span *ngIf="!busy && tableDataSource.data.length == 0">{{translate('global.norecordsfound','No Records Found')}}</span></th></ng-container><tr mat-row [ngClass]="{'dib-grid-selected': isHighlighted(row)}" *matRowDef="let row; columns: (columnsToDisplay.items$ | async)" (click)="rowClick(row, $event)"></tr></table></ng-template>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ChangeDetectorRef }, { type: i2.CrudService }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, card_1.MatCardModule];
+            dibexSqlParamsPhpModule = class dibexSqlParamsPhpModule {
+                static entry = dibexSqlParamsPhpComponent;
+                static ɵfac = function dibexSqlParamsPhpModule_Factory(t) { return new (t || dibexSqlParamsPhpModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexSqlParamsPhpModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], imports: [common_1.CommonModule, shared_5.SharedModule, containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] });
+            };
+            exports_1("default", dibexSqlParamsPhpModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexSqlParamsPhpModule, [{
+                    type: core_4.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_5.SharedModule, ...containerModules, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule], providers: [{ provide: core_3.DateAdapter, useClass: shared_6.DateFnsDateAdapter, deps: [core_3.MAT_DATE_LOCALE] }, { provide: core_3.MAT_DATE_FORMATS, useValue: shared_6.DATEPICKER_FORMATS }], declarations: [dibexSqlParamsPhpComponent], exports: [] }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexSqlParamsPhpModule, { declarations: [dibexSqlParamsPhpComponent], imports: [common_1.CommonModule, shared_5.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule, card_1.MatCardModule, table_2.MatTableModule, sort_1.MatSortModule, paginator_1.MatPaginatorModule] }); })();
+        }
+    };
+});

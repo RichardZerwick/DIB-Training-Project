@@ -1,0 +1,380 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/slider", "@ngbracket/ngx-layout/extended", "@tinymce/tinymce-angular", "@angular/material/form-field", "@angular/material/input", "@angular/cdk/text-field", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, slider_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, _c0, _c1, _c2, importsRequired, dibexComponentsInputsComponent, containerModules, fullDateTimeOptions, dibexComponentsInputsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexComponentsInputsComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 47);
+    } }
+    function dibexComponentsInputsComponent_mat_error_57_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a valid email address");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i11 = card_1_1;
+            },
+            function (slider_1_1) {
+                slider_1 = slider_1_1;
+                i12 = slider_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            _c1 = "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink | image media | code";
+            _c2 = function () { return { plugins: "lists link image table code help wordcount", toolbar: _c1, selector: "#dibeditor7067", convert_urls: false }; };
+            importsRequired = [];
+            dibexComponentsInputsComponent = class dibexComponentsInputsComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 263, name: 'dibexComponentsInputs', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6319'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexComponentsInputs');
+                    this.containerName = 'dibexComponentsInputs'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { inputEmail: { itemId: 6321, type: 'text', fieldAlias: 'inputEmail', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.email], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'email', changeUrl: false }, inputColor: { itemId: 6322, type: 'text', fieldAlias: 'inputColor', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputNumber: { itemId: 6323, type: 'number', fieldAlias: 'inputNumber', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, inputTelPattern: { itemId: 6324, type: 'text', fieldAlias: 'inputTelPattern', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputText: { itemId: 6325, type: 'text', fieldAlias: 'inputText', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTextArea: { itemId: 6326, type: 'text', fieldAlias: 'inputTextArea', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'multilinetext', changeUrl: false }, inputUrl: { itemId: 6327, type: 'text', fieldAlias: 'inputUrl', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'url', changeUrl: false }, slider: { itemId: 6878, type: 'text', fieldAlias: 'slider', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'integer', changeUrl: false }, htmlEditor: { itemId: 7067, type: 'text', fieldAlias: 'htmlEditor', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'html', changeUrl: false }, password: { itemId: 7157, type: 'text', fieldAlias: 'password', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTextWithHint: { itemId: 7162, type: 'text', fieldAlias: 'inputTextWithHint', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTextWithPlaceholder: { itemId: 7163, type: 'text', fieldAlias: 'inputTextWithPlaceholder', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, inputTel: { itemId: 7170, type: 'text', fieldAlias: 'inputTel', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, };
+                    this.model.$formGroup.addControl('inputEmail', this.model.modelItems.inputEmail.formControl);
+                    this.model.$formGroup.addControl('inputColor', this.model.modelItems.inputColor.formControl);
+                    this.model.$formGroup.addControl('inputNumber', this.model.modelItems.inputNumber.formControl);
+                    this.model.$formGroup.addControl('inputTelPattern', this.model.modelItems.inputTelPattern.formControl);
+                    this.model.$formGroup.addControl('inputText', this.model.modelItems.inputText.formControl);
+                    this.model.$formGroup.addControl('inputTextArea', this.model.modelItems.inputTextArea.formControl);
+                    this.model.$formGroup.addControl('inputUrl', this.model.modelItems.inputUrl.formControl);
+                    this.model.$formGroup.addControl('slider', this.model.modelItems.slider.formControl);
+                    this.model.$formGroup.addControl('htmlEditor', this.model.modelItems.htmlEditor.formControl);
+                    this.model.$formGroup.addControl('password', this.model.modelItems.password.formControl);
+                    this.model.$formGroup.addControl('inputTextWithHint', this.model.modelItems.inputTextWithHint.formControl);
+                    this.model.$formGroup.addControl('inputTextWithPlaceholder', this.model.modelItems.inputTextWithPlaceholder.formControl);
+                    this.model.$formGroup.addControl('inputTel', this.model.modelItems.inputTel.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('span', `<b>slider:</b>`);
+                    this.setInnerHtml('span1', `<b>rangeSlider:</b>`);
+                    this.setInnerHtml('span', `<b>slider:</b>`);
+                    this.setInnerHtml('span1', `<b>rangeSlider:</b>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexComponentsInputs', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexComponentsInputs' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexComponentsInputsComponent_Factory(t) { return new (t || dibexComponentsInputsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexComponentsInputsComponent, selectors: [["dibex-components-inputs"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 118, vars: 29, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6319", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexComponentsInputs", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6320", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "500px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], [3, "dibPort"], ["id", "ci6325", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputText", "name", "inputText"], ["id", "ci7162", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "inputTextWithHint", "name", "inputTextWithHint"], ["id", "ci7163", "dibComponent", "inputText", "appearance", "standard"], ["placeholder", "123-45-678", "matInput", "", "type", "text", "formControlName", "inputTextWithPlaceholder", "name", "inputTextWithPlaceholder"], ["color", "accent", "id", "ci6323", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "inputNumber", "name", "inputNumber"], ["id", "ci6322", "dibComponent", "inputColor", "appearance", "standard"], ["matInput", "", "type", "color", "formControlName", "inputColor", "name", "inputColor"], ["id", "ci7165", "dibComponent", "comment"], [1, "dib-comment"], ["href", "/nav/dibexValidationClientSide"], ["target", "_blank", "href", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email#validation"], ["id", "ci6321", "dibComponent", "inputEmail", "appearance", "standard"], ["matInput", "", "type", "email", "formControlName", "inputEmail", "name", "inputEmail"], [4, "ngIf"], ["id", "ci7164", "dibComponent", "comment"], ["id", "ci7170", "dibComponent", "inputTel", "appearance", "standard"], ["matInput", "", "type", "tel", "formControlName", "inputTel", "name", "inputTel"], ["id", "ci6324", "dibComponent", "inputTel", "appearance", "standard"], ["pattern", "[0-9]{3}-[0-9]{3}-[0-9]{4}", "placeholder", "Format: 123-456-7890", "matInput", "", "type", "tel", "formControlName", "inputTelPattern", "name", "inputTelPattern"], ["id", "ci6327", "dibComponent", "inputUrl", "appearance", "standard"], ["matInput", "", "type", "url", "formControlName", "inputUrl", "name", "inputUrl"], ["id", "ci6881", "dibComponent", "comment"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "3", "cdkAutosizeMaxRows", "10", "id", "ci6326", "dibComponent", "inputTextArea", "appearance", "standard"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "5", "cdkAutosizeMaxRows", "10", "matInput", "", "formControlName", "inputTextArea", "name", "inputTextArea"], ["id", "ci7156", "dibComponent", "comment"], ["id", "ci7157", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "password", "formControlName", "password", "name", "password"], ["id", "ci6879", "dibComponent", "span", 3, "innerHtml"], ["thumbLabel", "", "min", "1", "max", "9", "step", "0.5", "value", "1.5", "discrete", "", "id", "ci6878", "dibComponent", "slider", "formControlName", "slider", "name", "slider", "aria-label", "slider"], ["matSliderThumb", ""], ["id", "ci6880", "dibComponent", "span", 3, "innerHtml"], ["id", "ci7349", "dibComponent", "spanInterpolation"], ["id", "ci7066", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "500px"], ["id", "ci7068", "dibComponent", "comment"], ["id", "ci7067", "dibComponent", "htmlEditorTinyMce"], ["id", "dibeditor7067", "formControlName", "htmlEditor", "name", "htmlEditor", "aria-label", "htmlEditor", 3, "init"], ["mode", "indeterminate"]], template: function dibexComponentsInputsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexComponentsInputsComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexComponentsInputsComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-header")(7, "mat-card-title");
+                        i0.ɵɵtext(8, "Components");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(10, 7);
+                        i0.ɵɵelementStart(11, "mat-form-field", 8)(12, "mat-label");
+                        i0.ɵɵtext(13, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(14, "input", 9);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(15, "mat-form-field", 10)(16, "mat-label");
+                        i0.ɵɵtext(17, "inputText with Hint");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(18, "input", 11);
+                        i0.ɵɵelementStart(19, "mat-hint");
+                        i0.ɵɵtext(20, "Enter your favorite planet");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(21, "mat-form-field", 12)(22, "mat-label");
+                        i0.ɵɵtext(23, "inputText with Placeholder (use attributes2 on Pg2)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(24, "input", 13);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(25, "mat-form-field", 14)(26, "mat-label");
+                        i0.ɵɵtext(27, "inputNumber with color=\"accent\"");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(28, "input", 15);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(29, "mat-form-field", 16)(30, "mat-label");
+                        i0.ɵɵtext(31, "inputColor");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(32, "input", 17);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(33, "span", 18)(34, "div", 19)(35, "b");
+                        i0.ɵɵtext(36, "inputEmail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(37, " uses a built-in browser-configured regex to do validation.");
+                        i0.ɵɵelement(38, "br");
+                        i0.ɵɵtext(39, "The ");
+                        i0.ɵɵelementStart(40, "b");
+                        i0.ɵɵtext(41, "Client Validation Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(42, "-field is by default set to email to enable a useful validation message.");
+                        i0.ɵɵelement(43, "br");
+                        i0.ɵɵtext(44, "See ");
+                        i0.ɵɵelementStart(45, "a", 20);
+                        i0.ɵɵtext(46, "Client-side Validation");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(47, " for more about client-side validation.");
+                        i0.ɵɵelement(48, "br");
+                        i0.ɵɵtext(49, "Also see ");
+                        i0.ɵɵelementStart(50, "a", 21);
+                        i0.ɵɵtext(51, "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email#validation");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(52, ". ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(53, "mat-form-field", 22)(54, "mat-label");
+                        i0.ɵɵtext(55, "inputEmail");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(56, "input", 23);
+                        i0.ɵɵtemplate(57, dibexComponentsInputsComponent_mat_error_57_Template, 2, 0, "mat-error", 24);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(58, "span", 25)(59, "div", 19)(60, "b");
+                        i0.ɵɵtext(61, "inputTel");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(62, " is functionaly the same as ");
+                        i0.ɵɵelementStart(63, "b");
+                        i0.ɵɵtext(64, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(65, " since the possible syntax varies greatly.");
+                        i0.ɵɵelement(66, "br");
+                        i0.ɵɵtext(67, "Mobile devices may display a more convenient input keypad though. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(68, "mat-form-field", 26)(69, "mat-label");
+                        i0.ɵɵtext(70, "inputTel");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(71, "input", 27);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(72, "mat-form-field", 28)(73, "mat-label");
+                        i0.ɵɵtext(74, "inputTel with Pattern and Placeholder");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(75, "input", 29);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(76, "mat-form-field", 30)(77, "mat-label");
+                        i0.ɵɵtext(78, "inputUrl");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(79, "input", 31);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(80, "span", 32)(81, "div", 19)(82, "b");
+                        i0.ɵɵtext(83, "inputTextArea attributes:");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(84, "br");
+                        i0.ɵɵtext(85, "cdkTextareaAutosize cdkAutosizeMinRows=5 cdkAutosizeMaxRows=10 ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(86, "mat-form-field", 33)(87, "mat-label");
+                        i0.ɵɵtext(88, "inputTextArea");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(89, "textarea", 34);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(90, "span", 35)(91, "div", 19);
+                        i0.ɵɵtext(92, " Content Type on Pg2 in the Designer is set to 'password': ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(93, "mat-form-field", 36)(94, "mat-label");
+                        i0.ɵɵtext(95, "Password");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(96, "input", 37);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(97, "span", 38);
+                        i0.ɵɵpipe(98, "safeHtml");
+                        i0.ɵɵelementStart(99, "mat-slider", 39);
+                        i0.ɵɵelement(100, "input", 40);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(101, "span", 41);
+                        i0.ɵɵpipe(102, "safeHtml");
+                        i0.ɵɵelementStart(103, "span", 42);
+                        i0.ɵɵtext(104);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(105, "mat-card", 43)(106, "mat-card-header")(107, "mat-card-title");
+                        i0.ɵɵtext(108, "htmlEditor");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(109, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(110, 7);
+                        i0.ɵɵelementStart(111, "span", 44)(112, "div", 19);
+                        i0.ɵɵtext(113, " Note, the HTML Editor requires a API key from TinyMCE (set configs via Item Settings).");
+                        i0.ɵɵelement(114, "br");
+                        i0.ɵɵtext(115, "Once registered, there is a generous free usage limit. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(116, "div", 45);
+                        i0.ɵɵelement(117, "editor", 46);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(26, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6319");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "6320");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputText with Hint");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "inputText with Placeholder (use attributes2 on Pg2)");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputNumber with color=\"accent\"");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputColor");
+                        i0.ɵɵadvance(24);
+                        i0.ɵɵattribute("aria-label", "inputEmail");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("inputEmail", "email", ctx.model.$formGroup));
+                        i0.ɵɵadvance(14);
+                        i0.ɵɵattribute("aria-label", "inputTel");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputTel with Pattern and Placeholder");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵattribute("aria-label", "inputUrl");
+                        i0.ɵɵadvance(10);
+                        i0.ɵɵattribute("aria-label", "inputTextArea");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵattribute("aria-label", "Password");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(98, 22, ctx.getHtml("span")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(102, 24, ctx.getHtml("span1")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵtextInterpolate(ctx.getValue("rangeSlider"));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7066");
+                        i0.ɵɵadvance(7);
+                        i0.ɵɵproperty("init", i0.ɵɵpureFunction0(28, _c2));
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.EditorComponent, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NumberValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.PatternValidator, i6.FormGroupDirective, i6.FormControlName, i2.DibPortDirective, i2.DibRemoveFocusDirective, i7.MatFormField, i7.MatLabel, i7.MatHint, i7.MatError, i8.MatInput, i9.CdkTextareaAutosize, i10.MatProgressBar, i11.MatCard, i11.MatCardContent, i11.MatCardHeader, i11.MatCardTitle, i12.MatSlider, i12.MatSliderThumb, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexComponentsInputs'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexComponentsInputsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexComponentsInputsComponent", dibexComponentsInputsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsInputsComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-components-inputs', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6319 dibComponent=subcontainer   ><ng-container [dibPort]="'6319'" parentContainerName=dibexComponentsInputs  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  max-width: 500px" id=ci6320 dibComponent=card  ><mat-card-header ><mat-card-title >Components</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'6320'" ><mat-form-field id=ci6325 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText</mat-label><input   matInput  type=text   formControlName=inputText   name=inputText   [attr.aria-label]="'inputText'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci7162 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText with Hint</mat-label><input   matInput  type=text   formControlName=inputTextWithHint   name=inputTextWithHint   [attr.aria-label]="'inputText with Hint'" ><mat-hint>Enter your favorite planet</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field id=ci7163 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >inputText with Placeholder (use attributes2 on Pg2)</mat-label><input placeholder=123-45-678    matInput  type=text   formControlName=inputTextWithPlaceholder   name=inputTextWithPlaceholder   [attr.aria-label]="'inputText with Placeholder (use attributes2 on Pg2)'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field   color=accent  id=ci6323 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >inputNumber with color=&quot;accent&quot;</mat-label><input   matInput  type=number   formControlName=inputNumber   name=inputNumber   [attr.aria-label]="'inputNumber with color=&quot;accent&quot;'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6322 dibComponent=inputColor   style="  "  appearance=standard  ><mat-label >inputColor</mat-label><input   matInput   type=color   formControlName=inputColor   name=inputColor   [attr.aria-label]="'inputColor'" ></mat-form-field><span  id=ci7165 dibComponent=comment   style="  " ><div class=dib-comment ><b>inputEmail</b> uses a built-in browser-configured regex to do validation.<br>The <b>Client Validation Type</b>-field is by default set to email to enable a useful validation message.<br>See <a href='/nav/dibexValidationClientSide'>Client-side Validation</a> for more about client-side validation.<br>Also see <a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email#validation'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email#validation</a>.  </div></span><mat-form-field  id=ci6321 dibComponent=inputEmail   style="  "  appearance=standard  ><mat-label >inputEmail</mat-label><input   matInput  type=email   formControlName=inputEmail   name=inputEmail   [attr.aria-label]="'inputEmail'" ><mat-error *ngIf="hasError('inputEmail','email',model.$formGroup)">Please enter a valid email address</mat-error><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7164 dibComponent=comment   style="  " ><div class=dib-comment ><b>inputTel</b> is functionaly the same as <b>inputText</b> since the possible syntax varies greatly.<br>Mobile devices may display a more convenient input keypad though.  </div></span><mat-form-field  id=ci7170 dibComponent=inputTel   style="  "  appearance=standard  ><mat-label >inputTel</mat-label><input   matInput  type=tel   formControlName=inputTel   name=inputTel   [attr.aria-label]="'inputTel'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6324 dibComponent=inputTel   style="  "  appearance=standard  ><mat-label >inputTel with Pattern and Placeholder</mat-label><input pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"   matInput  type=tel   formControlName=inputTelPattern   name=inputTelPattern   [attr.aria-label]="'inputTel with Pattern and Placeholder'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6327 dibComponent=inputUrl   style="  "  appearance=standard  ><mat-label >inputUrl</mat-label><input   matInput  type=url   formControlName=inputUrl   name=inputUrl   [attr.aria-label]="'inputUrl'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci6881 dibComponent=comment   style="  " ><div class=dib-comment ><b>inputTextArea attributes:</b><br>cdkTextareaAutosize cdkAutosizeMinRows=5  cdkAutosizeMaxRows=10   </div></span><mat-form-field   cdkTextareaAutosize cdkAutosizeMinRows=3  cdkAutosizeMaxRows=10  id=ci6326 dibComponent=inputTextArea   style="  "  appearance=standard   ><mat-label >inputTextArea</mat-label><textarea cdkTextareaAutosize cdkAutosizeMinRows=5  cdkAutosizeMaxRows=10    matInput  formControlName=inputTextArea   name=inputTextArea   [attr.aria-label]="'inputTextArea'" ></textarea><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7156 dibComponent=comment   style="  " ><div class=dib-comment > Content Type on Pg2 in the Designer is set to 'password':  </div></span><mat-form-field id=ci7157 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Password</mat-label><input   matInput  type=password   formControlName=password   name=password   [attr.aria-label]="'Password'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci6879 dibComponent=span   style="  "  [innerHtml]="getHtml('span') | safeHtml" ></span><mat-slider   thumbLabel min=1  max=9  step="0.5" value="1.5" discrete id=ci6878 dibComponent=slider   style="  "  formControlName=slider   name=slider   aria-label=slider  ><input matSliderThumb></mat-slider><span  id=ci6880 dibComponent=span   style="  "  [innerHtml]="getHtml('span1') | safeHtml" ></span><span  id=ci7349 dibComponent=spanInterpolation   style="  " >{{getValue('rangeSlider')}}</span></ng-container></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  max-width: 500px" id=ci7066 dibComponent=card  ><mat-card-header ><mat-card-title >htmlEditor</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'7066'" ><span  id=ci7068 dibComponent=comment   style="  " ><div class=dib-comment > Note, the HTML Editor requires a API key from TinyMCE (set configs via Item Settings).<br>Once registered, there is a generous free usage limit.  </div></span><div  id=ci7067 dibComponent=htmlEditorTinyMce   style="  " ><editor id=dibeditor7067   formControlName=htmlEditor   name=htmlEditor   aria-label=htmlEditor   [init]="{  plugins: 'lists link image table code help wordcount',  toolbar: 'undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink | image media | code',  selector: '#dibeditor7067',   convert_urls: false  }"></editor><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, slider_1.MatSliderModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexComponentsInputsModule = class dibexComponentsInputsModule {
+                static entry = dibexComponentsInputsComponent;
+                static ɵfac = function dibexComponentsInputsModule_Factory(t) { return new (t || dibexComponentsInputsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexComponentsInputsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexComponentsInputsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexComponentsInputsModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexComponentsInputsComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexComponentsInputsModule, { declarations: [dibexComponentsInputsComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, slider_1.MatSliderModule] }); })();
+        }
+    };
+});

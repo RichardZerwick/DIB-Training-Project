@@ -1,0 +1,197 @@
+<html>
+<head>
+
+    <!-- *** NOTE: Security measure: always specify UTF-8 encoding, which corresponds with the UTF-8 header which Eleutheria sends to the client -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>DIB Charts</title> 
+    <meta charset="utf-8" />
+
+    ~$// Load iframe Js tools, and interface with Dropinbase~
+    <script type="text/javascript" src="/files/dropins/setNgxMaterial/dibAdmin/js/template/TemplateActions.js"></script>
+    
+    ~$// Load tools required to do Ajax calls and messages~
+    <script type="text/javascript" src="/files/dropins/dibAdmin/js/dibTools.js"></script>
+
+    ~$// Load Dynamic Forms class~
+    <script type="text/javascript" src="/files/dropins/dibDynamicUI/js/dibDynamicForms.js"></script>
+
+    ~$// Stylesheets~
+    <style type="text/css">
+        body {
+            font-size: 13px;
+            font-family: helvetica,arial,verdana,sans-serif;
+            color: #333;
+            background-color: #f2f3f4;
+        }
+
+		.btn {
+			background-color: #008CBA;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border: none;
+            color: white;
+            padding: 3px 7px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px; 
+            cursor: pointer;
+		}
+        
+        .tbClass {
+            min-width:50%;
+            border-collapse: collapse;
+        }
+
+        .tbClass th {
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            font-family: Roboto,"Helvetica Neue",sans-serif;
+            color: white;
+            background: #f69d4e;
+            padding: 4 9;
+        }
+
+        .tbClass tr {
+            font-size: 14px;
+            background: #cacaca;
+            font-family: helvetica,arial,verdana,sans-serif;
+            color: #878a90;
+        } 
+
+        .tbClass tr:nth-child(even) {
+            background-color: #e2e2e2;
+        }
+
+        .tbClass td {
+            padding: 3 7;
+            border: 1px solid white;
+        }
+
+        .tbClass tr:hover {background-color: #f5f5f5;}
+
+        .card {
+            display:block;
+            
+            border: 1px solid #dee2e6!important;
+            
+            border-radius: 0.3rem!important;
+            -moz-border-radius: 0.3rem!important;
+            -webkit-border-radius: 0.3rem!important;
+            padding: 10px;
+            margin-top:15px;
+            background-color: #fff!important;
+            
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
+        .cardCaptionClass {
+            color: rgb(33, 33, 136);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 35px;
+        }
+
+        .label {
+            font-weight: 700;
+            min-width: 80;
+            display: inline-block;
+        }
+
+        .inputText {
+            margin: 5px;
+            min-width: 200px;
+        }
+
+        .inputDate {
+            margin: 5px;
+            min-width: 200px;
+        }
+
+        .checkbox {
+            margin: 5px;
+        }
+
+    </style>
+
+    <script>
+    
+    var loadUrl = '/dropins/dibExamples/DynamicHtmlForms/getData';
+    var saveUrl = '/dropins/dibExamples/DynamicHtmlForms/save';
+
+    var validated = false; // does all data satisfy validation rules
+    var dynamicForms = null;
+
+    function loadData() {
+        dynamicForms = new dibDynamicForms(loadUrl, saveUrl);
+
+        var params = {
+            containerName: 'dibexDynamicHtmlForms',
+            clientData: {
+                fspId: 123,
+                recordId: 456
+            }
+        }
+
+        dynamicForms.load(params);
+
+    }
+
+    function saveData() {
+        var params = {
+            containerName: 'dibexDynamicHtmlForms',
+            clientData: {
+                fspId: 123,
+                recordId: 456
+            }
+        }
+
+        dynamicForms.save(params);
+    }
+
+    function validateInput() {
+        var el = event.target;
+        console.log(el);
+        debugger;
+    }
+
+    function validateAll() {
+
+    }
+
+    </script>
+    
+</head>
+
+~$// LOAD CHARTS ~
+<body onload="loadData();">
+
+    ~$// BUTTONS ~
+    <button class="btn" onclick="document.location.reload();">Reload iFrame</button>
+    <button class="btn" onclick="saveData();">Save</button>
+    <button id="btnPrint" class="btn" onclick="printMe(printOutput);">Print</button>
+
+    ~inclfile(/dropins/dibExamples/templates/forms, DynamicHtmlFormsComponents.html)~
+
+    <h2>as;lfdjalsjf as jf;lajs;lfs a</h2>
+
+    <div class="card" id="root" onblur="validateInput();return false;" style="display:flex; flex-direction:column; gap:10px; justify-content: flex-start; align-items: flex-start;">
+
+        
+
+        ~incldropintmpl(/dropins/dibExamples/DynamicHtmlForms/getHtml, {"fsp":123;"aaa":"bbb"})~
+
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+

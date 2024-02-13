@@ -1,0 +1,201 @@
+System.register(["tslib", "@angular/platform-browser", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, platform_browser_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, _c0, _c1, importsRequired, dibDocsExampleHtmlComponent, containerModules, fullDateTimeOptions, dibDocsExampleHtmlModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibDocsExampleHtmlComponent_iframe_6_Template(rf, ctx) { if (rf & 1) {
+        const _r2 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "iframe", 6);
+        i0.ɵɵlistener("show", function dibDocsExampleHtmlComponent_iframe_6_Template_iframe_show_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(!ctx_r1.busy); })("load", function dibDocsExampleHtmlComponent_iframe_6_Template_iframe_load_0_listener() { i0.ɵɵrestoreView(_r2); const ctx_r3 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r3.completed()); });
+        i0.ɵɵpipe(1, "safe");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("src", i0.ɵɵpipeBind1(1, 2, ctx_r0.iframeUrl), i0.ɵɵsanitizeResourceUrl)("ngStyle", ctx_r0.view.items.iframeDocs == undefined ? i0.ɵɵpureFunction0(4, _c0) : ctx_r0.view.items.iframeDocs.style);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (platform_browser_1_1) {
+                platform_browser_1 = platform_browser_1_1;
+                i3 = platform_browser_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i7 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i6_1) {
+                i6 = i6_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function () { return {}; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibDocsExampleHtmlComponent = class dibDocsExampleHtmlComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                sanitizer;
+                view = { container: { id: 172, name: 'dibDocsExampleHtml', subContainerItemAliases: [], allChildContainers: [], refreshChildContainers: { "_": [] }, dropin: 'iframe', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                doNotReloadiFrame = false;
+                clientData;
+                allClientData;
+                model;
+                frameStyle = { "min-height": "200px" };
+                iframeUrl;
+                constructor(injector, httpClient, viewContainerRef, sd, cd, sanitizer) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    this.sanitizer = sanitizer;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibDocsExampleHtml');
+                    this.containerName = 'dibDocsExampleHtml'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "viewDesign", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/General/gotoDesigner", itemAlias: "viewDesign", waitForCompletion: false, containerName: "dibDocsExampleHtml", handlers: [] }, this.clientData, { itemEventId: 'ie243-dib', itemId: '4881', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "LoadExampleContent", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibDocs/Template/exampleContent", itemAlias: "LoadExampleContent", waitForCompletion: false, containerName: "dibDocsExampleHtml", handlers: [] }, this.clientData, { itemEventId: 'ie451-dib', itemId: '7578', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); this.reloadContainer(); }
+                completed() { this.busy = false; }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibDocsExampleHtml', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibDocsExampleHtml' });
+                    this.reloadSubcontainers();
+                    if (this.iframeUrl != undefined && this.doNotReloadiFrame) {
+                        return;
+                    }
+                    let url = "/dropins/setNgxMaterial/iframe/Template/open/dibDocsExampleHtml";
+                    url += `?clientData=${encodeURIComponent(JSON.stringify(this.clientData))}`;
+                    url += `&v=${new Date().getTime()}`;
+                    this.iframeUrl = url;
+                }
+                static ɵfac = function dibDocsExampleHtmlComponent_Factory(t) { return new (t || dibDocsExampleHtmlComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i3.DomSanitizer)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibDocsExampleHtmlComponent, selectors: [["dib-docs-example-html"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 8, vars: 10, consts: [[2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "min-height", "20px", 3, "formGroup", "ngClass"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch"], ["id", "ci4881", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "viewDesign", "type", "button", 3, "containerPortId", "hidden"], ["mat-raised-button", "", "color", "primary", "id", "ci7578", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "LoadExampleContent", "type", "button", 3, "containerPortId", "hidden"], [1, "dibButtonCaption"], ["sharedDibIframeTracker", "", "name", "dibDocsExampleHtml", "frameBorder", "0", "width", "100%", 3, "src", "ngStyle", "show", "load", 4, "ngIf"], ["sharedDibIframeTracker", "", "name", "dibDocsExampleHtml", "frameBorder", "0", "width", "100%", 3, "src", "ngStyle", "show", "load"]], template: function dibDocsExampleHtmlComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵelementStart(0, "form", 0)(1, "div", 1);
+                        i0.ɵɵelement(2, "button", 2);
+                        i0.ɵɵelementStart(3, "button", 3)(4, "span", 4);
+                        i0.ɵɵtext(5, "button1");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵtemplate(6, dibDocsExampleHtmlComponent_iframe_6_Template, 2, 5, "iframe", 5);
+                        i0.ɵɵtext(7, "\u00A0 ");
+                        i0.ɵɵelementEnd()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(8, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference())("hidden", true);
+                        i0.ɵɵattribute("aria-label", "button1");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.iframeUrl);
+                    } }, dependencies: [i4.NgClass, i4.NgIf, i4.NgStyle, i5.DefaultClassDirective, i5.DefaultStyleDirective, i6.ɵNgNoValidate, i6.NgControlStatusGroup, i6.FormGroupDirective, i2.DibListenersDirective, i2.DibiFrameTrackerDirective, i7.MatButton, i2.SafePipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibDocsExampleHtml'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibDocsExampleHtmlComponent.prototype, "reloadContainer", null);
+            exports_1("dibDocsExampleHtmlComponent", dibDocsExampleHtmlComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibDocsExampleHtmlComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dib-docs-example-html', template: `
+<form style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch; min-height:20px"   [formGroup]="model.$formGroup" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; justify-content: flex-start; align-items:stretch"><button id=ci4881 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=viewDesign   style="  " [hidden]="true"  type=button  ></button><button  mat-raised-button color=primary  id=ci7578 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=LoadExampleContent   style="  " [hidden]="true"  [attr.aria-label]="'button1'"  type=button  ><span class=dibButtonCaption >button1</span></button><iframe *ngIf=iframeUrl  sharedDibIframeTracker (show)='!busy' (load)="completed()"   name='dibDocsExampleHtml' [src]="iframeUrl | safe" frameBorder=0  width="100%"  [ngStyle]="view.items.iframeDocs == undefined ? {}: view.items.iframeDocs.style"></iframe>&nbsp;   </div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }, { type: i3.DomSanitizer }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibDocsExampleHtmlModule = class dibDocsExampleHtmlModule {
+                static entry = dibDocsExampleHtmlComponent;
+                static ɵfac = function dibDocsExampleHtmlModule_Factory(t) { return new (t || dibDocsExampleHtmlModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibDocsExampleHtmlModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibDocsExampleHtmlModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibDocsExampleHtmlModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibDocsExampleHtmlComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibDocsExampleHtmlModule, { declarations: [dibDocsExampleHtmlComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

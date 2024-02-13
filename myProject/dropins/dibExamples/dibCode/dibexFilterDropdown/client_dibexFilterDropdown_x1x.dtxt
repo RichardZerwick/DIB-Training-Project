@@ -1,0 +1,373 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/select", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, select_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexFilterDropdownComponent, containerModules, fullDateTimeOptions, dibexFilterDropdownModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexFilterDropdownComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 12);
+    } }
+    function dibexFilterDropdownComponent_mat_progress_bar_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 12);
+    } }
+    function dibexFilterDropdownComponent_mat_option_15_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "span", 15);
+    } if (rf & 2) {
+        const item_r5 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵproperty("innerHtml", item_r5.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexFilterDropdownComponent_mat_option_15_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 13);
+        i0.ɵɵtemplate(1, dibexFilterDropdownComponent_mat_option_15_span_1_Template, 1, 1, "span", 14);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r5 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r5);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", item_r5.id_display_value);
+    } }
+    function dibexFilterDropdownComponent_mat_progress_bar_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 12);
+    } }
+    function dibexFilterDropdownComponent_mat_option_22_span_1_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "span", 15);
+    } if (rf & 2) {
+        const item_r8 = i0.ɵɵnextContext().$implicit;
+        i0.ɵɵproperty("innerHtml", item_r8.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexFilterDropdownComponent_mat_option_22_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 13);
+        i0.ɵɵtemplate(1, dibexFilterDropdownComponent_mat_option_22_span_1_Template, 1, 1, "span", 14);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const item_r8 = ctx.$implicit;
+        i0.ɵɵproperty("value", item_r8);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", item_r8.id_display_value);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i6 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (select_1_1) {
+                select_1 = select_1_1;
+                i9 = select_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexFilterDropdownComponent = class dibexFilterDropdownComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 309, name: 'dibexFilterDropdown', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*7028'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list7030 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexFilterDropdown&containerItemId=7030", null, null, 40);
+                    this.lists.list7031 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexFilterDropdown&containerItemId=7031", 'dibexFilterDropdown_clientContactId', null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexFilterDropdown');
+                    this.containerName = 'dibexFilterDropdown'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 7030, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 7030 }, clientContactId: { itemId: 7031, type: 'select', fieldAlias: 'clientContactId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 7031 }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.$formGroup.addControl('clientContactId', this.model.modelItems.clientContactId.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource7030 = this.lists.list7030.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange7030 = new Date().getTime();
+                    let previousUrlChange7030;
+                    let previousResponse7030;
+                    this.lists.list7030.items = rxjs_1.combineLatest([this.lists.list7030.updatedList$, itemsUpdateSource7030]).pipe(operators_1.tap(() => { this.lists.list7030.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange7030 - new Date().getTime()) / 1000;
+                        previousTimeChange7030 = new Date().getTime();
+                        previousUrlChange7030 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse7030 = response;
+                            this.lists.list7030.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list7030.items.subscribe(records => this.lists.list7030.lastItems = records);
+                    this.lists.list7030.multiSelected = [];
+                    this.lists.list7030.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list7030.updatedList$.next([]);
+                        self.lists.list7030.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list7030.refresh();
+                    }
+                    else {
+                        self.lists.list7030.searchForm.setValue('');
+                        self.lists.list7030.updatedList$.next(self.lists.list7030.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list7030.multiSelected);
+                    } };
+                    this.lists.list7030.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list7030.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list7030.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list7030.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list7030.multiSelected.push(value);
+                            }
+                        }
+                        lists.list7030.multiSelected = self.removeDuplicateIdsFromArray(lists.list7030.multiSelected);
+                    };
+                    const itemsUpdateSource7031 = this.lists.list7031.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange7031 = new Date().getTime();
+                    let previousUrlChange7031;
+                    let previousResponse7031;
+                    this.lists.list7031.items = rxjs_1.combineLatest([this.lists.list7031.updatedList$, itemsUpdateSource7031]).pipe(operators_1.tap(() => { this.lists.list7031.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange7031 - new Date().getTime()) / 1000;
+                        previousTimeChange7031 = new Date().getTime();
+                        previousUrlChange7031 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse7031 = response;
+                            this.lists.list7031.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list7031.items.subscribe(records => this.lists.list7031.lastItems = records);
+                    this.lists.list7031.multiSelected = [];
+                    this.lists.list7031.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list7031.updatedList$.next([]);
+                        self.lists.list7031.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list7031.refresh();
+                    }
+                    else {
+                        self.lists.list7031.searchForm.setValue('');
+                        self.lists.list7031.updatedList$.next(self.lists.list7031.multiSelected);
+                        self.model.modelItems.clientContactId.formControl.setValue(self.lists.list7031.multiSelected);
+                    } };
+                    this.lists.list7031.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list7031.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list7031.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list7031.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list7031.multiSelected.push(value);
+                            }
+                        }
+                        lists.list7031.multiSelected = self.removeDuplicateIdsFromArray(lists.list7031.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list7030.setupModel(this.model.modelItems.clientId.formControl); this.lists.list7031.setupModel(this.model.modelItems.clientContactId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list7030.dispose();
+                    this.lists.list7031.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexFilterDropdown', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexFilterDropdown' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexFilterDropdownComponent_Factory(t) { return new (t || dibexFilterDropdownComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexFilterDropdownComponent, selectors: [["dibex-filter-dropdown"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 24, vars: 16, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci7028", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexFilterDropdown", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci7029", "dibComponent", "section", 2, "flex", "1 1 50%", "overflow", "auto !important"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci7030", "dibComponent", "select", "item-alias", "clientId", "appearance", "standard", 2, "width", "200px !important", "display", "flex", "flex-direction", "column"], ["formControlName", "clientId", 3, "compareWith", "openedChange"], [3, "value", 4, "ngFor", "ngForOf"], ["id", "ci7031", "dibComponent", "select", "dib-active-filter", "dibexFilterDropdown_clientContactId", "dib-container-filter-settings", "{  'dibexFilterDropdown_clientContactId' : 'alias_self_clientId'}", "appearance", "standard", 2, "width", "200px !important", "display", "flex", "flex-direction", "column"], ["formControlName", "clientContactId", 3, "compareWith", "openedChange"], ["mode", "indeterminate"], [3, "value"], [3, "innerHtml", 4, "ngIf"], [3, "innerHtml"]], template: function dibexFilterDropdownComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexFilterDropdownComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexFilterDropdownComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-header")(7, "mat-card-title");
+                        i0.ɵɵtext(8, "Filters and Refresh Item");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(9, "mat-card-content", 6)(10, "mat-form-field", 7)(11, "mat-label");
+                        i0.ɵɵtext(12, "Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(13, "mat-select", 8);
+                        i0.ɵɵlistener("openedChange", function dibexFilterDropdownComponent_Template_mat_select_openedChange_13_listener($event) { return ctx.lists.list7030.refresh($event); });
+                        i0.ɵɵtemplate(14, dibexFilterDropdownComponent_mat_progress_bar_14_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(15, dibexFilterDropdownComponent_mat_option_15_Template, 2, 2, "mat-option", 9);
+                        i0.ɵɵpipe(16, "async");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(17, "mat-form-field", 10)(18, "mat-label");
+                        i0.ɵɵtext(19, "Related Client Contact");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(20, "mat-select", 11);
+                        i0.ɵɵlistener("openedChange", function dibexFilterDropdownComponent_Template_mat_select_openedChange_20_listener($event) { return ctx.lists.list7031.refresh($event); });
+                        i0.ɵɵtemplate(21, dibexFilterDropdownComponent_mat_progress_bar_21_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(22, dibexFilterDropdownComponent_mat_option_22_Template, 2, 2, "mat-option", 9);
+                        i0.ɵɵpipe(23, "async");
+                        i0.ɵɵelementEnd()()()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(14, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7028");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("compareWith", ctx.selectCompareFn);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list7030.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(16, 10, ctx.lists.list7030.items));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("compareWith", ctx.selectCompareFn);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list7031.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(23, 12, ctx.lists.list7031.items));
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i6.MatOption, i7.MatFormField, i7.MatLabel, i8.MatProgressBar, i9.MatSelect, i10.MatCard, i10.MatCardContent, i10.MatCardHeader, i10.MatCardTitle, i3.AsyncPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexFilterDropdown'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexFilterDropdownComponent.prototype, "reloadContainer", null);
+            exports_1("dibexFilterDropdownComponent", dibexFilterDropdownComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexFilterDropdownComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-filter-dropdown', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci7028 dibComponent=subcontainer   ><ng-container [dibPort]="'7028'" parentContainerName=dibexFilterDropdown  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 50%;  overflow:auto !important;" id=ci7029 dibComponent=section  ><mat-card-header ><mat-card-title >Filters and Refresh Item</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><mat-form-field  id=ci7030 dibComponent=select   style="  width:200px !important;   display:flex; flex-direction: column;  "  item-alias=clientId   appearance=standard   ><mat-label>Client</mat-label><mat-select [compareWith]="selectCompareFn"   formControlName=clientId    (openedChange)="lists.list7030.refresh($event)"  ><mat-progress-bar *ngIf="$any(lists.list7030).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list7030.items | async" [value]="item" ><span *ngIf="item.id_display_value"   [innerHtml]="item.id_display_value"  ></span></mat-option></mat-select></mat-form-field><mat-form-field  id=ci7031 dibComponent=select   dib-active-filter='dibexFilterDropdown_clientContactId'  dib-container-filter-settings="{  'dibexFilterDropdown_clientContactId' : 'alias_self_clientId'}"  style="  width:200px !important;   display:flex; flex-direction: column;  "  appearance=standard   ><mat-label>Related Client Contact</mat-label><mat-select [compareWith]="selectCompareFn"   formControlName=clientContactId    (openedChange)="lists.list7031.refresh($event)"  ><mat-progress-bar *ngIf="$any(lists.list7031).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list7031.items | async" [value]="item" ><span *ngIf="item.id_display_value"   [innerHtml]="item.id_display_value"  ></span></mat-option></mat-select></mat-form-field></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, select_1.MatSelectModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexFilterDropdownModule = class dibexFilterDropdownModule {
+                static entry = dibexFilterDropdownComponent;
+                static ɵfac = function dibexFilterDropdownModule_Factory(t) { return new (t || dibexFilterDropdownModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexFilterDropdownModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexFilterDropdownModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexFilterDropdownModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexFilterDropdownComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexFilterDropdownModule, { declarations: [dibexFilterDropdownComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, select_1.MatSelectModule] }); })();
+        }
+    };
+});

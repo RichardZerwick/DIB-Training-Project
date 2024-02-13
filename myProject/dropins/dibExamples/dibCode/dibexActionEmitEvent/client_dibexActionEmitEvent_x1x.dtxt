@@ -1,0 +1,321 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/button", "@angular/material/icon", "@angular/material/card", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, button_1, icon_1, card_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, _c0, importsRequired, dibexActionEmitEventComponent, containerModules, fullDateTimeOptions, dibexActionEmitEventModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexActionEmitEventComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 27);
+    } }
+    function dibexActionEmitEventComponent_mat_error_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 3 chars or more");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_21_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 15 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_28_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/larger than 1");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_29_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 15");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_36_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/larger than 5");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 60");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_44_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/larger than 1");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexActionEmitEventComponent_mat_error_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 7");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i10 = card_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexActionEmitEventComponent = class dibexActionEmitEventComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 301, name: 'dibexActionEmitEvent', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexEmitEventDemoHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*6895', 'dibexEmitEventDemoHtml*6929'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexActionEmitEvent');
+                    this.containerName = 'dibexActionEmitEvent'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { explodeRadius: { itemId: 6896, type: 'number', fieldAlias: 'explodeRadius', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'explodeRadius', default: '200', dataType: 'number', contentType: 'integer', changeUrl: false }, word: { itemId: 6932, type: 'text', fieldAlias: 'word', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.minLength(3), forms_1.Validators.maxLength(15)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'word', default: 'dropinbase', dataType: 'text', contentType: 'text', changeUrl: false }, cycleDuration: { itemId: 6933, type: 'number', fieldAlias: 'cycleDuration', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.min(1), forms_1.Validators.max(15)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'cycleDuration', default: '6', dataType: 'number', contentType: 'integer', changeUrl: false }, maxSpeed: { itemId: 6934, type: 'number', fieldAlias: 'maxSpeed', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.min(5), forms_1.Validators.max(60)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'maxSpeed', default: '36', dataType: 'number', contentType: 'integer', changeUrl: false }, maxScale: { itemId: 6935, type: 'number', fieldAlias: 'maxScale', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.min(1), forms_1.Validators.max(7)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: 'maxScale', default: '2.5', dataType: 'number', contentType: 'integer', changeUrl: false }, };
+                    this.model.$formGroup.addControl('explodeRadius', this.model.modelItems.explodeRadius.formControl);
+                    this.model.$formGroup.addControl('word', this.model.modelItems.word.formControl);
+                    this.model.$formGroup.addControl('cycleDuration', this.model.modelItems.cycleDuration.formControl);
+                    this.model.$formGroup.addControl('maxSpeed', this.model.modelItems.maxSpeed.formControl);
+                    this.model.$formGroup.addControl('maxScale', this.model.modelItems.maxScale.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnClientside", actionType: "click", responseType: 'actions', submitUrl: "shared.action.emit-event?emitName=myEvent&action=explodeImage&explodeRadius=@{value_self_explodeRadius}", itemAlias: "btnClientside", waitForCompletion: false, containerName: "dibexActionEmitEvent", handlers: [] }, this.clientData, { itemEventId: 'ie394-dib', itemId: '6897', });
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "btnServerside", actionType: "click", responseType: 'actions', submitUrl: "/dropins/dibExamples/Action/emitEvent", itemAlias: "btnServerside", waitForCompletion: false, containerName: "dibexActionEmitEvent", handlers: [] }, this.clientData, { itemEventId: 'ie395-dib', itemId: '6898', });
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexActionEmitEvent', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexActionEmitEvent' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexActionEmitEventComponent_Factory(t) { return new (t || dibexActionEmitEventComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexActionEmitEventComponent, selectors: [["dibex-action-emit-event"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 56, vars: 25, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci6895", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionEmitEvent", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci6930", "dibComponent", "section", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px"], ["id", "ci6896", "dibComponent", "inputNumber", "item-alias", "explodeRadius", "appearance", "standard", 2, "width", "170px !important"], ["matInput", "", "type", "number", "formControlName", "explodeRadius", "name", "explodeRadius"], ["mat-raised-button", "", "color", "primary", "id", "ci6897", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnClientside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], [1, "dibButtonCaption"], ["id", "ci6931", "dibComponent", "section", 2, "flex", "1 1 0%"], ["id", "ci6932", "dibComponent", "inputText", "item-alias", "word", "appearance", "standard", 2, "flex", "1 1 0%", "max-width", "250px"], ["matInput", "", "type", "text", "formControlName", "word", "minlength", "3", "maxlength", "15", "name", "word"], [4, "ngIf"], ["id", "ci6933", "dibComponent", "inputNumber", "item-alias", "cycleDuration", "appearance", "standard", 2, "width", "140px !important"], ["matInput", "", "type", "number", "formControlName", "cycleDuration", "min", "1", "max", "15", "name", "cycleDuration"], ["id", "ci6934", "dibComponent", "inputNumber", "item-alias", "maxSpeed", "appearance", "standard", 2, "width", "140px !important"], ["matInput", "", "type", "number", "formControlName", "maxSpeed", "min", "5", "max", "60", "name", "maxSpeed"], ["id", "ci6935", "dibComponent", "inputNumber", "item-alias", "maxScale", "appearance", "standard", 2, "width", "140px !important"], ["matInput", "", "type", "number", "formControlName", "maxScale", "min", "1", "max", "7", "name", "maxScale"], ["mat-raised-button", "", "color", "primary", "id", "ci6898", "dibComponent", "button", "dibListeners", "", "eventList", "  click ", "actionId", "btnServerside", "type", "button", 2, "width", "150px !important", 3, "containerPortId"], ["id", "ci6928", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px"], [3, "dibPort"], ["id", "ci6929", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexActionEmitEvent", "subContainerName", "dibexEmitEventDemoHtml", "subContainerId", "304", "dropinName", "iframe", 3, "dibPort"], ["mode", "indeterminate"]], template: function dibexActionEmitEventComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexActionEmitEventComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexActionEmitEventComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6)(7, "mat-form-field", 7)(8, "mat-label");
+                        i0.ɵɵtext(9, "Explode Radius");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(10, "input", 8);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(11, "button", 9)(12, "span", 10);
+                        i0.ɵɵtext(13, "Origin: Client-side");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(14, "mat-card", 11)(15, "mat-card-content", 6)(16, "mat-form-field", 12)(17, "mat-label");
+                        i0.ɵɵtext(18, "Word/Phrase");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(19, "input", 13);
+                        i0.ɵɵtemplate(20, dibexActionEmitEventComponent_mat_error_20_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵtemplate(21, dibexActionEmitEventComponent_mat_error_21_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵelementStart(22, "mat-hint");
+                        i0.ɵɵtext(23, "<16 alphanumeric characters");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(24, "mat-form-field", 15)(25, "mat-label");
+                        i0.ɵɵtext(26, "Cycle Duration (seconds)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(27, "input", 16);
+                        i0.ɵɵtemplate(28, dibexActionEmitEventComponent_mat_error_28_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵtemplate(29, dibexActionEmitEventComponent_mat_error_29_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵelementStart(30, "mat-hint");
+                        i0.ɵɵtext(31, "between 1 and 15");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(32, "mat-form-field", 17)(33, "mat-label");
+                        i0.ɵɵtext(34, "Max Speed");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(35, "input", 18);
+                        i0.ɵɵtemplate(36, dibexActionEmitEventComponent_mat_error_36_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵtemplate(37, dibexActionEmitEventComponent_mat_error_37_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵelementStart(38, "mat-hint");
+                        i0.ɵɵtext(39, "between 5 and 60");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(40, "mat-form-field", 19)(41, "mat-label");
+                        i0.ɵɵtext(42, "Max Scale");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(43, "input", 20);
+                        i0.ɵɵtemplate(44, dibexActionEmitEventComponent_mat_error_44_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵtemplate(45, dibexActionEmitEventComponent_mat_error_45_Template, 2, 0, "mat-error", 14);
+                        i0.ɵɵelementStart(46, "mat-hint");
+                        i0.ɵɵtext(47, "between 1 and 7");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(48, "button", 21)(49, "span", 10);
+                        i0.ɵɵtext(50, "Origin: Server-side");
+                        i0.ɵɵelementEnd()()()();
+                        i0.ɵɵelementStart(51, "mat-card", 22)(52, "mat-card-content", 23);
+                        i0.ɵɵelementContainerStart(53, 24);
+                        i0.ɵɵelementStart(54, "div", 25);
+                        i0.ɵɵelementContainer(55, 26);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(23, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "6895");
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Explode Radius");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Client-side");
+                        i0.ɵɵadvance(8);
+                        i0.ɵɵattribute("aria-label", "Word/Phrase");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("word", "minlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("word", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Cycle Duration (seconds)");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("cycleDuration", "min", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("cycleDuration", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Max Speed");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("maxSpeed", "min", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("maxSpeed", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵattribute("aria-label", "Max Scale");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("maxScale", "min", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("maxScale", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Origin: Server-side");
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "6928");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "6929");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NumberValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.MinLengthValidator, i5.MaxLengthValidator, i5.MinValidator, i5.MaxValidator, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatButton, i7.MatFormField, i7.MatLabel, i7.MatHint, i7.MatError, i8.MatInput, i9.MatProgressBar, i10.MatCard, i10.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexActionEmitEvent'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexActionEmitEventComponent.prototype, "reloadContainer", null);
+            exports_1("dibexActionEmitEventComponent", dibexActionEmitEventComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionEmitEventComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-action-emit-event', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci6895 dibComponent=subcontainer   ><ng-container [dibPort]="'6895'" parentContainerName=dibexActionEmitEvent  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci6930 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;"  ><mat-form-field  id=ci6896 dibComponent=inputNumber   style="  width:170px !important;   "  item-alias=explodeRadius   appearance=standard  ><mat-label >Explode Radius</mat-label><input   matInput  type=number   formControlName=explodeRadius   name=explodeRadius   [attr.aria-label]="'Explode Radius'" ><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci6897 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnClientside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Client-side'"  type=button  ><span class=dibButtonCaption >Origin: Client-side</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci6931 dibComponent=section  ><mat-card-content   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px;"  ><mat-form-field id=ci6932 dibComponent=inputText   style="  flex: 1 1 0%;  max-width:250px"  item-alias=word   appearance=standard  ><mat-label >Word/Phrase</mat-label><input   matInput  type=text   formControlName=word   minlength='3'  maxlength='15'  name=word   [attr.aria-label]="'Word/Phrase'" ><mat-error *ngIf="hasError('word','minlength',model.$formGroup)">Please enter 3 chars or more</mat-error><mat-error *ngIf="hasError('word','maxlength',model.$formGroup)">Please enter 15 chars or less</mat-error><mat-hint><16 alphanumeric characters</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6933 dibComponent=inputNumber   style="  width:140px !important;   "  item-alias=cycleDuration   appearance=standard  ><mat-label >Cycle Duration (seconds)</mat-label><input   matInput  type=number   formControlName=cycleDuration   min=1   max=15   name=cycleDuration   [attr.aria-label]="'Cycle Duration (seconds)'" ><mat-error *ngIf="hasError('cycleDuration','min',model.$formGroup)">Please enter a value equal/larger than 1</mat-error><mat-error *ngIf="hasError('cycleDuration','max',model.$formGroup)">Please enter a value equal/smaller than 15</mat-error><mat-hint>between 1 and 15</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6934 dibComponent=inputNumber   style="  width:140px !important;   "  item-alias=maxSpeed   appearance=standard  ><mat-label >Max Speed</mat-label><input   matInput  type=number   formControlName=maxSpeed   min=5   max=60   name=maxSpeed   [attr.aria-label]="'Max Speed'" ><mat-error *ngIf="hasError('maxSpeed','min',model.$formGroup)">Please enter a value equal/larger than 5</mat-error><mat-error *ngIf="hasError('maxSpeed','max',model.$formGroup)">Please enter a value equal/smaller than 60</mat-error><mat-hint>between 5 and 60</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci6935 dibComponent=inputNumber   style="  width:140px !important;   "  item-alias=maxScale   appearance=standard  ><mat-label >Max Scale</mat-label><input   matInput  type=number   formControlName=maxScale   min=1   max=7   name=maxScale   [attr.aria-label]="'Max Scale'" ><mat-error *ngIf="hasError('maxScale','min',model.$formGroup)">Please enter a value equal/larger than 1</mat-error><mat-error *ngIf="hasError('maxScale','max',model.$formGroup)">Please enter a value equal/smaller than 7</mat-error><mat-hint>between 1 and 7</mat-hint><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><button  mat-raised-button color=primary  id=ci6898 dibComponent=button  dibListeners eventList="  click " [containerPortId]="containerActionReference()" actionId=btnServerside   style="  width:150px !important;   "  [attr.aria-label]="'Origin: Server-side'"  type=button  ><span class=dibButtonCaption >Origin: Server-side</span></button></mat-card-content></mat-card><mat-card   style="  flex: 1 1 0%;  " id=ci6928 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;"  ><ng-container [dibPort]="'6928'" ><div   style="  flex: 1 1 0%;  " id=ci6929 dibComponent=subcontainer   ><ng-container [dibPort]="'6929'" parentContainerName=dibexActionEmitEvent  subContainerName=dibexEmitEventDemoHtml  subContainerId=304  dropinName=iframe ></ng-container></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexActionEmitEventModule = class dibexActionEmitEventModule {
+                static entry = dibexActionEmitEventComponent;
+                static ɵfac = function dibexActionEmitEventModule_Factory(t) { return new (t || dibexActionEmitEventModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexActionEmitEventModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexActionEmitEventModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexActionEmitEventModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexActionEmitEventComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexActionEmitEventModule, { declarations: [dibexActionEmitEventComponent], imports: [common_1.CommonModule, shared_4.SharedModule, button_1.MatButtonModule, icon_1.MatIconModule, card_1.MatCardModule] }); })();
+        }
+    };
+});

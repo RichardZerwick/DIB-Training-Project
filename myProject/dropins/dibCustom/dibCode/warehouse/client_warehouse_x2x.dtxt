@@ -1,0 +1,301 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/tabs", "@angular/material/button", "@angular/material/icon", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, tabs_1, button_1, icon_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, _c0, _c1, _c2, importsRequired, warehouseComponent, containerModules, fullDateTimeOptions, warehouseModule;
+    var __moduleName = context_1 && context_1.id;
+    function warehouseComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 12);
+    } }
+    function warehouseComponent_ng_template_11_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 13);
+    } if (rf & 2) {
+        const ctx_r3 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r3.getTabTitle("register", "warehouse.register", "Register"));
+    } }
+    // @todo francois we need to import these files before the view loads
+    async function importFiles() {
+        for (const fileLocation of importsRequired) {
+            await SystemJS.import(fileLocation);
+        }
+    }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i8 = tabs_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            _c1 = function (a1) { return { changeUrl: true, originContainer: a1 }; };
+            _c2 = function (a3) { return { containerName: "register", portId: 8598, portAlias: "main", options: a3 }; };
+            importsRequired = [];
+            // Promise.resolve()
+            // .then(async () => {
+            //   await importFiles();
+            // })
+            warehouseComponent = class warehouseComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = {
+                    container: {
+                        id: 363,
+                        name: 'warehouse',
+                        subContainerItemAliases: [],
+                        allChildContainers: ["product", "products", "profile", "register", "rptProducts"],
+                        refreshChildContainers: {
+                            "portproducts": ['products*8405'],
+                            "profile": ['profile*8512'],
+                            "register": ['register*8598'],
+                            "rptProducts": ['rptProducts*8612'],
+                            "_": ['product*8405']
+                        },
+                        dropin: 'plain',
+                        activeFilter: null,
+                        configs: {},
+                        keepInMemory: false
+                    },
+                    items: {},
+                    primaryKeys: [],
+                    recordStatus: 'create',
+                    debug: false,
+                    debugItem: false
+                };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    //Define the lists
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'warehouse');
+                    this.containerName = 'warehouse'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy))
+                        .subscribe(change => {
+                        //--dib-controller-action--modelChange--
+                    });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({
+                        thisArg: this,
+                        containerPortId: this.containerActionReference(),
+                        actionId: "logoutBtn",
+                        actionType: "click",
+                        responseType: 'actions',
+                        submitUrl: "warehouse.action.logout",
+                        itemAlias: "logoutBtn",
+                        waitForCompletion: false,
+                        containerName: "warehouse",
+                        continue() {
+                            // Need to check if we need to save the contents of the if the confirmation message was true 
+                            // @TODO if(fld(save_before_action)<>0,true,false) 
+                            return this.messagingService.confirm({
+                                message: this.translate('warehouse.logoutBtn.click', `Are you sure you want to logout?`),
+                                okText: this.translate('warehouse.logoutBtn.click.okText', `Yes`),
+                                cancelText: this.translate('warehouse.logoutBtn.click.cancelText', `Cancel`)
+                            });
+                        },
+                        handlers: [
+                        // Need to get a port if available then navigate to the port -- @Cobus tested
+                        ]
+                    }, this.clientData, {
+                        itemEventId: '9415c44816644b2396aa03fe9ccadfbd-dib', itemId: '8600',
+                    });
+                    let lists = {};
+                    let self = this;
+                    //Defining the list item services
+                    lists = this.lists;
+                    //--dib-controller-action--onInit--
+                    // Register all the clientData for this container
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() {
+                    super.ngAfterViewInit();
+                    window.dispatchEvent(new Event('resize'));
+                    //--dib-controller-action--afterViewInit--
+                }
+                ngOnDestroy() {
+                    //--dib-controller-action--onDestroy--
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() {
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    //--dib-controller-action--reloadContainer--
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        // To accomodate for columnHeaders in grids @todo probably need to execute updateFromDefault from all container instead of a general one
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({
+                        name: 'onReloadwarehouse',
+                        value: this
+                    });
+                    this.eventService.emit({
+                        name: 'OnReloadContainer',
+                        value: 'warehouse'
+                    });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function warehouseComponent_Factory(t) { return new (t || warehouseComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: warehouseComponent, selectors: [["warehouse"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 14, vars: 15, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "width", "100vw", "height", "100vh", "margin", "0px", "padding", "0px", 3, "formGroup", "ngClass", "ngSubmit"], [2, "height", "100vh", "display", "flex", "flex-direction", "column", "align-items", "stretch", "margin", "0px", "padding", "0px"], ["mat-raised-button", "", "color", "primary", "id", "ci8600", "dibComponent", "button", "dibListeners", "", "eventList", "\n click ", "actionId", "logoutBtn", "type", "button", 2, "width", "5% !important", 3, "containerPortId"], [1, "dibButtonCaption"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci8400", "dibComponent", "tabs", "itemAlias", "mainHolder", "containerName", "warehouse", "dibTabGoToParent", "", "dibAutoTabSelection", "8598", "dibAutoTabSelectionAliases", "register", 2, "align-self", "stretch", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "row", "justify-content", "center", "gap", "10px", "flex", "1 1 0%", 3, "dibTabGoTo"], ["tabReference8598", "", "refTabGoTo", "asDibTabGoTo"], ["mat-tab-label", ""], ["id", "ci8598", "dibComponent", "div", 2, "display", "flex", "flex-direction", "row", "justify-content", "center", "gap", "10px", "flex", "1 1 0%"], [3, "dibPort"], ["mode", "indeterminate"], ["tabPortId", "8598", "dibid", "register__caption.8598", 3, "value"]], template: function warehouseComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, warehouseComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function warehouseComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "button", 3)(4, "span", 4);
+                        i0.ɵɵtext(5, "Logout");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(6, "div", 5)(7, "mat-tab-group", 6)(8, "mat-tab", 7, 8);
+                        i0.ɵɵtemplate(11, warehouseComponent_ng_template_11_Template, 1, 1, "ng-template", 9);
+                        i0.ɵɵelementStart(12, "div", 10);
+                        i0.ɵɵelementContainer(13, 11);
+                        i0.ɵɵelementEnd()()()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(9, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵattribute("aria-label", "Logout");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(13, _c2, i0.ɵɵpureFunction1(11, _c1, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "8598");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i2.DibListenersDirective, i6.MatButton, i7.MatProgressBar, i8.MatTabLabel, i8.MatTab, i8.MatTabGroup], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloadwarehouse'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], warehouseComponent.prototype, "reloadContainer", null);
+            exports_1("warehouseComponent", warehouseComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(warehouseComponent, [{
+                    type: core_1.Component,
+                    args: [{
+                            selector: 'warehouse',
+                            template: `
+      <mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="width: 100vw; height:100vh; margin:0px; padding:0px"
+ [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }" 
+><div style="height: 100vh; display: flex; flex-direction: column; align-items: stretch; margin:0px; padding:0px"><button
+ mat-raised-button color=primary  id=ci8600 dibComponent=button  dibListeners eventList="
+ click " [containerPortId]="containerActionReference()" actionId=logoutBtn   style="
+ width:5% !important;   "  [attr.aria-label]="'Logout'"  type=button
+ ><span class=dibButtonCaption >Logout</span></button><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group 
+ mat-stretch-tabs=false  id=ci8400 dibComponent=tabs   style="  align-self: stretch;  "  itemAlias=mainHolder  [portId]="portId" containerName=warehouse  dibTabGoToParent 
+ dibAutoTabSelection=8598
+  dibAutoTabSelectionAliases=register
+  [container]="this"
+ ><mat-tab 
+ #tabReference8598  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'register', portId: 8598, portAlias: 'main', options: { changeUrl: true, originContainer : this }}"
+ style="  display:flex; flex-direction: row;
+ justify-content: center;  gap: 10px;  flex: 1 1 0%;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('register', 'warehouse.register', 'Register')" tabPortId=8598  dibid="register__caption.8598"></app-tab-label></ng-template><div 
+ style="  display:flex; flex-direction: row;
+ justify-content: center;  gap: 10px;  flex: 1 1 0%;  " id=ci8598 dibComponent=div  ><ng-container [dibPort]="'8598'" ></ng-container></div></mat-tab></mat-tab-group></div></div></form>
+  `
+                        }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [tabs_1.MatTabsModule, button_1.MatButtonModule, icon_1.MatIconModule];
+            // Format used for the Intl format functions
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            warehouseModule = class warehouseModule {
+                static entry = warehouseComponent;
+                static ɵfac = function warehouseModule_Factory(t) { return new (t || warehouseModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: warehouseModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+                        { provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },
+                    ], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", warehouseModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(warehouseModule, [{
+                    type: core_3.NgModule,
+                    args: [{
+                            imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules],
+                            providers: [
+                                { provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },
+                            ],
+                            declarations: [warehouseComponent],
+                        }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(warehouseModule, { declarations: [warehouseComponent], imports: [common_1.CommonModule, shared_4.SharedModule, tabs_1.MatTabsModule, button_1.MatButtonModule, icon_1.MatIconModule] }); })();
+        }
+    };
+});

@@ -1,0 +1,324 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/autocomplete", "@ngbracket/ngx-layout/extended", "@angular/material/button", "@angular/material/form-field", "@angular/material/icon", "@angular/material/input", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, autocomplete_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, _c0, _c1, importsRequired, dibexiFramePhpComponent, containerModules, fullDateTimeOptions, dibexiFramePhpModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexiFramePhpComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 21);
+    } }
+    function dibexiFramePhpComponent_button_22_Template(rf, ctx) { if (rf & 1) {
+        const _r8 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 22);
+        i0.ɵɵlistener("click", function dibexiFramePhpComponent_button_22_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); const _r1 = i0.ɵɵreference(20); const _r2 = i0.ɵɵreference(21); ctx_r7.clearDropdown(ctx_r7.model.modelItems.clientId.formControl, $event, ctx_r7.lists.list5792, _r1); return i0.ɵɵresetView(_r2.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexiFramePhpComponent_mat_progress_bar_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 21);
+    } }
+    function dibexiFramePhpComponent_mat_option_26_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 23);
+    } if (rf & 2) {
+        const item_r9 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r9.id == "0"))("value", item_r9)("innerHtml", item_r9.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i5 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i7 = core_2_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i13 = card_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i6 = autocomplete_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i8_1) {
+                i8 = i8_1;
+            },
+            function (i9_1) {
+                i9 = i9_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i11_1) {
+                i11 = i11_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexiFramePhpComponent = class dibexiFramePhpComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 234, name: 'dibexiFramePhp', subContainerItemAliases: ["subcIframe"], allChildContainers: ["dibDocsExampleHtml", "dibexiFramePhpHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*5787', 'dibexiFramePhpHtml*5795'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list5792 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexiFramePhp&containerItemId=5792", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexiFramePhp');
+                    this.containerName = 'dibexiFramePhp'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { clientId: { itemId: 5792, type: 'select', fieldAlias: 'clientId', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [], updateOn: 'change' }), create: true, update: true, required: false, itemAlias: 'clientId', default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 5792 }, };
+                    this.model.$formGroup.addControl('clientId', this.model.modelItems.clientId.formControl);
+                    this.model.modelItems.clientId.formControl.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.switchMap((value) => this.eventService.on(`clientData_${this.view.container.name}`).pipe(operators_1.take(1), operators_1.map((result) => { return value; })))).subscribe(value => { if (!!value && !!value.id == false)
+                        return; if (value !== '' && value != null) {
+                        this.actionService.handle(this.containerActionReference(), 'clientId', 'changed');
+                    } });
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    this.actionService.enqueueAction({ thisArg: this, containerPortId: this.containerActionReference(), actionId: "clientId", actionType: "changed", responseType: 'actions', submitUrl: null, itemAlias: "clientId", waitForCompletion: false, containerName: "dibexiFramePhp", handlers: [() => new Promise((resolve, reject) => { this.containerService.bufferContainerReloading.next({ port: '5795', containerName: 'dibexiFramePhp' }); return resolve(); }),] }, this.clientData, { itemEventId: 'ie312-dib', itemId: '5792', });
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource5792 = this.lists.list5792.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange5792 = new Date().getTime();
+                    let previousUrlChange5792;
+                    let previousResponse5792;
+                    this.lists.list5792.items = rxjs_1.combineLatest([this.lists.list5792.updatedList$, itemsUpdateSource5792]).pipe(operators_1.tap(() => { this.lists.list5792.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange5792 - new Date().getTime()) / 1000;
+                        previousTimeChange5792 = new Date().getTime();
+                        previousUrlChange5792 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse5792 = response;
+                            this.lists.list5792.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list5792.items.subscribe(records => this.lists.list5792.lastItems = records);
+                    this.lists.list5792.multiSelected = [];
+                    this.lists.list5792.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list5792.updatedList$.next([]);
+                        self.lists.list5792.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list5792.refresh();
+                    }
+                    else {
+                        self.lists.list5792.searchForm.setValue('');
+                        self.lists.list5792.updatedList$.next(self.lists.list5792.multiSelected);
+                        self.model.modelItems.clientId.formControl.setValue(self.lists.list5792.multiSelected);
+                    } };
+                    this.lists.list5792.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list5792.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list5792.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list5792.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list5792.multiSelected.push(value);
+                            }
+                        }
+                        lists.list5792.multiSelected = self.removeDuplicateIdsFromArray(lists.list5792.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list5792.setupModel(this.model.modelItems.clientId.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list5792.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexiFramePhp', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexiFramePhp' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexiFramePhpComponent_Factory(t) { return new (t || dibexiFramePhpComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexiFramePhpComponent, selectors: [["dibexi-frame-php"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 32, vars: 15, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5787", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexiFramePhp", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5791", "dibComponent", "card", 2, "flex", "1 1 0%"], [2, "display", "flex", "flex-direction", "column", "gap", "10px", "flex-wrap", "nowrap"], [3, "dibPort"], ["id", "ci5793", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci5792", "dibComponent", "autocomplete", "dibListeners", "", "eventList", "  changed ", "actionId", "clientId", "item-alias", "clientId", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap", 3, "containerPortId"], ["type", "text", "matInput", "", "formControlName", "clientId", 3, "matAutocomplete"], ["auto5792trigger", "matAutocompleteTrigger", "input5792", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto5792", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci5794", "dibComponent", "card", "item-alias", "cardIFrame", 2, "height", "440px !important", "flex", "0 1 auto"], ["item-alias", "cardIFrame", 2, "display", "flex", "flex-direction", "column", "flex-wrap", "nowrap"], ["id", "ci5795", "dibComponent", "subcontainer", "item-alias", "subcIframe", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexiFramePhp", "subContainerName", "dibexiFramePhpHtml", "subContainerId", "235", "dropinName", "iframe", 3, "dibPort"], ["mode", "indeterminate"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"]], template: function dibexiFramePhpComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexiFramePhpComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexiFramePhpComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelementStart(8, "span", 8)(9, "div", 9);
+                        i0.ɵɵtext(10, " Select a Client below. An iframe will be loaded containing custom HTML supplied by PHP.");
+                        i0.ɵɵelement(11, "br");
+                        i0.ɵɵtext(12, "See the ");
+                        i0.ɵɵelementStart(13, "b");
+                        i0.ɵɵtext(14, "/dropins/dibExamples/components/dibexiFramePhp.php");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(15, " file for details. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(16, "mat-form-field", 10)(17, "mat-label");
+                        i0.ɵɵtext(18, "Select a Client");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(19, "input", 11, 12);
+                        i0.ɵɵtemplate(22, dibexiFramePhpComponent_button_22_Template, 3, 0, "button", 13);
+                        i0.ɵɵelementStart(23, "mat-autocomplete", 14, 15);
+                        i0.ɵɵlistener("opened", function dibexiFramePhpComponent_Template_mat_autocomplete_opened_23_listener() { return ctx.lists.list5792.refresh(); });
+                        i0.ɵɵtemplate(25, dibexiFramePhpComponent_mat_progress_bar_25_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(26, dibexiFramePhpComponent_mat_option_26_Template, 1, 5, "mat-option", 16);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(27, "mat-card", 17)(28, "mat-card-content", 18);
+                        i0.ɵɵelementContainerStart(29, 7);
+                        i0.ɵɵelementStart(30, "div", 19);
+                        i0.ɵɵelementContainer(31, 20);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r4 = i0.ɵɵreference(24);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(13, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5787");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5791");
+                        i0.ɵɵadvance(9);
+                        i0.ɵɵproperty("containerPortId", ctx.containerActionReference());
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("matAutocomplete", _r4);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.clientId.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "clientId"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list5792.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list5792.lastItems);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5794");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "5795");
+                    } }, dependencies: [i3.NgClass, i3.NgForOf, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.DefaultValueAccessor, i5.NgControlStatus, i5.NgControlStatusGroup, i5.FormGroupDirective, i5.FormControlName, i2.DibPortDirective, i2.DibAutocompleteScrollToOnFocusDirective, i2.DibListenersDirective, i2.DibRemoveFocusDirective, i6.MatAutocomplete, i7.MatOption, i6.MatAutocompleteTrigger, i8.MatIconButton, i9.MatFormField, i9.MatLabel, i9.MatSuffix, i10.MatIcon, i11.MatInput, i12.MatProgressBar, i13.MatCard, i13.MatCardContent], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexiFramePhp'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexiFramePhpComponent.prototype, "reloadContainer", null);
+            exports_1("dibexiFramePhpComponent", dibexiFramePhpComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexiFramePhpComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibexi-frame-php', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5787 dibComponent=subcontainer   ><ng-container [dibPort]="'5787'" parentContainerName=dibexiFramePhp  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  flex: 1 1 0%;  " id=ci5791 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  gap: 10px;  flex-wrap: nowrap;"  ><ng-container [dibPort]="'5791'" ><span  id=ci5793 dibComponent=comment   style="  " ><div class=dib-comment > Select a Client below. An iframe will be loaded containing custom HTML supplied by PHP.<br>See the <b>/dropins/dibExamples/components/dibexiFramePhp.php</b> file for details.  </div></span><mat-form-field  id=ci5792 dibComponent=autocomplete  dibListeners eventList="  changed " [containerPortId]="containerActionReference()" actionId=clientId   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;  "  item-alias=clientId   appearance=standard   ><mat-label>Select a Client</mat-label><input #auto5792trigger=matAutocompleteTrigger   type=text  matInput formControlName=clientId   #input5792  [matAutocomplete]="auto5792"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.clientId.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.clientId.formControl, $event, lists.list5792, auto5792trigger); input5792.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto5792=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'clientId')"  (opened)="$any(lists.list5792).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list5792).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list5792.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field></ng-container></mat-card-content></mat-card><mat-card   style="  height:440px !important;   flex: 0 1 auto;  " id=ci5794 dibComponent=card   item-alias=cardIFrame  ><mat-card-content   style="  display:flex; flex-direction: column;  flex-wrap: nowrap;"  item-alias=cardIFrame   ><ng-container [dibPort]="'5794'" ><div   style="  flex: 1 1 0%;  " id=ci5795 dibComponent=subcontainer   item-alias=subcIframe   ><ng-container [dibPort]="'5795'" parentContainerName=dibexiFramePhp  subContainerName=dibexiFramePhpHtml  subContainerId=235  dropinName=iframe ></ng-container></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, autocomplete_1.MatAutocompleteModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexiFramePhpModule = class dibexiFramePhpModule {
+                static entry = dibexiFramePhpComponent;
+                static ɵfac = function dibexiFramePhpModule_Factory(t) { return new (t || dibexiFramePhpModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexiFramePhpModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexiFramePhpModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexiFramePhpModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexiFramePhpComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexiFramePhpModule, { declarations: [dibexiFramePhpComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, autocomplete_1.MatAutocompleteModule] }); })();
+        }
+    };
+});

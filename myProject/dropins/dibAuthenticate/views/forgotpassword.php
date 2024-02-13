@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title><?php echo  DIB::$SITENAME; ?> Forgot</title>
+
+    <!--  LINKS TO STYLE SHEETS -->
+    <!-- build:css /css/main.min.css -->
+    <link rel="stylesheet" href="/files/dropins/dibAuthenticate/css/main.css">
+    <link rel="stylesheet" href="/files/files/themes/overrides/css/login.css">
+    <!-- endbuild -->
+    <style >
+        .hidden { 
+            display:none !important;
+        }
+    </style>
+
+    <!--  LINKS TO GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/files/files/icons/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <div class="bg"></div>
+       <form id="login-form" autocomplete="off" action="/dropins/dibAuthenticate/Site/forgotpassword" method="POST">			    
+      <div class="loginbox">
+      <div class="loginbox__container">
+        <div class="loginbox__header">
+          <div class="logo">
+            <img src="/files/files/images/logo.png">
+          </div>
+          <h2>Forgot your password?</h2>
+        </div>
+        <div class="loginbox__form">
+              <?php
+
+/* 
+ * Copyright (C) Dropinbase - All Rights Reserved
+ * This code, along with all other code under the root /dropinbase folder, is provided "As Is" and is proprietary and confidential
+ * Unauthorized copying or use, of this or any related file, is strictly prohibited
+ * Please see the License Agreement at www.dropinbase.com/license for more info
+*/
+               $error = Log::getString();
+                if ($error != '')
+                    echo '<p class="validation-error">' . $error . "</p>";
+                ?>
+          <div class="field">
+            <input name="username" id="username" type="text" onblur="checkLabelPos(this)" <?php if (isset($username)) echo 'value="' . $username . '"' ?> />
+            <label for="username">Username or email</label>
+            <input type="hidden" name="form_token" id="token" value="<?php echo DIB::$USER['auth_id'] ?>" />
+            <input class="hidden" name="email1" id="email1" type="text" value=""  />
+          </div>
+          <div class="field">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+        <a class="forgot" href="/dropins/dibAuthenticate/Site/login">Login</a>
+      </div>
+      </form>
+      
+    
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+    <script>
+      function checkLabelPos (self) {
+        if ($(self).val() !== "") {
+          $(self).addClass('filled');
+        } else {
+          $(self).removeClass('filled');
+        }
+      };
+
+      var inputs = $('input:not([type="checkbox"])');
+      inputs.each(function (i, el) {
+        if ($(el).val() !== "") {
+          $(el).addClass('filled');
+        }
+      });
+      $("document").ready(function() {
+            $("#login-button").on("click", function() {
+                $("#login-form").submit();
+            });
+            $("input").keyup(function(e) {
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if (code == 13) {
+                    $("#login-form").submit();
+                    e.preventDefault();
+                }
+            });
+        });
+        $("input").keyup(function(e) {
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if (code == 13) {
+                login();
+                e.preventDefault();
+            }
+        });
+    </script>
+  </body>
+
+</html>            

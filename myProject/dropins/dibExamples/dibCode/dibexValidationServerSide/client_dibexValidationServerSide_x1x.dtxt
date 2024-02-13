@@ -1,0 +1,929 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/forms", "@angular/material/core", "@angular/router", "rxjs", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/autocomplete", "@ngbracket/ngx-layout/extended", "@angular/material/form-field", "@angular/material/input", "@angular/cdk/text-field", "@angular/material/progress-bar", "@angular/material/tooltip"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, forms_1, core_2, shared_3, router_1, rxjs_1, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, autocomplete_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, _c0, _c1, importsRequired, dibexValidationServerSideComponent, containerModules, fullDateTimeOptions, dibexValidationServerSideModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexValidationServerSideComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 48);
+    } }
+    function dibexValidationServerSideComponent_mat_error_43_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_44_Template(rf, ctx) { if (rf & 1) {
+        const _r33 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_44_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r33); const ctx_r32 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r32.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_45_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_46_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_button_53_Template(rf, ctx) { if (rf & 1) {
+        const _r35 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "button", 52);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_button_53_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r35); const ctx_r34 = i0.ɵɵnextContext(); const _r5 = i0.ɵɵreference(51); const _r6 = i0.ɵɵreference(52); ctx_r34.clearDropdown(ctx_r34.model.modelItems.staff_id1.formControl, $event, ctx_r34.lists.list7192, _r5); return i0.ɵɵresetView(_r6.focus()); });
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "close");
+        i0.ɵɵelementEnd()();
+    } }
+    function dibexValidationServerSideComponent_mat_progress_bar_56_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 48);
+    } }
+    function dibexValidationServerSideComponent_mat_option_57_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-option", 53);
+    } if (rf & 2) {
+        const item_r36 = ctx.$implicit;
+        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, item_r36.id == "0"))("value", item_r36)("innerHtml", item_r36.id_display_value, i0.ɵɵsanitizeHtml);
+    } }
+    function dibexValidationServerSideComponent_mat_error_71_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 5 chars or more");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_74_Template(rf, ctx) { if (rf & 1) {
+        const _r38 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_74_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r38); const ctx_r37 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r37.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_75_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_76_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_error_93_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value equal/smaller than 100");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_96_Template(rf, ctx) { if (rf & 1) {
+        const _r40 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_96_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r40); const ctx_r39 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r39.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_97_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_98_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_error_118_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_121_Template(rf, ctx) { if (rf & 1) {
+        const _r42 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_121_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r42); const ctx_r41 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r41.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_122_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_123_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_error_146_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_error_147_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter 30 chars or less");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_150_Template(rf, ctx) { if (rf & 1) {
+        const _r44 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_150_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r44); const ctx_r43 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r43.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_151_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_152_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_error_168_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-error");
+        i0.ɵɵtext(1, "Please enter a value");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_171_Template(rf, ctx) { if (rf & 1) {
+        const _r46 = i0.ɵɵgetCurrentView();
+        i0.ɵɵelementStart(0, "mat-icon", 49);
+        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_mat_icon_171_Template_mat_icon_click_0_listener() { i0.ɵɵrestoreView(_r46); const ctx_r45 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r45.onSubmit()); });
+        i0.ɵɵtext(1, "done");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_172_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 50);
+        i0.ɵɵtext(1, "done_all");
+        i0.ɵɵelementEnd();
+    } }
+    function dibexValidationServerSideComponent_mat_icon_173_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-icon", 51);
+        i0.ɵɵtext(1, "priority_high");
+        i0.ɵɵelementEnd();
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i1 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i2 = http_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+                i6 = forms_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+                i8 = core_2_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
+                i3 = router_1_1;
+            },
+            function (rxjs_1_1) {
+                rxjs_1 = rxjs_1_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i4 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i16 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i9 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+                i11 = icon_1_1;
+            },
+            function (autocomplete_1_1) {
+                autocomplete_1 = autocomplete_1_1;
+                i7 = autocomplete_1_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i10_1) {
+                i10 = i10_1;
+            },
+            function (i12_1) {
+                i12 = i12_1;
+            },
+            function (i13_1) {
+                i13 = i13_1;
+            },
+            function (i14_1) {
+                i14 = i14_1;
+            },
+            function (i15_1) {
+                i15 = i15_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "extra-node": a0 }; };
+            _c1 = function (a0) { return { "dib-editor": a0 }; };
+            importsRequired = [];
+            dibexValidationServerSideComponent = class dibexValidationServerSideComponent extends shared_1.BaseComponent {
+                crudService;
+                httpClient;
+                urlService;
+                router;
+                sd;
+                cd;
+                allClientData;
+                model;
+                clientData;
+                htmlContent = '';
+                view = { container: { id: 311, name: 'dibexValidationServerSide', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml"], refreshChildContainers: { "_": ['dibDocsExampleHtml*7158'] }, dropin: 'form', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: ["id"], recordStatus: 'create', debug: false, debugItem: false };
+                constructor(injector, crudService, httpClient, urlService, router, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.crudService = crudService;
+                    this.httpClient = httpClient;
+                    this.urlService = urlService;
+                    this.router = router;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                    this.lists.list7192 = new shared_2.DibList("/peff/Crud/componentlist?containerName=dibexValidationServerSide&containerItemId=7192", null, null, 40);
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexValidationServerSide');
+                    this.containerName = 'dibexValidationServerSide'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = { id: { itemId: 7180, type: 'number', fieldAlias: 'id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required], updateOn: 'blur' }), create: false, update: false, required: true, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, notes: { itemId: 7181, type: 'text', fieldAlias: 'notes', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.minLength(5)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'text', contentType: 'multilinetext', changeUrl: false }, perc_complete: { itemId: 7182, type: 'number', fieldAlias: 'perc_complete', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.max(100)], updateOn: 'blur' }), create: true, update: true, required: false, itemAlias: null, default: '', dataType: 'number', contentType: 'integer', changeUrl: false }, date_from: { itemId: 7183, type: 'text', fieldAlias: 'date_from', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required], updateOn: 'blur' }), create: true, update: true, required: true, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, project_id: { itemId: 7184, type: 'text', fieldAlias: 'project_id', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required], updateOn: 'blur' }), create: true, update: true, required: true, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, Staff_MobileNo: { itemId: 7190, type: 'text', fieldAlias: 'Staff_MobileNo', formControl: new forms_1.FormControl({ value: '', disabled: false }, { validators: [forms_1.Validators.required,
+                                    forms_1.Validators.maxLength(30)], updateOn: 'blur' }), create: true, update: true, required: true, itemAlias: null, default: '', dataType: 'text', contentType: 'text', changeUrl: false }, staff_id1: { itemId: 7192, type: 'select', fieldAlias: 'staff_id', formControl: new forms_1.FormControl({ value: '', disabled: true }, { validators: [forms_1.Validators.required], updateOn: 'change' }), create: false, update: false, required: true, itemAlias: null, default: '', dataType: 'select', contentType: 'integer', changeUrl: false,
+                            listId: 7192 }, };
+                    this.model.$formGroup.addControl('id', this.model.modelItems.id.formControl);
+                    this.model.$formGroup.addControl('notes', this.model.modelItems.notes.formControl);
+                    this.model.$formGroup.addControl('perc_complete', this.model.modelItems.perc_complete.formControl);
+                    this.model.$formGroup.addControl('date_from', this.model.modelItems.date_from.formControl);
+                    this.model.$formGroup.addControl('project_id', this.model.modelItems.project_id.formControl);
+                    this.model.$formGroup.addControl('Staff_MobileNo', this.model.modelItems.Staff_MobileNo.formControl);
+                    this.model.$formGroup.addControl('staff_id1', this.model.modelItems.staff_id1.formControl);
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    const itemsUpdateSource7192 = this.lists.list7192.itemsUpdate$.pipe(operators_1.map(([url]) => url));
+                    let previousTimeChange7192 = new Date().getTime();
+                    let previousUrlChange7192;
+                    let previousResponse7192;
+                    this.lists.list7192.items = rxjs_1.combineLatest([this.lists.list7192.updatedList$, itemsUpdateSource7192]).pipe(operators_1.tap(() => { this.lists.list7192.busy = true; }), operators_1.takeUntil(this.onDestroy), operators_1.debounceTime(500), operators_1.switchMap(([updatedList, url]) => {
+                        const change = (previousTimeChange7192 - new Date().getTime()) / 1000;
+                        previousTimeChange7192 = new Date().getTime();
+                        previousUrlChange7192 = url;
+                        if (updatedList.length > 0) {
+                            return rxjs_1.of(updatedList);
+                        }
+                        return this.httpClient.post(`${url}`, { clientData: this.clientData }).pipe(operators_1.catchError((err) => rxjs_1.of({ success: false, message: `${err}` })), operators_1.map((response) => {
+                            previousResponse7192 = response;
+                            this.lists.list7192.busy = false;
+                            if (response.success === false) {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.dropdown.networkIssue", "Could not load data, retry later"), "text": this.translate("global.menu.networkIssue", "Could not find menu items, reload page. Or contact System Administrator") }];
+                            }
+                            if (Array.isArray(response.records) && response.records.length != 0) {
+                                return response.records;
+                            }
+                            else {
+                                return [{ "id": "-1", "id_display_value": this.translate("global.noRecordsFound", "No records found"), "text": this.translate("global.noMenuItemsAdded", "No menu items added") }];
+                            }
+                        }));
+                    }));
+                    this.lists.list7192.items.subscribe(records => this.lists.list7192.lastItems = records);
+                    this.lists.list7192.multiSelected = [];
+                    this.lists.list7192.reset = function (isOpen) { if (isOpen) {
+                        self.lists.list7192.updatedList$.next([]);
+                        self.lists.list7192.searchForm.setValue('', { emitEvent: false });
+                        self.lists.list7192.refresh();
+                    }
+                    else {
+                        self.lists.list7192.searchForm.setValue('');
+                        self.lists.list7192.updatedList$.next(self.lists.list7192.multiSelected);
+                        self.model.modelItems.staff_id1.formControl.setValue(self.lists.list7192.multiSelected);
+                    } };
+                    this.lists.list7192.onSelectionChange = function (change) {
+                        if (!change.isUserInput) {
+                            return;
+                        }
+                        let newMultiSelected = lists.list7192.multiSelected;
+                        const value = change.source.value;
+                        let idx = lists.list7192.multiSelected.map(a => a.id).indexOf(change.source.value.id);
+                        if (idx > -1) {
+                            if (!change.source.selected) {
+                                lists.list7192.multiSelected.splice(idx, 1);
+                            }
+                        }
+                        else {
+                            if (change.source.selected) {
+                                lists.list7192.multiSelected.push(value);
+                            }
+                        }
+                        lists.list7192.multiSelected = self.removeDuplicateIdsFromArray(lists.list7192.multiSelected);
+                    };
+                    lists = this.lists;
+                    this.canRead = true;
+                    this.canUpdate = true;
+                    this.canCreate = true;
+                    this.eventService.on(`reload${this.containerName}`).subscribe(_ => { });
+                    this.setup();
+                    this.reloadContainer();
+                }
+                setup() { this.setupPrimaryKeys(); this.setupDelete(); this.setupSubmit(); }
+                setupSubmit() {
+                    this.submit$ = new rxjs_1.Subject();
+                    this.submit$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.busy = true; }), operators_1.switchMap(() => this.crudService.update(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, model: this.model, formGroup: this.model.$formGroup }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => {
+                        if (response.message == "No changes were made to existing database values.") {
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        if (response.success) {
+                            if (this.view.recordStatus == 'create') {
+                                this.primaryKeys$.next(response.records);
+                            }
+                            else {
+                                this.primaryKeys$.next(response.records);
+                            }
+                            this.model.$formGroup.markAsPristine();
+                        }
+                        else {
+                            if (this.view.recordStatus == 'create') { }
+                            else { }
+                        }
+                    })).subscribe();
+                }
+                onSubmit() { this.submit$.next(null); }
+                setupDelete() { this.delete$ = new rxjs_1.Subject(); this.delete$.pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(() => { this.busy = true; }), operators_1.switchMap(() => this.crudService.delete(this.model.crudUrl, this.view.container.name, { primaryKeys: this.primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, }).pipe(operators_1.finalize(() => this.busy = false))), operators_1.tap(response => { if (response.success) {
+                    this.primaryKeys$.next(response.records);
+                } })).subscribe(); }
+                deleteRecord() { this.messagingService.confirm({ title: 'Delete Record', message: 'Are you sure you want to delete?', okText: 'Yes', cancelText: 'Cancel' }).then(result => { if (result !== false) {
+                    this.delete$.next(null);
+                } }); }
+                setupPrimaryKeys() {
+                    this.primaryKeys$ = new rxjs_1.Subject();
+                    this.position$ = new rxjs_1.Subject();
+                    this.primaryKeys$
+                        .pipe(operators_1.takeUntil(this.onDestroy), operators_1.tap(primaryKeys => {
+                        this.view.recordStatus = 'create';
+                        if (!!primaryKeys && Object.keys(primaryKeys).length > 0) {
+                            this.view.recordStatus = 'update';
+                        }
+                        this.primaryKeys = primaryKeys;
+                        this.updateUrl();
+                        this.busy = true;
+                    }), operators_1.switchMap(primaryKeys => {
+                        if (this.canCreate || (!!primaryKeys === true && Object.keys(primaryKeys).length > 0)) {
+                            return this.crudService.read(this.model.crudUrl, this.view.container.name, { primaryKeys, clientData: this.clientData, activeFilter: this.view.container.activeFilter, canCreate: this.canCreate }).pipe(operators_1.catchError((err) => { this.busy = false; return rxjs_1.of({ success: false, message: `${err}` }); }), operators_1.finalize(() => { }));
+                        }
+                        this.busy = false;
+                        return rxjs_1.empty();
+                    }), operators_1.switchMap(response => {
+                        this.busy = false;
+                        if (response.success) {
+                            this.model.$formGroup.reset();
+                            if (Array.isArray(response.records) && response.records.length > 0) {
+                                response.records = response.records[0];
+                            }
+                            if (this.view.recordStatus == 'update' && Array.isArray(response.records) && this.view.container.activeFilter !== null && this.view.container.activeFilter.length > 0) {
+                                if (this.canCreate) {
+                                    this.addRecord();
+                                }
+                            }
+                            if (response.records.id !== undefined) {
+                                this.setValue('id', response.records.id);
+                            }
+                            if (response.records.notes !== undefined) {
+                                this.setValue('notes', response.records.notes);
+                            }
+                            if (response.records.perc_complete !== undefined) {
+                                this.setValue('perc_complete', response.records.perc_complete);
+                            }
+                            if (response.records.date_from !== undefined) {
+                                this.setValue('date_from', response.records.date_from);
+                            }
+                            if (response.records.project_id !== undefined) {
+                                this.setValue('project_id', response.records.project_id);
+                            }
+                            if (response.records.Staff_MobileNo !== undefined) {
+                                this.setValue('Staff_MobileNo', response.records.Staff_MobileNo);
+                            }
+                            if (response.records.staff_id !== undefined) {
+                                if (response.records.staff_id == null) {
+                                    this.setValue('staff_id1', null);
+                                }
+                                else {
+                                    this.lists[`list7192`].multiSelected = [];
+                                    if (response.records.staff_id_display_value == undefined) {
+                                        this.setValue('staff_id1', response.records.staff_id1);
+                                        if (typeof response.records.staff_id1 == 'object' && response.records.staff_id1 !== null) {
+                                            this.lists[`list7192`].multiSelected = response.records.staff_id1;
+                                        }
+                                    }
+                                    else {
+                                        this.setValue('staff_id1', { 'id': response.records.staff_id, 'id_display_value': response.records.staff_id_display_value });
+                                    }
+                                }
+                            }
+                            this.model.updateFormDefaults(this);
+                            this.portService.setUrlDefaults(false, this);
+                            Object.keys(this.model.$formGroup.controls).forEach(field => { if (this.model.modelItems[field][this.view.recordStatus]) {
+                                this.model.$formGroup.controls[field].enable();
+                            }
+                            else {
+                                this.model.$formGroup.controls[field].disable();
+                            } });
+                            this.reloadSubcontainers();
+                            return this.paging();
+                        }
+                    }), operators_1.tap((response) => { window.dispatchEvent(new Event('resize')); this.pagingInfo = response.records; if (response.records !== null && response.records.current !== null && response.records.current !== undefined)
+                        this.position$.next(response.records.current.current); })).subscribe();
+                }
+                addRecord() {
+                    if (this.containerNameOpenedByUrl()) {
+                        const currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!!currentUrlInfo.params !== false) {
+                            Object.keys(this.primaryKeys).forEach((key, value) => { delete currentUrlInfo.params[`primary_${key}`]; });
+                            currentUrlInfo.params['record'] = 'new';
+                        }
+                        else {
+                            currentUrlInfo.params = { record: 'new' };
+                        }
+                        Object.keys(currentUrlInfo.params).forEach((value) => { if (value.indexOf('primary_') !== -1) {
+                            delete currentUrlInfo.params[value];
+                        } });
+                        this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, currentUrlInfo.params);
+                    }
+                    this.primaryKeys$.next(null);
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); this.lists.list7192.setupModel(this.model.modelItems.staff_id1.formControl); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.lists.list7192.dispose();
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                updateUrl() {
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    if (!!this.primaryKeys
+                        && currentUrlInfo.containerName == this.view.container.name
+                        && Object.keys(this.primaryKeys).length > 0) {
+                        let urlKeys = {};
+                        if (!!currentUrlInfo.params) {
+                            urlKeys = currentUrlInfo.params;
+                        }
+                        Object.keys(this.primaryKeys).forEach((key, value) => { delete urlKeys['record']; urlKeys[`primary_${key}`] = this.primaryKeys[key]; });
+                        currentUrlInfo = this.urlService.parseCurrentUrl();
+                        if (!this.navigationService.paramsEqual(urlKeys, currentUrlInfo.params)) {
+                            this.navigationService.goTo(currentUrlInfo.containerName, currentUrlInfo.portAlias, urlKeys, { changeUrl: true, originContainer: this });
+                        }
+                    }
+                }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexValidationServerSide', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexValidationServerSide' });
+                    this.onLoad();
+                }
+                onLoad() {
+                    if (!this.canRead && !this.canCreate)
+                        return;
+                    if (!this.canRead && this.canCreate) {
+                        this.addRecord();
+                        return;
+                    }
+                    let currentUrlInfo = this.urlService.parseCurrentUrl();
+                    let primaryKeys = {};
+                    if (currentUrlInfo.containerName == this.view.container.name) {
+                        this.view.primaryKeys.forEach(key => { if (!!currentUrlInfo.params[`primary_${key}`]) {
+                            primaryKeys[key] = currentUrlInfo.params[`primary_${key}`];
+                        } });
+                        if (Object.keys(primaryKeys).length > 0) {
+                            this.primaryKeys$.next(primaryKeys);
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.New) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.primaryKeys$.next(null); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.First) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.First); });
+                            return;
+                        }
+                        if (!!currentUrlInfo.params[`record`] && currentUrlInfo.params[`record`] == shared_2.FormPosition.Last) {
+                            this.paging().subscribe((result) => { this.pagingInfo = result.records; this.goToRecord(shared_2.FormPosition.Last); });
+                            return;
+                        }
+                    }
+                    if (Object.keys(primaryKeys).length == 0) {
+                        this.recordPosition(1).subscribe((response) => { this.primaryKeys$.next(response.records); });
+                        return;
+                    }
+                    this.primaryKeys$.next(primaryKeys);
+                }
+                goToRecord(formPosition) { if (!!this.pagingInfo && !!this.pagingInfo[formPosition])
+                    this.primaryKeys$.next(this.pagingInfo[formPosition]); }
+                recordPosition(position) { return this.crudService.recordPosition(`dibexValidationServerSide`, position, { clientData: this.clientData, activeFilter: this.view.container.activeFilter, }); }
+                paging() {
+                    if (!this.canRead)
+                        return rxjs_1.of({ records: { current: { current: 1 } } });
+                    if (!!this.primaryKeys == true && Object.keys(this.primaryKeys).length > 0) {
+                        return this.crudService.recordInfo('dibexValidationServerSide', { primaryKeys: this.primaryKeys, activeFilter: this.view.container.activeFilter, clientData: this.clientData });
+                    }
+                    else {
+                        return this.recordPosition(1).pipe(operators_1.switchMap((result) => this.crudService.recordInfo('dibexValidationServerSide', { primaryKeys: result.records, activeFilter: this.view.container.activeFilter, clientData: this.clientData }).pipe(operators_1.map((response) => {
+                            if (response.records == null) {
+                                return { records: { current: { current: 1 } } };
+                            }
+                            return response;
+                        }))));
+                    }
+                }
+                static ɵfac = function dibexValidationServerSideComponent_Factory(t) { return new (t || dibexValidationServerSideComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.CrudService), i0.ɵɵdirectiveInject(i2.HttpClient), i0.ɵɵdirectiveInject(i1.UrlService), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i1.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexValidationServerSideComponent, selectors: [["dibex-validation-server-side"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 174, vars: 60, consts: [["mode", "indeterminate", 4, "ngIf"], ["containerName", "dibexValidationServerSide", 2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci7158", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexValidationServerSide", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci7174", "dibComponent", "row", "dib-inject-content", "replace", 2, "padding", "5px 10px 6px !important", "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "center", "gap", "10px 10px", "flex-wrap", "wrap", "flex", "1 1 0%"], [3, "dibPort"], ["mat-mini-fab", "", "color", "accent", "id", "ci7175", "dibComponent", "btnSave", "aria-label", "Save record", "matTooltipClass", "dib-tooltip", "type", "submit", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/save.svg"], ["mat-mini-fab", "", "color", "accent", "id", "ci7176", "dibComponent", "btnAdd", "aria-label", "Add new record", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/dibAdmin/images/btn_add.svg"], ["mat-mini-fab", "", "color", "primary", "id", "ci7177", "dibComponent", "btnReload", "aria-label", "Restore saved data", "matTooltipClass", "dib-tooltip", "type", "button", 3, "matTooltip", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipPosition", "click"], ["src", "/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"], ["id", "ci7178", "dibComponent", "span", 2, "width", "150px !important", 3, "innerHtml"], ["id", "ci7179", "dibComponent", "formPaging"], ["dibComponentName", "formPager", "dibDropin", "form", "dibComponentLocation", "/peff/Template/component/dibexValidationServerSide?componentPath=pager&dropin=setNgxMaterial.form", 3, "dibComponentParent"], ["id", "ci7159", "dibComponent", "card", 2, "flex", "1 1 0%", "max-width", "600px"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "stretch", "gap", "10px"], ["id", "ci7191", "dibComponent", "comment"], [1, "dib-comment"], ["id", "ci7180", "dibComponent", "inputNumber", "appearance", "standard", 2, "width", "100px !important"], ["matInput", "", "type", "number", "formControlName", "id", "required", "true", "name", "id"], [4, "ngIf"], ["class", "dib_form_input_done", "matSuffix", "", 3, "click", 4, "ngIf"], ["class", "dib_form_input_done_all", "matSuffix", "", 4, "ngIf"], ["class", "dib_form_input_priority_high", "matSuffix", "", 4, "ngIf"], ["id", "ci7192", "dibComponent", "autocomplete", "dibDisabled", "true", "appearance", "standard", 2, "display", "flex", "flex-direction", "column", "flex", "1 1 0%", "align-self", "stretch"], ["required", "true", "type", "text", "matInput", "", "formControlName", "staff_id1", 3, "matAutocomplete"], ["auto7192trigger", "matAutocompleteTrigger", "input7192", ""], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["dibAutocompleteScrollToOnFocus", "", "autoActiveFirstOption", "", 3, "displayWith", "opened"], ["auto7192", "matAutocomplete"], [3, "ngClass", "value", "innerHtml", 4, "ngFor", "ngForOf"], ["id", "ci7185", "dibComponent", "comment"], ["id", "ci7181", "dibComponent", "inputTextArea", "appearance", "standard"], ["cdkTextareaAutosize", "", "cdkAutosizeMinRows", "5", "cdkAutosizeMaxRows", "10", "matInput", "", "formControlName", "notes", "minlength", "5", "name", "notes"], ["id", "ci7186", "dibComponent", "comment"], ["id", "ci7182", "dibComponent", "inputNumber", "appearance", "standard"], ["matInput", "", "type", "number", "formControlName", "perc_complete", "max", "100", "name", "perc_complete"], ["id", "ci7187", "dibComponent", "comment"], ["id", "ci7183", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "date_from", "required", "true", "name", "date_from"], ["id", "ci7188", "dibComponent", "comment"], ["id", "ci7190", "dibComponent", "inputText", "appearance", "standard"], ["matInput", "", "type", "text", "formControlName", "Staff_MobileNo", "maxlength", "30", "required", "true", "name", "Staff_MobileNo"], ["id", "ci7189", "dibComponent", "comment"], ["id", "ci7184", "dibComponent", "inputText", "appearance", "standard", 2, "flex", "1 1 0%", "align-self", "stretch"], ["matInput", "", "type", "text", "formControlName", "project_id", "required", "true", "name", "project_id"], ["mode", "indeterminate"], ["matSuffix", "", 1, "dib_form_input_done", 3, "click"], ["matSuffix", "", 1, "dib_form_input_done_all"], ["matSuffix", "", 1, "dib_form_input_priority_high"], ["mat-icon-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"], [3, "ngClass", "value", "innerHtml"]], template: function dibexValidationServerSideComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexValidationServerSideComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexValidationServerSideComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "div", 5);
+                        i0.ɵɵelementContainerStart(6, 6);
+                        i0.ɵɵelementStart(7, "button", 7);
+                        i0.ɵɵelement(8, "dib-icon", 8);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(9, "button", 9);
+                        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_Template_button_click_9_listener() { return ctx.addRecord(); });
+                        i0.ɵɵelement(10, "dib-icon", 10);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(11, "button", 11);
+                        i0.ɵɵlistener("click", function dibexValidationServerSideComponent_Template_button_click_11_listener() { return ctx.reloadContainer(); });
+                        i0.ɵɵelement(12, "dib-icon", 12);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(13, "span", 13);
+                        i0.ɵɵpipe(14, "safeHtml");
+                        i0.ɵɵelementStart(15, "div", 14);
+                        i0.ɵɵelementContainer(16, 15);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(17, "mat-card", 16)(18, "mat-card-header")(19, "mat-card-title");
+                        i0.ɵɵtext(20, "Server-side Validation and Limits");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(21, "mat-card-content", 17);
+                        i0.ɵɵelementContainerStart(22, 6);
+                        i0.ɵɵelementStart(23, "span", 18)(24, "div", 19);
+                        i0.ɵɵtext(25, " Note, the following two fields are to ensure this demo works, and may be hidden, though Staff is needed for adding records.");
+                        i0.ɵɵelement(26, "br");
+                        i0.ɵɵtext(27, "Primary key ");
+                        i0.ɵɵelementStart(28, "i");
+                        i0.ɵɵtext(29, "id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(30, " must be included to enable updates.");
+                        i0.ɵɵelement(31, "br");
+                        i0.ɵɵtext(32, "Foreign key ");
+                        i0.ɵɵelementStart(33, "i");
+                        i0.ɵɵtext(34, "staff_id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(35, " must be included to enable updates on Parent Fields, like Staff Mobile No (");
+                        i0.ɵɵelementStart(36, "i");
+                        i0.ɵɵtext(37, "test_staff.mobile");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(38, ") below. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(39, "mat-form-field", 20)(40, "mat-label");
+                        i0.ɵɵtext(41, "Id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(42, "input", 21);
+                        i0.ɵɵtemplate(43, dibexValidationServerSideComponent_mat_error_43_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵtemplate(44, dibexValidationServerSideComponent_mat_icon_44_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(45, dibexValidationServerSideComponent_mat_icon_45_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(46, dibexValidationServerSideComponent_mat_icon_46_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(47, "mat-form-field", 26)(48, "mat-label");
+                        i0.ɵɵtext(49, "Staff");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(50, "input", 27, 28);
+                        i0.ɵɵtemplate(53, dibexValidationServerSideComponent_button_53_Template, 3, 0, "button", 29);
+                        i0.ɵɵelementStart(54, "mat-autocomplete", 30, 31);
+                        i0.ɵɵlistener("opened", function dibexValidationServerSideComponent_Template_mat_autocomplete_opened_54_listener() { return ctx.lists.list7192.refresh(); });
+                        i0.ɵɵtemplate(56, dibexValidationServerSideComponent_mat_progress_bar_56_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵtemplate(57, dibexValidationServerSideComponent_mat_option_57_Template, 1, 5, "mat-option", 32);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(58, "span", 33)(59, "div", 19)(60, "b");
+                        i0.ɵɵtext(61, "Min Length");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(62, " = 5");
+                        i0.ɵɵelement(63, "br");
+                        i0.ɵɵelementStart(64, "b");
+                        i0.ɵɵtext(65, "Max Length");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(66, " not provided - the underlying field's length is 50 which will take effect instead. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(67, "mat-form-field", 34)(68, "mat-label");
+                        i0.ɵɵtext(69, "Notes");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(70, "textarea", 35);
+                        i0.ɵɵtemplate(71, dibexValidationServerSideComponent_mat_error_71_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementStart(72, "mat-hint");
+                        i0.ɵɵtext(73, "Enter < 5 or > 50 characters");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(74, dibexValidationServerSideComponent_mat_icon_74_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(75, dibexValidationServerSideComponent_mat_icon_75_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(76, dibexValidationServerSideComponent_mat_icon_76_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(77, "span", 36)(78, "div", 19)(79, "b");
+                        i0.ɵɵtext(80, "Min Value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(81, " not provided - the underlying field's ");
+                        i0.ɵɵelementStart(82, "b");
+                        i0.ɵɵtext(83, "Allow Negative");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(84, " value is FALSE, which will take effect instead.");
+                        i0.ɵɵelement(85, "br");
+                        i0.ɵɵelementStart(86, "b");
+                        i0.ɵɵtext(87, "Max Value");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(88, " = 100 ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(89, "mat-form-field", 37)(90, "mat-label");
+                        i0.ɵɵtext(91, "Perc Complete");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(92, "input", 38);
+                        i0.ɵɵtemplate(93, dibexValidationServerSideComponent_mat_error_93_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementStart(94, "mat-hint");
+                        i0.ɵɵtext(95, "Enter a value < 0 or > 100 or hello");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(96, dibexValidationServerSideComponent_mat_icon_96_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(97, dibexValidationServerSideComponent_mat_icon_97_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(98, dibexValidationServerSideComponent_mat_icon_98_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(99, "span", 39)(100, "div", 19)(101, "b");
+                        i0.ɵɵtext(102, "Validation Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(103, " = date");
+                        i0.ɵɵelement(104, "br");
+                        i0.ɵɵtext(105, "An ");
+                        i0.ɵɵelementStart(106, "b");
+                        i0.ɵɵtext(107, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(108, " component is used instead of a datepicker to allow experimentation with non-date values.");
+                        i0.ɵɵelement(109, "br");
+                        i0.ɵɵtext(110, "Note, date validation is very forgiving. The PHP ");
+                        i0.ɵɵelementStart(111, "b");
+                        i0.ɵɵtext(112, "strtotime()");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(113, " function attempts to convert values to valid dates. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(114, "mat-form-field", 40)(115, "mat-label");
+                        i0.ɵɵtext(116, "Date From");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(117, "input", 41);
+                        i0.ɵɵtemplate(118, dibexValidationServerSideComponent_mat_error_118_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementStart(119, "mat-hint");
+                        i0.ɵɵtext(120, "Enter an invalid date, eg 2030-13-12 or hello");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(121, dibexValidationServerSideComponent_mat_icon_121_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(122, dibexValidationServerSideComponent_mat_icon_122_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(123, dibexValidationServerSideComponent_mat_icon_123_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(124, "span", 42)(125, "div", 19)(126, "b");
+                        i0.ɵɵtext(127, "Validation Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(128, " = time");
+                        i0.ɵɵelement(129, "br");
+                        i0.ɵɵtext(130, "An ");
+                        i0.ɵɵelementStart(131, "b");
+                        i0.ɵɵtext(132, "inputText");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(133, " component is used instead of ");
+                        i0.ɵɵelementStart(134, "b");
+                        i0.ɵɵtext(135, "inputTime");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(136, " to allow experimentation with non-time values.");
+                        i0.ɵɵelement(137, "br");
+                        i0.ɵɵtext(138, "Note, this is a parent field (");
+                        i0.ɵɵelementStart(139, "i");
+                        i0.ɵɵtext(140, "test_staff.mobile");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(141, "). ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(142, "mat-form-field", 43)(143, "mat-label");
+                        i0.ɵɵtext(144, "Staff Mobile No (parent field)");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(145, "input", 44);
+                        i0.ɵɵtemplate(146, dibexValidationServerSideComponent_mat_error_146_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵtemplate(147, dibexValidationServerSideComponent_mat_error_147_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementStart(148, "mat-hint");
+                        i0.ɵɵtext(149, "Enter an invalid time, eg 25:45 or abc");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(150, dibexValidationServerSideComponent_mat_icon_150_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(151, dibexValidationServerSideComponent_mat_icon_151_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(152, dibexValidationServerSideComponent_mat_icon_152_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(153, "span", 45)(154, "div", 19)(155, "b");
+                        i0.ɵɵtext(156, "Validation Type");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtext(157, " = integer");
+                        i0.ɵɵelement(158, "br");
+                        i0.ɵɵtext(159, "Note, this is a foreign-key field which is normally facilitated with a dropdown component.");
+                        i0.ɵɵelement(160, "br");
+                        i0.ɵɵtext(161, "If a integer value is provided that is not related to a parent record, a database generated foreign-key validation error will occur.");
+                        i0.ɵɵelement(162, "br");
+                        i0.ɵɵtext(163, "This demonstrates the usefulness of dropdowns in this case. ");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(164, "mat-form-field", 46)(165, "mat-label");
+                        i0.ɵɵtext(166, "Project Id");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelement(167, "input", 47);
+                        i0.ɵɵtemplate(168, dibexValidationServerSideComponent_mat_error_168_Template, 2, 0, "mat-error", 22);
+                        i0.ɵɵelementStart(169, "mat-hint");
+                        i0.ɵɵtext(170, "Enter a invalid fkey value, eg -5 or hello");
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵtemplate(171, dibexValidationServerSideComponent_mat_icon_171_Template, 2, 0, "mat-icon", 23);
+                        i0.ɵɵtemplate(172, dibexValidationServerSideComponent_mat_icon_172_Template, 2, 0, "mat-icon", 24);
+                        i0.ɵɵtemplate(173, dibexValidationServerSideComponent_mat_icon_173_Template, 2, 0, "mat-icon", 25);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        const _r8 = i0.ɵɵreference(55);
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(58, _c1, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "7158");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("dibPort", "7174");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("matTooltip", "Save record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Add new record")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("matTooltip", "Restore saved data")("matTooltipShowDelay", "300")("matTooltipHideDelay", "300")("matTooltipPosition", "below");
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(14, 56, ctx.getHtml("spanGap")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibComponentParent", ctx);
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "7159");
+                        i0.ɵɵadvance(20);
+                        i0.ɵɵattribute("aria-label", "Id");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("matAutocomplete", _r8);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.showDropdownClearButton(ctx.model.modelItems.staff_id1.formControl));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("displayWith", ctx.dropdownValueTranslate.bind(ctx, "staff_id1"));
+                        i0.ɵɵadvance(2);
+                        i0.ɵɵproperty("ngIf", ctx.lists.list7192.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngForOf", ctx.lists.list7192.lastItems);
+                        i0.ɵɵadvance(13);
+                        i0.ɵɵattribute("aria-label", "Notes");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("notes", "minlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("notes", ctx.model.$formGroup));
+                        i0.ɵɵadvance(16);
+                        i0.ɵɵattribute("aria-label", "Perc Complete");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("perc_complete", "max", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("perc_complete", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("perc_complete", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("perc_complete", ctx.model.$formGroup));
+                        i0.ɵɵadvance(19);
+                        i0.ɵɵattribute("aria-label", "Date From");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("date_from", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("date_from", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("date_from", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("date_from", ctx.model.$formGroup));
+                        i0.ɵɵadvance(22);
+                        i0.ɵɵattribute("aria-label", "Staff Mobile No (parent field)");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("Staff_MobileNo", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("Staff_MobileNo", "maxlength", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("Staff_MobileNo", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("Staff_MobileNo", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("Staff_MobileNo", ctx.model.$formGroup));
+                        i0.ɵɵadvance(15);
+                        i0.ɵɵattribute("aria-label", "Project Id");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.hasError("project_id", "required", ctx.model.$formGroup));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.notSaved("project_id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.view.recordStatus == "update" && ctx.isSaved("project_id", ctx.model.$formGroup));
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("ngIf", ctx.isInvalid("project_id", ctx.model.$formGroup));
+                    } }, dependencies: [i4.NgClass, i4.NgForOf, i4.NgIf, i5.DefaultClassDirective, i6.ɵNgNoValidate, i6.DefaultValueAccessor, i6.NumberValueAccessor, i6.NgControlStatus, i6.NgControlStatusGroup, i6.RequiredValidator, i6.MinLengthValidator, i6.MaxLengthValidator, i6.MaxValidator, i6.FormGroupDirective, i6.FormControlName, i1.DibIconComponent, i1.DibPortDirective, i1.DibAutocompleteScrollToOnFocusDirective, i1.DibComponentDirective, i1.DibDisabledDirective, i1.DibRemoveFocusDirective, i7.MatAutocomplete, i8.MatOption, i7.MatAutocompleteTrigger, i9.MatIconButton, i9.MatMiniFabButton, i10.MatFormField, i10.MatLabel, i10.MatHint, i10.MatError, i10.MatSuffix, i11.MatIcon, i12.MatInput, i13.CdkTextareaAutosize, i14.MatProgressBar, i15.MatTooltip, i16.MatCard, i16.MatCardContent, i16.MatCardHeader, i16.MatCardTitle, i1.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexValidationServerSide'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexValidationServerSideComponent.prototype, "reloadContainer", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('goToRecorddibexValidationServerSide'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [String]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexValidationServerSideComponent.prototype, "goToRecord", null);
+            tslib_1.__decorate([
+                shared_1.EventHandler('recordPositiondibexValidationServerSide'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Number]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexValidationServerSideComponent.prototype, "recordPosition", null);
+            exports_1("dibexValidationServerSideComponent", dibexValidationServerSideComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexValidationServerSideComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-validation-server-side', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" containerName=dibexValidationServerSide  [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci7158 dibComponent=subcontainer   ><ng-container [dibPort]="'7158'" parentContainerName=dibexValidationServerSide  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><div   style="  padding:5px 10px 6px !important;  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: center;  gap: 10px 10px;  flex-wrap: wrap;  flex: 1 1 0%;  " id=ci7174 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'7174'" ><button mat-mini-fab color=accent  id=ci7175 dibComponent=btnSave   style="  " aria-label="Save record"  [matTooltip]="'Save record'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   type=submit  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/save.svg"></dib-icon></button><button mat-mini-fab color=accent  id=ci7176 dibComponent=btnAdd   style="  " aria-label="Add new record"  [matTooltip]="'Add new record'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="addRecord()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/dibAdmin/images/btn_add.svg"></dib-icon></button><button   mat-mini-fab color=primary  id=ci7177 dibComponent=btnReload   style="  " aria-label="Restore saved data"  [matTooltip]="'Restore saved data'"  [matTooltipShowDelay]="'300'"  [matTooltipHideDelay]="'300'"  [matTooltipPosition]="'below'"  matTooltipClass=dib-tooltip   (click)="reloadContainer()"  type=button  ><dib-icon src="/files/dropins/setNgxMaterial/shared/img/icons/reload.svg"></dib-icon></button><span  id=ci7178 dibComponent=span   style="  width:150px !important;   "  [innerHtml]="getHtml('spanGap') | safeHtml" ></span><div  id=ci7179 dibComponent=formPaging   style="  " ><ng-container  dibComponentName=formPager   dibDropin=form   dibComponentLocation="/peff/Template/component/dibexValidationServerSide?componentPath=pager&dropin=setNgxMaterial.form"   [dibComponentParent]="this"  ></ng-container></div></ng-container></div><mat-card   style="  flex: 1 1 0%;  max-width: 600px" id=ci7159 dibComponent=card  ><mat-card-header ><mat-card-title >Server-side Validation and Limits</mat-card-title></mat-card-header><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: stretch;  gap: 10px;"  ><ng-container [dibPort]="'7159'" ><span  id=ci7191 dibComponent=comment   style="  " ><div class=dib-comment > Note, the following two fields are to ensure this demo works, and may be hidden, though Staff is needed for adding records.<br>Primary key <i>id</i> must be included to enable updates.<br>Foreign key <i>staff_id</i> must be included to enable updates on Parent Fields, like Staff Mobile No (<i>test_staff.mobile</i>) below.  </div></span><mat-form-field  id=ci7180 dibComponent=inputNumber   style="  width:100px !important;   "  appearance=standard  ><mat-label >Id</mat-label><input   matInput  type=number   formControlName=id   required=true  name=id   [attr.aria-label]="'Id'" ><mat-error *ngIf="hasError('id','required',model.$formGroup)">Please enter a value</mat-error><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><mat-form-field  id=ci7192 dibComponent=autocomplete   style="  display:flex; flex-direction: column;  flex: 1 1 0%;  align-self: stretch;  " dibDisabled=true   appearance=standard   ><mat-label>Staff</mat-label><input #auto7192trigger=matAutocompleteTrigger   required=true  type=text  matInput formControlName=staff_id1   #input7192  [matAutocomplete]="auto7192"  ><button mat-icon-button   *ngIf="showDropdownClearButton(model.modelItems.staff_id1.formControl)"  matSuffix mat-icon-button aria-label=Clear   (click)="clearDropdown(model.modelItems.staff_id1.formControl, $event, lists.list7192, auto7192trigger); input7192.focus()"><mat-icon>close</mat-icon></button><mat-autocomplete dibAutocompleteScrollToOnFocus autoActiveFirstOption #auto7192=matAutocomplete   [displayWith]="dropdownValueTranslate.bind(this,'staff_id1')"  (opened)="$any(lists.list7192).refresh()"  ><mat-progress-bar *ngIf="$any(lists.list7192).busy" mode=indeterminate ></mat-progress-bar><mat-option *ngFor="let item of lists.list7192.lastItems" [ngClass] = "{'extra-node': item.id == '0'}" [value]="item"   [innerHtml]="item.id_display_value"  ></mat-option></mat-autocomplete></mat-form-field><span  id=ci7185 dibComponent=comment   style="  " ><div class=dib-comment ><b>Min Length</b> = 5<br><b>Max Length</b> not provided - the underlying field&apos;s length is 50 which will take effect instead.  </div></span><mat-form-field  id=ci7181 dibComponent=inputTextArea   style="  "  appearance=standard   ><mat-label >Notes</mat-label><textarea cdkTextareaAutosize cdkAutosizeMinRows=5  cdkAutosizeMaxRows=10    matInput  formControlName=notes   minlength='5'  name=notes   [attr.aria-label]="'Notes'" ></textarea><mat-error *ngIf="hasError('notes','minlength',model.$formGroup)">Please enter 5 chars or more</mat-error><mat-hint>Enter &lt; 5 or &gt; 50 characters</mat-hint><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('notes', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('notes', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('notes', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7186 dibComponent=comment   style="  " ><div class=dib-comment ><b>Min Value</b> not provided - the underlying field&apos;s <b>Allow Negative</b> value is FALSE, which will take effect instead.<br><b>Max Value</b> = 100  </div></span><mat-form-field  id=ci7182 dibComponent=inputNumber   style="  "  appearance=standard  ><mat-label >Perc Complete</mat-label><input   matInput  type=number   formControlName=perc_complete   max=100   name=perc_complete   [attr.aria-label]="'Perc Complete'" ><mat-error *ngIf="hasError('perc_complete','max',model.$formGroup)">Please enter a value equal/smaller than 100</mat-error><mat-hint>Enter a value &lt; 0 or &gt; 100 or hello</mat-hint><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('perc_complete', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('perc_complete', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('perc_complete', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7187 dibComponent=comment   style="  " ><div class=dib-comment ><b>Validation Type</b> = date<br>An <b>inputText</b> component is used instead of a datepicker to allow experimentation with non-date values.<br>Note, date validation is very forgiving. The PHP <b>strtotime()</b> function attempts to convert values to valid dates.  </div></span><mat-form-field id=ci7183 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Date From</mat-label><input   matInput  type=text   formControlName=date_from   required=true  name=date_from   [attr.aria-label]="'Date From'" ><mat-error *ngIf="hasError('date_from','required',model.$formGroup)">Please enter a value</mat-error><mat-hint>Enter an invalid date, eg 2030-13-12 or hello</mat-hint><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('date_from', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('date_from', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('date_from', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7188 dibComponent=comment   style="  " ><div class=dib-comment ><b>Validation Type</b> = time<br>An <b>inputText</b> component is used instead of <b>inputTime</b> to allow experimentation with non-time values.<br>Note, this is a parent field (<i>test_staff.mobile</i>).  </div></span><mat-form-field id=ci7190 dibComponent=inputText   style="  "  appearance=standard  ><mat-label >Staff Mobile No (parent field)</mat-label><input   matInput  type=text   formControlName=Staff_MobileNo   maxlength='30'  required=true  name=Staff_MobileNo   [attr.aria-label]="'Staff Mobile No (parent field)'" ><mat-error *ngIf="hasError('Staff_MobileNo','required',model.$formGroup)">Please enter a value</mat-error><mat-error *ngIf="hasError('Staff_MobileNo','maxlength',model.$formGroup)">Please enter 30 chars or less</mat-error><mat-hint>Enter an invalid time, eg 25:45 or abc</mat-hint><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('Staff_MobileNo', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('Staff_MobileNo', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('Staff_MobileNo', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field><span  id=ci7189 dibComponent=comment   style="  " ><div class=dib-comment ><b>Validation Type</b> = integer<br>Note, this is a foreign-key field which is normally facilitated with a dropdown component.<br>If a integer value is provided that is not related to a parent record, a database generated foreign-key validation error will occur.<br>This demonstrates the usefulness of dropdowns in this case.  </div></span><mat-form-field id=ci7184 dibComponent=inputText   style="  flex: 1 1 0%;  align-self: stretch;  "  appearance=standard  ><mat-label >Project Id</mat-label><input   matInput  type=text   formControlName=project_id   required=true  name=project_id   [attr.aria-label]="'Project Id'" ><mat-error *ngIf="hasError('project_id','required',model.$formGroup)">Please enter a value</mat-error><mat-hint>Enter a invalid fkey value, eg -5 or hello</mat-hint><mat-icon class=dib_form_input_done  (click)="onSubmit()" *ngIf="view.recordStatus=='update' && notSaved('project_id', model.$formGroup)" matSuffix >done</mat-icon><mat-icon class=dib_form_input_done_all  *ngIf="view.recordStatus=='update' && isSaved('project_id', model.$formGroup)" matSuffix >done_all</mat-icon><mat-icon class=dib_form_input_priority_high  *ngIf="isInvalid('project_id', model.$formGroup)" matSuffix >priority_high</mat-icon><!--<mat-hint>Hint</mat-hint>@TODO think about a hints field--></mat-form-field></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.CrudService }, { type: i2.HttpClient }, { type: i1.UrlService }, { type: i3.Router }, { type: i0.ViewContainerRef }, { type: i1.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [], goToRecord: [], recordPosition: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexValidationServerSideModule = class dibexValidationServerSideModule {
+                static entry = dibexValidationServerSideComponent;
+                static ɵfac = function dibexValidationServerSideModule_Factory(t) { return new (t || dibexValidationServerSideModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexValidationServerSideModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexValidationServerSideModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexValidationServerSideModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexValidationServerSideComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexValidationServerSideModule, { declarations: [dibexValidationServerSideComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, autocomplete_1.MatAutocompleteModule] }); })();
+        }
+    };
+});

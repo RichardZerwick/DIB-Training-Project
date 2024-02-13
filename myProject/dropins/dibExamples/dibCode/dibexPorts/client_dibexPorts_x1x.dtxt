@@ -1,0 +1,281 @@
+System.register(["tslib", "@angular/core", "shared", "@angular/common/http", "@angular/material/core", "rxjs/operators", "@angular/common", "@angular/material/card", "@angular/material/button", "@angular/material/icon", "@angular/material/tabs", "@ngbracket/ngx-layout/extended", "@angular/forms", "@angular/material/progress-bar"], function (exports_1, context_1) {
+    "use strict";
+    var tslib_1, core_1, shared_1, shared_2, http_1, core_2, shared_3, operators_1, core_3, common_1, shared_4, shared_5, card_1, button_1, icon_1, tabs_1, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, _c0, _c1, _c2, _c3, _c4, importsRequired, dibexPortsComponent, containerModules, fullDateTimeOptions, dibexPortsModule;
+    var __moduleName = context_1 && context_1.id;
+    function dibexPortsComponent_mat_progress_bar_0_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-progress-bar", 26);
+    } }
+    function dibexPortsComponent_ng_template_25_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 27);
+    } if (rf & 2) {
+        const ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r2.getTabTitle("tabSubContainer", "dibexPorts.tabSubContainer", "A. Clients (in subcontainer)"));
+    } }
+    function dibexPortsComponent_ng_template_31_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 28);
+    } if (rf & 2) {
+        const ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r5.getTabTitle("tabProjects", "dibexPorts.tabProjects", "B. Projects"));
+    } }
+    function dibexPortsComponent_ng_template_37_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "app-tab-label", 29);
+    } if (rf & 2) {
+        const ctx_r8 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", ctx_r8.getTabTitle("tabProjectsUrlChange", "dibexPorts.tabProjectsUrlChange", "C. Projects With URL Change"));
+    } }
+    async function importFiles() { for (const fileLocation of importsRequired) {
+        await SystemJS.import(fileLocation);
+    } }
+    return {
+        setters: [
+            function (tslib_1_1) {
+                tslib_1 = tslib_1_1;
+            },
+            function (core_1_1) {
+                core_1 = core_1_1;
+                core_3 = core_1_1;
+                i0 = core_1_1;
+            },
+            function (shared_1_1) {
+                shared_1 = shared_1_1;
+                shared_2 = shared_1_1;
+                shared_3 = shared_1_1;
+                shared_4 = shared_1_1;
+                shared_5 = shared_1_1;
+                i2 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+                i1 = http_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
+            },
+            function (operators_1_1) {
+                operators_1 = operators_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+                i3 = common_1_1;
+            },
+            function (card_1_1) {
+                card_1 = card_1_1;
+                i8 = card_1_1;
+            },
+            function (button_1_1) {
+                button_1 = button_1_1;
+                i6 = button_1_1;
+            },
+            function (icon_1_1) {
+                icon_1 = icon_1_1;
+            },
+            function (tabs_1_1) {
+                tabs_1 = tabs_1_1;
+                i9 = tabs_1_1;
+            },
+            function (i4_1) {
+                i4 = i4_1;
+            },
+            function (i5_1) {
+                i5 = i5_1;
+            },
+            function (i7_1) {
+                i7 = i7_1;
+            }
+        ],
+        execute: function () {
+            _c0 = function (a0) { return { "dib-editor": a0 }; };
+            _c1 = function (a1) { return { changeUrl: false, originContainer: a1 }; };
+            _c2 = function (a3) { return { containerName: "dibexTestProjectGrid", portId: 5869, portAlias: "Ports", options: a3 }; };
+            _c3 = function (a1) { return { changeUrl: true, originContainer: a1 }; };
+            _c4 = function (a3) { return { containerName: "dibexTestProjectGrid", portId: 5872, portAlias: "UrlChange", options: a3 }; };
+            importsRequired = [];
+            dibexPortsComponent = class dibexPortsComponent extends shared_1.BaseComponent {
+                httpClient;
+                sd;
+                cd;
+                view = { container: { id: 238, name: 'dibexPorts', subContainerItemAliases: [], allChildContainers: ["dibDocsExampleHtml", "dibexTestClientGrid", "dibexTestProjectGrid", "dibexTestStaffGrid"], refreshChildContainers: { "tabSubContainer": ['dibexTestClientGrid*5868'], "tabProjects": ['dibexTestStaffGrid*5869'], "tabProjectsUrlChange": ['dibexTestProjectGrid*5872'], "_": ['dibexTestProjectGrid*5869', 'dibDocsExampleHtml*5861'] }, dropin: 'plain', activeFilter: null, configs: {}, keepInMemory: false }, items: {}, primaryKeys: [], recordStatus: 'create', debug: false, debugItem: false };
+                clientData;
+                allClientData;
+                model;
+                constructor(injector, httpClient, viewContainerRef, sd, cd) {
+                    super(injector, viewContainerRef);
+                    this.httpClient = httpClient;
+                    this.sd = sd;
+                    this.cd = cd;
+                    const currentGlobalTheme = this.themeService.getCurrentTheme();
+                    if (currentGlobalTheme === null) {
+                        this.setActiveTheme('deeppurple-amber', false);
+                    }
+                    else {
+                        this.setActiveTheme(currentGlobalTheme.name, currentGlobalTheme.darkness);
+                    }
+                }
+                ngOnInit() {
+                    this.model = new shared_2.DibContainerModel(this.injector, 'dibexPorts');
+                    this.containerName = 'dibexPorts'; // Need to add a shortcut to get the containerName
+                    this.model.modelItems = {};
+                    this.model.$formGroup.valueChanges
+                        .pipe(operators_1.takeUntil(this.onDestroy)).subscribe(change => { });
+                    super.ngOnInit();
+                    this.setInnerHtml('comment14', `Tab A below uses the subcontainer component to load the Staff Grid along with the main/parent container.
+<ul>
+<li>Click on <b>tab B</b> - the Projects grid is then loaded on-demand from the server. Once loaded it is kept in memory even when navigating to other containers.</li>
+<li>Click on <b>button 1</b> below - the Staff grid is loaded into the second tab, replacing the Project grid (even it was loaded before).</li>
+<li>Click on <b>tab C</b> - the Projects grid is loaded and the URL changes. The URL remains changed even when clicking on other tabs since they are not configured with Ports that change the URL.</li>
+<li>Click on <b>button 2</b> below - events can load containers into any place, defined by the Port record's Port Item, in the Application.</li>
+<li>Click on <b>button 3</b> - when the Port Item is empty, the container is loaded as its own Base Container.</li>
+</ul>`);
+                    this.setInnerHtml('comment14', `Tab A below uses the subcontainer component to load the Staff Grid along with the main/parent container.
+<ul>
+<li>Click on <b>tab B</b> - the Projects grid is then loaded on-demand from the server. Once loaded it is kept in memory even when navigating to other containers.</li>
+<li>Click on <b>button 1</b> below - the Staff grid is loaded into the second tab, replacing the Project grid (even it was loaded before).</li>
+<li>Click on <b>tab C</b> - the Projects grid is loaded and the URL changes. The URL remains changed even when clicking on other tabs since they are not configured with Ports that change the URL.</li>
+<li>Click on <b>button 2</b> below - events can load containers into any place, defined by the Port record's Port Item, in the Application.</li>
+<li>Click on <b>button 3</b> - when the Port Item is empty, the container is loaded as its own Base Container.</li>
+</ul>`);
+                    this.initClientDataChangeListeners();
+                    this.updateClientData();
+                    let lists = {};
+                    let self = this;
+                    lists = this.lists;
+                    this.reloadContainer();
+                }
+                ngAfterViewInit() { super.ngAfterViewInit(); window.dispatchEvent(new Event('resize')); }
+                ngOnDestroy() {
+                    super.ngOnDestroy();
+                    if (this.model !== undefined) {
+                        this.model.destroy();
+                    }
+                    this.actionService.dequeueActionsForContainer(this.containerActionReference());
+                }
+                onSubmit() { }
+                reloadContainer(reloadOptions) {
+                    super.reloadContainer(reloadOptions);
+                    if (!this.canReloadContainer(reloadOptions)) {
+                        this.reloadSubcontainers();
+                        return;
+                    }
+                    const self = this;
+                    this.model.updateFormDefaults(this, (columnName) => {
+                        if (self.columnsToDisplay !== undefined && self.columnsToDisplay.get().indexOf(columnName) !== -1) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (!!this.view.container.activeFilter === true) {
+                        this.clientData.activeFilter_self = this.view.container.activeFilter;
+                    }
+                    this.portService.setUrlDefaults(true, this);
+                    this.eventService.emit({ name: 'onReloaddibexPorts', value: this });
+                    this.eventService.emit({ name: 'OnReloadContainer', value: 'dibexPorts' });
+                    this.reloadSubcontainers();
+                }
+                static ɵfac = function dibexPortsComponent_Factory(t) { return new (t || dibexPortsComponent)(i0.ɵɵdirectiveInject(i0.Injector), i0.ɵɵdirectiveInject(i1.HttpClient), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(i2.ScrollDispatcher), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+                static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: dibexPortsComponent, selectors: [["dibex-ports"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 41, vars: 29, consts: [["mode", "indeterminate", 4, "ngIf"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", 3, "formGroup", "ngClass", "ngSubmit"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch"], ["id", "ci5861", "dibComponent", "subcontainer", 2, "flex", "1 1 0%"], ["parentContainerName", "dibexPorts", "subContainerName", "dibDocsExampleHtml", "subContainerId", "172", "dropinName", "iframe", 3, "dibPort"], ["id", "ci5862", "dibComponent", "card"], [2, "display", "flex", "flex-direction", "column", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px 10px"], [3, "dibPort"], ["id", "ci5863", "dibComponent", "span", 2, "font-size", "14px", "border", "1px", "border-style", "solid", "border-color", "#c3c3c3", "padding", "9px", "background-color", "#FFF9E0", 3, "innerHtml"], ["id", "ci5864", "dibComponent", "row", "dib-inject-content", "replace", 2, "display", "flex", "flex-direction", "row", "justify-content", "flex-start", "align-items", "flex-start", "gap", "10px", "flex-wrap", "nowrap", "flex", "1 1 0%"], ["mat-raised-button", "", "color", "primary", "id", "ci5865", "dibComponent", "button", "type", "button", 3, "click"], [1, "dibButtonCaption"], ["mat-raised-button", "", "color", "primary", "id", "ci5866", "dibComponent", "button", "type", "button"], ["mat-raised-button", "", "color", "primary", "id", "ci5871", "dibComponent", "button", "type", "button", 3, "click"], [2, "display", "flex", "flex-direction", "column", "align-items", "stretch", "flex", "1 1 0%"], ["mat-stretch-tabs", "false", "id", "ci5867", "dibComponent", "tabs", "itemAlias", "tabs", "containerName", "dibexPorts", "dibTabGoToParent", "", "dibAutoTabSelection", "5868,5869,5872", "dibAutoTabSelectionAliases", "tabSubContainer,tabProjects,tabProjectsUrlChange", 3, "portId", "container"], [2, "display", "flex", "flex-direction", "column"], ["tabReference5868", ""], ["mat-tab-label", ""], ["id", "ci5868", "dibComponent", "subcontainer", 2, "display", "flex", "flex-direction", "column"], ["parentContainerName", "dibexPorts", "subContainerName", "dibexTestClientGrid", "subContainerId", "175", "dropinName", "grid", 3, "dibPort"], [2, "display", "flex", "flex-direction", "column", 3, "dibTabGoTo"], ["tabReference5869", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci5869", "dibComponent", "div", 2, "display", "flex", "flex-direction", "column"], ["tabReference5872", "", "refTabGoTo", "asDibTabGoTo"], ["id", "ci5872", "dibComponent", "card"], ["mode", "indeterminate"], ["tabPortId", "5868", "dibid", "tabSubContainer__caption.5868", 3, "value"], ["tabPortId", "5869", "dibid", "tabProjects__caption.5869", 3, "value"], ["tabPortId", "5872", "dibid", "tabProjectsUrlChange__caption.5872", 3, "value"]], template: function dibexPortsComponent_Template(rf, ctx) { if (rf & 1) {
+                        i0.ɵɵtemplate(0, dibexPortsComponent_mat_progress_bar_0_Template, 1, 0, "mat-progress-bar", 0);
+                        i0.ɵɵelementStart(1, "form", 1);
+                        i0.ɵɵlistener("ngSubmit", function dibexPortsComponent_Template_form_ngSubmit_1_listener() { return ctx.onSubmit(); });
+                        i0.ɵɵelementStart(2, "div", 2)(3, "div", 3);
+                        i0.ɵɵelementContainer(4, 4);
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(5, "mat-card", 5)(6, "mat-card-content", 6);
+                        i0.ɵɵelementContainerStart(7, 7);
+                        i0.ɵɵelement(8, "span", 8);
+                        i0.ɵɵpipe(9, "safeHtml");
+                        i0.ɵɵelementStart(10, "div", 9);
+                        i0.ɵɵelementContainerStart(11, 7);
+                        i0.ɵɵelementStart(12, "button", 10);
+                        i0.ɵɵlistener("click", function dibexPortsComponent_Template_button_click_12_listener($event) { return ctx.navigationService.goTo("dibexTestStaffGrid", "main", "", { changeUrl: false, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(13, "span", 11);
+                        i0.ɵɵtext(14, "1. Replace Projects with Staff in Second Tab below");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(15, "button", 12)(16, "span", 11);
+                        i0.ɵɵtext(17, "2. Load Projects into Another Container (dibAdmin)");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(18, "button", 13);
+                        i0.ɵɵlistener("click", function dibexPortsComponent_Template_button_click_18_listener($event) { return ctx.navigationService.goTo("dibexTestProjectGrid", "own", "", { changeUrl: true, target: "", mouseEvent: $event, originContainer: ctx }); });
+                        i0.ɵɵelementStart(19, "span", 11);
+                        i0.ɵɵtext(20, "3. Load Projects as Base Container");
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd();
+                        i0.ɵɵelementStart(21, "div", 14)(22, "mat-tab-group", 15)(23, "mat-tab", 16, 17);
+                        i0.ɵɵtemplate(25, dibexPortsComponent_ng_template_25_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(26, "div", 19);
+                        i0.ɵɵelementContainer(27, 20);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(28, "mat-tab", 21, 22);
+                        i0.ɵɵtemplate(31, dibexPortsComponent_ng_template_31_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(32, "div", 23);
+                        i0.ɵɵelementContainer(33, 7);
+                        i0.ɵɵelementEnd()();
+                        i0.ɵɵelementStart(34, "mat-tab", 21, 24);
+                        i0.ɵɵtemplate(37, dibexPortsComponent_ng_template_37_Template, 1, 1, "ng-template", 18);
+                        i0.ɵɵelementStart(38, "mat-card", 25)(39, "mat-card-content", 16);
+                        i0.ɵɵelementContainer(40, 7);
+                        i0.ɵɵelementEnd()()()()();
+                        i0.ɵɵelementContainerEnd();
+                        i0.ɵɵelementEnd()()()();
+                    } if (rf & 2) {
+                        i0.ɵɵproperty("ngIf", ctx.busy);
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("formGroup", ctx.model.$formGroup)("ngClass", i0.ɵɵpureFunction1(19, _c0, ctx.view.debug));
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5861");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5862");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("innerHtml", i0.ɵɵpipeBind1(9, 17, ctx.getHtml("comment14")), i0.ɵɵsanitizeHtml);
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵproperty("dibPort", "5864");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵattribute("aria-label", "1. Replace Projects with Staff in Second Tab below");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "2. Load Projects into Another Container (dibAdmin)");
+                        i0.ɵɵadvance(3);
+                        i0.ɵɵattribute("aria-label", "3. Load Projects as Base Container");
+                        i0.ɵɵadvance(4);
+                        i0.ɵɵproperty("portId", ctx.portId)("container", ctx);
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5868");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(23, _c2, i0.ɵɵpureFunction1(21, _c1, ctx)));
+                        i0.ɵɵadvance(5);
+                        i0.ɵɵproperty("dibPort", "5869");
+                        i0.ɵɵadvance(1);
+                        i0.ɵɵproperty("dibTabGoTo", i0.ɵɵpureFunction1(27, _c4, i0.ɵɵpureFunction1(25, _c3, ctx)));
+                        i0.ɵɵadvance(6);
+                        i0.ɵɵproperty("dibPort", "5872");
+                    } }, dependencies: [i3.NgClass, i3.NgIf, i4.DefaultClassDirective, i5.ɵNgNoValidate, i5.NgControlStatusGroup, i5.FormGroupDirective, i2.TabLabelComponent, i2.DibPortDirective, i2.DibAutoTabSelectionDirective, i2.DibTabGoToParentDirective, i2.DibTabGoToDirective, i6.MatButton, i7.MatProgressBar, i8.MatCard, i8.MatCardContent, i9.MatTabLabel, i9.MatTab, i9.MatTabGroup, i2.SafeHtmlPipe], encapsulation: 2 });
+            };
+            tslib_1.__decorate([
+                shared_1.EventHandler('reloaddibexPorts'),
+                tslib_1.__metadata("design:type", Function),
+                tslib_1.__metadata("design:paramtypes", [Object]),
+                tslib_1.__metadata("design:returntype", void 0)
+            ], dibexPortsComponent.prototype, "reloadContainer", null);
+            exports_1("dibexPortsComponent", dibexPortsComponent);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPortsComponent, [{
+                    type: core_1.Component,
+                    args: [{ selector: 'dibex-ports', template: `
+<mat-progress-bar *ngIf=busy  mode=indeterminate ></mat-progress-bar><form style="display:flex; flex-direction:column; align-items:stretch"  [formGroup]="model.$formGroup" (ngSubmit)="onSubmit()" [ngClass]="{ 'dib-editor' : view.debug }"  ><div style="display:flex; flex-direction:column; align-items:stretch"><div   style="  flex: 1 1 0%;  " id=ci5861 dibComponent=subcontainer   ><ng-container [dibPort]="'5861'" parentContainerName=dibexPorts  subContainerName=dibDocsExampleHtml  subContainerId=172  dropinName=iframe ></ng-container></div><mat-card   style="  " id=ci5862 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  gap: 10px 10px;"  ><ng-container [dibPort]="'5862'" ><span  id=ci5863 dibComponent=span   style="  font-size: 14px;border:1px; border-style:solid; border-color:#c3c3c3; padding: 9px; background-color: #FFF9E0"  [innerHtml]="getHtml('comment14') | safeHtml" ></span><div   style="  display:flex; flex-direction: row;  justify-content: flex-start;  align-items: flex-start;  gap: 10px;  flex-wrap: nowrap;  flex: 1 1 0%;  " id=ci5864 dibComponent=row   dib-inject-content=replace  ><ng-container [dibPort]="'5864'" ><button  mat-raised-button color=primary  id=ci5865 dibComponent=button   (click)="navigationService.goTo(  'dibexTestStaffGrid',  'main',  '',   {   changeUrl: false,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'1. Replace Projects with Staff in Second Tab below'"  type=button  ><span class=dibButtonCaption >1. Replace Projects with Staff in Second Tab below</span></button><button  mat-raised-button color=primary  id=ci5866 dibComponent=button   style="  "  [attr.aria-label]="'2. Load Projects into Another Container (dibAdmin)'"  type=button  ><span class=dibButtonCaption >2. Load Projects into Another Container (dibAdmin)</span></button><button  mat-raised-button color=primary  id=ci5871 dibComponent=button   (click)="navigationService.goTo(  'dibexTestProjectGrid',  'own',  '',   {   changeUrl: true,  target: '',   mouseEvent: $event,  originContainer : this  });"  style="  "  [attr.aria-label]="'3. Load Projects as Base Container'"  type=button  ><span class=dibButtonCaption >3. Load Projects as Base Container</span></button></ng-container></div><div style="display:flex; flex-direction:column; align-items: stretch; flex:1 1 0%"><mat-tab-group   mat-stretch-tabs=false  id=ci5867 dibComponent=tabs   style="  "  itemAlias=tabs  [portId]="portId" containerName=dibexPorts  dibTabGoToParent   dibAutoTabSelection="5868,5869,5872"  dibAutoTabSelectionAliases="tabSubContainer,tabProjects,tabProjectsUrlChange"  [container]="this"  ><mat-tab   #tabReference5868  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabSubContainer', 'dibexPorts.tabSubContainer', 'A. Clients (in subcontainer)')" tabPortId=5868  dibid="tabSubContainer__caption.5868"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  " id=ci5868 dibComponent=subcontainer   ><ng-container [dibPort]="'5868'" parentContainerName=dibexPorts  subContainerName=dibexTestClientGrid  subContainerId=175  dropinName=grid ></ng-container></div></mat-tab><mat-tab   #tabReference5869  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexTestProjectGrid', portId: 5869, portAlias: 'Ports', options: { changeUrl: false, originContainer : this }}"  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabProjects', 'dibexPorts.tabProjects', 'B. Projects')" tabPortId=5869  dibid="tabProjects__caption.5869"></app-tab-label></ng-template><div   style="  display:flex; flex-direction: column;  " id=ci5869 dibComponent=div  ><ng-container [dibPort]="'5869'" ></ng-container></div></mat-tab><mat-tab   #tabReference5872  #refTabGoTo=asDibTabGoTo  [dibTabGoTo]="{containerName: 'dibexTestProjectGrid', portId: 5872, portAlias: 'UrlChange', options: { changeUrl: true, originContainer : this }}"  style="  display:flex; flex-direction: column;  "  ><ng-template mat-tab-label ><app-tab-label [value]="getTabTitle('tabProjectsUrlChange', 'dibexPorts.tabProjectsUrlChange', 'C. Projects With URL Change')" tabPortId=5872  dibid="tabProjectsUrlChange__caption.5872"></app-tab-label></ng-template><mat-card   style="  " id=ci5872 dibComponent=card  ><mat-card-content   style="  display:flex; flex-direction: column;"  ><ng-container [dibPort]="'5872'" ></ng-container></mat-card-content></mat-card></mat-tab></mat-tab-group></div></ng-container></mat-card-content></mat-card></div></form>
+` }]
+                }], function () { return [{ type: i0.Injector }, { type: i1.HttpClient }, { type: i0.ViewContainerRef }, { type: i2.ScrollDispatcher }, { type: i0.ChangeDetectorRef }]; }, { reloadContainer: [] }); })();
+            containerModules = [card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule];
+            fullDateTimeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }; // Can also add seconds
+            dibexPortsModule = class dibexPortsModule {
+                static entry = dibexPortsComponent;
+                static ɵfac = function dibexPortsModule_Factory(t) { return new (t || dibexPortsModule)(); };
+                static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: dibexPortsModule });
+                static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], imports: [common_1.CommonModule, shared_4.SharedModule, containerModules] });
+            };
+            exports_1("default", dibexPortsModule);
+            (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(dibexPortsModule, [{
+                    type: core_3.NgModule,
+                    args: [{ imports: [common_1.CommonModule, shared_4.SharedModule, ...containerModules], providers: [{ provide: core_2.DateAdapter, useClass: shared_5.DateFnsDateAdapter, deps: [core_2.MAT_DATE_LOCALE] },], declarations: [dibexPortsComponent], }]
+                }], null, null); })();
+            (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(dibexPortsModule, { declarations: [dibexPortsComponent], imports: [common_1.CommonModule, shared_4.SharedModule, card_1.MatCardModule, button_1.MatButtonModule, icon_1.MatIconModule, tabs_1.MatTabsModule] }); })();
+        }
+    };
+});

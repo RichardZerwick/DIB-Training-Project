@@ -1,0 +1,218 @@
+<html>
+<head>
+
+    <!-- *** NOTE: Security measure: always specify UTF-8 encoding, which corresponds with the UTF-8 header which Eleutheria sends to the client -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>Company Report</title>
+    
+    <script type="text/javascript" src="/files/dropins/setNgxMaterial/dibAdmin/js/template/TemplateActions.js"></script>
+    <style type="text/css">
+        html {
+            width:100%;
+            height:100%;
+            overflow:auto;
+        }
+
+        body {
+            font-size: 13px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+            color: #333;
+            background: #d3d3d3;
+            margin: 0;
+            padding: 10px;
+        }
+
+        h2, h3 {
+            padding-top: 10px !important;
+            padding-bottom: 0px !important;
+            display: block;    
+            color :  rgb(69 76 80)
+        }
+
+        h2 {
+            font-size:18px;
+        }
+
+        h3 {
+            font-size:16px;
+        }
+
+        ul li {
+            list-style: decimal;
+        }
+        a {
+            color: #660;
+        }
+
+        .staffTable {
+            border: solid 1px #555;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .staffTable tr  {
+            font-size: 13px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+            color: #333;  
+        }
+
+        .staffTable th {
+            text-align: left; 
+            color: white; 
+            background: rgb(48 116 173);
+            font-weight: bold;
+            font-size: 14px;
+            padding:3px 7px;
+            font-family: Roboto,Helvetica Neue,sans-serif;
+        }
+
+        .staffTable td {
+            border: solid 1px #555;
+            padding: 5px 5px;
+            vertical-align: top;
+        }
+        
+		.btn {
+			background-color: #008CBA;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border: none;
+            color: white;
+            padding: 3px 6px;       
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            padding: 5px 8px;
+		}
+	
+        a:hover {
+            color: #000;
+        }
+        
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip text */
+        a .tooltiptext {
+            opacity: 0;
+            transition: opacity 0.7s;
+            width: 200px;
+            background-color: lightyellow;
+            color: #221CA2;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+         
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        a:hover .tooltiptext {
+            opacity: 1;
+        }
+    </style>
+    
+</head>
+
+<body ~if(getval(print)=true, [*onload="window.print()"*])~>
+
+~$// 
+    -- INTRO NOTES --
+
+    Eleutheria is a powerful templating engine that can be used to build any text documents like HTML, Json, etc
+    Dropinbase uses it to build both client and server-side code.
+    It also contains special features to build xlsx and docx files.
+    Here we use it build a simple report.
+
+    -- Integration with DIB --
+    Input variables from Dropinbase forms etc. can be sent to templates for display or use in SQL queries or Eleutheria expressions etc.
+    Dropinbase functions can be executed from within the iframe template, using the TemplateActions.js library included above.
+
+    dibCommon.goTo(containerName, portAlias, changeUrl, urlQueryString)    -- note, use '' for empty values, not null
+    dibCommon.startAction(submitUrl, containerName)   -- note, the containerName parameter indicates the starting place to search for submissionData values
+    dibCommon.clearUrlSearch(containerName, portAlias=''); - clears the url query string when a search string is not specified.
+
+    -- Security --
+    Variables sent from PHP to the Eleutheria template must be whitelisted using the pef_container.valid_params field.
+    Their values are sanitized allowing only "a-zA-Z0-9_ " by default. 
+    Eletheria also escapes any HTML found in data fields by default.
+    The [%...%] directives can be used to ignore encoding of safe hard-coded html within Eleutheria expressions.
+    The Eleutheria encode function can also be used to block encoding within a definied scope, but its main purpose is to sanitize eg. urls.
+~ 
+
+~$// BUTTONS ~
+
+~if(getval(print)<>true,[%
+    <a class="btn" href="/dropins/dibPdf/Pdf/convertContainer/dibexIFrame?fileName=test.pdf&filter%]=encode(this, url,{"alias_parent_clientId":"^alias_parent_clientId^"[*,*]"print":"true"})[%">PDF
+    </a>
+%])~
+
+~if(getval(print)<>true,[%<button class="btn" onclick="document.location.reload();">Refresh Info</button>%])~
+
+~$// Use a container name to indicate the database from where to draw data~
+~setmaindb(dibexGridBasics)~
+
+~if(^alias_parent_clientId^='' OR ^alias_parent_clientId^<0 OR ^alias_parent_clientId^>9999999, incl(NoData), incl(Valid))~
+
+    
+|Section NoData|
+<h3>First select a client to view the report.</h3>
+|End NoData|
+
+|Section Valid|
+
+~$// HEADING ~
+<h2>
+    ~getdb(name, test_client, id=param(^alias_parent_clientId^))~
+</h2>
+
+~$// LIST OF STAFF WORKING ON PROJECTS ~
+<h3>Staff Project List:</h3>
+
+<table class="staffTable">
+    <tr>
+        <th>No</th>
+        ~if('getval(print)'<>true, [%<th>View</th>%])~
+        <th>Project</th>
+        <th>Staff Name</th>
+        <th>From Date</th>
+        <th>To Date</th>
+    </tr>
+    
+    |rssql2;SELECT p.name, s.first_name, s.last_name, sp.date_from, sp.date_to, s.id as staff_id
+    FROM test_project p
+        LEFT JOIN test_staff_project sp ON sp.project_id = p.id
+        LEFT JOIN test_staff s ON sp.staff_id = s.id
+    WHERE p.client_id = ~param(^alias_parent_clientId^,2000)~
+    ORDER BY p.name, s.first_name, s.last_name|
+
+    <tr>
+        <td>~#~</td>
+        ~if('getval(print)'<>true, [%
+        <td style="background: rgb(101 166 221); color: white" >
+            <a href="#" onClick="dibCommon.goTo('dibexTestStaffForm', '', true, '?primary_id=%]fld(staff_id)[%');return false">
+                xxxxxxx
+                <span class="tooltiptext">This will open the <b>dibexTestStaffForm</b> container on %]fld(first_name)[%&apos;s record</span>
+            </a>
+        </td>
+        %])~
+        <td ~if('fld(first_name)'='', style="color:red")~>~name~</td>
+        <td>~first_name~ ~last_name~</td>
+        <td>~date_from~</td>
+        <td>~date_to~</td>
+    </tr>
+    |End2|
+
+</table>
+
+|End Valid|
+</body>
+</html>
